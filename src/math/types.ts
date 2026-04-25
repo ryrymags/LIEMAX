@@ -35,6 +35,10 @@ export interface ResolvedScreen {
 // ─── Projection (Cinema) ───────────────────────────────────────────
 
 export interface ResolvedProjection {
+  id?: string;
+  display_name?: string;
+  mode?: 'digital' | 'film' | 'other';
+  availability?: 'primary' | 'available' | 'occasional' | 'historical' | 'unknown';
   type: string;
   light_source: string;
   dual_projector: boolean;
@@ -54,6 +58,16 @@ export interface ResolvedProjection {
   contrast_dynamic: number | null;
   hdr: string;
   anamorphic_stretch: boolean;
+  min_content_ar_supported?: number;
+  effective_screen_width_ft?: number;
+  effective_screen_height_ft?: number;
+  effective_screen_aspect_ratio?: number;
+}
+
+export interface HybridProjection {
+  active: 'digital' | 'film';
+  digital?: ResolvedProjection;
+  film?: ResolvedProjection;
 }
 
 // ─── Seating ────────────────────────────────────────────────────────
@@ -82,10 +96,13 @@ export interface ResolvedVenue {
   name: string;
   screen: ResolvedScreen;
   projection: ResolvedProjection;
+  projections?: ResolvedProjection[];
+  hybrid_projection?: HybridProjection;
   seating: ResolvedSeating;
   capabilities: {
     min_content_ar_supported: number;
     supports_1570_film: boolean;
+    supports_143_digital: boolean;
   };
 }
 

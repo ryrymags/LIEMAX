@@ -55,6 +55,17 @@ function assert(
   }
 }
 
+function assertThrows(label: string, fn: () => void): void {
+  try {
+    fn();
+    console.log(`  ✗ ${label}: did not throw`);
+    failed++;
+  } catch {
+    console.log(`  ✓ ${label}: threw as expected`);
+    passed++;
+  }
+}
+
 // ═══════════════════════════════════════════════════════════════════
 // GROUP 1: GEOMETRY & UNITS
 // ═══════════════════════════════════════════════════════════════════
@@ -76,6 +87,8 @@ assert('iPhone 15 Pro width (landscape)', iphone.width, 5.56, 2);
 // PPI calculation
 assert('65" 4K PPI', ppiFromResolution(3840, 2160, 65), 68, 2);
 assert('iPhone PPI', ppiFromResolution(2556, 1179, 6.12), 460, 2);
+assertThrows('PPI rejects zero horizontal pixels', () => ppiFromResolution(0, 2160, 65));
+assertThrows('computePpd rejects zero horizontal pixels', () => computePpd(0, 540, 720));
 
 // Screen area (flat)
 assert('Reading GT area (ft²)', screenAreaFlat(101.2, 70.8), 7165, 2);
@@ -157,6 +170,7 @@ assert('iPhone PPD (portrait, 18")',
 // 4K dome (180° FOV): 4096 / 180 ≈ 22.8 PPD
 const domeResult = domePpd(4096, 180);
 assert('4K Dome PPD (avg across 180°)', domeResult.ppd, 22.8, 1);
+assertThrows('Dome PPD rejects zero FOV', () => domePpd(4096, 0));
 
 // Film dome (10,200 equiv, 180°): ~56.7 PPD
 const domeFilmResult = domePpd(null, 180, 8800, 11700);
@@ -236,6 +250,8 @@ assert('14 fL (DCI) → nits', flToNits(14), 47.97, 1);
 assert('22 fL (IMAX) → nits', flToNits(22), 75.38, 1);
 assert('31 fL (Dolby 2D) → nits', flToNits(31), 106.21, 1);
 assert('331 nits (LG G5 fullscreen) → fL', nitsToFl(331), 96.6, 1);
+assertThrows('Negative fL rejected', () => flToNits(-1));
+assertThrows('Zero cinema brightness rejected in comparison', () => compareBrightness(0, 331));
 
 // Sanity: Dolby Cinema at 106 nits is ~31 fL (should round-trip)
 assert('fL round-trip', nitsToFl(flToNits(31)), 31, 0.01);
@@ -315,6 +331,7 @@ assert('Resolver: mid distance derived', resolved.seating.viewing_distance_mid_f
 assert('Resolver: seat offset defaults to 0', resolved.seating.seat_offset_from_center_ft, 0, 0);
 assert('Resolver: geometry from preset', resolved.screen.geometry === 'slight_cylindrical_curve' ? 1 : 0, 1, 0);
 assert('Resolver: dual_projector from preset', resolved.projection.dual_projector ? 1 : 0, 1, 0);
+assert('Resolver: supports_143_digital defaults false', resolved.capabilities.supports_143_digital ? 1 : 0, 0, 0);
 
 // ── Venue with measured distances should NOT be overwritten ──
 const venueWithMeasured = {
@@ -333,6 +350,52 @@ const resolvedMeasured = resolveVenue(mockGtPreset, venueWithMeasured);
 assert('Resolver: measured mid NOT overwritten', resolvedMeasured.seating.viewing_distance_mid_ft, 70, 0);
 assert('Resolver: measured front NOT overwritten', resolvedMeasured.seating.viewing_distance_front_ft, 40, 0);
 assert('Resolver: measured source preserved', resolvedMeasured.seating.viewing_distance_source === 'measured' ? 1 : 0, 1, 0);
+
+// Partial measured distances should preserve measured fields and derive missing siblings.
+const venueWithPartialMeasured = {
+  id: 'partial_measured_venue', preset_id: 'imax_gt_dual_laser',
+  name: 'Partial Measured Venue', city: 'Test', country: 'US',
+  screen: { width_m: 25 },
+  seating: {
+    viewing_distance_mid_ft: 70,
+    viewing_distance_source: 'measured',
+  },
+  metadata: {},
+};
+const resolvedPartialMeasured = resolveVenue(mockGtPreset, venueWithPartialMeasured);
+assert('Resolver: partial measured mid preserved', resolvedPartialMeasured.seating.viewing_distance_mid_ft, 70, 0);
+assert('Resolver: missing front derived', resolvedPartialMeasured.seating.viewing_distance_front_ft, metersToFeet(25) * 0.87, 0.1);
+assert('Resolver: missing back derived', resolvedPartialMeasured.seating.viewing_distance_back_ft, metersToFeet(25) * 2.25, 0.1);
+
+// A 1.43 physical screen does not imply 1.43 digital capability.
+const unclear143Preset = {
+  id: 'imax_unclear_143',
+  display_name: 'Unclear 1.43 IMAX',
+  default_screen: {
+    width_m: 30, height_m: 21, aspect_ratio: 1.43,
+    geometry: 'slight_cylindrical_curve', screen_bottom_height_ft: 5.0,
+  },
+  default_projection: {
+    type: 'imax_cola', light_source: 'rgb_laser',
+    dual_projector: false, resolution_horizontal_px: 4096,
+    resolution_vertical_px: 2160, resolution_scan_equivalent_low: null,
+    resolution_scan_equivalent_high: null, brightness_fl: 22,
+    contrast_sequential: 10000, contrast_dynamic: null,
+    hdr: 'none', anamorphic_stretch: false,
+  },
+  default_seating: {},
+  default_capabilities: { supports_1570_film: false },
+};
+const unclear143 = resolveVenue(unclear143Preset, {
+  id: 'unclear_143', preset_id: 'imax_unclear_143',
+  name: 'Unclear 1.43 IMAX', city: 'Test', country: 'US', metadata: {},
+});
+assert('Resolver: unclear 1.43 physical screen defaults digital AR to 1.90',
+  unclear143.projection.min_content_ar_supported ?? 0, 1.90, 0);
+assert('Resolver: unclear 1.43 physical screen effective AR is 1.90',
+  unclear143.projection.effective_screen_aspect_ratio ?? 0, 1.90, 0.1);
+assert('Resolver: unclear 1.43 physical screen does not claim digital 1.43',
+  unclear143.capabilities.supports_143_digital ? 1 : 0, 0, 0);
 
 // ── Home display resolver ──
 const mockHomePreset = {
@@ -426,6 +489,12 @@ assert('domeFov horizontal', domeFovResult.horizontal_deg, 180, 0);
 assert('domeFov vertical', domeFovResult.vertical_total_deg, 125, 0);
 assert('domeFov above', domeFovResult.vertical_above_horizon_deg, 104, 0);
 assert('domeFov below', domeFovResult.vertical_below_horizon_deg, 21, 0);
+assertThrows('domeFov rejects invalid horizontal FOV', () =>
+  domeFov({ ...mockDomeScreen, dome_fov_horizontal_deg: 0 })
+);
+assertThrows('domeFov rejects inconsistent vertical FOV', () =>
+  domeFov({ ...mockDomeScreen, dome_fov_vertical_deg: 140 })
+);
 
 // domeFov should throw on flat screen
 let domeFovThrew = false;
@@ -458,6 +527,160 @@ assert('Area comparison: 2× area = +100%', areaComparisonPct(200, 100), 100, 0)
 assert('Area comparison: equal = 0%', areaComparisonPct(100, 100), 0, 0);
 assert('Area comparison: half = -50%', areaComparisonPct(50, 100), -50, 0);
 
+// ── Providence-style hybrid projection ──
+const providencePreset = {
+  id: 'imax_hybrid_cola_1570',
+  display_name: 'IMAX Hybrid CoLa + 15/70',
+  default_screen: {
+    width_m: 81 / 3.28084,
+    height_m: (81 / 1.43) / 3.28084,
+    aspect_ratio: 1.43,
+    geometry: 'slight_cylindrical_curve',
+    screen_bottom_height_ft: 5.0,
+  },
+  default_projection: {
+    id: 'digital',
+    mode: 'digital',
+    type: 'imax_cola',
+    light_source: 'rgb_laser',
+    dual_projector: false,
+    resolution_horizontal_px: 4096,
+    resolution_vertical_px: 2160,
+    resolution_scan_equivalent_low: null,
+    resolution_scan_equivalent_high: null,
+    brightness_fl: 22,
+    contrast_sequential: 10000,
+    contrast_dynamic: null,
+    hdr: 'none',
+    anamorphic_stretch: false,
+    min_content_ar_supported: 1.90,
+  },
+  default_seating: {
+    viewing_distance_mid_ft: 80,
+    viewing_distance_source: 'measured',
+  },
+  default_capabilities: {
+    min_content_ar_supported: 1.90,
+    supports_1570_film: true,
+    supports_143_digital: false,
+  },
+};
+
+const providenceVenue = {
+  id: 'apple_providence_imax',
+  preset_id: 'imax_hybrid_cola_1570',
+  name: 'Apple Cinemas Providence IMAX',
+  city: 'Providence',
+  country: 'US',
+  projections: [
+    {
+      id: 'digital',
+      mode: 'digital',
+      type: 'imax_cola',
+      light_source: 'rgb_laser',
+      dual_projector: false,
+      resolution_horizontal_px: 4096,
+      resolution_vertical_px: 2160,
+      resolution_scan_equivalent_low: null,
+      resolution_scan_equivalent_high: null,
+      brightness_fl: 22,
+      contrast_sequential: 10000,
+      contrast_dynamic: null,
+      hdr: 'none',
+      anamorphic_stretch: false,
+      min_content_ar_supported: 1.90,
+    },
+    {
+      id: 'film_1570',
+      mode: 'film',
+      type: 'imax_1570_film',
+      light_source: 'xenon_film',
+      dual_projector: false,
+      resolution_horizontal_px: null,
+      resolution_vertical_px: null,
+      resolution_scan_equivalent_low: 8800,
+      resolution_scan_equivalent_high: 11700,
+      brightness_fl: 22,
+      contrast_sequential: 4500,
+      contrast_dynamic: null,
+      hdr: 'photochemical',
+      anamorphic_stretch: false,
+      min_content_ar_supported: 1.43,
+    },
+  ],
+};
+
+const providence = resolveVenue(providencePreset, providenceVenue);
+assert('Providence hybrid has two projections', providence.projections?.length ?? 0, 2, 0);
+assert('Providence active projection defaults digital', providence.projection.mode === 'digital' ? 1 : 0, 1, 0);
+assert('Providence digital effective AR is 1.90', providence.hybrid_projection?.digital?.effective_screen_aspect_ratio ?? 0, 1.90, 0.1);
+assert('Providence film effective AR is 1.43', providence.hybrid_projection?.film?.effective_screen_aspect_ratio ?? 0, 1.43, 0.1);
+
+const providenceDigitalFov = computeCinemaFov(
+  providence.hybrid_projection!.digital!.effective_screen_width_ft!,
+  providence.hybrid_projection!.digital!.effective_screen_height_ft!,
+  providence.seating.viewing_distance_mid_ft,
+  5.0,
+  3.75
+);
+const providenceFilmFov = computeCinemaFov(
+  providence.hybrid_projection!.film!.effective_screen_width_ft!,
+  providence.hybrid_projection!.film!.effective_screen_height_ft!,
+  providence.seating.viewing_distance_mid_ft,
+  5.0,
+  3.75
+);
+assert('Providence film vertical FOV > digital vertical FOV',
+  providenceFilmFov.vertical_total_deg > providenceDigitalFov.vertical_total_deg ? 1 : 0, 1, 0);
+
+const providenceNativePpd = cinemaPpd(providence, 80, 'native');
+const providenceFilmPpd = cinemaPpd(providence, 80, 'scan_equivalent_low');
+assert('Providence film PPD > digital native PPD',
+  providenceFilmPpd.ppd > providenceNativePpd.ppd ? 1 : 0, 1, 0);
+assertThrows('Providence hybrid rejects supersampling', () => cinemaPpd(providence, 80, 'supersampled'));
+
+// Imported 143190-style hybrid: preset supplies digital defaults, venue adds only film mode.
+const importedHybridVenue = {
+  id: 'imported_hybrid',
+  preset_id: 'imax_cola',
+  name: 'Imported Hybrid IMAX',
+  city: 'Test',
+  country: 'US',
+  screen: {
+    width_m: 81 / 3.28084,
+    height_m: (81 / 1.43) / 3.28084,
+    aspect_ratio: 1.43,
+  },
+  capabilities: {
+    min_content_ar_supported: 1.43,
+    supports_1570_film: true,
+    supports_143_digital: false,
+  },
+  projections: [
+    {
+      id: 'film_1570',
+      mode: 'film',
+      type: 'imax_1570_film',
+      light_source: 'xenon_film',
+      dual_projector: false,
+      resolution_horizontal_px: null,
+      resolution_vertical_px: null,
+      resolution_scan_equivalent_low: 8800,
+      resolution_scan_equivalent_high: 11700,
+      brightness_fl: 22,
+      contrast_sequential: 4500,
+      contrast_dynamic: null,
+      hdr: 'photochemical',
+      anamorphic_stretch: false,
+      min_content_ar_supported: 1.43,
+    },
+  ],
+};
+const importedHybrid = resolveVenue(providencePreset, importedHybridVenue);
+assert('Imported hybrid keeps preset digital plus venue film', importedHybrid.projections?.length ?? 0, 2, 0);
+assert('Imported hybrid default active mode is digital', importedHybrid.projection.mode === 'digital' ? 1 : 0, 1, 0);
+assert('Imported hybrid preserves supports_143_digital false',
+  importedHybrid.capabilities.supports_143_digital ? 1 : 0, 0, 0);
 
 // ═══════════════════════════════════════════════════════════════════
 // SUMMARY

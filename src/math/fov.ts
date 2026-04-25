@@ -157,6 +157,15 @@ export function domeFov(screen: ResolvedScreen): FovResult {
   const belowHorizon = screen.dome_fov_below_horizon_deg ?? 21;  // midpoint of 20–22
   const vTotal = screen.dome_fov_vertical_deg ?? (aboveHorizon + belowHorizon);
 
+  if (hFov <= 0 || hFov > 180) throw new Error(`dome horizontal FOV must be >0 and <=180, got ${hFov}`);
+  if (aboveHorizon < 0 || belowHorizon < 0) {
+    throw new Error(`dome above/below horizon FOV must be non-negative`);
+  }
+  if (vTotal <= 0 || vTotal > 180) throw new Error(`dome vertical FOV must be >0 and <=180, got ${vTotal}`);
+  if (Math.abs(vTotal - (aboveHorizon + belowHorizon)) > 1) {
+    throw new Error(`dome vertical FOV must match above + below horizon values`);
+  }
+
   return {
     horizontal_deg: hFov,
     vertical_total_deg: vTotal,

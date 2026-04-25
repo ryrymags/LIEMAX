@@ -1,0 +1,69 @@
+[
+  {
+    "case": "digital_only_cola",
+    "row": {
+      "region": "Northeast",
+      "country_area": "United States",
+      "province_state": "MA",
+      "city": "Boston",
+      "location_name": "AMC Boston Common 19 & IMAX",
+      "screen_aspect_ratio": "1.90",
+      "digital_projector": "IMAX CoLa",
+      "max_digital_ar": "1.90",
+      "film_projector": "",
+      "screen_height_m": "18.0",
+      "screen_width_m": "34.2",
+      "commercial_films": "Commercial IMAX releases"
+    }
+  },
+  {
+    "case": "hybrid_cola_1570",
+    "row": {
+      "region": "Northeast",
+      "country_area": "United States",
+      "province_state": "RI",
+      "city": "Providence",
+      "location_name": "Providence Place Cinemas & IMAX",
+      "screen_aspect_ratio": "1.43",
+      "digital_projector": "IMAX CoLa",
+      "max_digital_ar": "1.90",
+      "film_projector": "IMAX 15/70mm",
+      "screen_height_m": "17.3",
+      "screen_width_m": "24.7",
+      "commercial_films": "Oppenheimer; Dune: Part Two"
+    }
+  },
+  {
+    "case": "physical_143_unknown_digital_ar",
+    "row": {
+      "region": "North America",
+      "country_area": "United States",
+      "province_state": "CA",
+      "city": "Example City",
+      "location_name": "Example 1.43 Screen IMAX",
+      "screen_aspect_ratio": "1.43",
+      "digital_projector": "IMAX Laser",
+      "max_digital_ar": "",
+      "film_projector": "",
+      "screen_height_m": "21",
+      "screen_width_m": "30"
+    }
+  },
+  {
+    "case": "missing_screen_dimensions",
+    "row": {
+      "region": "Europe",
+      "country_area": "United Kingdom",
+      "province_state": null,
+      "city": "London",
+      "location_name": "Example Sparse IMAX",
+      "screen_aspect_ratio": "",
+      "digital_projector": "IMAX Digital",
+      "max_digital_ar": "1.90",
+      "film_projector": "",
+      "screen_height_m": "",
+      "screen_width_m": "",
+      "commercial_films": []
+    }
+  }
+]

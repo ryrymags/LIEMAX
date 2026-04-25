@@ -24,6 +24,7 @@ export type {
   ScreenGeometry,
   ResolvedScreen,
   ResolvedProjection,
+  HybridProjection,
   ResolvedSeating,
   ContentFormat,
   ResolvedVenue,

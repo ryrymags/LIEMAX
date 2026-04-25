@@ -3,7 +3,7 @@
   "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
   "title": "LIEMAX Theater, Home Display & Screen Schema",
   "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
-  "version": "1.1.1",
+  "version": "1.2.0",
 
   "definitions": {
 
@@ -45,6 +45,18 @@
         "other"
       ],
       "description": "Projector system classification. Determines default optical specs when venue-specific data is absent."
+    },
+
+    "projection_mode": {
+      "type": "string",
+      "enum": ["digital", "film", "other"],
+      "description": "Projection mode for venues with more than one projection path. 143190.xyz can report digital and film systems for the same IMAX venue."
+    },
+
+    "projection_availability": {
+      "type": "string",
+      "enum": ["primary", "available", "occasional", "historical", "unknown"],
+      "description": "How this projection mode is used. 'primary' = default day-to-day presentation, 'available' = installed and usable, 'occasional' = event/booking-dependent, 'historical' = retained for history but not current."
     },
 
     "seat_type": {
@@ -141,6 +153,16 @@
       "type": "object",
       "description": "Projection system specifications. For venues, null fields fall through to the preset's defaults.",
       "properties": {
+        "id": {
+          "type": ["string", "null"],
+          "description": "Stable ID for projection-mode arrays. E.g., 'digital', 'film_1570'."
+        },
+        "display_name": {
+          "type": ["string", "null"],
+          "description": "Human-readable projection mode label. E.g., 'IMAX CoLa Digital', 'IMAX 15/70 Film'."
+        },
+        "mode": { "$ref": "#/definitions/projection_mode" },
+        "availability": { "$ref": "#/definitions/projection_availability" },
         "type": { "$ref": "#/definitions/projector_type" },
         "light_source": { "$ref": "#/definitions/light_source" },
         "dual_projector": {
@@ -195,6 +217,10 @@
         },
         "hdr": { "$ref": "#/definitions/hdr_type" },
         "supports_3d": { "type": ["boolean", "null"] },
+        "min_content_ar_supported": {
+          "type": ["number", "null"],
+          "description": "Projection-mode-specific tallest content aspect ratio this mode can show at full width. For imported 143190 rows, digital uses Max Digital AR; film uses film capability. Null falls through to venue/preset capability, then resolver defaults unclear digital capability to 1.90 rather than inferring from screen shape."
+        },
         "anamorphic_stretch": {
           "type": "boolean",
           "default": false,
@@ -322,6 +348,58 @@
       "required": ["date", "change"]
     },
 
+    "source_ref": {
+      "type": "object",
+      "description": "Lightweight reusable source reference for imported or manually enriched fields.",
+      "properties": {
+        "id": { "type": "string", "description": "Local source ID, e.g., 'src_143190_2026_04'." },
+        "label": { "type": "string", "description": "Human-readable source label." },
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "quality": { "$ref": "#/definitions/source_quality" },
+        "accessed_at": { "type": ["string", "null"], "format": "date" }
+      },
+      "required": ["id", "label", "quality"]
+    },
+
+    "field_source_ref": {
+      "type": "object",
+      "description": "Optional field-level provenance for enriched overrides. Imported 143190 values can rely on record metadata unless a field needs a more specific source.",
+      "properties": {
+        "field": { "type": "string", "description": "Dot-path to the field, e.g., 'screen.width_m'." },
+        "source_id": { "type": "string", "description": "References metadata.sources[].id." },
+        "quality": { "$ref": "#/definitions/source_quality" },
+        "notes": { "type": ["string", "null"] }
+      },
+      "required": ["field", "source_id", "quality"]
+    },
+
+    "imax_143190_import": {
+      "type": "object",
+      "description": "Sparse raw import row from 143190.xyz / r-imax imaxguide data. These are the primary venue facts LIEMAX starts from before presets and research defaults enrich the record.",
+      "properties": {
+        "region": { "type": ["string", "null"] },
+        "country_area": { "type": ["string", "null"] },
+        "province_state": { "type": ["string", "null"] },
+        "city": { "type": ["string", "null"] },
+        "location_name": { "type": "string" },
+        "screen_aspect_ratio": { "type": ["number", "null"] },
+        "digital_projector": { "type": ["string", "null"] },
+        "max_digital_ar": { "type": ["number", "null"] },
+        "film_projector": { "type": ["string", "null"] },
+        "screen_height_m": { "type": ["number", "null"] },
+        "screen_width_m": { "type": ["number", "null"] },
+        "commercial_films": {
+          "type": ["array", "null"],
+          "items": { "type": "string" }
+        },
+        "raw": {
+          "type": ["object", "null"],
+          "description": "Optional unmodified key/value payload from the import source for auditability."
+        }
+      },
+      "required": ["location_name"]
+    },
+
     "metadata": {
       "type": "object",
       "description": "Data provenance and freshness tracking. Critical for community-driven data quality.",
@@ -332,6 +410,16 @@
           "description": "Primary origin of this record's data."
         },
         "source_url":    { "type": ["string", "null"], "format": "uri", "description": "URL to the source data (e.g., 143190.xyz page, venue tech spec PDF)." },
+        "sources": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/definitions/source_ref" },
+          "description": "Optional reusable source list for mixed-source records. Imported 143190-only records can use data_source/source_url alone."
+        },
+        "field_sources": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/definitions/field_source_ref" },
+          "description": "Optional field-level provenance for manual/research enrichments."
+        },
         "last_verified":  { "type": "string", "format": "date", "description": "ISO date when this record was last checked for accuracy." },
         "created_at":     { "type": ["string", "null"], "format": "date-time", "description": "When this record was first created." },
         "updated_at":     { "type": ["string", "null"], "format": "date-time", "description": "When this record was last modified." },
@@ -363,6 +451,11 @@
         },
         "default_screen":       { "$ref": "#/definitions/screen" },
         "default_projection":   { "$ref": "#/definitions/projection" },
+        "default_projections": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/definitions/projection" },
+          "description": "Optional projection-mode defaults for hybrid formats. If omitted, default_projection remains the primary/default mode."
+        },
         "default_sound":        { "$ref": "#/definitions/sound" },
         "default_seating":      { "$ref": "#/definitions/seating" },
         "default_capabilities": { "$ref": "#/definitions/capabilities" },
@@ -405,6 +498,11 @@
 
         "screen":       { "$ref": "#/definitions/screen" },
         "projection":   { "$ref": "#/definitions/projection" },
+        "projections": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/definitions/projection" },
+          "description": "Optional projection-mode overrides for venues with both digital and film systems. Each item merges field-by-field with matching preset projection mode by id/mode/type."
+        },
         "sound":        { "$ref": "#/definitions/sound" },
         "seating":      { "$ref": "#/definitions/seating" },
         "capabilities": { "$ref": "#/definitions/capabilities" },
@@ -414,7 +512,11 @@
           "items": { "$ref": "#/definitions/history_entry" },
           "description": "Chronological log of significant changes to this venue."
         },
-        "metadata": { "$ref": "#/definitions/metadata" }
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "source_143190": {
+          "$ref": "#/definitions/imax_143190_import",
+          "description": "Raw sparse 143190.xyz import row when this venue originated from the IMAX guide data."
+        }
       },
       "required": ["id", "preset_id", "name", "city", "country", "metadata"]
     },
@@ -597,7 +699,7 @@
     "schema_version": {
       "type": "string",
       "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
-      "const": "1.1.1"
+      "const": "1.2.0"
     },
     "presets": {
       "type": "array",
@@ -623,6 +725,11 @@
       "type": "array",
       "items": { "$ref": "#/definitions/home_display_record" },
       "description": "User-created home display records. Each references a preset and can override any default field with user-specific values."
+    },
+    "imax_143190_imports": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/imax_143190_import" },
+      "description": "Optional raw imported rows from 143190.xyz. Useful for reproducible import tests and audit trails; normalized venues remain in venues[]."
     }
   },
   "required": ["schema_version", "presets", "venues", "content_formats", "home_display_presets", "home_displays"]

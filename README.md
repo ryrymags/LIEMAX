@@ -9,34 +9,40 @@ like from my seat?"*
 
 ## Status
 
-Pre-development. Schema and math engine complete; preset population next.
+Pre-development. Schema, sparse 143190 import mapping, and math engine complete; preset population next.
 
-- ✅ **Step 1:** Research & Data Schema (`schema/theater.schema.json`)
-- ✅ **Step 2:** Math Engine (`src/math/`, 96 tests passing)
+- ✅ **Step 1:** Research & Data Schema (`schema/theater.schema.json`, v1.2.0)
+- ✅ **Step 2:** Math Engine (`src/math/`, 120 tests passing)
+- ✅ **Step 2.5:** 143190.xyz sparse IMAX import foundation (`src/data/`)
 - ⏳ **Step 3:** Presets — populating real data into format presets
 - ⏳ **Step 4:** Website
 - ⏳ **Step 5:** Community features
 - ⏳ **Step 6:** 3D simulation
 
-For full project history, decisions, and session-by-session notes, 
-see [`LIEMAX_PROJECT_CONTEXT.md`](./LIEMAX_PROJECT_CONTEXT.md).
+For current project context and agent instructions, see [`.ai/AGENTS.md`](./.ai/AGENTS.md).
+Legacy project journals live in [`research/legacy_context/`](./research/legacy_context/).
 
 ## Repo Structure
 
 - `schema/` — JSON schema for theaters, home displays, content formats
+- `src/data/` — sparse 143190.xyz import mapping and schema/import fixtures
 - `src/math/` — pure-function math engine (PPD, FOV, masking, brightness)
 - `research/` — research docs and findings backing the data model
-- `LIEMAX_PROJECT_CONTEXT.md` — living project memory (decisions, sessions, status)
+- `.ai/` — portable GSD-Lite project context for Codex and Claude Code
+- `research/legacy_context/` — archived project-memory journals
 
 ## Running the math engine validation
 
 ```bash
-npm install
+npm ci
+npm run typecheck
 npm run validate
+npm run validate:schema
 ```
 
 The validation script tests every math function against known values 
-from the research docs. All 96 tests should pass.
+from the research docs. All 120 tests should pass. The schema/import
+validation keeps sparse 143190.xyz rows honest before preset data scales.
 
 ## Tech stack
 

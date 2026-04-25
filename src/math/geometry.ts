@@ -134,6 +134,8 @@ export function ppiFromResolution(
   verticalPx: number,
   diagonalInches: number
 ): number {
+  if (horizontalPx <= 0) throw new Error(`horizontalPx must be positive, got ${horizontalPx}`);
+  if (verticalPx <= 0) throw new Error(`verticalPx must be positive, got ${verticalPx}`);
   if (diagonalInches <= 0) throw new Error(`diagonalInches must be positive, got ${diagonalInches}`);
   const diagonalPx = Math.sqrt(horizontalPx * horizontalPx + verticalPx * verticalPx);
   return diagonalPx / diagonalInches;

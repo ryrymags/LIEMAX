@@ -26,6 +26,7 @@ import type { BrightnessComparison, ResolvedVenue, ResolvedHomeDisplay } from '.
  * 1 fL = 3.42625909 cd/m² (exact by definition).
  */
 export function flToNits(fl: number): number {
+  if (fl < 0) throw new Error(`fl must be non-negative, got ${fl}`);
   return fl * FL_TO_NITS;
 }
 
@@ -33,6 +34,7 @@ export function flToNits(fl: number): number {
  * Convert nits (cd/m²) to foot-lamberts.
  */
 export function nitsToFl(nits: number): number {
+  if (nits < 0) throw new Error(`nits must be non-negative, got ${nits}`);
   return nits * NITS_TO_FL;
 }
 
@@ -57,6 +59,9 @@ export function compareBrightness(
   cinemaFl: number,
   homeFullscreenNits: number
 ): BrightnessComparison {
+  if (cinemaFl <= 0) throw new Error(`cinemaFl must be positive, got ${cinemaFl}`);
+  if (homeFullscreenNits < 0) throw new Error(`homeFullscreenNits must be non-negative, got ${homeFullscreenNits}`);
+
   const cinemaNits = flToNits(cinemaFl);
   const homeFl = nitsToFl(homeFullscreenNits);
   const ratio = homeFl / cinemaFl;
