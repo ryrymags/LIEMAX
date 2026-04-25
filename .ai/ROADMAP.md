@@ -3,7 +3,7 @@
 ## Current Summary Pane
 
 - GREEN `.ai/`: Context compressed; truth discipline now forbids inferred 1.43:1 capability and documents 143190 as the primary venue baseline.
-- GREEN `src/math/`: Resolver supports schema-backed hybrid projection modes, source-aware 1.43 defaults, and 120 passing validation tests.
+- GREEN `src/math/`: Resolver supports schema-backed hybrid projection modes, source-aware 1.43 defaults, audit regression hardening, and 129 passing validation tests.
 - GREEN `schema/`: v1.2.0 source of truth supports sparse 143190 imports, projection-mode arrays, lightweight provenance, presets, venues, home displays, Atmos, and simple ScreenX flags. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
 - GREEN `src/data/`: 143190 import mapper and fixtures preserve sparse imported facts while letting presets/research enrich missing values.
 - GREEN `research/`: Rich source material with useful caveats for 15/70, GT laser supersampling, Dome, Providence, ScreenX, and Atmos. Keep it as evidence, not agent startup context.

@@ -1,13 +1,14 @@
 # State
 
-Current status: "On branch codex/overhaul. Foundation hardening for sparse 143190 imports."
+Current status: "On branch codex/overhaul. Foundation hardening for sparse 143190 imports; audit math regressions fixed in bc376e9."
 
 ## Completed
 
 - Step 1: Research & Data Schema.
 - Step 2: Math Engine.
 - `schema/theater.schema.json` exists and is version `1.2.0`.
-- `src/math/` exists and has 120 passing validation tests.
+- `src/math/` exists and has 129 passing validation tests.
+- Audit fixes are applied for resolver derived-field recomputation, cropped masking bars, dome scan-equivalent validation, and tablet default viewing distance.
 - Sparse 143190.xyz import mapping exists under `src/data/`.
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.
 

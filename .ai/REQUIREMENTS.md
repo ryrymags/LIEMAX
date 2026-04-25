@@ -3,7 +3,7 @@
 ## Hard Constraints
 
 - Do not refactor or rewrite the math engine unless Ryan explicitly asks for it.
-- The math engine in `src/math/` is complete, audited, and validated with 120 passing tests.
+- The math engine in `src/math/` is complete, audited, and validated with 129 passing tests.
 - `npm run validate` is the validation command for the math engine.
 - Keep math functions pure and testable. No UI behavior belongs in `src/math/`.
 - Be transparent about contentious methodology, especially 15/70 film scan equivalence and GT laser pixel-offset supersampling.

@@ -9,7 +9,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 ## State
 
 - Branch: `codex/overhaul`.
-- Done: Step 1 schema/research; Step 2 math engine; sparse 143190 import foundation.
+- Done: Step 1 schema/research; Step 2 math engine with audit regression hardening; sparse 143190 import foundation.
 - Active: Step 3 presets/data, starting shared IMAX presets, Providence Place IMAX, Mugar Omni.
 
 ## Rules
