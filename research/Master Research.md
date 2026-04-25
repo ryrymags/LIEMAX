@@ -58,7 +58,7 @@ For roughly three decades, IMAX was almost exclusively a format for science cent
 
 **1.3 The LIMAX Controversy**
 
-In May 2009, Aziz Ansari tweeted that the AMC theater he'd seen *Star Trek* in was "running FAKE IMAXs and charging $5 extra for a slightly bigger screen." Within hours, a fan had launched [Liemax.com](http://Liemax.com) tracking every smaller-format digital IMAX. The term "LIMAX" or "Lie-MAX" stuck \[LF Examiner 2009\].
+In May 2009, Aziz Ansari tweeted that the AMC theater he'd seen *Star Trek* in was "running FAKE IMAXs and charging $5 extra for a slightly bigger screen." Within hours, a fan had launched [Liemax.com](http://liemax.com) tracking every smaller-format digital IMAX. The term "LIMAX" or "Lie-MAX" stuck \[LF Examiner 2009\].
 
 The root issue: IMAX's MPX rollout used a single 2K digital projector (later upgraded to 4K laser in CoLa/XT) on screens 40–70% smaller than the museum-era 70mm screens audiences associated with the brand. IMAX CEO Richard Gelfond acknowledged the controversy and pledged more transparency about theater specs, but maintained the IMAX experience was consistent across venues because it included custom sound and theater design — not just screen size \[LF Examiner 2009\].
 
@@ -301,6 +301,34 @@ Launched 2010\. Generally the weakest branded PLF among the big three US chains.
 * **Ticket premium:** \~$3–5 over standard
 
 * **Criticism:** Inconsistent implementation; community consensus describes it as "a surcharge for a cushier seat" in many locations
+
+* REGAL BELLINGHAM, MA
+
+[https://cinematreasures.org/theaters/52001](https://cinematreasures.org/theaters/52001)
+
+[**ridethectrain**](https://cinematreasures.org/members/ridethectrain) on [November 17, 2025 at 2:51 pm](https://cinematreasures.org/theaters/52001#comment-823835)
+
+Please update, rename Regal Bellingham and total seats 1,828
+
+Seating Capacity:
+
+Theatre 1, 7 and 8 88
+
+Theatre 2 61 Recliners
+
+Theatre 3 and 6 63 Recliners
+
+Theatre 4 and 5 54 recliners
+
+Theatre 9 314
+
+Theatre 10 31 RPX
+
+Theatre 11 and 14 203
+
+Theatre 12 and 13 151
+
+This location was renovated as a Regal Flagship designed with Orange standard and orange recliners similar to Regal Union Square
 
 **4.3 ScreenX**
 
@@ -666,3 +694,4 @@ False. It is a certification label overlaid on existing auditoriums meeting mini
 | Theatrical windows | After any studio/exhibitor agreement announcement | Deadline / Variety |
 | Infinity Vision venue list | When Disney publishes official certifications | Disney press / exhibitor announcements |
 | Providence 15/70 film availability | Check Apple Cinemas schedules per film | Apple Cinemas website |
+

@@ -51,6 +51,16 @@ Build the static client app after presets exist. The website should:
 
 Tech stack remains TBD.
 
+## Step 5: Community Data Workflow
+
+Add a lightweight contribution path after the static comparison app exists:
+
+- let users suggest venue corrections, local renovation notes, and source links
+- preserve source quality, timestamps, confidence, and status notes
+- prefer GitHub issues/PRs or another free static-friendly workflow at first
+- do not allow unscreened edits to become authoritative public data
+- keep 143190.xyz as the primary IMAX venue baseline instead of trying to out-database it
+
 ## Step 6: 3D Simulation
 
 Use Three.js for the advanced simulation phase:

@@ -12,7 +12,7 @@ like from my seat?"*
 Pre-development. Schema, sparse 143190 import mapping, and math engine complete; preset population next.
 
 - ✅ **Step 1:** Research & Data Schema (`schema/theater.schema.json`, v1.2.0)
-- ✅ **Step 2:** Math Engine (`src/math/`, 120 tests passing)
+- ✅ **Step 2:** Math Engine (`src/math/`, 129 tests passing)
 - ✅ **Step 2.5:** 143190.xyz sparse IMAX import foundation (`src/data/`)
 - ⏳ **Step 3:** Presets — populating real data into format presets
 - ⏳ **Step 4:** Website
@@ -41,7 +41,7 @@ npm run validate:schema
 ```
 
 The validation script tests every math function against known values 
-from the research docs. All 120 tests should pass. The schema/import
+from the research docs. All 129 tests should pass. The schema/import
 validation keeps sparse 143190.xyz rows honest before preset data scales.
 
 ## Tech stack

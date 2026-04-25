@@ -2,6 +2,8 @@
 
 Current status: "On branch codex/overhaul. Foundation hardening for sparse 143190 imports; audit math regressions fixed in bc376e9."
 
+Product context refreshed: `.ai/PROJECT.md` now explicitly preserves the LIEMAX north star, user outcomes, custom/preset/known-theater entry paths, community provenance intent, and future first-person simulation goals.
+
 ## Completed
 
 - Step 1: Research & Data Schema.
