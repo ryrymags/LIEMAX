@@ -199,7 +199,10 @@ export function domePpd(
     };
   }
 
-  if (scanEquivLow && scanEquivHigh) {
+  if (scanEquivLow != null && scanEquivHigh != null) {
+    if (scanEquivLow <= 0 || scanEquivHigh <= 0) {
+      throw new Error(`Film scan-equivalent resolutions must be positive, got ${scanEquivLow}–${scanEquivHigh}.`);
+    }
     const ppdLow = scanEquivLow / horizontalFovDeg;
     const ppdHigh = scanEquivHigh / horizontalFovDeg;
     return {

@@ -175,6 +175,8 @@ assertThrows('Dome PPD rejects zero FOV', () => domePpd(4096, 0));
 // Film dome (10,200 equiv, 180°): ~56.7 PPD
 const domeFilmResult = domePpd(null, 180, 8800, 11700);
 assert('Film Dome PPD (midpoint avg)', domeFilmResult.ppd, 56.9, 3);
+assertThrows('Film Dome PPD rejects zero scan-equivalent', () => domePpd(null, 180, 0, 11700));
+assertThrows('Film Dome PPD rejects negative scan-equivalent', () => domePpd(null, 180, -1, 11700));
 
 // ── Off-axis PPD ──
 
@@ -233,6 +235,16 @@ assert('Scope on GT: utilization', scopeOnGt.screen_utilization_pct, 59.8, 2);
 // Screen: 61 ft wide, 32.1 ft tall (1.90:1). Content 1.43:1 is CROPPED.
 const imaxOnCola = computeMasking(61, 32.1, 1.43, 1.90);
 assert('IMAX on CoLa: cropped', imaxOnCola.cropped ? 1 : 0, 1);
+assert('IMAX on CoLa: no physical letterbox bars', imaxOnCola.letterboxed ? 1 : 0, 0, 0);
+assert('IMAX on CoLa: bars height remains zero', imaxOnCola.bars_height_ft, 0, 0);
+assert('IMAX on CoLa: full physical utilization', imaxOnCola.screen_utilization_pct, 100, 0.1);
+
+// 1.43 physical GT screen with a 1.90 digital projection limit.
+// The content is cropped to 1.90 and should leave physical top/bottom bars.
+const imaxDigitalOnGt = computeMasking(100, 70, 1.43, 1.90);
+assert('IMAX digital on GT: cropped', imaxDigitalOnGt.cropped ? 1 : 0, 1);
+assert('IMAX digital on GT: reports letterbox bars', imaxDigitalOnGt.letterboxed ? 1 : 0, 1);
+assert('IMAX digital on GT: bars height', imaxDigitalOnGt.bars_height_ft, (70 - 100 / 1.90) / 2, 0.1);
 
 // ── Masking: 1.78 content on 2.39 scope screen ──
 // (hypothetical ultra-wide screen, 100 ft × 41.8 ft)
@@ -277,6 +289,10 @@ assert('65" TV default distance', tvDist, (tvHeight / 12) * 1.5, 1);
 const phoneDist = homeDefaultViewingDistance(6.12, 2.17, 'phone');
 assert('Phone default distance', phoneDist, 1.0, 0);
 
+// Tablet: fixed distance, but farther than phone
+const tabletDist = homeDefaultViewingDistance(12.9, 4 / 3, 'tablet');
+assert('Tablet default distance', tabletDist, 1.5, 0);
+
 
 // ═══════════════════════════════════════════════════════════════════
 // GROUP 7: RESOLVER
@@ -289,14 +305,15 @@ const mockGtPreset = {
   id: 'imax_gt_dual_laser',
   display_name: 'IMAX GT Dual Laser',
   default_screen: {
-    width_m: 25, height_m: 18, geometry: 'slight_cylindrical_curve',
+    width_m: 25, height_m: 18, width_ft: 999, height_ft: 888,
+    aspect_ratio: 999, geometry: 'slight_cylindrical_curve',
     screen_bottom_height_ft: 5.0,
   },
   default_projection: {
     type: 'imax_gt_dual_laser', light_source: 'dual_rgb_laser',
     dual_projector: true, resolution_horizontal_px: 4096,
     resolution_vertical_px: 2160, resolution_scan_equivalent_low: null,
-    resolution_scan_equivalent_high: null, brightness_fl: 22,
+    resolution_scan_equivalent_high: null, brightness_fl: 22, brightness_cdm2: 1,
     contrast_sequential: 8000, contrast_dynamic: null,
     hdr: 'none', anamorphic_stretch: false,
   },
@@ -410,7 +427,7 @@ const mockHomePreset = {
     panel_tech: 'woled', is_per_pixel_emissive: true,
     resolution_horizontal_px: 3840, resolution_vertical_px: 2160,
     brightness_peak_hdr_nits: 2268, brightness_fullscreen_nits: 331,
-    brightness_sdr_nits: 296, contrast_sequential: null,
+    brightness_sdr_nits: 296, contrast_sequential: null, ppi: 999,
   },
 };
 

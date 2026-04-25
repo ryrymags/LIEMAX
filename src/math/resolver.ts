@@ -66,8 +66,8 @@ function fieldMerge<T extends Record<string, unknown>>(base: T, override: Partia
  * For each sub-object (screen, projection, seating, capabilities),
  * performs a field-level merge. Then fills derived fields:
  *   - width_ft / height_ft from width_m / height_m
- *   - aspect_ratio from dimensions (if not explicitly set)
- *   - brightness_cdm2 from brightness_fl (if not explicitly set)
+ *   - aspect_ratio from dimensions
+ *   - brightness_cdm2 from brightness_fl
  *   - viewing distances from screen width (if not measured)
  * 
  * @param preset - The format preset (e.g., "imax_gt_dual_laser")
@@ -101,16 +101,17 @@ export function resolveVenue(
 
   // ── Fill derived fields ──
 
-  // Feet from meters
-  if (screen.width_m != null && screen.width_ft == null) {
+  // Feet from meters. Always recompute from final merged dimensions so
+  // derived preset values cannot survive a partial venue override.
+  if (screen.width_m != null) {
     screen.width_ft = metersToFeet(screen.width_m);
   }
-  if (screen.height_m != null && screen.height_ft == null) {
+  if (screen.height_m != null) {
     screen.height_ft = metersToFeet(screen.height_m);
   }
 
   // Aspect ratio from dimensions
-  if (screen.aspect_ratio == null && screen.width_m != null && screen.height_m != null) {
+  if (screen.width_m != null && screen.height_m != null) {
     screen.aspect_ratio = screen.width_m / screen.height_m;
   }
 
@@ -120,7 +121,7 @@ export function resolveVenue(
   }
 
   // Brightness cd/m² from fL
-  if (projection.brightness_fl != null && projection.brightness_cdm2 == null) {
+  if (projection.brightness_fl != null) {
     projection.brightness_cdm2 = flToNits(projection.brightness_fl);
   }
 
@@ -184,7 +185,7 @@ function finalizeProjection(
   result.effective_screen_height_ft = Math.min(screen.height_ft, screen.width_ft / minContentAr);
   result.effective_screen_aspect_ratio = result.effective_screen_width_ft / result.effective_screen_height_ft;
 
-  if (result.brightness_fl != null && result.brightness_cdm2 == null) {
+  if (result.brightness_fl != null) {
     result.brightness_cdm2 = flToNits(result.brightness_fl);
   }
 
@@ -264,7 +265,7 @@ function buildHybridProjection(
  * 
  * Same field-level merge pattern as cinema. Additionally derives:
  *   - Viewing distance from screen height (if not user-provided)
- *   - PPI from resolution and diagonal (if not explicitly set)
+ *   - PPI from resolution and diagonal
  */
 export function resolveHomeDisplay(
   preset: Record<string, any>,  // home_display_preset
@@ -281,8 +282,9 @@ export function resolveHomeDisplay(
   const viewingDistanceFt = record.viewing_distance_ft ?? preset.default_viewing_distance_ft;
   const deviceCategory = preset.device_category;
 
-  // Derive PPI if not set
-  if (optics.ppi == null && optics.resolution_horizontal_px != null && optics.resolution_vertical_px != null && screenDiagonalIn != null) {
+  // Always recompute from the final merged resolution and diagonal so
+  // preset PPI cannot survive a size override.
+  if (optics.resolution_horizontal_px != null && optics.resolution_vertical_px != null && screenDiagonalIn != null) {
     const diagPx = Math.sqrt(
       optics.resolution_horizontal_px ** 2 + optics.resolution_vertical_px ** 2
     );

@@ -1,6 +1,6 @@
 {
   "name": "liemax",
-  "version": "0.0.1",
+  "version": "1.2.0",
   "description": "Cinema screen comparison engine",
   "packageManager": "npm@11.11.0",
   "engines": {

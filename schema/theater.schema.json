@@ -289,8 +289,8 @@
         "viewing_distance_source": { "$ref": "#/definitions/distance_source" },
         "seat_offset_from_center_ft": {
           "type": ["number", "null"],
-          "default": null,
-          "description": "RESERVED FOR STEP 2: Lateral displacement from center seat, in feet. Used for off-axis PPD calculation. Null = center seat (v1 default). Positive = toward right wall."
+          "default": 0,
+          "description": "Lateral displacement from center seat, in feet. Used for off-axis PPD calculation. Null or 0 = center seat. Positive = toward right wall."
         }
       }
     },

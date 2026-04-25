@@ -10,8 +10,9 @@
  *   Back row:  2.25× screen width (midpoint of 2.0–2.5× range)
  * 
  * For home displays, the default viewing distance is:
- *   TVs:    1.5× screen height (THX recommendation for 4K content)
- *   Phones: 1.0 ft (typical handheld distance)
+ *   TVs:     1.5× screen height (THX recommendation for 4K content)
+ *   Phones:  1.0 ft (typical handheld distance)
+ *   Tablets: 1.5 ft (typical lap/handheld distance)
  * 
  * All derived distances are tagged with their source so the UI can
  * display appropriate confidence caveats.
@@ -23,6 +24,7 @@ import {
   SMPTE_BACK_MULTIPLIER,
   HOME_TV_DISTANCE_MULTIPLIER,
   HOME_PHONE_DISTANCE_FT,
+  HOME_TABLET_DISTANCE_FT,
   IN_PER_FT,
 } from './constants';
 import { diagonalToDimensions } from './geometry';
@@ -64,6 +66,9 @@ export function deriveViewingDistances(screenWidthFt: number): SeatingDistances 
  * Phones: 1.0 ft (12 inches). Typical handheld viewing distance per
  * ergonomic studies. At this distance with ~460 PPI, phones exceed
  * retinal acuity by a wide margin.
+ *
+ * Tablets: 1.5 ft (18 inches). Typical lap/handheld distance; using the
+ * phone distance substantially overstates tablet FOV.
  * 
  * @param screenDiagonalIn - Screen diagonal in inches
  * @param aspectRatio - Screen aspect ratio (e.g., 1.78 for 16:9)
@@ -75,9 +80,13 @@ export function homeDefaultViewingDistance(
   aspectRatio: number,
   deviceCategory: string
 ): number {
-  if (deviceCategory === 'phone' || deviceCategory === 'tablet') {
-    // Phones and tablets: fixed distance regardless of screen size
+  if (deviceCategory === 'phone') {
+    // Phones: fixed distance regardless of screen size
     return HOME_PHONE_DISTANCE_FT;
+  }
+  if (deviceCategory === 'tablet') {
+    // Tablets: fixed distance regardless of screen size
+    return HOME_TABLET_DISTANCE_FT;
   }
 
   // TVs, monitors, home projectors: 1.5× screen height

@@ -69,7 +69,7 @@ All values in nits (cd/m²). To convert to fL for cinema comparison: divide by 3
 | **Cinema: Dolby Cinema** | **"1,000,000:1" dynamic / ~5,000–7,500:1 sequential** | Dynamic = dual-pass DLP; sequential is more comparable |
 | **Cinema: Standard xenon DCI** | **~2,000–2,600:1** | Standard projector |
 
-**Schema note:** OLED contrast cannot be stored as an integer ratio. Use `null` for `contrast_sequential` on OLED records and add a boolean `is_per_pixel_oled: true`. The UI should display "Infinite (OLED)" rather than a number. This is the same problem as Dolby Cinema's dynamic figure — both need special-case UI rendering.
+**Schema note:** OLED contrast cannot be stored as an integer ratio. Use `null` for `contrast_sequential` on OLED records and add a boolean `is_per_pixel_emissive: true`. The UI should display "Infinite (OLED)" rather than a number. This is the same problem as Dolby Cinema's dynamic figure — both need special-case UI rendering.
 
 ***
 
@@ -244,7 +244,7 @@ To support home display comparisons, the following additions are needed:
 "dolby_vision", "dolby_vision_iq", "hdr10", "hdr10_plus", "hlg", "none"
 ```
 
-**New boolean flag: `is_per_pixel_oled`** (boolean) — disambiguates OLED ∞ contrast from numeric ratios
+**New boolean flag: `is_per_pixel_emissive`** (boolean) — disambiguates OLED ∞ contrast from numeric ratios
 
 **New field on `projection` (and home display): `panel_tech`** — the panel technology type
 

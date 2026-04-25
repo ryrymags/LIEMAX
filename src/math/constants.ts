@@ -99,5 +99,8 @@ export const HOME_TV_DISTANCE_MULTIPLIER = 1.5;
 /** Default phone viewing distance in feet. Source: ergonomic studies (~12 in). */
 export const HOME_PHONE_DISTANCE_FT = 1.0;
 
+/** Default tablet viewing distance in feet. Source: ergonomic studies (~18 in). */
+export const HOME_TABLET_DISTANCE_FT = 1.5;
+
 /** Default eye height above auditorium floor for a seated viewer, in feet. */
 export const DEFAULT_EYE_HEIGHT_FT = 3.75; // ~45 inches, seated adult average

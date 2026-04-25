@@ -67,6 +67,7 @@ export function computeMasking(
     effectiveHeight = screenWidthFt / minContentArSupported;
     // Clamp to screen height (shouldn't exceed, but safety check)
     effectiveHeight = Math.min(effectiveHeight, screenHeightFt);
+    letterboxed = effectiveHeight < screenHeightFt;
   } else if (contentAr > screenAr) {
     // Letterboxing: content is wider (proportionally) than screen
     // Content fills the full screen width; height is less than screen height
