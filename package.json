@@ -1,0 +1,13 @@
+{
+  "name": "liemax",
+  "version": "0.0.1",
+  "description": "Cinema screen comparison engine",
+  "scripts": {
+    "validate": "ts-node src/math/validate.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
+  "title": "LIEMAX Theater, Home Display & Screen Schema",
+  "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
+  "version": "1.1.1",
+
+  "definitions": {
+
+    "source_quality": {
+      "type": "string",
+      "enum": ["published_official", "published_cto", "trade_reporting", "community_estimate", "derived", "user_submitted", "unknown"],
+      "description": "Data provenance flag. 'published_official' = manufacturer/SEC filing. 'published_cto' = IMAX CTO Reddit posts or similar named-source statements. 'trade_reporting' = Variety, Celluloid Junkie, LF Examiner. 'community_estimate' = r/imax, forum measurements. 'derived' = calculated from other known values (e.g., fL from lumens and screen area). 'user_submitted' = unverified community submission."
+    },
+
+    "screen_geometry": {
+      "type": "string",
+      "enum": ["flat", "slight_cylindrical_curve", "hemispherical"],
+      "description": "Physical screen shape. 'flat' = standard and most PLF screens. 'slight_cylindrical_curve' = IMAX GT screens (radius unknown, centered on back row). 'hemispherical' = IMAX Dome/OMNIMAX."
+    },
+
+    "light_source": {
+      "type": "string",
+      "enum": ["xenon", "rgb_laser", "dual_rgb_laser", "led_direct_view", "xenon_film"],
+      "description": "Illumination technology. 'xenon' = standard xenon arc lamp (degrades ~20% over lamp life). 'rgb_laser' = single RGB laser engine. 'dual_rgb_laser' = two RGB laser engines (GT Dual Laser, Dolby Cinema). 'led_direct_view' = Samsung Onyx-type cinema LED wall. 'xenon_film' = xenon arc lamp in a 15/70 film projector."
+    },
+
+    "projector_type": {
+      "type": "string",
+      "enum": [
+        "imax_1570_film",
+        "imax_gt_dual_laser",
+        "imax_dual_xenon",
+        "imax_cola",
+        "imax_laser_xt",
+        "imax_dome_film",
+        "imax_dome_laser",
+        "dolby_cinema",
+        "barco_4k_laser",
+        "standard_4k_laser",
+        "standard_4k_xenon",
+        "standard_2k_xenon",
+        "standard_2k_laser",
+        "cinema_led",
+        "other"
+      ],
+      "description": "Projector system classification. Determines default optical specs when venue-specific data is absent."
+    },
+
+    "seat_type": {
+      "type": "string",
+      "enum": ["standard", "rocker", "recliner", "motion_4dx", "motion_dbox"],
+      "description": "Primary seat type in auditorium. 'motion_4dx' = full 4DX motion seats. 'motion_dbox' = D-BOX haptic rows (typically 2-4 rows in an otherwise standard room)."
+    },
+
+    "distance_source": {
+      "type": "string",
+      "enum": ["measured", "derived_from_screen_width", "community_estimate", "venue_published"],
+      "description": "How viewing distances were determined. 'derived_from_screen_width' uses SMPTE/THX multipliers: front=0.87x, mid=1.5x, back=2.0-2.5x screen width."
+    },
+
+    "hdr_type": {
+      "type": "string",
+      "enum": ["dolby_vision", "hdr10", "hdr10_plus", "hlg", "photochemical", "none"],
+      "description": "HDR grading format supported by projection system. 'photochemical' = 15/70 film — wide dynamic range from chemical emulsion latitude, not digital HDR metadata. Distinct from 'none' (which implies no DR advantage)."
+    },
+
+    "panel_tech": {
+      "type": "string",
+      "enum": ["woled", "qd_oled", "tandem_oled", "miniled_lcd", "qled_lcd", "standard_lcd", "amoled", "projector_dlp", "projector_lcd", "projector_lcos"],
+      "description": "Display panel technology. 'woled' = LG White OLED (RGBW subpixel + color filter). 'qd_oled' = Samsung Quantum Dot OLED (pure RGB + QD layer). 'tandem_oled' = next-gen multi-stack OLED (e.g., LG G5 Primary RGB Tandem). 'amoled' = generic AMOLED (Samsung phones). 'miniled_lcd' = LCD with Mini-LED backlight zones. 'qled_lcd' = LCD with quantum dot enhancement. 'standard_lcd' = basic LED/LCD. Home projectors use 'projector_dlp', 'projector_lcd', or 'projector_lcos'."
+    },
+
+    "hdr_formats_supported": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["dolby_vision", "dolby_vision_iq", "hdr10", "hdr10_plus", "hlg"]
+      },
+      "description": "Array of HDR formats a home display supports. TVs/phones typically support multiple simultaneously (e.g., ['dolby_vision', 'hdr10', 'hlg']). Empty array [] = no HDR support. Distinct from cinema's single hdr_type because consumer devices are multi-format. Samsung TVs notably lack Dolby Vision; LG/Sony/Apple support it."
+    },
+
+    "device_category": {
+      "type": "string",
+      "enum": ["tv", "phone", "tablet", "monitor", "home_projector"],
+      "description": "Device form factor. Determines default viewing distance assumptions and UI grouping."
+    },
+
+    "screen": {
+      "type": "object",
+      "description": "Physical screen dimensions and geometry. Width and height in meters (matching 143190.xyz CSV units); feet equivalents are derived. Area is computed: width × height for flat/curved, π×r² × coverage_pct for domes.",
+      "properties": {
+        "width_m":  { "type": ["number", "null"], "description": "Screen width in meters. Primary unit (matches r-imax CSV)." },
+        "height_m": { "type": ["number", "null"], "description": "Screen height in meters. For domes, this is the dome diameter." },
+        "width_ft":  { "type": ["number", "null"], "description": "Derived: width_m × 3.28084. Stored for convenience." },
+        "height_ft": { "type": ["number", "null"], "description": "Derived: height_m × 3.28084." },
+        "aspect_ratio": {
+          "type": ["number", "null"],
+          "description": "Physical screen aspect ratio as a decimal (width/height). 1.43 for GT IMAX, 1.90 for CoLa/LIMAX, etc. For domes, use 1.43. Nullable for partial venue overrides — when null, derive from width_m/height_m if both present, else fall through to preset. NOTE: this is the physical screen shape, NOT the content display capability (see capabilities.min_content_ar_supported for that)."
+        },
+        "geometry": { "$ref": "#/definitions/screen_geometry" },
+        "curvature_radius_ft": {
+          "type": ["number", "null"],
+          "description": "For cylindrical screens: radius of curvature in feet, centered on back row. For hemispherical: dome radius (≈ diameter/2). Null if flat or unknown."
+        },
+        "screen_bottom_height_ft": {
+          "type": "number",
+          "default": 5.0,
+          "description": "Height of screen's lower edge above auditorium floor, in feet. SMPTE minimum is 4 ft (1.2m). Affects vertical FOV from front rows. Default 5.0 ft for standard venues."
+        },
+        "is_perforated": {
+          "type": ["boolean", "null"],
+          "description": "Whether screen is acoustically transparent (perforated). True for all IMAX screens (including dome aluminum panels). Affects ~20% light loss."
+        },
+        "dome_coverage_pct": {
+          "type": ["number", "null"],
+          "description": "For hemispherical screens only: percentage of hemisphere covered by projection (typically 80-86% for IMAX Dome). Null for flat/curved screens.",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dome_fov_horizontal_deg": {
+          "type": ["number", "null"],
+          "description": "Dome only: horizontal field of view in degrees (typically 180° for IMAX Dome)."
+        },
+        "dome_fov_vertical_deg": {
+          "type": ["number", "null"],
+          "description": "Dome only: total vertical field of view in degrees (typically 125° for IMAX Dome)."
+        },
+        "dome_fov_above_horizon_deg": {
+          "type": ["number", "null"],
+          "description": "Dome only: vertical FOV above the viewer's horizon (typically 100-110°)."
+        },
+        "dome_fov_below_horizon_deg": {
+          "type": ["number", "null"],
+          "description": "Dome only: vertical FOV below the viewer's horizon (typically 20-22°)."
+        }
+      }
+    },
+
+    "projection": {
+      "type": "object",
+      "description": "Projection system specifications. For venues, null fields fall through to the preset's defaults.",
+      "properties": {
+        "type": { "$ref": "#/definitions/projector_type" },
+        "light_source": { "$ref": "#/definitions/light_source" },
+        "dual_projector": {
+          "type": "boolean",
+          "description": "True if dual-projector system (IMAX GT Dual Laser, Dolby Cinema). Affects brightness (2× in 2D) and enables pixel-offset supersampling."
+        },
+        "resolution_horizontal_px": {
+          "type": ["integer", "null"],
+          "description": "Native horizontal pixel count per projector chip. 4096 for 4K, 2048 for 2K. Null for film (film has no pixels)."
+        },
+        "resolution_vertical_px": {
+          "type": ["integer", "null"],
+          "description": "Native vertical pixel count per projector chip. 2160 for 4K DCI. Null for film."
+        },
+        "resolution_scan_equivalent_low": {
+          "type": ["integer", "null"],
+          "description": "Film only: lower bound of scan-equivalent horizontal resolution (e.g., 8800 for 15/70 at 8µm scan). Null for digital."
+        },
+        "resolution_scan_equivalent_high": {
+          "type": ["integer", "null"],
+          "description": "Film only: upper bound of scan-equivalent horizontal resolution (e.g., 11700 for 15/70 at 6µm scan). Null for digital."
+        },
+        "effective_resolution_label": {
+          "type": ["string", "null"],
+          "description": "Human-readable resolution descriptor for edge cases. E.g., '~5.8K sampling equivalent (√2 × 4096, half-pixel offset — illustrative, not official IMAX spec)' for GT Dual Laser. '~8.8K–11.7K scan-equivalent; grain-limited in practice' for 15/70 film."
+        },
+        "brightness_fl": {
+          "type": ["number", "null"],
+          "description": "Calibrated screen brightness in foot-lamberts. DCI standard = 14 fL. All IMAX formats target 22 fL. Dolby Cinema 2D ≈ 31 fL."
+        },
+        "brightness_cdm2": {
+          "type": ["number", "null"],
+          "description": "Brightness in candelas per square meter. 1 fL ≈ 3.426 cd/m²."
+        },
+        "brightness_source": { "$ref": "#/definitions/source_quality" },
+        "contrast_sequential": {
+          "type": ["integer", "null"],
+          "description": "Sequential (on/off) contrast ratio. The standard measurement methodology. E.g., 2000 for standard xenon, 10000 for CoLa laser, 4500 for 15/70 film."
+        },
+        "contrast_dynamic": {
+          "type": ["integer", "null"],
+          "description": "Dynamic contrast ratio (for Dolby Vision dual-pass DLP only). The 1,000,000:1 figure. NOT comparable to sequential contrast — always display with caveat. Null for all non-Dolby-Vision systems."
+        },
+        "contrast_source": { "$ref": "#/definitions/source_quality" },
+        "contrast_notes": {
+          "type": ["string", "null"],
+          "description": "Mandatory context for contrast claims. E.g., 'Dynamic black-level claim via dual-pass DLP; not a conventional sequential measurement' for Dolby."
+        },
+        "color_gamut": {
+          "type": ["string", "null"],
+          "description": "Color gamut specification. E.g., 'Rec.709', 'DCI-P3', 'Wide Color Gamut (>DCI-P3 via RGB laser)', 'Dolby Wide Color 1.0 (~112-122% DCI-P3)'."
+        },
+        "hdr": { "$ref": "#/definitions/hdr_type" },
+        "supports_3d": { "type": ["boolean", "null"] },
+        "anamorphic_stretch": {
+          "type": "boolean",
+          "default": false,
+          "description": "True if projector uses anamorphic lens to achieve taller AR from a wider-native chip. Applies to IMAX Dome laser (1.90:1 chip stretched to fill 1.43:1 dome) and some GT Laser configurations."
+        }
+      }
+    },
+
+    "sound": {
+      "type": "object",
+      "description": "Audio system. Treated as a descriptive attribute in v1, not a numeric comparison metric. Per-venue SPL calibration data is not publicly available for any chain.",
+      "properties": {
+        "system_name": {
+          "type": ["string", "null"],
+          "description": "Marketing/technical name. E.g., 'IMAX 12.1', 'Dolby Atmos', 'Auro 3D 11.1', '7.1 Surround'."
+        },
+        "channel_config": {
+          "type": ["string", "null"],
+          "description": "Channel layout string. E.g., '12.1' (IMAX: 7 base + 5 height + sub), '9.1.6' (Atmos: 9 ear-level + 1 sub + 6 overhead), '5.1', '7.1'."
+        },
+        "is_object_based": {
+          "type": ["boolean", "null"],
+          "description": "True for Dolby Atmos (object-based rendering). False for IMAX 12.1 (channel-based), Auro 3D (height-layered). Null if unknown."
+        },
+        "max_output_watts_per_channel": {
+          "type": ["number", "null"],
+          "description": "Maximum amplifier output per channel in watts. IMAX ≈ 2,000W/channel."
+        },
+        "speaker_count": {
+          "type": ["integer", "null"],
+          "description": "Total discrete speaker units in auditorium. Dolby Cinema typically 64+."
+        },
+        "dome_zenith_channel": {
+          "type": ["boolean", "null"],
+          "description": "IMAX Dome only: dedicated speaker array at the physical apex of the dome structure, enabling vertical audio panning across the hemisphere ceiling ('Voice of God' channel). Distinct from Dolby Atmos overhead speakers, which are discrete ceiling units in a flat-ceiling room. Null for non-dome venues."
+        }
+      }
+    },
+
+    "seating": {
+      "type": "object",
+      "description": "Auditorium seating layout and viewing geometry. Distances derived from SMPTE/THX multipliers when primary data is unavailable: front ≈ 0.87× screen_width, mid ≈ 1.5× screen_width, back ≈ 2.0–2.5× screen_width.",
+      "properties": {
+        "capacity": { "type": ["integer", "null"], "description": "Total seat count." },
+        "rake_angle_deg": {
+          "type": ["number", "null"],
+          "description": "Stadium seating angle in degrees. Standard multiplex ≈ 5°. Dolby Cinema ≈ 8–12°. IMAX GT > standard (exact figure unpublished). IMAX Dome ≈ 30°."
+        },
+        "seat_type": { "$ref": "#/definitions/seat_type" },
+        "has_bass_transducers": {
+          "type": ["boolean", "null"],
+          "description": "True if seats have integrated bass/haptic transducers (Dolby Cinema, some 4DX). False for standard and IMAX seats."
+        },
+        "viewing_distance_front_ft": {
+          "type": ["number", "null"],
+          "description": "Distance from front row center seat to screen center, in feet."
+        },
+        "viewing_distance_mid_ft": {
+          "type": ["number", "null"],
+          "description": "Distance from mid-row center seat to screen center, in feet. This is the primary PPD calculation distance."
+        },
+        "viewing_distance_back_ft": {
+          "type": ["number", "null"],
+          "description": "Distance from last row center seat to screen center, in feet."
+        },
+        "viewing_distance_source": { "$ref": "#/definitions/distance_source" },
+        "seat_offset_from_center_ft": {
+          "type": ["number", "null"],
+          "default": null,
+          "description": "RESERVED FOR STEP 2: Lateral displacement from center seat, in feet. Used for off-axis PPD calculation. Null = center seat (v1 default). Positive = toward right wall."
+        }
+      }
+    },
+
+    "capabilities": {
+      "type": "object",
+      "description": "Format capabilities and special features of this screen/venue.",
+      "properties": {
+        "min_content_ar_supported": {
+          "type": "number",
+          "description": "The tallest (lowest AR number) content aspect ratio this screen+projector system can display at full width without cropping or pillarboxing. 1.43 for GT/Dome, 1.90 for CoLa/XT, 1.85 for standard flat. To check 'can this venue show full 1.43:1?' → test: min_content_ar_supported <= 1.43."
+        },
+        "supports_1570_film": {
+          "type": "boolean",
+          "default": false,
+          "description": "True if venue has a functional 15/70 film projector AND can book film prints. Having the projector but never running it (e.g., Providence between film bookings) should still be true — the capability exists."
+        },
+        "supports_143_digital": {
+          "type": "boolean",
+          "default": false,
+          "description": "True if projector can display 1.43:1 content at full screen height (GT Dual Laser, Dome laser with anamorphic). False for CoLa/XT (1.90:1 max)."
+        },
+        "has_screenx": {
+          "type": "boolean",
+          "default": false,
+          "description": "Side-wall projection capability (270° coverage on mastered sequences)."
+        },
+        "has_4dx": {
+          "type": "boolean",
+          "default": false,
+          "description": "4DX motion seats and environmental effects (wind, water, scent, etc.)."
+        },
+        "has_dbox": {
+          "type": "boolean",
+          "default": false,
+          "description": "D-BOX haptic motion rows (typically 2-4 rows in an otherwise standard room)."
+        },
+        "infinity_vision_certified": {
+          "type": ["boolean", "null"],
+          "description": "Disney Infinity Vision certification. Requires ≥50ft screen, laser projection, ≥7.1 audio. Null if status unknown."
+        }
+      }
+    },
+
+    "history_entry": {
+      "type": "object",
+      "description": "A single historical change event for a venue. Supports tracking projector upgrades, chain ownership changes, screen modifications, etc.",
+      "properties": {
+        "date":             { "type": "string", "description": "ISO date or YYYY-MM approximate. E.g., '2023-09' or '2024-03-15'." },
+        "change":           { "type": "string", "description": "Human-readable description. E.g., 'Upgraded from dual xenon to CoLa laser'." },
+        "field_changed":    { "type": ["string", "null"], "description": "Dot-path to the schema field that changed. E.g., 'projection.type'. Null for general notes." },
+        "previous_value":   { "type": ["string", "null"], "description": "Previous value of the changed field, as a string." },
+        "source":           { "type": ["string", "null"], "description": "Where this historical info came from. E.g., 'r/imax post', 'Apple Cinemas announcement'." }
+      },
+      "required": ["date", "change"]
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Data provenance and freshness tracking. Critical for community-driven data quality.",
+      "properties": {
+        "data_source": {
+          "type": "string",
+          "enum": ["r_imax_csv", "lfexaminer", "official_venue", "community_submission", "user_created", "research_compiled"],
+          "description": "Primary origin of this record's data."
+        },
+        "source_url":    { "type": ["string", "null"], "format": "uri", "description": "URL to the source data (e.g., 143190.xyz page, venue tech spec PDF)." },
+        "last_verified":  { "type": "string", "format": "date", "description": "ISO date when this record was last checked for accuracy." },
+        "created_at":     { "type": ["string", "null"], "format": "date-time", "description": "When this record was first created." },
+        "updated_at":     { "type": ["string", "null"], "format": "date-time", "description": "When this record was last modified." },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "'high' = multiple confirming sources or official data. 'medium' = single reliable source. 'low' = community estimate or unverified."
+        },
+        "notes": { "type": ["string", "null"], "description": "Free-text editorial notes. E.g., 'Providence 15/70 projector only runs when film prints are booked — check Apple Cinemas schedule for 70mm showtimes.'" }
+      },
+      "required": ["data_source", "last_verified", "confidence"]
+    },
+
+    "format_preset": {
+      "type": "object",
+      "description": "Default specifications for a theater format tier. Venue records reference a preset by ID; any venue field left null inherits the preset's value. Presets encode the research findings from the gap analysis document.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier. Convention: lowercase_snake_case. E.g., 'imax_gt_dual_laser', 'dolby_cinema', 'standard_multiplex_xenon'."
+        },
+        "display_name":  { "type": "string", "description": "Human-readable label. E.g., 'IMAX GT Dual Laser'." },
+        "brand":         { "type": ["string", "null"], "description": "Parent brand if applicable. E.g., 'IMAX', 'Dolby', 'Cinemark', 'Regal'. Null for generic formats." },
+        "short_description": { "type": ["string", "null"], "description": "One-sentence summary for tooltips/cards. E.g., 'Dual 4K laser projectors in purpose-built 1.43:1 auditoriums. The real IMAX.'" },
+        "tier": {
+          "type": "string",
+          "enum": ["flagship", "premium", "standard", "base", "specialty"],
+          "description": "Quality tier for sorting/filtering. 'flagship' = IMAX GT, Dolby Cinema. 'premium' = CoLa, XD. 'standard' = RPX, basic PLF. 'base' = standard multiplex. 'specialty' = Dome, ScreenX, LED."
+        },
+        "default_screen":       { "$ref": "#/definitions/screen" },
+        "default_projection":   { "$ref": "#/definitions/projection" },
+        "default_sound":        { "$ref": "#/definitions/sound" },
+        "default_seating":      { "$ref": "#/definitions/seating" },
+        "default_capabilities": { "$ref": "#/definitions/capabilities" },
+        "ticket_premium_usd":   { "type": ["string", "null"], "description": "Typical surcharge over standard ticket. E.g., '$5–8', '$3–5'. String because it's a range." },
+        "known_limitations": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Key consumer-facing limitations to flag. E.g., ['Cannot display 1.43:1 content — crops ~24.7% of vertical frame', 'Brightness at DCI baseline, no premium over standard']."
+        }
+      },
+      "required": ["id", "display_name", "tier", "default_screen", "default_projection", "default_seating", "default_capabilities"]
+    },
+
+    "venue_record": {
+      "type": "object",
+      "description": "A specific real-world theater. References a format_preset by ID. Any non-null field here overrides the corresponding preset default. The math engine resolves each field as: venue value if present, else preset default.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique venue identifier. Convention: chain_location_screen. E.g., 'jordans_reading_imax', 'amc_boston_common_dolby', 'apple_providence_imax'."
+        },
+        "preset_id": {
+          "type": "string",
+          "description": "References a format_preset.id. E.g., 'imax_gt_dual_laser'. This determines default values for all unspecified fields."
+        },
+        "name":          { "type": "string", "description": "Venue display name. E.g., 'Jordan\\'s Furniture IMAX — Reading'." },
+        "chain":         { "type": ["string", "null"], "description": "Exhibitor chain. E.g., 'AMC', 'Regal', 'Cinemark', 'Apple Cinemas', 'Jordan\\'s Furniture'." },
+        "brand_label":   { "type": ["string", "null"], "description": "The PLF brand on the marquee. E.g., 'IMAX', 'Dolby Cinema', 'XD', 'RPX'. May differ from preset (e.g., a venue branded 'IMAX' but running CoLa specs)." },
+        "city":          { "type": "string" },
+        "state_province": { "type": ["string", "null"] },
+        "country":       { "type": "string" },
+        "coordinates": {
+          "type": ["object", "null"],
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          },
+          "required": ["lat", "lng"]
+        },
+
+        "screen":       { "$ref": "#/definitions/screen" },
+        "projection":   { "$ref": "#/definitions/projection" },
+        "sound":        { "$ref": "#/definitions/sound" },
+        "seating":      { "$ref": "#/definitions/seating" },
+        "capabilities": { "$ref": "#/definitions/capabilities" },
+
+        "history": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/history_entry" },
+          "description": "Chronological log of significant changes to this venue."
+        },
+        "metadata": { "$ref": "#/definitions/metadata" }
+      },
+      "required": ["id", "preset_id", "name", "city", "country", "metadata"]
+    },
+
+    "content_format": {
+      "type": "object",
+      "description": "A content aspect ratio used for masking/cropping calculations. The math engine computes effective visible area when a content_format is displayed on a given screen.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "E.g., 'imax_143', 'scope_239', 'flat_185', 'tv_178', 'imax_digital_190'."
+        },
+        "display_name": { "type": "string", "description": "E.g., 'IMAX 1.43:1', 'Anamorphic Scope', 'Standard Flat'." },
+        "aspect_ratio": {
+          "type": "number",
+          "description": "Width divided by height. E.g., 1.43, 1.90, 2.39."
+        },
+        "description": {
+          "type": ["string", "null"],
+          "description": "What this format is and when it's used. E.g., 'The full IMAX frame. Shot on 15/70 film cameras or IMAX-certified digital cameras. Only visible in GT Laser or 15/70 film venues.'"
+        },
+        "example_films": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Notable films in this format. E.g., ['Oppenheimer (2023)', 'Dunkirk (2017)', 'Interstellar (2014)']."
+        },
+        "extra_area_vs_scope_pct": {
+          "type": ["number", "null"],
+          "description": "Percent additional image area vs. 2.39:1 scope at equal screen width. Precomputed from formula: (2.39 / AR - 1) × 100. E.g., 67.1 for 1.43:1."
+        },
+        "home_release_behavior": {
+          "type": ["string", "null"],
+          "description": "How this format is typically handled for home release. E.g., 'Cropped to 1.78:1 (16:9) — loses ~19.7% of vertical content. No consumer display can show full 1.43:1.'"
+        }
+      },
+      "required": ["id", "display_name", "aspect_ratio"]
+    },
+
+    "display_optics": {
+      "type": "object",
+      "description": "Optical specifications for a home display. Parallel to 'projection' for cinema but uses nits (cd/m²) as native brightness unit, supports multiple HDR formats, and tracks panel technology. Key distinction: brightness has two meaningful measurements — peak HDR (small bright highlight on dark background) and full-screen sustained (entire panel lit, much lower on OLEDs due to thermal limits). Full-screen is the fairer cinema comparison since cinema content fills the screen.",
+      "properties": {
+        "panel_tech": { "$ref": "#/definitions/panel_tech" },
+        "is_per_pixel_emissive": {
+          "type": ["boolean", "null"],
+          "description": "True for all OLED variants (WOLED, QD-OLED, tandem, AMOLED). These achieve true per-pixel black (infinite contrast). False for LCD-based panels and projectors. When true, contrast_sequential should be null — display 'Infinite (OLED)' in UI instead of a number."
+        },
+        "resolution_horizontal_px": {
+          "type": ["integer", "null"],
+          "description": "Native horizontal pixel count. 3840 for 4K UHD, 7680 for 8K, 1179-1320 for iPhones."
+        },
+        "resolution_vertical_px": {
+          "type": ["integer", "null"],
+          "description": "Native vertical pixel count. 2160 for 4K UHD, 4320 for 8K, 2556-2868 for iPhones."
+        },
+        "ppi": {
+          "type": ["number", "null"],
+          "description": "Pixels per inch. Derived from resolution and screen diagonal. ~68 PPI for 65\" 4K, ~460 PPI for iPhone 16 Pro, ~498 PPI for Galaxy S25 Ultra. Used directly in PPD calculation: PPD ≈ PPI × viewing_distance_in / 57.3 (small-angle approx; use exact arctan formula in math engine)."
+        },
+        "brightness_peak_hdr_nits": {
+          "type": ["number", "null"],
+          "description": "Peak HDR brightness at 10% window in nits (cd/m²). LG G5 = 2268. Samsung S95D = ~1600. Hisense U8N = 3296. This is the spec-sheet number but NOT representative of typical viewing — it's a small bright highlight on a dark background."
+        },
+        "brightness_fullscreen_nits": {
+          "type": ["number", "null"],
+          "description": "Sustained full-screen brightness in nits. LG G5 = 331. Samsung QN90D = 689. Hisense U8N = ~1258. This is the fair cinema comparison value — cinema content fills the screen. To convert to fL for comparison: nits / 3.426."
+        },
+        "brightness_sdr_nits": {
+          "type": ["number", "null"],
+          "description": "Typical SDR content brightness in nits. LG C4 = 296. Relevant because most non-streaming content is SDR."
+        },
+        "contrast_sequential": {
+          "type": ["integer", "null"],
+          "description": "Sequential contrast ratio for non-OLED panels. Mini-LED ~5000-20000. QLED LCD VA ~3000-6000. Standard LCD IPS ~800-1500. Null for OLED (use is_per_pixel_emissive instead)."
+        },
+        "contrast_notes": {
+          "type": ["string", "null"],
+          "description": "Context for contrast claims. E.g., 'Mini-LED: zone count affects real-world contrast; halos visible around bright objects on dark backgrounds.'"
+        },
+        "color_gamut_label": {
+          "type": ["string", "null"],
+          "description": "Human-readable gamut description. E.g., 'Wide Color (DCI-P3)', 'sRGB only', 'Display P3 (Apple)'."
+        },
+        "color_gamut_dci_p3_pct": {
+          "type": ["number", "null"],
+          "description": "DCI-P3 color gamut coverage as percentage. LG G5 = ~99%. Samsung Galaxy S25 Ultra = ~90.8%. Standard LCD = ~72% (≈sRGB). Null if not measured.",
+          "minimum": 0,
+          "maximum": 150
+        },
+        "hdr_formats": { "$ref": "#/definitions/hdr_formats_supported" }
+      }
+    },
+
+    "home_display_preset": {
+      "type": "object",
+      "description": "Default specifications for a home display tier. Parallel to format_preset for cinema. HomeDisplayRecord references a preset by ID; null record fields fall through to preset defaults. Presets carry sensible viewing distance defaults so users don't need to measure — 1.5× screen height for TVs, 12 inches for phones.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier. Convention: lowercase_snake_case. E.g., 'oled_flagship_2025', 'iphone_pro', 'standard_lcd'."
+        },
+        "display_name": { "type": "string", "description": "Human-readable label. E.g., 'OLED Flagship (LG G5 / Samsung S95F tier)'." },
+        "device_category": { "$ref": "#/definitions/device_category" },
+        "short_description": {
+          "type": ["string", "null"],
+          "description": "One-sentence summary for tooltips/cards. E.g., 'Per-pixel OLED with 2,268 nits peak HDR. Brighter than any cinema — but your living room isn\\'t pitch dark.'"
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["flagship", "midrange", "budget", "phone", "projector"],
+          "description": "Quality tier for sorting/filtering within home displays."
+        },
+        "default_screen_diagonal_in": {
+          "type": ["number", "null"],
+          "description": "Representative screen size in inches for this tier. E.g., 65 for midrange TV OLED, 6.3 for iPhone Pro. Used to derive width/height via AR."
+        },
+        "default_aspect_ratio": {
+          "type": "number",
+          "description": "Screen aspect ratio as decimal. 1.78 (16:9) for TVs, ~2.17 (19.5:9) for modern phones, 1.78 for most monitors.",
+          "default": 1.78
+        },
+        "default_viewing_distance_ft": {
+          "type": ["number", "null"],
+          "description": "Default viewing distance in feet for this preset. TVs: derived from 1.5× screen height (e.g., ~5.5 ft for 55\", ~6.6 ft for 65\", ~7.7 ft for 75\"). Phones: 1.0 ft (12 in). Users can override this in their record."
+        },
+        "default_display_optics": { "$ref": "#/definitions/display_optics" },
+        "known_limitations": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Key consumer-facing limitations. E.g., ['Full-screen brightness drops to ~331 nits due to OLED thermal limits — spec-sheet peak brightness is misleading for cinema-style content', 'No Dolby Vision support (Samsung)']."
+        }
+      },
+      "required": ["id", "display_name", "device_category", "tier", "default_aspect_ratio", "default_screen_diagonal_in", "default_viewing_distance_ft", "default_display_optics"]
+    },
+
+    "home_display_record": {
+      "type": "object",
+      "description": "A specific user's home display setup. References a home_display_preset by ID. Scalar fields use null for fall-through; the display_optics sub-object uses omission (absent = inherit entire preset default). The math engine resolves each field as: record value if present and non-null, else preset default. Users typically provide screen size + panel type + viewing distance; everything else falls through to the preset.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier. Convention: user-chosen or auto-generated. E.g., 'my_living_room_tv', 'bedroom_phone'."
+        },
+        "preset_id": {
+          "type": "string",
+          "description": "References a home_display_preset.id. E.g., 'oled_midrange'. Determines defaults for all unspecified fields."
+        },
+        "user_label": {
+          "type": "string",
+          "description": "User-facing display name. E.g., 'My Living Room TV', 'Bedroom Phone', 'Office Monitor'."
+        },
+        "brand": { "type": ["string", "null"], "description": "Manufacturer. E.g., 'LG', 'Samsung', 'Apple', 'Sony'." },
+        "model": { "type": ["string", "null"], "description": "Model name/number. E.g., 'C4 OLED', 'Galaxy S25 Ultra', 'QN90D'. Enables future model-database lookup for auto-fill." },
+        "screen_diagonal_in": {
+          "type": ["number", "null"],
+          "description": "Actual screen diagonal in inches. Overrides preset default. E.g., 77 for a 77\" OLED, 6.9 for iPhone 16 Pro Max."
+        },
+        "aspect_ratio": {
+          "type": ["number", "null"],
+          "description": "Screen aspect ratio override. Most users won't set this — 1.78 for TVs and ~2.17 for phones come from the preset."
+        },
+        "viewing_distance_ft": {
+          "type": ["number", "null"],
+          "description": "User's actual viewing distance in feet. Overrides preset default. If null, the preset's default applies (1.5× screen height for TVs, 1.0 ft for phones). This is the field that makes PPD personal — 'How far is your couch from the TV?'"
+        },
+        "display_optics": { "$ref": "#/definitions/display_optics" },
+        "year_purchased": {
+          "type": ["integer", "null"],
+          "description": "Year of purchase or manufacture. Enables brightness-tier estimation when model is unknown. E.g., a 2023 OLED is likely ~800-1000 nits peak; a 2025 OLED is ~1500-2200+."
+        },
+        "metadata": { "$ref": "#/definitions/metadata" }
+      },
+      "required": ["id", "preset_id", "user_label"]
+    }
+  },
+
+  "type": "object",
+  "description": "Top-level database structure containing all presets, venues, and content formats.",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
+      "const": "1.1.1"
+    },
+    "presets": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/format_preset" },
+      "description": "All format presets. Each defines default specs for one theater format tier."
+    },
+    "venues": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/venue_record" },
+      "description": "All venue records. Each references a preset and can override any default field."
+    },
+    "content_formats": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/content_format" },
+      "description": "All content aspect ratios. Used by the masking math engine."
+    },
+    "home_display_presets": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/home_display_preset" },
+      "description": "All home display presets. Each defines default specs for one display tier (e.g., OLED flagship, standard LCD, iPhone Pro)."
+    },
+    "home_displays": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/home_display_record" },
+      "description": "User-created home display records. Each references a preset and can override any default field with user-specific values."
+    }
+  },
+  "required": ["schema_version", "presets", "venues", "content_formats", "home_display_presets", "home_displays"]
+}
