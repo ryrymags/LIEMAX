@@ -28,7 +28,7 @@ export function ComparisonSummary({ leftLabel, rightLabel, leftMetrics, rightMet
 }
 
 function buildInsights(leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): string[] {
-  const insights: string[] = [];
+  const insights: Insight[] = [];
   addRatioInsight(insights, 'visible image area', leftLabel, rightLabel, left.effectiveAreaSqFt ?? left.screenAreaSqFt, right.effectiveAreaSqFt ?? right.screenAreaSqFt, 'larger');
   addRatioInsight(insights, 'horizontal FOV', leftLabel, rightLabel, left.fovHorizontalDeg, right.fovHorizontalDeg, 'wider');
   addRatioInsight(insights, 'PPD', leftLabel, rightLabel, left.ppdValue, right.ppdValue, 'sharper per degree');
@@ -36,11 +36,19 @@ function buildInsights(leftLabel: string, rightLabel: string, left: ComputedMetr
   addContrastInsight(insights, leftLabel, rightLabel, left, right);
   addMaskingInsight(insights, leftLabel, rightLabel, left, right);
   addResolutionInsight(insights, leftLabel, rightLabel, left, right);
-  return insights;
+  return insights
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 6)
+    .map((insight) => insight.text);
+}
+
+interface Insight {
+  text: string;
+  score: number;
 }
 
 function addRatioInsight(
-  insights: string[],
+  insights: Insight[],
   metric: string,
   leftLabel: string,
   rightLabel: string,
@@ -50,55 +58,71 @@ function addRatioInsight(
 ): void {
   if (!leftValue || !rightValue) return;
   const ratio = leftValue / rightValue;
-  if (ratio >= 1.05) {
-    insights.push(`${shortLabel(leftLabel)} has ${ratio.toFixed(1)}x ${adjective} ${metric}.`);
-  } else if (ratio <= 0.95) {
-    insights.push(`${shortLabel(rightLabel)} has ${(1 / ratio).toFixed(1)}x ${adjective} ${metric}.`);
-  } else {
-    insights.push(`${shortLabel(leftLabel)} and ${shortLabel(rightLabel)} are nearly tied on ${metric}.`);
-  }
+  const magnitude = ratio >= 1 ? ratio : 1 / ratio;
+  if (magnitude < 1.08) return;
+  const winner = ratio >= 1 ? shortLabel(leftLabel) : shortLabel(rightLabel);
+  const score = scoreFor(metric, magnitude);
+  insights.push({ text: `${winner} has ${magnitude.toFixed(1)}x ${adjective} ${metric}.`, score });
 }
 
-function addBrightnessInsight(insights: string[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
+function addBrightnessInsight(insights: Insight[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
   const leftNits = left.brightnessCinemaNits ?? left.brightnessHomeFullscreenNits;
   const rightNits = right.brightnessCinemaNits ?? right.brightnessHomeFullscreenNits;
   if (!leftNits || !rightNits) return;
   const ratio = leftNits / rightNits;
-  if (ratio >= 1.05) {
-    insights.push(`${shortLabel(leftLabel)} is ${ratio.toFixed(1)}x brighter by full-screen brightness.`);
-  } else if (ratio <= 0.95) {
-    insights.push(`${shortLabel(rightLabel)} is ${(1 / ratio).toFixed(1)}x brighter by full-screen brightness.`);
-  }
+  const magnitude = ratio >= 1 ? ratio : 1 / ratio;
+  if (magnitude < 1.15) return;
+  const winner = ratio >= 1 ? shortLabel(leftLabel) : shortLabel(rightLabel);
+  insights.push({ text: `${winner} is ${magnitude.toFixed(1)}x brighter by full-screen brightness.`, score: scoreFor('brightness', magnitude) });
 }
 
-function addContrastInsight(insights: string[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
+function addContrastInsight(insights: Insight[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
   if (left.contrastIsInfinite && !right.contrastIsInfinite) {
-    insights.push(`${shortLabel(leftLabel)} wins contrast with per-pixel black levels.`);
+    insights.push({ text: `${shortLabel(leftLabel)} wins contrast with per-pixel black levels.`, score: 14 });
     return;
   }
   if (right.contrastIsInfinite && !left.contrastIsInfinite) {
-    insights.push(`${shortLabel(rightLabel)} wins contrast with per-pixel black levels.`);
+    insights.push({ text: `${shortLabel(rightLabel)} wins contrast with per-pixel black levels.`, score: 14 });
     return;
   }
   addRatioInsight(insights, 'sequential contrast', leftLabel, rightLabel, left.contrastSequential, right.contrastSequential, 'higher');
 }
 
-function addMaskingInsight(insights: string[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
+function addMaskingInsight(insights: Insight[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
   if (left.cropLossPct && left.cropLossPct > 0) {
-    insights.push(`${shortLabel(leftLabel)} crops ${left.cropLossPct.toFixed(1)}% of the selected frame.`);
+    insights.push({ text: `${shortLabel(leftLabel)} crops ${left.cropLossPct.toFixed(1)}% of the selected frame.`, score: 18 + left.cropLossPct / 5 });
   }
   if (right.cropLossPct && right.cropLossPct > 0) {
-    insights.push(`${shortLabel(rightLabel)} crops ${right.cropLossPct.toFixed(1)}% of the selected frame.`);
+    insights.push({ text: `${shortLabel(rightLabel)} crops ${right.cropLossPct.toFixed(1)}% of the selected frame.`, score: 18 + right.cropLossPct / 5 });
+  }
+
+  if (left.utilizationPct != null && right.utilizationPct != null) {
+    const delta = Math.abs(left.utilizationPct - right.utilizationPct);
+    if (delta >= 10) {
+      const winner = left.utilizationPct > right.utilizationPct ? shortLabel(leftLabel) : shortLabel(rightLabel);
+      insights.push({ text: `${winner} uses ${delta.toFixed(0)} percentage points more of its screen for this presentation AR.`, score: 16 + delta / 3 });
+    }
   }
 }
 
-function addResolutionInsight(insights: string[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
+function addResolutionInsight(insights: Insight[], leftLabel: string, rightLabel: string, left: ComputedMetrics, right: ComputedMetrics): void {
   if (left.ppdLow != null && left.ppdHigh != null) {
-    insights.push(`${shortLabel(leftLabel)} uses film scan-equivalent detail: ${left.ppdLow.toFixed(0)}-${left.ppdHigh.toFixed(0)} PPD at this seat.`);
+    insights.push({ text: `${shortLabel(leftLabel)} uses film scan-equivalent detail: ${left.ppdLow.toFixed(0)}-${left.ppdHigh.toFixed(0)} PPD at this seat.`, score: 12 });
   }
   if (right.ppdLow != null && right.ppdHigh != null) {
-    insights.push(`${shortLabel(rightLabel)} uses film scan-equivalent detail: ${right.ppdLow.toFixed(0)}-${right.ppdHigh.toFixed(0)} PPD at this seat.`);
+    insights.push({ text: `${shortLabel(rightLabel)} uses film scan-equivalent detail: ${right.ppdLow.toFixed(0)}-${right.ppdHigh.toFixed(0)} PPD at this seat.`, score: 12 });
   }
+}
+
+function scoreFor(metric: string, magnitude: number): number {
+  const base =
+    metric === 'visible image area' ? 20 :
+    metric === 'horizontal FOV' ? 24 :
+    metric === 'PPD' ? 17 :
+    metric === 'brightness' ? 15 :
+    metric === 'sequential contrast' ? 13 :
+    10;
+  return base + Math.log2(magnitude) * 4;
 }
 
 function shortLabel(label: string): string {

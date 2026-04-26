@@ -25,12 +25,13 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
   const [city, setCity] = useState('all');
   const [projector, setProjector] = useState('all');
   const [aspectRatio, setAspectRatio] = useState('all');
-  const [filmOnly, setFilmOnly] = useState(false);
+  const [imax1570Only, setImax1570Only] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const filterOptions = useMemo(() => buildFilterOptions(items, category, region, country, province), [items, category, region, country, province]);
   const selectedItem = items.find((item) => item.id === value) ?? null;
   const filteredItems = useMemo(() => {
     const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    const matches = items
+    return items
       .filter((item) => category === 'all' || item.category === category)
       .filter((item) => region === 'all' || metaValue(item, 'region') === region)
       .filter((item) => country === 'all' || metaValue(item, 'country') === country)
@@ -38,13 +39,20 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
       .filter((item) => city === 'all' || metaValue(item, 'city') === city)
       .filter((item) => projector === 'all' || projectorValues(item).includes(projector))
       .filter((item) => aspectRatio === 'all' || aspectRatioValues(item).includes(aspectRatio))
-      .filter((item) => !filmOnly || supportsFilm(item))
+      .filter((item) => !imax1570Only || supportsImax1570(item))
       .filter((item) => tokens.every((token) => searchText(item).includes(token)));
-    const visible = matches.slice(0, 36);
-    return selectedItem && !visible.some((item) => item.id === selectedItem.id)
-      ? [selectedItem, ...visible.slice(0, 35)]
-      : visible;
-  }, [items, category, region, country, province, city, projector, aspectRatio, filmOnly, query, selectedItem]);
+  }, [items, category, region, country, province, city, projector, aspectRatio, imax1570Only, query]);
+  const visibleItems = filteredItems.slice(0, 50);
+  const activeFilterCount = [
+    category !== 'all',
+    region !== 'all',
+    country !== 'all',
+    province !== 'all',
+    city !== 'all',
+    projector !== 'all',
+    aspectRatio !== 'all',
+    imax1570Only,
+  ].filter(Boolean).length;
 
   return (
     <section className="item-search" aria-label={label}>
@@ -58,39 +66,47 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
           onChange={(event) => setQuery(event.target.value)}
         />
       </label>
-      <div className="filter-grid" aria-label={`${label} filters`}>
-        <label>
-          <span>Type</span>
-          <select value={category} onChange={(event) => setCategory(event.target.value as ComparableCategory | 'all')}>
-            {GROUPS.map((group) => <option key={group.category} value={group.category}>{group.label}</option>)}
-          </select>
-        </label>
-        <FilterSelect label="Region" value={region} values={filterOptions.regions} onChange={(next) => {
-          setRegion(next);
-          setCountry('all');
-          setProvince('all');
-          setCity('all');
-        }} />
-        <FilterSelect label="Country" value={country} values={filterOptions.countries} onChange={(next) => {
-          setCountry(next);
-          setProvince('all');
-          setCity('all');
-        }} />
-        <FilterSelect label="State" value={province} values={filterOptions.provinces} onChange={(next) => {
-          setProvince(next);
-          setCity('all');
-        }} />
-        <FilterSelect label="City" value={city} values={filterOptions.cities} onChange={setCity} />
-        <FilterSelect label="Projector" value={projector} values={filterOptions.projectors} onChange={setProjector} />
-        <FilterSelect label="AR" value={aspectRatio} values={filterOptions.aspectRatios} onChange={setAspectRatio} />
-        <label className="checkbox-filter">
-          <input type="checkbox" checked={filmOnly} onChange={(event) => setFilmOnly(event.target.checked)} />
-          <span>Film capable</span>
-        </label>
+      <div className="filter-bar">
+        <button type="button" onClick={() => setFiltersOpen((open) => !open)} aria-expanded={filtersOpen}>
+          Filters{activeFilterCount > 0 ? ` (${activeFilterCount})` : ''}
+        </button>
+        <span>{filteredItems.length} matches</span>
       </div>
+      {filtersOpen ? (
+        <div className="filter-grid" aria-label={`${label} filters`}>
+          <label>
+            <span>Type</span>
+            <select value={category} onChange={(event) => setCategory(event.target.value as ComparableCategory | 'all')}>
+              {GROUPS.map((group) => <option key={group.category} value={group.category}>{group.label}</option>)}
+            </select>
+          </label>
+          <FilterSelect label="Region" value={region} values={filterOptions.regions} onChange={(next) => {
+            setRegion(next);
+            setCountry('all');
+            setProvince('all');
+            setCity('all');
+          }} />
+          <FilterSelect label="Country" value={country} values={filterOptions.countries} onChange={(next) => {
+            setCountry(next);
+            setProvince('all');
+            setCity('all');
+          }} />
+          <FilterSelect label="State" value={province} values={filterOptions.provinces} onChange={(next) => {
+            setProvince(next);
+            setCity('all');
+          }} />
+          <FilterSelect label="City" value={city} values={filterOptions.cities} onChange={setCity} />
+          <FilterSelect label="Projector" value={projector} values={filterOptions.projectors} onChange={setProjector} />
+          <FilterSelect label="AR" value={aspectRatio} values={filterOptions.aspectRatios} onChange={setAspectRatio} />
+          <label className="checkbox-filter">
+            <input type="checkbox" checked={imax1570Only} onChange={(event) => setImax1570Only(event.target.checked)} />
+            <span>IMAX 15/70 capable</span>
+          </label>
+        </div>
+      ) : null}
       <div className="search-results" role="listbox" aria-label={`${label} results`}>
-        {filteredItems.length > 0 ? (
-          filteredItems.map((item) => (
+        {visibleItems.length > 0 ? (
+          visibleItems.map((item) => (
             <button
               key={item.id}
               type="button"
@@ -113,6 +129,9 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
           </div>
         )}
       </div>
+      {filteredItems.length > visibleItems.length ? (
+        <p className="results-note">Showing first {visibleItems.length} matches. Type more or add filters to narrow the list.</p>
+      ) : null}
     </section>
   );
 }
@@ -223,12 +242,20 @@ function aspectRatioValues(item: ComparableItem): string[] {
     .map((value) => `${value.toFixed(2)}:1`));
 }
 
-function supportsFilm(item: ComparableItem): boolean {
+function supportsImax1570(item: ComparableItem): boolean {
+  const projections = [
+    item.rawPreset?.default_projection,
+    item.rawVenue?.projection,
+    ...(item.rawVenue?.projections ?? []),
+  ].filter(Boolean);
+
   return Boolean(
-    item.rawPreset?.default_projection?.mode === 'film' ||
-    item.rawVenue?.projection?.mode === 'film' ||
+    item.rawPreset?.id === 'imax_1570_film' ||
     item.rawVenue?.capabilities?.supports_1570_film ||
-    (item.rawVenue?.projections ?? []).some((projection: Record<string, any>) => projection.mode === 'film')
+    projections.some((projection: Record<string, any>) =>
+      projection.type === 'imax_1570_film' ||
+      /15\/70|1570|70mm/i.test(`${projection.display_name ?? ''} ${projection.type ?? ''}`)
+    )
   );
 }
 

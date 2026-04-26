@@ -3,6 +3,8 @@ import type { SeatPosition } from '../lib/computeMetrics';
 interface SeatPositionPickerProps {
   value: SeatPosition;
   onChange: (value: SeatPosition) => void;
+  legend?: string;
+  note?: string | null;
 }
 
 const OPTIONS: Array<{ value: SeatPosition; label: string }> = [
@@ -11,10 +13,10 @@ const OPTIONS: Array<{ value: SeatPosition; label: string }> = [
   { value: 'back', label: 'Back' },
 ];
 
-export function SeatPositionPicker({ value, onChange }: SeatPositionPickerProps) {
+export function SeatPositionPicker({ value, onChange, legend = 'Seat position', note = 'Home displays ignore seat position.' }: SeatPositionPickerProps) {
   return (
     <fieldset className="seat-picker">
-      <legend>Seat position</legend>
+      <legend>{legend}</legend>
       <div className="segmented-control" role="group" aria-label="Seat position">
         {OPTIONS.map((option) => (
           <button
@@ -27,7 +29,7 @@ export function SeatPositionPicker({ value, onChange }: SeatPositionPickerProps)
           </button>
         ))}
       </div>
-      <p>Home displays ignore seat position.</p>
+      {note ? <p>{note}</p> : null}
     </fieldset>
   );
 }

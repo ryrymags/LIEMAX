@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Phase 4b refinement is underway: baseline committed, search picker/per-side AR/projection switching implemented in working tree."
+Current status: "Steps 1–3 audited and clean. Phase 4b annotation refinement implemented in working tree; functional checks pass."
 
 ## Completed
 
@@ -65,11 +65,13 @@ Priority order: get functional → then design polish. Do not invest in visual d
 - Phase 4b progress: `computeMetrics.ts` adapts existing locked math functions for cinema, dome, film scan-equivalent, home display, masking/crop, FOV, PPD, brightness, contrast, and resolution display without changing `src/math`.
 - Phase 4b verification: `npm run typecheck`, `npm run ci`, `npm run build`, `npm run validate`, and `npm run validate:schema` pass. Dev server starts at `http://127.0.0.1:5173/`; localhost root and `/api/imax-csv/americas/unitedstates.csv` respond. Direct smoke test: Providence + IMAX 1.43 crop loss is ~24.7%, OLED contrast is infinite, and Mugar dome FOV is 180 degrees.
 - Baseline commit: `e74e5d0` (`Implement Phase 4 website functional baseline`).
-- Phase 4b refinement progress: global content format selector removed; each side now has searchable/filterable item picking, a per-side Presentation AR control, and a projection mode toggle when multiple projection modes exist.
-- Phase 4b refinement progress: hybrid venues such as Apple Providence can switch between digital and film projection in UI state; switching projection resets that side's Presentation AR to the best-native default for the selected projection.
-- Phase 4b refinement progress: brightness-only comparison row replaced with a broader live comparison summary; CSV footer now names `143190.xyz / r-imax`.
-- Phase 4b refinement verification so far: `npm run typecheck`, `npm run build`, and direct Providence digital/film + OLED metrics smoke pass.
-- Next Step 4 chunk: finish browser smoke tests, run full `npm run ci`, commit refinement if clean, then proceed to Phase 4c or manual-entry/render chunks.
+- Refinement commit: `1546d7a` (`Refine comparison picker and projection controls`).
+- Phase 4b annotation refinement progress: page flow now prioritizes side selection/configuration, then a live comparison workbench, then one aligned raw metrics table.
+- Phase 4b annotation refinement progress: side pickers have collapsed filters, scrollable result lists, honest filtered results without selected-item pinning, result counts, and an explicit `IMAX 15/70 capable` filter.
+- Phase 4b annotation refinement progress: each selected side now shows summary tags/facts; Presentation AR is a searchable/custom combobox with local recent custom ratios and best-native explanations.
+- Phase 4b annotation refinement progress: seat position is linked by default in the comparison workbench, with optional per-side seat comparison.
+- Phase 4b annotation refinement verification: `npm run typecheck`, `npm run ci`, `npm run build`, and browser smoke checks pass for search, filters, custom AR, linked/per-side seats, aligned table, footer source, and Providence/OLED comparison behavior.
+- Next Step 4 chunk: commit annotation refinement if desired, then proceed to Phase 4c polish or manual-entry/render chunks.
 
 ## Project Memory Milestone
 
