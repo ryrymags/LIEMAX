@@ -81,6 +81,7 @@
     "No 15/70 film scan-equivalent resolution claim; this is a digital laser dome system",
     "PPD lower per degree than flat GT screens because resolution is spread over a 180° dome field",
     "Non-linear pixel density from dome optics: center sharpest, extreme periphery softer",
-    "Institutional venues primarily; not part of commercial multiplex IMAX network"
+    "Institutional venues primarily; not part of commercial multiplex IMAX network",
+    "Effective brightness per unit area varies significantly with dome diameter — larger domes receive fewer lumens per square foot; 22 fL is the projector calibration target, not a per-seat guarantee."
   ]
 }

@@ -2,7 +2,7 @@
   "id": "imax_dual_xenon",
   "display_name": "IMAX Digital (Dual Xenon)",
   "brand": "IMAX",
-  "short_description": "Legacy dual-2K xenon projection in 1.90:1 rooms. The original 'LIMAX' — weakest IMAX tier in resolution, brightness, and contrast.",
+  "short_description": "Legacy dual-2K xenon projection in 1.90:1 rooms. Same 22 fL brightness spec as laser but xenon lamps degrade significantly; older venues may deliver 12–14 fL. Lowest IMAX resolution tier.",
   "tier": "premium",
   "default_screen": {
     "width_m": null,
@@ -33,13 +33,13 @@
     "resolution_scan_equivalent_low": null,
     "resolution_scan_equivalent_high": null,
     "effective_resolution_label": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-    "brightness_fl": 14.0,
-    "brightness_cdm2": 47.97,
-    "brightness_source": "community_estimate",
-    "contrast_sequential": 2000,
+    "brightness_fl": 22.0,
+    "brightness_cdm2": 75.37,
+    "brightness_source": "published_cto",
+    "contrast_sequential": 2500,
     "contrast_dynamic": null,
-    "contrast_source": "community_estimate",
-    "contrast_notes": "Xenon lamp brightness degrades ~20% over lamp life; venue may fall below DCI 14 fL minimum near end of lamp cycle.",
+    "contrast_source": "published_cto",
+    "contrast_notes": "Range 2,500–2,600:1 per IMAX CTO Brian Bonnick (Display Daily 2015, 2018); slightly apertured 3-chip DLP prism architecture. Above DCI minimum 2,000:1 but well below laser systems (10,000:1 CoLa, 8,000:1 GT).",
     "color_gamut": "DCI-P3 (standard digital cinema)",
     "hdr": "none",
     "supports_3d": true,
@@ -78,7 +78,7 @@
   "ticket_premium_usd": "$3–5",
   "known_limitations": [
     "2K resolution — below modern DCI 4K standard",
-    "Xenon lamp brightness degrades ~20% over lamp life",
+    "Spec brightness is 22 fL (same IMAX calibration target as laser), but aging xenon lamps at older installations routinely deliver 12–14 fL — the primary real-world disadvantage vs. laser IMAX.",
     "Cannot display 1.43:1 content at full screen height",
     "Historical root of the 'LIMAX' label — minimal advantage over standard 4K multiplex"
   ]

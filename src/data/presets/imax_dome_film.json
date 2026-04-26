@@ -81,6 +81,7 @@
     "No 3D capability",
     "PPD lower per degree than flat GT screens (~23 PPD vs ~77) — resolution spread over 180° FOV rather than ~55°",
     "Non-linear pixel density from fisheye lens: center sharpest, extreme periphery softer",
-    "Institutional venues primarily; not part of commercial multiplex IMAX network"
+    "Institutional venues primarily; not part of commercial multiplex IMAX network",
+    "Effective brightness per unit area varies significantly with dome diameter — larger domes receive fewer lumens per square foot; 22 fL is the projector calibration target, not a per-seat guarantee."
   ]
 }

@@ -10,10 +10,10 @@
   "coordinates": null,
 
   "screen": {
-    "width_m": 23.16,
-    "height_m": 23.16,
-    "width_ft": 76.0,
-    "height_ft": 76.0,
+    "width_m": 23.20,
+    "height_m": 23.20,
+    "width_ft": 76.1,
+    "height_ft": 76.1,
     "aspect_ratio": 1.0,
     "geometry": "hemispherical",
     "curvature_radius_ft": null,
@@ -107,11 +107,11 @@
     "source_url": null,
     "sources": [
       {
-        "id": "src_mugar_dome_estimate_2026_04",
-        "label": "Mugar Omni dome diameter estimate from LIEMAX IMAX Dome research",
+        "id": "src_143190_2026_04",
+        "label": "143190.xyz / r-imax IMAX global CSV (April 2026) — lists Mugar dome screen width as 23.20 m",
         "url": null,
-        "quality": "community_estimate",
-        "accessed_at": "2026-04-25"
+        "quality": "r_imax_csv",
+        "accessed_at": "2026-04-26"
       },
       {
         "id": "src_mugar_digital_renovation_2026_04",
@@ -124,15 +124,15 @@
     "field_sources": [
       {
         "field": "screen.width_m",
-        "source_id": "src_mugar_dome_estimate_2026_04",
-        "quality": "community_estimate",
-        "notes": "Low-confidence 76 ft dome diameter estimate converted to 23.16m for computable dome geometry"
+        "source_id": "src_143190_2026_04",
+        "quality": "r_imax_csv",
+        "notes": "23.20 m from 143190.xyz CSV. ArcGIS lists 72 ft (~21.9 m); discrepancy is screen-surface vs. structural-shell measurement. Using 143190's 23.20 m as authoritative."
       },
       {
         "field": "screen.height_m",
-        "source_id": "src_mugar_dome_estimate_2026_04",
-        "quality": "community_estimate",
-        "notes": "For hemispherical dome records, height_m stores dome diameter; low-confidence 76 ft estimate"
+        "source_id": "src_143190_2026_04",
+        "quality": "r_imax_csv",
+        "notes": "For hemispherical dome records, height_m stores dome diameter. 23.20 m from 143190.xyz CSV (same value as width_m for a circular dome)."
       },
       {
         "field": "projection.type",
@@ -150,8 +150,8 @@
     "last_verified": "2026-04-25",
     "created_at": "2026-04-25T00:00:00Z",
     "updated_at": "2026-04-26T00:00:00Z",
-    "confidence": "low",
-    "notes": "Institutional IMAX Dome — not in 143190.xyz (commercial multiplexes only). Current LIEMAX model treats Mugar as post-2021 digital IMAX Dome laser, not active 15/70 film. Dome diameter uses a low-confidence 76 ft estimate so the venue remains computable; replace with Museum of Science official specs when available. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed."
+    "confidence": "medium",
+    "notes": "Institutional IMAX Dome. Dome screen diameter is 23.20 m (76.1 ft) per 143190.xyz CSV (r_imax_csv). ArcGIS lists 72 ft (~21.9 m); the discrepancy reflects screen-surface measurement vs. structural-shell measurement — using 143190's 23.20 m. Current LIEMAX model treats Mugar as post-2021 digital IMAX Dome laser, not active 15/70 film. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed."
   },
 
   "source_143190": null

@@ -1,8 +1,8 @@
 {
   "id": "dolby_cinema_single_laser",
-  "display_name": "Dolby Cinema (Single-Laser, 2025+)",
+  "display_name": "Dolby Cinema (Christie Eclipse, 2025+)",
   "brand": "Dolby",
-  "short_description": "New Christie single-laser Dolby Vision system rolling out from May 2025. Lower brightness than dual-laser E3LH (~17 fL estimated vs 31 fL). Same Dolby Vision HDR and Atmos experience.",
+  "short_description": "Christie Eclipse-based Dolby Vision system rolling out from May 2025. Matches or exceeds dual-laser E3LH brightness (~31 fL; community reports confirm 'just over twice typical cinema'). Single projector on screens up to 58 ft wide.",
   "tier": "flagship",
   "default_screen": {
     "width_m": null,
@@ -32,14 +32,14 @@
     "resolution_vertical_px": 2160,
     "resolution_scan_equivalent_low": null,
     "resolution_scan_equivalent_high": null,
-    "effective_resolution_label": "New Christie single-projector system (announced March 2025, rolling out May 2025+); ~25,000–30,000 lumens RGB laser",
-    "brightness_fl": 17.0,
-    "brightness_cdm2": 58.25,
-    "brightness_source": "derived",
+    "effective_resolution_label": "Christie Eclipse-based 4K RGB pure laser; ~25,000–30,000 lumens; rolling out from May 2025",
+    "brightness_fl": 31.0,
+    "brightness_cdm2": 106.2,
+    "brightness_source": "community_estimate",
     "contrast_sequential": 6250,
-    "contrast_dynamic": 1000000,
+    "contrast_dynamic": 20000000,
     "contrast_source": "trade_reporting",
-    "contrast_notes": "Brightness derived: 25,000–30,000 lumens on ~55×29 ft screen ≈ 16–19 fL; 17.0 fL used as midpoint estimate [source: derived]. Contrast: Dolby claims 'well exceeding a million-to-one' via same dual-modulation DLP principle as E3LH; sequential ~5,000–7,500:1 assumed comparable. One community report suggests brightness may exceed dual-laser at some venues — treat as uncertain pending more reports.",
+    "contrast_notes": "Christie Eclipse-based system: Dolby official announcement states 'well exceeding 1,000,000:1'; Christie Eclipse spec sheet lists 20,000,000:1. Brightness ~31 fL based on firsthand reports from AMC Southlands (first US install, May 2025) confirming 'just over twice the brightness of the former dual-laser system.' Dolby states '>2× typical cinema' implying >28 fL from 14 fL DCI baseline. Screen max 58 ft wide for single-projector configuration.",
     "color_gamut": "Dolby Wide Color Gamut 1.0 (~122% DCI-P3)",
     "hdr": "dolby_vision",
     "supports_3d": true,
@@ -77,8 +77,7 @@
   },
   "ticket_premium_usd": "$5–8",
   "known_limitations": [
-    "Estimated brightness ~16–19 fL — lower than dual-laser E3LH (~31 fL) due to single projector; treat as derived estimate until confirmed measurements available",
-    "Cannot display 1.43:1 IMAX content at full height",
-    "Early deployment variant — brightness and contrast data based on announcement specs and limited community reports, not lab measurements"
+    "Screen width capped at 58 ft for single-projector configuration — largest Dolby Cinema screens (>58 ft) will retain dual-laser E3LH",
+    "Cannot display 1.43:1 IMAX content at full height"
   ]
 }

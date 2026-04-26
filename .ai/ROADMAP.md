@@ -4,16 +4,15 @@
 
 - GREEN `.ai/`: All three steps audited 2026-04-26. Steps 1–3 are clean. Ready for Step 4.
 - GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
-- GREEN `schema/`: v1.3.0 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
-- GREEN `src/data/`: All Step 3 JSON records pass schema validation (87 checks). imax_cola contrast source downgraded to community_estimate with explanation. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
+- GREEN `schema/`: v1.3.1 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Adds `r_imax_csv` source quality for 143190-sourced fields. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
+- GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
 ## Known Low-Confidence Data Items (do not block Step 4)
 
-- `mugar_omni_boston.json` dome diameter: 76 ft community estimate.
-- `imax_cola.json` contrast: 10,000:1 community estimate; no published IMAX/Christie spec.
-- `imax_dual_xenon.json` contrast: 2,000:1 community estimate.
+- `dolby_cinema_single_laser.json` brightness_fl ~31 fL: community estimate from AMC Southlands firsthand reports; no Dolby-published per-venue fL spec yet.
+- `cinemark_xd.json` brightness_fl ~16 fL: derived from Barco SP4K specs; Cinemark publishes no fL target.
 - Deferred home display presets: `oled_budget` and `iphone_standard` (add in Step 4 if per-budget comparison is a priority feature).
 
 ## Top Step 4 Headache Risks
@@ -28,8 +27,8 @@ This step is where research becomes product data. 143190 rows remain sparse base
 
 **Complete:**
 - `imax_gt_dual_laser`, `imax_cola`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`, `imax_dome_laser`
-- `dolby_cinema` (dual-laser E3LH), `dolby_cinema_single_laser` (Christie 2025+), `rpx`, `standard_multiplex`, `screenx`
-- Venues: `apple_providence_imax`, `mugar_omni_boston` (current digital dome laser; low-confidence 76 ft dome estimate)
+- `dolby_cinema` (dual-laser E3LH), `dolby_cinema_single_laser` (Christie Eclipse 2025+, ~31 fL), `rpx`, `standard_multiplex`, `screenx`, `cinemark_xd`
+- Venues: `apple_providence_imax`, `mugar_omni_boston` (current digital dome laser; 23.20 m dome per 143190, medium confidence)
 - Home display tier presets: OLED flagship, OLED midrange, Mini-LED/Neo QLED, standard QLED, standard LCD, iPhone Pro, Android flagship, home projector
 - Content formats array: `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`, `ultrawide_235`
 
@@ -47,7 +46,7 @@ Tech stack remains TBD. Likely React or plain TypeScript + Vite; keep it buildab
 
 ### Step 4 Phasing
 
-**Phase 4a — Data layer:** Bundle all JSON files into a queryable in-memory database (flat import or tiny library like `fuse.js` for search). Build the resolver call chain so every comparison starts from `resolveVenue(preset, venue)`.
+**Phase 4a — Data layer:** Bundle all JSON files into a queryable in-memory database (flat import or tiny library like `fuse.js` for search). Build the resolver call chain so every comparison starts from `resolveVenue(preset, venue)`. Venue data: pull/cache the full 143190 global CSV (all countries — not Americas-only). Format presets: US-dominant chains at launch; international format presets (Vue, Kinepolis, MJX, etc.) added via community feedback.
 
 **Phase 4b — Functional UI:** Working comparison page — pick two items (theater A vs. theater B, or theater vs. home display), show math results in plain language. No design polish yet. Get the core feature working end-to-end first.
 

@@ -26,7 +26,7 @@ src/data/content_formats/    ← content_format JSON files or a single array
 
 Each file is a standalone JSON object matching the schema entity type. They are not yet assembled into a full database — that happens in Step 4.
 
-Schema source of truth: `schema/theater.schema.json` v1.3.0.
+Schema source of truth: `schema/theater.schema.json` v1.3.1.
 - `format_preset` definition: `schema.definitions.format_preset`
 - `home_display_preset` definition: `schema.definitions.home_display_preset`
 - `content_format` definition: `schema.definitions.content_format`
@@ -40,21 +40,22 @@ Schema source of truth: `schema/theater.schema.json` v1.3.0.
 |------|----|-------|
 | `imax_gt_dual_laser.json` | `imax_gt_dual_laser` | Dual 4K RGB laser, 1.43:1, 22 fL, 8,000:1, 12.1 audio |
 | `imax_cola.json` | `imax_cola` | Single 4K laser, 1.90:1, 22 fL, 10,000:1, 12.1 audio |
-| `imax_dual_xenon.json` | `imax_dual_xenon` | Dual 2K xenon, 1.90:1, 14 fL, 2,000:1, legacy |
+| `imax_dual_xenon.json` | `imax_dual_xenon` | Dual 2K xenon, 1.90:1, 22 fL spec (degrades 12–14 fL in practice), 2,500:1, legacy |
 | `imax_1570_film.json` | `imax_1570_film` | 15/70 film, 1.43:1, scan-equiv 8.8K–11.7K, photochemical |
 | `imax_dome_film.json` | `imax_dome_film` | Hemispherical 15/70 film, 180°×125° FOV, 83% hemisphere coverage |
 | `imax_dome_laser.json` | `imax_dome_laser` | Hemispherical digital laser dome, 4K, 1.43-capable via dome optics, no film scan-equivalent fields |
 | `dolby_cinema.json` | `dolby_cinema` | Dual-laser Christie E3LH, 31 fL, 1M:1 dynamic, Atmos, recliners |
-| `dolby_cinema_single_laser.json` | `dolby_cinema_single_laser` | New Christie single-laser (May 2025+), ~17 fL derived |
+| `dolby_cinema_single_laser.json` | `dolby_cinema_single_laser` | Christie Eclipse-based (May 2025+), ~31 fL community estimate, 20M:1 contrast, 58 ft max screen |
 | `rpx.json` | `rpx` | 4K xenon default, 14 fL floor, 1,850:1 contrast, weakest PLF |
 | `standard_multiplex.json` | `standard_multiplex` | Baseline 4K laser multiplex room, 1.85:1, 14 fL |
 | `screenx.json` | `screenx` | Standard main screen plus ScreenX side-wall capability flag |
+| `cinemark_xd.json` | `cinemark_xd` | Barco 4K laser, 1.90:1, 16 fL derived, 2,000:1 floor, Auro 11.1, 168 US screens |
 
 ### Venues (`src/data/venues/`)
 | File | ID | Notes |
 |------|----|-------|
 | `apple_providence_imax.json` | `apple_providence_imax` | Hybrid CoLa digital + 15/70 film; 1.43:1 screen from 143190 CSV |
-| `mugar_omni_boston.json` | `mugar_omni_boston` | IMAX Dome, Museum of Science Boston; current post-2021 dome laser; low-confidence 76 ft dome estimate |
+| `mugar_omni_boston.json` | `mugar_omni_boston` | IMAX Dome, Museum of Science Boston; post-2021 dome laser; 23.20 m dome diameter per 143190 CSV (r_imax_csv, medium confidence) |
 
 ---
 

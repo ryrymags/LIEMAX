@@ -116,7 +116,7 @@
         "id": "src_143190_2026_04",
         "label": "143190.xyz / r-imax IMAX Americas CSV (April 21, 2026)",
         "url": null,
-        "quality": "community_estimate",
+        "quality": "r_imax_csv",
         "accessed_at": "2026-04-21"
       }
     ],
@@ -124,13 +124,13 @@
       {
         "field": "screen.width_m",
         "source_id": "src_143190_2026_04",
-        "quality": "community_estimate",
+        "quality": "r_imax_csv",
         "notes": "24.7m from 143190.xyz CSV"
       },
       {
         "field": "screen.height_m",
         "source_id": "src_143190_2026_04",
-        "quality": "community_estimate",
+        "quality": "r_imax_csv",
         "notes": "17.3m from 143190.xyz CSV; yields 1.428:1 AR ≈ 1.43"
       }
     ],
