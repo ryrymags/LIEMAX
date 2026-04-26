@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Step 4a and Phase 4b functional UI baseline are implemented; ready for Phase 4c design polish or targeted UI refinements."
+Current status: "Steps 1–3 audited and clean. Phase 4b refinement is underway: baseline committed, search picker/per-side AR/projection switching implemented in working tree."
 
 ## Completed
 
@@ -64,7 +64,12 @@ Priority order: get functional → then design polish. Do not invest in visual d
 - Phase 4b progress: UI supports two item selectors grouped by cinema format / venue / home display, 7 content formats, front/mid/back seat selection, CSV load status, side-by-side metric rows, warnings, and cinema-vs-home brightness comparison.
 - Phase 4b progress: `computeMetrics.ts` adapts existing locked math functions for cinema, dome, film scan-equivalent, home display, masking/crop, FOV, PPD, brightness, contrast, and resolution display without changing `src/math`.
 - Phase 4b verification: `npm run typecheck`, `npm run ci`, `npm run build`, `npm run validate`, and `npm run validate:schema` pass. Dev server starts at `http://127.0.0.1:5173/`; localhost root and `/api/imax-csv/americas/unitedstates.csv` respond. Direct smoke test: Providence + IMAX 1.43 crop loss is ~24.7%, OLED contrast is infinite, and Mugar dome FOV is 180 degrees.
-- Next Step 4 chunk: Phase 4c design polish or targeted 4b refinements after manual browser review.
+- Baseline commit: `e74e5d0` (`Implement Phase 4 website functional baseline`).
+- Phase 4b refinement progress: global content format selector removed; each side now has searchable/filterable item picking, a per-side Presentation AR control, and a projection mode toggle when multiple projection modes exist.
+- Phase 4b refinement progress: hybrid venues such as Apple Providence can switch between digital and film projection in UI state; switching projection resets that side's Presentation AR to the best-native default for the selected projection.
+- Phase 4b refinement progress: brightness-only comparison row replaced with a broader live comparison summary; CSV footer now names `143190.xyz / r-imax`.
+- Phase 4b refinement verification so far: `npm run typecheck`, `npm run build`, and direct Providence digital/film + OLED metrics smoke pass.
+- Next Step 4 chunk: finish browser smoke tests, run full `npm run ci`, commit refinement if clean, then proceed to Phase 4c or manual-entry/render chunks.
 
 ## Project Memory Milestone
 

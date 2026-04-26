@@ -18,7 +18,7 @@ export function MetricsPanel({ metrics, kind, seatPosition }: MetricsPanelProps)
         <MetricRow label="Screen size" value={screenSize(metrics, kind)} note={screenSizeNote(metrics)} />
         <MetricRow label="Screen area" value={area(metrics.screenAreaSqFt)} />
         <MetricRow
-          label="Content + masking"
+          label="Presentation + masking"
           value={masking(metrics)}
           note={metrics.cropLossPct && metrics.cropLossPct > 0 ? `${formatPct(metrics.cropLossPct)} vertical frame lost` : null}
           tone={metrics.cropLossPct && metrics.cropLossPct > 0 ? 'warning' : 'default'}

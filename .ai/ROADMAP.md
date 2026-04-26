@@ -54,6 +54,8 @@ Status 2026-04-26: scaffolded. React/Vite dependencies, `tsconfig.app.json`, `vi
 
 Status 2026-04-26: functional baseline implemented. React app state loads/caches 143190 venues, builds comparable items, resolves selected items, computes metrics inline, and renders side-by-side panels. Components include item/content/seat selectors, metric rows, brightness comparison, and CSV status. `src/lib/computeMetrics.ts` handles flat cinema, dome cinema, film scan-equivalent ranges, home displays, masking/crop loss, PPD warnings, OLED infinite contrast, projector missing-screen guard, and missing-dimension preset warnings. Verification passes: `npm run typecheck`, `npm run ci`, `npm run build`, math validation, schema/data validation, localhost Vite smoke test, and direct metrics smoke test for Providence crop loss / OLED contrast / Mugar dome FOV.
 
+Refinement status 2026-04-26: baseline saved in commit `e74e5d0`. Working tree now replaces global content format with per-side Presentation AR, adds searchable/filterable selectors, exposes projection toggles for hybrid venues, and adds a broader live comparison summary. Manual entry and 2D human-scale renders remain deferred.
+
 **Phase 4c — Design polish:** After Phase 4b works, use design tooling to improve visual quality:
 - `/design:frontend-design` (Claude Design skill) — generates design-system tokens, component specs, accessible color palette
 - Figma MCP connector (available in Claude Code as `mcp__plugin_design_figma__*`) — for high-fidelity mockups and developer-handoff specs

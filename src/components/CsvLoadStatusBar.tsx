@@ -17,7 +17,7 @@ export function CsvLoadStatusBar({ status, source, venueCount, error }: CsvLoadS
   const sourceText = source === 'cache' ? 'from cache' : 'from network';
   return (
     <footer className="csv-status">
-      {venueCount.toLocaleString('en-US')} venues loaded {sourceText}
+      {venueCount.toLocaleString('en-US')} venues loaded from 143190.xyz / r-imax ({sourceText})
       {error ? `; using cached copy after fetch error: ${error}` : ''}
     </footer>
   );
