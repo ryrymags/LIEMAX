@@ -699,6 +699,102 @@ assert('Imported hybrid default active mode is digital', importedHybrid.projecti
 assert('Imported hybrid preserves supports_143_digital false',
   importedHybrid.capabilities.supports_143_digital ? 1 : 0, 0, 0);
 
+// ── Step 3 preset regression checks ──
+const screenxPreset = {
+  id: 'screenx',
+  display_name: 'ScreenX',
+  default_screen: {
+    width_m: 13.72,
+    height_m: 7.40,
+    aspect_ratio: 1.85,
+    geometry: 'flat',
+    screen_bottom_height_ft: 3.5,
+  },
+  default_projection: {
+    type: 'standard_4k_laser',
+    light_source: 'rgb_laser',
+    dual_projector: false,
+    resolution_horizontal_px: 4096,
+    resolution_vertical_px: 2160,
+    resolution_scan_equivalent_low: null,
+    resolution_scan_equivalent_high: null,
+    brightness_fl: 14,
+    contrast_sequential: 2000,
+    contrast_dynamic: null,
+    hdr: 'none',
+    anamorphic_stretch: false,
+    min_content_ar_supported: 1.85,
+  },
+  default_seating: {},
+  default_capabilities: {
+    min_content_ar_supported: 1.85,
+    supports_1570_film: false,
+    supports_143_digital: false,
+    has_screenx: true,
+    has_4dx: false,
+    has_dbox: false,
+    infinity_vision_certified: null,
+  },
+};
+
+const resolvedScreenx = resolveVenue(screenxPreset, {
+  id: 'screenx_test',
+  preset_id: 'screenx',
+  name: 'ScreenX Test',
+  city: 'Test',
+  country: 'US',
+  metadata: {},
+});
+assert('Resolver: ScreenX capability survives resolution',
+  resolvedScreenx.capabilities.has_screenx ? 1 : 0, 1, 0);
+assert('Resolver: ScreenX 4DX defaults false',
+  resolvedScreenx.capabilities.has_4dx ? 1 : 0, 0, 0);
+
+const rpxPreset = {
+  id: 'rpx',
+  display_name: 'Regal RPX',
+  default_screen: {
+    width_m: 18.29,
+    height_m: 9.88,
+    aspect_ratio: 1.85,
+    geometry: 'flat',
+    screen_bottom_height_ft: 5.0,
+  },
+  default_projection: {
+    type: 'standard_4k_xenon',
+    light_source: 'xenon',
+    dual_projector: false,
+    resolution_horizontal_px: 4096,
+    resolution_vertical_px: 2160,
+    resolution_scan_equivalent_low: null,
+    resolution_scan_equivalent_high: null,
+    brightness_fl: 14,
+    contrast_sequential: 1850,
+    contrast_dynamic: null,
+    hdr: 'none',
+    anamorphic_stretch: false,
+    min_content_ar_supported: 1.85,
+  },
+  default_seating: {},
+  default_capabilities: {
+    min_content_ar_supported: 1.85,
+    supports_1570_film: false,
+    supports_143_digital: false,
+  },
+};
+const resolvedRpx = resolveVenue(rpxPreset, {
+  id: 'rpx_test',
+  preset_id: 'rpx',
+  name: 'RPX Test',
+  city: 'Test',
+  country: 'US',
+  metadata: {},
+});
+assert('Resolver: RPX derived AR matches 1.85 preset model',
+  resolvedRpx.screen.aspect_ratio, 1.85, 0.5);
+assert('Resolver: RPX effective AR remains 1.85',
+  resolvedRpx.projection.effective_screen_aspect_ratio ?? 0, 1.85, 0.1);
+
 // ═══════════════════════════════════════════════════════════════════
 // SUMMARY
 // ═══════════════════════════════════════════════════════════════════

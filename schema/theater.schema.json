@@ -109,7 +109,7 @@
         "height_ft": { "type": ["number", "null"], "description": "Derived: height_m × 3.28084." },
         "aspect_ratio": {
           "type": ["number", "null"],
-          "description": "Physical screen aspect ratio as a decimal (width/height). 1.43 for GT IMAX, 1.90 for CoLa/LIMAX, etc. For domes, use 1.43. Nullable for partial venue overrides — when null, derive from width_m/height_m if both present, else fall through to preset. NOTE: this is the physical screen shape, NOT the content display capability (see capabilities.min_content_ar_supported for that)."
+          "description": "Physical screen aspect ratio as a decimal (width/height). 1.43 for GT IMAX, 1.90 for CoLa/LIMAX, etc. For dome presets without fixed dimensions, use the content-fit default; for dome venue records where width_m and height_m both store diameter, use 1.0. Nullable for partial venue overrides — when null, derive from width_m/height_m if both present, else fall through to preset. NOTE: this is the physical screen shape, NOT the content display capability (see capabilities.min_content_ar_supported for that)."
         },
         "geometry": { "$ref": "#/definitions/screen_geometry" },
         "curvature_radius_ft": {

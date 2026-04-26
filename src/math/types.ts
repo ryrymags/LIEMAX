@@ -103,6 +103,10 @@ export interface ResolvedVenue {
     min_content_ar_supported: number;
     supports_1570_film: boolean;
     supports_143_digital: boolean;
+    has_screenx: boolean;
+    has_4dx: boolean;
+    has_dbox: boolean;
+    infinity_vision_certified?: boolean | null;
   };
 }
 

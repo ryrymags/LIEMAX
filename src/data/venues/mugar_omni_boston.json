@@ -1,6 +1,6 @@
 {
   "id": "mugar_omni_boston",
-  "preset_id": "imax_dome_film",
+  "preset_id": "imax_dome_laser",
   "name": "Mugar Omni Theater — Museum of Science, Boston",
   "chain": null,
   "brand_label": "IMAX",
@@ -10,11 +10,11 @@
   "coordinates": null,
 
   "screen": {
-    "width_m": null,
-    "height_m": null,
-    "width_ft": null,
-    "height_ft": null,
-    "aspect_ratio": 1.43,
+    "width_m": 23.16,
+    "height_m": 23.16,
+    "width_ft": 76.0,
+    "height_ft": 76.0,
+    "aspect_ratio": 1.0,
     "geometry": "hemispherical",
     "curvature_radius_ft": null,
     "screen_bottom_height_ft": null,
@@ -26,7 +26,32 @@
     "dome_fov_below_horizon_deg": 20
   },
 
-  "projection": null,
+  "projection": {
+    "id": "digital",
+    "display_name": "IMAX Dome Laser Digital",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "imax_dome_laser",
+    "light_source": "rgb_laser",
+    "dual_projector": false,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": "4K digital IMAX Dome laser system installed after the 2021 renovation; no 15/70 film scan-equivalent claim.",
+    "brightness_fl": null,
+    "brightness_cdm2": null,
+    "brightness_source": "unknown",
+    "contrast_sequential": null,
+    "contrast_dynamic": null,
+    "contrast_source": "unknown",
+    "contrast_notes": "Exact post-renovation Mugar dome laser brightness and contrast are not publicly confirmed.",
+    "color_gamut": "DCI-P3 via RGB laser",
+    "hdr": "none",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.43,
+    "anamorphic_stretch": true
+  },
   "projections": null,
 
   "sound": {
@@ -52,8 +77,8 @@
 
   "capabilities": {
     "min_content_ar_supported": 1.43,
-    "supports_1570_film": true,
-    "supports_143_digital": false,
+    "supports_1570_film": false,
+    "supports_143_digital": true,
     "has_screenx": false,
     "has_4dx": false,
     "has_dbox": false,
@@ -67,19 +92,66 @@
       "field_changed": null,
       "previous_value": null,
       "source": "Museum of Science Boston / community record"
+    },
+    {
+      "date": "2021",
+      "change": "Museum of Science renovated Mugar Omni with a digital IMAX Dome laser projection system, replacing the inherited film-dome operating model for current LIEMAX data.",
+      "field_changed": "projection.type",
+      "previous_value": "imax_dome_film",
+      "source": "Museum of Science Boston / LIEMAX research compilation"
     }
   ],
 
   "metadata": {
     "data_source": "research_compiled",
     "source_url": null,
-    "sources": [],
-    "field_sources": [],
+    "sources": [
+      {
+        "id": "src_mugar_dome_estimate_2026_04",
+        "label": "Mugar Omni dome diameter estimate from LIEMAX IMAX Dome research",
+        "url": null,
+        "quality": "community_estimate",
+        "accessed_at": "2026-04-25"
+      },
+      {
+        "id": "src_mugar_digital_renovation_2026_04",
+        "label": "Mugar Omni digital IMAX Dome laser renovation history from LIEMAX research",
+        "url": null,
+        "quality": "community_estimate",
+        "accessed_at": "2026-04-26"
+      }
+    ],
+    "field_sources": [
+      {
+        "field": "screen.width_m",
+        "source_id": "src_mugar_dome_estimate_2026_04",
+        "quality": "community_estimate",
+        "notes": "Low-confidence 76 ft dome diameter estimate converted to 23.16m for computable dome geometry"
+      },
+      {
+        "field": "screen.height_m",
+        "source_id": "src_mugar_dome_estimate_2026_04",
+        "quality": "community_estimate",
+        "notes": "For hemispherical dome records, height_m stores dome diameter; low-confidence 76 ft estimate"
+      },
+      {
+        "field": "projection.type",
+        "source_id": "src_mugar_digital_renovation_2026_04",
+        "quality": "community_estimate",
+        "notes": "Models current post-2021 Mugar Omni as digital IMAX Dome laser instead of inherited 15/70 film"
+      },
+      {
+        "field": "capabilities.supports_1570_film",
+        "source_id": "src_mugar_digital_renovation_2026_04",
+        "quality": "community_estimate",
+        "notes": "False for current LIEMAX modeling because no current functional/bookable 15/70 film capability is confirmed"
+      }
+    ],
     "last_verified": "2026-04-25",
     "created_at": "2026-04-25T00:00:00Z",
-    "updated_at": "2026-04-25T00:00:00Z",
-    "confidence": "medium",
-    "notes": "Institutional IMAX Dome — not in 143190.xyz (commercial multiplexes only). Dome diameter (~72–76 ft) and exact seat count unverified; screen dimensions left null pending Museum of Science official specs. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed. Not part of the commercial IMAX multiplex network; shows dome-mastered documentaries and occasional event screenings of 15/70 features."
+    "updated_at": "2026-04-26T00:00:00Z",
+    "confidence": "low",
+    "notes": "Institutional IMAX Dome — not in 143190.xyz (commercial multiplexes only). Current LIEMAX model treats Mugar as post-2021 digital IMAX Dome laser, not active 15/70 film. Dome diameter uses a low-confidence 76 ft estimate so the venue remains computable; replace with Museum of Science official specs when available. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed."
   },
 
   "source_143190": null

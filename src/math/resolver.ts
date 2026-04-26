@@ -168,6 +168,10 @@ export function resolveVenue(
       min_content_ar_supported: capabilities.min_content_ar_supported ?? resolvedProjection.min_content_ar_supported ?? DEFAULT_UNCLEAR_DIGITAL_MIN_AR,
       supports_1570_film: capabilities.supports_1570_film ?? false,
       supports_143_digital: capabilities.supports_143_digital ?? false,
+      has_screenx: capabilities.has_screenx ?? false,
+      has_4dx: capabilities.has_4dx ?? false,
+      has_dbox: capabilities.has_dbox ?? false,
+      infinity_vision_certified: capabilities.infinity_vision_certified ?? null,
     },
   };
 }

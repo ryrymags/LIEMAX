@@ -42,20 +42,25 @@ Schema source of truth: `schema/theater.schema.json` v1.3.0.
 | `imax_cola.json` | `imax_cola` | Single 4K laser, 1.90:1, 22 fL, 10,000:1, 12.1 audio |
 | `imax_dual_xenon.json` | `imax_dual_xenon` | Dual 2K xenon, 1.90:1, 14 fL, 2,000:1, legacy |
 | `imax_1570_film.json` | `imax_1570_film` | 15/70 film, 1.43:1, scan-equiv 8.8K–11.7K, photochemical |
-| `imax_dome_film.json` | `imax_dome_film` | Hemispherical, 180°×125° FOV, 83% hemisphere coverage |
+| `imax_dome_film.json` | `imax_dome_film` | Hemispherical 15/70 film, 180°×125° FOV, 83% hemisphere coverage |
+| `imax_dome_laser.json` | `imax_dome_laser` | Hemispherical digital laser dome, 4K, 1.43-capable via dome optics, no film scan-equivalent fields |
 | `dolby_cinema.json` | `dolby_cinema` | Dual-laser Christie E3LH, 31 fL, 1M:1 dynamic, Atmos, recliners |
 | `dolby_cinema_single_laser.json` | `dolby_cinema_single_laser` | New Christie single-laser (May 2025+), ~17 fL derived |
 | `rpx.json` | `rpx` | 4K xenon default, 14 fL floor, 1,850:1 contrast, weakest PLF |
+| `standard_multiplex.json` | `standard_multiplex` | Baseline 4K laser multiplex room, 1.85:1, 14 fL |
+| `screenx.json` | `screenx` | Standard main screen plus ScreenX side-wall capability flag |
 
 ### Venues (`src/data/venues/`)
 | File | ID | Notes |
 |------|----|-------|
 | `apple_providence_imax.json` | `apple_providence_imax` | Hybrid CoLa digital + 15/70 film; 1.43:1 screen from 143190 CSV |
-| `mugar_omni_boston.json` | `mugar_omni_boston` | IMAX Dome, Museum of Science Boston; institutional |
+| `mugar_omni_boston.json` | `mugar_omni_boston` | IMAX Dome, Museum of Science Boston; current post-2021 dome laser; low-confidence 76 ft dome estimate |
 
 ---
 
-## What Remains
+## Final Batch Completed
+
+The following sections describe the final Step 3 batch that has now been authored and validated.
 
 ### 1. Standard Multiplex Preset
 
@@ -82,6 +87,18 @@ ScreenX is an add-on, not a standalone format. The main screen is a standard 4K 
 - `short_description`: "Side-wall 270° projection on mastered sequences (~20–40% of runtime). Main screen is standard 4K — no resolution or contrast improvement."
 - `known_limitations`: ["Side walls only active on specifically mastered sequences — most of the film plays front-only", "Does not improve main-screen resolution, brightness, or contrast"]
 - Do NOT attempt multi-wall geometry schema additions — `has_screenx: true` flag is sufficient for v1
+
+### 2.5. IMAX Dome Laser Preset / Mugar Audit Fix
+
+**File:** `src/data/presets/imax_dome_laser.json`
+**ID:** `imax_dome_laser`
+**tier:** `"specialty"`
+
+This preset separates current digital dome laser venues from legacy/current 15/70 dome film venues.
+- Projection: `type: "imax_dome_laser"`, `light_source: "rgb_laser"`, 4096 × 2160, no scan-equivalent film fields
+- `min_content_ar_supported: 1.43`; `supports_143_digital: true`; `supports_1570_film: false`
+- `anamorphic_stretch: true` to distinguish dome laser optics from flat CoLa/XT limits
+- Mugar Omni uses this preset for current post-2021 modeling. Its 76 ft dome diameter is a low-confidence estimate; because width and height both store dome diameter, stored physical `aspect_ratio` is `1.0`, not the 1.43 content capability.
 
 ### 3. Home Display Presets
 
@@ -162,14 +179,15 @@ Include `example_films` where useful:
 - **Samsung products (mini-LED TVs, Galaxy phones) do not support Dolby Vision.** `hdr_formats` must not include `"dolby_vision"` for Samsung-tier presets.
 - **Phone aspect ratios are for landscape video viewing** (width > height). iPhone 6.3" in landscape = 2622 × 1206 → AR = 2.174. Do not use portrait (1206/2622 = 0.46).
 - **ScreenX preset should NOT add multi-wall geometry fields** — the schema has `has_screenx: true` flag which is sufficient. Geometry additions are explicitly deferred future work.
-- **Do not infer 1.43:1 digital capability** for any preset or venue unless `projector_type` is `imax_gt_dual_laser`, `imax_dome_laser`, or `imax_1570_film`. CoLa is always 1.90:1 max.
+- **Do not infer 1.43:1 digital capability** for any preset or venue unless `projector_type` is `imax_gt_dual_laser`, `imax_dome_laser`, or film capability is `imax_1570_film`. CoLa is always 1.90:1 max.
+- **Keep dome geometry and content capability separate.** For a dome venue whose width and height both store physical diameter, `screen.aspect_ratio` should be `1.0`; 1.43 belongs in `projection.min_content_ar_supported` / `capabilities.min_content_ar_supported`.
 
 ---
 
 ## Verification
 
 After each preset batch:
-- `npm run ci` — confirms math engine still clean (129/129) and schema version check passes
+- `npm run ci` — confirms math engine still clean and schema/data validation passes
 - Manual spot-check: load preset JSON, verify all required fields present, check `min_content_ar_supported` matches the format's actual capability
 - For home display presets: confirm `default_viewing_distance_ft` is plausible (TV: 3–8 ft; phone: 1.0 ft)
 - For content formats: verify `extra_area_vs_scope_pct = (2.39 / aspect_ratio - 1) × 100` matches the table above

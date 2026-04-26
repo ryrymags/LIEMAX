@@ -1,6 +1,6 @@
 # Agent Briefing
 
-Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`, then `.ai/STEP3.md` if Step 3 is active.
+Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`. Read `.ai/STEP3.md` when auditing or extending preset data.
 
 ## Mission
 
@@ -9,9 +9,9 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 ## State
 
 - Branch: `codex/overhaul`.
-- Done: Step 1 schema/research; Step 2 math engine (129 passing tests); sparse 143190 import foundation; schema v1.3.0.
-- Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome), Dolby Cinema (dual-laser + single-laser variants), RPX preset, Providence Place and Mugar Omni venue drafts.
-- Active: Step 3 remaining — standard multiplex, ScreenX, home display tier presets, content formats. See `.ai/STEP3.md`.
+- Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; schema v1.3.0.
+- Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.
+- Active: Step 4 — assemble data files into a queryable database / bundle for the frontend.
 
 ## Rules
 
@@ -29,7 +29,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 - Schema/data: `snake_case`.
 - TS functions/locals: `camelCase`.
-- Format preset IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_1570_film`, `imax_dome_film`, `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`, `standard_multiplex`, `screenx`.
+- Format preset IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`, `imax_dome_laser`, `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`, `standard_multiplex`, `screenx`.
 - Home display preset IDs: `oled_flagship`, `oled_midrange`, `miniled_qled`, `standard_qled`, `standard_lcd`, `iphone_pro`, `android_flagship`, `home_projector`.
 - Content format IDs: `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`, `ultrawide_235`.
 - Source quality enum: `published_official`, `published_cto`, `trade_reporting`, `community_estimate`, `derived`, `user_submitted`, `unknown`.
@@ -40,7 +40,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `.ai/REQUIREMENTS.md`: hard constraints.
 - `.ai/ROADMAP.md`: active Summary Pane + next tasks.
 - `.ai/STATE.md`: branch/status snapshot.
-- `.ai/STEP3.md`: detailed Step 3 briefing — remaining presets, specs, pitfalls, verification.
+- `.ai/STEP3.md`: detailed Step 3 preset inventory, specs, pitfalls, verification.
 - `CLAUDE.md`: Claude pointer.
 - `README.md`: public overview.
 - `schema/theater.schema.json`: canonical model v1.3.0.
@@ -51,3 +51,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `src/data/home_display_presets/`: home display tier preset JSON files.
 - `src/data/content_formats/`: content format aspect-ratio definitions.
 - `research/`: evidence — Master Research.md, IMAX Dome Research.md, Home Theater Research.md.
+
+## Step 3 Audit Note
+
+- Mugar Omni is modeled as current post-2021 `imax_dome_laser`, not active 15/70 film. Its 76 ft dome diameter remains a low-confidence estimate; physical dome `aspect_ratio` is `1.0` when width and height both store diameter, while `capabilities.min_content_ar_supported` remains `1.43`.

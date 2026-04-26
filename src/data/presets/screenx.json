@@ -26,7 +26,7 @@
     "mode": "digital",
     "availability": "primary",
     "type": "standard_4k_laser",
-    "light_source": "laser",
+    "light_source": "rgb_laser",
     "dual_projector": false,
     "resolution_horizontal_px": 4096,
     "resolution_vertical_px": 2160,
