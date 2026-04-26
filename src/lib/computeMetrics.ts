@@ -119,10 +119,12 @@ export function computeHomeMetrics(
 ): ComputedMetrics {
   const warnings: string[] = [];
   const diagonalIn = positiveOrNull(display.screen_diagonal_in);
+  const opticsMetrics = homeOpticsMetrics(display);
 
   if (!diagonalIn) {
     return {
       ...emptyMetrics(),
+      ...opticsMetrics,
       screenDiagonalIn: null,
       viewingDistanceFt: positiveOrNull(display.viewing_distance_ft),
       isDome: false,
@@ -136,6 +138,7 @@ export function computeHomeMetrics(
   if (!aspectRatio || !viewingDistanceFt) {
     return {
       ...emptyMetrics(),
+      ...opticsMetrics,
       screenDiagonalIn: diagonalIn,
       viewingDistanceFt,
       isDome: false,
@@ -147,9 +150,6 @@ export function computeHomeMetrics(
   const dimensionsIn = diagonalToDimensions(diagonalIn, aspectRatio);
   const screenWidthFt = dimensionsIn.width / 12;
   const screenHeightFt = dimensionsIn.height / 12;
-  const fullscreenNits = positiveOrNull(display.display_optics.brightness_fullscreen_nits);
-  const peakNits = positiveOrNull(display.display_optics.brightness_peak_hdr_nits);
-  const sdrNits = positiveOrNull(display.display_optics.brightness_sdr_nits);
 
   if (display.display_optics.brightness_fullscreen_nits == null) {
     warnings.push('Fullscreen brightness unavailable for this device; brightness comparison skipped.');
@@ -157,6 +157,7 @@ export function computeHomeMetrics(
 
   const metrics: ComputedMetrics = {
     ...emptyMetrics(),
+    ...opticsMetrics,
     screenWidthFt,
     screenHeightFt,
     screenAreaSqFt: screenAreaFlat(screenWidthFt, screenHeightFt),
@@ -166,22 +167,11 @@ export function computeHomeMetrics(
     contentAr: finiteOrNull(contentFormat.aspect_ratio),
     fovHorizontalDeg: safeNumber(() => homeDisplayFov(dimensionsIn.width, viewingDistanceFt * 12)),
     ppdValue: safeNumber(() => homeDisplayPpd(display).ppd),
-    brightnessHomeFullscreenNits: fullscreenNits,
-    brightnessPeakHdrNits: peakNits,
-    brightnessSdrNits: sdrNits,
-    contrastSequential: positiveOrNull(display.display_optics.contrast_sequential),
-    contrastIsInfinite: display.display_optics.contrast_sequential == null && display.display_optics.is_per_pixel_emissive,
-    resolutionHorizontalPx: display.display_optics.resolution_horizontal_px ?? null,
-    resolutionVerticalPx: display.display_optics.resolution_vertical_px ?? null,
-    resolutionLabel: resolutionLabelForPixels(
-      display.display_optics.resolution_horizontal_px,
-      display.display_optics.resolution_vertical_px,
-      false
-    ),
     warnings,
   };
 
-  applyMasking(metrics, screenWidthFt, screenHeightFt, contentFormat.aspect_ratio, 0.01);
+  const homeMinContentAr = contentFormat.aspect_ratio <= 1.43 ? aspectRatio : 0.01;
+  applyMasking(metrics, screenWidthFt, screenHeightFt, contentFormat.aspect_ratio, homeMinContentAr);
   appendPpdWarning(metrics);
   return metrics;
 }
@@ -207,9 +197,33 @@ function applyDomeMetrics(metrics: ComputedMetrics, venue: ResolvedVenue): Compu
   if (ppd) {
     metrics.ppdValue = ppd.ppd;
     metrics.ppdCaveat = ppd.caveat ?? null;
+    if (
+      venue.projection.resolution_scan_equivalent_low != null &&
+      venue.projection.resolution_scan_equivalent_high != null
+    ) {
+      metrics.ppdLow = venue.projection.resolution_scan_equivalent_low / fov.horizontal_deg;
+      metrics.ppdHigh = venue.projection.resolution_scan_equivalent_high / fov.horizontal_deg;
+    }
   }
 
   return metrics;
+}
+
+function homeOpticsMetrics(display: ResolvedHomeDisplay): Partial<ComputedMetrics> {
+  return {
+    brightnessHomeFullscreenNits: positiveOrNull(display.display_optics.brightness_fullscreen_nits),
+    brightnessPeakHdrNits: positiveOrNull(display.display_optics.brightness_peak_hdr_nits),
+    brightnessSdrNits: positiveOrNull(display.display_optics.brightness_sdr_nits),
+    contrastSequential: positiveOrNull(display.display_optics.contrast_sequential),
+    contrastIsInfinite: display.display_optics.contrast_sequential == null && display.display_optics.is_per_pixel_emissive,
+    resolutionHorizontalPx: display.display_optics.resolution_horizontal_px ?? null,
+    resolutionVerticalPx: display.display_optics.resolution_vertical_px ?? null,
+    resolutionLabel: resolutionLabelForPixels(
+      display.display_optics.resolution_horizontal_px,
+      display.display_optics.resolution_vertical_px,
+      false
+    ),
+  };
 }
 
 function applyCinemaFovAndPpd(

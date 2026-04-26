@@ -76,7 +76,16 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
         <div className="filter-grid" aria-label={`${label} filters`}>
           <label>
             <span>Type</span>
-            <select value={category} onChange={(event) => setCategory(event.target.value as ComparableCategory | 'all')}>
+            <select value={category} onChange={(event) => {
+              setCategory(event.target.value as ComparableCategory | 'all');
+              setRegion('all');
+              setCountry('all');
+              setProvince('all');
+              setCity('all');
+              setProjector('all');
+              setAspectRatio('all');
+              setImax1570Only(false);
+            }}>
               {GROUPS.map((group) => <option key={group.category} value={group.category}>{group.label}</option>)}
             </select>
           </label>
@@ -85,17 +94,27 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
             setCountry('all');
             setProvince('all');
             setCity('all');
+            setProjector('all');
+            setAspectRatio('all');
           }} />
           <FilterSelect label="Country" value={country} values={filterOptions.countries} onChange={(next) => {
             setCountry(next);
             setProvince('all');
             setCity('all');
+            setProjector('all');
+            setAspectRatio('all');
           }} />
           <FilterSelect label="State" value={province} values={filterOptions.provinces} onChange={(next) => {
             setProvince(next);
             setCity('all');
+            setProjector('all');
+            setAspectRatio('all');
           }} />
-          <FilterSelect label="City" value={city} values={filterOptions.cities} onChange={setCity} />
+          <FilterSelect label="City" value={city} values={filterOptions.cities} onChange={(next) => {
+            setCity(next);
+            setProjector('all');
+            setAspectRatio('all');
+          }} />
           <FilterSelect label="Projector" value={projector} values={filterOptions.projectors} onChange={setProjector} />
           <FilterSelect label="AR" value={aspectRatio} values={filterOptions.aspectRatios} onChange={setAspectRatio} />
           <label className="checkbox-filter">
@@ -166,14 +185,15 @@ function buildFilterOptions(
   const byRegion = scoped.filter((item) => region === 'all' || metaValue(item, 'region') === region);
   const byCountry = byRegion.filter((item) => country === 'all' || metaValue(item, 'country') === country);
   const byProvince = byCountry.filter((item) => province === 'all' || metaValue(item, 'province') === province);
+  const byGeo = byProvince;
 
   return {
     regions: unique(scoped.map((item) => metaValue(item, 'region'))),
     countries: unique(byRegion.map((item) => metaValue(item, 'country'))),
     provinces: unique(byCountry.map((item) => metaValue(item, 'province'))),
     cities: unique(byProvince.map((item) => metaValue(item, 'city'))),
-    projectors: unique(scoped.flatMap(projectorValues)),
-    aspectRatios: unique(scoped.flatMap(aspectRatioValues)),
+    projectors: unique(byGeo.flatMap(projectorValues)),
+    aspectRatios: unique(byGeo.flatMap(aspectRatioValues)),
   };
 }
 
@@ -193,7 +213,7 @@ function searchText(item: ComparableItem): string {
     venue?.source_143190?.region,
     venue?.source_143190?.digital_projector,
     venue?.source_143190?.film_projector,
-    ...(venue?.projections ?? []).map((projection: Record<string, any>) => projection.display_name ?? projection.type),
+    ...rawVenueProjections(venue).map((projection: Record<string, any>) => projection.display_name ?? projection.type),
     venue?.projection?.display_name,
     venue?.projection?.type,
     preset?.brand,
@@ -219,7 +239,7 @@ function projectorValues(item: ComparableItem): string[] {
   const projections = [
     item.rawPreset?.default_projection,
     item.rawVenue?.projection,
-    ...(item.rawVenue?.projections ?? []),
+    ...rawVenueProjections(item.rawVenue),
   ].filter(Boolean);
 
   return unique(projections.map((projection: Record<string, any>) =>
@@ -233,7 +253,7 @@ function aspectRatioValues(item: ComparableItem): string[] {
     item.rawPreset?.default_screen?.aspect_ratio,
     item.rawVenue?.projection?.min_content_ar_supported,
     item.rawVenue?.screen?.aspect_ratio,
-    ...(item.rawVenue?.projections ?? []).map((projection: Record<string, any>) => projection.min_content_ar_supported),
+    ...rawVenueProjections(item.rawVenue).map((projection: Record<string, any>) => projection.min_content_ar_supported),
     item.rawHomePreset?.default_aspect_ratio,
   ];
 
@@ -246,14 +266,17 @@ function supportsImax1570(item: ComparableItem): boolean {
   const projections = [
     item.rawPreset?.default_projection,
     item.rawVenue?.projection,
-    ...(item.rawVenue?.projections ?? []),
+    ...rawVenueProjections(item.rawVenue),
   ].filter(Boolean);
 
   return Boolean(
     item.rawPreset?.id === 'imax_1570_film' ||
+    item.rawPreset?.id === 'imax_dome_film' ||
+    item.rawPreset?.default_capabilities?.supports_1570_film ||
     item.rawVenue?.capabilities?.supports_1570_film ||
     projections.some((projection: Record<string, any>) =>
       projection.type === 'imax_1570_film' ||
+      projection.type === 'imax_dome_film' ||
       /15\/70|1570|70mm/i.test(`${projection.display_name ?? ''} ${projection.type ?? ''}`)
     )
   );
@@ -273,6 +296,12 @@ function categoryLabel(category: ComparableCategory): string {
   if (category === 'cinema_preset') return 'Cinema format';
   if (category === 'home_display') return 'Home display';
   return 'Venue';
+}
+
+function rawVenueProjections(venue: Record<string, any> | null | undefined): Record<string, any>[] {
+  if (!venue) return [];
+  const projections = venue.projections ?? venue.hybrid_projections;
+  return Array.isArray(projections) ? projections : [];
 }
 
 function unique(values: Array<string | null | undefined>): string[] {

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CONTENT_FORMATS } from '../data';
 
 interface AspectRatioControlProps {
@@ -34,9 +34,19 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
   const selected = value == null ? null : findByValue(options, value);
   const filtered = filterOptions(options, query);
 
+  useEffect(() => {
+    setQuery('');
+  }, [value, defaultValue, mode]);
+
   function choose(option: AspectRatioOption) {
     setQuery(option.displayName);
     onChange(option.aspectRatio, option.isBestNative ? 'auto' : 'custom');
+  }
+
+  function useBestNative() {
+    if (!defaultValue) return;
+    setQuery('');
+    onChange(defaultValue, 'auto');
   }
 
   function commitTypedValue() {
@@ -62,7 +72,7 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
     <div className="aspect-control">
       <div className="aspect-control__header">
         <span>Presentation AR</span>
-        {defaultValue ? <button type="button" onClick={() => onChange(defaultValue, 'auto')}>Use best native</button> : null}
+        {defaultValue ? <button type="button" onClick={useBestNative}>Use best native</button> : null}
       </div>
 
       <div className="aspect-combobox">

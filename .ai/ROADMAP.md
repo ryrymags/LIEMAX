@@ -56,6 +56,8 @@ Status 2026-04-26: functional baseline implemented. React app state loads/caches
 
 Refinement status 2026-04-26: baseline saved in commit `e74e5d0`; picker/projection refinement saved in commit `1546d7a`. Current annotation pass moves seat controls into the comparison workbench, adds selected-screen tags/facts, collapses filters by default, removes selected-item pinning from filtered results, renames film filtering to `IMAX 15/70 capable`, replaces Presentation AR with searchable/custom recent ratios, and renders one aligned raw metrics table under a smarter live summary. Manual entry and 2D human-scale renders remain deferred.
 
+Deep logic QA status 2026-04-26: subagent audits plus browser acceptance checks found and fixed edge cases in AR reset state, 15/70/dome-film filtering, filter compatibility, imported digital 1.43 UI guardrails, missing-size home projector optics, home 1.43 crop behavior, and dome-film PPD range display. Verification passes: `npm run ci`, `npm run build`, targeted metrics probe, and browser regression checks.
+
 **Phase 4c — Design polish:** After Phase 4b works, use design tooling to improve visual quality:
 - `/design:frontend-design` (Claude Design skill) — generates design-system tokens, component specs, accessible color palette
 - Figma MCP connector (available in Claude Code as `mcp__plugin_design_figma__*`) — for high-fidelity mockups and developer-handoff specs

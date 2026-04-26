@@ -330,7 +330,7 @@ function projectionOptions(resolved: ReturnType<typeof resolveItem>): Projection
     ...(resolved.resolved.hybrid_projection?.digital ? [resolved.resolved.hybrid_projection.digital] : []),
     ...(resolved.resolved.hybrid_projection?.film ? [resolved.resolved.hybrid_projection.film] : []),
     resolved.resolved.projection,
-  ];
+  ].map(sanitizeProjectionForUi);
   const byId = new Map<string, ProjectionOption>();
 
   for (const projection of candidates) {
@@ -436,6 +436,24 @@ function projectionSublabel(projection: ResolvedProjection): string | undefined 
   return [name, arLabel].filter(Boolean).join(' - ') || undefined;
 }
 
+function sanitizeProjectionForUi(projection: ResolvedProjection): ResolvedProjection {
+  const ar = positiveOrNull(projection.min_content_ar_supported);
+  if (
+    projection.mode === 'digital' &&
+    ar != null &&
+    ar <= 1.43 &&
+    !allowsDigital143(projection)
+  ) {
+    return { ...projection, min_content_ar_supported: 1.90 };
+  }
+
+  return projection;
+}
+
+function allowsDigital143(projection: ResolvedProjection): boolean {
+  return projection.type === 'imax_gt_dual_laser' || projection.type === 'imax_dome_laser';
+}
+
 function positiveOrNull(value: unknown): number | null {
   return typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
 }
@@ -524,13 +542,16 @@ function supports1570(item: ComparableItem): boolean {
   const projections = [
     item.rawPreset?.default_projection,
     item.rawVenue?.projection,
-    ...(item.rawVenue?.projections ?? []),
+    ...rawVenueProjections(item.rawVenue),
   ].filter(Boolean);
   return Boolean(
     item.rawPreset?.id === 'imax_1570_film' ||
+    item.rawPreset?.id === 'imax_dome_film' ||
+    item.rawPreset?.default_capabilities?.supports_1570_film ||
     item.rawVenue?.capabilities?.supports_1570_film ||
     projections.some((projection: Record<string, any>) =>
       projection.type === 'imax_1570_film' ||
+      projection.type === 'imax_dome_film' ||
       /15\/70|1570|70mm/i.test(`${projection.display_name ?? ''} ${projection.type ?? ''}`)
     )
   );
@@ -555,6 +576,12 @@ function nativeReasonForProjection(projection: ResolvedProjection, ar: number): 
 
 function uniqueStrings(values: Array<string | null | undefined>): string[] {
   return Array.from(new Set(values.filter((value): value is string => Boolean(value))));
+}
+
+function rawVenueProjections(venue: Record<string, any> | null | undefined): Record<string, any>[] {
+  if (!venue) return [];
+  const projections = venue.projections ?? venue.hybrid_projections;
+  return Array.isArray(projections) ? projections : [];
 }
 
 export default App;

@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Phase 4b annotation refinement implemented in working tree; functional checks pass."
+Current status: "Steps 1–3 audited and clean. Phase 4b annotation refinement committed; follow-up deep logic QA fixes are in working tree with checks passing."
 
 ## Completed
 
@@ -71,7 +71,10 @@ Priority order: get functional → then design polish. Do not invest in visual d
 - Phase 4b annotation refinement progress: each selected side now shows summary tags/facts; Presentation AR is a searchable/custom combobox with local recent custom ratios and best-native explanations.
 - Phase 4b annotation refinement progress: seat position is linked by default in the comparison workbench, with optional per-side seat comparison.
 - Phase 4b annotation refinement verification: `npm run typecheck`, `npm run ci`, `npm run build`, and browser smoke checks pass for search, filters, custom AR, linked/per-side seats, aligned table, footer source, and Providence/OLED comparison behavior.
-- Next Step 4 chunk: commit annotation refinement if desired, then proceed to Phase 4c polish or manual-entry/render chunks.
+- Annotation refinement commit: `bd33547` (`Address Phase 4b annotation fixes`).
+- Phase 4b deep logic QA progress: subagent audits and browser acceptance checks found and fixed stale AR query resets, incomplete IMAX 15/70/dome-film filtering/tags, incompatible filter-state combinations, sparse digital 1.43 UI guardrails, missing-size home projector optics, home IMAX 1.43 crop behavior, and dome-film PPD range display.
+- Phase 4b deep logic QA verification: `npm run ci`, `npm run build`, targeted metrics probe, 27-check browser acceptance pass, and 7-check regression browser pass all pass after fixes.
+- Next Step 4 chunk: commit deep logic QA fixes, then proceed to Phase 4c polish or manual-entry/render chunks.
 
 ## Project Memory Milestone
 
