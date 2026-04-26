@@ -1,0 +1,2 @@
+/api/imax-csv/*  https://raw.githubusercontent.com/r-imax/imaxguide/main/data/:splat  200
+/api/imax-csv  https://raw.githubusercontent.com/r-imax/imaxguide/main/data/americas/unitedstates.csv  200

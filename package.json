@@ -7,15 +7,26 @@
     "node": ">=20"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit --pretty false",
+    "dev": "vite",
+    "build": "tsc -p tsconfig.app.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit --pretty false",
     "validate": "ts-node --transpile-only src/math/validate.ts",
     "validate:schema": "ts-node --transpile-only src/data/validate.ts",
     "test": "npm run validate",
     "ci": "npm run typecheck && npm run validate && npm run validate:schema"
   },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "vite": "^6.0.0",
     "@types/node": "^20.0.0"
   }
 }

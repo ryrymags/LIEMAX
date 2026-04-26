@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Ready for Step 4 (website)."
+Current status: "Steps 1–3 audited and clean. Step 4a and Phase 4b functional UI baseline are implemented; ready for Phase 4c design polish or targeted UI refinements."
 
 ## Completed
 
@@ -54,7 +54,17 @@ Priority order: get functional → then design polish. Do not invest in visual d
 
 ## Active
 
-- Step 4: assemble data files into a queryable database / bundle for the frontend.
+- Step 4: functional website.
+- Phase 4a progress: Vite/React build tooling added without touching `tsconfig.json`; `tsconfig.app.json`, `vite.config.ts`, `index.html`, and Netlify `_redirects` are present.
+- Phase 4a progress: `src/data/index.ts` explicitly bundles 12 format presets, 2 static venues, 8 home display presets, and 7 content formats.
+- Phase 4a progress: `src/data/csvLoader.ts` loads 143190/r-imax regional CSV files through the `/api/imax-csv/*` proxy base, normalizes them into one cached TSV in `localStorage` with a 24h TTL, and maps rows through `map143190RowToVenue`.
+- Phase 4a progress: `src/data/comparables.ts` builds the comparison item list and resolves cinema presets, venues, and home display presets through the existing resolver.
+- Phase 4a verification: `npm run typecheck`, `npx tsc -p tsconfig.app.json --noEmit --pretty false`, `npm run validate`, and `npm run validate:schema` pass. `getComparableItems([])` returns 22 baseline items.
+- Phase 4b progress: `src/main.tsx`, `src/App.tsx`, `src/App.css`, `src/lib/computeMetrics.ts`, and functional comparison components are implemented.
+- Phase 4b progress: UI supports two item selectors grouped by cinema format / venue / home display, 7 content formats, front/mid/back seat selection, CSV load status, side-by-side metric rows, warnings, and cinema-vs-home brightness comparison.
+- Phase 4b progress: `computeMetrics.ts` adapts existing locked math functions for cinema, dome, film scan-equivalent, home display, masking/crop, FOV, PPD, brightness, contrast, and resolution display without changing `src/math`.
+- Phase 4b verification: `npm run typecheck`, `npm run ci`, `npm run build`, `npm run validate`, and `npm run validate:schema` pass. Dev server starts at `http://127.0.0.1:5173/`; localhost root and `/api/imax-csv/americas/unitedstates.csv` respond. Direct smoke test: Providence + IMAX 1.43 crop loss is ~24.7%, OLED contrast is infinite, and Mugar dome FOV is 180 degrees.
+- Next Step 4 chunk: Phase 4c design polish or targeted 4b refinements after manual browser review.
 
 ## Project Memory Milestone
 
