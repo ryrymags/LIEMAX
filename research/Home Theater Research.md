@@ -191,16 +191,16 @@ The schema should expose a `HomeDisplayPreset` array parallel to `FormatPreset`.
 
 | Preset ID | Display Name | Panel Tech | Peak HDR (nits) | Full-Screen Brightness (nits) | Contrast | DCI-P3 | HDR Formats | Typical Viewing Distance |
 |---|---|---|---|---|---|---|---|---|
-| `oled_flagship_2025` | OLED Flagship (LG G5 / Samsung S95F tier) | WOLED / QD-OLED | 2,268[^2] | 331 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
+| `oled_flagship` | OLED Flagship (LG G5 / Samsung S95F tier) | WOLED / QD-OLED | 2,268[^2] | 331 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
 | `oled_midrange` | OLED Mid-Range (LG C4/C5 tier) | WOLED | 1,049[^1] | ~257 | Infinite (per-pixel) | ~98% | DV / HDR10 / HLG | 1.5× screen height |
-| `oled_budget` | OLED Entry (Sony Bravia 8 / LG B-series tier) | WOLED | 815[^12] | ~224 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
-| `miniled_flagship` | Mini-LED Flagship (Samsung QN90D / Hisense U8 tier) | Mini-LED LCD | 2,024–3,296[^8] | 689–1,258[^7] | ~10,000–20,000:1 | ~100% | HDR10+ / HDR10 / HLG | 1.5× screen height |
-| `qled_midrange` | QLED Mid-Range | QLED LCD | ~800–1,500 | ~300–500 | ~3,000–6,000:1 | ~90% | HDR10 / HLG | 1.5× screen height |
+| `miniled_qled` | Mini-LED Flagship (Samsung QN90D / Hisense U8 tier) | Mini-LED LCD | 2,024–3,296[^8] | 689–1,258[^7] | ~10,000–20,000:1 | ~100% | HDR10+ / HDR10 / HLG (no DV — Samsung policy) | 1.5× screen height |
+| `standard_qled` | QLED Mid-Range (generic non-Samsung QLED) | QLED LCD | ~800–1,500 | ~300–500 | ~3,000–6,000:1 | ~90% | DV / HDR10 / HLG | 1.5× screen height |
 | `standard_lcd` | Standard LCD / LED | LCD | ~300–500 | ~150–300 | ~1,000–3,000:1 | ~72% sRGB | HDR10 (nominal) | 1.5× screen height |
 | `iphone_pro` | iPhone Pro (15/16 series) | OLED | 2,000 outdoor / 1,600 HDR[^21][^20] | 1,000 (typical) | 2,000,000:1[^21] | Display P3 | DV / HDR10 | 12 in |
-| `iphone_standard` | iPhone Standard (15/16) | OLED | 1,600 HDR / 2,000 outdoor[^23] | 1,000 | 2,000,000:1 | Display P3 | HDR10 | 12 in |
-| `android_flagship` | Android Flagship (Galaxy S25 Ultra tier) | QD-OLED (AMOLED) | 2,600[^48] | ~1,400 adaptive | Infinite | ~90% DCI-P3[^22] | HDR10+ | 12 in |
-| `projector_home_dark` | Home Projector (dark room) | DLP/LCD (projected) | ~200–500 nits on screen | ~100–200 nits | ~2,000–5,000:1 | ~72–90% | HDR10 | Screen-size dependent |
+| `android_flagship` | Android Flagship (Galaxy S25 Ultra tier) | QD-OLED (AMOLED) | 2,600[^48] | ~1,400 adaptive | Infinite | ~90% DCI-P3[^22] | HDR10+ (no DV — Samsung policy) | 12 in |
+| `home_projector` | Home Projector (dark room) | DLP/LCD (projected) | ~200–500 nits on screen | ~100–200 nits | ~2,000–5,000:1 | ~72–90% | HDR10 | Screen-size dependent |
+
+> **Note:** IDs above match the canonical `src/data/home_display_presets/` filenames per `.ai/AGENTS.md`. Two presets from earlier drafts (`oled_budget`, `iphone_standard`) were deferred — add them in Step 4 if per-budget comparison features are prioritized.
 
 ### Manual Entry: What Users Know vs. What They Don't
 
@@ -214,7 +214,7 @@ Most users know: TV brand, screen size in inches, maybe "OLED" or "QLED". Almost
 5. Viewing distance (feet or meters) — critical for PPD; prompt with "How far is your couch from the TV?"
 6. Room lighting condition: `"Dark room"` / `"Dim (some lamps)"` / `"Bright room with windows"` / `"Very bright/daytime"`
 
-**Schema auto-fill logic:** If user provides brand + model, look up against a model database (separate from schema). If only panel type + year, map to nearest preset. If nothing, default to `oled_midrange` for "OLED" and `qled_midrange` for "QLED/unknown". This mirrors how the theater schema handles venue records with missing fields — fall through to preset defaults.
+**Schema auto-fill logic:** If user provides brand + model, look up against a model database (separate from schema). If only panel type + year, map to nearest preset. If nothing, default to `oled_midrange` for "OLED" and `standard_qled` for "QLED/unknown". This mirrors how the theater schema handles venue records with missing fields — fall through to preset defaults.
 
 **Advanced manual override fields (for enthusiasts):**
 - `peak_brightness_nits` — measured or published spec

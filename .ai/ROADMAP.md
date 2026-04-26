@@ -2,14 +2,21 @@
 
 ## Current Summary Pane
 
-- GREEN `.ai/`: Context compressed; Step 3 now marked complete across handoff docs. Truth discipline forbids inferred 1.43:1 capability and documents 143190 as the primary venue baseline.
-- GREEN `src/math/`: Resolver supports schema-backed hybrid projection modes, source-aware 1.43 defaults, ScreenX capability preservation, audit regression hardening, and validation tests.
-- GREEN `schema/`: v1.3.0 source of truth. Supports `dolby_cinema_single_laser` and `imax_dome_laser` projector types, sparse 143190 imports, projection-mode arrays, lightweight provenance, presets, venues, home displays, Atmos, and simple ScreenX flags. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
-- GREEN `src/data/`: 143190 import mapper and fixtures preserved. `src/data/presets/`, `src/data/home_display_presets/`, `src/data/content_formats/`, and `src/data/venues/` now contain the full Step 3 dataset. Validation loads every Step 3 JSON record and asserts Mugar's dome-laser/no-film capability model.
-- GREEN `research/`: Updated April 2026 — Dolby Cinema section corrected (dual-laser E3LH primary vs new single-laser Christie 2025+), RPX fully resolved with derived brightness and published contrast. Providence/Mugar facts promoted to schema-shaped venue records.
-- GREEN repo root/docs: README and `CLAUDE.md` are good entry points. Completed Step 1/2 details archived in `docs/archive/HISTORY.md`.
+- GREEN `.ai/`: All three steps audited 2026-04-26. Steps 1–3 are clean. Ready for Step 4.
+- GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
+- GREEN `schema/`: v1.3.0 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
+- GREEN `src/data/`: All Step 3 JSON records pass schema validation (87 checks). imax_cola contrast source downgraded to community_estimate with explanation. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
+- GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames.
+- GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
-Top headache risks:
+## Known Low-Confidence Data Items (do not block Step 4)
+
+- `mugar_omni_boston.json` dome diameter: 76 ft community estimate.
+- `imax_cola.json` contrast: 10,000:1 community estimate; no published IMAX/Christie spec.
+- `imax_dual_xenon.json` contrast: 2,000:1 community estimate.
+- Deferred home display presets: `oled_budget` and `iphone_standard` (add in Step 4 if per-budget comparison is a priority feature).
+
+## Top Step 4 Headache Risks
 
 1. Import drift: 143190 rows are sparse; do not invent seating, brightness, contrast, sound, or exact projector specs from missing fields.
 2. Aspect-ratio drift: agents must require both 1.43 screen and a 1.43-capable projector/mode, else default digital capability to 1.90.
@@ -36,7 +43,19 @@ Build the static client app after presets exist. The website should:
 - support custom user-entered specs
 - remain deployable on free static hosting such as Netlify or Vercel
 
-Tech stack remains TBD.
+Tech stack remains TBD. Likely React or plain TypeScript + Vite; keep it buildable to static files.
+
+### Step 4 Phasing
+
+**Phase 4a — Data layer:** Bundle all JSON files into a queryable in-memory database (flat import or tiny library like `fuse.js` for search). Build the resolver call chain so every comparison starts from `resolveVenue(preset, venue)`.
+
+**Phase 4b — Functional UI:** Working comparison page — pick two items (theater A vs. theater B, or theater vs. home display), show math results in plain language. No design polish yet. Get the core feature working end-to-end first.
+
+**Phase 4c — Design polish:** After Phase 4b works, use design tooling to improve visual quality:
+- `/design:frontend-design` (Claude Design skill) — generates design-system tokens, component specs, accessible color palette
+- Figma MCP connector (available in Claude Code as `mcp__plugin_design_figma__*`) — for high-fidelity mockups and developer-handoff specs
+- As alternative: rapid wireframe iteration via Claude's frontend-design skill before committing to Figma
+- Do NOT start design polish before Phase 4b functional baseline exists.
 
 ## Step 5: Community Data Workflow
 
