@@ -1,0 +1,30 @@
+{
+  "id": "android_flagship",
+  "display_name": "Android Flagship (Samsung Galaxy S25 Ultra tier)",
+  "device_category": "phone",
+  "short_description": "6.9\" QD-OLED with 1,750 nits peak HDR and 498 PPI. The highest-resolution phone panel tier — more pixels per degree than any cinema from arm's length.",
+  "tier": "phone",
+  "default_screen_diagonal_in": 6.9,
+  "default_aspect_ratio": 2.17,
+  "default_viewing_distance_ft": 1.0,
+  "default_display_optics": {
+    "panel_tech": "qd_oled",
+    "is_per_pixel_emissive": true,
+    "resolution_horizontal_px": 3120,
+    "resolution_vertical_px": 1440,
+    "ppi": 498,
+    "brightness_peak_hdr_nits": 1750,
+    "brightness_fullscreen_nits": null,
+    "brightness_sdr_nits": null,
+    "contrast_sequential": null,
+    "contrast_notes": "Per-pixel OLED — true infinite contrast. contrast_sequential is null; UI should render 'Infinite (OLED)'.",
+    "color_gamut_label": "Wide Color (DCI-P3)",
+    "color_gamut_dci_p3_pct": 91,
+    "hdr_formats": ["hdr10", "hdr10_plus"]
+  },
+  "known_limitations": [
+    "No Dolby Vision support (Samsung policy)",
+    "6.9-inch screen at arm's length — high PPD but tiny angular field of view vs. cinema immersion",
+    "Phone audio and ambient noise make direct cinema comparison misleading"
+  ]
+}

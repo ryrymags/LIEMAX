@@ -1,0 +1,29 @@
+{
+  "id": "oled_midrange",
+  "display_name": "OLED Midrange (LG C4 / Samsung S95D tier)",
+  "device_category": "tv",
+  "short_description": "Excellent per-pixel OLED with 1,049 nits peak HDR. True blacks, wide color — the sweet spot for home cinema under $2,000.",
+  "tier": "midrange",
+  "default_screen_diagonal_in": 65,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": 4.0,
+  "default_display_optics": {
+    "panel_tech": "woled",
+    "is_per_pixel_emissive": true,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": 68,
+    "brightness_peak_hdr_nits": 1049,
+    "brightness_fullscreen_nits": 257,
+    "brightness_sdr_nits": 296,
+    "contrast_sequential": null,
+    "contrast_notes": "Per-pixel OLED — true infinite contrast. contrast_sequential is null; UI should render 'Infinite (OLED)'.",
+    "color_gamut_label": "Wide Color (DCI-P3)",
+    "color_gamut_dci_p3_pct": 98,
+    "hdr_formats": ["dolby_vision", "hdr10", "hlg"]
+  },
+  "known_limitations": [
+    "Full-screen brightness drops to ~257 nits due to OLED thermal limits — spec-sheet peak brightness applies only to small bright highlights on dark backgrounds",
+    "Living room ambient light erodes the per-pixel black advantage vs. cinema"
+  ]
+}

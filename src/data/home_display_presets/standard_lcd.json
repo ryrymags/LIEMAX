@@ -1,0 +1,30 @@
+{
+  "id": "standard_lcd",
+  "display_name": "Standard LCD (budget)",
+  "device_category": "tv",
+  "short_description": "Entry-level LED/LCD. SDR-class brightness and contrast. Functional for everyday viewing; not suited for meaningful HDR or cinema comparison.",
+  "tier": "budget",
+  "default_screen_diagonal_in": 50,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": 3.1,
+  "default_display_optics": {
+    "panel_tech": "standard_lcd",
+    "is_per_pixel_emissive": false,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": 88,
+    "brightness_peak_hdr_nits": 300,
+    "brightness_fullscreen_nits": 150,
+    "brightness_sdr_nits": 150,
+    "contrast_sequential": 1500,
+    "contrast_notes": "Typical IPS or VA LCD without quantum dot. Contrast range 800–2,000:1 depending on panel type; 1,500 used as estimate.",
+    "color_gamut_label": "sRGB (~72% DCI-P3)",
+    "color_gamut_dci_p3_pct": 72,
+    "hdr_formats": ["hdr10"]
+  },
+  "known_limitations": [
+    "Peak HDR brightness (~300 nits) below the threshold for meaningful HDR impact — HDR10 badge is nominal at this tier",
+    "Color gamut limited to ~sRGB — cannot display full DCI-P3 cinema color",
+    "Contrast at 1,500:1 — blacks visibly gray in a dark room"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "miniled_qled",
+  "display_name": "Mini-LED QLED (Samsung QN90D / Hisense U8N tier)",
+  "device_category": "tv",
+  "short_description": "Mini-LED LCD with 2,024 nits peak HDR and 689 nits full-screen — the brightest panel type for HDR specular highlights. Zone-based local dimming means imperfect blacks.",
+  "tier": "midrange",
+  "default_screen_diagonal_in": 65,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": 4.0,
+  "default_display_optics": {
+    "panel_tech": "miniled_lcd",
+    "is_per_pixel_emissive": false,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": 68,
+    "brightness_peak_hdr_nits": 2024,
+    "brightness_fullscreen_nits": 689,
+    "brightness_sdr_nits": 236,
+    "contrast_sequential": 10000,
+    "contrast_notes": "Zone-based local dimming — contrast figure is approximate and depends on zone count and content. Halos visible around bright objects on dark backgrounds.",
+    "color_gamut_label": "Wide Color (DCI-P3)",
+    "color_gamut_dci_p3_pct": 100,
+    "hdr_formats": ["hdr10", "hdr10_plus"]
+  },
+  "known_limitations": [
+    "Zone-based local dimming produces halos around bright objects on dark backgrounds — does not achieve OLED per-pixel blacks",
+    "No Dolby Vision support (Samsung policy)"
+  ]
+}

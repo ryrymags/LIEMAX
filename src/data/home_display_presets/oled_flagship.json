@@ -1,0 +1,29 @@
+{
+  "id": "oled_flagship",
+  "display_name": "OLED Flagship (LG G5 / Samsung S95F tier)",
+  "device_category": "tv",
+  "short_description": "Per-pixel OLED with 2,268 nits peak HDR. Brighter than any cinema in highlights — but full-screen content drops to ~331 nits, and your living room isn't pitch dark.",
+  "tier": "flagship",
+  "default_screen_diagonal_in": 65,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": 4.0,
+  "default_display_optics": {
+    "panel_tech": "woled",
+    "is_per_pixel_emissive": true,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": 68,
+    "brightness_peak_hdr_nits": 2268,
+    "brightness_fullscreen_nits": 331,
+    "brightness_sdr_nits": 510,
+    "contrast_sequential": null,
+    "contrast_notes": "Per-pixel OLED — true infinite contrast. contrast_sequential is null; UI should render 'Infinite (OLED)'.",
+    "color_gamut_label": "Wide Color (DCI-P3)",
+    "color_gamut_dci_p3_pct": 99,
+    "hdr_formats": ["dolby_vision", "hdr10", "hlg"]
+  },
+  "known_limitations": [
+    "Full-screen brightness drops to ~331 nits due to OLED thermal limits — spec-sheet peak brightness applies only to small bright highlights on dark backgrounds",
+    "Living room ambient light erodes the per-pixel black advantage vs. cinema"
+  ]
+}

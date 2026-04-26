@@ -1,8 +1,6 @@
 # State
 
-Current status: "Step 3 Presets active. Steps 1 and 2 complete."
-
-Product context refreshed: `.ai/PROJECT.md` now explicitly preserves the LIEMAX north star, user outcomes, custom/preset/known-theater entry paths, community provenance intent, and future first-person simulation goals.
+Current status: "Step 3 complete. Steps 1, 2, and 3 done. Ready for Step 4."
 
 ## Completed
 
@@ -15,27 +13,27 @@ Product context refreshed: `.ai/PROJECT.md` now explicitly preserves the LIEMAX 
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.
 - Research updated: Dolby Cinema section corrected (dual-laser E3LH vs new single-laser Christie variant); RPX section fully resolved with derived brightness, published contrast (1,850:1), and projector type discipline.
 
-## Step 3 Progress
+## Step 3 Complete
 
-Presets created in `src/data/presets/`:
+### Format Presets (`src/data/presets/`)
 - `imax_gt_dual_laser`, `imax_cola`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`
 - `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`
+- `standard_multiplex`, `screenx`
 
-Venues created in `src/data/venues/`:
+### Venues (`src/data/venues/`)
 - `apple_providence_imax` (sparse 143190 import + hybrid projection modes)
 - `mugar_omni_boston` (dome geometry, institutional)
 
-## Remaining Step 3 Work
+### Home Display Presets (`src/data/home_display_presets/`)
+- `oled_flagship`, `oled_midrange`, `miniled_qled`, `standard_qled`, `standard_lcd`
+- `iphone_pro`, `android_flagship`, `home_projector`
 
-- Standard multiplex preset
-- ScreenX preset (simple flag-based)
-- Home display tier presets (OLED flagship, OLED midrange, Mini-LED, standard QLED, standard LCD, iPhone Pro, Android flagship)
-- Content formats array (`imax_143`, `scope_239`, `flat_185`, `tv_178`, etc.)
+### Content Formats (`src/data/content_formats/content_formats.json`)
+- `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`, `ultrawide_235`
 
 ## Active
 
-- Step 3 Presets in progress.
-- 143190.xyz rows are the primary venue baseline; presets/research enrich missing fields.
+- Step 4: assemble data files into a queryable database / bundle for the frontend.
 
 ## Project Memory Milestone
 

@@ -1,0 +1,29 @@
+{
+  "id": "standard_qled",
+  "display_name": "Standard QLED LCD (mid-range)",
+  "device_category": "tv",
+  "short_description": "Mid-range QLED with quantum dot color enhancement. Good HDR performance for the price; contrast limited by VA panel black levels.",
+  "tier": "midrange",
+  "default_screen_diagonal_in": 55,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": 3.4,
+  "default_display_optics": {
+    "panel_tech": "qled_lcd",
+    "is_per_pixel_emissive": false,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": 80,
+    "brightness_peak_hdr_nits": 1000,
+    "brightness_fullscreen_nits": 300,
+    "brightness_sdr_nits": 200,
+    "contrast_sequential": 4500,
+    "contrast_notes": "VA panel with quantum dot backlight enhancement. Contrast varies by model (3,000–6,000:1 typical); 4,500 used as midpoint estimate.",
+    "color_gamut_label": "Wide Color (DCI-P3)",
+    "color_gamut_dci_p3_pct": 82,
+    "hdr_formats": ["dolby_vision", "hdr10", "hlg"]
+  },
+  "known_limitations": [
+    "Black levels limited by LCD backlight bleed — contrast noticeably worse than OLED in a dark room",
+    "Full-screen HDR brightness drops to ~300 nits — peak figure applies only to small highlights"
+  ]
+}

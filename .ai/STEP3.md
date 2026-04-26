@@ -1,5 +1,7 @@
 # Step 3 Briefing — Presets
 
+**STATUS: COMPLETE.** All presets, home display presets, venues, and content formats are authored. See `.ai/STATE.md` for the full inventory. Proceed to Step 4.
+
 Cold-start: read `.ai/STATE.md` → `.ai/AGENTS.md` → `.ai/REQUIREMENTS.md` → this file.
 
 ## What Step 3 Is
