@@ -48,6 +48,7 @@ export interface ComputedMetrics {
   brightnessPeakHdrNits: number | null;
   brightnessSdrNits: number | null;
   contrastSequential: number | null;
+  contrastDynamic: number | null;
   contrastIsInfinite: boolean;
   resolutionHorizontalPx: number | null;
   resolutionVerticalPx: number | null;
@@ -69,6 +70,7 @@ export function computeVenueMetrics(
   const viewingDistanceFt = seatingDistance(venue, seatPosition);
   const brightnessCinemaFl = positiveOrNull(projection.brightness_fl);
   const contrastSequential = positiveOrNull(projection.contrast_sequential);
+  const contrastDynamic = positiveOrNull(projection.contrast_dynamic);
   const isFilm = isFilmProjection(projection);
 
   let metrics: ComputedMetrics = {
@@ -83,6 +85,7 @@ export function computeVenueMetrics(
     brightnessCinemaFl,
     brightnessCinemaNits: brightnessCinemaFl == null ? null : flToNits(brightnessCinemaFl),
     contrastSequential,
+    contrastDynamic,
     contrastIsInfinite: false,
     resolutionHorizontalPx: projection.resolution_horizontal_px ?? null,
     resolutionVerticalPx: projection.resolution_vertical_px ?? null,
@@ -215,6 +218,7 @@ function homeOpticsMetrics(display: ResolvedHomeDisplay): Partial<ComputedMetric
     brightnessPeakHdrNits: positiveOrNull(display.display_optics.brightness_peak_hdr_nits),
     brightnessSdrNits: positiveOrNull(display.display_optics.brightness_sdr_nits),
     contrastSequential: positiveOrNull(display.display_optics.contrast_sequential),
+    contrastDynamic: null,
     contrastIsInfinite: display.display_optics.contrast_sequential == null && display.display_optics.is_per_pixel_emissive,
     resolutionHorizontalPx: display.display_optics.resolution_horizontal_px ?? null,
     resolutionVerticalPx: display.display_optics.resolution_vertical_px ?? null,
@@ -369,6 +373,7 @@ function emptyMetrics(): ComputedMetrics {
     brightnessPeakHdrNits: null,
     brightnessSdrNits: null,
     contrastSequential: null,
+    contrastDynamic: null,
     contrastIsInfinite: false,
     resolutionHorizontalPx: null,
     resolutionVerticalPx: null,

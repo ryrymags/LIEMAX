@@ -29,6 +29,7 @@ const EXTRA_RATIOS: AspectRatioOption[] = [
 
 export function AspectRatioControl({ value, defaultValue, defaultReason, mode, onChange }: AspectRatioControlProps) {
   const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
   const [recentCustom, setRecentCustom] = useState<number[]>(() => loadCustomRatios());
   const options = useMemo(() => buildOptions(defaultValue, recentCustom), [defaultValue, recentCustom]);
   const selected = value == null ? null : findByValue(options, value);
@@ -40,12 +41,14 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
 
   function choose(option: AspectRatioOption) {
     setQuery(option.displayName);
+    setOpen(false);
     onChange(option.aspectRatio, option.isBestNative ? 'auto' : 'custom');
   }
 
   function useBestNative() {
     if (!defaultValue) return;
     setQuery('');
+    setOpen(false);
     onChange(defaultValue, 'auto');
   }
 
@@ -54,6 +57,7 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
     if (numeric == null) {
       const first = filtered[0];
       if (first) choose(first);
+      setOpen(false);
       return;
     }
 
@@ -65,8 +69,13 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
 
     rememberCustomRatio(numeric, recentCustom, setRecentCustom);
     setQuery(formatAr(numeric));
+    setOpen(false);
     onChange(numeric, 'custom');
   }
+
+  const statusText = mode === 'auto'
+    ? `Selected best native ${formatAr(value ?? defaultValue)}`
+    : `Manual override ${formatAr(value ?? defaultValue)}`;
 
   return (
     <div className="aspect-control">
@@ -83,8 +92,13 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
             value={query}
             placeholder={selected?.displayName ?? (value == null ? 'Scope, IMAX, 16:9, 2.00...' : formatAr(value))}
             onChange={(event) => setQuery(event.target.value)}
+            onFocus={() => setOpen(true)}
             onBlur={() => {
-              if (query.trim()) commitTypedValue();
+              if (query.trim()) {
+                commitTypedValue();
+              } else {
+                setOpen(false);
+              }
             }}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
@@ -95,34 +109,36 @@ export function AspectRatioControl({ value, defaultValue, defaultReason, mode, o
             aria-label="Presentation aspect ratio"
           />
         </label>
-        <div className="ar-options" role="listbox" aria-label="Presentation aspect ratio options">
-          {filtered.map((option) => (
-            <button
-              key={option.id}
-              type="button"
-              role="option"
-              aria-selected={selected?.id === option.id || (value != null && Math.abs(option.aspectRatio - value) < 0.01)}
-              className={value != null && Math.abs(option.aspectRatio - value) < 0.01 ? 'is-selected' : ''}
-              onMouseDown={(event) => event.preventDefault()}
-              onClick={() => choose(option)}
-            >
-              <span>{option.displayName}</span>
-              <small>{option.isBestNative ? defaultReason : option.isCustom ? 'Recent custom ratio' : `${formatAr(option.aspectRatio)} presentation`}</small>
-            </button>
-          ))}
-          {filtered.length === 0 ? (
-            <div className="manual-placeholder">
-              <strong>Type a number like 2.00</strong>
-              <span>Press Enter to use it as a custom presentation ratio.</span>
-            </div>
-          ) : null}
-        </div>
+        {open ? (
+          <div className="ar-options" role="listbox" aria-label="Presentation aspect ratio options">
+            {filtered.map((option) => (
+              <button
+                key={option.id}
+                type="button"
+                role="option"
+                aria-selected={selected?.id === option.id || (value != null && Math.abs(option.aspectRatio - value) < 0.01)}
+                className={value != null && Math.abs(option.aspectRatio - value) < 0.01 ? 'is-selected' : ''}
+                onMouseDown={(event) => event.preventDefault()}
+                onClick={() => choose(option)}
+              >
+                <span>{option.displayName}</span>
+                <small>{option.isBestNative ? defaultReason : option.isCustom ? 'Recent custom ratio' : `${formatAr(option.aspectRatio)} presentation`}</small>
+              </button>
+            ))}
+            {filtered.length === 0 ? (
+              <div className="manual-placeholder">
+                <strong>Type a number like 2.00</strong>
+                <span>Press Enter to use it as a custom presentation ratio.</span>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
       </div>
 
-      <p>
-        {mode === 'auto'
-          ? `Using best native default${defaultReason ? `. ${defaultReason}` : `: ${formatAr(value ?? defaultValue)}`}`
-          : `Manual override: ${formatAr(value ?? defaultValue)}`}
+      <p className="aspect-control__status">
+        <strong>{statusText}</strong>
+        {mode === 'auto' && defaultReason ? <span>{defaultReason}</span> : null}
+        {mode === 'custom' ? <span>Only this side uses the custom presentation ratio.</span> : null}
       </p>
     </div>
   );

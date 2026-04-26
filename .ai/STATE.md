@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Phase 4b annotation refinement committed; follow-up deep logic QA fixes are in working tree with checks passing."
+Current status: "Steps 1–3 audited and clean. Phase 4b annotation follow-up fixes committed with checks passing."
 
 ## Completed
 
@@ -74,7 +74,11 @@ Priority order: get functional → then design polish. Do not invest in visual d
 - Annotation refinement commit: `bd33547` (`Address Phase 4b annotation fixes`).
 - Phase 4b deep logic QA progress: subagent audits and browser acceptance checks found and fixed stale AR query resets, incomplete IMAX 15/70/dome-film filtering/tags, incompatible filter-state combinations, sparse digital 1.43 UI guardrails, missing-size home projector optics, home IMAX 1.43 crop behavior, and dome-film PPD range display.
 - Phase 4b deep logic QA verification: `npm run ci`, `npm run build`, targeted metrics probe, 27-check browser acceptance pass, and 7-check regression browser pass all pass after fixes.
-- Next Step 4 chunk: commit deep logic QA fixes, then proceed to Phase 4c polish or manual-entry/render chunks.
+- Deep logic QA commit: `b659179` (`Fix Phase 4b logic edge cases`).
+- Annotation follow-up commit: `cfc8e24` (`Address Phase 4b follow-up annotations`).
+- Phase 4b annotation follow-up progress: Dolby dynamic contrast now displays alongside sequential contrast; format presets with optics but no dimensions use average preset screens for computable FOV/PPD/area; selected-screen summaries label average models; search results are visually integrated with the search control; Presentation AR options are hidden until focused/typed and now read as a compact status/explanation.
+- Phase 4b annotation follow-up verification: `npm run ci`, `npm run build`, targeted Dolby metrics probe, and Safari smoke check pass for average Dolby geometry, dynamic contrast row, summary language, and search integration.
+- Next Step 4 chunk: continue Phase 4b/4c with manual-entry and 2D scale render planning.
 
 ## Project Memory Milestone
 

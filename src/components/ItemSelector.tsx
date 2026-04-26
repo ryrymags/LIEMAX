@@ -56,21 +56,20 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
 
   return (
     <section className="item-search" aria-label={label}>
-      <label className="field-label" htmlFor={id}>
-        <span>{label}</span>
-        <input
-          id={id}
-          type="search"
-          value={query}
-          placeholder={selectedItem ? selectedItem.label : 'Search theater, city, format, projector...'}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-      </label>
-      <div className="filter-bar">
+      <div className="search-toolbar">
+        <label className="field-label search-field" htmlFor={id}>
+          <span>{label}</span>
+          <input
+            id={id}
+            type="search"
+            value={query}
+            placeholder={selectedItem ? selectedItem.label : 'Search theater, city, format, projector...'}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </label>
         <button type="button" onClick={() => setFiltersOpen((open) => !open)} aria-expanded={filtersOpen}>
           Filters{activeFilterCount > 0 ? ` (${activeFilterCount})` : ''}
         </button>
-        <span>{filteredItems.length} matches</span>
       </div>
       {filtersOpen ? (
         <div className="filter-grid" aria-label={`${label} filters`}>
@@ -123,30 +122,36 @@ export function ItemSelector({ id, label, items, value, onChange }: ItemSelector
           </label>
         </div>
       ) : null}
-      <div className="search-results" role="listbox" aria-label={`${label} results`}>
-        {visibleItems.length > 0 ? (
-          visibleItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              role="option"
-              aria-selected={item.id === value}
-              className={item.id === value ? 'is-selected' : ''}
-              onClick={() => {
-                onChange(item.id);
-                setQuery('');
-              }}
-            >
-              <span>{item.label}</span>
-              <small>{itemSummary(item)}</small>
-            </button>
-          ))
-        ) : (
-          <div className="manual-placeholder">
-            <strong>Don't see what you're looking for?</strong>
-            <span>Manual Entry coming soon.</span>
-          </div>
-        )}
+      <div className="search-combobox">
+        <div className="search-combobox__meta">
+          <span>{filteredItems.length} matches</span>
+          {activeFilterCount > 0 ? <span>{activeFilterCount} filters active</span> : <span>Directory results</span>}
+        </div>
+        <div className="search-results" role="listbox" aria-label={`${label} results`}>
+          {visibleItems.length > 0 ? (
+            visibleItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                role="option"
+                aria-selected={item.id === value}
+                className={item.id === value ? 'is-selected' : ''}
+                onClick={() => {
+                  onChange(item.id);
+                  setQuery('');
+                }}
+              >
+                <span>{item.label}</span>
+                <small>{itemSummary(item)}</small>
+              </button>
+            ))
+          ) : (
+            <div className="manual-placeholder">
+              <strong>Don't see what you're looking for?</strong>
+              <span>Manual Entry coming soon.</span>
+            </div>
+          )}
+        </div>
       </div>
       {filteredItems.length > visibleItems.length ? (
         <p className="results-note">Showing first {visibleItems.length} matches. Type more or add filters to narrow the list.</p>

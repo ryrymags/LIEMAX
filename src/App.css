@@ -79,10 +79,36 @@ input {
   gap: 12px;
 }
 
+.search-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+}
+
+.search-toolbar button {
+  min-height: 42px;
+  padding: 8px 12px;
+  background: #eef2f7;
+  border: 1px solid #cbd4e1;
+  border-radius: 6px;
+  color: #293241;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.search-field input {
+  border-bottom-right-radius: 0;
+}
+
 .filter-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+  padding: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e7ef;
+  border-radius: 6px;
 }
 
 .filter-grid label,
@@ -133,14 +159,31 @@ input {
   min-height: 0;
 }
 
+.search-combobox {
+  overflow: hidden;
+  border: 1px solid #cbd4e1;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.search-combobox__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  color: #627085;
+  background: #f7f9fc;
+  border-bottom: 1px solid #e2e7ef;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
 .search-results {
   display: grid;
   gap: 6px;
   max-height: 300px;
   overflow: auto;
-  padding: 4px;
-  border: 1px solid #e2e7ef;
-  border-radius: 6px;
+  padding: 6px;
 }
 
 .search-results button {
@@ -268,11 +311,17 @@ input {
 }
 
 .aspect-combobox {
+  position: relative;
   display: grid;
   gap: 8px;
 }
 
 .ar-options {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
   display: grid;
   gap: 6px;
   max-height: 190px;
@@ -280,6 +329,8 @@ input {
   padding: 4px;
   border: 1px solid #e2e7ef;
   border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgb(36 49 66 / 14%);
 }
 
 .ar-options button {
@@ -307,10 +358,16 @@ input {
   line-height: 1.3;
 }
 
-.aspect-control p {
+.aspect-control__status {
+  display: grid;
+  gap: 3px;
   margin: 0;
   color: #667285;
   font-size: 0.84rem;
+}
+
+.aspect-control__status strong {
+  color: #354052;
 }
 
 .segmented-control {
@@ -343,11 +400,13 @@ input {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 
 .side-panel {
   display: grid;
   gap: 16px;
+  grid-template-rows: auto auto auto auto;
   align-content: start;
   padding: 16px;
   background: #ffffff;
@@ -380,7 +439,12 @@ input {
 .selected-screen-summary {
   display: grid;
   gap: 8px;
+  min-height: 270px;
   padding-bottom: 4px;
+}
+
+.selected-screen-summary > p {
+  min-height: 4.2em;
 }
 
 .tag-list {
@@ -409,6 +473,7 @@ input {
 .screen-facts div {
   display: grid;
   gap: 2px;
+  min-height: 64px;
   padding: 8px;
   background: #f7f9fc;
   border: 1px solid #e2e7ef;
@@ -664,6 +729,7 @@ input {
   .comparison-controls,
   .comparison-layout,
   .comparison-toolbar,
+  .search-toolbar,
   .split-seat-controls {
     grid-template-columns: 1fr;
     display: grid;
@@ -701,5 +767,13 @@ input {
   .filter-grid,
   .screen-facts {
     grid-template-columns: 1fr;
+  }
+
+  .selected-screen-summary {
+    min-height: 0;
+  }
+
+  .selected-screen-summary > p {
+    min-height: 0;
   }
 }

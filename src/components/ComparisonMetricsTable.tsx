@@ -170,6 +170,15 @@ function brightness(metrics: ComputedMetrics | null, kind: MetricsKind): MetricC
 function contrast(metrics: ComputedMetrics | null): MetricCell {
   if (!metrics) return emptyCell();
   if (metrics.contrastIsInfinite) return { value: 'Infinite', note: 'per-pixel OLED' };
+  if (metrics.contrastDynamic != null) {
+    const sequential = metrics.contrastSequential == null
+      ? null
+      : `${formatNumber(metrics.contrastSequential, 0)}:1 sequential`;
+    return {
+      value: `${formatNumber(metrics.contrastDynamic, 0)}:1`,
+      note: ['dynamic', sequential].filter(Boolean).join('; '),
+    };
+  }
   if (metrics.contrastSequential == null) return emptyCell();
   return { value: `${formatNumber(metrics.contrastSequential, 0)}:1`, note: 'sequential' };
 }

@@ -75,11 +75,62 @@ export function resolveItem(item: ComparableItem):
   const venueRecord = item.rawVenue ?? {
     id: item.rawPreset?.id,
     name: item.rawPreset?.display_name,
+    ...averagePresetVenueDefaults(item.rawPreset?.id),
   };
 
   return {
     type: 'venue',
     resolved: resolveVenue(preset, venueRecord),
+  };
+}
+
+function averagePresetVenueDefaults(presetId: string | undefined): Record<string, any> {
+  if (!presetId) return {};
+
+  const screen = AVERAGE_PRESET_SCREENS[presetId];
+  if (!screen) return {};
+
+  return {
+    screen,
+    metadata: {
+      uses_average_format_screen: true,
+    },
+  };
+}
+
+const AVERAGE_PRESET_SCREENS: Record<string, Record<string, any>> = {
+  imax_gt_dual_laser: averageScreen(84, 1.43, 'slight_cylindrical_curve'),
+  imax_1570_film: averageScreen(84, 1.43, 'slight_cylindrical_curve'),
+  imax_cola: averageScreen(60, 1.90),
+  imax_dual_xenon: averageScreen(60, 1.90),
+  imax_dome_laser: {
+    width_ft: 76,
+    height_ft: 76,
+    aspect_ratio: 1,
+    geometry: 'hemispherical',
+    screen_bottom_height_ft: 0,
+    dome_coverage_pct: 83,
+  },
+  imax_dome_film: {
+    width_ft: 76,
+    height_ft: 76,
+    aspect_ratio: 1,
+    geometry: 'hemispherical',
+    screen_bottom_height_ft: 0,
+    dome_coverage_pct: 83,
+  },
+  dolby_cinema: averageScreen(55, 1.85),
+  dolby_cinema_single_laser: averageScreen(55, 1.85),
+  cinemark_xd: averageScreen(62, 1.90),
+};
+
+function averageScreen(widthFt: number, aspectRatio: number, geometry = 'flat'): Record<string, any> {
+  return {
+    width_ft: widthFt,
+    height_ft: Number((widthFt / aspectRatio).toFixed(1)),
+    aspect_ratio: aspectRatio,
+    geometry,
+    screen_bottom_height_ft: 5,
   };
 }
 

@@ -85,6 +85,23 @@ function addContrastInsight(insights: Insight[], leftLabel: string, rightLabel: 
     insights.push({ text: `${shortLabel(rightLabel)} wins contrast with per-pixel black levels.`, score: 14 });
     return;
   }
+
+  const leftDynamic = left.contrastDynamic;
+  const rightDynamic = right.contrastDynamic;
+  if (leftDynamic != null || rightDynamic != null) {
+    if (leftDynamic != null && rightDynamic != null) {
+      addRatioInsight(insights, 'dynamic contrast', leftLabel, rightLabel, leftDynamic, rightDynamic, 'higher');
+    } else {
+      const label = leftDynamic != null ? shortLabel(leftLabel) : shortLabel(rightLabel);
+      const value = leftDynamic ?? rightDynamic;
+      if (value != null) {
+        insights.push({
+          text: `${label} carries a ${formatNumber(value)}:1 dynamic contrast claim; sequential contrast remains the apples-to-apples row.`,
+          score: 13,
+        });
+      }
+    }
+  }
   addRatioInsight(insights, 'sequential contrast', leftLabel, rightLabel, left.contrastSequential, right.contrastSequential, 'higher');
 }
 
@@ -127,4 +144,8 @@ function scoreFor(metric: string, magnitude: number): number {
 
 function shortLabel(label: string): string {
   return label.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+}
+
+function formatNumber(value: number): string {
+  return new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(value);
 }

@@ -483,6 +483,7 @@ function buildScreenProfile(
     brandTag(item),
     projectionTag(activeOption?.projection),
     supports1570(item) ? '15/70 capable' : null,
+    usesAveragePresetScreen(item, metrics) ? 'Average model' : null,
     resolved.type === 'venue' && resolved.resolved.screen.geometry === 'hemispherical' ? 'Dome' : null,
     item.rawVenue?.source_143190 ? '143190.xyz' : null,
   ]);
@@ -491,7 +492,7 @@ function buildScreenProfile(
     { label: 'Screen', value: screenFact(metrics) },
     { label: 'Native AR', value: defaultAr ? `${defaultAr.toFixed(2)}:1` : 'Unknown' },
     { label: 'Projection', value: activeOption?.sublabel ?? activeOption?.label ?? projectionCountLabel(projectionOptionsList) },
-    { label: 'Source', value: item.rawVenue?.source_143190 ? '143190.xyz / r-imax' : item.category === 'venue' ? 'Authored venue' : item.category === 'home_display' ? 'Preset' : 'Format preset' },
+    { label: 'Source', value: sourceFact(item, metrics) },
   ].filter((fact) => fact.value && fact.value !== 'Unknown');
 
   return {
@@ -500,6 +501,19 @@ function buildScreenProfile(
     tags,
     facts,
   };
+}
+
+function sourceFact(item: ComparableItem, metrics: ComputedMetrics | null): string {
+  if (item.rawVenue?.source_143190) return '143190.xyz / r-imax';
+  if (item.category === 'venue') return 'Authored venue';
+  if (item.category === 'home_display') return 'Preset';
+  return usesAveragePresetScreen(item, metrics) ? 'Average format preset' : 'Format preset';
+}
+
+function usesAveragePresetScreen(item: ComparableItem, metrics: ComputedMetrics | null): boolean {
+  return item.category === 'cinema_preset' &&
+    item.rawPreset?.default_screen?.width_ft == null &&
+    metrics?.screenWidthFt != null;
 }
 
 function categoryTag(item: ComparableItem): string {
