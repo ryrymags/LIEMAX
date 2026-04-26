@@ -28,7 +28,7 @@ function assertEqual<T>(label: string, actual: T, expected: T): void {
 }
 
 console.log('\n=== Schema Contract ===');
-assertEqual('schema const version', schema.properties.schema_version.const, '1.2.0');
+assertEqual('schema const version', schema.properties.schema_version.const, '1.3.0');
 assert('schema has 143190 import definition', Boolean(schema.definitions.imax_143190_import));
 assert('schema projection supports mode', Boolean(schema.definitions.projection.properties.mode));
 assert('schema projection supports per-mode min AR', Boolean(schema.definitions.projection.properties.min_content_ar_supported));

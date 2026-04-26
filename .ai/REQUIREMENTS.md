@@ -8,7 +8,7 @@
 - Keep math functions pure and testable. No UI behavior belongs in `src/math/`.
 - Be transparent about contentious methodology, especially 15/70 film scan equivalence and GT laser pixel-offset supersampling.
 - The Agent must never infer 1.43:1 capability unless the theater schema explicitly confirms a 1.43:1 screen AND a 1.43:1-capable projector (GT Laser or 15/70mm). If unclear, default to 1.90:1.
-- Schema changes must respect `schema/theater.schema.json`, currently version `1.2.0`.
+- Schema changes must respect `schema/theater.schema.json`, currently version `1.3.0`. Additive changes (new enum values, new nullable fields) bump minor version; breaking changes bump major. Update `src/data/validate.ts` version check whenever the schema const changes.
 - Treat `schema/theater.schema.json` as the source of truth for data shape, inheritance behavior, and naming.
 - Resolver behavior must be field-level merge, not object-level merge. Venue fields override preset defaults only when non-null.
 - Theater data should preserve source, timestamp, and confidence/provenance where the schema supports it.

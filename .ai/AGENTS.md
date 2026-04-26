@@ -1,6 +1,6 @@
 # Agent Briefing
 
-Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`.
+Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`, then `.ai/STEP3.md` if Step 3 is active.
 
 ## Mission
 
@@ -9,8 +9,9 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 ## State
 
 - Branch: `codex/overhaul`.
-- Done: Step 1 schema/research; Step 2 math engine with audit regression hardening; sparse 143190 import foundation.
-- Active: Step 3 presets/data, starting shared IMAX presets, Providence Place IMAX, Mugar Omni.
+- Done: Step 1 schema/research; Step 2 math engine (129 passing tests); sparse 143190 import foundation; schema v1.3.0.
+- Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome), Dolby Cinema (dual-laser + single-laser variants), RPX preset, Providence Place and Mugar Omni venue drafts.
+- Active: Step 3 remaining — standard multiplex, ScreenX, home display tier presets, content formats. See `.ai/STEP3.md`.
 
 ## Rules
 
@@ -28,7 +29,9 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 - Schema/data: `snake_case`.
 - TS functions/locals: `camelCase`.
-- Format IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_1570_film`, `imax_dome_film`, `dolby_cinema`.
+- Format preset IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_1570_film`, `imax_dome_film`, `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`, `standard_multiplex`, `screenx`.
+- Home display preset IDs: `oled_flagship`, `oled_midrange`, `miniled_qled`, `standard_qled`, `standard_lcd`, `iphone_pro`, `android_flagship`, `home_projector`.
+- Content format IDs: `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`, `ultrawide_235`.
 - Source quality enum: `published_official`, `published_cto`, `trade_reporting`, `community_estimate`, `derived`, `user_submitted`, `unknown`.
 
 ## Map
@@ -37,9 +40,14 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `.ai/REQUIREMENTS.md`: hard constraints.
 - `.ai/ROADMAP.md`: active Summary Pane + next tasks.
 - `.ai/STATE.md`: branch/status snapshot.
+- `.ai/STEP3.md`: detailed Step 3 briefing — remaining presets, specs, pitfalls, verification.
 - `CLAUDE.md`: Claude pointer.
 - `README.md`: public overview.
-- `schema/theater.schema.json`: canonical model.
-- `src/math/`: pure math engine; `validate.ts` = validation suite.
-- `src/data/`: 143190 import mapper and schema/import validation fixtures.
-- `research/`: evidence; `research/legacy_context/`: archived journals.
+- `schema/theater.schema.json`: canonical model v1.3.0.
+- `src/math/`: pure math engine; `validate.ts` = validation suite (immutable).
+- `src/data/`: 143190 import mapper, fixtures, and schema/import validation.
+- `src/data/presets/`: format preset JSON files (one per format).
+- `src/data/venues/`: venue record JSON files (one per venue).
+- `src/data/home_display_presets/`: home display tier preset JSON files.
+- `src/data/content_formats/`: content format aspect-ratio definitions.
+- `research/`: evidence — Master Research.md, IMAX Dome Research.md, Home Theater Research.md.

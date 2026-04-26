@@ -1,0 +1,83 @@
+{
+  "id": "imax_cola",
+  "display_name": "IMAX CoLa (Commercial Laser)",
+  "brand": "IMAX",
+  "short_description": "Single 4K laser in 1.90:1 multiplex rooms. The most common 'IMAX' — cannot display 1.43:1 content at full screen height.",
+  "tier": "premium",
+  "default_screen": {
+    "width_m": null,
+    "height_m": null,
+    "width_ft": null,
+    "height_ft": null,
+    "aspect_ratio": 1.90,
+    "geometry": "flat",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": 5.0,
+    "is_perforated": true,
+    "dome_coverage_pct": null,
+    "dome_fov_horizontal_deg": null,
+    "dome_fov_vertical_deg": null,
+    "dome_fov_above_horizon_deg": null,
+    "dome_fov_below_horizon_deg": null
+  },
+  "default_projection": {
+    "id": "digital",
+    "display_name": "IMAX CoLa Digital",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "imax_cola",
+    "light_source": "rgb_laser",
+    "dual_projector": false,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": null,
+    "brightness_fl": 22.0,
+    "brightness_cdm2": 75.38,
+    "brightness_source": "trade_reporting",
+    "contrast_sequential": 10000,
+    "contrast_dynamic": null,
+    "contrast_source": "trade_reporting",
+    "contrast_notes": null,
+    "color_gamut": "DCI-P3 via RGB laser",
+    "hdr": "none",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.90,
+    "anamorphic_stretch": false
+  },
+  "default_projections": null,
+  "default_sound": {
+    "system_name": "IMAX 12.1",
+    "channel_config": "12.1",
+    "is_object_based": false,
+    "max_output_watts_per_channel": 2000,
+    "speaker_count": null,
+    "dome_zenith_channel": null
+  },
+  "default_seating": {
+    "capacity": null,
+    "rake_angle_deg": null,
+    "seat_type": "standard",
+    "has_bass_transducers": false,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "derived_from_screen_width",
+    "seat_offset_from_center_ft": 0
+  },
+  "default_capabilities": {
+    "min_content_ar_supported": 1.90,
+    "supports_1570_film": false,
+    "supports_143_digital": false,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+  "ticket_premium_usd": "$3–6",
+  "known_limitations": [
+    "Cannot display 1.43:1 content at full screen height — Nolan/true IMAX sequences lose ~24.7% of vertical frame",
+    "Screen area typically comparable to Dolby Cinema — no meaningful size advantage over premium alternatives"
+  ]
+}

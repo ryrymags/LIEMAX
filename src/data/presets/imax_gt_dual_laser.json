@@ -1,0 +1,83 @@
+{
+  "id": "imax_gt_dual_laser",
+  "display_name": "IMAX GT Dual Laser",
+  "brand": "IMAX",
+  "short_description": "Dual 4K RGB laser in purpose-built 1.43:1 auditoriums. The full IMAX digital experience — ~42 commercial installations globally.",
+  "tier": "flagship",
+  "default_screen": {
+    "width_m": null,
+    "height_m": null,
+    "width_ft": null,
+    "height_ft": null,
+    "aspect_ratio": 1.43,
+    "geometry": "slight_cylindrical_curve",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": 5.0,
+    "is_perforated": true,
+    "dome_coverage_pct": null,
+    "dome_fov_horizontal_deg": null,
+    "dome_fov_vertical_deg": null,
+    "dome_fov_above_horizon_deg": null,
+    "dome_fov_below_horizon_deg": null
+  },
+  "default_projection": {
+    "id": "digital",
+    "display_name": "IMAX GT Dual Laser Digital",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "imax_gt_dual_laser",
+    "light_source": "dual_rgb_laser",
+    "dual_projector": true,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": "~5.8K sampling equivalent (√2 × 4096, half-pixel offset — illustrative, not official IMAX spec)",
+    "brightness_fl": 22.0,
+    "brightness_cdm2": 75.38,
+    "brightness_source": "trade_reporting",
+    "contrast_sequential": 8000,
+    "contrast_dynamic": null,
+    "contrast_source": "published_cto",
+    "contrast_notes": "~8,000:1 sequential contrast via dual RGB laser illumination. Source: IMAX CTO statements and trade reporting.",
+    "color_gamut": "Wide Color Gamut (>DCI-P3 via dual RGB laser primaries)",
+    "hdr": "none",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.43,
+    "anamorphic_stretch": false
+  },
+  "default_projections": null,
+  "default_sound": {
+    "system_name": "IMAX 12.1",
+    "channel_config": "12.1",
+    "is_object_based": false,
+    "max_output_watts_per_channel": 2000,
+    "speaker_count": null,
+    "dome_zenith_channel": null
+  },
+  "default_seating": {
+    "capacity": null,
+    "rake_angle_deg": null,
+    "seat_type": "standard",
+    "has_bass_transducers": false,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "derived_from_screen_width",
+    "seat_offset_from_center_ft": 0
+  },
+  "default_capabilities": {
+    "min_content_ar_supported": 1.43,
+    "supports_1570_film": false,
+    "supports_143_digital": true,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+  "ticket_premium_usd": "$5–8",
+  "known_limitations": [
+    "~42 commercial installations globally as of late 2025 — rare",
+    "PPD ~77 at mid-row despite 4K — home 4K TVs are sharper per pixel; cinema wins on physical scale"
+  ]
+}

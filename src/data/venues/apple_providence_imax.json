@@ -1,0 +1,159 @@
+{
+  "id": "apple_providence_imax",
+  "preset_id": "imax_cola",
+  "name": "Apple Cinemas Providence Place IMAX",
+  "chain": "Apple Cinemas",
+  "brand_label": "IMAX",
+  "city": "Providence",
+  "state_province": "RI",
+  "country": "United States",
+  "coordinates": null,
+
+  "screen": {
+    "width_m": 24.7,
+    "height_m": 17.3,
+    "width_ft": 81.04,
+    "height_ft": 56.76,
+    "aspect_ratio": 1.43,
+    "geometry": "slight_cylindrical_curve",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": null,
+    "is_perforated": true,
+    "dome_coverage_pct": null,
+    "dome_fov_horizontal_deg": null,
+    "dome_fov_vertical_deg": null,
+    "dome_fov_above_horizon_deg": null,
+    "dome_fov_below_horizon_deg": null
+  },
+
+  "projection": null,
+  "projections": [
+    {
+      "id": "digital",
+      "display_name": "IMAX CoLa Digital",
+      "mode": "digital",
+      "availability": "primary",
+      "type": "imax_cola",
+      "light_source": "rgb_laser",
+      "dual_projector": false,
+      "resolution_horizontal_px": 4096,
+      "resolution_vertical_px": 2160,
+      "resolution_scan_equivalent_low": null,
+      "resolution_scan_equivalent_high": null,
+      "effective_resolution_label": null,
+      "brightness_fl": 22.0,
+      "brightness_cdm2": 75.38,
+      "brightness_source": "trade_reporting",
+      "contrast_sequential": 10000,
+      "contrast_dynamic": null,
+      "contrast_source": "trade_reporting",
+      "contrast_notes": null,
+      "color_gamut": "DCI-P3 via RGB laser",
+      "hdr": "none",
+      "supports_3d": true,
+      "min_content_ar_supported": 1.90,
+      "anamorphic_stretch": false
+    },
+    {
+      "id": "film_1570",
+      "display_name": "IMAX 15/70 Film",
+      "mode": "film",
+      "availability": "occasional",
+      "type": "imax_1570_film",
+      "light_source": "xenon_film",
+      "dual_projector": false,
+      "resolution_horizontal_px": null,
+      "resolution_vertical_px": null,
+      "resolution_scan_equivalent_low": 8800,
+      "resolution_scan_equivalent_high": 11700,
+      "effective_resolution_label": "~8.8K–11.7K scan-equivalent; grain limits perceived detail before resolution does",
+      "brightness_fl": 22.0,
+      "brightness_cdm2": 75.38,
+      "brightness_source": "trade_reporting",
+      "contrast_sequential": 4500,
+      "contrast_dynamic": null,
+      "contrast_source": "published_cto",
+      "contrast_notes": "Photochemical contrast ~4,500:1.",
+      "color_gamut": "Photochemical (very wide, not specifiable as % DCI-P3)",
+      "hdr": "photochemical",
+      "supports_3d": false,
+      "min_content_ar_supported": 1.43,
+      "anamorphic_stretch": false
+    }
+  ],
+
+  "sound": null,
+
+  "seating": {
+    "capacity": null,
+    "rake_angle_deg": null,
+    "seat_type": "standard",
+    "has_bass_transducers": false,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "derived_from_screen_width",
+    "seat_offset_from_center_ft": 0
+  },
+
+  "capabilities": {
+    "min_content_ar_supported": 1.90,
+    "supports_1570_film": true,
+    "supports_143_digital": false,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+
+  "history": [],
+
+  "metadata": {
+    "data_source": "r_imax_csv",
+    "source_url": null,
+    "sources": [
+      {
+        "id": "src_143190_2026_04",
+        "label": "143190.xyz / r-imax IMAX Americas CSV (April 21, 2026)",
+        "url": null,
+        "quality": "community_estimate",
+        "accessed_at": "2026-04-21"
+      }
+    ],
+    "field_sources": [
+      {
+        "field": "screen.width_m",
+        "source_id": "src_143190_2026_04",
+        "quality": "community_estimate",
+        "notes": "24.7m from 143190.xyz CSV"
+      },
+      {
+        "field": "screen.height_m",
+        "source_id": "src_143190_2026_04",
+        "quality": "community_estimate",
+        "notes": "17.3m from 143190.xyz CSV; yields 1.428:1 AR ≈ 1.43"
+      }
+    ],
+    "last_verified": "2026-04-21",
+    "created_at": "2026-04-25T00:00:00Z",
+    "updated_at": "2026-04-25T00:00:00Z",
+    "confidence": "medium",
+    "notes": "Physical 1.43:1 screen with CoLa digital projector (1.90:1 max digital AR). The 15/70 film projector is installed and capable but operates only when film prints are booked — check Apple Cinemas Providence schedule for 70mm showtimes. Default day-to-day presentation is CoLa digital at 1.90:1, which loses ~24.7% of vertical frame on 1.43:1 IMAX content. Sound system details not in 143190.xyz import — falls through to imax_cola preset default (12.1)."
+  },
+
+  "source_143190": {
+    "region": "Northeast",
+    "country_area": "United States",
+    "province_state": "RI",
+    "city": "Providence",
+    "location_name": "Providence Place Cinemas & IMAX",
+    "screen_aspect_ratio": 1.43,
+    "digital_projector": "IMAX CoLa",
+    "max_digital_ar": 1.90,
+    "film_projector": "IMAX 15/70mm",
+    "screen_height_m": 17.3,
+    "screen_width_m": 24.7,
+    "commercial_films": ["Oppenheimer", "Dune: Part Two"],
+    "raw": null
+  }
+}

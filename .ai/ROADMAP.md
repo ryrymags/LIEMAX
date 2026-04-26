@@ -4,10 +4,9 @@
 
 - GREEN `.ai/`: Context compressed; truth discipline now forbids inferred 1.43:1 capability and documents 143190 as the primary venue baseline.
 - GREEN `src/math/`: Resolver supports schema-backed hybrid projection modes, source-aware 1.43 defaults, audit regression hardening, and 129 passing validation tests.
-- GREEN `schema/`: v1.2.0 source of truth supports sparse 143190 imports, projection-mode arrays, lightweight provenance, presets, venues, home displays, Atmos, and simple ScreenX flags. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
-- GREEN `src/data/`: 143190 import mapper and fixtures preserve sparse imported facts while letting presets/research enrich missing values.
-- GREEN `research/`: Rich source material with useful caveats for 15/70, GT laser supersampling, Dome, Providence, ScreenX, and Atmos. Keep it as evidence, not agent startup context.
-- YELLOW `research/legacy_context/`: Correctly archived, but Providence/Mugar facts should be promoted into schema-shaped records during Step 3 so agents do not mine old journals repeatedly.
+- GREEN `schema/`: v1.3.0 source of truth. Added `dolby_cinema_single_laser` projector_type. Supports sparse 143190 imports, projection-mode arrays, lightweight provenance, presets, venues, home displays, Atmos, and simple ScreenX flags. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
+- GREEN `src/data/`: 143190 import mapper and fixtures preserved. `src/data/presets/` and `src/data/venues/` now exist with IMAX, Dolby Cinema, and RPX presets plus Providence and Mugar Omni venue drafts.
+- GREEN `research/`: Updated April 2026 — Dolby Cinema section corrected (dual-laser E3LH primary vs new single-laser Christie 2025+), RPX fully resolved with derived brightness and published contrast. Providence/Mugar facts promoted to schema-shaped venue records.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points. Completed Step 1/2 details archived in `docs/archive/HISTORY.md`.
 
 Top headache risks:
@@ -18,26 +17,18 @@ Top headache risks:
 
 ## Step 3: Presets
 
-Define default specs for common theater and display types:
+This step is where research becomes product data. 143190 rows remain sparse baseline facts; presets are schema-shaped, source-aware, and fill gaps in imported venue records.
 
-- Standard IMAX Digital
-- IMAX single laser / CoLa
-- IMAX GT Dual Laser
-- IMAX 15/70 film
-- IMAX Dome / OMNIMAX
-- Dolby Cinema
-- Generic RPX
-- Standard multiplex
-- ScreenX
-- Home display tiers as supported by the schema
+**Done:**
+- `imax_gt_dual_laser`, `imax_cola`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`
+- `dolby_cinema` (dual-laser E3LH), `dolby_cinema_single_laser` (Christie 2025+), `rpx`
+- Venues: `apple_providence_imax`, `mugar_omni_boston`
 
-This step is where research becomes product data. 143190 rows should remain sparse baseline facts; presets should be schema-shaped, source-aware, and designed to fill gaps in imported venue records.
-
-First 3 atomic tasks for regional preset/data work:
-
-1. Create shared IMAX presets needed by imported rows: CoLa, dual xenon/digital, GT dual laser, 15/70 film, and dome.
-2. Create a Providence Place IMAX venue draft as a sparse 143190 import plus explicit digital/film projection modes and local status notes.
-3. Create a Mugar Omni Theater / IMAX Dome venue draft with dome geometry/FOV fields and source-quality notes, keeping unsupported details in metadata.
+**Remaining:**
+- Standard multiplex preset
+- ScreenX preset (capability-flag level; no geometry additions needed yet)
+- Home display tier presets: OLED flagship, OLED midrange, Mini-LED/Neo QLED, standard QLED, standard LCD, iPhone Pro, Android flagship, home projector
+- Content formats array: `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`
 
 ## Step 4: Website
 

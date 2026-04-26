@@ -1,0 +1,86 @@
+{
+  "id": "mugar_omni_boston",
+  "preset_id": "imax_dome_film",
+  "name": "Mugar Omni Theater — Museum of Science, Boston",
+  "chain": null,
+  "brand_label": "IMAX",
+  "city": "Boston",
+  "state_province": "MA",
+  "country": "United States",
+  "coordinates": null,
+
+  "screen": {
+    "width_m": null,
+    "height_m": null,
+    "width_ft": null,
+    "height_ft": null,
+    "aspect_ratio": 1.43,
+    "geometry": "hemispherical",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": null,
+    "is_perforated": true,
+    "dome_coverage_pct": 83,
+    "dome_fov_horizontal_deg": 180,
+    "dome_fov_vertical_deg": 125,
+    "dome_fov_above_horizon_deg": 105,
+    "dome_fov_below_horizon_deg": 20
+  },
+
+  "projection": null,
+  "projections": null,
+
+  "sound": {
+    "system_name": "IMAX Dome 6-channel",
+    "channel_config": "6.0",
+    "is_object_based": false,
+    "max_output_watts_per_channel": null,
+    "speaker_count": null,
+    "dome_zenith_channel": true
+  },
+
+  "seating": {
+    "capacity": null,
+    "rake_angle_deg": 30,
+    "seat_type": "standard",
+    "has_bass_transducers": false,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "community_estimate",
+    "seat_offset_from_center_ft": 0
+  },
+
+  "capabilities": {
+    "min_content_ar_supported": 1.43,
+    "supports_1570_film": true,
+    "supports_143_digital": false,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+
+  "history": [
+    {
+      "date": "1987",
+      "change": "Mugar Omni Theater opened at the Museum of Science, Boston. Named after David G. Mugar. One of the largest IMAX Dome installations in the Northeast.",
+      "field_changed": null,
+      "previous_value": null,
+      "source": "Museum of Science Boston / community record"
+    }
+  ],
+
+  "metadata": {
+    "data_source": "research_compiled",
+    "source_url": null,
+    "sources": [],
+    "field_sources": [],
+    "last_verified": "2026-04-25",
+    "created_at": "2026-04-25T00:00:00Z",
+    "updated_at": "2026-04-25T00:00:00Z",
+    "confidence": "medium",
+    "notes": "Institutional IMAX Dome — not in 143190.xyz (commercial multiplexes only). Dome diameter (~72–76 ft) and exact seat count unverified; screen dimensions left null pending Museum of Science official specs. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed. Not part of the commercial IMAX multiplex network; shows dome-mastered documentaries and occasional event screenings of 15/70 features."
+  },
+
+  "source_143190": null
+}
