@@ -1,0 +1,1 @@
+Read @.ai/AGENTS.md for full project context and rules.

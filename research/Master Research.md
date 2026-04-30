@@ -58,7 +58,7 @@ For roughly three decades, IMAX was almost exclusively a format for science cent
 
 **1.3 The LIMAX Controversy**
 
-In May 2009, Aziz Ansari tweeted that the AMC theater he'd seen *Star Trek* in was "running FAKE IMAXs and charging $5 extra for a slightly bigger screen." Within hours, a fan had launched [Liemax.com](http://Liemax.com) tracking every smaller-format digital IMAX. The term "LIMAX" or "Lie-MAX" stuck \[LF Examiner 2009\].
+In May 2009, Aziz Ansari tweeted that the AMC theater he'd seen *Star Trek* in was "running FAKE IMAXs and charging $5 extra for a slightly bigger screen." Within hours, a fan had launched [Liemax.com](http://liemax.com) tracking every smaller-format digital IMAX. The term "LIMAX" or "Lie-MAX" stuck \[LF Examiner 2009\].
 
 The root issue: IMAX's MPX rollout used a single 2K digital projector (later upgraded to 4K laser in CoLa/XT) on screens 40–70% smaller than the museum-era 70mm screens audiences associated with the brand. IMAX CEO Richard Gelfond acknowledged the controversy and pledged more transparency about theater specs, but maintained the IMAX experience was consistent across venues because it included custom sound and theater design — not just screen size \[LF Examiner 2009\].
 
@@ -217,25 +217,41 @@ Dolby Cinema arrived as IMAX was being criticized for LIMAX brand dilution. Whil
 
 **3.2 Technical Specifications**
 
-**Projection — current generation (as of 2025–2026):**
+Two distinct Dolby Cinema projection systems are in the field: the existing dual-laser Christie E3LH (installed in all ~295 existing locations) and a new single-laser Christie system announced March 2025, deploying to new builds from May 2025 onward. **These are not the same projector and have meaningfully different brightness profiles.**
 
-In March 2025, Dolby and Christie announced the **next-generation Dolby Vision laser projection system**, rolling out from May 2025 onward \[Dolby/Christie announcement March 2025; Celluloid Junkie March 2025\].
+**Projection — Primary system (Christie E3LH, dual-laser DLP):**
 
-* **Projectors:** Dual 4K RGB pure laser (Christie next-gen), with modular installation design
+Confirmed specs for the existing system installed across the ~295 Dolby Cinema locations \[Dolby/Christie; derived from E3LH specs\]:
 
-* **Brightness:** More than twice typical cinema presentations — approximately **106 cd/m² for 2D**, approximately 48 cd/m² for 3D \[Dolby Cinema Wikipedia; Dolby/Christie announcement\]
+* **Projectors:** Dual Christie E3LH DLP units with cascaded dual modulation — dual projectors, dual imaging chips per screen
 
-* **Contrast:** The commonly cited **1,000,000:1** figure is a Dolby Vision dynamic black-level claim, not a conventional sequential native contrast measurement. The mechanism: dual-laser DLP sends light through the imaging chip twice, enabling true-black pixels in content graded with Dolby Vision metadata. For non-Dolby Vision content, contrast is closer to \~5,000–7,500:1. Use the 1,000,000:1 figure in context with this caveat \[Dolby/Christie announcement\].
+* **Brightness:** ~**31 fL (~106 cd/m²) in Dolby Vision 2D mode**; ~16 fL (~55 cd/m²) in SDR/non-DV mode \[Dolby spec; trade reporting\]
 
-* **Color gamut:** Dolby Wide Color Gamut 1.0 — approximately **112–122% of DCI-P3**, nearly twice the color gamut of Rec.709 \[Dolby/Christie announcement; FlatpanelsHD March 2025\]
+* **Contrast:** The commonly cited **1,000,000:1** figure is a Dolby Vision dynamic black-level claim, not a conventional sequential measurement. Mechanism: dual-pass DLP sends light through the imaging chip twice, enabling true-black pixels on Dolby Vision-graded content. For non-Dolby Vision content, sequential contrast is **~5,000–7,500:1** — use the 1,000,000:1 figure only with this caveat \[Dolby/Christie\]
 
-* **HDR metadata:** Per-frame dynamic HDR metadata; Dolby Vision supports up to 12-bit color depth
+* **Color gamut:** Dolby Wide Color Gamut 1.0 — approximately **112–122% of DCI-P3** \[Dolby/Christie; FlatpanelsHD March 2025\]
+
+* **HDR:** Per-frame dynamic Dolby Vision metadata; up to 12-bit color depth
+
+**Projection — New variant (Christie single-laser, May 2025+):**
+
+In March 2025, Dolby and Christie announced a **new, single-projector system** rolling out to new AMC builds from May 2025 \[Dolby/Christie CinemaCon March 2025; Celluloid Junkie March 2025\]:
+
+* **Projectors:** Single 4K RGB pure laser (Christie next-gen), ~25,000–30,000 lumens — one projector per screen
+
+* **Brightness (derived):** At 25,000–30,000 lumens on a ~55×29 ft screen: approximately **16–19 fL** (~55–65 cd/m²) \[derived\]. Lower than the dual-laser system because one projector, not two. One Reddit firsthand report suggests brightness "might beat the dual projector Dolby" in practice — possibly reflects a smaller screen or higher screen gain at that venue; treat as uncertain \[community\_estimate\]
+
+* **Contrast:** "Well exceeding a million-to-one" per announcement — same dual-modulation DLP principle; sequential contrast likely comparable to E3LH \[Dolby/Christie March 2025\]
+
+* **Color gamut:** Dolby Wide Color Gamut 1.0 (~122% DCI-P3) — same as dual-laser \[Dolby/Christie March 2025\]
+
+* **Schema:** `projector_type: "dolby_cinema_single_laser"` / `preset_id: "dolby_cinema_single_laser"`. Existing venues retain dual-laser E3LH (`dolby_cinema`); new builds from May 2025 onward should override to single-laser preset.
 
 **Audio:**
 
 * Dolby Atmos: up to **128 simultaneous audio tracks** (objects \+ beds) with 3D positional metadata
 
-* Up to **64 discrete speakers** per auditorium, including overhead ceiling arrays — typically configured as 9.1.4 or 9.1.6 in Dolby Cinema venues
+* Up to **64 discrete speakers** per auditorium; typically configured as 9.1.4 or 9.1.6 in Dolby Cinema venues
 
 * As of April 2023, Dolby Atmos is in over **7,800 cinema screens across 105 countries** — many standard multiplexes have Atmos without Dolby Vision projection
 
@@ -251,9 +267,11 @@ In March 2025, Dolby and Christie announced the **next-generation Dolby Vision l
 
 * April 2026 Dolby Cinema Finder query: **295 global entries, 175 US entries** \[Dolby Cinema Finder, April 2026 — point-in-time scrape; treat as approximate, not a published corporate total\]
 
-* AMC/Dolby March 2025 expansion: **40 additional Dolby Cinema at AMC** in the US by end of 2027, bringing AMC US total to **over 200** \[Dolby investor release March 2025\]
+* AMC/Dolby March 2025 expansion: **40 additional Dolby Cinema at AMC** in the US by end of 2027, bringing AMC US total to **over 200** (~25% increase from current AMC footprint) \[Dolby investor release March 2025\]
 
-* Dolby Cinema is also opening in **India** as part of the 2025 expansion \[FlatpanelsHD March 2025\]
+* New locations from May 2025 onward will receive the single-laser Christie system; existing locations retain dual-laser E3LH
+
+* Dolby Cinema opening in **India** as part of the 2025 expansion \[FlatpanelsHD March 2025\]
 
 **3.3 When to Choose IMAX vs. Dolby Cinema**
 
@@ -290,17 +308,21 @@ Launched 2009\. Strongest non-IMAX, non-Dolby chain format in the US.
 
 **4.2 Regal RPX**
 
-Launched 2010\. Generally the weakest branded PLF among the big three US chains.
+Launched 2010\. Generally the weakest branded PLF among the big three US chains. \[Fully resolved April 2026\]
 
-* **Screen:** 60–70 ft wide, wall-to-wall
+**Screen:** 40×60 ft typical target (12.19m × 18.29m); width range 45–75 ft across the fleet. Community confirms significant variance — some RPX rooms are barely larger than standard auditoriums. Physical screen ~1.5:1 AR with variable masking for 1.85 and 2.39 content. `min_content_ar_supported: 1.85`. Venue dimension override is essential; default dimensions are representative, not guaranteed.
 
-* **Projection:** 4K laser at newer sites; legacy xenon at older ones
+**Projection:** Single 4K projector rated at 33,000 lumens. **Not uniformly laser** — many RPX rooms remain on 4K xenon; laser only at recently renovated locations. Regal now markets "laser + Dolby Atmos at select locations." Schema preset default: `standard_4k_xenon`; override to `standard_4k_laser` where confirmed. Native resolution: 4096 × 2160\.
 
-* **Sound:** Dolby Atmos at most modern RPX rooms
+**Brightness (derived):** At 33,000 lumens on a 40×60 ft (2,400 sq ft) screen at gain 1.0–1.2: approximately **14–17 fL** — essentially DCI baseline with no meaningful premium. Smaller/older RPX rooms (45×25 ft) hit ~29–35 fL on the same projector; those are the compact/older rooms, not the typical full-size RPX. \[source quality: derived\]
 
-* **Ticket premium:** \~$3–5 over standard
+**Contrast:** Published as **1,850:1** — the lowest sequential contrast figure in the branded PLF tier, below standard xenon DCI (~2,000–2,600:1). \[source quality: trade\_reporting\]
 
-* **Criticism:** Inconsistent implementation; community consensus describes it as "a surcharge for a cushier seat" in many locations
+**Sound:** Originally marketed as a 100,000-watt 9.1 array with 273 speaker components and eight 21-inch subs. Newer locations feature Dolby Atmos. ButtKicker/haptic seats at select locations. `system_name: "7.1 Surround or Dolby Atmos (varies by location)"`, `is_object_based: null`.
+
+**Ticket premium:** ~$3–5 over standard.
+
+**Assessment:** No proprietary aspect ratio, no unique imaging capability. Weakest contrast in the branded PLF tier. Primary consumer differentiation is screen size and louder audio over standard auditoriums — variably implemented and inconsistently enforced.
 
 **4.3 ScreenX**
 
@@ -666,3 +688,4 @@ False. It is a certification label overlaid on existing auditoriums meeting mini
 | Theatrical windows | After any studio/exhibitor agreement announcement | Deadline / Variety |
 | Infinity Vision venue list | When Disney publishes official certifications | Disney press / exhibitor announcements |
 | Providence 15/70 film availability | Check Apple Cinemas schedules per film | Apple Cinemas website |
+

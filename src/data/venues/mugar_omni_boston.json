@@ -1,0 +1,158 @@
+{
+  "id": "mugar_omni_boston",
+  "preset_id": "imax_dome_laser",
+  "name": "Mugar Omni Theater — Museum of Science, Boston",
+  "chain": null,
+  "brand_label": "IMAX",
+  "city": "Boston",
+  "state_province": "MA",
+  "country": "United States",
+  "coordinates": null,
+
+  "screen": {
+    "width_m": 23.20,
+    "height_m": 23.20,
+    "width_ft": 76.1,
+    "height_ft": 76.1,
+    "aspect_ratio": 1.0,
+    "geometry": "hemispherical",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": null,
+    "is_perforated": true,
+    "dome_coverage_pct": 83,
+    "dome_fov_horizontal_deg": 180,
+    "dome_fov_vertical_deg": 125,
+    "dome_fov_above_horizon_deg": 105,
+    "dome_fov_below_horizon_deg": 20
+  },
+
+  "projection": {
+    "id": "digital",
+    "display_name": "IMAX Dome Laser Digital",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "imax_dome_laser",
+    "light_source": "rgb_laser",
+    "dual_projector": false,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": "4K digital IMAX Dome laser system installed after the 2021 renovation; no 15/70 film scan-equivalent claim.",
+    "brightness_fl": null,
+    "brightness_cdm2": null,
+    "brightness_source": "unknown",
+    "contrast_sequential": null,
+    "contrast_dynamic": null,
+    "contrast_source": "unknown",
+    "contrast_notes": "Exact post-renovation Mugar dome laser brightness and contrast are not publicly confirmed.",
+    "color_gamut": "DCI-P3 via RGB laser",
+    "hdr": "none",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.43,
+    "anamorphic_stretch": true
+  },
+  "projections": null,
+
+  "sound": {
+    "system_name": "IMAX Dome 6-channel",
+    "channel_config": "6.0",
+    "is_object_based": false,
+    "max_output_watts_per_channel": null,
+    "speaker_count": null,
+    "dome_zenith_channel": true
+  },
+
+  "seating": {
+    "capacity": null,
+    "rake_angle_deg": 30,
+    "seat_type": "standard",
+    "has_bass_transducers": false,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "community_estimate",
+    "seat_offset_from_center_ft": 0
+  },
+
+  "capabilities": {
+    "min_content_ar_supported": 1.43,
+    "supports_1570_film": false,
+    "supports_143_digital": true,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+
+  "history": [
+    {
+      "date": "1987",
+      "change": "Mugar Omni Theater opened at the Museum of Science, Boston. Named after David G. Mugar. One of the largest IMAX Dome installations in the Northeast.",
+      "field_changed": null,
+      "previous_value": null,
+      "source": "Museum of Science Boston / community record"
+    },
+    {
+      "date": "2021",
+      "change": "Museum of Science renovated Mugar Omni with a digital IMAX Dome laser projection system, replacing the inherited film-dome operating model for current LIEMAX data.",
+      "field_changed": "projection.type",
+      "previous_value": "imax_dome_film",
+      "source": "Museum of Science Boston / LIEMAX research compilation"
+    }
+  ],
+
+  "metadata": {
+    "data_source": "research_compiled",
+    "source_url": null,
+    "sources": [
+      {
+        "id": "src_143190_2026_04",
+        "label": "143190.xyz / r-imax IMAX global CSV (April 2026) — lists Mugar dome screen width as 23.20 m",
+        "url": null,
+        "quality": "r_imax_csv",
+        "accessed_at": "2026-04-26"
+      },
+      {
+        "id": "src_mugar_digital_renovation_2026_04",
+        "label": "Mugar Omni digital IMAX Dome laser renovation history from LIEMAX research",
+        "url": null,
+        "quality": "community_estimate",
+        "accessed_at": "2026-04-26"
+      }
+    ],
+    "field_sources": [
+      {
+        "field": "screen.width_m",
+        "source_id": "src_143190_2026_04",
+        "quality": "r_imax_csv",
+        "notes": "23.20 m from 143190.xyz CSV. ArcGIS lists 72 ft (~21.9 m); discrepancy is screen-surface vs. structural-shell measurement. Using 143190's 23.20 m as authoritative."
+      },
+      {
+        "field": "screen.height_m",
+        "source_id": "src_143190_2026_04",
+        "quality": "r_imax_csv",
+        "notes": "For hemispherical dome records, height_m stores dome diameter. 23.20 m from 143190.xyz CSV (same value as width_m for a circular dome)."
+      },
+      {
+        "field": "projection.type",
+        "source_id": "src_mugar_digital_renovation_2026_04",
+        "quality": "community_estimate",
+        "notes": "Models current post-2021 Mugar Omni as digital IMAX Dome laser instead of inherited 15/70 film"
+      },
+      {
+        "field": "capabilities.supports_1570_film",
+        "source_id": "src_mugar_digital_renovation_2026_04",
+        "quality": "community_estimate",
+        "notes": "False for current LIEMAX modeling because no current functional/bookable 15/70 film capability is confirmed"
+      }
+    ],
+    "last_verified": "2026-04-25",
+    "created_at": "2026-04-25T00:00:00Z",
+    "updated_at": "2026-04-26T00:00:00Z",
+    "confidence": "medium",
+    "notes": "Institutional IMAX Dome. Dome screen diameter is 23.20 m (76.1 ft) per 143190.xyz CSV (r_imax_csv). ArcGIS lists 72 ft (~21.9 m); the discrepancy reflects screen-surface measurement vs. structural-shell measurement — using 143190's 23.20 m. Current LIEMAX model treats Mugar as post-2021 digital IMAX Dome laser, not active 15/70 film. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed."
+  },
+
+  "source_143190": null
+}

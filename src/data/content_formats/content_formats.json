@@ -1,0 +1,65 @@
+[
+  {
+    "id": "imax_143",
+    "display_name": "IMAX 1.43:1",
+    "aspect_ratio": 1.43,
+    "description": "The full IMAX frame. Shot on 15/70 film cameras or IMAX-certified digital cameras. Only visible in IMAX GT Laser or 15/70 film venues — CoLa and dual-xenon digital IMAX max out at 1.90:1.",
+    "example_films": ["Oppenheimer (2023)", "Dunkirk (2017)", "Interstellar (2014)", "The Dark Knight (2008)"],
+    "extra_area_vs_scope_pct": 67.1,
+    "home_release_behavior": "Cropped to 1.78:1 for home release — loses ~19.7% of vertical content. No consumer display standard can show the full 1.43:1 frame."
+  },
+  {
+    "id": "imax_digital_190",
+    "display_name": "IMAX Digital 1.90:1",
+    "aspect_ratio": 1.90,
+    "description": "The standard IMAX digital frame for CoLa and dual-xenon IMAX venues. Taller than 16:9 but narrower than 1.43:1. Also used for IMAX Enhanced home releases.",
+    "example_films": null,
+    "extra_area_vs_scope_pct": 25.8,
+    "home_release_behavior": "Preserved on IMAX Enhanced certified displays. Cropped to 1.78:1 on standard 16:9 TVs, showing ~6.3% more than the 16:9 frame."
+  },
+  {
+    "id": "scope_239",
+    "display_name": "Anamorphic Scope 2.39:1",
+    "aspect_ratio": 2.39,
+    "description": "The standard widescreen cinema format. Used for most Hollywood blockbusters. The baseline for extra_area_vs_scope_pct calculations — all other formats are compared against this.",
+    "example_films": ["Dune: Part Two (2024)", "The Batman (2022)", "Avatar: Fire and Ash (2025)"],
+    "extra_area_vs_scope_pct": 0.0,
+    "home_release_behavior": "Displayed with thin letterbox bars on 16:9 TV. IMAX venues show scope at 1.90:1 max width — no extra height benefit."
+  },
+  {
+    "id": "flat_185",
+    "display_name": "Standard Flat 1.85:1",
+    "aspect_ratio": 1.85,
+    "description": "The standard flat widescreen format. Near-full use of screen width on standard screens. Used for many dramas and comedies that don't shoot anamorphic.",
+    "example_films": null,
+    "extra_area_vs_scope_pct": 29.2,
+    "home_release_behavior": "Thin pillarbox bars on 16:9 TV. Near-full use of screen width."
+  },
+  {
+    "id": "tv_178",
+    "display_name": "16:9 / TV Native",
+    "aspect_ratio": 1.78,
+    "description": "The native aspect ratio of all 16:9 televisions and most streaming content. Fills the TV screen entirely. Wider than IMAX Digital (1.90:1) on a TV, but has far less total area than any cinema screen.",
+    "example_films": null,
+    "extra_area_vs_scope_pct": 34.3,
+    "home_release_behavior": "Fills the entire 16:9 TV screen. Wider than IMAX digital — but a TV is not a cinema."
+  },
+  {
+    "id": "panavision_220",
+    "display_name": "65mm / Panavision 2.20:1",
+    "aspect_ratio": 2.20,
+    "description": "65mm large-format aspect ratio, also used for select Panavision productions. Notably used for Nolan dialogue sequences interspersed with 1.43:1 IMAX footage in films like Oppenheimer.",
+    "example_films": ["Oppenheimer dialogue sequences (2023)", "No Time to Die (2021)"],
+    "extra_area_vs_scope_pct": 8.6,
+    "home_release_behavior": "Letterboxed on 16:9 TV. Used for Nolan dialogue sequences interspersed with 1.43:1 IMAX footage."
+  },
+  {
+    "id": "ultrawide_235",
+    "display_name": "Scope 2.35:1",
+    "aspect_ratio": 2.35,
+    "description": "Older anamorphic scope standard. Near-identical to 2.39:1 in practice; common in films from the 1970s–1990s and some contemporary productions using older optical standards.",
+    "example_films": null,
+    "extra_area_vs_scope_pct": 1.7,
+    "home_release_behavior": "Near-identical to 2.39:1 in practice; older anamorphic prints. Slight letterbox on 16:9 TV."
+  }
+]

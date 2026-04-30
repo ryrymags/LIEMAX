@@ -1,0 +1,29 @@
+{
+  "id": "iphone_pro",
+  "display_name": "iPhone Pro (15/16 Pro tier)",
+  "device_category": "phone",
+  "short_description": "6.3\" AMOLED with 2,000 nits peak HDR, 460 PPI, and Dolby Vision. Exceptional for a pocket screen — but 6.3 inches viewed from 12 inches is a fundamentally different experience than any cinema.",
+  "tier": "phone",
+  "default_screen_diagonal_in": 6.3,
+  "default_aspect_ratio": 2.17,
+  "default_viewing_distance_ft": 1.0,
+  "default_display_optics": {
+    "panel_tech": "amoled",
+    "is_per_pixel_emissive": true,
+    "resolution_horizontal_px": 2622,
+    "resolution_vertical_px": 1206,
+    "ppi": 460,
+    "brightness_peak_hdr_nits": 2000,
+    "brightness_fullscreen_nits": null,
+    "brightness_sdr_nits": null,
+    "contrast_sequential": null,
+    "contrast_notes": "Per-pixel OLED — true infinite contrast. contrast_sequential is null; UI should render 'Infinite (OLED)'.",
+    "color_gamut_label": "Display P3 (Apple)",
+    "color_gamut_dci_p3_pct": 100,
+    "hdr_formats": ["dolby_vision", "hdr10", "hlg"]
+  },
+  "known_limitations": [
+    "6.3-inch screen at arm's length — high PPD but tiny angular field of view vs. cinema immersion",
+    "Phone audio and ambient noise make direct cinema comparison misleading"
+  ]
+}

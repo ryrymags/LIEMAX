@@ -1,0 +1,83 @@
+{
+  "id": "dolby_cinema_single_laser",
+  "display_name": "Dolby Cinema (Christie Eclipse, 2025+)",
+  "brand": "Dolby",
+  "short_description": "Christie Eclipse-based Dolby Vision system rolling out from May 2025. Matches or exceeds dual-laser E3LH brightness (~31 fL; community reports confirm 'just over twice typical cinema'). Single projector on screens up to 58 ft wide.",
+  "tier": "flagship",
+  "default_screen": {
+    "width_m": null,
+    "height_m": null,
+    "width_ft": null,
+    "height_ft": null,
+    "aspect_ratio": null,
+    "geometry": "flat",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": 5.0,
+    "is_perforated": false,
+    "dome_coverage_pct": null,
+    "dome_fov_horizontal_deg": null,
+    "dome_fov_vertical_deg": null,
+    "dome_fov_above_horizon_deg": null,
+    "dome_fov_below_horizon_deg": null
+  },
+  "default_projection": {
+    "id": "digital",
+    "display_name": "Dolby Vision (Single-Laser Christie, 2025+)",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "dolby_cinema_single_laser",
+    "light_source": "rgb_laser",
+    "dual_projector": false,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": "Christie Eclipse-based 4K RGB pure laser; ~25,000–30,000 lumens; rolling out from May 2025",
+    "brightness_fl": 31.0,
+    "brightness_cdm2": 106.2,
+    "brightness_source": "community_estimate",
+    "contrast_sequential": 6250,
+    "contrast_dynamic": 20000000,
+    "contrast_source": "trade_reporting",
+    "contrast_notes": "Christie Eclipse-based system: Dolby official announcement states 'well exceeding 1,000,000:1'; Christie Eclipse spec sheet lists 20,000,000:1. Brightness ~31 fL based on firsthand reports from AMC Southlands (first US install, May 2025) confirming 'just over twice the brightness of the former dual-laser system.' Dolby states '>2× typical cinema' implying >28 fL from 14 fL DCI baseline. Screen max 58 ft wide for single-projector configuration.",
+    "color_gamut": "Dolby Wide Color Gamut 1.0 (~122% DCI-P3)",
+    "hdr": "dolby_vision",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.85,
+    "anamorphic_stretch": false
+  },
+  "default_projections": null,
+  "default_sound": {
+    "system_name": "Dolby Atmos",
+    "channel_config": "9.1.6",
+    "is_object_based": true,
+    "max_output_watts_per_channel": null,
+    "speaker_count": 64,
+    "dome_zenith_channel": null
+  },
+  "default_seating": {
+    "capacity": null,
+    "rake_angle_deg": 10,
+    "seat_type": "recliner",
+    "has_bass_transducers": true,
+    "viewing_distance_front_ft": null,
+    "viewing_distance_mid_ft": null,
+    "viewing_distance_back_ft": null,
+    "viewing_distance_source": "derived_from_screen_width",
+    "seat_offset_from_center_ft": 0
+  },
+  "default_capabilities": {
+    "min_content_ar_supported": 1.85,
+    "supports_1570_film": false,
+    "supports_143_digital": false,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+  "ticket_premium_usd": "$5–8",
+  "known_limitations": [
+    "Screen width capped at 58 ft for single-projector configuration — largest Dolby Cinema screens (>58 ft) will retain dual-laser E3LH",
+    "Cannot display 1.43:1 IMAX content at full height"
+  ]
+}

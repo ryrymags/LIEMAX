@@ -191,16 +191,16 @@ The schema should expose a `HomeDisplayPreset` array parallel to `FormatPreset`.
 
 | Preset ID | Display Name | Panel Tech | Peak HDR (nits) | Full-Screen Brightness (nits) | Contrast | DCI-P3 | HDR Formats | Typical Viewing Distance |
 |---|---|---|---|---|---|---|---|---|
-| `oled_flagship_2025` | OLED Flagship (LG G5 / Samsung S95F tier) | WOLED / QD-OLED | 2,268[^2] | 331 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
+| `oled_flagship` | OLED Flagship (LG G5 / Samsung S95F tier) | WOLED / QD-OLED | 2,268[^2] | 331 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
 | `oled_midrange` | OLED Mid-Range (LG C4/C5 tier) | WOLED | 1,049[^1] | ~257 | Infinite (per-pixel) | ~98% | DV / HDR10 / HLG | 1.5× screen height |
-| `oled_budget` | OLED Entry (Sony Bravia 8 / LG B-series tier) | WOLED | 815[^12] | ~224 | Infinite (per-pixel) | ~99% | DV / HDR10 / HLG | 1.5× screen height |
-| `miniled_flagship` | Mini-LED Flagship (Samsung QN90D / Hisense U8 tier) | Mini-LED LCD | 2,024–3,296[^8] | 689–1,258[^7] | ~10,000–20,000:1 | ~100% | HDR10+ / HDR10 / HLG | 1.5× screen height |
-| `qled_midrange` | QLED Mid-Range | QLED LCD | ~800–1,500 | ~300–500 | ~3,000–6,000:1 | ~90% | HDR10 / HLG | 1.5× screen height |
+| `miniled_qled` | Mini-LED Flagship (Samsung QN90D / Hisense U8 tier) | Mini-LED LCD | 2,024–3,296[^8] | 689–1,258[^7] | ~10,000–20,000:1 | ~100% | HDR10+ / HDR10 / HLG (no DV — Samsung policy) | 1.5× screen height |
+| `standard_qled` | QLED Mid-Range (generic non-Samsung QLED) | QLED LCD | ~800–1,500 | ~300–500 | ~3,000–6,000:1 | ~90% | DV / HDR10 / HLG | 1.5× screen height |
 | `standard_lcd` | Standard LCD / LED | LCD | ~300–500 | ~150–300 | ~1,000–3,000:1 | ~72% sRGB | HDR10 (nominal) | 1.5× screen height |
 | `iphone_pro` | iPhone Pro (15/16 series) | OLED | 2,000 outdoor / 1,600 HDR[^21][^20] | 1,000 (typical) | 2,000,000:1[^21] | Display P3 | DV / HDR10 | 12 in |
-| `iphone_standard` | iPhone Standard (15/16) | OLED | 1,600 HDR / 2,000 outdoor[^23] | 1,000 | 2,000,000:1 | Display P3 | HDR10 | 12 in |
-| `android_flagship` | Android Flagship (Galaxy S25 Ultra tier) | QD-OLED (AMOLED) | 2,600[^48] | ~1,400 adaptive | Infinite | ~90% DCI-P3[^22] | HDR10+ | 12 in |
-| `projector_home_dark` | Home Projector (dark room) | DLP/LCD (projected) | ~200–500 nits on screen | ~100–200 nits | ~2,000–5,000:1 | ~72–90% | HDR10 | Screen-size dependent |
+| `android_flagship` | Android Flagship (Galaxy S25 Ultra tier) | QD-OLED (AMOLED) | 2,600[^48] | ~1,400 adaptive | Infinite | ~90% DCI-P3[^22] | HDR10+ (no DV — Samsung policy) | 12 in |
+| `home_projector` | Home Projector (dark room) | DLP/LCD (projected) | ~200–500 nits on screen | ~100–200 nits | ~2,000–5,000:1 | ~72–90% | HDR10 | Screen-size dependent |
+
+> **Note:** IDs above match the canonical `src/data/home_display_presets/` filenames per `.ai/AGENTS.md`. Two presets from earlier drafts (`oled_budget`, `iphone_standard`) were deferred — add them in Step 4 if per-budget comparison features are prioritized.
 
 ### Manual Entry: What Users Know vs. What They Don't
 
@@ -214,7 +214,7 @@ Most users know: TV brand, screen size in inches, maybe "OLED" or "QLED". Almost
 5. Viewing distance (feet or meters) — critical for PPD; prompt with "How far is your couch from the TV?"
 6. Room lighting condition: `"Dark room"` / `"Dim (some lamps)"` / `"Bright room with windows"` / `"Very bright/daytime"`
 
-**Schema auto-fill logic:** If user provides brand + model, look up against a model database (separate from schema). If only panel type + year, map to nearest preset. If nothing, default to `oled_midrange` for "OLED" and `qled_midrange` for "QLED/unknown". This mirrors how the theater schema handles venue records with missing fields — fall through to preset defaults.
+**Schema auto-fill logic:** If user provides brand + model, look up against a model database (separate from schema). If only panel type + year, map to nearest preset. If nothing, default to `oled_midrange` for "OLED" and `standard_qled` for "QLED/unknown". This mirrors how the theater schema handles venue records with missing fields — fall through to preset defaults.
 
 **Advanced manual override fields (for enthusiasts):**
 - `peak_brightness_nits` — measured or published spec
@@ -257,3 +257,102 @@ To support home display comparisons, the following additions are needed:
 - `user_label`: string (e.g., "My living room TV", "Bedroom phone")
 
 ---
+
+## References
+
+1. [LG C4 OLED TV review - Tom's Guide](https://www.tomsguide.com/tvs/lg-c4-oled-tv-review) - A gorgeous OLED TV with a few caveats
+
+2. [LG G5 review: a new world of brightness for OLED TVs - TechRadar](https://www.techradar.com/televisions/lg-g5-review) - The new bright OLED to beat
+
+3. [Samsung QN90D – Tech Reviews](https://www.lbtechreviews.com/test/tv/samsung-qn90d)
+
+4. [WOLED vs. QD-OLED: How The Panel Impacts Your Monitor](https://www.rtings.com/monitor/learn/woled-vs-qd-oled) - Generally speaking, QD-OLEDs deliver better colors, while WOLEDs maintain low black levels better in...
+
+5. [QD-OLED vs. WOLED: What Type Of OLED TV Should You Buy?](https://www.rtings.com/tv/learn/qd-oled-vs-woled) - Winner: QD-OLEDs have a narrower range of brightness and are brighter on average, but it really depe...
+
+6. [QD-OLED vs WOLED: What's the Difference and Which is Better?](https://www.youtube.com/watch?v=6pWjYNRRIiQ) - The showdown between QD-OLEDs and WOLEDs has been heating up in 2025, with flagships like the Samsun...
+
+7. [Samsung QN90D Neo QLED review: magical for HDR movies and gameswww.theshortcut.com › samsung-qn90d-neo-qled-review](https://www.theshortcut.com/p/samsung-qn90d-neo-qled-review) - This Mini LED is a treat for HDR movies and gaming
+
+8. [Samsung QN90D Neo QLED TV review - Tom's Guide](https://www.tomsguide.com/tvs/samsung-qn90d-neo-qled-tv-review) - One of the best QLED TVs you can buy is also one of the most expensive
+
+9. [OLED vs QLED vs Mini-LED: Which TV Should You Buy in 2026?](https://www.youtube.com/watch?v=cKiEMwSucLA) - Buying a new TV in 2026 isn't about the brand or the size-it's about choosing the right panel type. ...
+
+10. [Foot-Lambert to Nit Converter - Best Online Conversion Tools](https://hextobinary.com/unit/luminance/from/flambert/to/nit) - One Foot-Lambert is equal to 3.43 Nits and that means we can also write it as 1 Foot-Lambert = 3.43 ...
+
+11. [Foot-lamberts to Nits - UnitOwl](https://unitowl.com/light/foot-lamberts-to-nits/) - Convert Foot-lambert to Nit instantly. 1 fL = 3.42626 cd/m². Free converter with formula and referen...
+
+12. [Sony Bravia 8 OLED TV review - Tom's Guide](https://www.tomsguide.com/tvs/sony-bravia-8-oled-tv) - Our full test results of Sony's powerful new OLED TV
+
+13. [Foot-lambert - Wikipedia](https://en.wikipedia.org/wiki/Foot-lambert)
+
+14. [QLED vs OLED vs micro-LED: Which is the best TV tech in 2025?](https://www.techradar.com/televisions/qled-vs-oled-vs-micro-led-which-is-the-best-tv-tech-in-2025) - Which leading TV tech makes the most sense for your next TV?
+
+15. [Samsung 65" QN90D Series 4K Neo QLED Smart TV - Samsung](https://hometheaterreview.com/product/samsung-65-qn90d-series-4k-neo-qled-smart-tv/) - The 2024 QN90D arrived in early spring, building on Samsung's successful Neo QLED lineup with meanin...
+
+16. [Colour Gamuts: sRGB vs DCI-P3 vs BT.2020 — Why Colours Pop ...](https://www.winnerwinnerchickendinner.in/explainers/colour-gamuts-srgb-vs-dci-p3-vs-bt-2020-why-colours-pop) - Complete guide to display colour gamuts explained. Learn about sRGB, DCI-P3, BT.2020 coverage and wh...
+
+17. [Color gamuts explained: sRGB, DCI-P3, Rec 2020](https://www.androidauthority.com/color-gamuts-guide-3035782/) - A display's color gamut dictates how well it can reproduce colors. But which ones should you demand ...
+
+18. [Color Gamut Guide: sRGB, DCI-P3 and Rec.2020 Standards](https://blackscreen.live/wiki/color-gamut-standards/) - An engineering deep dive into sRGB, DCI-P3, and the future of Rec.2020 display standards.
+
+19. [Best OLED TVs in 2026 tested: Our top picks from LG, Samsung and ...](https://www.tomsguide.com/tvs/oled-tvs/best-oled-tvs) - This model offers higher peak brightness while keeping 2024's game-changing anti-glare matte screen....
+
+20. [iPhone 16 Pro - Tech Specs - Apple Support](https://support.apple.com/en-us/121031) - iPhone 16 Pro - Tech Specs
+
+21. [iPhone 15 Pro - Tech Specs - Apple Supportsupport.apple.com › en-us](https://support.apple.com/en-us/111829) - iPhone 15 Pro - Tech Specs
+
+22. [Samsung Galaxy S25 Ultra review: My pros and cons | Tom's Guide](https://www.tomsguide.com/phones/samsung-phones/samsung-galaxy-s25-ultra-review) - The ultimate Android phone might make you want to switch
+
+23. [iPhone 16 and iPhone 16 Plus - Technical Specifications - Apple](https://www.apple.com/iphone-16/specs/) - Super Retina XDR display · 6.7‑inch (diagonal) all‑screen OLED display · 2796‑by‑1290-pixel resoluti...
+
+24. [iPhone Screen Size Comparison 2025: Every Model Measured](https://www.easycompare.app/blog/iphone-screen-size-comparison-2025) - iPhone screen size comparison 2026: Compare all iPhone models from SE to Pro Max with exact dimensio...
+
+25. [iPhone 16 Pro Max - Tech Specs - Apple Support](https://support.apple.com/en-us/121032) - iPhone 16 Pro Max - Tech Specs
+
+26. [Samsung Galaxy S25 Ultra review: Lab tests](https://www.gsmarena.com/samsung_galaxy_s25_ultra-review-2793p3.php) - One of the changes to this year's Galaxy Ultra is the display - its diagonal now stands at 6.9 inche...
+
+27. [Samsung Galaxy S25 Ultra Display test - DXOMARK](https://www.dxomark.com/samsung-galaxy-s25-ultra-display-test/) - Explore our DXOMARK review of the Samsung Galaxy S25 Ultra’s display, which recently achieved the ne...
+
+28. [iPhone Size Chart 2025 - Complete Dimensions Reference](https://iphonescompare.com/iphone-size-chart) - Complete iPhone size chart with all dimensions for every model from iPhone 11 to 17 series.
+
+29. [NVIDIA Automotive Screen Density Calculator](https://phrogz.net/tmp/ScreenDensityCalculator.html)
+
+30. [The eyes true resolution limits](https://www.nzoptics.co.nz/live-articles/the-eyes-true-resolution-limits/) - This is a trade publication for the Ophthalmic community
+
+31. [Is your ultra-HD TV worth it? Scientists measure the resolution limit ...](https://www.cam.ac.uk/research/news/is-your-ultra-hd-tv-worth-it-scientists-measure-the-resolution-limit-of-the-human-eye) - Is your ultra-high-definition television really worth it? Do you need a 4K or an 8K screen to get th...
+
+32. [TV Size To Distance Calculator (And The Science Behind It)](https://www.rtings.com/tv/reviews/by-size/size-to-distance-relationship) - TV Size To Distance Calculator (And The Science Behind It) ; 60", 52.3" 132.8 cm, 29.4" 74.7 cm ; 65...
+
+33. [16:9 TV Dimensions - Screen Size Chart - Inch Calculator](https://www.inchcalculator.com/169-tv-dimensions/) - The table below shows dimensions for common TV sizes, including diagonal, width, and height dimensio...
+
+34. [What is the Best TV viewing distance - TCL](https://www.tcl.com/eu/en/best-tv-view-distance) - From the strength of your eyesight to the room dimension, check these factors to determine the TV vi...
+
+35. [Perfecting Proximity: Finding The Optimal TV Viewing Distancewww.avu.ca › video › perfecting-proximity-finding-optimal-tv-viewing-di...](https://www.avu.ca/video/perfecting-proximity-finding-optimal-tv-viewing-distance/) - 2025 Update: Where to Sit for the Best Picture on Modern TVs Our original article on optimal TV view...
+
+36. [What Is The Optimal Viewing...](https://www.lg.com/us/experience/how-to-measure-and-read-tv-sizes) - This helpful guide will teach you how to measure a TV screen and read TV sizes to find the perfect v...
+
+37. [Best Distance From TV 2025: Complete Viewing Guide](https://dggaming.org/best-distance-from-tv/) - Discover the optimal TV viewing distance with our comprehensive guide. Learn exact measurements for ...
+
+38. [HDR10 vs. Dolby Vision vs. HLG: HDR Formats Compared](https://www.cnet.com/tech/home-entertainment/hdr10-vs-dolby-vision-vs-hlg-how-do-hdr-formats-compare/) - There are three HDR formats and your TV might not be able to play content from all of them. Here's h...
+
+39. [HDR TV Formats Explained](https://www.cnet.com/tech/home-entertainment/every-hdr-tv-format-explained/) - Yep, there's a lot of ways to get HDR on TV. We'll break 'em down.
+
+40. [2025 OLED TVs could hit 4000 nits – vastly brighter than 2024 models](https://www.whathifi.com/news/rumours-suggest-that-2025-oled-tvs-could-hit-4000-nits) - 2025 OLED TVs could hit 4000 nits – vastly brighter than 2024 models ; Everything you need to know a...
+
+41. [HDR vs SDR: What's The Difference? - RTINGS.com](https://www.rtings.com/tv/learn/hdr-vs-sdr) - Both HDR and SDR are mastered at a certain peak brightness, but HDR is mastered at a minimum of 400 ...
+
+42. [TV Q&A: What's difference between HDR10, HDR10+, Dolby Vision and HLG? - HomeTheaterReview](https://hometheaterreview.com/tv-question-whats-difference-between-hdr10-hdr10-dolby-vision-and-hlg/) - Dylan Seeger answers a common Smart TV question.
+
+43. [What is HDR in TVs: HDR10, HDR10+, Dolby Vision, HLG Explained](https://onsitego.com/blog/hdr-tvs-hdr10-plus-dolby-vision-hlg-explained/) - HDR was earlier limited to just high-end TVs, but even cheaper TVs come with HDR these days. But wha...
+
+44. [Apple iPhone 15 Pro review: Lab tests - display, battery life ...](https://www.gsmarena.com/apple_iphone_15_pro-review-2620p3.php) - You can count on Apple to outfit an iPhone Pro with an industry-leading display, and the one on the ...
+
+45. [Apple iPhone 15 Pro - Full Specifications and Features](https://specsbattle.com/phones/apple-apple-iphone-15-pro) - View detailed specifications of Apple iPhone 15 Pro. Check out features, display, battery, camera, a...
+
+46. [Apple iPhone 16 Pro review: Lab tests - display, battery life ...](https://www.gsmarena.com/apple_iphone_16_pro-review-2752p3.php) - The iPhone 16 Pro employs a larger display than the iPhone 15 Pro - a 6.3-inch LTPO Super Retina XDR...
+
+47. [Luminance Converter - Convert cd/m², Nit, Foot-Lambert & Stilb](https://volumecalculator.co/luminance-converter/) - Free online luminance converter. Convert between candelas per square meter, nits, foot-lamberts, and...
+
+48. [Samsung Galaxy S25 - Wikipedia](https://en.wikipedia.org/wiki/Samsung_Galaxy_S25)
+

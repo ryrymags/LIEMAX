@@ -1,0 +1,30 @@
+{
+  "id": "home_projector",
+  "display_name": "Home Projector (DLP default)",
+  "device_category": "home_projector",
+  "short_description": "A home DLP projector on a large screen. The closest home experience to cinema geometry — but brightness and contrast vary widely by model and room conditions.",
+  "tier": "projector",
+  "default_screen_diagonal_in": null,
+  "default_aspect_ratio": 1.78,
+  "default_viewing_distance_ft": null,
+  "default_display_optics": {
+    "panel_tech": "projector_dlp",
+    "is_per_pixel_emissive": false,
+    "resolution_horizontal_px": 3840,
+    "resolution_vertical_px": 2160,
+    "ppi": null,
+    "brightness_peak_hdr_nits": null,
+    "brightness_fullscreen_nits": 200,
+    "brightness_sdr_nits": 200,
+    "contrast_sequential": 2000,
+    "contrast_notes": "Home projector brightness and contrast vary widely by lamp/laser power, screen gain, and room light. Defaults here are low-confidence estimates for a mid-range DLP in a darkened room.",
+    "color_gamut_label": "~72% DCI-P3 (typical DLP)",
+    "color_gamut_dci_p3_pct": 72,
+    "hdr_formats": ["hdr10"]
+  },
+  "known_limitations": [
+    "Brightness and contrast vary widely by model — treat defaults as low-confidence estimates",
+    "Ambient light dramatically reduces effective contrast — requires a truly dark room",
+    "Screen size and viewing distance must be set by the user — no sensible default exists"
+  ]
+}

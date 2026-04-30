@@ -88,7 +88,8 @@ export function cinemaPpd(
   viewingDistanceFt: number,
   mode: ResolutionMode = 'native'
 ): PpdResult {
-  const { screen, projection } = venue;
+  const { screen } = venue;
+  const projection = selectProjectionForMode(venue, mode);
   let pixels: number;
   let caveat: string | undefined;
 
@@ -134,9 +135,20 @@ export function cinemaPpd(
       throw new Error(`Unknown resolution mode: ${mode}`);
   }
 
-  const ppd = computePpd(pixels, screen.width_ft, viewingDistanceFt);
+  const screenWidthFt = projection.effective_screen_width_ft ?? screen.width_ft;
+  const ppd = computePpd(pixels, screenWidthFt, viewingDistanceFt);
 
   return { ppd, resolution_mode: mode, caveat };
+}
+
+function selectProjectionForMode(venue: ResolvedVenue, mode: ResolutionMode) {
+  if (!venue.hybrid_projection) return venue.projection;
+
+  if (mode === 'scan_equivalent_low' || mode === 'scan_equivalent_high') {
+    return venue.hybrid_projection.film ?? venue.projection;
+  }
+
+  return venue.hybrid_projection.digital ?? venue.projection;
 }
 
 // ─── Dome PPD ───────────────────────────────────────────────────────
@@ -173,6 +185,10 @@ export function domePpd(
   scanEquivLow?: number | null,
   scanEquivHigh?: number | null
 ): PpdResult {
+  if (horizontalFovDeg <= 0 || horizontalFovDeg > 180) {
+    throw new Error(`horizontalFovDeg must be >0 and <=180, got ${horizontalFovDeg}`);
+  }
+
   // Prefer digital resolution; fall back to scan-equivalent for film domes
   if (horizontalPixels !== null && horizontalPixels > 0) {
     const ppd = horizontalPixels / horizontalFovDeg;
@@ -183,7 +199,10 @@ export function domePpd(
     };
   }
 
-  if (scanEquivLow && scanEquivHigh) {
+  if (scanEquivLow != null && scanEquivHigh != null) {
+    if (scanEquivLow <= 0 || scanEquivHigh <= 0) {
+      throw new Error(`Film scan-equivalent resolutions must be positive, got ${scanEquivLow}–${scanEquivHigh}.`);
+    }
     const ppdLow = scanEquivLow / horizontalFovDeg;
     const ppdHigh = scanEquivHigh / horizontalFovDeg;
     return {
