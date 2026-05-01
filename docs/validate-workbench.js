@@ -259,6 +259,25 @@ const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 assert("Picker includes Xenon-only database disclaimer", appSource.includes("Xenon-only IMAX venues"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
 
+// ─── Diagnosis module tests ───────────────────────────────────────────────────
+
+loadScript("docs/diagnosis.js");
+const DIAG = context.window.LIEMAX_DIAGNOSE;
+
+assert("diagnosis module loaded with classify and LABELS", Boolean(DIAG && typeof DIAG.classify === "function" && DIAG.LABELS));
+
+const diagProvidence   = findVenueById("apple_providence_imax");
+const diagReading      = findVenueByName("Sunbrella IMAX 3D Theater Reading");
+const diagBostonCommon = findVenueByName("AMC Boston Common 19");
+const diagMetreon      = findVenueByName("AMC Metreon 16 & IMAX");
+const diagLincoln      = findVenueByName("AMC Lincoln Square 13 & IMAX");
+
+assert("Providence (CoLa + film) diagnoses as true_film_lie_dig",  DIAG.classify(diagProvidence)   === "true_film_lie_dig");
+assert("Reading (GT Laser, no film) diagnoses as true_143_laser",  DIAG.classify(diagReading)      === "true_143_laser");
+assert("Boston Common (CoLa, no film) diagnoses as liemax",        DIAG.classify(diagBostonCommon) === "liemax");
+assert("Metreon (GT Laser + film) diagnoses as true_143_film",     DIAG.classify(diagMetreon)      === "true_143_film");
+assert("Lincoln Square (GT Laser + film) diagnoses as true_143_film", DIAG.classify(diagLincoln)   === "true_143_film");
+
 if (failed > 0) {
   console.log(`\n${failed} docs workbench checks failed (${passed} passed).`);
   process.exit(1);

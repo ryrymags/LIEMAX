@@ -57,6 +57,7 @@ Priority order: get functional → then design polish. Do not invest in visual d
 
 ## Active
 
+- Step 4: diagnosis-first homepage implemented (2026-05-01). `docs/` now opens on a parchment search page; selecting a venue shows a noir DiagnosisCard with category badge, spec strip, and mode breakdown. The comparison workbench is available as a collapsible accordion below the diagnosis card. `docs/diagnosis.js` provides the `window.LIEMAX_DIAG` module (`categorize`, `CATEGORIES`). Diagnosis validation covers Providence, Reading, Boston Common, Metreon, and Lincoln Square. 26 docs workbench checks pass (+ 6 new diagnosis tests). Full CI: 273 pass, 0 fail.
 - Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
 - Current Step 4 caveat: `docs/` still uses a prototype data bundle rather than resolving directly from canonical `src/data` JSON; keep `npm run validate:docs` in CI until Phase 4a unifies the data path.
 - Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
