@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Pre-GUI reset complete; ready to rebuild Step 4 brick by brick."
+Current status: "Steps 1–3 audited and clean. GUI-work is squashed onto main with the Step 4 comparison workbench."
 
 ## Completed
 
@@ -54,7 +54,8 @@ Priority order: get functional → then design polish. Do not invest in visual d
 
 ## Active
 
-- Step 4: assemble data files into a queryable database / bundle for the frontend.
+- Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
+- Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).
 - Dev convenience: `boot-website.command` remains at repo root as the launcher for the future frontend rebuild; it may not start a website until Step 4 frontend tooling exists again.

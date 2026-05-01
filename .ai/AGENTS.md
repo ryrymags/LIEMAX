@@ -8,11 +8,11 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 ## State
 
-- Branch: `codex/overhaul`.
+- Branch: `GUI-work`, squashed on top of the clean Steps 1-3 foundation in `main`.
 - Audited 2026-04-26: Steps 1, 2, and 3 are clean. All 133 math tests + 87 schema/data checks pass.
 - Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; schema v1.3.1 (adds r_imax_csv source quality).
 - Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, Cinemark XD, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.
-- Active: Step 4 — build functional website (data layer → working comparison UI → then design polish).
+- Active: Step 4 — functional comparison workbench exists in `docs/`; next pass should harden data flow and then polish design.
 - GUI design tooling (use AFTER Step 4b functional baseline): Claude Design skill (`/design:frontend-design`), Figma MCP connector, or equivalent. Do not start design polish before the comparison feature works end-to-end.
 
 ## Rules

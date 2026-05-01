@@ -9,9 +9,10 @@
   "scripts": {
     "typecheck": "tsc --noEmit --pretty false",
     "validate": "ts-node --transpile-only src/math/validate.ts",
+    "validate:compare": "ts-node --transpile-only src/compare/validate.ts",
     "validate:schema": "ts-node --transpile-only src/data/validate.ts",
-    "test": "npm run validate",
-    "ci": "npm run typecheck && npm run validate && npm run validate:schema"
+    "test": "npm run validate && npm run validate:compare",
+    "ci": "npm run typecheck && npm run validate && npm run validate:schema && npm run validate:compare"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
