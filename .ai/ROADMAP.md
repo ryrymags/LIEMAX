@@ -6,7 +6,7 @@
 - GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
 - GREEN `schema/`: v1.3.1 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Adds `r_imax_csv` source quality for 143190-sourced fields. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
 - GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
-- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01). Search page → DiagnosisCard (noir panel, category badge, spec strip, mode breakdown) → optional comparison workbench accordion. `docs/diagnosis.js` module (`LIEMAX_DIAG`) with `categorize()` and `CATEGORIES`. 6 diagnosis tests added (Providence, Reading, Boston Common, Metreon, Lincoln Square). Full CI 273/273. Prior: comparison workbench prototype, Reading GT seating correction, XD/Dolby 2025 entries, Xenon-only disclaimer, docs regression validation.
+- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01). Search page → DiagnosisCard (noir panel, category badge, spec strip, mode breakdown) → optional comparison workbench accordion. `docs/diagnosis.js` module (`window.LIEMAX_DIAGNOSE`) with `classify()`, `diagnose()`, and `LABELS`. 6 diagnosis tests added (Providence, Reading, Boston Common, Metreon, Lincoln Square). Full CI 273/273. Prior: comparison workbench prototype, Reading GT seating correction, XD/Dolby 2025 entries, Xenon-only disclaimer, docs regression validation.
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames; Batch 2 workbench audit addendum added to Master/Dome research.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
@@ -24,6 +24,12 @@
 3. Future PLF modeling: ScreenX, ACX renovation status, and per-field provenance can be represented loosely today, but richer UI will want additive schema fields before data scales.
 4. **143190 Xenon gap:** 143190.xyz intentionally excludes venues with only Xenon projectors — it only lists IMAX Film and/or Laser locations. Confirmed by site creator anthonylavado (Reddit, ~Apr 2025); no ETA on adding Xenon. Example: Jordan's Furniture Natick IMAX (Xenon + 5.0 speakers) is NOT listed; Jordan's Furniture Reading IMAX (GT Dual Laser + 12.0) IS listed. **Next task:** find a supplemental source (LFExaminer, manual community list) to cover Xenon IMAX venues and decide whether to merge them into `docs/data.js` under a new source quality tag (e.g., `community_estimate` or a new `lfexaminer` tag).
 5. Workbench drift: `docs/` currently duplicates data/math view-model logic. `npm run validate:docs` guards the known Reading/Providence regression, but Phase 4a should still wire the frontend to canonical resolved JSON.
+
+## Step 4 Diagnosis Homepage Follow-ups
+
+- Fix featured example IDs in `docs/app.jsx`: Metreon and Lincoln Square generated venue ids include `_and_imax`, not `_imax`, so those chips/empty-search featured rows can silently disappear.
+- Before adding dome venues to the `docs/` bundle, tighten `docs/diagnosis.js` dome classification so `true_dome` requires explicit 1.43-capable dome projection/mode, not dome geometry alone.
+- Keep context names aligned with code: the diagnosis module is `window.LIEMAX_DIAGNOSE`, and the public helpers are `classify()`, `diagnose()`, and `LABELS`.
 
 ## Step 3: Presets
 

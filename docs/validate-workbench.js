@@ -258,6 +258,9 @@ assert("Verdict mentions Reading visible area and contrast wins", Boolean(readin
 const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 assert("Picker includes Xenon-only database disclaimer", appSource.includes("Xenon-only IMAX venues"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
+assert("Homepage search hides category tags for diagnosis reveal", appSource.includes("showCategoryTags={false}"));
+assert("Comparison picker keeps category tags", appSource.includes("picker-v3__item-tag"));
+assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
 
 // ─── Diagnosis module tests ───────────────────────────────────────────────────
 

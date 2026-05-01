@@ -374,7 +374,9 @@ button, select, input { font-family: inherit; color: inherit; }
   padding: 10px 14px 4px;
 }
 .picker-v3__item {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   width: 100%;
   text-align: left;
   padding: 10px 14px;
@@ -387,16 +389,32 @@ button, select, input { font-family: inherit; color: inherit; }
   background: var(--bg-card-hover);
   outline: none;
 }
+.picker-v3__item-main {
+  flex: 1;
+  min-width: 0;
+}
 .picker-v3__item-name {
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 .picker-v3__item-sub {
   font-family: var(--font-mono);
   font-size: 0.66rem;
   color: var(--ink-3);
   margin-top: 2px;
+}
+.picker-v3__item-tag {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
 }
 .picker-v3__empty {
   padding: 18px 14px;
@@ -793,6 +811,22 @@ button, select, input { font-family: inherit; color: inherit; }
   font-weight: 800;
   letter-spacing: 0.06em;
   margin: 0;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 120ms var(--ease-cinema);
+}
+.brand__title:hover,
+.brand__title:focus-visible {
+  color: var(--gold);
+}
+.brand__title:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
 }
 .brand__rule {
   display: inline-block;

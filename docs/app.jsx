@@ -345,12 +345,18 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
           {groups.map(g => (
             <div key={g.label}>
               <div className="picker-v3__group-label">{g.label}{g.count != null ? ` (${g.count})` : ""}</div>
-              {g.items.map(v => (
-                <button key={v.id} className="picker-v3__item" role="option" onClick={() => pickVenue(v)}>
-                  <div className="picker-v3__item-name">{v.name}</div>
-                  <div className="picker-v3__item-sub">{v.sub}</div>
-                </button>
-              ))}
+              {g.items.map(v => {
+                const tag = quickCategoryTag(v);
+                return (
+                  <button key={v.id} className="picker-v3__item" role="option" onClick={() => pickVenue(v)}>
+                    <div className="picker-v3__item-main">
+                      <div className="picker-v3__item-name">{v.name}</div>
+                      <div className="picker-v3__item-sub">{v.sub}</div>
+                    </div>
+                    {tag && <span className="picker-v3__item-tag" style={{ color: tag.color }}>{tag.text}</span>}
+                  </button>
+                );
+              })}
             </div>
           ))}
         </div>
@@ -658,7 +664,7 @@ function quickCategoryTag(venue) {
   const map = {
     true_143_film:    { text: "TRUE 1.43 + FILM", color: "var(--cat-true143-film)" },
     true_143_laser:   { text: "TRUE 1.43",        color: "var(--cat-true143)" },
-    true_film_lie_dig:{ text: "FILM ONLY",        color: "var(--cat-truefilm)" },
+    true_film_lie_dig:{ text: "1.43 ON FILM",     color: "var(--cat-truefilm)" },
     true_dome:        { text: "DOME",             color: "var(--cat-dome)" },
     liemax:           { text: "LIEMAX",           color: "var(--cat-liemax)" },
     unknown:          { text: "UNKNOWN",          color: "var(--cat-unknown)" },
@@ -666,7 +672,7 @@ function quickCategoryTag(venue) {
   return map[cat];
 }
 
-function SearchBar({ value, onChange, onSelect, onClear, autoFocus }) {
+function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategoryTags = true }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const ref = useRef(null);
@@ -695,8 +701,8 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus }) {
     if (!tokens.length) {
       const featuredIds = [
         "apple_providence_imax",
-        "imax_us_ny_new_york_amc_lincoln_square_13_imax",
-        "imax_us_ca_san_francisco_amc_metreon_16_imax",
+        "imax_us_ny_new_york_amc_lincoln_square_13_and_imax",
+        "imax_us_ca_san_francisco_amc_metreon_16_and_imax",
         "imax_us_ma_reading_sunbrella_imax_3d_theater_reading",
         "imax_us_ma_boston_amc_boston_common_19",
       ];
@@ -765,7 +771,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus }) {
               </div>
               {g.items.map((v, vi) => {
                 const flatIdx = groups.slice(0, gi).reduce((sum, gr) => sum + gr.items.length, 0) + vi;
-                const tag = quickCategoryTag(v);
+                const tag = showCategoryTags ? quickCategoryTag(v) : null;
                 return (
                   <button key={v.id} type="button" role="option"
                     aria-selected={flatIdx === active}
@@ -951,7 +957,7 @@ function App() {
       "apple_providence_imax",
       "imax_us_ma_reading_sunbrella_imax_3d_theater_reading",
       "imax_us_ma_boston_amc_boston_common_19",
-      "imax_us_ny_new_york_amc_lincoln_square_13_imax",
+      "imax_us_ny_new_york_amc_lincoln_square_13_and_imax",
     ];
     return ids.map(id => D.venues.find(v => v.id === id)).filter(Boolean);
   }, []);
@@ -984,6 +990,11 @@ function App() {
 
   function handleClear() { setSelected(null); setQuery(""); setWorkbenchOpen(false); }
 
+  function handleResetHome() {
+    handleClear();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function openWorkbench() {
     setWorkbenchOpen(true);
     requestAnimationFrame(() => {
@@ -1007,7 +1018,9 @@ function App() {
     <div className="shell">
       <header className="brand">
         <div className="brand__mark">
-          <h1 className="brand__title">LIEMAX</h1>
+          <button className="brand__title" onClick={handleResetHome} type="button" aria-label="Start over">
+            LIEMAX
+          </button>
           <span className="brand__rule" />
           <span className="brand__strap">A diagnostic for your local IMAX</span>
         </div>
@@ -1027,7 +1040,14 @@ function App() {
           by the screen geometry, and by film capability where it exists.
         </p>
 
-        <SearchBar value={query} onChange={setQuery} onSelect={handleSelect} onClear={handleClear} autoFocus />
+        <SearchBar
+          value={query}
+          onChange={setQuery}
+          onSelect={handleSelect}
+          onClear={handleClear}
+          autoFocus
+          showCategoryTags={false}
+        />
 
         <div className="suggest">
           <span className="suggest__label">Try:</span>
