@@ -56,6 +56,30 @@ window.LIEMAX_MATH = (function () {
     return { effW, effH, areaUtilPct, letterbox, pillarbox, cropped };
   }
 
+  function visibleContentRect(screen, contentAR, presentation) {
+    const presAR = presentation.ar;
+    const projectedWindow = {
+      w: screen.w,
+      h: screen.w / presAR,
+      ar: presAR,
+      geometry: screen.geometry,
+    };
+    const projectedMask = masking(projectedWindow, contentAR, { min_ar: presentation.min_ar ?? presAR });
+    const effW = Math.min(projectedMask.effW, screen.w);
+    const effH = Math.min(projectedMask.effH, screen.h);
+    const physicalArea = screen.w * screen.h;
+    const areaUtilPct = Math.min(100, (effW * effH) / physicalArea * 100);
+
+    return {
+      ...projectedMask,
+      effW,
+      effH,
+      areaUtilPct,
+      projectedWindow,
+      physicalClipped: effW < projectedMask.effW - 0.05 || effH < projectedMask.effH - 0.05,
+    };
+  }
+
   // --- Brightness comparison (returns fL for the 'fair' comparison) ---
   // Cinema is published in fL. Home displays we have nits → fL = nits / 3.426.
   function brightnessFL(venue) {
@@ -71,6 +95,6 @@ window.LIEMAX_MATH = (function () {
   }
 
   return {
-    horizontalFovDeg, verticalFovDeg, ppd, masking, brightnessFL, distanceForSeat,
+    horizontalFovDeg, verticalFovDeg, ppd, masking, visibleContentRect, brightnessFL, distanceForSeat,
   };
 })();

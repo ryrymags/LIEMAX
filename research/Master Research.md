@@ -653,6 +653,20 @@ False. It is a certification label overlaid on existing auditoriums meeting mini
 
 **"Digital Dome projection is just as sharp as 15/70 film."** **False.** While 15/70 film offers up to 18K theoretical resolution, 4K digital projection on a 90-foot dome results in an average pixel width of **0.32 inches (8.2 mm)**, making the "screen-door effect" a significant engineering hurdle.
 
+**Batch 2 Workbench Audit Addendum (2026-05-01)**
+
+The Perplexity Batch 2 audit confirmed that most comparison math in the Step 4 prototype was algebraically sound, but it exposed data/modeling drift between the validated source data and the static `docs/` workbench.
+
+* **Reading GT seating:** The prototype's generated 143190 import path used a generic 1.5x screen-width mid-row distance, putting Sunbrella IMAX Reading at roughly 126 ft. That is too deep for a dedicated 500-seat GT room. LIEMAX now models Reading in the workbench with a venue-specific estimate of front 40 ft, mid 75 ft, back 84 ft, caveated as a community/derived GT estimate rather than a published measurement.
+
+* **Seating framework:** Sparse 143190 rows do not include seating depth. Dedicated GT/institutional rooms should use venue-specific or constrained-depth estimates when known; CoLa, Dolby Cinema, Cinemark XD, and standard multiplex presets may use auditorium-ratio estimates; domes are separate and should not be explained as flat front/mid/back screen-plane distances.
+
+* **Verified regression:** Providence 15/70 film vs Reading GT Laser at 1.43:1 should show Reading winning visible image area and native contrast. Providence still leads on some immersion rows from the modeled mid-row seat.
+
+* **Preset status:** Cinemark XD and the May 2025+ Dolby Cinema Christie Eclipse system are already represented canonically as `cinemark_xd` and `dolby_cinema_single_laser`. The Step 4 workbench now exposes both; do not introduce the alternate `dolbycinema_2025` ID.
+
+* **143190 Xenon gap:** 143190.xyz intentionally excludes older Xenon-only IMAX venues. The website should disclose that limitation near search and treat any future Xenon additions as supplemental-source records until a better primary feed exists.
+
 **Open Questions / Uncertain Areas**
 
 * **Dolby Cinema global count:** The April 2026 Dolby Cinema Finder query returned 295 global and 175 US entries. This is a point-in-time scrape — not a published corporate installed-base figure. Re-count before publishing.
@@ -688,4 +702,3 @@ False. It is a certification label overlaid on existing auditoriums meeting mini
 | Theatrical windows | After any studio/exhibitor agreement announcement | Deadline / Variety |
 | Infinity Vision venue list | When Disney publishes official certifications | Disney press / exhibitor announcements |
 | Providence 15/70 film availability | Check Apple Cinemas schedules per film | Apple Cinemas website |
-

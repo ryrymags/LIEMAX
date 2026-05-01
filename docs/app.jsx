@@ -62,16 +62,8 @@ function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
 
   const physicalFov = M.horizontalFovDeg(venue.screen.w, dist);
 
-  // Projected window the illuminated rectangle on the physical screen.
-  const projWindow = {
-    w: venue.screen.w,
-    h: venue.screen.w / presAr,
-    ar: presAr,
-    geometry: venue.screen.geometry,
-  };
-
-  // Content masking within the projected window (not the full physical screen).
-  const mask = M.masking(projWindow, contentAr, { min_ar: presAr });
+  const mask = M.visibleContentRect(venue.screen, contentAr, { ar: presAr, min_ar: presAr });
+  const projWindow = mask.projectedWindow;
   const contentHFov = M.horizontalFovDeg(mask.effW, dist);
   const contentVFov = M.verticalFovDeg(mask.effH, dist);
 
@@ -83,8 +75,7 @@ function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
 
   const fl = M.brightnessFL({ projection: proj });
 
-  // Physical screen utilization = content area / full physical screen area.
-  const physicalUtil = (mask.effW * mask.effH) / (venue.screen.w * venue.screen.h) * 100;
+  const physicalUtil = mask.areaUtilPct;
 
   return { dist, physicalFov, ppdVal, presAr, projWindow, mask, contentHFov, contentVFov, fl, physicalUtil, proj };
 }
@@ -174,7 +165,7 @@ function buildComparisonRows(sideA, sideB, statsA, statsB) {
   rows.push({ ...makeRow("ppd", "Pixels per degree", aPpdNum, bPpdNum, aPpdDisp, bPpdDisp, true),
     explain: "Perceived sharpness from this seat; higher usually looks crisper." });
 
-  // 4. Visible content area (within projected window)
+  // 4. Visible content area
   const aAreaNum = statsA.mask.effW * statsA.mask.effH;
   const bAreaNum = statsB.mask.effW * statsB.mask.effH;
   const aAreaDisp = fmtInt(aAreaNum) + " sq ft";
@@ -433,6 +424,9 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
               onKeyDown={e => { if (e.key === "Escape") setOpen(false); }}
               aria-label="Search"
             />
+            <div className="picker-v3__source-note">
+              IMAX theater listings come from 143190.xyz and do not include older Xenon-only IMAX venues yet. Those need a supplemental source.
+            </div>
           </div>
           {groups.length === 0 && (
             <div className="picker-v3__empty">No results for "{query}"</div>
@@ -743,7 +737,7 @@ function DetailsDrawer({ open, onToggle }) {
           <p>15/70 film reports scan-equivalent range (~8.8K–11.7K) rather than a fixed pixel count — grain limits perceived detail before scan resolution does.</p>
 
           <h3>Viewing distances</h3>
-          <p>Cinema: derived from screen width (front ≈ 0.87×, mid ≈ 1.5×, back ≈ 2.25×) where no published row data exists. Home: typical living-room distances for the screen size per THX recommendations.</p>
+          <p>Cinema seating uses tiered assumptions when published row data is unavailable. Dedicated GT rooms use venue-specific or constrained-depth estimates; CoLa, Dolby, XD, and standard multiplex rooms use auditorium-ratio estimates. Sparse 143190 rows provide screen and projector facts, not seating depth. Home displays use typical living-room distances for the screen size per THX-style recommendations.</p>
 
           <h3>Brightness comparison</h3>
           <p>Cinema: published or community-estimated fL calibration target. Home displays: <code>full-field_nits ÷ 3.426 = fL</code>. Peak HDR nits excluded — full-field is the fair cinema comparison.</p>

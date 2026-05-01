@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. GUI-work is squashed onto main with the Step 4 comparison workbench."
+Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench plus Batch 2 workbench audit fixes."
 
 ## Completed
 
@@ -13,11 +13,14 @@ Current status: "Steps 1–3 audited and clean. GUI-work is squashed onto main w
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.
 - Research updated: Dolby Cinema section corrected; RPX section fully resolved; Home Theater Research preset ID table updated to match canonical filenames.
 - Step 3 audit remediation applied: schema-valid standard/ScreenX light sources, computable Mugar dome geometry, Mugar post-2021 dome-laser modeling, corrected RPX geometry, full Step 3 data validation, ScreenX capability preservation, and imax_cola contrast source downgraded to community_estimate with explanation.
+- Step 4 Batch 2 audit remediation applied: `docs/` workbench now exposes `cinemark_xd` and `dolby_cinema_single_laser`, corrects Reading GT mid-seat estimate to ~75 ft, discloses the 143190 Xenon-only venue gap near search, and adds docs regression validation for Providence 15/70 vs Reading GT visible-area/native-contrast winners.
+- Step 4 CoLa utilization clamp applied: `docs/` workbench visible content area/FOV/utilization now clamp presentation windows to physical screen bounds, with regression coverage for Assembly Row vs Boston Common CoLa.
 
 ## Known Low-Confidence Items (tracked, not blockers)
 
 - `dolby_cinema_single_laser.json` brightness_fl: ~31 fL is a community estimate from firsthand AMC Southlands reports (May 2025); no Dolby-published per-venue fL spec yet.
 - `cinemark_xd.json` brightness_fl: ~16 fL is derived from Barco SP4K specs + screen geometry; Cinemark publishes no fL target.
+- Reading GT workbench seating distances: front 40 ft / mid 75 ft / back 84 ft are community/derived estimates for a dedicated GT auditorium, not published venue measurements.
 - Two deferred home display presets: `oled_budget` (Sony Bravia 8 / LG B-series tier) and `iphone_standard` — add in Step 4 if per-budget comparison features are prioritized.
 
 ## Resolved Items (previously low-confidence)
@@ -55,6 +58,7 @@ Priority order: get functional → then design polish. Do not invest in visual d
 ## Active
 
 - Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
+- Current Step 4 caveat: `docs/` still uses a prototype data bundle rather than resolving directly from canonical `src/data` JSON; keep `npm run validate:docs` in CI until Phase 4a unifies the data path.
 - Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).

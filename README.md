@@ -9,13 +9,13 @@ like from my seat?"*
 
 ## Status
 
-Pre-development. Schema, sparse 143190 import mapping, math engine, and Step 3 preset data are complete; data bundling for the frontend is next.
+Pre-development. Schema, sparse 143190 import mapping, math engine, Step 3 preset data, and a Step 4 static comparison workbench prototype are in place; canonical data bundling for the frontend is next.
 
-- ✅ **Step 1:** Research & Data Schema (`schema/theater.schema.json`, v1.3.0)
+- ✅ **Step 1:** Research & Data Schema (`schema/theater.schema.json`, v1.3.1)
 - ✅ **Step 2:** Math Engine (`src/math/`, 133 tests passing)
 - ✅ **Step 2.5:** 143190.xyz sparse IMAX import foundation (`src/data/`)
 - ✅ **Step 3:** Presets, venues, home display tiers, and content formats
-- ⏳ **Step 4:** Data bundle and website foundation
+- ⏳ **Step 4:** Data bundle and website foundation (`docs/` prototype exists)
 - ⏳ **Step 5:** Community features
 - ⏳ **Step 6:** 3D simulation
 
@@ -33,7 +33,7 @@ Legacy project journals live in [`research/legacy_context/`](./research/legacy_c
 
 ## Current Data Coverage
 
-Step 3 includes 11 cinema format presets (`imax_dome_laser` included), 8 home display tier presets, 7 content formats, and 2 venue records. Mugar Omni is modeled as current post-2021 IMAX Dome laser with no active 15/70 claim; its 76 ft dome diameter is a low-confidence estimate.
+Step 3 includes 12 cinema format presets (`cinemark_xd` and `imax_dome_laser` included), 8 home display tier presets, 7 content formats, and 2 venue records. Mugar Omni is modeled as current post-2021 IMAX Dome laser with no active 15/70 claim; its 23.20 m / 76.1 ft dome diameter comes from the 143190.xyz CSV at medium confidence.
 
 ## Running the math engine validation
 
@@ -42,6 +42,8 @@ npm ci
 npm run typecheck
 npm run validate
 npm run validate:schema
+npm run validate:compare
+npm run validate:docs
 ```
 
 The validation script tests every math function against known values 

@@ -135,6 +135,10 @@ When a film is shot with a standard (rectilinear) lens, the horizon is a straigh
 
 Domes are particularly sensitive to "judder" or motion blur because the image occupies so much of the peripheral vision. While 24 frames per second is the cinematic standard, many IMAX Dome productions are shot at 48 or 60 frames per second to increase visual detail and reduce the stroboscopic effect of moving objects across such a vast field.8 When upscaling from 24p to the 60p native rate of modern LED or laser domes, post-production houses use optical flow algorithms to minimize artifacts in high-motion sequences like breaking waves or flowing hair.23
 
+## **Seating Geometry Note for LIEMAX**
+
+The flat-screen front/mid/back seating model does not map cleanly onto IMAX Dome. A dome wraps around the viewer, and the meaningful viewing relationship is closer to a radius-like distance from the seating bowl to the hemispherical surface plus the vertical horizon/elevation mapping. For LIEMAX comparisons, do not describe dome seating as "front row = closer to a rectangular screen plane." When a single distance is needed for non-FOV metrics, use a dome-radius-style estimate and keep the source caveated; dome FOV itself should come from the schema's fixed horizontal and vertical dome FOV fields.
+
 ## **Technical Synthesis and Conclusion**
 
 The projection of a 1.43:1 IMAX movie onto a dome is a triumph of complex geometry over the limitations of flat-plane optics. By utilizing a 30mm fisheye lens with a 9.4mm upward offset, the system successfully maps the "tall" 1.43:1 aspect ratio into a 180° x 125° hemispherical envelope that mimics the human biological field of view.4

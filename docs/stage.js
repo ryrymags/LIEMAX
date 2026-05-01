@@ -22,8 +22,14 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const HUMAN_H = 5.75; // average adult height in ft
   const HUMAN_W = 1.6;
 
-  const aMask = M.masking(A.screen, contentARA, A.projection);
-  const bMask = M.masking(B.screen, contentARB, B.projection);
+  const aMask = M.visibleContentRect(A.screen, contentARA, {
+    ar: A.projection.min_ar,
+    min_ar: A.projection.min_ar,
+  });
+  const bMask = M.visibleContentRect(B.screen, contentARB, {
+    ar: B.projection.min_ar,
+    min_ar: B.projection.min_ar,
+  });
 
   // Both screens share floor. Bottom of screen lifted off floor a bit
   // (cinemas: ~5 ft sightline; home: 2 ft TV stand). Use 5 for cinema, 2 for home.

@@ -347,6 +347,13 @@ button, select, input { font-family: inherit; color: inherit; }
   outline: none;
 }
 .picker-v3__search:focus { border-color: var(--ink); }
+.picker-v3__source-note {
+  margin-top: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1.35;
+  color: var(--ink-3);
+}
 .picker-v3__group-label {
   font-family: var(--font-mono);
   font-size: 0.58rem;

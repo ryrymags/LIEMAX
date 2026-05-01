@@ -117,6 +117,36 @@ window.LIEMAX_DATA = (function () {
     min_ar: 1.85,
   };
 
+  const proj_dolby_single_laser = {
+    id: "digital",
+    label: "Christie Eclipse Single 4K Laser",
+    light: "RGB Laser",
+    resH: 4096, resV: 2160,
+    scanEquivLow: null, scanEquivHigh: null, scanEquivLabel: null,
+    brightness_fl: 31.0, brightness_nits_full: null,
+    nativeContrast: 6250,
+    isPerPixelEmissive: false,
+    hdrCategory: "dolby_vision",
+    hdrLabel: "Dolby Vision dynamic (20,000,000:1)",
+    hdrDynamic: 20000000,
+    min_ar: 1.85,
+  };
+
+  const proj_cinemark_xd = {
+    id: "digital",
+    label: "Cinemark XD 4K Barco Laser",
+    light: "RGB Laser",
+    resH: 4096, resV: 2160,
+    scanEquivLow: null, scanEquivHigh: null, scanEquivLabel: null,
+    brightness_fl: 16.0, brightness_nits_full: null,
+    nativeContrast: 2000,
+    isPerPixelEmissive: false,
+    hdrCategory: "sdr",
+    hdrLabel: "—",
+    hdrDynamic: null,
+    min_ar: 1.90,
+  };
+
   const proj_standard_4k = {
     id: "digital",
     label: "4K Digital Cinema · RGB laser",
@@ -278,6 +308,34 @@ window.LIEMAX_DATA = (function () {
     return modes;
   }
 
+  const generatedVenueOverrides = {
+    "MA|Reading|Sunbrella IMAX 3D Theater Reading": {
+      blurb: "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances use a venue-specific GT estimate because the sparse CSV does not include row depth.",
+      seat: {
+        front: 40,
+        mid: 75,
+        back: 84,
+        source: "community_estimate",
+      },
+      sources: {
+        seat: { q: "community_estimate", note: "Commercial GT estimate constrained by GSCA-style large-format geometry: back rows are roughly within one screen width; mid-row modeled at ~75 ft, not the generic 1.5× screen-width fallback." },
+      },
+    },
+  };
+
+  function applyGeneratedVenueOverride(venue, rowKey) {
+    const override = generatedVenueOverrides[rowKey];
+    if (!override) return venue;
+    return {
+      ...venue,
+      ...override,
+      sources: {
+        ...venue.sources,
+        ...(override.sources || {}),
+      },
+    };
+  }
+
   function buildGeneratedImaxVenue(row) {
     const [state, city, name, screenArLabel, digitalLabel, maxDigitalArLabel, filmLabel, screenHeightM, screenWidthM, commercialFilms] = row;
     const screenAr = parseAspectRatio(screenArLabel);
@@ -292,7 +350,8 @@ window.LIEMAX_DATA = (function () {
     const sourceProjection = sourcesForProjection(projectorType);
     const geometry = /dome/i.test(screenArLabel) ? "hemispherical" : (screenAr != null && screenAr <= 1.45) ? "slight_curve" : "flat";
 
-    return {
+    const rowKey = `${state}|${city}|${name}`;
+    const venue = {
       id: `imax_us_${state.toLowerCase()}_${slugify(`${city}_${name}`)}`,
       kind: "cinema",
       name,
@@ -322,6 +381,8 @@ window.LIEMAX_DATA = (function () {
         seat: { q: "derived_from_screen_width", note: "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers." },
       },
     };
+
+    return applyGeneratedVenueOverride(venue, rowKey);
   }
 
   const imaxCsvRows = [
@@ -552,7 +613,70 @@ window.LIEMAX_DATA = (function () {
       },
     },
 
-    // 4 ── Standard Multiplex ─────────────────────────────────────────────────
+    // 4 ── Dolby Cinema (Christie Eclipse, 2025+) ─────────────────────────────
+    {
+      id: "dolby_cinema_single_laser",
+      kind: "cinema",
+      name: "Dolby Cinema (Christie Eclipse, 2025+)",
+      city: "",
+      state: "Format presets",
+      stateName: "Format presets",
+      isPreset: true,
+      sub: "2.39 · single 4K laser · Dolby Vision 20M:1 dynamic",
+      tag: "Dolby Cinema",
+      blurb: "New-build Dolby Cinema system rolling out from May 2025 onward. Uses Christie Eclipse single-laser projection with the same Dolby Vision workflow and a much higher dynamic-contrast ceiling.",
+      screen: { w: 58, h: 24.3, ar: 2.39, geometry: "flat" },
+      seat: { front: 29, mid: 49, back: 68, source: "derived_from_screen_width" },
+      defaultPresentationAr: 2.39,
+      isHybrid: false,
+      presentationModes: [
+        { id: "digital_239", ar: 2.39, label: "2.39 · Scope",        enabled: true,  isBookingDependent: false, isFilmMode: false, projection: "digital" },
+        { id: "digital_185", ar: 1.85, label: "1.85 · Flat",         enabled: true,  isBookingDependent: false, isFilmMode: false, projection: "digital" },
+        { id: "disabled_143", ar: 1.43, label: "1.43 · IMAX full frame", enabled: false, disabledReason: "Dolby Cinema cannot show 1.43 — screen is a wide-format auditorium", isBookingDependent: false, isFilmMode: false, projection: "digital" },
+      ],
+      projection: proj_dolby_single_laser,
+      filmProjection: null,
+      sources: {
+        screen:     { q: "trade_reporting",    note: "Christie Eclipse Dolby builds support screens up to ~58 ft wide." },
+        brightness: { q: "community_estimate", note: "~31 fL from early 2025 reports and Dolby's >2× typical-cinema brightness claim." },
+        contrast:   { q: "trade_reporting",    note: "Christie Eclipse lists up to 20,000,000:1 dynamic contrast; sequential kept comparable to Dolby Cinema baseline." },
+        seat:       { q: "derived",            note: "Derived from typical Dolby auditorium ratios; venue rows will override when known." },
+      },
+    },
+
+    // 5 ── Cinemark XD ────────────────────────────────────────────────────────
+    {
+      id: "cinemark_xd",
+      kind: "cinema",
+      name: "Cinemark XD",
+      city: "",
+      state: "Format presets",
+      stateName: "Format presets",
+      isPreset: true,
+      sub: "1.90 · Barco 4K laser · Auro 11.1",
+      tag: "Cinemark XD",
+      blurb: "Cinemark's large-format auditorium: about 70 ft corner-to-corner on a 1.90:1 screen, Barco 4K projection, and Auro 11.1/AuroMax audio. Scope films letterbox; there is no expanded IMAX-format content.",
+      screen: { w: 64.5, h: 34.0, ar: 1.90, geometry: "flat" },
+      seat: { front: 33, mid: 54, back: 76, source: "derived_from_screen_width" },
+      defaultPresentationAr: 1.90,
+      isHybrid: false,
+      presentationModes: [
+        { id: "digital_190", ar: 1.90, label: "1.90 · XD / Flat", enabled: true, isBookingDependent: false, isFilmMode: false, projection: "digital" },
+        { id: "digital_239", ar: 2.39, label: "2.39 · Scope",     enabled: true, isBookingDependent: false, isFilmMode: false, projection: "digital" },
+        { id: "digital_185", ar: 1.85, label: "1.85 · Flat",      enabled: true, isBookingDependent: false, isFilmMode: false, projection: "digital" },
+        { id: "disabled_143", ar: 1.43, label: "1.43 · IMAX full frame", enabled: false, disabledReason: "Cinemark XD is not an IMAX 1.43-capable format", isBookingDependent: false, isFilmMode: false, projection: "digital" },
+      ],
+      projection: proj_cinemark_xd,
+      filmProjection: null,
+      sources: {
+        screen:     { q: "derived",           note: "Face dimensions derived from Cinemark's ~70 ft corner-to-corner XD claim at 1.90:1." },
+        brightness: { q: "community_estimate", note: "~16 fL derived from Barco SP4K-15C/20B specs and XD screen geometry." },
+        contrast:   { q: "trade_reporting",   note: "2,000:1 floor; current Barco SP4K-15C laser installs can reach ~2,700:1." },
+        seat:       { q: "derived",           note: "Derived from typical large multiplex auditorium ratios." },
+      },
+    },
+
+    // 6 ── Standard Multiplex ─────────────────────────────────────────────────
     {
       id: "standard_multiplex",
       kind: "cinema",
@@ -586,7 +710,7 @@ window.LIEMAX_DATA = (function () {
 
     ...generatedImaxVenues,
 
-    // 5 ── OLED Flagship 65" ──────────────────────────────────────────────────
+    // 7 ── OLED Flagship 65" ──────────────────────────────────────────────────
     {
       id: "oled_flagship_65",
       kind: "home",
@@ -615,7 +739,7 @@ window.LIEMAX_DATA = (function () {
       },
     },
 
-    // 6 ── Mini-LED 75" ───────────────────────────────────────────────────────
+    // 8 ── Mini-LED 75" ───────────────────────────────────────────────────────
     {
       id: "miniled_75",
       kind: "home",
