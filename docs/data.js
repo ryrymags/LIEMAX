@@ -14264,6 +14264,28020 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ak_anchorage_regal_tikahtnu_commons_stadium_16_and_imax",
+      "canonicalId": "imax_us_ak_anchorage_regal_tikahtnu_commons_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Tikahtnu Commons Stadium 16 & IMAX",
+      "city": "Anchorage",
+      "state": "AK",
+      "stateName": "Alaska",
+      "isPreset": false,
+      "sub": "Anchorage · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ak_fairbanks_regal_goldstream_16_and_imax",
+      "canonicalId": "imax_us_ak_fairbanks_regal_goldstream_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Goldstream 16 & IMAX",
+      "city": "Fairbanks",
+      "state": "AK",
+      "stateName": "Alaska",
+      "isPreset": false,
+      "sub": "Fairbanks · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 27.559056,
+        "ar": 1.8928571428571428,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.6 x 52.2 ft./ 8.4 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_al_hoover_amc_patton_creek_15_and_imax",
+      "canonicalId": "imax_us_al_hoover_amc_patton_creek_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Patton Creek 15 & IMAX",
+      "city": "Hoover",
+      "state": "AL",
+      "stateName": "Alabama",
+      "isPreset": false,
+      "sub": "Hoover · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 61.351707999999995,
+        "h": 32.8084,
+        "ar": 1.8699999999999999,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.375985959999994,
+        "mid": 92.02756199999999,
+        "back": 138.04134299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.8 x 61.4 ft./ 10.0 x 18.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_al_huntsville_amc_valley_bend_18_and_imax",
+      "canonicalId": "imax_us_al_huntsville_amc_valley_bend_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Valley Bend 18 & IMAX",
+      "city": "Huntsville",
+      "state": "AL",
+      "stateName": "Alabama",
+      "isPreset": false,
+      "sub": "Huntsville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.69554,
+        "h": 34.44882,
+        "ar": 1.7619047619047619,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.8051198,
+        "mid": 91.04331,
+        "back": 136.564965,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.6 x 60.5 ft./ 10.5 x 18.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_al_montgomery_amc_festival_plaza_16_and_imax",
+      "canonicalId": "imax_us_al_montgomery_amc_festival_plaza_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Festival Plaza 16 & IMAX",
+      "city": "Montgomery",
+      "state": "AL",
+      "stateName": "Alabama",
+      "isPreset": false,
+      "sub": "Montgomery · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 26.574804,
+        "ar": 1.8024691358024691,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.6 x 47.9 ft./ 8.1 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_al_tuscaloosa_cmx_hollywood_16_and_imax",
+      "canonicalId": "imax_us_al_tuscaloosa_cmx_hollywood_16_and_imax",
+      "kind": "cinema",
+      "name": "CMX Hollywood 16 & IMAX",
+      "city": "Tuscaloosa",
+      "state": "AL",
+      "stateName": "Alabama",
+      "isPreset": false,
+      "sub": "Tuscaloosa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 27.88714,
+        "ar": 1.9529411764705884,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 54.3 ft./ 8.5 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ar_fayetteville_malco_razorback_and_imax",
+      "canonicalId": "imax_us_ar_fayetteville_malco_razorback_and_imax",
+      "kind": "cinema",
+      "name": "Malco Razorback & IMAX",
+      "city": "Fayetteville",
+      "state": "AR",
+      "stateName": "Arkansas",
+      "isPreset": false,
+      "sub": "Fayetteville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 28.871392000000004,
+        "ar": 1.7954545454545454,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.8 x 51.8 ft./ 8.8 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ar_little_rock_amc_chenal_9_and_imax",
+      "canonicalId": "imax_us_ar_little_rock_amc_chenal_9_and_imax",
+      "kind": "cinema",
+      "name": "AMC Chenal 9 & IMAX",
+      "city": "Little Rock",
+      "state": "AR",
+      "stateName": "Arkansas",
+      "isPreset": false,
+      "sub": "Little Rock · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 42.322836,
+        "ar": 1.6511627906976745,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.3 x 69.9 ft./ 12.9 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_glendale_amc_westgate_20_and_imax",
+      "canonicalId": "imax_us_az_glendale_amc_westgate_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Westgate 20 & IMAX",
+      "city": "Glendale",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Glendale · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.69554,
+        "h": 33.464568,
+        "ar": 1.8137254901960786,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.8051198,
+        "mid": 91.04331,
+        "back": 136.564965,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.5 x 60.7 ft./ 10.2 x 18.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_mesa_amc_supersition_east_12_and_imax",
+      "canonicalId": "imax_us_az_mesa_amc_supersition_east_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Supersition East 12 & IMAX",
+      "city": "Mesa",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Mesa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.070868,
+        "h": 35.104988,
+        "ar": 1.6542056074766356,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.521655159999995,
+        "mid": 87.106302,
+        "back": 130.65945299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.1 x 58.1 ft./ 10.7 x 17.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_phoenix_amc_deer_valley_17_and_imax",
+      "canonicalId": "imax_us_az_phoenix_amc_deer_valley_17_and_imax",
+      "kind": "cinema",
+      "name": "AMC Deer Valley 17 & IMAX",
+      "city": "Phoenix",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Phoenix · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.181104,
+        "h": 28.543307999999996,
+        "ar": 1.793103448275862,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.52756048,
+        "mid": 76.771656,
+        "back": 115.157484,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.5 x 51.3 ft./ 8.7 x 15.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_phoenix_amc_desert_ridge_18_and_imax",
+      "canonicalId": "imax_us_az_phoenix_amc_desert_ridge_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Desert Ridge 18 & IMAX",
+      "city": "Phoenix",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Phoenix · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 29.199476,
+        "ar": 1.8202247191011234,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.2 x 53.1 ft./ 8.9 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_surprise_amc_surprise_pointe_14_and_imax",
+      "canonicalId": "imax_us_az_surprise_amc_surprise_pointe_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Surprise Pointe 14 & IMAX",
+      "city": "Surprise",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Surprise · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.540684,
+        "h": 26.902887999999997,
+        "ar": 1.8414634146341464,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.10039508,
+        "mid": 74.311026,
+        "back": 111.466539,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 49.5 ft./ 8.2 x 15.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_az_tucson_amc_foothills_15_and_imax",
+      "canonicalId": "imax_us_az_tucson_amc_foothills_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Foothills 15 & IMAX",
+      "city": "Tucson",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "sub": "Tucson · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.57218,
+        "h": 23.950132,
+        "ar": 1.9863013698630136,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.3877966,
+        "mid": 71.35827,
+        "back": 107.037405,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.0 x 47.5 ft./ 7.3 x 14.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_alhambra_edwards_renaissance_stadium_14_and_imax",
+      "canonicalId": "imax_us_ca_alhambra_edwards_renaissance_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Renaissance Stadium 14 & IMAX",
+      "city": "Alhambra",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Alhambra · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.524936000000004,
+        "h": 33.136483999999996,
+        "ar": 1.5247524752475248,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.956694320000004,
+        "mid": 75.78740400000001,
+        "back": 113.68110600000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 50.5 ft./ 10.1 x 15.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_aliso_viejo_edwards_aliso_viejo_stadium_20_and_imax",
+      "canonicalId": "imax_us_ca_aliso_viejo_edwards_aliso_viejo_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Aliso Viejo Stadium 20 & IMAX",
+      "city": "Aliso Viejo",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Aliso Viejo · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 34.120736,
+        "ar": 1.5865384615384615,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.0 x 54.0 ft./ 10.4 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_bakersfield_reading_cinemas_valley_plaza_16_and_imax",
+      "canonicalId": "imax_us_ca_bakersfield_reading_cinemas_valley_plaza_16_and_imax",
+      "kind": "cinema",
+      "name": "Reading Cinemas Valley Plaza 16 & IMAX",
+      "city": "Bakersfield",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Bakersfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.398952,
+        "h": 32.480316,
+        "ar": 1.797979797979798,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.80708824,
+        "mid": 87.598428,
+        "back": 131.397642,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.5 x 58.3 ft./ 9.9 x 17.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_brentwood_amc_brentwood_14_and_imax",
+      "canonicalId": "imax_us_ca_brentwood_amc_brentwood_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Brentwood 14 & IMAX",
+      "city": "Brentwood",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Brentwood · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.74278400000001,
+        "h": 35.104988,
+        "ar": 1.6448598130841123,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.236222080000005,
+        "mid": 86.61417600000001,
+        "back": 129.921264,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.2 x 57.7 ft./ 10.7 x 17.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_camarillo_edwards_camarillo_palace_stadium_12_and_imax",
+      "canonicalId": "imax_us_ca_camarillo_edwards_camarillo_palace_stadium_12_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Camarillo Palace Stadium 12 & IMAX",
+      "city": "Camarillo",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Camarillo · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 28.871392000000004,
+        "ar": 1.659090909090909,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.0 x 48.0 ft./ 8.8 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_concord_veranda_luxe_and_imax",
+      "canonicalId": "imax_us_ca_concord_veranda_luxe_and_imax",
+      "kind": "cinema",
+      "name": "Veranda Luxe & IMAX",
+      "city": "Concord",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Concord · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 74.475068,
+        "h": 42.65092,
+        "ar": 1.7461538461538462,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 64.79330915999999,
+        "mid": 111.71260199999999,
+        "back": 167.56890299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.5 x 74.6 ft./ 13.0 x 22.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_covina_amc_covina_30_and_imax",
+      "canonicalId": "imax_us_ca_covina_amc_covina_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Covina 30 & IMAX",
+      "city": "Covina",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Covina · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 27.88714,
+        "ar": 1.9529411764705884,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 54.3 ft./ 8.5 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_dublin_regal_hacienda_crossings_stadium_21_and_imax",
+      "canonicalId": "imax_us_ca_dublin_regal_hacienda_crossings_stadium_21_and_imax",
+      "kind": "cinema",
+      "name": "Regal Hacienda Crossings Stadium 21 & IMAX",
+      "city": "Dublin",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Dublin · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 76.443572,
+        "h": 55.77428,
+        "ar": 1.3705882352941177,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 66.50590764,
+        "mid": 114.665358,
+        "back": 171.998037,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.8 x 76.4 ft./ 17.0 x 23.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_el_cajon_regal_parkway_plaza_18_and_imax",
+      "canonicalId": "imax_us_ca_el_cajon_regal_parkway_plaza_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Parkway Plaza 18 & IMAX",
+      "city": "El Cajon",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "El Cajon · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.524936000000004,
+        "h": 27.559056,
+        "ar": 1.8333333333333333,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.956694320000004,
+        "mid": 75.78740400000001,
+        "back": 113.68110600000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.5 x 50.6 ft./ 8.4 x 15.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_el_dorado_hills_regal_el_dorado_hills_stadium_14_and_imax",
+      "canonicalId": "imax_us_ca_el_dorado_hills_regal_el_dorado_hills_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal El Dorado Hills Stadium 14 & IMAX",
+      "city": "El Dorado Hills",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "El Dorado Hills · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.540684,
+        "h": 31.496063999999997,
+        "ar": 1.5729166666666667,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.10039508,
+        "mid": 74.311026,
+        "back": 111.466539,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 49.5 ft./ 9.6 x 15.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_escondido_regal_escondido_stadium_16_and_imax",
+      "canonicalId": "imax_us_ca_escondido_regal_escondido_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Escondido Stadium 16 & IMAX",
+      "city": "Escondido",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Escondido · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 33.136483999999996,
+        "ar": 1.5346534653465347,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 51.0 ft./ 10.1 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_fairfield_edwards_fairfield_stadium_16_and_imax",
+      "canonicalId": "imax_us_ca_fairfield_edwards_fairfield_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Fairfield Stadium 16 & IMAX",
+      "city": "Fairfield",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Fairfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.228348,
+        "h": 29.52756,
+        "ar": 1.6333333333333333,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.958662759999996,
+        "mid": 72.342522,
+        "back": 108.51378299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 48.2 ft./ 9.0 x 14.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_fresno_edwards_fresno_stadium_22_and_imax",
+      "canonicalId": "imax_us_ca_fresno_edwards_fresno_stadium_22_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Fresno Stadium 22 & IMAX",
+      "city": "Fresno",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Fresno · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_glendora_amc_glendora_12_and_imax",
+      "canonicalId": "imax_us_ca_glendora_amc_glendora_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Glendora 12 & IMAX",
+      "city": "Glendora",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Glendora · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 32.152232000000005,
+        "ar": 1.6224489795918366,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.0 x 52.0 ft./ 9.8 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_long_beach_edwards_long_beach_stadium_26_and_imax",
+      "canonicalId": "imax_us_ca_long_beach_edwards_long_beach_stadium_26_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Long Beach Stadium 26 & IMAX",
+      "city": "Long Beach",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Long Beach · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 33.792652000000004,
+        "ar": 1.6019417475728155,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.8 x 54.0 ft./ 10.3 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_norwalk_amc_norwalk_20_and_imax",
+      "canonicalId": "imax_us_ca_norwalk_amc_norwalk_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Norwalk 20 & IMAX",
+      "city": "Norwalk",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Norwalk · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 26.902887999999997,
+        "ar": 2.0121951219512195,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 54.0 ft./ 8.2 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_ontario_edwards_ontario_palace_stadium_22_and_imax",
+      "canonicalId": "imax_us_ca_ontario_edwards_ontario_palace_stadium_22_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Ontario Palace Stadium 22 & IMAX",
+      "city": "Ontario",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Ontario · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 88.910764,
+        "h": 66.929136,
+        "ar": 1.3284313725490198,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 77.35236468,
+        "mid": 133.36614600000001,
+        "back": 200.049219,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 67.0 x 89.0 ft./ 20.4 x 27.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_rancho_mirage_regal_rancho_mirage_stadium_16_and_imax",
+      "canonicalId": "imax_us_ca_rancho_mirage_regal_rancho_mirage_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Rancho Mirage Stadium 16 & IMAX",
+      "city": "Rancho Mirage",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Rancho Mirage · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 28.543307999999996,
+        "ar": 1.781609195402299,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.4 x 51.0 ft./ 8.7 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_riverbank_galaxy_riverbank_and_imax",
+      "canonicalId": "imax_us_ca_riverbank_galaxy_riverbank_and_imax",
+      "kind": "cinema",
+      "name": "Galaxy Riverbank & IMAX",
+      "city": "Riverbank",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Riverbank · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.866144,
+        "h": 39.698164,
+        "ar": 1.785123966942149,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.65354528,
+        "mid": 106.299216,
+        "back": 159.448824,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.7 x 71.0 ft./ 12.1 x 21.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_riverside_amc_tyler_16_and_imax",
+      "canonicalId": "imax_us_ca_riverside_amc_tyler_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Tyler 16 & IMAX",
+      "city": "Riverside",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Riverside · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.08661599999999,
+        "h": 36.08924,
+        "ar": 1.5818181818181818,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.665355919999996,
+        "mid": 85.62992399999999,
+        "back": 128.444886,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.0 x 57.0 ft./ 11.0 x 17.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_sacramento_regal_delta_shores_14_and_imax",
+      "canonicalId": "imax_us_ca_sacramento_regal_delta_shores_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Delta Shores 14 & IMAX",
+      "city": "Sacramento",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Sacramento · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 30.511812000000003,
+        "ar": 1.7741935483870965,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.4 x 54.1 ft./ 9.3 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_san_diego_amc_mission_valley_20_and_imax",
+      "canonicalId": "imax_us_ca_san_diego_amc_mission_valley_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Mission Valley 20 & IMAX",
+      "city": "San Diego",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "San Diego · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.540684,
+        "h": 25.918636,
+        "ar": 1.9113924050632911,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.10039508,
+        "mid": 74.311026,
+        "back": 111.466539,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.0 x 49.5 ft./ 7.9 x 15.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_san_diego_edwards_mira_mesa_stadium_18_and_imax",
+      "canonicalId": "imax_us_ca_san_diego_edwards_mira_mesa_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Mira Mesa Stadium 18 & IMAX",
+      "city": "San Diego",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "San Diego · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.414699999999996,
+        "h": 36.08924,
+        "ar": 1.5909090909090908,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.95078899999999,
+        "mid": 86.12205,
+        "back": 129.183075,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.0 x 57.5 ft./ 11.0 x 17.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
+      "canonicalId": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Eastridge 15 & IMAX",
+      "city": "San Jose",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "San Jose · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 29.855643999999998,
+        "ar": 1.7362637362637363,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 51.8 ft./ 9.1 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_san_jose_amc_saratoga_14_and_imax",
+      "canonicalId": "imax_us_ca_san_jose_amc_saratoga_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Saratoga 14 & IMAX",
+      "city": "San Jose",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "San Jose · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 55.44619599999999,
+        "h": 29.52756,
+        "ar": 1.8777777777777775,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 48.238190519999996,
+        "mid": 83.169294,
+        "back": 124.75394099999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.7 x 55.4 ft./ 9.0 x 16.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_santa_clarita_edwards_valencia_stadium_12_and_imax",
+      "canonicalId": "imax_us_ca_santa_clarita_edwards_valencia_stadium_12_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Valencia Stadium 12 & IMAX",
+      "city": "Santa Clarita",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Santa Clarita · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 68.56955599999999,
+        "h": 41.0105,
+        "ar": 1.672,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 59.655513719999995,
+        "mid": 102.854334,
+        "back": 154.281501,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 41.0 x 68.5 ft./ 12.5 x 20.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_simi_valley_regal_civic_center_stadium_16_and_imax",
+      "canonicalId": "imax_us_ca_simi_valley_regal_civic_center_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Civic Center Stadium 16 & IMAX",
+      "city": "Simi Valley",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Simi Valley · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 27.88714,
+        "ar": 1.6823529411764706,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.0 x 47.0 ft./ 8.5 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_south_gate_edwards_south_gate_stadium_20_and_imax",
+      "canonicalId": "imax_us_ca_south_gate_edwards_south_gate_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Edwards South Gate Stadium 20 & IMAX",
+      "city": "South Gate",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "South Gate · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.070868,
+        "h": 37.073492,
+        "ar": 1.566371681415929,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.521655159999995,
+        "mid": 87.106302,
+        "back": 130.65945299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 37.0 x 58.0 ft./ 11.3 x 17.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_stockton_regal_stockton_city_center_stadium_16_and_imax",
+      "canonicalId": "imax_us_ca_stockton_regal_stockton_city_center_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Stockton City Center Stadium 16 & IMAX",
+      "city": "Stockton",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Stockton · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.821524000000004,
+        "h": 31.496063999999997,
+        "ar": 1.6770833333333335,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.954725880000005,
+        "mid": 79.232286,
+        "back": 118.84842900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 52.8 ft./ 9.6 x 16.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_temecula_edwards_temecula_stadium_15_and_imax",
+      "canonicalId": "imax_us_ca_temecula_edwards_temecula_stadium_15_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Temecula Stadium 15 & IMAX",
+      "city": "Temecula",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Temecula · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 33.464568,
+        "ar": 1.519607843137255,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.5 x 51.0 ft./ 10.2 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_torrance_amc_rolling_hills_20_and_imax",
+      "canonicalId": "imax_us_ca_torrance_amc_rolling_hills_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Rolling Hills 20 & IMAX",
+      "city": "Torrance",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Torrance · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.587928,
+        "h": 25.262468000000002,
+        "ar": 1.844155844155844,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.531497359999996,
+        "mid": 69.881892,
+        "back": 104.82283799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.1 x 46.7 ft./ 7.7 x 14.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ca_woodland_hills_amc_promenade_16_and_imax",
+      "canonicalId": "imax_us_ca_woodland_hills_amc_promenade_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Promenade 16 & IMAX",
+      "city": "Woodland Hills",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "sub": "Woodland Hills · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 26.902887999999997,
+        "ar": 1.8902439024390245,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 51.0 ft./ 8.2 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_aurora_amc_arapahoe_crossing_16_and_imax",
+      "canonicalId": "imax_us_co_aurora_amc_arapahoe_crossing_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Arapahoe Crossing 16 & IMAX",
+      "city": "Aurora",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Aurora · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.070868,
+        "h": 29.855643999999998,
+        "ar": 1.945054945054945,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.521655159999995,
+        "mid": 87.106302,
+        "back": 130.65945299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.0 x 58.0 ft./ 9.1 x 17.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
+      "canonicalId": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Flatiron Crossing 14 & IMAX",
+      "city": "Broomfield",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Broomfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 45.603676,
+        "h": 28.215224,
+        "ar": 1.616279069767442,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.67519812,
+        "mid": 68.405514,
+        "back": 102.608271,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.1 x 45.6 ft./ 8.6 x 13.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_colorado_springs_cinemark_carefree_circle_and_imax",
+      "canonicalId": "imax_us_co_colorado_springs_cinemark_carefree_circle_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark Carefree Circle & IMAX",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Colorado Springs · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_denver_denver_museum_of_nature_and_science",
+      "canonicalId": "imax_us_co_denver_denver_museum_of_nature_and_science",
+      "kind": "cinema",
+      "name": "Denver Museum of Nature and Science",
+      "city": "Denver",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 64.632548,
+        "h": 40.682416,
+        "ar": 1.5887096774193548,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 56.23031676,
+        "mid": 96.948822,
+        "back": 145.423233,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.6 x 64.6 ft./ 12.4 x 19.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_denver_ua_colorado_center_stadium_9_and_imax",
+      "canonicalId": "imax_us_co_denver_ua_colorado_center_stadium_9_and_imax",
+      "kind": "cinema",
+      "name": "UA Colorado Center Stadium 9 & IMAX",
+      "city": "Denver",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.866144,
+        "h": 41.994752000000005,
+        "ar": 1.6875,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.65354528,
+        "mid": 106.299216,
+        "back": 159.448824,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 71.0 ft./ 12.8 x 21.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_lakewood_regal_ua_colorado_mills_stadium_16_and_imax",
+      "canonicalId": "imax_us_co_lakewood_regal_ua_colorado_mills_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal UA Colorado Mills Stadium 16 & IMAX",
+      "city": "Lakewood",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Lakewood · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.102364,
+        "h": 42.979003999999996,
+        "ar": 1.3053435114503817,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 48.80905668,
+        "mid": 84.153546,
+        "back": 126.23031900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 43.0 x 56.0 ft./ 13.1 x 17.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_westminster_amc_orchards_12_and_imax",
+      "canonicalId": "imax_us_co_westminster_amc_orchards_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Orchards 12 & IMAX",
+      "city": "Westminster",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "sub": "Westminster · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.181104,
+        "h": 32.8084,
+        "ar": 1.56,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.52756048,
+        "mid": 76.771656,
+        "back": 115.157484,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.9 x 51.3 ft./ 10.0 x 15.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ct_danbury_amc_danbury_16_and_imax",
+      "canonicalId": "imax_us_ct_danbury_amc_danbury_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Danbury 16 & IMAX",
+      "city": "Danbury",
+      "state": "CT",
+      "stateName": "Connecticut",
+      "isPreset": false,
+      "sub": "Danbury · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.540684,
+        "h": 27.559056,
+        "ar": 1.7976190476190474,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.10039508,
+        "mid": 74.311026,
+        "back": 111.466539,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.5 x 49.6 ft./ 8.4 x 15.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ct_manchester_buckland_hills_18_and_imax",
+      "canonicalId": "imax_us_ct_manchester_buckland_hills_18_and_imax",
+      "kind": "cinema",
+      "name": "Buckland Hills 18 & IMAX",
+      "city": "Manchester",
+      "state": "CT",
+      "stateName": "Connecticut",
+      "isPreset": false,
+      "sub": "Manchester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 22.96588,
+        "ar": 2.085714285714286,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 23.0 x 48.0 ft./ 7.0 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ct_plainville_amc_plainville_20_and_imax",
+      "canonicalId": "imax_us_ct_plainville_amc_plainville_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Plainville 20 & IMAX",
+      "city": "Plainville",
+      "state": "CT",
+      "stateName": "Connecticut",
+      "isPreset": false,
+      "sub": "Plainville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 35.104988,
+        "ar": 1.7102803738317758,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 60.0 ft./ 10.7 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_de_wilmington_penn_cinema_riverfront_and_imax",
+      "canonicalId": "imax_us_de_wilmington_penn_cinema_riverfront_and_imax",
+      "kind": "cinema",
+      "name": "Penn Cinema Riverfront & IMAX",
+      "city": "Wilmington",
+      "state": "DE",
+      "stateName": "Delaware",
+      "isPreset": false,
+      "sub": "Wilmington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 75.131236,
+        "h": 47.900264,
+        "ar": 1.5684931506849316,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 65.36417532,
+        "mid": 112.696854,
+        "back": 169.045281,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 48.0 x 75.0 ft./ 14.6 x 22.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_altamonte_amc_altamonte_mall_18_and_imax",
+      "canonicalId": "imax_us_fl_altamonte_amc_altamonte_mall_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Altamonte Mall 18 & IMAX",
+      "city": "Altamonte",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Altamonte · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 28.543307999999996,
+        "ar": 1.8160919540229887,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.5 x 51.8 ft./ 8.7 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_brandon_amc_the_regency_20_and_imax",
+      "canonicalId": "imax_us_fl_brandon_amc_the_regency_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC The Regency 20 & IMAX",
+      "city": "Brandon",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Brandon · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 23.622048,
+        "ar": 1.9861111111111112,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 23.6 x 46.9 ft./ 7.2 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_davenport_cinepolis_polk_county_and_imax",
+      "canonicalId": "imax_us_fl_davenport_cinepolis_polk_county_and_imax",
+      "kind": "cinema",
+      "name": "Cinepolis Polk County & IMAX",
+      "city": "Davenport",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Davenport · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.398952,
+        "h": 32.152232000000005,
+        "ar": 1.816326530612245,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.80708824,
+        "mid": 87.598428,
+        "back": 131.397642,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.1 x 58.5 ft./ 9.8 x 17.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_delray_beach_frank_delray_marketplace_stadium_12_and_imax",
+      "canonicalId": "imax_us_fl_delray_beach_frank_delray_marketplace_stadium_12_and_imax",
+      "kind": "cinema",
+      "name": "Frank Delray MarketPlace Stadium 12 & IMAX",
+      "city": "Delray Beach",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Delray Beach · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 84.973756,
+        "h": 55.118112,
+        "ar": 1.5416666666666665,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 73.92716772,
+        "mid": 127.460634,
+        "back": 191.19095099999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.0 x 85.0 ft./ 16.8 x 25.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_destin_amc_destin_commons_14_and_imax",
+      "canonicalId": "imax_us_fl_destin_amc_destin_commons_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Destin Commons 14 & IMAX",
+      "city": "Destin",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Destin · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.08661599999999,
+        "h": 32.152232000000005,
+        "ar": 1.7755102040816324,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.665355919999996,
+        "mid": 85.62992399999999,
+        "back": 128.444886,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.0 x 56.9 ft./ 9.8 x 17.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_fort_myers_regal_gulf_coast_town_center_16_and_imax",
+      "canonicalId": "imax_us_fl_fort_myers_regal_gulf_coast_town_center_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Gulf Coast Town Center 16 & IMAX",
+      "city": "Fort Myers",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Fort Myers · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 31.824147999999997,
+        "ar": 1.6804123711340209,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.8 x 53.5 ft./ 9.7 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_jacksonville_amc_regency_24_and_imax",
+      "canonicalId": "imax_us_fl_jacksonville_amc_regency_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Regency 24 & IMAX",
+      "city": "Jacksonville",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Jacksonville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 55.118112,
+        "h": 30.183728,
+        "ar": 1.8260869565217392,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.952757440000006,
+        "mid": 82.67716800000001,
+        "back": 124.015752,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.2 x 55.1 ft./ 9.2 x 16.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_lakeland_cobb_lakeside_village_18_cinemas_and_imax",
+      "canonicalId": "imax_us_fl_lakeland_cobb_lakeside_village_18_cinemas_and_imax",
+      "kind": "cinema",
+      "name": "Cobb Lakeside Village 18 Cinemas & IMAX",
+      "city": "Lakeland",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Lakeland · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 29.52756,
+        "ar": 1.8111111111111111,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.6 x 53.3 ft./ 9.0 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_merritt_island_cmx_merritt_square_16_and_imax",
+      "canonicalId": "imax_us_fl_merritt_island_cmx_merritt_square_16_and_imax",
+      "kind": "cinema",
+      "name": "CMX Merritt Square 16 & IMAX",
+      "city": "Merritt Island",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Merritt Island · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 29.199476,
+        "ar": 1.8651685393258428,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.2 x 54.4 ft./ 8.9 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_miami_carnival_cruise_lines",
+      "canonicalId": "imax_us_fl_miami_carnival_cruise_lines",
+      "kind": "cinema",
+      "name": "Carnival Cruise Lines",
+      "city": "Miami",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Miami · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 43.307088,
+        "h": 23.950132,
+        "ar": 1.8082191780821917,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 37.67716656,
+        "mid": 64.960632,
+        "back": 97.440948,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.1 x 43.3 ft./ 7.3 x 13.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_miami_carnival_vista",
+      "canonicalId": "imax_us_fl_miami_carnival_vista",
+      "kind": "cinema",
+      "name": "Carnival Vista",
+      "city": "Miami",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Miami · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 43.307088,
+        "h": 23.950132,
+        "ar": 1.8082191780821917,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 37.67716656,
+        "mid": 64.960632,
+        "back": 97.440948,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.1 x 43.3 ft./ 7.3 x 13.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_miami_regal_kendall_village_stadium_16_and_imax",
+      "canonicalId": "imax_us_fl_miami_regal_kendall_village_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Kendall Village Stadium 16 & IMAX",
+      "city": "Miami",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Miami · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 31.16798,
+        "ar": 1.7157894736842105,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.1 x 53.3 ft./ 9.5 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_miami_beach_regal_south_beach_stadium_18_and_imax",
+      "canonicalId": "imax_us_fl_miami_beach_regal_south_beach_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal South Beach Stadium 18 & IMAX",
+      "city": "Miami Beach",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Miami Beach · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.259844,
+        "h": 25.918636,
+        "ar": 1.7848101265822784,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.24606428,
+        "mid": 69.38976600000001,
+        "back": 104.084649,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.8 x 46.4 ft./ 7.9 x 14.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_ocala_regal_hollywood_16_and_imax",
+      "canonicalId": "imax_us_fl_ocala_regal_hollywood_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Hollywood 16 & IMAX",
+      "city": "Ocala",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Ocala · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 26.902887999999997,
+        "ar": 1.853658536585366,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 50.0 ft./ 8.2 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_oldsmar_amc_woodland_square_20_and_imax",
+      "canonicalId": "imax_us_fl_oldsmar_amc_woodland_square_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Woodland Square 20 & IMAX",
+      "city": "Oldsmar",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Oldsmar · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.430448,
+        "h": 31.16798,
+        "ar": 1.8105263157894735,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.09448976,
+        "mid": 84.64567199999999,
+        "back": 126.968508,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.2 x 56.4 ft./ 9.5 x 17.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_orange_park_amc_orange_park_24_and_imax",
+      "canonicalId": "imax_us_fl_orange_park_amc_orange_park_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Orange Park 24 & IMAX",
+      "city": "Orange Park",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Orange Park · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.070868,
+        "h": 32.152232000000005,
+        "ar": 1.8061224489795917,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.521655159999995,
+        "mid": 87.106302,
+        "back": 130.65945299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.2 x 58.1 ft./ 9.8 x 17.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_orlando_regal_pointe_orlando_stadium_20_and_imax",
+      "canonicalId": "imax_us_fl_orlando_regal_pointe_orlando_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Pointe Orlando Stadium 20 & IMAX",
+      "city": "Orlando",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 84.645672,
+        "h": 63.97638,
+        "ar": 1.323076923076923,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 73.64173464000001,
+        "mid": 126.96850800000001,
+        "back": 190.452762,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 64.0 x 84.7 ft./ 19.5 x 25.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_orlando_regal_waterford_lakes_stadium_20_and_imax",
+      "canonicalId": "imax_us_fl_orlando_regal_waterford_lakes_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Waterford Lakes Stadium 20 & IMAX",
+      "city": "Orlando",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 28.871392000000004,
+        "ar": 1.727272727272727,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.9 x 49.9 ft./ 8.8 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_panama_city_beach_grand_pier_park_16_and_imax",
+      "canonicalId": "imax_us_fl_panama_city_beach_grand_pier_park_16_and_imax",
+      "kind": "cinema",
+      "name": "Grand Pier Park 16 & IMAX",
+      "city": "Panama City Beach",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Panama City Beach · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.430448,
+        "h": 31.824147999999997,
+        "ar": 1.77319587628866,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.09448976,
+        "mid": 84.64567199999999,
+        "back": 126.968508,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.7 x 56.4 ft./ 9.7 x 17.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_pensacola_amc_bayou_15_and_imax",
+      "canonicalId": "imax_us_fl_pensacola_amc_bayou_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Bayou 15 & IMAX",
+      "city": "Pensacola",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Pensacola · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.367456,
+        "h": 34.44882,
+        "ar": 1.7523809523809522,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.519686719999996,
+        "mid": 90.55118399999999,
+        "back": 135.826776,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.6 x 60.5 ft./ 10.5 x 18.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_saint_augustine_world_golf_hall_of_fame",
+      "canonicalId": "imax_us_fl_saint_augustine_world_golf_hall_of_fame",
+      "kind": "cinema",
+      "name": "World Golf Hall of Fame",
+      "city": "Saint Augustine",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Saint Augustine · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 80.05249599999999,
+        "h": 59.05512,
+        "ar": 1.3555555555555554,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 69.64567152,
+        "mid": 120.07874399999999,
+        "back": 180.118116,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 59.2 x 80.0 ft./ 18.0 x 24.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_sarasota_amc_sarasota_12_and_imax",
+      "canonicalId": "imax_us_fl_sarasota_amc_sarasota_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Sarasota 12 & IMAX",
+      "city": "Sarasota",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Sarasota · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 27.88714,
+        "ar": 1.8470588235294116,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.0 x 51.4 ft./ 8.5 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_south_miami_amc_sunset_place_24_and_imax",
+      "canonicalId": "imax_us_fl_south_miami_amc_sunset_place_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Sunset Place 24 & IMAX",
+      "city": "South Miami",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "South Miami · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.430448,
+        "h": 29.855643999999998,
+        "ar": 1.89010989010989,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.09448976,
+        "mid": 84.64567199999999,
+        "back": 126.968508,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 56.4 ft./ 9.1 x 17.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_sunrise_regal_sawgrass_23_and_imax",
+      "canonicalId": "imax_us_fl_sunrise_regal_sawgrass_23_and_imax",
+      "kind": "cinema",
+      "name": "Regal Sawgrass 23 & IMAX",
+      "city": "Sunrise",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Sunrise · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 29.855643999999998,
+        "ar": 1.7912087912087913,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 53.5 ft./ 9.1 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_tallahassee_amc_tallahassee_mall_20_and_imax",
+      "canonicalId": "imax_us_fl_tallahassee_amc_tallahassee_mall_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Tallahassee Mall 20 & IMAX",
+      "city": "Tallahassee",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Tallahassee · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.383204000000006,
+        "h": 33.136483999999996,
+        "ar": 1.7920792079207923,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.663387480000004,
+        "mid": 89.07480600000001,
+        "back": 133.612209,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.1 x 59.4 ft./ 10.1 x 18.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_tallahassee_challenger_learning_center",
+      "canonicalId": "imax_us_fl_tallahassee_challenger_learning_center",
+      "kind": "cinema",
+      "name": "Challenger Learning Center",
+      "city": "Tallahassee",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "Tallahassee · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 50.0 x 72.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_west_melbourne_amc_west_melbourne_12_and_imax",
+      "canonicalId": "imax_us_fl_west_melbourne_amc_west_melbourne_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC West Melbourne 12 & IMAX",
+      "city": "West Melbourne",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "sub": "West Melbourne · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 64.30446400000001,
+        "h": 34.776904,
+        "ar": 1.8490566037735852,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 55.94488368000001,
+        "mid": 96.45669600000002,
+        "back": 144.68504400000003,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.8 x 64.3 ft./ 10.6 x 19.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_alpharetta_amc_north_point_mall_14_and_imax",
+      "canonicalId": "imax_us_ga_alpharetta_amc_north_point_mall_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC North Point Mall 14 & IMAX",
+      "city": "Alpharetta",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Alpharetta · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 29.855643999999998,
+        "ar": 1.7912087912087913,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 53.3 ft./ 9.1 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_atlanta_regal_atlantic_station_stadium_16_and_imax",
+      "canonicalId": "imax_us_ga_atlanta_regal_atlantic_station_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Atlantic Station Stadium 16 & IMAX",
+      "city": "Atlanta",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Atlanta · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.430448,
+        "h": 31.824147999999997,
+        "ar": 1.77319587628866,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.09448976,
+        "mid": 84.64567199999999,
+        "back": 126.968508,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.9 x 56.5 ft./ 9.7 x 17.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_augusta_regal_augusta_exchange_stadium_20_and_imax",
+      "canonicalId": "imax_us_ga_augusta_regal_augusta_exchange_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Augusta Exchange Stadium 20 & IMAX",
+      "city": "Augusta",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Augusta · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.244096,
+        "h": 28.215224,
+        "ar": 1.6744186046511629,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.10236352,
+        "mid": 70.86614399999999,
+        "back": 106.299216,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.2 x 47.2 ft./ 8.6 x 14.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_columbus_amc_columbus_park_15_and_imax",
+      "canonicalId": "imax_us_ga_columbus_amc_columbus_park_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Columbus Park 15 & IMAX",
+      "city": "Columbus",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Columbus · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 74.146984,
+        "h": 40.026247999999995,
+        "ar": 1.852459016393443,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 64.50787608,
+        "mid": 111.220476,
+        "back": 166.830714,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 74.0 ft./ 12.2 x 22.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_cumming_amc_avenue_forsyth_12_and_imax",
+      "canonicalId": "imax_us_ga_cumming_amc_avenue_forsyth_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Avenue Forsyth 12 & IMAX",
+      "city": "Cumming",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Cumming · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 28.871392000000004,
+        "ar": 1.7954545454545454,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.0 x 51.9 ft./ 8.8 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_douglasville_regal_arbor_place_stadium_18_and_imax",
+      "canonicalId": "imax_us_ga_douglasville_regal_arbor_place_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Arbor Place Stadium 18 & IMAX",
+      "city": "Douglasville",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Douglasville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 26.902887999999997,
+        "ar": 1.853658536585366,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 50.0 ft./ 8.2 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_lithonia_stonecrest_16_and_imax",
+      "canonicalId": "imax_us_ga_lithonia_stonecrest_16_and_imax",
+      "kind": "cinema",
+      "name": "Stonecrest 16 & IMAX",
+      "city": "Lithonia",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Lithonia · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 28.543307999999996,
+        "ar": 1.8160919540229887,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.6 x 51.7 ft./ 8.7 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_macon_amstar_16_and_imax",
+      "canonicalId": "imax_us_ga_macon_amstar_16_and_imax",
+      "kind": "cinema",
+      "name": "AmStar 16 & IMAX",
+      "city": "Macon",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Macon · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 45.93176,
+        "h": 23.293964,
+        "ar": 1.971830985915493,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.960631199999995,
+        "mid": 68.89764,
+        "back": 103.34646,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 23.1 x 46.0 ft./ 7.1 x 14.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ga_morrow_amc_southlake_24_and_imax",
+      "canonicalId": "imax_us_ga_morrow_amc_southlake_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Southlake 24 & IMAX",
+      "city": "Morrow",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "sub": "Morrow · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.398952,
+        "h": 32.480316,
+        "ar": 1.797979797979798,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.80708824,
+        "mid": 87.598428,
+        "back": 131.397642,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.5 x 58.4 ft./ 9.9 x 17.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_hi_honolulu_regal_dole_cannery_stadium_18_and_imax",
+      "canonicalId": "imax_us_hi_honolulu_regal_dole_cannery_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Dole Cannery Stadium 18 & IMAX",
+      "city": "Honolulu",
+      "state": "HI",
+      "stateName": "Hawaii",
+      "isPreset": false,
+      "sub": "Honolulu · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.821524000000004,
+        "h": 30.839896,
+        "ar": 1.7127659574468086,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.954725880000005,
+        "mid": 79.232286,
+        "back": 118.84842900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.8 x 52.8 ft./ 9.4 x 16.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ia_council_bluffs_amc_star_council_bluffs_17_and_imax",
+      "canonicalId": "imax_us_ia_council_bluffs_amc_star_council_bluffs_17_and_imax",
+      "kind": "cinema",
+      "name": "AMC Star Council Bluffs 17 & IMAX",
+      "city": "Council Bluffs",
+      "state": "IA",
+      "stateName": "Iowa",
+      "isPreset": false,
+      "sub": "Council Bluffs · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 43.963256,
+        "ar": 1.5895522388059702,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 44.0 x 70.0 ft./ 13.4 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ia_davenport_davenport_53_and_imax",
+      "canonicalId": "imax_us_ia_davenport_davenport_53_and_imax",
+      "kind": "cinema",
+      "name": "Davenport 53 & IMAX",
+      "city": "Davenport",
+      "state": "IA",
+      "stateName": "Iowa",
+      "isPreset": false,
+      "sub": "Davenport · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.790028,
+        "h": 28.871392000000004,
+        "ar": 1.8977272727272725,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.66732436,
+        "mid": 82.185042,
+        "back": 123.277563,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.8 x 54.8 ft./ 8.8 x 16.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_id_boise_edwards_boise_stadium_22_and_imax",
+      "canonicalId": "imax_us_id_boise_edwards_boise_stadium_22_and_imax",
+      "kind": "cinema",
+      "name": "Edwards Boise Stadium 22 & IMAX",
+      "city": "Boise",
+      "state": "ID",
+      "stateName": "Idaho",
+      "isPreset": false,
+      "sub": "Boise · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 60.039372,
+        "ar": 1.1639344262295082,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 59.9 x 70.0 ft./ 18.3 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_bloomington_marcus_bloomington_galaxy_14_and",
+      "canonicalId": "imax_us_il_bloomington_marcus_bloomington_galaxy_14_and",
+      "kind": "cinema",
+      "name": "Marcus Bloomington Galaxy 14 &",
+      "city": "Bloomington",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Bloomington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.944884,
+        "h": 36.745408,
+        "ar": 1.7946428571428574,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 57.372049080000004,
+        "mid": 98.917326,
+        "back": 148.375989,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.8 x 65.8 ft./ 11.2 x 20.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_chicago_regal_city_north_stadium_14_and_imax",
+      "canonicalId": "imax_us_il_chicago_regal_city_north_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal City North Stadium 14 & IMAX",
+      "city": "Chicago",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Chicago · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 29.52756,
+        "ar": 1.7222222222222223,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.6 x 50.7 ft./ 9.0 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_edwardsville_amc_edwardsville_12_and_imax",
+      "canonicalId": "imax_us_il_edwardsville_amc_edwardsville_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Edwardsville 12 & IMAX",
+      "city": "Edwardsville",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Edwardsville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 27.559056,
+        "ar": 1.8690476190476188,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.5 x 51.5 ft./ 8.4 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_hodgkins_amc_quarry_14_and_imax",
+      "canonicalId": "imax_us_il_hodgkins_amc_quarry_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Quarry 14 & IMAX",
+      "city": "Hodgkins",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Hodgkins · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 25.918636,
+        "ar": 1.9240506329113922,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.9 x 49.9 ft./ 7.9 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_lincolnshire_regal_lincolnshire_stadium_21_and_imax",
+      "canonicalId": "imax_us_il_lincolnshire_regal_lincolnshire_stadium_21_and_imax",
+      "kind": "cinema",
+      "name": "Regal Lincolnshire Stadium 21 & IMAX",
+      "city": "Lincolnshire",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Lincolnshire · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_lombard_amc_dine_in_yorktown_18",
+      "canonicalId": "imax_us_il_lombard_amc_dine_in_yorktown_18",
+      "kind": "cinema",
+      "name": "AMC DINE-IN Yorktown 18",
+      "city": "Lombard",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Lombard · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 25.262468000000002,
+        "ar": 1.9740259740259738,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.3 x 49.9 ft./ 7.7 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_naperville_amc_naperville_16_and_imax",
+      "canonicalId": "imax_us_il_naperville_amc_naperville_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Naperville 16 & IMAX",
+      "city": "Naperville",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Naperville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 27.230972,
+        "ar": 1.8674698795180722,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.3 x 50.8 ft./ 8.3 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_new_lenox_amc_showplace_new_lenox_14_and_imax",
+      "canonicalId": "imax_us_il_new_lenox_amc_showplace_new_lenox_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Showplace New Lenox 14 & IMAX",
+      "city": "New Lenox",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "New Lenox · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 45.93176,
+        "h": 25.262468000000002,
+        "ar": 1.8181818181818181,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.960631199999995,
+        "mid": 68.89764,
+        "back": 103.34646,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.4 x 46.0 ft./ 7.7 x 14.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_niles_amc_niles_12_and_imax",
+      "canonicalId": "imax_us_il_niles_amc_niles_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Niles 12 & IMAX",
+      "city": "Niles",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Niles · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.664044000000004,
+        "h": 33.464568,
+        "ar": 1.8725490196078434,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 54.517718280000004,
+        "mid": 93.99606600000001,
+        "back": 140.994099,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.4 x 62.8 ft./ 10.2 x 19.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_oak_brook_amc_oakbrook_12_and_imax",
+      "canonicalId": "imax_us_il_oak_brook_amc_oakbrook_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Oakbrook 12 & IMAX",
+      "city": "Oak Brook",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Oak Brook · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 29.855643999999998,
+        "ar": 1.7912087912087913,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.8 x 53.4 ft./ 9.1 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_peoria_amc_grand_prairie_18_and_imax",
+      "canonicalId": "imax_us_il_peoria_amc_grand_prairie_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Grand Prairie 18 & IMAX",
+      "city": "Peoria",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Peoria · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 29.855643999999998,
+        "ar": 2.010989010989011,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.0 x 60.0 ft./ 9.1 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_rockford_amc_rockford_16_and_imax",
+      "canonicalId": "imax_us_il_rockford_amc_rockford_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Rockford 16 & IMAX",
+      "city": "Rockford",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Rockford · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_schaumburg_amc_streets_of_woodfield_and_imax",
+      "canonicalId": "imax_us_il_schaumburg_amc_streets_of_woodfield_and_imax",
+      "kind": "cinema",
+      "name": "AMC Streets of Woodfield & IMAX",
+      "city": "Schaumburg",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Schaumburg · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 27.88714,
+        "ar": 1.8235294117647058,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.9 x 50.9 ft./ 8.5 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_skokie_amc_village_crossing_18_and_imax",
+      "canonicalId": "imax_us_il_skokie_amc_village_crossing_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Village Crossing 18 & IMAX",
+      "city": "Skokie",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Skokie · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 29.855643999999998,
+        "ar": 1.7912087912087913,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 53.5 ft./ 9.1 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_south_barrington_amc_south_barrington_30_and_imax",
+      "canonicalId": "imax_us_il_south_barrington_amc_south_barrington_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC South Barrington 30 & IMAX",
+      "city": "South Barrington",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "South Barrington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.664044000000004,
+        "h": 34.120736,
+        "ar": 1.8365384615384617,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 54.517718280000004,
+        "mid": 93.99606600000001,
+        "back": 140.994099,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.1 x 62.7 ft./ 10.4 x 19.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_springfield_amc_springfield_12_and_imax",
+      "canonicalId": "imax_us_il_springfield_amc_springfield_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Springfield 12 & IMAX",
+      "city": "Springfield",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Springfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 45.93176,
+        "h": 25.590552,
+        "ar": 1.794871794871795,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.960631199999995,
+        "mid": 68.89764,
+        "back": 103.34646,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.5 x 46.0 ft./ 7.8 x 14.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_il_woodridge_cinemark_seven_bridges_and_imax",
+      "canonicalId": "imax_us_il_woodridge_cinemark_seven_bridges_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark @ Seven Bridges & IMAX",
+      "city": "Woodridge",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "sub": "Woodridge · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 49.868767999999996,
+        "ar": 1.4013157894736843,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 50.0 x 70.0 ft./ 15.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_evansville_showplace_cinemas_east_and_imax",
+      "canonicalId": "imax_us_in_evansville_showplace_cinemas_east_and_imax",
+      "kind": "cinema",
+      "name": "Showplace Cinemas East & IMAX",
+      "city": "Evansville",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Evansville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 44.29134,
+        "ar": 1.5777777777777777,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 44.3 x 69.8 ft./ 13.5 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_indianapolis_amc_castleton_square_14_and_imax",
+      "canonicalId": "imax_us_in_indianapolis_amc_castleton_square_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Castleton Square 14 & IMAX",
+      "city": "Indianapolis",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.181104,
+        "h": 28.543307999999996,
+        "ar": 1.793103448275862,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.52756048,
+        "mid": 76.771656,
+        "back": 115.157484,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.5 x 51.2 ft./ 8.7 x 15.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_indianapolis_amc_indianapolis_17_and_imax",
+      "canonicalId": "imax_us_in_indianapolis_amc_indianapolis_17_and_imax",
+      "kind": "cinema",
+      "name": "AMC Indianapolis 17 & IMAX",
+      "city": "Indianapolis",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 41.994752000000005,
+        "ar": 1.6640625,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 70.0 ft./ 12.8 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_indianapolis_amc_traders_point_12_and_imax",
+      "canonicalId": "imax_us_in_indianapolis_amc_traders_point_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Traders Point 12 & IMAX",
+      "city": "Indianapolis",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.196852,
+        "h": 25.918636,
+        "ar": 1.9367088607594938,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.67126124,
+        "mid": 75.295278,
+        "back": 112.942917,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.9 x 50.1 ft./ 7.9 x 15.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_muncie_amc_muncie_12_and_imax",
+      "canonicalId": "imax_us_in_muncie_amc_muncie_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Muncie 12 & IMAX",
+      "city": "Muncie",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Muncie · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 45.275592,
+        "h": 24.278216,
+        "ar": 1.864864864864865,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.38976504,
+        "mid": 67.913388,
+        "back": 101.87008200000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.3 x 45.3 ft./ 7.4 x 13.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_in_schererville_amc_schererville_16_and_imax",
+      "canonicalId": "imax_us_in_schererville_amc_schererville_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Schererville 16 & IMAX",
+      "city": "Schererville",
+      "state": "IN",
+      "stateName": "Indiana",
+      "isPreset": false,
+      "sub": "Schererville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 25.262468000000002,
+        "ar": 1.9740259740259738,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.3 x 50.0 ft./ 7.7 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
+      "canonicalId": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Legends 14 & IMAX",
+      "city": "Kansas City",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "sub": "Kansas City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 83.98950400000001,
+        "h": 47.57218,
+        "ar": 1.7655172413793105,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 73.07086848000002,
+        "mid": 125.98425600000002,
+        "back": 188.97638400000002,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 47.6 x 84.0 ft./ 14.5 x 25.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_leawood_amc_town_center_20_and_imax",
+      "canonicalId": "imax_us_ks_leawood_amc_town_center_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Town Center 20 & IMAX",
+      "city": "Leawood",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "sub": "Leawood · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 27.88714,
+        "ar": 1.788235294117647,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 50.0 ft./ 8.5 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_manhattan_amc_dine_in_manhattan_13_and_imax",
+      "canonicalId": "imax_us_ks_manhattan_amc_dine_in_manhattan_13_and_imax",
+      "kind": "cinema",
+      "name": "AMC Dine-In Manhattan 13 & IMAX",
+      "city": "Manhattan",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "sub": "Manhattan · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 75.131236,
+        "h": 40.026247999999995,
+        "ar": 1.8770491803278688,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 65.36417532,
+        "mid": 112.696854,
+        "back": 169.045281,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 75.0 ft./ 12.2 x 22.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_olathe_amc_studio_28_and_imax",
+      "canonicalId": "imax_us_ks_olathe_amc_studio_28_and_imax",
+      "kind": "cinema",
+      "name": "AMC Studio 28 & IMAX",
+      "city": "Olathe",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "sub": "Olathe · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 31.496063999999997,
+        "ar": 1.65625,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 52.2 ft./ 9.6 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_wichita_regal_warren_west_17_and_imax",
+      "canonicalId": "imax_us_ks_wichita_regal_warren_west_17_and_imax",
+      "kind": "cinema",
+      "name": "Regal Warren West 17 & IMAX",
+      "city": "Wichita",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "sub": "Wichita · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 85.95800799999999,
+        "h": 58.070868,
+        "ar": 1.480225988700565,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 74.78346696,
+        "mid": 128.93701199999998,
+        "back": 193.40551799999997,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 58.0 x 86.0 ft./ 17.7 x 26.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ky_lexington_regal_hamburg_pavilion_stadium",
+      "canonicalId": "imax_us_ky_lexington_regal_hamburg_pavilion_stadium",
+      "kind": "cinema",
+      "name": "Regal Hamburg Pavilion Stadium",
+      "city": "Lexington",
+      "state": "KY",
+      "stateName": "Kentucky",
+      "isPreset": false,
+      "sub": "Lexington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.259844,
+        "h": 26.902887999999997,
+        "ar": 1.7195121951219514,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.24606428,
+        "mid": 69.38976600000001,
+        "back": 104.084649,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.8 x 46.2 ft./ 8.2 x 14.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ky_louisville_amc_stonybrook_20_and_imax",
+      "canonicalId": "imax_us_ky_louisville_amc_stonybrook_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Stonybrook 20 & IMAX",
+      "city": "Louisville",
+      "state": "KY",
+      "stateName": "Kentucky",
+      "isPreset": false,
+      "sub": "Louisville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 23.950132,
+        "ar": 1.9589041095890412,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.0 x 46.8 ft./ 7.3 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ky_newport_amc_newport_on_the_levee_20_and_imax",
+      "canonicalId": "imax_us_ky_newport_amc_newport_on_the_levee_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Newport On The Levee 20 & IMAX",
+      "city": "Newport",
+      "state": "KY",
+      "stateName": "Kentucky",
+      "isPreset": false,
+      "sub": "Newport · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.2126,
+        "h": 29.855643999999998,
+        "ar": 1.6483516483516485,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 42.814962,
+        "mid": 73.8189,
+        "back": 110.72835,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.8 x 49.3 ft./ 9.1 x 15.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_baton_rouge_amc_baton_rouge_16_and_imax",
+      "canonicalId": "imax_us_la_baton_rouge_amc_baton_rouge_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Baton Rouge 16 & IMAX",
+      "city": "Baton Rouge",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Baton Rouge · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 33.136483999999996,
+        "ar": 1.811881188118812,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.1 x 60.0 ft./ 10.1 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_baton_rouge_amc_mall_of_louisiana_15_and_imax",
+      "canonicalId": "imax_us_la_baton_rouge_amc_mall_of_louisiana_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Mall of Louisiana 15 & IMAX",
+      "city": "Baton Rouge",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Baton Rouge · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 61.023624000000005,
+        "h": 35.104988,
+        "ar": 1.738317757009346,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.090552880000004,
+        "mid": 91.535436,
+        "back": 137.303154,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 61.0 ft./ 10.7 x 18.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_bossier_city_regal_louisiana_boardwalk_14_and_imax",
+      "canonicalId": "imax_us_la_bossier_city_regal_louisiana_boardwalk_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Louisiana Boardwalk 14 & IMAX",
+      "city": "Bossier City",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Bossier City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 38.057744,
+        "ar": 1.5775862068965518,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 38.1 x 60.0 ft./ 11.6 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_harahan_amc_elmwood_palace_20_and_imax",
+      "canonicalId": "imax_us_la_harahan_amc_elmwood_palace_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Elmwood Palace 20 & IMAX",
+      "city": "Harahan",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Harahan · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.383204000000006,
+        "h": 37.073492,
+        "ar": 1.6017699115044248,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.663387480000004,
+        "mid": 89.07480600000001,
+        "back": 133.612209,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 37.0 x 59.5 ft./ 11.3 x 18.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_harvey_amc_westbank_palace_16_and_imax",
+      "canonicalId": "imax_us_la_harvey_amc_westbank_palace_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Westbank Palace 16 & IMAX",
+      "city": "Harvey",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Harvey · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 29.855643999999998,
+        "ar": 1.8131868131868132,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 54.2 ft./ 9.1 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_metairie_amc_clearview_palace_12_and_imax",
+      "canonicalId": "imax_us_la_metairie_amc_clearview_palace_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Clearview Palace 12 & IMAX",
+      "city": "Metairie",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Metairie · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.884516,
+        "h": 29.855643999999998,
+        "ar": 1.6373626373626375,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 42.52952892,
+        "mid": 73.326774,
+        "back": 109.990161,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.0 x 49.0 ft./ 9.1 x 14.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_la_slidell_grand_16_and_imax",
+      "canonicalId": "imax_us_la_slidell_grand_16_and_imax",
+      "kind": "cinema",
+      "name": "Grand 16 & IMAX",
+      "city": "Slidell",
+      "state": "LA",
+      "stateName": "Louisiana",
+      "isPreset": false,
+      "sub": "Slidell · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 31.824147999999997,
+        "ar": 1.6185567010309279,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.8 x 51.5 ft./ 9.7 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ma_boston_amc_boston_common_19_and_imax",
+      "canonicalId": "imax_us_ma_boston_amc_boston_common_19_and_imax",
+      "kind": "cinema",
+      "name": "AMC Boston Common 19 & IMAX",
+      "city": "Boston",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "sub": "Boston · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 61.023624000000005,
+        "h": 29.52756,
+        "ar": 2.066666666666667,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.090552880000004,
+        "mid": 91.535436,
+        "back": 137.303154,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 61.0 ft./ 9.0 x 18.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
+      "canonicalId": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Liberty Tree Mall 20 & IMAX",
+      "city": "Danvers",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "sub": "Danvers · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 28.871392000000004,
+        "ar": 1.8522727272727273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.0 x 53.4 ft./ 8.8 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ma_dorchester_amc_south_bay_12_and_imax",
+      "canonicalId": "imax_us_ma_dorchester_amc_south_bay_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC South Bay 12 & IMAX",
+      "city": "Dorchester",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "sub": "Dorchester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.367456,
+        "h": 33.464568,
+        "ar": 1.803921568627451,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.519686719999996,
+        "mid": 90.55118399999999,
+        "back": 135.826776,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.5 x 60.4 ft./ 10.2 x 18.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ma_natick_sunbrella_imax_3d_theater_jordan_s_furniture_natick",
+      "canonicalId": "imax_us_ma_natick_sunbrella_imax_3d_theater_jordan_s_furniture_natick",
+      "kind": "cinema",
+      "name": "Sunbrella IMAX 3D Theater, Jordan's Furniture Natick",
+      "city": "Natick",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "sub": "Natick · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 67.913388,
+        "h": 52.821524000000004,
+        "ar": 1.2857142857142856,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 59.08464756,
+        "mid": 101.870082,
+        "back": 152.80512299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 68.0 ft./ 16.1 x 20.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ma_randolph_showcase_cinema_de_lux_randolph_and_imax",
+      "canonicalId": "imax_us_ma_randolph_showcase_cinema_de_lux_randolph_and_imax",
+      "kind": "cinema",
+      "name": "Showcase Cinema de Lux Randolph & IMAX",
+      "city": "Randolph",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "sub": "Randolph · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 55.118112,
+        "h": 27.88714,
+        "ar": 1.9764705882352942,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.952757440000006,
+        "mid": 82.67716800000001,
+        "back": 124.015752,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.7 x 55.0 ft./ 8.5 x 16.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_baltimore_amc_white_marsh_16_and_imax",
+      "canonicalId": "imax_us_md_baltimore_amc_white_marsh_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC White Marsh 16 & IMAX",
+      "city": "Baltimore",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Baltimore · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 27.88714,
+        "ar": 1.9058823529411764,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.0 x 53.0 ft./ 8.5 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_baltimore_maryland_science_center",
+      "canonicalId": "imax_us_md_baltimore_maryland_science_center",
+      "kind": "cinema",
+      "name": "Maryland Science Center",
+      "city": "Baltimore",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Baltimore · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 72.17848,
+        "h": 54.461944,
+        "ar": 1.325301204819277,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 62.79527759999999,
+        "mid": 108.26772,
+        "back": 162.40158,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 54.5 x 72.0 ft./ 16.6 x 22.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_frederick_regal_westview_stadium_16_and_imax",
+      "canonicalId": "imax_us_md_frederick_regal_westview_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Westview Stadium 16 & IMAX",
+      "city": "Frederick",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Frederick · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 25.262468000000002,
+        "ar": 1.8571428571428572,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.2 x 46.8 ft./ 7.7 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_gambrills_regal_waugh_chapel_stadium_12_and_imax",
+      "canonicalId": "imax_us_md_gambrills_regal_waugh_chapel_stadium_12_and_imax",
+      "kind": "cinema",
+      "name": "Regal Waugh Chapel Stadium 12 & IMAX",
+      "city": "Gambrills",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Gambrills · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.102364,
+        "h": 34.120736,
+        "ar": 1.6442307692307694,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 48.80905668,
+        "mid": 84.153546,
+        "back": 126.23031900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.0 x 56.0 ft./ 10.4 x 17.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_largo_amc_magic_johnson_capital_center_12_and_imax",
+      "canonicalId": "imax_us_md_largo_amc_magic_johnson_capital_center_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Magic Johnson Capital Center 12 & IMAX",
+      "city": "Largo",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Largo · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 33.136483999999996,
+        "ar": 1.811881188118812,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 60.1 ft./ 10.1 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_owings_mills_amc_owings_mills_17_and_imax",
+      "canonicalId": "imax_us_md_owings_mills_amc_owings_mills_17_and_imax",
+      "kind": "cinema",
+      "name": "AMC Owings Mills 17 & IMAX",
+      "city": "Owings Mills",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Owings Mills · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 44.947508,
+        "h": 23.950132,
+        "ar": 1.8767123287671232,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.104331959999996,
+        "mid": 67.421262,
+        "back": 101.13189299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.0 x 45.0 ft./ 7.3 x 13.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_md_silver_spring_regal_majestic_cinema_20_and_imax",
+      "canonicalId": "imax_us_md_silver_spring_regal_majestic_cinema_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Majestic Cinema 20 & IMAX",
+      "city": "Silver Spring",
+      "state": "MD",
+      "stateName": "Maryland",
+      "isPreset": false,
+      "sub": "Silver Spring · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 64.960632,
+        "h": 32.152232000000005,
+        "ar": 2.020408163265306,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 56.515749840000005,
+        "mid": 97.440948,
+        "back": 146.16142200000002,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.0 x 65.0 ft./ 9.8 x 19.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_auburn_hills_amc_star_great_lakes_25_and_imax",
+      "canonicalId": "imax_us_mi_auburn_hills_amc_star_great_lakes_25_and_imax",
+      "kind": "cinema",
+      "name": "AMC Star Great Lakes 25 & IMAX",
+      "city": "Auburn Hills",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Auburn Hills · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.711287999999996,
+        "h": 30.839896,
+        "ar": 1.9361702127659572,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.948820559999994,
+        "mid": 89.566932,
+        "back": 134.35039799999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.8 x 59.7 ft./ 9.4 x 18.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_dearborn_amc_star_fairlane_21_and_imax",
+      "canonicalId": "imax_us_mi_dearborn_amc_star_fairlane_21_and_imax",
+      "kind": "cinema",
+      "name": "AMC Star Fairlane 21 & IMAX",
+      "city": "Dearborn",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Dearborn · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 28.543307999999996,
+        "ar": 1.9080459770114946,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.6 x 54.5 ft./ 8.7 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
+      "canonicalId": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
+      "kind": "cinema",
+      "name": "NCG Trillium & IMAX",
+      "city": "Grand Blanc",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Grand Blanc · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_lansing_celebration_cinema_and_imax",
+      "canonicalId": "imax_us_mi_lansing_celebration_cinema_and_imax",
+      "kind": "cinema",
+      "name": "Celebration! Cinema & IMAX",
+      "city": "Lansing",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Lansing · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 43.963256,
+        "ar": 1.5895522388059702,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 45.0 x 70.0 ft./ 13.4 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_livonia_amc_livonia_20_and_imax",
+      "canonicalId": "imax_us_mi_livonia_amc_livonia_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Livonia 20 & IMAX",
+      "city": "Livonia",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Livonia · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 29.855643999999998,
+        "ar": 1.8241758241758244,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 54.5 ft./ 9.1 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_portage_celebration_cinema_crossroads_and_imax",
+      "canonicalId": "imax_us_mi_portage_celebration_cinema_crossroads_and_imax",
+      "kind": "cinema",
+      "name": "Celebration! Cinema Crossroads & IMAX",
+      "city": "Portage",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Portage · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 63.97638,
+        "h": 41.994752000000005,
+        "ar": 1.5234375,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 55.6594506,
+        "mid": 95.96457,
+        "back": 143.946855,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 64.0 ft./ 12.8 x 19.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_sterling_heights_amc_forum_30_and_imax",
+      "canonicalId": "imax_us_mi_sterling_heights_amc_forum_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Forum 30 & IMAX",
+      "city": "Sterling Heights",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Sterling Heights · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 33.136483999999996,
+        "ar": 1.5346534653465347,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 51.0 ft./ 10.1 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_traverse_city_amc_cherry_blossom_14_and_imax",
+      "canonicalId": "imax_us_mi_traverse_city_amc_cherry_blossom_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Cherry Blossom 14 & IMAX",
+      "city": "Traverse City",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Traverse City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 64.30446400000001,
+        "h": 35.761156,
+        "ar": 1.798165137614679,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 55.94488368000001,
+        "mid": 96.45669600000002,
+        "back": 144.68504400000003,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.9 x 64.4 ft./ 10.9 x 19.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mi_ypsilanti_ann_arbor_20_and_imax",
+      "canonicalId": "imax_us_mi_ypsilanti_ann_arbor_20_and_imax",
+      "kind": "cinema",
+      "name": "Ann Arbor 20 & IMAX",
+      "city": "Ypsilanti",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "sub": "Ypsilanti · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.790028,
+        "h": 28.543307999999996,
+        "ar": 1.9195402298850575,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.66732436,
+        "mid": 82.185042,
+        "back": 123.277563,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.4 x 54.7 ft./ 8.7 x 16.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mn_eden_prairie_amc_eden_prairie_mall_18_and_imax",
+      "canonicalId": "imax_us_mn_eden_prairie_amc_eden_prairie_mall_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Eden Prairie Mall 18 & IMAX",
+      "city": "Eden Prairie",
+      "state": "MN",
+      "stateName": "Minnesota",
+      "isPreset": false,
+      "sub": "Eden Prairie · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.244096,
+        "h": 26.24672,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.10236352,
+        "mid": 70.86614399999999,
+        "back": 106.299216,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.1 x 47.3 ft./ 8.0 x 14.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mn_edina_amc_southdale_16_and_imax",
+      "canonicalId": "imax_us_mn_edina_amc_southdale_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Southdale 16 & IMAX",
+      "city": "Edina",
+      "state": "MN",
+      "stateName": "Minnesota",
+      "isPreset": false,
+      "sub": "Edina · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 29.855643999999998,
+        "ar": 1.8131868131868132,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 54.1 ft./ 9.1 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mn_maple_grove_amc_arbor_lakes_16_and_imax",
+      "canonicalId": "imax_us_mn_maple_grove_amc_arbor_lakes_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Arbor Lakes 16 & IMAX",
+      "city": "Maple Grove",
+      "state": "MN",
+      "stateName": "Minnesota",
+      "isPreset": false,
+      "sub": "Maple Grove · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.790028,
+        "h": 30.511812000000003,
+        "ar": 1.7956989247311825,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.66732436,
+        "mid": 82.185042,
+        "back": 123.277563,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.5 x 54.8 ft./ 9.3 x 16.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mn_rochester_marcus_galaxy_cine_14_and_imax",
+      "canonicalId": "imax_us_mn_rochester_marcus_galaxy_cine_14_and_imax",
+      "kind": "cinema",
+      "name": "Marcus Galaxy Cine 14 & IMAX",
+      "city": "Rochester",
+      "state": "MN",
+      "stateName": "Minnesota",
+      "isPreset": false,
+      "sub": "Rochester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.944884,
+        "h": 36.08924,
+        "ar": 1.8272727272727274,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 57.372049080000004,
+        "mid": 98.917326,
+        "back": 148.375989,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.1 x 65.8 ft./ 11.0 x 20.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mo_chesterfield_amc_chesterfield_14_and_imax",
+      "canonicalId": "imax_us_mo_chesterfield_amc_chesterfield_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Chesterfield 14 & IMAX",
+      "city": "Chesterfield",
+      "state": "MO",
+      "stateName": "Missouri",
+      "isPreset": false,
+      "sub": "Chesterfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 28.871392000000004,
+        "ar": 1.784090909090909,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.8 x 51.5 ft./ 8.8 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mo_independence_amc_independence_commons_20_and_imax",
+      "canonicalId": "imax_us_mo_independence_amc_independence_commons_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Independence Commons 20 & IMAX",
+      "city": "Independence",
+      "state": "MO",
+      "stateName": "Missouri",
+      "isPreset": false,
+      "sub": "Independence · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 24.934383999999998,
+        "ar": 2,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.9 x 49.9 ft./ 7.6 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mo_sappington_marcus_ronnies_20_cine_and_imax",
+      "canonicalId": "imax_us_mo_sappington_marcus_ronnies_20_cine_and_imax",
+      "kind": "cinema",
+      "name": "Marcus Ronnies 20 Cine & IMAX",
+      "city": "Sappington",
+      "state": "MO",
+      "stateName": "Missouri",
+      "isPreset": false,
+      "sub": "Sappington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.49344,
+        "ar": 1.33125,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.5 x 69.9 ft./ 16.0 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mo_springfield_amc_springfield_11_and_imax",
+      "canonicalId": "imax_us_mo_springfield_amc_springfield_11_and_imax",
+      "kind": "cinema",
+      "name": "AMC Springfield 11 & IMAX",
+      "city": "Springfield",
+      "state": "MO",
+      "stateName": "Missouri",
+      "isPreset": false,
+      "sub": "Springfield · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 41.994752000000005,
+        "ar": 1.6640625,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 70.0 ft./ 12.8 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mt_billings_amc_shiloh_14_and_imax",
+      "canonicalId": "imax_us_mt_billings_amc_shiloh_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Shiloh 14 & IMAX",
+      "city": "Billings",
+      "state": "MT",
+      "stateName": "Montana",
+      "isPreset": false,
+      "sub": "Billings · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 28.215224,
+        "ar": 1.8488372093023258,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.2 x 52.3 ft./ 8.6 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mt_missoula_amc_missoula_12_and_imax",
+      "canonicalId": "imax_us_mt_missoula_amc_missoula_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Missoula 12 & IMAX",
+      "city": "Missoula",
+      "state": "MT",
+      "stateName": "Montana",
+      "isPreset": false,
+      "sub": "Missoula · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 64.960632,
+        "h": 36.417324,
+        "ar": 1.783783783783784,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 56.515749840000005,
+        "mid": 97.440948,
+        "back": 146.16142200000002,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.4 x 64.8 ft./ 11.1 x 19.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_cary_regal_crossroads_stadium_20_and_imax",
+      "canonicalId": "imax_us_nc_cary_regal_crossroads_stadium_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Crossroads Stadium 20 & IMAX",
+      "city": "Cary",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Cary · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 25.590552,
+        "ar": 1.8717948717948718,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.6 x 47.9 ft./ 7.8 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_charlotte_amc_northlake_14_and_imax",
+      "canonicalId": "imax_us_nc_charlotte_amc_northlake_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Northlake 14 & IMAX",
+      "city": "Charlotte",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Charlotte · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 28.215224,
+        "ar": 1.8372093023255816,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.3 x 51.8 ft./ 8.6 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_charlotte_regal_stonecrest_at_pipers_glen_stadium_22_and_imax",
+      "canonicalId": "imax_us_nc_charlotte_regal_stonecrest_at_pipers_glen_stadium_22_and_imax",
+      "kind": "cinema",
+      "name": "Regal Stonecrest at Pipers Glen Stadium 22 & IMAX",
+      "city": "Charlotte",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Charlotte · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.228348,
+        "h": 25.590552,
+        "ar": 1.8846153846153846,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.958662759999996,
+        "mid": 72.342522,
+        "back": 108.51378299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.6 x 48.2 ft./ 7.8 x 14.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_fayetteville_amc_fayetteville_14_and_max",
+      "canonicalId": "imax_us_nc_fayetteville_amc_fayetteville_14_and_max",
+      "kind": "cinema",
+      "name": "AMC Fayetteville 14 & MAX",
+      "city": "Fayetteville",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Fayetteville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.944884,
+        "h": 35.761156,
+        "ar": 1.8440366972477065,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 57.372049080000004,
+        "mid": 98.917326,
+        "back": 148.375989,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.7 x 65.8 ft./ 10.9 x 20.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_high_point_regal_palladium_stadium_14_and_imax",
+      "canonicalId": "imax_us_nc_high_point_regal_palladium_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Palladium Stadium 14 & IMAX",
+      "city": "High Point",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "High Point · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 29.855643999999998,
+        "ar": 1.6703296703296704,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.8 x 50.0 ft./ 9.1 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_raleigh_marbles_kids_museum",
+      "canonicalId": "imax_us_nc_raleigh_marbles_kids_museum",
+      "kind": "cinema",
+      "name": "Marbles Kids Museum",
+      "city": "Raleigh",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Raleigh · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.0 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_wilmington_regal_mayfaire_stadium_16_and_imax",
+      "canonicalId": "imax_us_nc_wilmington_regal_mayfaire_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Mayfaire Stadium 16 & IMAX",
+      "city": "Wilmington",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Wilmington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.884516,
+        "h": 29.52756,
+        "ar": 1.6555555555555557,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 42.52952892,
+        "mid": 73.326774,
+        "back": 109.990161,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 48.9 ft./ 9.0 x 14.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nc_winston_salem_grand_18_and_imax",
+      "canonicalId": "imax_us_nc_winston_salem_grand_18_and_imax",
+      "kind": "cinema",
+      "name": "Grand 18 & IMAX",
+      "city": "Winston-Salem",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "sub": "Winston-Salem · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.727036,
+        "h": 32.8084,
+        "ar": 1.7899999999999998,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.092521319999996,
+        "mid": 88.090554,
+        "back": 132.135831,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.9 x 58.7 ft./ 10.0 x 17.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ne_omaha_amc_westroads_14_and_imax",
+      "canonicalId": "imax_us_ne_omaha_amc_westroads_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Westroads 14 & IMAX",
+      "city": "Omaha",
+      "state": "NE",
+      "stateName": "Nebraska",
+      "isPreset": false,
+      "sub": "Omaha · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.007875999999996,
+        "h": 34.120736,
+        "ar": 1.817307692307692,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.946852119999996,
+        "mid": 93.01181399999999,
+        "back": 139.517721,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.1 x 62.1 ft./ 10.4 x 18.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nj_atlantic_city_tropicana_casino_and_resort",
+      "canonicalId": "imax_us_nj_atlantic_city_tropicana_casino_and_resort",
+      "kind": "cinema",
+      "name": "Tropicana Casino And Resort",
+      "city": "Atlantic City",
+      "state": "NJ",
+      "stateName": "New Jersey",
+      "isPreset": false,
+      "sub": "Atlantic City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.49344,
+        "ar": 1.33125,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.0 x 75.0 ft./ 16.0 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nj_eatontown_amc_monmouth_mall_15_and_imax",
+      "canonicalId": "imax_us_nj_eatontown_amc_monmouth_mall_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Monmouth Mall 15 & IMAX",
+      "city": "Eatontown",
+      "state": "NJ",
+      "stateName": "New Jersey",
+      "isPreset": false,
+      "sub": "Eatontown · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.821524000000004,
+        "h": 29.52756,
+        "ar": 1.788888888888889,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.954725880000005,
+        "mid": 79.232286,
+        "back": 118.84842900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 52.7 ft./ 9.0 x 16.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nj_elizabeth_amc_jersey_gardens_20_and_imax",
+      "canonicalId": "imax_us_nj_elizabeth_amc_jersey_gardens_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Jersey Gardens 20 & IMAX",
+      "city": "Elizabeth",
+      "state": "NJ",
+      "stateName": "New Jersey",
+      "isPreset": false,
+      "sub": "Elizabeth · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.05512,
+        "h": 31.496063999999997,
+        "ar": 1.875,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.3779544,
+        "mid": 88.58268000000001,
+        "back": 132.87402,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.4 x 58.9 ft./ 9.6 x 18.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nj_linden_amc_aviation_12_and_imax",
+      "canonicalId": "imax_us_nj_linden_amc_aviation_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Aviation 12 & IMAX",
+      "city": "Linden",
+      "state": "NJ",
+      "stateName": "New Jersey",
+      "isPreset": false,
+      "sub": "Linden · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 28.215224,
+        "ar": 1.8255813953488371,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.3 x 51.4 ft./ 8.6 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nm_albuquerque_amc_albuquerque_12_and_imax",
+      "canonicalId": "imax_us_nm_albuquerque_amc_albuquerque_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Albuquerque 12 & IMAX",
+      "city": "Albuquerque",
+      "state": "NM",
+      "stateName": "New Mexico",
+      "isPreset": false,
+      "sub": "Albuquerque · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 39.37008,
+        "ar": 1.7750000000000001,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.2 x 70.0 ft./ 12.0 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nm_albuquerque_regal_winrock_stadium_16_and_imax",
+      "canonicalId": "imax_us_nm_albuquerque_regal_winrock_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Winrock Stadium 16 & IMAX",
+      "city": "Albuquerque",
+      "state": "NM",
+      "stateName": "New Mexico",
+      "isPreset": false,
+      "sub": "Albuquerque · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 68.89764,
+        "h": 40.354332,
+        "ar": 1.7073170731707317,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 59.9409468,
+        "mid": 103.34646,
+        "back": 155.01969,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.4 x 68.8 ft./ 12.3 x 21.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nv_henderson_regal_sunset_station_13_and_imax",
+      "canonicalId": "imax_us_nv_henderson_regal_sunset_station_13_and_imax",
+      "kind": "cinema",
+      "name": "Regal Sunset Station 13 & IMAX",
+      "city": "Henderson",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "sub": "Henderson · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 23.950132,
+        "ar": 2,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.0 x 48.0 ft./ 7.3 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nv_las_vegas_brenden_theatres_and_imax_at_the_palms",
+      "canonicalId": "imax_us_nv_las_vegas_brenden_theatres_and_imax_at_the_palms",
+      "kind": "cinema",
+      "name": "Brenden Theatres & IMAX at the Palms",
+      "city": "Las Vegas",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.102364,
+        "h": 41.0105,
+        "ar": 1.368,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 48.80905668,
+        "mid": 84.153546,
+        "back": 126.23031900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 41.0 x 56.0 ft./ 12.5 x 17.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nv_las_vegas_regal_red_rock_stadium_16_and_imax",
+      "canonicalId": "imax_us_nv_las_vegas_regal_red_rock_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Red Rock Stadium 16 & IMAX",
+      "city": "Las Vegas",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.414699999999996,
+        "h": 35.104988,
+        "ar": 1.6355140186915889,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.95078899999999,
+        "mid": 86.12205,
+        "back": 129.183075,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 57.5 ft./ 10.7 x 17.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nv_north_las_vegas_regal_aliante_stadium_16_and_imax",
+      "canonicalId": "imax_us_nv_north_las_vegas_regal_aliante_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Aliante Stadium 16 & IMAX",
+      "city": "North Las Vegas",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "sub": "North Las Vegas · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 33.136483999999996,
+        "ar": 1.5346534653465347,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 51.0 ft./ 10.1 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_nv_sparks_galaxy_theatres_legends_imax",
+      "canonicalId": "imax_us_nv_sparks_galaxy_theatres_legends_imax",
+      "kind": "cinema",
+      "name": "Galaxy Theatres Legends IMAX",
+      "city": "Sparks",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "sub": "Sparks · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 75.131236,
+        "h": 40.026247999999995,
+        "ar": 1.8770491803278688,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 65.36417532,
+        "mid": 112.696854,
+        "back": 169.045281,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 75.0 ft./ 12.2 x 22.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_albany_regal_crossgates_stadium_18_and_imax",
+      "canonicalId": "imax_us_ny_albany_regal_crossgates_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Crossgates Stadium 18 & IMAX",
+      "city": "Albany",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Albany · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 26.902887999999997,
+        "ar": 1.8902439024390245,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 51.0 ft./ 8.2 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_brooklyn_ua_sheepshead_bay_stadium_14_and_imax",
+      "canonicalId": "imax_us_ny_brooklyn_ua_sheepshead_bay_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "UA Sheepshead Bay Stadium 14 & IMAX",
+      "city": "Brooklyn",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Brooklyn · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 26.902887999999997,
+        "ar": 1.7439024390243905,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 47.0 ft./ 8.2 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_farmingdale_ua_farmingdale_stadium_10_and_imax",
+      "canonicalId": "imax_us_ny_farmingdale_ua_farmingdale_stadium_10_and_imax",
+      "kind": "cinema",
+      "name": "UA Farmingdale Stadium 10 & IMAX",
+      "city": "Farmingdale",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Farmingdale · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.49344,
+        "h": 29.52756,
+        "ar": 1.7777777777777777,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.6692928,
+        "mid": 78.74016,
+        "back": 118.11024,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 52.5 ft./ 9.0 x 16.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_garden_city_cradle_of_aviation_museum",
+      "canonicalId": "imax_us_ny_garden_city_cradle_of_aviation_museum",
+      "kind": "cinema",
+      "name": "Cradle of Aviation Museum",
+      "city": "Garden City",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Garden City · Dome · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 78.74016,
+        "h": 78.74016,
+        "ar": 1,
+        "geometry": "hemispherical",
+        "domeCoveragePct": 0.83,
+        "domeHFov": 180,
+        "domeVFov": 125
+      },
+      "seat": {
+        "front": 39.37008,
+        "mid": 39.37008,
+        "back": 39.37008,
+        "source": "community_estimate"
+      },
+      "defaultPresentationAr": 1.43,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "film_dome_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX Dome 15/70",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 76.0 ft./ 24.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_new_york_american_museum_of_natural_history",
+      "canonicalId": "imax_us_ny_new_york_american_museum_of_natural_history",
+      "kind": "cinema",
+      "name": "American Museum of Natural History",
+      "city": "New York",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "New York · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.944884,
+        "h": 40.026247999999995,
+        "ar": 1.6475409836065575,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 57.372049080000004,
+        "mid": 98.917326,
+        "back": 148.375989,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 60.0 ft./ 12.2 x 20.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
+      "canonicalId": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Port Chester 14 & IMAX",
+      "city": "Port Chester",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Port Chester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.102364,
+        "h": 30.183728,
+        "ar": 1.8586956521739133,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 48.80905668,
+        "mid": 84.153546,
+        "back": 126.23031900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.2 x 56.1 ft./ 9.2 x 17.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_rochester_cinemark_tinseltown_usa_and_imax",
+      "canonicalId": "imax_us_ny_rochester_cinemark_tinseltown_usa_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark Tinseltown USA & IMAX",
+      "city": "Rochester",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Rochester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_syracuse_regal_destiny_usa_stadium_19_and_imax",
+      "canonicalId": "imax_us_ny_syracuse_regal_destiny_usa_stadium_19_and_imax",
+      "kind": "cinema",
+      "name": "Regal Destiny USA Stadium 19 & IMAX",
+      "city": "Syracuse",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Syracuse · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 38.057744,
+        "ar": 1.8362068965517242,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 72.0 ft./ 11.6 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_west_nyack_amc_palisades_center_21_and_imax",
+      "canonicalId": "imax_us_ny_west_nyack_amc_palisades_center_21_and_imax",
+      "kind": "cinema",
+      "name": "AMC Palisades Center 21 & IMAX",
+      "city": "West Nyack",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "West Nyack · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.711287999999996,
+        "h": 32.8084,
+        "ar": 1.8199999999999998,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.948820559999994,
+        "mid": 89.566932,
+        "back": 134.35039799999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.7 x 59.7 ft./ 10.0 x 18.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_westbury_ua_westbury_stadium_12_and_imax",
+      "canonicalId": "imax_us_ny_westbury_ua_westbury_stadium_12_and_imax",
+      "kind": "cinema",
+      "name": "UA Westbury Stadium 12 & IMAX",
+      "city": "Westbury",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Westbury · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 30.511812000000003,
+        "ar": 1.7419354838709675,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.5 x 53.0 ft./ 9.3 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_white_plains_city_center_15_cinema_de_lux_and_imax",
+      "canonicalId": "imax_us_ny_white_plains_city_center_15_cinema_de_lux_and_imax",
+      "kind": "cinema",
+      "name": "City Center 15: Cinema De Lux & IMAX",
+      "city": "White Plains",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "White Plains · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.383204000000006,
+        "h": 27.559056,
+        "ar": 2.1547619047619047,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.663387480000004,
+        "mid": 89.07480600000001,
+        "back": 133.612209,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.5 x 59.5 ft./ 8.4 x 18.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ny_williamsville_regal_transit_center_stadium_18_and_imax",
+      "canonicalId": "imax_us_ny_williamsville_regal_transit_center_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Transit Center Stadium 18 & IMAX",
+      "city": "Williamsville",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "sub": "Williamsville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 72.17848,
+        "h": 52.821524000000004,
+        "ar": 1.3664596273291925,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 62.79527759999999,
+        "mid": 108.26772,
+        "back": 162.40158,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 72.0 ft./ 16.1 x 22.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_beavercreek_the_greene_14_and_imax",
+      "canonicalId": "imax_us_oh_beavercreek_the_greene_14_and_imax",
+      "kind": "cinema",
+      "name": "The Greene 14 & IMAX",
+      "city": "Beavercreek",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "Beavercreek · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.758532,
+        "h": 31.824147999999997,
+        "ar": 1.7835051546391754,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.37992284,
+        "mid": 85.137798,
+        "back": 127.706697,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.7 x 56.8 ft./ 9.7 x 17.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_cincinnati_springdale_18_cinema_de_lux_and_imax",
+      "canonicalId": "imax_us_oh_cincinnati_springdale_18_cinema_de_lux_and_imax",
+      "kind": "cinema",
+      "name": "Springdale 18: Cinema de Lux & IMAX",
+      "city": "Cincinnati",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "Cincinnati · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.477692000000005,
+        "h": 27.88714,
+        "ar": 1.9176470588235295,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.52559204000001,
+        "mid": 80.21653800000001,
+        "back": 120.324807,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 53.5 ft./ 8.5 x 16.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_columbus_amc_easton_town_center_30_and_imax",
+      "canonicalId": "imax_us_oh_columbus_amc_easton_town_center_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Easton Town Center 30 & IMAX",
+      "city": "Columbus",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "Columbus · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 32.152232000000005,
+        "ar": 1.551020408163265,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.0 x 50.0 ft./ 9.8 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_grove_city_amc_grove_city_14_and_imax",
+      "canonicalId": "imax_us_oh_grove_city_amc_grove_city_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Grove City 14 & IMAX",
+      "city": "Grove City",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "Grove City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.33596,
+        "h": 34.120736,
+        "ar": 1.8269230769230769,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 54.2322852,
+        "mid": 93.50394,
+        "back": 140.25591,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.2 x 62.4 ft./ 10.4 x 19.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_west_chester_amc_west_chester_19_and_imax",
+      "canonicalId": "imax_us_oh_west_chester_amc_west_chester_19_and_imax",
+      "kind": "cinema",
+      "name": "AMC West Chester 19 & IMAX",
+      "city": "West Chester",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "West Chester · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.007875999999996,
+        "h": 34.120736,
+        "ar": 1.817307692307692,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.946852119999996,
+        "mid": 93.01181399999999,
+        "back": 139.517721,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.1 x 62.0 ft./ 10.4 x 18.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_oh_westlake_regal_crocker_park_stadium_16_and_imax",
+      "canonicalId": "imax_us_oh_westlake_regal_crocker_park_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Crocker Park Stadium 16 & IMAX",
+      "city": "Westlake",
+      "state": "OH",
+      "stateName": "Ohio",
+      "isPreset": false,
+      "sub": "Westlake · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.587928,
+        "h": 29.52756,
+        "ar": 1.5777777777777777,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.531497359999996,
+        "mid": 69.881892,
+        "back": 104.82283799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 46.6 ft./ 9.0 x 14.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ok_lawton_amc_patriot_13_and_imax",
+      "canonicalId": "imax_us_ok_lawton_amc_patriot_13_and_imax",
+      "kind": "cinema",
+      "name": "AMC Patriot 13 & IMAX",
+      "city": "Lawton",
+      "state": "OK",
+      "stateName": "Oklahoma",
+      "isPreset": false,
+      "sub": "Lawton · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.53806,
+        "h": 40.026247999999995,
+        "ar": 1.7622950819672132,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.3681122,
+        "mid": 105.80709,
+        "back": 158.710635,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.9 x 70.5 ft./ 12.2 x 21.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ok_oklahoma_city_amc_quail_springs_mall_24_and_imax",
+      "canonicalId": "imax_us_ok_oklahoma_city_amc_quail_springs_mall_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Quail Springs Mall 24 & IMAX",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "stateName": "Oklahoma",
+      "isPreset": false,
+      "sub": "Oklahoma City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.05512,
+        "h": 32.8084,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.3779544,
+        "mid": 88.58268000000001,
+        "back": 132.87402,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.8 x 59.1 ft./ 10.0 x 18.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ok_tulsa_amc_southroads_20_and_imax",
+      "canonicalId": "imax_us_ok_tulsa_amc_southroads_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Southroads 20 & IMAX",
+      "city": "Tulsa",
+      "state": "OK",
+      "stateName": "Oklahoma",
+      "isPreset": false,
+      "sub": "Tulsa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.398952,
+        "h": 32.480316,
+        "ar": 1.797979797979798,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.80708824,
+        "mid": 87.598428,
+        "back": 131.397642,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.6 x 58.5 ft./ 9.9 x 17.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ok_tulsa_cinemark_tulsa_and_imax",
+      "canonicalId": "imax_us_ok_tulsa_cinemark_tulsa_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark Tulsa & IMAX",
+      "city": "Tulsa",
+      "state": "OK",
+      "stateName": "Oklahoma",
+      "isPreset": false,
+      "sub": "Tulsa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 71.522312,
+        "h": 52.821524000000004,
+        "ar": 1.3540372670807452,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 62.22441144,
+        "mid": 107.283468,
+        "back": 160.925202,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 71.5 ft./ 16.1 x 21.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_or_bend_regal_old_mill_stadium_16_and_imax",
+      "canonicalId": "imax_us_or_bend_regal_old_mill_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Old Mill Stadium 16 & IMAX",
+      "city": "Bend",
+      "state": "OR",
+      "stateName": "Oregon",
+      "isPreset": false,
+      "sub": "Bend · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 25.590552,
+        "ar": 1.8717948717948718,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.7 x 47.9 ft./ 7.8 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_or_eugene_regal_valley_river_center_15_and_imax",
+      "canonicalId": "imax_us_or_eugene_regal_valley_river_center_15_and_imax",
+      "kind": "cinema",
+      "name": "Regal Valley River Center 15 & IMAX",
+      "city": "Eugene",
+      "state": "OR",
+      "stateName": "Oregon",
+      "isPreset": false,
+      "sub": "Eugene · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 39.041996,
+        "ar": 1.5378151260504203,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.0 x 60.0 ft./ 11.9 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_or_portland_regal_lloyd_center_10_and_imax",
+      "canonicalId": "imax_us_or_portland_regal_lloyd_center_10_and_imax",
+      "kind": "cinema",
+      "name": "Regal Lloyd Center 10 & IMAX",
+      "city": "Portland",
+      "state": "OR",
+      "stateName": "Oregon",
+      "isPreset": false,
+      "sub": "Portland · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 57.08661599999999,
+        "h": 32.152232000000005,
+        "ar": 1.7755102040816324,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.665355919999996,
+        "mid": 85.62992399999999,
+        "back": 128.444886,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.1 x 57.0 ft./ 9.8 x 17.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_or_tigard_regal_bridgeport_village_stadium_18_and_imax",
+      "canonicalId": "imax_us_or_tigard_regal_bridgeport_village_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Bridgeport Village Stadium 18 & IMAX",
+      "city": "Tigard",
+      "state": "OR",
+      "stateName": "Oregon",
+      "isPreset": false,
+      "sub": "Tigard · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.461944,
+        "h": 30.511812000000003,
+        "ar": 1.7849462365591398,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.381891280000005,
+        "mid": 81.692916,
+        "back": 122.53937400000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.6 x 54.5 ft./ 9.3 x 16.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_center_valley_amc_center_valley_16_and_imax",
+      "canonicalId": "imax_us_pa_center_valley_amc_center_valley_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Center Valley 16 & IMAX",
+      "city": "Center Valley",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Center Valley · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.007875999999996,
+        "h": 34.44882,
+        "ar": 1.7999999999999998,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.946852119999996,
+        "mid": 93.01181399999999,
+        "back": 139.517721,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.6 x 61.8 ft./ 10.5 x 18.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_dickson_city_regal_dickson_city_stadium_14_and_imax",
+      "canonicalId": "imax_us_pa_dickson_city_regal_dickson_city_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Dickson City Stadium 14 & IMAX",
+      "city": "Dickson City",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Dickson City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 41.994752000000005,
+        "ar": 1.6640625,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 70.0 ft./ 12.8 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_downingtown_regal_downingtown_cinema_stadium_16_and_imax",
+      "canonicalId": "imax_us_pa_downingtown_regal_downingtown_cinema_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Downingtown Cinema Stadium 16 & IMAX",
+      "city": "Downingtown",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Downingtown · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 28.871392000000004,
+        "ar": 1.7613636363636362,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.9 x 50.7 ft./ 8.8 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_homestead_amc_waterfront_22_and_imax",
+      "canonicalId": "imax_us_pa_homestead_amc_waterfront_22_and_imax",
+      "kind": "cinema",
+      "name": "AMC Waterfront 22 & IMAX",
+      "city": "Homestead",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Homestead · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.196852,
+        "h": 27.88714,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.67126124,
+        "mid": 75.295278,
+        "back": 112.942917,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.9 x 50.2 ft./ 8.5 x 15.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_lititz_penn_cinema_and_imax",
+      "canonicalId": "imax_us_pa_lititz_penn_cinema_and_imax",
+      "kind": "cinema",
+      "name": "Penn Cinema & IMAX",
+      "city": "Lititz",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Lititz · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_philadelphia_amc_philadelphia_mills_14_and_imax",
+      "canonicalId": "imax_us_pa_philadelphia_amc_philadelphia_mills_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Philadelphia Mills 14 & IMAX",
+      "city": "Philadelphia",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Philadelphia · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 26.574804,
+        "ar": 1.9135802469135803,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.6 x 50.7 ft./ 8.1 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_reading_rc_reading_movies_11_and_imax",
+      "canonicalId": "imax_us_pa_reading_rc_reading_movies_11_and_imax",
+      "kind": "cinema",
+      "name": "RC Reading Movies 11 & IMAX",
+      "city": "Reading",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Reading · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 41.994752000000005,
+        "ar": 1.6640625,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.0 x 70.0 ft./ 12.8 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_warrington_regal_warrington_crossing_stadium_22_and_imax",
+      "canonicalId": "imax_us_pa_warrington_regal_warrington_crossing_stadium_22_and_imax",
+      "kind": "cinema",
+      "name": "Regal Warrington Crossing Stadium 22 & IMAX",
+      "city": "Warrington",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "Warrington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 26.902887999999997,
+        "ar": 1.926829268292683,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.0 x 51.8 ft./ 8.2 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pa_york_rc_queensgate_stadium_13_and_imax",
+      "canonicalId": "imax_us_pa_york_rc_queensgate_stadium_13_and_imax",
+      "kind": "cinema",
+      "name": "RC Queensgate Stadium 13 & IMAX",
+      "city": "York",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "isPreset": false,
+      "sub": "York · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.790028,
+        "h": 29.855643999999998,
+        "ar": 1.835164835164835,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.66732436,
+        "mid": 82.185042,
+        "back": 123.277563,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.8 x 54.8 ft./ 9.1 x 16.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_pr_san_juan_montehiedra_cinemas_and_imax",
+      "canonicalId": "imax_us_pr_san_juan_montehiedra_cinemas_and_imax",
+      "kind": "cinema",
+      "name": "Montehiedra Cinemas & IMAX",
+      "city": "San Juan",
+      "state": "PR",
+      "stateName": "PR",
+      "isPreset": false,
+      "sub": "San Juan · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 80.05249599999999,
+        "h": 46.259844,
+        "ar": 1.730496453900709,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 69.64567152,
+        "mid": 120.07874399999999,
+        "back": 180.118116,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 46.1 x 80.0 ft./ 14.1 x 24.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_sc_columbia_regal_sandhill_stadium_16_and_imax",
+      "canonicalId": "imax_us_sc_columbia_regal_sandhill_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Sandhill Stadium 16 & IMAX",
+      "city": "Columbia",
+      "state": "SC",
+      "stateName": "South Carolina",
+      "isPreset": false,
+      "sub": "Columbia · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 30.839896,
+        "ar": 1.7234042553191489,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.9 x 53.2 ft./ 9.4 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_sc_simpsonville_regal_simpsonville_stadium_14_and_imax",
+      "canonicalId": "imax_us_sc_simpsonville_regal_simpsonville_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Simpsonville Stadium 14 & IMAX",
+      "city": "Simpsonville",
+      "state": "SC",
+      "stateName": "South Carolina",
+      "isPreset": false,
+      "sub": "Simpsonville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tn_chattanooga_amc_chattanooga_18_and_imax",
+      "canonicalId": "imax_us_tn_chattanooga_amc_chattanooga_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Chattanooga 18 & IMAX",
+      "city": "Chattanooga",
+      "state": "TN",
+      "stateName": "Tennessee",
+      "isPreset": false,
+      "sub": "Chattanooga · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 61.351707999999995,
+        "h": 32.8084,
+        "ar": 1.8699999999999999,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.375985959999994,
+        "mid": 92.02756199999999,
+        "back": 138.04134299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.8 x 61.4 ft./ 10.0 x 18.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tn_hendersonville_regal_streets_of_indian_lake_stadium_16_and_imax",
+      "canonicalId": "imax_us_tn_hendersonville_regal_streets_of_indian_lake_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Streets of Indian Lake Stadium 16 & IMAX",
+      "city": "Hendersonville",
+      "state": "TN",
+      "stateName": "Tennessee",
+      "isPreset": false,
+      "sub": "Hendersonville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.196852,
+        "h": 27.88714,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.67126124,
+        "mid": 75.295278,
+        "back": 112.942917,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 50.3 ft./ 8.5 x 15.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tn_knoxville_regal_pinnacle_stadium_18_and_imax",
+      "canonicalId": "imax_us_tn_knoxville_regal_pinnacle_stadium_18_and_imax",
+      "kind": "cinema",
+      "name": "Regal Pinnacle Stadium 18 & IMAX",
+      "city": "Knoxville",
+      "state": "TN",
+      "stateName": "Tennessee",
+      "isPreset": false,
+      "sub": "Knoxville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 61.023624000000005,
+        "h": 36.745408,
+        "ar": 1.660714285714286,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 53.090552880000004,
+        "mid": 91.535436,
+        "back": 137.303154,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.7 x 61.0 ft./ 11.2 x 18.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tn_memphis_malco_paradiso_cinema_grill",
+      "canonicalId": "imax_us_tn_memphis_malco_paradiso_cinema_grill",
+      "kind": "cinema",
+      "name": "Malco Paradiso Cinema Grill",
+      "city": "Memphis",
+      "state": "TN",
+      "stateName": "Tennessee",
+      "isPreset": false,
+      "sub": "Memphis · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.6168,
+        "h": 36.08924,
+        "ar": 1.8181818181818181,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 57.086616,
+        "mid": 98.42519999999999,
+        "back": 147.6378,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.2 x 65.7 ft./ 11.0 x 20.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_amarillo_ua_amarillo_star_stadium_14_and_imax",
+      "canonicalId": "imax_us_tx_amarillo_ua_amarillo_star_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "UA Amarillo Star Stadium 14 & IMAX",
+      "city": "Amarillo",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Amarillo · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 30.511812000000003,
+        "ar": 1.7096774193548385,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.5 x 52.2 ft./ 9.3 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_arlington_amc_the_parks_at_arlington_18_and_imax",
+      "canonicalId": "imax_us_tx_arlington_amc_the_parks_at_arlington_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC The Parks At Arlington 18 & IMAX",
+      "city": "Arlington",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Arlington · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 46.916012,
+        "h": 25.918636,
+        "ar": 1.8101265822784811,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 40.81693044,
+        "mid": 70.374018,
+        "back": 105.56102700000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.9 x 46.9 ft./ 7.9 x 14.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_austin_amc_barton_creek_square_14_and_imax",
+      "canonicalId": "imax_us_tx_austin_amc_barton_creek_square_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Barton Creek Square 14 & IMAX",
+      "city": "Austin",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Austin · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 44.947508,
+        "h": 24.934383999999998,
+        "ar": 1.8026315789473684,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 39.104331959999996,
+        "mid": 67.421262,
+        "back": 101.13189299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.0 x 45.0 ft./ 7.6 x 13.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_austin_regal_gateway_stadium_16_and_imax",
+      "canonicalId": "imax_us_tx_austin_regal_gateway_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Gateway Stadium 16 & IMAX",
+      "city": "Austin",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Austin · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.868767999999996,
+        "h": 29.52756,
+        "ar": 1.6888888888888889,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.385828159999996,
+        "mid": 74.803152,
+        "back": 112.20472799999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 50.0 ft./ 9.0 x 15.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_bryan_premiere_cinema_bryan_imax",
+      "canonicalId": "imax_us_tx_bryan_premiere_cinema_bryan_imax",
+      "kind": "cinema",
+      "name": "Premiere Cinema Bryan + IMAX",
+      "city": "Bryan",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Bryan · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 40.026247999999995,
+        "ar": 1.7459016393442623,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_corpus_christi_cinemark_century_16_and_imax",
+      "canonicalId": "imax_us_tx_corpus_christi_cinemark_century_16_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark Century 16 & IMAX",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Corpus Christi · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.790028,
+        "h": 30.839896,
+        "ar": 1.776595744680851,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.66732436,
+        "mid": 82.185042,
+        "back": 123.277563,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.8 x 54.9 ft./ 9.4 x 16.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_dallas_cinemark_17_and_imax",
+      "canonicalId": "imax_us_tx_dallas_cinemark_17_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark 17 & IMAX",
+      "city": "Dallas",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Dallas · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.866144,
+        "h": 52.821524000000004,
+        "ar": 1.341614906832298,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.65354528,
+        "mid": 106.299216,
+        "back": 159.448824,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.7 ft./ 16.1 x 21.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_el_paso_premiere_cinema_el_paso_bassett_imax",
+      "canonicalId": "imax_us_tx_el_paso_premiere_cinema_el_paso_bassett_imax",
+      "kind": "cinema",
+      "name": "Premiere Cinema El Paso Bassett + IMAX",
+      "city": "El Paso",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "El Paso · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 49.868767999999996,
+        "ar": 1.4013157894736843,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 50.0 x 70.0 ft./ 15.2 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_garland_amc_firewheel_18_and_imax",
+      "canonicalId": "imax_us_tx_garland_amc_firewheel_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Firewheel 18 & IMAX",
+      "city": "Garland",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Garland · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.509187999999995,
+        "h": 28.871392000000004,
+        "ar": 1.784090909090909,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.812993559999995,
+        "mid": 77.26378199999999,
+        "back": 115.89567299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.9 x 51.5 ft./ 8.8 x 15.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_grapevine_amc_grapevine_mills_30_and_imax",
+      "canonicalId": "imax_us_tx_grapevine_amc_grapevine_mills_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Grapevine Mills 30 & IMAX",
+      "city": "Grapevine",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Grapevine · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.039372,
+        "h": 32.480316,
+        "ar": 1.8484848484848484,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.23425364,
+        "mid": 90.059058,
+        "back": 135.088587,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.5 x 60.0 ft./ 9.9 x 18.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_highland_village_amc_highland_village_12_and_imax",
+      "canonicalId": "imax_us_tx_highland_village_amc_highland_village_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Highland Village 12 & IMAX",
+      "city": "Highland Village",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Highland Village · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.165356,
+        "h": 29.199476,
+        "ar": 1.7865168539325842,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.383859720000004,
+        "mid": 78.248034,
+        "back": 117.372051,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.2 x 52.2 ft./ 8.9 x 15.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
+      "canonicalId": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Gulf Pointe 30 & IMAX",
+      "city": "Houston",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Houston · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 60.69554,
+        "h": 35.104988,
+        "ar": 1.7289719626168225,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 52.8051198,
+        "mid": 91.04331,
+        "back": 136.564965,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 60.8 ft./ 10.7 x 18.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_humble_amc_deerbrook_24_and_imax",
+      "canonicalId": "imax_us_tx_humble_amc_deerbrook_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Deerbrook 24 & IMAX",
+      "city": "Humble",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Humble · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.196852,
+        "h": 27.88714,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.67126124,
+        "mid": 75.295278,
+        "back": 112.942917,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.0 x 50.2 ft./ 8.5 x 15.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_lubbock_premiere_cinema_lubbock_imax",
+      "canonicalId": "imax_us_tx_lubbock_premiere_cinema_lubbock_imax",
+      "kind": "cinema",
+      "name": "Premiere Cinema Lubbock + IMAX",
+      "city": "Lubbock",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Lubbock · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 39.37008,
+        "ar": 1.7750000000000001,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.3 x 70.0 ft./ 12.0 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_mesquite_amc_mesquite_30_and_imax",
+      "canonicalId": "imax_us_tx_mesquite_amc_mesquite_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Mesquite 30 & IMAX",
+      "city": "Mesquite",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Mesquite · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.664044000000004,
+        "h": 34.120736,
+        "ar": 1.8365384615384617,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 54.517718280000004,
+        "mid": 93.99606600000001,
+        "back": 140.994099,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.1 x 62.7 ft./ 10.4 x 19.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_midland_regal_tall_city_stadium_14_and_imax",
+      "canonicalId": "imax_us_tx_midland_regal_tall_city_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Tall City Stadium 14 & IMAX",
+      "city": "Midland",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Midland · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.228348,
+        "h": 29.52756,
+        "ar": 1.6333333333333333,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.958662759999996,
+        "mid": 72.342522,
+        "back": 108.51378299999999,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.5 x 48.3 ft./ 9.0 x 14.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_odessa_regal_permian_palace_stadium_11_and_imax",
+      "canonicalId": "imax_us_tx_odessa_regal_permian_palace_stadium_11_and_imax",
+      "kind": "cinema",
+      "name": "Regal Permian Palace Stadium 11 & IMAX",
+      "city": "Odessa",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Odessa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 30.839896,
+        "ar": 1.553191489361702,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.8 x 47.8 ft./ 9.4 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax",
+      "canonicalId": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax",
+      "kind": "cinema",
+      "name": "AMC Rivercenter 11 & IMAX",
+      "city": "San Antonio",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "San Antonio · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.821524000000004,
+        "ar": 1.3229813664596273,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.0 ft./ 16.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax",
+      "canonicalId": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax",
+      "kind": "cinema",
+      "name": "AMC Rivercenter 11 & IMAX",
+      "city": "San Antonio",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "San Antonio · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 84.973756,
+        "h": 62.007875999999996,
+        "ar": 1.3703703703703705,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 73.92716772,
+        "mid": 127.460634,
+        "back": 191.19095099999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 62.0 x 85.0 ft./ 18.9 x 25.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_san_antonio_santikos_palladium_imax",
+      "canonicalId": "imax_us_tx_san_antonio_santikos_palladium_imax",
+      "kind": "cinema",
+      "name": "Santikos Palladium IMAX",
+      "city": "San Antonio",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "San Antonio · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 43.963256,
+        "ar": 1.5895522388059702,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 44.0 x 70.0 ft./ 13.4 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_stafford_amc_fountains_18_and_imax",
+      "canonicalId": "imax_us_tx_stafford_amc_fountains_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Fountains 18 & IMAX",
+      "city": "Stafford",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Stafford · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 54.13386,
+        "h": 29.855643999999998,
+        "ar": 1.8131868131868132,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.0964582,
+        "mid": 81.20079,
+        "back": 121.801185,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.8 x 54.0 ft./ 9.1 x 16.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_sugar_land_amc_first_colony_24_and_imax",
+      "canonicalId": "imax_us_tx_sugar_land_amc_first_colony_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC First Colony 24 & IMAX",
+      "city": "Sugar Land",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Sugar Land · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.430448,
+        "h": 34.120736,
+        "ar": 1.6538461538461537,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.09448976,
+        "mid": 84.64567199999999,
+        "back": 126.968508,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.0 x 56.5 ft./ 10.4 x 17.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_temple_premiere_cinema_temple_imax",
+      "canonicalId": "imax_us_tx_temple_premiere_cinema_temple_imax",
+      "kind": "cinema",
+      "name": "Premiere Cinema Temple + IMAX",
+      "city": "Temple",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Temple · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 39.698164,
+        "ar": 1.7603305785123968,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 39.6 x 70.0 ft./ 12.1 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_tomball_regal_lone_star_19_and_imax",
+      "canonicalId": "imax_us_tx_tomball_regal_lone_star_19_and_imax",
+      "kind": "cinema",
+      "name": "Regal Lone Star 19 & IMAX",
+      "city": "Tomball",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Tomball · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.866144,
+        "h": 44.947508,
+        "ar": 1.5766423357664237,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.65354528,
+        "mid": 106.299216,
+        "back": 159.448824,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 45.0 x 71.0 ft./ 13.7 x 21.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_tyler_amc_tyler_14_and_imax",
+      "canonicalId": "imax_us_tx_tyler_amc_tyler_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Tyler 14 & IMAX",
+      "city": "Tyler",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Tyler · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 28.543307999999996,
+        "ar": 1.8620689655172415,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.5 x 53.1 ft./ 8.7 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_waco_amc_galaxy_16_and_imax",
+      "canonicalId": "imax_us_tx_waco_amc_galaxy_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Galaxy 16 & IMAX",
+      "city": "Waco",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "sub": "Waco · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.758532,
+        "h": 31.496063999999997,
+        "ar": 1.8020833333333335,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.37992284,
+        "mid": 85.137798,
+        "back": 127.706697,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 56.8 ft./ 9.6 x 17.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_centerville_megaplex_14_and_imax_at_legacy_crossing",
+      "canonicalId": "imax_us_ut_centerville_megaplex_14_and_imax_at_legacy_crossing",
+      "kind": "cinema",
+      "name": "Megaplex 14 & IMAX at Legacy Crossing",
+      "city": "Centerville",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "Centerville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 76.115488,
+        "h": 41.994752000000005,
+        "ar": 1.8124999999999998,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 66.22047456,
+        "mid": 114.173232,
+        "back": 171.259848,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 41.8 x 76.0 ft./ 12.8 x 23.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_salt_lake_city_clark_planetarium",
+      "canonicalId": "imax_us_ut_salt_lake_city_clark_planetarium",
+      "kind": "cinema",
+      "name": "Clark Planetarium",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "Salt Lake City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 52.49344,
+        "ar": 1.33125,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.0 x 69.8 ft./ 16.0 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_sandy_megaplex_17_and_imax_jordan_commons",
+      "canonicalId": "imax_us_ut_sandy_megaplex_17_and_imax_jordan_commons",
+      "kind": "cinema",
+      "name": "Megaplex 17 & IMAX, Jordan Commons",
+      "city": "Sandy",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "Sandy · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 80.708664,
+        "h": 56.430448,
+        "ar": 1.430232558139535,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 70.21653768,
+        "mid": 121.062996,
+        "back": 181.594494,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 56.3 x 80.8 ft./ 17.2 x 24.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_south_jordan_megaplex_20_and_imax_at_the_district",
+      "canonicalId": "imax_us_ut_south_jordan_megaplex_20_and_imax_at_the_district",
+      "kind": "cinema",
+      "name": "Megaplex 20 & IMAX at The District",
+      "city": "South Jordan",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "South Jordan · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 68.89764,
+        "h": 38.057744,
+        "ar": 1.8103448275862069,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 59.9409468,
+        "mid": 103.34646,
+        "back": 155.01969,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 38.0 x 68.7 ft./ 11.6 x 21.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_vineyard_megaplex_theatres_geneva_and_imax",
+      "canonicalId": "imax_us_ut_vineyard_megaplex_theatres_geneva_and_imax",
+      "kind": "cinema",
+      "name": "Megaplex Theatres @ Geneva & IMAX",
+      "city": "Vineyard",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "Vineyard · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 80.05249599999999,
+        "h": 45.275592,
+        "ar": 1.7681159420289854,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 69.64567152,
+        "mid": 120.07874399999999,
+        "back": 180.118116,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 45.1 x 80.0 ft./ 13.8 x 24.4 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_west_valley_city_megaplex_theatres_and_imax_at_valley_fair_mall",
+      "canonicalId": "imax_us_ut_west_valley_city_megaplex_theatres_and_imax_at_valley_fair_mall",
+      "kind": "cinema",
+      "name": "Megaplex Theatres & IMAX at Valley Fair Mall",
+      "city": "West Valley City",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "sub": "West Valley City · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 76.115488,
+        "h": 42.65092,
+        "ar": 1.7846153846153845,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 66.22047456,
+        "mid": 114.173232,
+        "back": 171.259848,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 42.5 x 76.2 ft./ 13.0 x 23.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_ashburn_regal_fox_stadium_16_and_imax",
+      "canonicalId": "imax_us_va_ashburn_regal_fox_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Fox Stadium 16 & IMAX",
+      "city": "Ashburn",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Ashburn · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 55.118112,
+        "h": 31.16798,
+        "ar": 1.7684210526315791,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.952757440000006,
+        "mid": 82.67716800000001,
+        "back": 124.015752,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.0 x 55.0 ft./ 9.5 x 16.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_charlottesville_regal_stonefield_stadium_14_and_imax",
+      "canonicalId": "imax_us_va_charlottesville_regal_stonefield_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Stonefield Stadium 14 & IMAX",
+      "city": "Charlottesville",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Charlottesville · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 29.199476,
+        "ar": 1.7752808988764046,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.3 x 51.9 ft./ 8.9 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_fredericksburg_regal_fredericksburg_14_and_imax",
+      "canonicalId": "imax_us_va_fredericksburg_regal_fredericksburg_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Fredericksburg 14 & IMAX",
+      "city": "Fredericksburg",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Fredericksburg · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 48.884516,
+        "h": 28.543307999999996,
+        "ar": 1.7126436781609198,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 42.52952892,
+        "mid": 73.326774,
+        "back": 109.990161,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.4 x 48.8 ft./ 8.7 x 14.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_hampton_amc_hampton_towne_center_24_and_imax",
+      "canonicalId": "imax_us_va_hampton_amc_hampton_towne_center_24_and_imax",
+      "kind": "cinema",
+      "name": "AMC Hampton Towne Center 24 & IMAX",
+      "city": "Hampton",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Hampton · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 59.05512,
+        "h": 32.8084,
+        "ar": 1.8,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 51.3779544,
+        "mid": 88.58268000000001,
+        "back": 132.87402,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 32.8 x 59.1 ft./ 10.0 x 18.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_hampton_virginia_air_and_space_science_center",
+      "canonicalId": "imax_us_va_hampton_virginia_air_and_space_science_center",
+      "kind": "cinema",
+      "name": "Virginia Air and Space Science Center",
+      "city": "Hampton",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Hampton · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 55.118112,
+        "ar": 1.2678571428571428,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 50.0 x 70.0 ft./ 16.8 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_manassas_regal_manassas_stadium_14_and_imax",
+      "canonicalId": "imax_us_va_manassas_regal_manassas_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Manassas Stadium 14 & IMAX",
+      "city": "Manassas",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Manassas · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 51.837272,
+        "h": 30.183728,
+        "ar": 1.7173913043478264,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.09842664,
+        "mid": 77.755908,
+        "back": 116.633862,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.1 x 51.7 ft./ 9.2 x 15.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_midlothian_regal_commonwealth_20_and_imax",
+      "canonicalId": "imax_us_va_midlothian_regal_commonwealth_20_and_imax",
+      "kind": "cinema",
+      "name": "Regal Commonwealth 20 & IMAX",
+      "city": "Midlothian",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Midlothian · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.2126,
+        "h": 26.574804,
+        "ar": 1.8518518518518519,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 42.814962,
+        "mid": 73.8189,
+        "back": 110.72835,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.6 x 49.2 ft./ 8.1 x 15.0 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_va_richmond_regal_short_pump_stadium_14_and_imax",
+      "canonicalId": "imax_us_va_richmond_regal_short_pump_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Short Pump Stadium 14 & IMAX",
+      "city": "Richmond",
+      "state": "VA",
+      "stateName": "Virginia",
+      "isPreset": false,
+      "sub": "Richmond · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 50.85302,
+        "h": 29.199476,
+        "ar": 1.7415730337078652,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 44.2421274,
+        "mid": 76.27953,
+        "back": 114.419295,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.1 x 50.9 ft./ 8.9 x 15.5 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_bellevue_imax_lincoln_square_cinemas",
+      "canonicalId": "imax_us_wa_bellevue_imax_lincoln_square_cinemas",
+      "kind": "cinema",
+      "name": "IMAX Lincoln Square Cinemas",
+      "city": "Bellevue",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Bellevue · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 65.288716,
+        "h": 36.745408,
+        "ar": 1.7767857142857142,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 56.801182919999995,
+        "mid": 97.93307399999999,
+        "back": 146.899611,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 36.7 x 65.3 ft./ 11.2 x 19.9 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_bellingham_regal_barkley_village_stadium_16_and_imax",
+      "canonicalId": "imax_us_wa_bellingham_regal_barkley_village_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Barkley Village Stadium 16 & IMAX",
+      "city": "Bellingham",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Bellingham · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 55.118112,
+        "h": 33.464568,
+        "ar": 1.647058823529412,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 47.952757440000006,
+        "mid": 82.67716800000001,
+        "back": 124.015752,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.6 x 55.1 ft./ 10.2 x 16.8 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_gig_harbor_galaxy_uptown_luxury_and_imax",
+      "canonicalId": "imax_us_wa_gig_harbor_galaxy_uptown_luxury_and_imax",
+      "kind": "cinema",
+      "name": "Galaxy Uptown Luxury+ & IMAX",
+      "city": "Gig Harbor",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Gig Harbor · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 70.866144,
+        "h": 40.026247999999995,
+        "ar": 1.7704918032786887,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 61.65354528,
+        "mid": 106.299216,
+        "back": 159.448824,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 71.0 ft./ 12.2 x 21.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_issaquah_regal_issaquah_highlands_12_and_imax",
+      "canonicalId": "imax_us_wa_issaquah_regal_issaquah_highlands_12_and_imax",
+      "kind": "cinema",
+      "name": "Regal Issaquah Highlands 12 & IMAX",
+      "city": "Issaquah",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Issaquah · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 62.664044000000004,
+        "h": 35.104988,
+        "ar": 1.785046728971963,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 54.517718280000004,
+        "mid": 93.99606600000001,
+        "back": 140.994099,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 62.6 ft./ 10.7 x 19.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_lacey_regal_martin_village_stadium_16_and_imax",
+      "canonicalId": "imax_us_wa_lacey_regal_martin_village_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Martin Village Stadium 16 & IMAX",
+      "city": "Lacey",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Lacey · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 56.758532,
+        "h": 35.433072,
+        "ar": 1.6018518518518519,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 49.37992284,
+        "mid": 85.137798,
+        "back": 127.706697,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.4 x 56.8 ft./ 10.8 x 17.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_seattle_paccar_imax_theatre",
+      "canonicalId": "imax_us_wa_seattle_paccar_imax_theatre",
+      "kind": "cinema",
+      "name": "PACCAR IMAX Theatre",
+      "city": "Seattle",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX 15/70 + Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 58.070868,
+        "h": 34.44882,
+        "ar": 1.6857142857142857,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 50.521655159999995,
+        "mid": 87.106302,
+        "back": 130.65945299999998,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": true,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "film_143",
+          "ar": 1.43,
+          "label": "1.43 · 15/70mm Film",
+          "enabled": true,
+          "isBookingDependent": true,
+          "isFilmMode": true,
+          "projection": "film"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": {
+        "id": "film_1570",
+        "label": "IMAX 15/70 Film",
+        "light": "Xenon (Film)",
+        "resH": null,
+        "resV": null,
+        "scanEquivLow": 8800,
+        "scanEquivHigh": 11700,
+        "scanEquivLabel": null,
+        "brightness_fl": null,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "photochemical",
+        "hdrLabel": "Photochemical latitude",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_1570_film",
+        "display_name": "IMAX 15/70 Film"
+      },
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.5 x 58.0 ft./ 10.5 x 17.7 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_seattle_regal_thornton_place_stadium_14_and_imax",
+      "canonicalId": "imax_us_wa_seattle_regal_thornton_place_stadium_14_and_imax",
+      "kind": "cinema",
+      "name": "Regal Thornton Place Stadium 14 & IMAX",
+      "city": "Seattle",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 47.900264,
+        "h": 26.574804,
+        "ar": 1.8024691358024691,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 41.67322968,
+        "mid": 71.850396,
+        "back": 107.775594,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.5 x 48.0 ft./ 8.1 x 14.6 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_spokane_amc_river_park_square_20_and_imax",
+      "canonicalId": "imax_us_wa_spokane_amc_river_park_square_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC River Park Square 20 & IMAX",
+      "city": "Spokane",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Spokane · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 52.821524000000004,
+        "h": 26.902887999999997,
+        "ar": 1.9634146341463419,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 45.954725880000005,
+        "mid": 79.232286,
+        "back": 118.84842900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.9 x 52.8 ft./ 8.2 x 16.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wa_vancouver_regal_cascade_stadium_16_and_imax",
+      "canonicalId": "imax_us_wa_vancouver_regal_cascade_stadium_16_and_imax",
+      "kind": "cinema",
+      "name": "Regal Cascade Stadium 16 & IMAX",
+      "city": "Vancouver",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "sub": "Vancouver · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 53.149608,
+        "h": 28.871392000000004,
+        "ar": 1.8409090909090906,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 46.24015896,
+        "mid": 79.724412,
+        "back": 119.586618,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.0 x 53.1 ft./ 8.8 x 16.2 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wi_fitchburg_amc_fitchburg_18_and_imax",
+      "canonicalId": "imax_us_wi_fitchburg_amc_fitchburg_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Fitchburg 18 & IMAX",
+      "city": "Fitchburg",
+      "state": "WI",
+      "stateName": "Wisconsin",
+      "isPreset": false,
+      "sub": "Fitchburg · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 43.963256,
+        "ar": 1.5895522388059702,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 44.0 x 70.0 ft./ 13.4 x 21.3 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_wi_wauwatosa_amc_mayfair_mall_18_and_imax",
+      "canonicalId": "imax_us_wi_wauwatosa_amc_mayfair_mall_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Mayfair Mall 18 & IMAX",
+      "city": "Wauwatosa",
+      "state": "WI",
+      "stateName": "Wisconsin",
+      "isPreset": false,
+      "sub": "Wauwatosa · LFExaminer 2021 · IMAX Digital Xenon",
+      "tag": "IMAX Xenon",
+      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "screen": {
+        "w": 49.540684,
+        "h": 26.24672,
+        "ar": 1.8875,
+        "geometry": "flat",
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "front": 43.10039508,
+        "mid": 74.311026,
+        "back": 111.466539,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital Xenon",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital Xenon"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "lfexaminer",
+          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.2 x 49.5 ft./ 8.0 x 15.1 m.."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "oled_flagship_65",
       "canonicalId": "oled_flagship_65",
       "kind": "home",
@@ -14526,6 +42540,10 @@ window.LIEMAX_DATA = {
     "r_imax_csv": {
       "label": "143190.xyz",
       "tier": 2
+    },
+    "lfexaminer": {
+      "label": "LFExaminer 2021",
+      "tier": 3
     },
     "trade_reporting": {
       "label": "Trade reporting",

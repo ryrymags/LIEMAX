@@ -26,7 +26,7 @@ src/data/content_formats/    ← content_format JSON files or a single array
 
 Each file is a standalone JSON object matching the schema entity type. They are not yet assembled into a full database — that happens in Step 4.
 
-Schema source of truth: `schema/theater.schema.json` v1.3.1.
+Schema source of truth: `schema/theater.schema.json` v1.4.0.
 - `format_preset` definition: `schema.definitions.format_preset`
 - `home_display_preset` definition: `schema.definitions.home_display_preset`
 - `content_format` definition: `schema.definitions.content_format`

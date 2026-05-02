@@ -3,14 +3,14 @@
   "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
   "title": "LIEMAX Theater, Home Display & Screen Schema",
   "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
-  "version": "1.3.1",
+  "version": "1.4.0",
 
   "definitions": {
 
     "source_quality": {
       "type": "string",
-      "enum": ["published_official", "published_cto", "trade_reporting", "community_estimate", "derived", "r_imax_csv", "user_submitted", "unknown"],
-      "description": "Data provenance flag. 'published_official' = manufacturer/SEC filing. 'published_cto' = IMAX CTO Reddit posts or similar named-source statements. 'trade_reporting' = Variety, Celluloid Junkie, LF Examiner. 'community_estimate' = r/imax, forum measurements. 'derived' = calculated from other known values (e.g., fL from lumens and screen area). 'r_imax_csv' = 143190.xyz CSV (authoritative IMAX venue database). 'user_submitted' = unverified community submission."
+      "enum": ["published_official", "published_cto", "trade_reporting", "community_estimate", "derived", "r_imax_csv", "lfexaminer", "user_submitted", "unknown"],
+      "description": "Data provenance flag. 'published_official' = manufacturer/SEC filing. 'published_cto' = IMAX CTO Reddit posts or similar named-source statements. 'trade_reporting' = Variety, Celluloid Junkie, LF Examiner. 'community_estimate' = r/imax, forum measurements. 'derived' = calculated from other known values (e.g., fL from lumens and screen area). 'r_imax_csv' = 143190.xyz CSV (authoritative IMAX venue database). 'lfexaminer' = archival LFExaminer theater table, last updated 2021-10-17. 'user_submitted' = unverified community submission."
     },
 
     "screen_geometry": {
@@ -401,6 +401,36 @@
       "required": ["location_name"]
     },
 
+    "lfexaminer_import": {
+      "type": "object",
+      "description": "Raw supplemental import row from LFExaminer's archival theater table. LFExaminer was last updated on 2021-10-17, so these rows are lower-confidence than current 143190 data.",
+      "properties": {
+        "row_number": { "type": ["integer", "null"] },
+        "country": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": ["string", "null"] },
+        "organization": { "type": "string" },
+        "projector_family": { "type": ["string", "null"] },
+        "projector_brand": { "type": ["string", "null"] },
+        "format": { "type": "string" },
+        "dimensionality": { "type": ["string", "null"] },
+        "screen_shape": { "type": ["string", "null"] },
+        "seats": { "type": ["integer", "null"] },
+        "screen_size": { "type": ["string", "null"] },
+        "screen_height_m": { "type": ["number", "null"] },
+        "screen_width_m": { "type": ["number", "null"] },
+        "screen_height_ft": { "type": ["number", "null"] },
+        "screen_width_ft": { "type": ["number", "null"] },
+        "opened": { "type": ["string", "null"] },
+        "theater_type": { "type": ["string", "null"] },
+        "raw": {
+          "type": ["object", "null"],
+          "description": "Optional unmodified key/value payload from the import source for auditability."
+        }
+      },
+      "required": ["country", "city", "organization", "format"]
+    },
+
     "metadata": {
       "type": "object",
       "description": "Data provenance and freshness tracking. Critical for community-driven data quality.",
@@ -517,6 +547,10 @@
         "source_143190": {
           "$ref": "#/definitions/imax_143190_import",
           "description": "Raw sparse 143190.xyz import row when this venue originated from the IMAX guide data."
+        },
+        "source_lfexaminer": {
+          "$ref": "#/definitions/lfexaminer_import",
+          "description": "Raw LFExaminer import row when this venue originated from the archival LFExaminer theater table."
         }
       },
       "required": ["id", "preset_id", "name", "city", "country", "metadata"]
@@ -700,7 +734,7 @@
     "schema_version": {
       "type": "string",
       "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
-      "const": "1.3.1"
+      "const": "1.4.0"
     },
     "presets": {
       "type": "array",
@@ -731,6 +765,11 @@
       "type": "array",
       "items": { "$ref": "#/definitions/imax_143190_import" },
       "description": "Optional raw imported rows from 143190.xyz. Useful for reproducible import tests and audit trails; normalized venues remain in venues[]."
+    },
+    "lfexaminer_imports": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/lfexaminer_import" },
+      "description": "Optional raw imported rows from LFExaminer. Useful for reproducible import tests and audit trails; normalized venues remain in venues[]."
     }
   },
   "required": ["schema_version", "presets", "venues", "content_formats", "home_display_presets", "home_displays"]

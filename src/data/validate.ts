@@ -10,6 +10,16 @@ import * as path from 'path';
 import schema from '../../schema/theater.schema.json';
 import samples from './fixtures/imax_143190_samples.json';
 import { map143190RowToVenue, type Imax143190ImportRow } from './imaxImport';
+import {
+  docs143190RowMatchKey,
+  extractLFExaminerWebarchiveHtml,
+  filterLFExaminerImaxDigitalRows,
+  LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS,
+  lfExaminerMatchKey,
+  mapLFExaminerRowToVenue,
+  parseLFExaminerRowsFromHtml,
+  type LFExaminerImportRow,
+} from './lfexaminerImport';
 import { resolveHomeDisplay, resolveVenue } from '../math/resolver';
 
 type JsonObject = Record<string, any>;
@@ -29,6 +39,7 @@ const enumValues = {
   hdrFormat: schema.definitions.hdr_type.enum,
   hdrFormatsSupported: schema.definitions.hdr_formats_supported.items.enum,
   homeDisplayPreset: Object.keys(schema.definitions.home_display_preset.properties),
+  lfexaminerImport: Object.keys(schema.definitions.lfexaminer_import.properties),
   lightSource: schema.definitions.light_source.enum,
   metadata: Object.keys(schema.definitions.metadata.properties),
   panelTech: schema.definitions.panel_tech.enum,
@@ -303,6 +314,31 @@ function collectMetadataIssues(metadata: unknown, label: string): string[] {
   return issues;
 }
 
+function collectLFExaminerImportIssues(row: unknown, label: string): string[] {
+  const issues: string[] = [];
+  if (!isObject(row)) return [`${label} must be an object`];
+  checkKnownKeys(label, row, enumValues.lfexaminerImport, issues);
+  checkRequired(label, row, schema.definitions.lfexaminer_import.required, issues);
+
+  for (const key of ['country', 'city', 'organization', 'format']) {
+    if (typeof row[key] !== 'string') issues.push(`${label}.${key} must be string`);
+  }
+  for (const key of ['state', 'projector_family', 'projector_brand', 'dimensionality', 'screen_shape', 'screen_size', 'opened', 'theater_type']) {
+    if (!isStringOrNull(row[key])) issues.push(`${label}.${key} must be string or null`);
+  }
+  for (const key of ['row_number', 'seats']) {
+    checkNullableInteger(`${label}.${key}`, row[key], issues);
+  }
+  for (const key of ['screen_height_m', 'screen_width_m', 'screen_height_ft', 'screen_width_ft']) {
+    checkNullableNumber(`${label}.${key}`, row[key], issues);
+  }
+  if (row.raw !== null && row.raw !== undefined && !isObject(row.raw)) {
+    issues.push(`${label}.raw must be object or null`);
+  }
+
+  return issues;
+}
+
 function collectDisplayOpticsIssues(optics: unknown, label: string): string[] {
   const issues: string[] = [];
   if (!isObject(optics)) return [`${label} must be an object`];
@@ -483,13 +519,15 @@ function collectContentFormatIssues(format: JsonObject, label: string): string[]
 }
 
 console.log('\n=== Schema Contract ===');
-assertEqual('schema const version', schema.properties.schema_version.const, '1.3.1');
+assertEqual('schema const version', schema.properties.schema_version.const, '1.4.0');
 assert('schema has 143190 import definition', Boolean(schema.definitions.imax_143190_import));
+assert('schema has LFExaminer import definition', Boolean(schema.definitions.lfexaminer_import));
 assert('schema projection supports mode', Boolean(schema.definitions.projection.properties.mode));
 assert('schema projection supports per-mode min AR', Boolean(schema.definitions.projection.properties.min_content_ar_supported));
 assert('format presets support projection arrays', Boolean(schema.definitions.format_preset.properties.default_projections));
 assert('venues support projection arrays', Boolean(schema.definitions.venue_record.properties.projections));
 assert('venues support raw 143190 source rows', Boolean(schema.definitions.venue_record.properties.source_143190));
+assert('venues support raw LFExaminer source rows', Boolean(schema.definitions.venue_record.properties.source_lfexaminer));
 
 console.log('\n=== Step 3 JSON Records ===');
 const presetFiles = listJson('src/data/presets');
@@ -629,9 +667,51 @@ assertEqual('film-only dome projection type', filmOnlyDome.projection.type, 'ima
 assertEqual('film-only dome claims 15/70 film capability', filmOnlyDome.capabilities.supports_1570_film, true);
 assertEqual('film-only dome does not claim digital 1.43', filmOnlyDome.capabilities.supports_143_digital, false);
 
+console.log('\n=== LFExaminer Import Fixtures ===');
+const lfExaminerRows = readJson<LFExaminerImportRow[]>('src/data/fixtures/lfexaminer_us_imax_rows.json');
+assertEqual('LFExaminer fixture candidate row count', lfExaminerRows.length, 320);
+assert('LFExaminer fixture rows validate against schema source shape',
+  lfExaminerRows.every((row, index) => collectLFExaminerImportIssues(row, `lfexaminer_rows[${index}]`).length === 0));
+assert('LFExaminer fixture is USA only', lfExaminerRows.every((row) => row.country === 'USA'));
+assert('LFExaminer fixture is IMAX-labeled only', lfExaminerRows.every((row) => row.projector_family === 'IMAX' || /\bIMAX\b/i.test(row.organization)));
+assert('LFExaminer fixture keeps only D-bearing formats', lfExaminerRows.every((row) => /(^|\+)D($|\+)/.test(row.format)));
+assert('LFExaminer fixture excludes non-IMAX D rows',
+  !lfExaminerRows.some((row) => row.organization === 'Arizona Science Center' && row.projector_family === 'BARCO'));
+
+const lfDigitalOnly = lfExaminerRows.find((row) => row.organization === 'Regal Tikahtnu Commons Stadium 16 & IMAX')!;
+const lfDigitalVenue = mapLFExaminerRowToVenue(lfDigitalOnly, { lastVerified: '2021-10-17' }) as any;
+assertEqual('LFExaminer D row maps to dual xenon preset', lfDigitalVenue.preset_id, 'imax_dual_xenon');
+assertEqual('LFExaminer D row maps to dual xenon projector type', lfDigitalVenue.projection.type, 'imax_dual_xenon');
+assertEqual('LFExaminer D row does not claim digital 1.43', lfDigitalVenue.capabilities.supports_143_digital, false);
+assertEqual('LFExaminer D row keeps archival source', lfDigitalVenue.metadata.data_source, 'lfexaminer');
+assert('LFExaminer D row keeps raw source row', Boolean(lfDigitalVenue.source_lfexaminer));
+
+const lfHybrid = lfExaminerRows.find((row) => row.organization === 'Harkins Arizona Mills 25 & IMAX')!;
+const lfHybridVenue = mapLFExaminerRowToVenue(lfHybrid, { lastVerified: '2021-10-17' }) as any;
+assertEqual('LFExaminer 1570+D row has two projection modes', lfHybridVenue.projections.length, 2);
+assertEqual('LFExaminer 1570+D row default projection remains digital xenon', lfHybridVenue.projection.type, 'imax_dual_xenon');
+assertEqual('LFExaminer 1570+D row adds 15/70 film mode', lfHybridVenue.projections[1].type, 'imax_1570_film');
+assertEqual('LFExaminer 1570+D row claims 15/70 support', lfHybridVenue.capabilities.supports_1570_film, true);
+assertEqual('LFExaminer 1570+D row still does not claim digital 1.43', lfHybridVenue.capabilities.supports_143_digital, false);
+
+const lfArchivePath = '/Users/rymag/Downloads/LFExamienr all entries html.webarchive';
+if (fs.existsSync(lfArchivePath)) {
+  const parsedLFExaminerRows = parseLFExaminerRowsFromHtml(extractLFExaminerWebarchiveHtml(lfArchivePath));
+  const parsedLFExaminerCandidates = filterLFExaminerImaxDigitalRows(parsedLFExaminerRows);
+  assertEqual('LFExaminer webarchive full table row count', parsedLFExaminerRows.length, 1617);
+  assertEqual('LFExaminer webarchive U.S. row count', parsedLFExaminerRows.filter((row) => row.country === 'USA').length, 451);
+  assertEqual('LFExaminer webarchive U.S. IMAX D-bearing candidate count', parsedLFExaminerCandidates.length, 320);
+  assert('LFExaminer fixture matches parsed webarchive candidates', JSON.stringify(parsedLFExaminerCandidates) === JSON.stringify(lfExaminerRows));
+}
+
 console.log('\n=== Docs Canonical Frontend Data ===');
 const docsRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
 const docsComparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
+const docs143190Keys = new Set(docsRows.map(docs143190RowMatchKey));
+const lfSupplementalRows = lfExaminerRows
+  .filter((row) => !docs143190Keys.has(lfExaminerMatchKey(row)))
+  .filter((row) => !LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS.has(lfExaminerMatchKey(row)));
+const lfComparableSupplementalRows = lfSupplementalRows.filter((row) => row.screen_width_m != null && row.screen_height_m != null);
 const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()}_${String(row[1] + '_' + row[2])
   .toLowerCase()
   .replace(/&/g, ' and ')
@@ -640,6 +720,9 @@ const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()
 
 assertEqual('promoted docs 143190 row count', docsRows.length, 133);
 assertEqual('promoted docs 143190 ids are unique', new Set(docsRowIds).size, docsRows.length);
+assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 33);
+assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 287);
+assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 279);
 
 const docsImported = docsRows.map((row) => map143190RowToVenue({
   region: 'United States',

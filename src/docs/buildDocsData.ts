@@ -8,6 +8,13 @@ import {
   resolveVenue,
 } from '../math';
 import { map143190RowToVenue, type Imax143190ImportRow } from '../data/imaxImport';
+import {
+  docs143190RowMatchKey,
+  LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS,
+  lfExaminerMatchKey,
+  mapLFExaminerRowToVenue,
+  type LFExaminerImportRow,
+} from '../data/lfexaminerImport';
 import { browserWorkbenchSource } from './workbenchRuntime';
 
 type JsonObject = Record<string, any>;
@@ -62,8 +69,18 @@ function source143190Key(value: JsonObject): string | null {
   return [source.province_state, source.city, source.location_name].join('|');
 }
 
+function sourceLFExaminerKey(value: JsonObject): string | null {
+  const source = value.source_lfexaminer;
+  if (!source) return null;
+  return lfExaminerMatchKey(source as LFExaminerImportRow);
+}
+
 function rowKey(row: any[]): string {
   return `${row[0]}|${row[1]}|${row[2]}`;
+}
+
+function hasComparableScreen(row: LFExaminerImportRow): boolean {
+  return row.screen_width_m != null && row.screen_height_m != null;
 }
 
 function screenFromDocs(screen: JsonObject): JsonObject {
@@ -267,6 +284,70 @@ function buildGeneratedImaxVenue(row: any[], authoredByKey: Map<string, JsonObje
   return record;
 }
 
+function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: Map<string, JsonObject>): JsonObject {
+  const record = mapLFExaminerRowToVenue(row, {
+    lastVerified: '2021-10-17',
+    sourceUrl: 'https://lfexaminer.com/theaters/',
+  }) as JsonObject;
+  const docsId = `imax_us_${String(row.state).toLowerCase()}_${slugify(`${row.city}_${row.organization}`)}`;
+  const screenWidthM = record.screen?.width_m;
+  const screenWidthFt = screenWidthM != null ? metersToFeet(screenWidthM) : null;
+  const isDome = record.screen?.geometry === 'hemispherical';
+  const authored = authoredByKey.get(lfExaminerMatchKey(row));
+  const hasFilm = row.format.includes('1570');
+
+  record.id = docsId;
+  record.name = row.organization;
+  record.city = row.city;
+  record.state_province = row.state;
+  record.country = 'United States';
+  record.docs_canonical_id = authored?.id ?? docsId;
+  record.docs_frontend = {
+    canonicalId: authored?.id ?? docsId,
+    sub: `${row.city} · ${isDome ? 'Dome · ' : ''}LFExaminer 2021 · IMAX Digital Xenon`,
+    tag: hasFilm ? 'IMAX 15/70 + Xenon' : 'IMAX Xenon',
+    blurb: hasFilm
+      ? 'Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.'
+      : 'Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.',
+    sources: {
+      screen: {
+        q: 'lfexaminer',
+        note: `LFExaminer theater table, last updated 2021-10-17 — ${row.screen_size ?? 'screen size not published'}.`,
+      },
+      seat: {
+        q: 'derived_from_screen_width',
+        note: isDome
+          ? 'Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics.'
+          : 'Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers.',
+      },
+    },
+  };
+
+  if (screenWidthFt != null) {
+    const seating = isDome
+      ? {
+          viewing_distance_front_ft: screenWidthFt / 2,
+          viewing_distance_mid_ft: screenWidthFt / 2,
+          viewing_distance_back_ft: screenWidthFt / 2,
+          viewing_distance_source: 'community_estimate',
+        }
+      : {
+          viewing_distance_front_ft: screenWidthFt * 0.87,
+          viewing_distance_mid_ft: screenWidthFt * 1.5,
+          viewing_distance_back_ft: screenWidthFt * 2.25,
+          viewing_distance_source: 'derived_from_screen_width',
+        };
+    record.seating = {
+      ...record.seating,
+      ...seating,
+      capacity: row.seats,
+      seat_offset_from_center_ft: 0,
+    };
+  }
+
+  return record;
+}
+
 function fmtAr(ar: number | null | undefined): string {
   return ar == null ? 'Unknown' : ar.toFixed(2);
 }
@@ -367,10 +448,17 @@ function docsProjection(projection: JsonObject | null | undefined, homeOptics?: 
 function docsSources(record: JsonObject, resolvedProjection: JsonObject, maskSources?: JsonObject): JsonObject {
   const generic = resolvedProjection.type === 'other';
   const isDome = record.screen?.geometry === 'hemispherical';
+  const isLFExaminer = record.metadata?.data_source === 'lfexaminer';
   const base = {
     screen: {
-      q: record.metadata?.data_source === 'frontend_comparison_record' ? 'preset_typical' : 'r_imax_csv',
-      note: isDome
+      q: record.metadata?.data_source === 'frontend_comparison_record'
+        ? 'preset_typical'
+        : isLFExaminer
+          ? 'lfexaminer'
+          : 'r_imax_csv',
+      note: isLFExaminer
+        ? `LFExaminer theater table, last updated 2021-10-17 — ${record.source_lfexaminer?.screen_size ?? 'screen size not published'}.`
+        : isDome
         ? `143190.xyz CSV — dome diameter ${(record.screen?.width_m ?? 0).toFixed(2)} m; height normalized from CSV when needed.`
         : record.screen?.width_m != null && record.screen?.height_m != null
           ? `143190.xyz CSV — ${record.screen.width_m} × ${record.screen.height_m} m.`
@@ -536,10 +624,18 @@ function buildData() {
   for (const venue of authoredVenues) {
     const key = source143190Key(venue);
     if (key) authoredByKey.set(key, venue);
+    const lfKey = sourceLFExaminerKey(venue);
+    if (lfKey) authoredByKey.set(lfKey, venue);
   }
 
   const comparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
   const imaxRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
+  const lfExaminerRows = readJson<LFExaminerImportRow[]>('src/data/fixtures/lfexaminer_us_imax_rows.json');
+  const imaxRowKeys = new Set(imaxRows.map(docs143190RowMatchKey));
+  const supplementalLFExaminerRows = lfExaminerRows
+    .filter((row) => !imaxRowKeys.has(lfExaminerMatchKey(row)))
+    .filter((row) => !LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS.has(lfExaminerMatchKey(row)))
+    .filter(hasComparableScreen);
   const apple = authoredVenues.find((venue) => venue.id === 'apple_providence_imax');
   if (!apple) throw new Error('Missing apple_providence_imax canonical venue');
   const appleDocs = {
@@ -568,12 +664,14 @@ function buildData() {
 
   const cinemaExamples = comparison.cinema_examples.map(buildFrontendCinemaRecord);
   const generatedImaxVenues = imaxRows.map((row) => buildGeneratedImaxVenue(row, authoredByKey));
+  const generatedLFExaminerVenues = supplementalLFExaminerRows.map((row) => buildGeneratedLFExaminerVenue(row, authoredByKey));
   const homeRecords = comparison.home_displays.map(buildHomeRecord);
 
   const venues = [
     toDocsVenue(appleDocs, presetById.get(apple.preset_id)!),
     ...cinemaExamples.map((record: JsonObject) => toDocsVenue(record, presetById.get(record.preset_id)!)),
     ...generatedImaxVenues.map((record) => toDocsVenue(record, presetById.get(record.preset_id)!)),
+    ...generatedLFExaminerVenues.map((record) => toDocsVenue(record, presetById.get(record.preset_id)!)),
     ...homeRecords.map((record: JsonObject) => toDocsHome(record, homePresetById.get(record.preset_id)!)),
   ];
 
@@ -587,6 +685,7 @@ function buildData() {
     manufacturer_spec: { label: 'Official spec', tier: 1 },
     rtings_measurement: { label: 'Measured (RTINGS)', tier: 1 },
     r_imax_csv: { label: '143190.xyz', tier: 2 },
+    lfexaminer: { label: 'LFExaminer 2021', tier: 3 },
     trade_reporting: { label: 'Trade reporting', tier: 2 },
     preset_typical: { label: 'Format avg.', tier: 3 },
     community_estimate: { label: 'Community estimate', tier: 3 },

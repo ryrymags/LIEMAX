@@ -1,8 +1,8 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, and Phase 4a canonical docs data unification."
+Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, Phase 4a canonical docs data unification, and Priority 2 LFExaminer Xenon supplement."
 
-Current priority: Phase 4a canonical `docs/` data unification complete; next likely priority is Priority 2 data coverage, especially supplemental Xenon-only IMAX venues excluded by 143190.
+Current priority: LFExaminer archival Xenon supplement complete; next likely priority is verifying stale LFExaminer rows/community corrections and filling remaining screen-dimension gaps.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
@@ -77,12 +77,30 @@ Phase 4a verification:
 - `git diff --check`: passed.
 - Browser DOM/runtime check on `http://127.0.0.1:5173/?v=phase4a-canonical-1`: homepage search remains closed on load; national/state stats render; Lincoln Square diagnosis preserves 1.43 display, source confidence, and scale figure; workbench opens; Mugar dome diagnosis renders `IMAX Laser for Dome` and dome scale (`ft dome diameter`, `180° H × 125° V`); browser console has no errors.
 
+## Priority 2 LFExaminer Xenon Supplement
+
+Completed Priority 2 LFExaminer goals:
+- Added `src/data/lfexaminerImport.ts` to parse the attached LFExaminer all-entries Apple webarchive, preserve raw LFExaminer rows, and map U.S. IMAX-labeled `D`/`1570+D` rows to `imax_dual_xenon` venue records.
+- Added `src/data/fixtures/lfexaminer_us_imax_rows.json` with 320 U.S. IMAX LFExaminer candidates from the 1,617-row archived table.
+- Schema bumped to `1.4.0` with `lfexaminer` source quality and `source_lfexaminer` raw row support.
+- `docs/data.js` now promotes 279 comparable unmatched LFExaminer rows into search/comparison/state-national stats as low-confidence archival 2021 data; 143190/authored current records win conflicts.
+- Site copy now says Xenon-only rows include archival LFExaminer 2021 data and may be stale, instead of saying older Xenon-only rows are simply missing.
+
+Priority 2 LFExaminer verification:
+- `npm run validate:schema`: passed.
+- `npm run validate:docs`: 71 passed, 0 failed.
+
+Priority 2 LFExaminer caveats:
+- LFExaminer was last updated 2021-10-17; any LFExaminer-sourced venue may have closed or upgraded.
+- Eight LFExaminer U.S. IMAX candidates lack screen dimensions and remain source-fixture only until measured or otherwise sourced.
+- LFExaminer non-IMAX giant-screen `D` rows are intentionally excluded from this pass.
+
 ## Completed
 
 - Step 1: Research & Data Schema. Audited 2026-04-26 — schema clean, cinema presets clean, research notes properly caveated.
 - Step 2: Math Engine. Audited 2026-04-26 — 133/133 tests pass, all edge cases covered (dome, hybrid, ScreenX, masking, FOV). No blockers.
 - Step 3: All presets, venues, home displays, content formats authored and validated. Audited 2026-04-26 — data quality clean after two fixes (imax_cola contrast_notes added; Home Theater Research naming table corrected to match canonical AGENTS.md IDs).
-- `schema/theater.schema.json` is version `1.3.1` (added `r_imax_csv` source quality enum for 143190.xyz-sourced fields).
+- `schema/theater.schema.json` is version `1.4.0` (adds `r_imax_csv` and `lfexaminer` source quality/source-row support).
 - `src/math/` exists and has 133 passing validation tests.
 - Sparse 143190.xyz import mapping exists under `src/data/`.
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.
@@ -92,6 +110,7 @@ Phase 4a verification:
 - Step 4 CoLa utilization clamp applied: `docs/` workbench visible content area/FOV/utilization now clamp presentation windows to physical screen bounds, with regression coverage for Assembly Row vs Boston Common CoLa.
 - Priority 1 education-first website overhaul applied: one-page IMAX 101 explainer, stronger novice homepage copy, curated film examples, source links, randomized example chips, national/state stats, diagnosis AR-loss/source-confidence/seat-geometry panels, and expanded docs regression checks.
 - Phase 4a canonical docs data unification applied: promoted docs 143190 snapshot to `src/data`, added generated docs data/runtime build, routed docs comparisons through resolver-backed generated records, and expanded schema/docs validation.
+- Priority 2 LFExaminer Xenon supplement applied: parsed the archival 2021 LFExaminer theater table from webarchive, stored U.S. IMAX D/1570+D candidates, and promoted comparable unmatched rows into generated docs data with low-confidence provenance.
 
 ## Known Low-Confidence Items (tracked, not blockers)
 
@@ -137,7 +156,7 @@ Priority order: get functional → then design polish. Do not invest in visual d
 - Step 4: diagnosis-first homepage implemented (2026-05-01), Priority 1 education-first pass complete, and Phase 4a canonical docs data path complete. `docs/` now opens with novice-friendly LIEMAX/IMAX framing, a privacy-friendly randomized example set, national/state stats, a noir DiagnosisCard with category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, a one-page integrated IMAX 101 section, and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from `src/data`/`src/docs`; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. `docs/diagnosis.js` provides `window.LIEMAX_DIAGNOSE` (`classify`, `diagnose`, `LABELS`). Docs validation covers generated-bundle freshness, workbench math regressions, diagnosis categories, dome guardrails, and education UI invariants.
 - Step 4 diagnosis follow-ups to remember: fix Metreon/Lincoln featured example ids in `docs/app.jsx` (`_and_imax`), and require explicit 1.43-capable dome projection/mode before classifying future dome rows as `true_dome`.
 - Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
-- Current Step 4 caveat: `docs/` data is canonical-generated, but supplemental Xenon-only IMAX coverage is still missing because 143190 excludes Xenon-only venues; keep `npm run validate:docs` in CI as the frontend behavior guard.
+- Current Step 4 caveat: `docs/` data is canonical-generated and includes LFExaminer archival Xenon-only IMAX supplement, but those rows are stale 2021 data; keep `npm run validate:docs` in CI as the frontend behavior guard.
 - Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).

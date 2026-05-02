@@ -326,7 +326,7 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
               onKeyDown={e => { if (e.key === "Escape") setOpen(false); }}
               aria-label="Search" />
             <div className="picker-v3__source-note">
-              IMAX theater listings come from 143190.xyz, including current U.S. dome rows. Older Xenon-only IMAX venues still need a supplemental source.
+              IMAX theater listings come from 143190.xyz, with supplemental Xenon-only rows from LFExaminer's archival 2021 table.
             </div>
           </div>
           {groups.length === 0 && <div className="picker-v3__empty">No results for "{query}"</div>}
@@ -643,7 +643,7 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
       </div>
       <p className="data-stats__note">
         Based on the current static docs bundle: {national.total} U.S. IMAX rows from 143190 / r-imax plus local prototype records.
-        Older Xenon-only IMAX venues may be missing until a supplemental LF Examiner/community source is merged.
+        Xenon-only IMAX venues include archival LFExaminer 2021 rows and may be stale; 143190 remains the fresher source when both list the same theater.
         State stats only appear after you choose a state; no IP geolocation is used.
       </p>
     </section>
@@ -982,7 +982,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
         <div className="search__results" role="listbox">
           {groups.length === 0 || flatList.length === 0 ? (
             <div className="search__empty">
-              No theaters match "{value}". The dataset covers U.S. IMAX film, laser, and dome rows from 143190.xyz so far — older Xenon-only venues may be missing.
+              No theaters match "{value}". The dataset covers U.S. IMAX film, laser, and dome rows from 143190.xyz plus archival LFExaminer 2021 Xenon rows.
             </div>
           ) : groups.map((g, gi) => (
             <div key={g.label}>
@@ -1404,7 +1404,7 @@ function App() {
         </div>
         <div>
           <h4>Data sources</h4>
-          <p>U.S. IMAX listings imported from <strong>143190 / r-imax</strong>, with dome behavior modeled from LIEMAX research and LF Examiner references. Older Xenon-only IMAX venues may be missing. Seat distances are derived from screen width unless venue rows are published.</p>
+          <p>U.S. IMAX listings imported from <strong>143190 / r-imax</strong>, with supplemental Xenon-only rows from <strong>LFExaminer's 2021 archival theater table</strong>. 143190 wins when both sources list the same theater. Seat distances are derived from screen width unless venue rows are published.</p>
         </div>
         <div>
           <h4>Disclaimer</h4>
