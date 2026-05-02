@@ -5,6 +5,12 @@
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 
+function stageColor(name, fallback) {
+  if (!window.getComputedStyle || !document.documentElement) return fallback;
+  const value = window.getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return value || fallback;
+}
+
 window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const M = window.LIEMAX_MATH;
   // contentARB defaults to contentARA when not supplied (legacy single-AR call)
@@ -21,6 +27,9 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const FLOOR_Y = 0; // baseline at floor
   const HUMAN_H = 5.75; // average adult height in ft
   const HUMAN_W = 1.6;
+  const SIDE_A = stageColor("--side-a", "#17476b");
+  const SIDE_B = stageColor("--side-b", "#7a3f5c");
+  const INK = stageColor("--ink", "#1f1b16");
 
   const aMask = maskFor(A, contentARA);
   const bMask = maskFor(B, contentARB);
@@ -84,7 +93,7 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
       el("path", {
         d: `M ${x0} ${cy} A ${r} ${r} 0 0 1 ${x0 + w} ${cy}`,
         fill: "none",
-        stroke: "#fff",
+        stroke: INK,
         "stroke-width": 0.14,
         opacity: 0.55,
       });
@@ -106,7 +115,7 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
         "font-size": Math.max(1.1, w * 0.045),
         "font-weight": 700,
         "letter-spacing": "0.14em",
-        fill: "#fff",
+        fill: INK,
         opacity: 0.9,
       }).textContent = `${side} · DOME`;
 
@@ -171,9 +180,9 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const bX = PAD + aW + GAP;
 
   // Side A
-  drawScreen(aX, "A", A.screen, aLift, aMask, A.name, "var(--side-a)");
+  drawScreen(aX, "A", A.screen, aLift, aMask, A.name, SIDE_A);
   // Side B
-  drawScreen(bX, "B", B.screen, bLift, bMask, B.name, "var(--side-b)");
+  drawScreen(bX, "B", B.screen, bLift, bMask, B.name, SIDE_B);
 
   // Human silhouette between the screens, at floor level
   const humanX = PAD + aW + GAP/2 - HUMAN_W/2;
@@ -256,6 +265,8 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
   const h = screen.h;
   const totalW = PAD + w + PAD + HUMAN_W + 5;
   const totalH = Math.max(lift + h, HUMAN_H) + 8;
+  const SIDE_A = stageColor("--side-a", "#17476b");
+  const INK = stageColor("--noir-ink", "#efe7d4");
 
   svg.setAttribute("viewBox", `0 ${-totalH} ${totalW} ${totalH}`);
   svg.setAttribute("preserveAspectRatio", "xMidYMax meet");
@@ -273,7 +284,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
   });
 
   const x0 = PAD;
-  const color = "var(--accent, var(--side-a))";
+  const color = SIDE_A;
 
   if (isDome) {
     const r = w / 2;
@@ -285,7 +296,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
     el("circle", { cx, cy, r: fillR, fill: color, "fill-opacity": 0.58, stroke: "none" });
     el("path", {
       d: `M ${x0} ${cy} A ${r} ${r} 0 0 1 ${x0 + w} ${cy}`,
-      fill: "none", stroke: "#fff", "stroke-width": 0.14, opacity: 0.55,
+      fill: "none", stroke: INK, "stroke-width": 0.14, opacity: 0.55,
     });
     el("text", {
       x: cx, y: cy - r - 0.6,
@@ -302,7 +313,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
       "font-size": Math.max(1.1, w * 0.045),
       "font-weight": 700,
       "letter-spacing": "0.14em",
-      fill: "#fff",
+      fill: INK,
       opacity: 0.9,
     }).textContent = "DOME";
     el("text", {
@@ -348,7 +359,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
     const headR = hw * 0.32;
     const headCY = -(hh - headR);
     const headCX = hx + hw / 2;
-    el("circle", { cx: headCX, cy: headCY, r: headR, fill: "var(--ink)", opacity: 0.85 });
+    el("circle", { cx: headCX, cy: headCY, r: headR, fill: INK, opacity: 0.85 });
     const bodyTop = headCY + headR * 0.9;
     const bodyBot = -0.05;
     el("path", {
@@ -356,7 +367,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
           L ${headCX - hw*0.18} ${bodyTop + hh*0.05}
           Q ${headCX} ${bodyTop} ${headCX + hw*0.18} ${bodyTop + hh*0.05}
           L ${headCX + hw*0.42} ${bodyBot} Z`,
-      fill: "var(--ink)", opacity: 0.85,
+      fill: INK, opacity: 0.85,
     });
     el("text", {
       x: headCX, y: bodyBot - 0.4,

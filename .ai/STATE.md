@@ -5,6 +5,7 @@ Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparis
 Current priority: Priority 0 follow-up complete — Priority 1 plan saved in `.ai/PRIORITY1_PLAN.md`, pending user approval before implementation.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
+Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
 
 ## Priority 0 Working Context
 
@@ -29,15 +30,16 @@ Priority 0 caveats:
 
 Priority 0 verification:
 - `npm run validate:schema`: 133 passed, 0 failed.
-- `npm run validate:docs`: 41 passed, 0 failed.
+- `npm run validate:docs`: 44 passed, 0 failed.
 - `npm run ci`: passed.
 - `git diff --check`: passed.
-- Browser check on `http://127.0.0.1:5173/`: homepage search stays closed on load; Mugar diagnoses as `IMAX Laser for Dome`; Chrysler diagnoses as `IMAX GT Dome 15/70mm film`; both show dome scale figures with fixed 180° × 125° coverage.
+- Browser check on `http://127.0.0.1:5173/?v=priority0-dome-5`: homepage search stays closed on load; Mugar diagnoses as `IMAX Laser for Dome`; Chrysler diagnoses as `IMAX GT Dome 15/70mm film`; diagnosis and comparison views both render circular dome SVG geometry with fixed 180° × 125° coverage.
 
 Priority 0 follow-up notes:
 - Dome ranking should read as flat True IMAX 1.43 above Dome, Dome above Hybrid, Hybrid above LIEMAX.
 - `docs/diagnosis.js` distinguishes `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm` in the diagnosis headline.
 - Diagnosis cards now include an immediate 2D scale figure; dome figures are drawn as scaled circular cross-sections from reported dome diameter, not flat rectangles.
+- The docs page intentionally version-tags `styles.css`, `stage.js`, and `app.jsx` together to avoid stale mixed asset loads during local browser testing.
 - Dome native contrast remains a research gap. Keep digital dome laser contrast unknown unless an IMAX/dome-specific source is found; film dome may use photochemical/15/70 estimates only with caveats because dome screen geometry and scatter make perceived contrast venue-specific.
 
 ## Priority 1 Planning Snapshot

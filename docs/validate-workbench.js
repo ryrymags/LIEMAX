@@ -257,17 +257,22 @@ assert("Verdict mentions Reading visible area and contrast wins", Boolean(readin
 
 const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 const stageSource = fs.readFileSync(path.join(root, "docs/stage.js"), "utf8");
+const indexSource = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
+const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8");
 assert("Picker includes Xenon-only database disclaimer", appSource.includes("Xenon-only IMAX venues"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
 assert("Homepage search hides category tags for diagnosis reveal", appSource.includes("showCategoryTags={false}"));
 assert("Homepage search does not auto-open on autofocus", appSource.includes("openOnFocusAfterInteraction"));
 assert("Comparison picker keeps category tags", appSource.includes("picker-v3__item-tag"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
+assert("Docs assets are cache-busted together", indexSource.includes("styles.css?v=priority0-dome-5") && indexSource.includes("stage.js?v=priority0-dome-5") && indexSource.includes("app.jsx?v=priority0-dome-5"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
 assert("Single-stage renderer is available for diagnosis scale", stageSource.includes("LIEMAX_STAGE_SINGLE"));
 assert("Stage renderer draws dome diameter instead of rectangle only", stageSource.includes("ft dome diameter"));
+assert("Stage renderer uses resolved colors for SVG visibility", stageSource.includes("stageColor(\"--side-a\""));
+assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis-stage__svg") && stylesSource.includes("height: clamp(240px"));
 
 // ─── Diagnosis module tests ───────────────────────────────────────────────────
 
