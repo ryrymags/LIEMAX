@@ -256,6 +256,7 @@ assert("Verdict names Reading for B-side wins", Boolean(readingSentence && verdi
 assert("Verdict mentions Reading visible area and contrast wins", Boolean(readingSentence && readingSentence.text.includes("visible image area") && readingSentence.text.includes("native contrast")));
 
 const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
+const stageSource = fs.readFileSync(path.join(root, "docs/stage.js"), "utf8");
 assert("Picker includes Xenon-only database disclaimer", appSource.includes("Xenon-only IMAX venues"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
 assert("Homepage search hides category tags for diagnosis reveal", appSource.includes("showCategoryTags={false}"));
@@ -264,6 +265,9 @@ assert("Comparison picker keeps category tags", appSource.includes("picker-v3__i
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
+assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
+assert("Single-stage renderer is available for diagnosis scale", stageSource.includes("LIEMAX_STAGE_SINGLE"));
+assert("Stage renderer draws dome diameter instead of rectangle only", stageSource.includes("ft dome diameter"));
 
 // ─── Diagnosis module tests ───────────────────────────────────────────────────
 
@@ -287,6 +291,9 @@ assert("Metreon (GT Laser + film) diagnoses as true_143_film",     DIAG.classify
 assert("Lincoln Square (GT Laser + film) diagnoses as true_143_film", DIAG.classify(diagLincoln)   === "true_143_film");
 assert("Mugar dome laser diagnoses as true_dome",                  DIAG.classify(diagMugar)        === "true_dome");
 assert("Chrysler 15/70 dome diagnoses as true_dome",               DIAG.classify(diagChrysler)     === "true_dome");
+assert("Dome tier ranks above hybrid",                             DIAG.LABELS.true_dome.rank.startsWith("Tier A") && DIAG.LABELS.true_film_lie_dig.rank.startsWith("Tier B"));
+assert("Mugar diagnosis names Laser for Dome",                     DIAG.diagnose(diagMugar).headline.includes("IMAX Laser for Dome"));
+assert("Chrysler diagnosis names GT Dome 15/70",                   DIAG.diagnose(diagChrysler).headline.includes("IMAX GT Dome 15/70mm"));
 
 const fakeDome = {
   ...diagBostonCommon,

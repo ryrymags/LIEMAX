@@ -451,10 +451,19 @@ function Stage({ venueA, venueB, statsA, statsB, filmModeA, filmModeB }) {
     if (svgRef.current) STAGE(svgRef.current, stageA, stageB, contentArA, contentArB);
   }, [stageA, stageB, contentArA, contentArB]);
 
-  const aArea = venueA.screen.w * venueA.screen.h;
-  const bArea = venueB.screen.w * venueB.screen.h;
+  function screenSurfaceArea(venue) {
+    if (venue.screen.geometry === "hemispherical") {
+      const r = venue.screen.w / 2;
+      return 2 * Math.PI * r * r * (venue.screen.domeCoveragePct || 0.83);
+    }
+    return venue.screen.w * venue.screen.h;
+  }
+
+  const aArea = screenSurfaceArea(venueA);
+  const bArea = screenSurfaceArea(venueB);
   const biggerSide = aArea >= bArea ? "A" : "B";
   const ratio = (Math.max(aArea, bArea) / Math.min(aArea, bArea)).toFixed(2);
+  const hasDome = venueA.screen.geometry === "hemispherical" || venueB.screen.geometry === "hemispherical";
   const stageTitle = contentArA === contentArB
     ? `SCREEN SCALE · ${contentArA.toFixed(2)} CONTENT AR`
     : `SCREEN SCALE · A ${contentArA.toFixed(2)} / B ${contentArB.toFixed(2)}`;
@@ -470,7 +479,7 @@ function Stage({ venueA, venueB, statsA, statsB, filmModeA, filmModeB }) {
       </div>
       <svg ref={svgRef} className="stage__svg" style={{ minHeight: 360 }} aria-label="Screen scale visualization" />
       <div className="stage__caption">
-        Drawn to true relative scale. Solid fill = visible content area · Translucent outline = full physical screen · Figure = 5ʹ9ʺ.
+        Drawn to true relative scale. {hasDome ? "Dome shown as scaled circular cross-section with filled research-default coverage." : "Solid fill = visible content area · Translucent outline = full physical screen."} Figure = 5ʹ9ʺ.
         {" "}Side {biggerSide} screen surface is <strong>{ratio}×</strong> the other.
       </div>
     </section>
@@ -696,11 +705,42 @@ function quickCategoryTag(venue) {
     true_143_film:    { text: "TRUE 1.43 + FILM", color: "var(--cat-true143-film)" },
     true_143_laser:   { text: "TRUE 1.43",        color: "var(--cat-true143)" },
     true_film_lie_dig:{ text: "1.43 ON FILM",     color: "var(--cat-truefilm)" },
-    true_dome:        { text: "DOME",             color: "var(--cat-dome)" },
+    true_dome:        { text: "DOME 1.43",        color: "var(--cat-dome)" },
     liemax:           { text: "LIEMAX",           color: "var(--cat-liemax)" },
     unknown:          { text: "UNKNOWN",          color: "var(--cat-unknown)" },
   };
   return map[cat];
+}
+
+// ─── Single screen scale figure ───────────────────────────────────────────────
+
+function DiagnosisScaleFigure({ venue }) {
+  const svgRef = useRef(null);
+  const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
+
+  useEffect(() => {
+    if (!svgRef.current || !window.LIEMAX_STAGE_SINGLE) return;
+    const projection = { ...(venue.projection || {}), min_ar: presAr };
+    window.LIEMAX_STAGE_SINGLE(svgRef.current, { ...venue, projection }, presAr);
+  }, [venue, presAr]);
+
+  const isDome = venue.screen.geometry === "hemispherical";
+  const wFt = venue.screen.w ? Math.round(venue.screen.w) : null;
+  const hFt = venue.screen.h ? Math.round(venue.screen.h) : null;
+  const caption = isDome
+    ? `Dome drawn as a scaled circular cross-section from the reported ${wFt || "unknown"} ft diameter. Filled area represents the research default of about 83% hemispherical coverage.`
+    : `Flat screen drawn to scale${wFt && hFt ? ` at roughly ${wFt} × ${hFt} ft` : ""}. Solid fill shows the default presentation window.`;
+
+  return (
+    <div className="diagnosis-stage">
+      <div className="diagnosis-stage__head">
+        <span>Screen scale</span>
+        <span>{isDome ? "Dome geometry" : `${presAr.toFixed(2)}:1 default`}</span>
+      </div>
+      <svg ref={svgRef} className="diagnosis-stage__svg" aria-label="Selected theater screen scale visualization" />
+      <div className="diagnosis-stage__caption">{caption} Figure = 5'9".</div>
+    </div>
+  );
 }
 
 function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategoryTags = true }) {
@@ -867,6 +907,8 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
         <p className="diagnosis__verdict-body">{result.body}</p>
       </div>
 
+      <DiagnosisScaleFigure venue={venue} />
+
       <div className="diagnosis__specs">
         <div className="spec">
           <span className="spec__k">Screen</span>
@@ -874,9 +916,9 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
           <span className="spec__sub">{isDome && wFt ? `${wFt} ft diameter` : (wFt && hFt ? `${wFt} × ${hFt} ft` : "Geometry unknown")}</span>
         </div>
         <div className="spec">
-          <span className="spec__k">Digital projector</span>
+          <span className="spec__k">{isDome ? "Dome projection" : "Digital projector"}</span>
           <span className="spec__v spec__v--small">{proj?.light || "—"}</span>
-          <span className="spec__sub">{isDome ? "dome 1.43 capable" : `caps at ${proj?.min_ar ? `${proj.min_ar.toFixed(2)}:1` : "—"}`}</span>
+          <span className="spec__sub">{isDome ? (venue.filmProjection ? "15/70 dome 1.43" : "laser dome 1.43") : `caps at ${proj?.min_ar ? `${proj.min_ar.toFixed(2)}:1` : "—"}`}</span>
         </div>
         <div className="spec">
           <span className="spec__k">15/70 film</span>
@@ -933,10 +975,10 @@ function DiagnosisPlaceholder() {
       desc: "The rarest of all. Both digital GT laser and 15/70 film, on a 1.43:1 screen." },
     { swatch: "var(--cat-true143)", name: "True IMAX 1.43 · GT Laser",
       desc: "Digital-only true IMAX. Anything mastered for 1.43 fills the screen." },
+    { swatch: "var(--cat-dome)", name: "True IMAX Dome 1.43",
+      desc: "Laser for Dome or GT Dome 15/70. Fixed 180° × 125° coverage, not flat-screen row math." },
     { swatch: "var(--cat-truefilm)", name: "True IMAX for 15/70 Film · LIEMAX digitally",
       desc: "Real on film bookings; daily digital is CoLa, capped at 1.90." },
-    { swatch: "var(--cat-dome)", name: "True IMAX Dome",
-      desc: "Hemispherical screen with explicit dome projection. Fixed 180° × 125° coverage, not flat-screen row math." },
     { swatch: "var(--cat-liemax)", name: "LIEMAX",
       desc: "Marketed IMAX, but digital projector caps at 1.90. The LIEMAX everyone complains about." },
     { swatch: "var(--cat-unknown)", name: "Unknown / incomplete",

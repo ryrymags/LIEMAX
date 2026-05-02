@@ -22,14 +22,8 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const HUMAN_H = 5.75; // average adult height in ft
   const HUMAN_W = 1.6;
 
-  const aMask = M.visibleContentRect(A.screen, contentARA, {
-    ar: A.projection.min_ar,
-    min_ar: A.projection.min_ar,
-  });
-  const bMask = M.visibleContentRect(B.screen, contentARB, {
-    ar: B.projection.min_ar,
-    min_ar: B.projection.min_ar,
-  });
+  const aMask = maskFor(A, contentARA);
+  const bMask = maskFor(B, contentARB);
 
   // Both screens share floor. Bottom of screen lifted off floor a bit
   // (cinemas: ~5 ft sightline; home: 2 ft TV stand). Use 5 for cinema, 2 for home.
@@ -66,6 +60,67 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   function drawScreen(x0, side, screen, lift, mask, label, sideColor) {
     const w = screen.w;
     const h = screen.h;
+
+    if (screen.geometry === "hemispherical") {
+      const r = w / 2;
+      const cx = x0 + r;
+      const cy = -(lift + r);
+      const coverage = screen.domeCoveragePct || 0.83;
+      const fillR = r * Math.sqrt(coverage);
+
+      el("circle", {
+        cx, cy, r,
+        fill: sideColor,
+        "fill-opacity": 0.06,
+        stroke: sideColor,
+        "stroke-width": 0.22,
+      });
+      el("circle", {
+        cx, cy, r: fillR,
+        fill: sideColor,
+        "fill-opacity": 0.58,
+        stroke: "none",
+      });
+      el("path", {
+        d: `M ${x0} ${cy} A ${r} ${r} 0 0 1 ${x0 + w} ${cy}`,
+        fill: "none",
+        stroke: "#fff",
+        "stroke-width": 0.14,
+        opacity: 0.55,
+      });
+
+      const dimText = `${w.toFixed(1)} ft dome diameter`;
+      el("text", {
+        x: cx, y: cy - r - 0.6,
+        "text-anchor": "middle",
+        "font-family": "var(--font-mono)",
+        "font-size": Math.max(0.9, w * 0.035),
+        fill: "currentColor",
+        opacity: 0.7,
+      }).textContent = dimText;
+
+      el("text", {
+        x: cx, y: cy + 0.4,
+        "text-anchor": "middle",
+        "font-family": "var(--font-mono)",
+        "font-size": Math.max(1.1, w * 0.045),
+        "font-weight": 700,
+        "letter-spacing": "0.14em",
+        fill: "#fff",
+        opacity: 0.9,
+      }).textContent = `${side} · DOME`;
+
+      el("text", {
+        x: cx, y: cy + r + 1.2,
+        "text-anchor": "middle",
+        "font-family": "var(--font-mono)",
+        "font-size": Math.max(0.75, w * 0.026),
+        fill: "currentColor",
+        opacity: 0.65,
+      }).textContent = "180° H × 125° V";
+      return;
+    }
+
     // Outline (full screen, semi-transparent)
     el("rect", {
       x: x0, y: -(lift + h),
@@ -154,8 +209,161 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
 
   // Return ratio info for caption
   return {
-    aArea: A.screen.w * A.screen.h,
-    bArea: B.screen.w * B.screen.h,
+    aArea: screenSurfaceArea(A.screen),
+    bArea: screenSurfaceArea(B.screen),
     aMask, bMask,
   };
+
+  function maskFor(venue, contentAR) {
+    if (venue.screen.geometry === "hemispherical") {
+      const coverage = venue.screen.domeCoveragePct || 0.83;
+      return {
+        effW: venue.screen.w,
+        effH: venue.screen.h,
+        areaUtilPct: coverage * 100,
+        letterbox: false,
+        pillarbox: false,
+        cropped: false,
+      };
+    }
+    return M.visibleContentRect(venue.screen, contentAR, {
+      ar: venue.projection.min_ar,
+      min_ar: venue.projection.min_ar,
+    });
+  }
+
+  function screenSurfaceArea(screen) {
+    if (screen.geometry === "hemispherical") {
+      const r = screen.w / 2;
+      return 2 * Math.PI * r * r * (screen.domeCoveragePct || 0.83);
+    }
+    return screen.w * screen.h;
+  }
+};
+
+window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
+  const M = window.LIEMAX_MATH;
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+  const PAD = 8;
+  const FLOOR_Y = 0;
+  const HUMAN_H = 5.75;
+  const HUMAN_W = 1.6;
+  const lift = venue.kind === "cinema" ? 5 : 2;
+  const screen = venue.screen;
+  const isDome = screen.geometry === "hemispherical";
+  const w = screen.w;
+  const h = screen.h;
+  const totalW = PAD + w + PAD + HUMAN_W + 5;
+  const totalH = Math.max(lift + h, HUMAN_H) + 8;
+
+  svg.setAttribute("viewBox", `0 ${-totalH} ${totalW} ${totalH}`);
+  svg.setAttribute("preserveAspectRatio", "xMidYMax meet");
+
+  function el(tag, attrs, parent) {
+    const n = document.createElementNS(SVG_NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    (parent || svg).appendChild(n);
+    return n;
+  }
+
+  el("line", {
+    x1: 0, y1: FLOOR_Y, x2: totalW, y2: FLOOR_Y,
+    stroke: "currentColor", "stroke-width": 0.08, opacity: 0.5,
+  });
+
+  const x0 = PAD;
+  const color = "var(--accent, var(--side-a))";
+
+  if (isDome) {
+    const r = w / 2;
+    const cx = x0 + r;
+    const cy = -(lift + r);
+    const coverage = screen.domeCoveragePct || 0.83;
+    const fillR = r * Math.sqrt(coverage);
+    el("circle", { cx, cy, r, fill: color, "fill-opacity": 0.06, stroke: color, "stroke-width": 0.22 });
+    el("circle", { cx, cy, r: fillR, fill: color, "fill-opacity": 0.58, stroke: "none" });
+    el("path", {
+      d: `M ${x0} ${cy} A ${r} ${r} 0 0 1 ${x0 + w} ${cy}`,
+      fill: "none", stroke: "#fff", "stroke-width": 0.14, opacity: 0.55,
+    });
+    el("text", {
+      x: cx, y: cy - r - 0.6,
+      "text-anchor": "middle",
+      "font-family": "var(--font-mono)",
+      "font-size": Math.max(0.9, w * 0.035),
+      fill: "currentColor",
+      opacity: 0.7,
+    }).textContent = `${w.toFixed(1)} ft dome diameter`;
+    el("text", {
+      x: cx, y: cy + 0.4,
+      "text-anchor": "middle",
+      "font-family": "var(--font-mono)",
+      "font-size": Math.max(1.1, w * 0.045),
+      "font-weight": 700,
+      "letter-spacing": "0.14em",
+      fill: "#fff",
+      opacity: 0.9,
+    }).textContent = "DOME";
+    el("text", {
+      x: cx, y: cy + r + 1.2,
+      "text-anchor": "middle",
+      "font-family": "var(--font-mono)",
+      "font-size": Math.max(0.75, w * 0.026),
+      fill: "currentColor",
+      opacity: 0.65,
+    }).textContent = "180° H × 125° V";
+  } else {
+    const mask = M.visibleContentRect(screen, contentAR, {
+      ar: venue.projection.min_ar,
+      min_ar: venue.projection.min_ar,
+    });
+    el("rect", {
+      x: x0, y: -(lift + h), width: w, height: h,
+      fill: color, "fill-opacity": 0.08,
+      stroke: color, "stroke-width": 0.18,
+    });
+    el("rect", {
+      x: x0 + (w - mask.effW) / 2,
+      y: -(lift + h) + (h - mask.effH) / 2,
+      width: mask.effW,
+      height: mask.effH,
+      fill: color,
+      "fill-opacity": 0.78,
+      stroke: "none",
+    });
+    el("text", {
+      x: x0 + w / 2, y: -(lift + h) - 0.6,
+      "text-anchor": "middle",
+      "font-family": "var(--font-mono)",
+      "font-size": Math.max(0.9, w * 0.04),
+      fill: "currentColor",
+      opacity: 0.7,
+    }).textContent = `${w.toFixed(1)} × ${h.toFixed(1)} ft`;
+  }
+
+  drawHuman(PAD + w + 5, HUMAN_H, HUMAN_W);
+
+  function drawHuman(hx, hh, hw) {
+    const headR = hw * 0.32;
+    const headCY = -(hh - headR);
+    const headCX = hx + hw / 2;
+    el("circle", { cx: headCX, cy: headCY, r: headR, fill: "var(--ink)", opacity: 0.85 });
+    const bodyTop = headCY + headR * 0.9;
+    const bodyBot = -0.05;
+    el("path", {
+      d: `M ${headCX - hw*0.42} ${bodyBot}
+          L ${headCX - hw*0.18} ${bodyTop + hh*0.05}
+          Q ${headCX} ${bodyTop} ${headCX + hw*0.18} ${bodyTop + hh*0.05}
+          L ${headCX + hw*0.42} ${bodyBot} Z`,
+      fill: "var(--ink)", opacity: 0.85,
+    });
+    el("text", {
+      x: headCX, y: bodyBot - 0.4,
+      "text-anchor": "middle",
+      "font-family": "var(--font-mono)",
+      "font-size": 0.95,
+      fill: "currentColor", opacity: 0.6,
+    }).textContent = "5'9\"";
+  }
 };

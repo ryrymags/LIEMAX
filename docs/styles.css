@@ -154,6 +154,37 @@ button, select, input { font-family: inherit; color: inherit; }
   text-align: center;
 }
 
+.diagnosis-stage {
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--noir-line));
+  background: color-mix(in srgb, var(--accent) 7%, rgba(8, 8, 7, 0.9));
+  padding: 16px 14px 12px;
+  margin: 20px 0;
+}
+.diagnosis-stage__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--noir-ink-3);
+  margin-bottom: 8px;
+}
+.diagnosis-stage__svg {
+  display: block;
+  width: 100%;
+  min-height: 260px;
+}
+.diagnosis-stage__caption {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  color: var(--noir-ink-3);
+  text-align: center;
+  margin-top: 8px;
+}
+
 /* ─── Stat grid ─────────────────────────────────────────────────────────────── */
 .stats { margin-bottom: 24px; }
 .stats__row {

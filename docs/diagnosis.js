@@ -11,11 +11,11 @@ window.LIEMAX_DIAGNOSE = (function () {
     true_143_laser:   { rank: "Tier S · Real-deal IMAX",
                         badge: "True IMAX 1.43 · GT Laser",
                         accent: "var(--cat-true143)" },
-    true_film_lie_dig:{ rank: "Tier A · Hybrid — film yes, digital no",
+    true_film_lie_dig:{ rank: "Tier B · Hybrid — film yes, digital no",
                         badge: "True IMAX for 15/70 Film · LIEMAX digitally",
                         accent: "var(--cat-truefilm)" },
-    true_dome:        { rank: "Tier A · Dome geometry",
-                        badge: "True IMAX Dome",
+    true_dome:        { rank: "Tier A · 1.43 dome immersion",
+                        badge: "True IMAX Dome 1.43",
                         accent: "var(--cat-dome)" },
     liemax:           { rank: "Tier C · Marketing-only IMAX",
                         badge: "LIEMAX",
@@ -71,6 +71,12 @@ window.LIEMAX_DIAGNOSE = (function () {
   function buildVerdict(venue, category) {
     const name = venue.name;
     const projLabel = venue.projection ? venue.projection.label : "Unknown projector";
+    const projectionText = [venue.projection, venue.filmProjection]
+      .filter(Boolean)
+      .map(p => [p.label, p.display_name, p.light, p.type].filter(Boolean).join(" "))
+      .join(" ");
+    const isDomeFilm = /15\s*\/?\s*70|film|imax_dome_film|gt\s*dome/i.test(projectionText);
+    const domeSystem = isDomeFilm ? "IMAX GT Dome 15/70mm film" : "IMAX Laser for Dome";
     const arDisplay = venue.screen.ar != null ? venue.screen.ar.toFixed(2) : "?";
     const wFt = venue.screen.w ? Math.round(venue.screen.w) : null;
     const hFt = venue.screen.h ? Math.round(venue.screen.h) : null;
@@ -94,7 +100,7 @@ window.LIEMAX_DIAGNOSE = (function () {
         };
       case "true_dome":
         return {
-          line: `IMAX Dome — different game entirely.`,
+          line: `True IMAX Dome 1.43 — ${domeSystem}.`,
           body: `${name} projects onto a hemispherical screen, not a flat rectangle. It is genuine IMAX, but the comparison metric is fixed dome coverage — about 180° horizontal by 125° vertical — rather than flat-screen row distance. Standard cinema scoring doesn't apply cleanly, and dome-mastered content matters.`,
         };
       case "liemax":

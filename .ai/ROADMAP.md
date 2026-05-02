@@ -6,7 +6,7 @@
 - GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
 - GREEN `schema/`: v1.3.1 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Adds `r_imax_csv` source quality for 143190-sourced fields. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
 - GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
-- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01). Search page → DiagnosisCard (noir panel, category badge, spec strip, mode breakdown) → optional comparison workbench accordion. `docs/diagnosis.js` module (`window.LIEMAX_DIAGNOSE`) with `classify()`, `diagnose()`, and `LABELS`. 6 diagnosis tests added (Providence, Reading, Boston Common, Metreon, Lincoln Square). Full CI 273/273. Prior: comparison workbench prototype, Reading GT seating correction, XD/Dolby 2025 entries, Xenon-only disclaimer, docs regression validation.
+- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01). Search page → DiagnosisCard (noir panel, category badge, spec strip, mode breakdown, immediate scale visualization) → optional comparison workbench accordion. Dome diagnoses now distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm`, rank Dome above Hybrid/LIEMAX, and draw dome screens as scaled circular cross-sections rather than flat rectangles. `docs/diagnosis.js` module (`window.LIEMAX_DIAGNOSE`) with `classify()`, `diagnose()`, and `LABELS`. Docs validation is 41/41 and full CI passes. Prior: comparison workbench prototype, Reading GT seating correction, XD/Dolby 2025 entries, Xenon-only disclaimer, docs regression validation.
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames; Batch 2 workbench audit addendum added to Master/Dome research.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
@@ -19,6 +19,9 @@
 - Import U.S. IMAX Dome rows from `r-imax/imaxguide` / 143190 U.S. CSV into canonical venue records and the temporary `docs/` prototype bundle.
 - Use `research/IMAX Dome Research.md` and `research/Master Research.md` for dome defaults and caveats: 180° horizontal FOV, 125° vertical FOV, 83% default hemisphere coverage, 105°/20° vertical split, fixed dome FOV, dome-master caveat, and non-linear digital dome mapping.
 - Tighten diagnosis logic so `true_dome` requires dome geometry/name evidence plus explicit dome-capable projection or mode evidence.
+- Rank Dome as a real IMAX 1.43 category below flat True IMAX 1.43 and above Hybrid/LIEMAX.
+- Distinguish `IMAX Laser for Dome` and `IMAX GT Dome 15/70mm` in user-facing diagnosis copy.
+- Show a 2D scale figure immediately on the diagnosis screen; draw domes from reported dome diameter as circular cross-sections instead of flat rectangles.
 - Add visible IMAX Corporation non-affiliation copy.
 - Clarify that MIT is the current license but the license choice is under review if non-commercial reuse is desired.
 - Mark the old Metreon/Lincoln `_and_imax` featured-id task resolved if the current code still uses the generated `_and_imax` IDs.
@@ -56,6 +59,7 @@
 - `dolby_cinema_single_laser.json` brightness_fl ~31 fL: community estimate from AMC Southlands firsthand reports; no Dolby-published per-venue fL spec yet.
 - `cinemark_xd.json` brightness_fl ~16 fL: derived from Barco SP4K specs; Cinemark publishes no fL target.
 - Reading GT `docs/` workbench seating distances are a community/derived estimate (40/75/84 ft) pending published row-depth or floor-plan data.
+- IMAX Dome native contrast: digital dome laser contrast is still unknown; 15/70 dome can inherit photochemical estimates only with explicit caveats because dome surface geometry and scatter make venue-specific perceived contrast hard to compare.
 - Deferred home display presets: `oled_budget` and `iphone_standard` (add in Step 4 if per-budget comparison is a priority feature).
 
 ## Top Step 4 Headache Risks

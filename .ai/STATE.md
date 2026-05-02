@@ -2,7 +2,9 @@
 
 Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench plus Batch 2 workbench audit fixes."
 
-Current priority: Priority 0 complete — Priority 1 plan saved in `.ai/PRIORITY1_PLAN.md`, pending user approval before implementation.
+Current priority: Priority 0 follow-up complete — Priority 1 plan saved in `.ai/PRIORITY1_PLAN.md`, pending user approval before implementation.
+
+Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 
 ## Priority 0 Working Context
 
@@ -14,6 +16,9 @@ Chunk checklist:
 - [x] Import U.S. IMAX Dome rows from `r-imax/imaxguide` / 143190 U.S. CSV into canonical `src/data/venues/`.
 - [x] Mirror those dome rows in the temporary `docs/` data bundle until Priority 1 unifies frontend data with canonical JSON.
 - [x] Tighten `docs/diagnosis.js` so `true_dome` requires explicit dome-capable projection/mode evidence.
+- [x] Rank Dome above Hybrid and LIEMAX while keeping flat True IMAX 1.43 above Dome.
+- [x] Distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm` on the Diagnosis card.
+- [x] Add immediate diagnosis-stage screen/dome scale visualization, including dome-specific circular cross-section depiction from reported dome diameter.
 - [x] Update site copy for dome caveats, IMAX non-affiliation, and license-under-review language.
 - [x] Run `npm run validate:schema`, `npm run validate:docs`, full `npm run ci`, and `git diff --check`.
 
@@ -24,9 +29,16 @@ Priority 0 caveats:
 
 Priority 0 verification:
 - `npm run validate:schema`: 133 passed, 0 failed.
-- `npm run validate:docs`: 35 passed, 0 failed.
+- `npm run validate:docs`: 41 passed, 0 failed.
 - `npm run ci`: passed.
 - `git diff --check`: passed.
+- Browser check on `http://127.0.0.1:5173/`: homepage search stays closed on load; Mugar diagnoses as `IMAX Laser for Dome`; Chrysler diagnoses as `IMAX GT Dome 15/70mm film`; both show dome scale figures with fixed 180° × 125° coverage.
+
+Priority 0 follow-up notes:
+- Dome ranking should read as flat True IMAX 1.43 above Dome, Dome above Hybrid, Hybrid above LIEMAX.
+- `docs/diagnosis.js` distinguishes `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm` in the diagnosis headline.
+- Diagnosis cards now include an immediate 2D scale figure; dome figures are drawn as scaled circular cross-sections from reported dome diameter, not flat rectangles.
+- Dome native contrast remains a research gap. Keep digital dome laser contrast unknown unless an IMAX/dome-specific source is found; film dome may use photochemical/15/70 estimates only with caveats because dome screen geometry and scatter make perceived contrast venue-specific.
 
 ## Priority 1 Planning Snapshot
 
