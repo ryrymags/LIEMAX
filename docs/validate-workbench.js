@@ -14,9 +14,11 @@ function loadScript(relativePath) {
 
 loadScript("docs/math.js");
 loadScript("docs/data.js");
+loadScript("docs/workbench.js");
 
 const D = context.window.LIEMAX_DATA;
 const M = context.window.LIEMAX_MATH;
+const W = context.window.LIEMAX_WORKBENCH;
 let passed = 0;
 let failed = 0;
 
@@ -34,6 +36,11 @@ function closeEnough(actual, expected, tolerance = 0.5) {
   return Math.abs(actual - expected) <= tolerance;
 }
 
+function verticalFrameLoss(contentAr = 1.43, presentationAr = 1.90) {
+  const retained = Math.min(1, contentAr / presentationAr);
+  return { retainedPct: retained * 100, lostPct: (1 - retained) * 100 };
+}
+
 function findVenueById(id) {
   return D.venues.find((venue) => venue.id === id);
 }
@@ -43,38 +50,19 @@ function findVenueByName(name) {
 }
 
 function compatiblePresentationModes(venue, filmMode) {
-  const modes = (venue.presentationModes || []).filter((mode) => mode.enabled);
-  const activeModes = filmMode && venue.isHybrid
-    ? modes.filter((mode) => mode.isFilmMode)
-    : modes.filter((mode) => !mode.isFilmMode);
-  return activeModes.length ? activeModes : modes;
+  return W.compatiblePresentationModes(venue, filmMode);
 }
 
 function defaultPresArFor(venue, filmMode) {
-  const modes = compatiblePresentationModes(venue, filmMode);
-  const fallback = filmMode && venue.isHybrid ? 1.43 : venue.defaultPresentationAr;
-  if (modes.length === 0) return fallback;
-  return (modes.find((mode) => Math.abs(mode.ar - fallback) < 0.01) || modes[0]).ar;
+  return W.defaultPresArFor(venue, filmMode);
 }
 
 function resolvePresAr(venue, requestedPresAr, filmMode) {
-  const modes = compatiblePresentationModes(venue, filmMode);
-  if (modes.length === 0) return requestedPresAr || defaultPresArFor(venue, filmMode);
-  const requestedMode = modes.find((mode) => Math.abs(mode.ar - requestedPresAr) < 0.01);
-  return (requestedMode || modes.find((mode) => Math.abs(mode.ar - defaultPresArFor(venue, filmMode)) < 0.01) || modes[0]).ar;
+  return W.resolvePresAr(venue, requestedPresAr, filmMode);
 }
 
 function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
-  const presAr = resolvePresAr(venue, requestedPresAr, filmMode);
-  const proj = filmMode && venue.filmProjection ? venue.filmProjection : venue.projection;
-  const dist = venue.seat[seat];
-  const mask = M.visibleContentRect(venue.screen, contentAr, { ar: presAr, min_ar: presAr });
-  const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-  const contentVFov = M.verticalFovDeg(mask.effH, dist);
-  const ppdVal = proj.resH == null ? null : M.ppd(proj.resH, contentHFov);
-  const fl = M.brightnessFL({ projection: proj });
-  const physicalUtil = mask.areaUtilPct;
-  return { dist, ppdVal, presAr, mask, contentHFov, contentVFov, fl, physicalUtil, proj };
+  return W.computeStats(venue, seat, contentAr, requestedPresAr, filmMode);
 }
 
 function fmtInt(n) {
@@ -127,37 +115,7 @@ function makeHdrRow(id, label, catA, catB, labelA, labelB) {
 }
 
 function buildComparisonRows(statsA, statsB) {
-  const projA = statsA.proj;
-  const projB = statsB.proj;
-  const rows = [];
-
-  rows.push(makeRow("visible_hfov", "Visible horizontal FOV", statsA.contentHFov, statsB.contentHFov, `${fmtInt(statsA.contentHFov)}°`, `${fmtInt(statsB.contentHFov)}°`, true));
-  rows.push(makeRow("visible_vfov", "Visible vertical FOV", statsA.contentVFov, statsB.contentVFov, `${fmtInt(statsA.contentVFov)}°`, `${fmtInt(statsB.contentVFov)}°`, true));
-  rows.push(makeRow("ppd", "Pixels per degree", statsA.ppdVal, statsB.ppdVal, statsA.ppdVal == null ? projA.scanEquivLabel || "Unknown" : `${fmtInt(statsA.ppdVal)} ppd`, statsB.ppdVal == null ? projB.scanEquivLabel || "Unknown" : `${fmtInt(statsB.ppdVal)} ppd`, true));
-
-  const aArea = statsA.mask.effW * statsA.mask.effH;
-  const bArea = statsB.mask.effW * statsB.mask.effH;
-  rows.push(makeRow("area", "Visible content area", aArea, bArea, `${fmtInt(aArea)} sq ft`, `${fmtInt(bArea)} sq ft`, true));
-  rows.push(makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, `${fmtInt(statsA.physicalUtil)}%`, `${fmtInt(statsB.physicalUtil)}%`, true));
-  rows.push(makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? `${fmtNum(statsA.fl, 1)} fL` : "Unknown", statsB.fl != null ? `${fmtNum(statsB.fl, 1)} fL` : "Unknown", true));
-
-  const aContrast = projA.isPerPixelEmissive ? Infinity : projA.nativeContrast;
-  const bContrast = projB.isPerPixelEmissive ? Infinity : projB.nativeContrast;
-  rows.push(makeRow("contrast", "Native contrast", aContrast, bContrast, projA.nativeContrast ? `${projA.nativeContrast.toLocaleString()}:1` : "Unknown", projB.nativeContrast ? `${projB.nativeContrast.toLocaleString()}:1` : "Unknown", true));
-
-  const hdrRow = makeHdrRow("hdr", "HDR black level", projA.hdrCategory, projB.hdrCategory, projA.hdrLabel, projB.hdrLabel);
-  rows.push(hdrRow);
-  rows.push({
-    id: "depth",
-    label: "Picture depth",
-    aDisplay: projA.hdrLabel === "—" ? "SDR" : projA.hdrLabel,
-    bDisplay: projB.hdrLabel === "—" ? "SDR" : projB.hdrLabel,
-    winner: hdrRow.winner,
-    badgeLabel: hdrRow.badgeLabel,
-    note: hdrRow.note || null,
-  });
-
-  return rows;
+  return W.buildComparisonRows({}, {}, statsA, statsB);
 }
 
 const VERDICT_LABEL = {
@@ -173,18 +131,7 @@ const VERDICT_LABEL = {
 };
 
 function buildVerdict(sideA, sideB, rows) {
-  const aWinsRows = rows.filter((row) => row.winner === "a");
-  const bWinsRows = rows.filter((row) => row.winner === "b");
-  const priority = ["area", "visible_vfov", "visible_hfov", "contrast", "brightness", "hdr", "ppd", "util", "depth"];
-  const rowLabel = (row) => VERDICT_LABEL[row.id] || row.label.toLowerCase();
-  const joinLabels = (labels) => labels.length <= 2 ? labels.join(" and ") : `${labels.slice(0, -1).join(", ")}, and ${labels[labels.length - 1]}`;
-  const topLabels = (winRows) => winRows.slice().sort((a, b) => priority.indexOf(a.id) - priority.indexOf(b.id)).slice(0, 3).map(rowLabel);
-  const sentences = [];
-  if (aWinsRows.length > 0 && bWinsRows.length > 0) {
-    sentences.push({ side: "a", text: `leads on ${joinLabels(topLabels(aWinsRows))}.` });
-    sentences.push({ side: "b", text: `leads on ${joinLabels(topLabels(bWinsRows))}.` });
-  }
-  return { sentences, aName: sideA.name, bName: sideB.name };
+  return W.buildVerdict(sideA, sideB, rows);
 }
 
 console.log("\nDocs workbench regression validation\n");
@@ -226,7 +173,9 @@ function visibleBoundsViolations() {
         for (const content of D.contentFormats) {
           const stats = computeStats(venue, "mid", content.ar, mode.ar, filmMode);
           const visibleArea = stats.mask.effW * stats.mask.effH;
-          const physicalArea = venue.screen.w * venue.screen.h;
+          const physicalArea = venue.screen.geometry === "hemispherical"
+            ? 2 * Math.PI * (venue.screen.w / 2) ** 2 * (venue.screen.domeCoveragePct || 0.83)
+            : venue.screen.w * venue.screen.h;
           checked++;
           if (visibleArea > physicalArea + 0.01 || stats.physicalUtil > 100.01) {
             offenders.push(`${venue.name} ${mode.id} ${content.id}`);
@@ -265,7 +214,7 @@ assert("Homepage search hides category tags for diagnosis reveal", appSource.inc
 assert("Homepage search does not auto-open on autofocus", appSource.includes("openOnFocusAfterInteraction"));
 assert("Comparison picker keeps category tags", appSource.includes("picker-v3__item-tag"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", indexSource.includes("styles.css?v=priority0-dome-5") && indexSource.includes("stage.js?v=priority0-dome-5") && indexSource.includes("app.jsx?v=priority0-dome-5"));
+assert("Docs assets are cache-busted together", indexSource.includes("styles.css?v=phase4a-canonical-1") && indexSource.includes("workbench.js?v=phase4a-canonical-1") && indexSource.includes("stage.js?v=phase4a-canonical-1") && indexSource.includes("app.jsx?v=phase4a-canonical-1"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -273,6 +222,28 @@ assert("Single-stage renderer is available for diagnosis scale", stageSource.inc
 assert("Stage renderer draws dome diameter instead of rectangle only", stageSource.includes("ft dome diameter"));
 assert("Stage renderer uses resolved colors for SVG visibility", stageSource.includes("stageColor(\"--side-a\""));
 assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis-stage__svg") && stylesSource.includes("height: clamp(240px"));
+const dataSource = fs.readFileSync(path.join(root, "docs/data.js"), "utf8");
+assert("Docs data bundle is generated from canonical source", dataSource.includes("canonical src/data JSON resolved through src/math/resolver"));
+assert("Docs data bundle no longer contains prototype projection constants", !dataSource.includes("const proj_"));
+assert("Docs data bundle no longer embeds imaxCsvRows", !dataSource.includes("imaxCsvRows"));
+assert("Every docs venue exposes canonicalId", D.venues.every((venue) => typeof venue.canonicalId === "string" && venue.canonicalId.length > 0));
+assert("Workbench runtime is exposed", Boolean(W && typeof W.computeStats === "function" && typeof W.buildComparisonRows === "function"));
+
+const loss143On190 = verticalFrameLoss(1.43, 1.90);
+assert("Homepage explains why the site exists", appSource.includes("IMAX can mean <em>very different rooms</em>") && appSource.includes("screen, projector, movie format, and seat math"));
+assert("Homepage defines LIEMAX for novices", appSource.includes("LIEMAX is the blunt nickname"));
+assert("Integrated IMAX 101 guide is present", appSource.includes("IMAX 101") && appSource.includes("What the diagnosis is really checking"));
+assert("Required projector terms are explained", ["GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX Dome Laser", "Dome 15/70"].every(term => appSource.includes(term)));
+assert("15/70 vs standard 70mm explanation is present", appSource.includes("Standard 70mm runs vertically") && appSource.includes("IMAX 15/70 runs sideways"));
+assert("Curated film examples are present", ["Oppenheimer", "Sinners", "Dunkirk", "Interstellar", "F1: The Movie", "Dune"].every(title => appSource.includes(title)));
+assert("1.43 on 1.90 vertical frame loss remains about 24.7%", closeEnough(loss143On190.lostPct, 24.7, 0.2));
+assert("Aspect ratio penalty copy is user-facing", appSource.includes("A 1.43 movie forced into 1.90 retains about"));
+assert("Recommendation chips are randomized curated examples", appSource.includes("CURATED_SUGGESTION_IDS") && appSource.includes("shuffleSample(curated, 5)") && !appSource.includes("imax_us_ma_boston_amc_boston_common_19\",\n      \"imax_us_ny_new_york_amc_lincoln_square_13_and_imax\""));
+assert("National stats exclude presets and home displays", appSource.includes("kind === \"cinema\" && !v.isPreset"));
+assert("State stats require explicit state selection", appSource.includes("State stats only appear after you choose a state; no IP geolocation is used") && appSource.includes("selectedState"));
+assert("Seat geometry panel exposes front/mid/back FOV", appSource.includes("SeatGeometryPanel") && appSource.includes("front\", \"mid\", \"back\"") && appSource.includes("screen width"));
+assert("Dome education keeps fixed FOV", appSource.includes("Fixed dome coverage") && appSource.includes("Dome seating does not work like a flat rectangle"));
+assert("External source links are included", ["LF Examiner large formats", "IMAX annual filing", "Kodak Sinners formats"].every(label => appSource.includes(label)));
 
 // ─── Diagnosis module tests ───────────────────────────────────────────────────
 

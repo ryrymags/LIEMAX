@@ -8,6 +8,7 @@
 const { useState, useEffect, useRef, useMemo, useCallback } = React;
 const D = window.LIEMAX_DATA;
 const M = window.LIEMAX_MATH;
+const W = window.LIEMAX_WORKBENCH;
 const STAGE = window.LIEMAX_STAGE;
 const DIAG = window.LIEMAX_DIAGNOSE;
 
@@ -23,77 +24,133 @@ function fmtInt(n) {
   return Math.round(n).toLocaleString();
 }
 
+const SOURCE_LINKS = [
+  { label: "LF Examiner large formats", href: "https://lfexaminer.com/large-formats/" },
+  { label: "LF Examiner projector key", href: "https://lfexaminer.com/converted-theaters/" },
+  { label: "LF Examiner viewing angles", href: "https://lfexaminer.com/2009/05/what-is-immersive/" },
+  { label: "IMAX Filmed in IMAX cameras", href: "https://imaxcorporation.gcs-web.com/news-releases/news-release-details/imax-launches-new-filmed-imax-program-worlds-leading-digital" },
+  { label: "IMAX annual filing", href: "https://investors.imax.com/static-files/433f6acf-7f22-4fe3-a27c-78fd40000bc8" },
+  { label: "IMAX F1 1.90 example", href: "https://investors.imax.com/news-releases/news-release-details/imax-races-28-million-opening-weekend-f1r-movie/" },
+  { label: "Kodak Sinners formats", href: "https://www.kodak.com/en/motion/blog-post/sinners/" },
+];
+
+const FORMAT_EXAMPLES = [
+  {
+    label: "Shot with IMAX film cameras",
+    kicker: "15/70 film camera",
+    examples: "Oppenheimer, Sinners, Dunkirk, Interstellar",
+    note: "This is the tall 1.43:1 IMAX film lineage. It only reaches full height in 15/70 film or GT/Dome laser venues that can actually show 1.43.",
+  },
+  {
+    label: "Filmed for IMAX / certified digital",
+    kicker: "often 1.90 digital",
+    examples: "F1: The Movie, Dune / Dune: Part Two",
+    note: "These use IMAX-certified digital workflows or IMAX-specific framing. Many fill 1.90 IMAX screens; only select titles/venues reach 1.43.",
+  },
+  {
+    label: "Standard theatrical framing",
+    kicker: "scope / flat",
+    examples: "Dune scope scenes, The Batman, most 1.85 dramas",
+    note: "Most non-IMAX releases are 2.39 scope or 1.85 flat. IMAX branding alone does not create extra image if the movie was mastered wide.",
+  },
+];
+
+const EXPLAINER_CARDS = [
+  {
+    title: "The screen is only half the answer",
+    body: "A tall 1.43 screen can still play normal digital IMAX at 1.90 if the installed projector or booked format cannot drive the full height. LIEMAX is the nickname for IMAX-branded rooms that cap the everyday digital image at 1.90.",
+  },
+  {
+    title: "Projector tiers, plain English",
+    body: "GT Dual Laser and 15/70 film are the flat-screen routes to full 1.43. CoLa, Laser XT, and Dual Xenon are multiplex digital systems that normally top out at 1.90. IMAX Dome Laser and IMAX Dome 15/70 are real IMAX too, but their geometry wraps around you instead of behaving like a rectangle.",
+  },
+  {
+    title: "Why 1.43 matters",
+    body: "A 1.43 IMAX frame is much taller than a 1.90 digital IMAX frame and radically taller than 2.39 scope. When 1.43 content is forced through 1.90, about 24.7% of the vertical frame is gone.",
+  },
+  {
+    title: "FOV, PPD, and confidence",
+    body: "FOV tells you how much of your vision the image fills. PPD estimates perceived sharpness from that seat. Confidence labels tell you whether a number is published, imported from 143190 / r-imax, inherited from a preset, derived, or community-estimated.",
+  },
+];
+
+const CURATED_SUGGESTION_IDS = [
+  "imax_us_ny_new_york_amc_lincoln_square_13_and_imax",
+  "imax_us_ca_san_francisco_amc_metreon_16_and_imax",
+  "imax_us_az_grand_canyon_grand_canyon_imax_grand_canyon_visitor_center",
+  "imax_us_mi_detroit_chrysler_imax_dome_theatre_michigan_science_center",
+  "imax_us_al_birmingham_imax_dome_mcwane_center",
+  "apple_providence_imax",
+  "imax_us_ma_reading_sunbrella_imax_3d_theater_reading",
+  "imax_us_ca_hollywood_tcl_chinese_theatres_imax",
+  "imax_us_az_tempe_harkins_arizona_mills_25_and_imax",
+  "imax_us_ca_irvine_regal_edwards_irvine_spectrum_and_imax",
+  "imax_us_dc_washington_lockheed_martin_imax_theater",
+  "imax_us_tx_austin_bullock_texas_state_history_museum_imax",
+];
+
+function shuffleSample(items, count) {
+  const pool = items.slice();
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, count);
+}
+
+function realCinemaVenues() {
+  return D.venues.filter(v => v.kind === "cinema" && !v.isPreset);
+}
+
+function categoryCounts(venues) {
+  const total = venues.length;
+  const counts = {
+    total,
+    liemax: 0,
+    true143: 0,
+    film143: 0,
+    dome: 0,
+    hybrid: 0,
+    unknown: 0,
+  };
+  venues.forEach(v => {
+    const category = DIAG.classify(v);
+    if (category === "liemax") counts.liemax += 1;
+    if (category === "true_143_film" || category === "true_143_laser") counts.true143 += 1;
+    if (category === "true_143_film" || category === "true_film_lie_dig") counts.film143 += 1;
+    if (category === "true_dome") counts.dome += 1;
+    if (category === "true_film_lie_dig") counts.hybrid += 1;
+    if (category === "unknown") counts.unknown += 1;
+  });
+  return counts;
+}
+
+function pct(part, total) {
+  if (!total) return "0%";
+  return `${Math.round((part / total) * 100)}%`;
+}
+
+function verticalFrameLoss(contentAr = 1.43, presentationAr = 1.90) {
+  const retained = Math.min(1, contentAr / presentationAr);
+  return { retainedPct: retained * 100, lostPct: (1 - retained) * 100 };
+}
+
 // ─── Stats computation ────────────────────────────────────────────────────────
 
 function compatiblePresentationModes(venue, filmMode) {
-  const modes = (venue.presentationModes || []).filter(m => m.enabled);
-  const activeModes = filmMode && venue.isHybrid
-    ? modes.filter(m => m.isFilmMode)
-    : modes.filter(m => !m.isFilmMode);
-
-  return activeModes.length ? activeModes : modes;
+  return W.compatiblePresentationModes(venue, filmMode);
 }
 
 function defaultPresArFor(venue, filmMode) {
-  const modes = compatiblePresentationModes(venue, filmMode);
-  const def = filmMode && venue.isHybrid ? 1.43 : venue.defaultPresentationAr;
-  if (modes.length === 0) return def;
-  const defaultMode = modes.find(m => Math.abs(m.ar - def) < 0.01);
-  return (defaultMode || modes[0]).ar;
+  return W.defaultPresArFor(venue, filmMode);
 }
 
 function resolvePresAr(venue, requestedPresAr, filmMode) {
-  const modes = compatiblePresentationModes(venue, filmMode);
-  if (modes.length === 0) return requestedPresAr || defaultPresArFor(venue, filmMode);
-  const requestedMode = modes.find(m => Math.abs(m.ar - requestedPresAr) < 0.01);
-  return (requestedMode || modes.find(m => Math.abs(m.ar - defaultPresArFor(venue, filmMode)) < 0.01) || modes[0]).ar;
+  return W.resolvePresAr(venue, requestedPresAr, filmMode);
 }
 
 function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
-  const presAr = resolvePresAr(venue, requestedPresAr, filmMode);
-  const proj = (filmMode && venue.filmProjection) ? venue.filmProjection : venue.projection;
-  const dist = venue.seat[seat];
-  const isDome = venue.screen.geometry === "hemispherical";
-
-  if (isDome) {
-    const domeHFov = venue.screen.domeHFov || 180;
-    const domeVFov = venue.screen.domeVFov || 125;
-    const coverage = venue.screen.domeCoveragePct || 0.83;
-    const radius = venue.screen.w / 2;
-    const domeArea = 2 * Math.PI * radius * radius * coverage;
-    return {
-      dist,
-      physicalFov: domeHFov,
-      ppdVal: proj.resH != null ? M.ppd(proj.resH, domeHFov) : null,
-      presAr,
-      projWindow: { w: venue.screen.w, h: venue.screen.h, ar: 1.43, geometry: "hemispherical" },
-      mask: { effW: Math.sqrt(domeArea), effH: Math.sqrt(domeArea), areaUtilPct: coverage * 100, letterbox: false, pillarbox: false, cropped: false },
-      contentHFov: domeHFov,
-      contentVFov: domeVFov,
-      fl: M.brightnessFL({ projection: proj }),
-      physicalUtil: coverage * 100,
-      visibleArea: domeArea,
-      isDome: true,
-      proj,
-    };
-  }
-
-  const physicalFov = M.horizontalFovDeg(venue.screen.w, dist);
-
-  const mask = M.visibleContentRect(venue.screen, contentAr, { ar: presAr, min_ar: presAr });
-  const projWindow = mask.projectedWindow;
-  const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-  const contentVFov = M.verticalFovDeg(mask.effH, dist);
-
-  let ppdVal = null;
-  if (proj.resH != null) {
-    ppdVal = M.ppd(proj.resH, contentHFov);
-  }
-
-  const fl = M.brightnessFL({ projection: proj });
-  const physicalUtil = mask.areaUtilPct;
-
-  return { dist, physicalFov, ppdVal, presAr, projWindow, mask, contentHFov, contentVFov, fl, physicalUtil, visibleArea: mask.effW * mask.effH, isDome: false, proj };
+  return W.computeStats(venue, seat, contentAr, requestedPresAr, filmMode);
 }
 
 // ─── Comparison row builders ──────────────────────────────────────────────────
@@ -139,64 +196,7 @@ function makeHdrRow(id, label, catA, catB, labelA, labelB) {
 }
 
 function buildComparisonRows(sideA, sideB, statsA, statsB) {
-  const projA = statsA.proj;
-  const projB = statsB.proj;
-  const rows = [];
-
-  const aHFovDisp = fmtInt(statsA.contentHFov) + "°";
-  const bHFovDisp = fmtInt(statsB.contentHFov) + "°";
-  rows.push({ ...makeRow("visible_hfov", "Visible horizontal FOV", statsA.contentHFov, statsB.contentHFov, aHFovDisp, bHFovDisp, true),
-    explain: "How wide the movie image feels from your seat." });
-
-  const aVFovDisp = fmtInt(statsA.contentVFov) + "°";
-  const bVFovDisp = fmtInt(statsB.contentVFov) + "°";
-  rows.push({ ...makeRow("visible_vfov", "Visible vertical FOV", statsA.contentVFov, statsB.contentVFov, aVFovDisp, bVFovDisp, true),
-    explain: "How tall the movie image feels — the key IMAX immersion factor." });
-
-  let aPpdDisp, bPpdDisp, aPpdNum, bPpdNum;
-  if (statsA.ppdVal == null) {
-    aPpdDisp = projA.scanEquivLabel || "Unknown"; aPpdNum = null;
-  } else {
-    aPpdNum = statsA.ppdVal; aPpdDisp = fmtInt(statsA.ppdVal) + " ppd";
-  }
-  if (statsB.ppdVal == null) {
-    bPpdDisp = projB.scanEquivLabel || "Unknown"; bPpdNum = null;
-  } else {
-    bPpdNum = statsB.ppdVal; bPpdDisp = fmtInt(statsB.ppdVal) + " ppd";
-  }
-  rows.push({ ...makeRow("ppd", "Pixels per degree", aPpdNum, bPpdNum, aPpdDisp, bPpdDisp, true),
-    explain: "Perceived sharpness from this seat; higher usually looks crisper." });
-
-  const aAreaNum = statsA.visibleArea;
-  const bAreaNum = statsB.visibleArea;
-  rows.push({ ...makeRow("area", "Visible content area", aAreaNum, bAreaNum, fmtInt(aAreaNum) + " sq ft", fmtInt(bAreaNum) + " sq ft", true),
-    explain: "How large the actual movie image is, after masking or cropping." });
-
-  rows.push({ ...makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, fmtInt(statsA.physicalUtil) + "%", fmtInt(statsB.physicalUtil) + "%", true),
-    explain: "How much of the physical screen this movie format fills." });
-
-  const aFlDisp = statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown";
-  const bFlDisp = statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown";
-  rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, aFlDisp, bFlDisp, true),
-    explain: "How much light reaches the screen; higher helps HDR and punch." });
-
-  const aContrNum = projA.isPerPixelEmissive ? Infinity : projA.nativeContrast;
-  const bContrNum = projB.isPerPixelEmissive ? Infinity : projB.nativeContrast;
-  const aContrDisp = projA.isPerPixelEmissive ? "∞" : (projA.nativeContrast ? projA.nativeContrast.toLocaleString() + ":1" : "Unknown");
-  const bContrDisp = projB.isPerPixelEmissive ? "∞" : (projB.nativeContrast ? projB.nativeContrast.toLocaleString() + ":1" : "Unknown");
-  rows.push({ ...makeRow("contrast", "Native contrast", aContrNum, bContrNum, aContrDisp, bContrDisp, true),
-    explain: "Projector's sequential (on/off) contrast — measured before any dynamic HDR system." });
-
-  const hdrRow = makeHdrRow("hdr", "HDR black level", projA.hdrCategory, projB.hdrCategory, projA.hdrLabel, projB.hdrLabel);
-  rows.push({ ...hdrRow, explain: "Whether the system can dynamically deepen blacks for HDR content." });
-
-  const aDepthDisp = projA.hdrLabel === "—" ? "SDR" : projA.hdrLabel;
-  const bDepthDisp = projB.hdrLabel === "—" ? "SDR" : projB.hdrLabel;
-  rows.push({ id: "depth", label: "Picture depth", aDisplay: aDepthDisp, bDisplay: bDepthDisp,
-    winner: hdrRow.winner, badgeLabel: hdrRow.badgeLabel, note: hdrRow.note || null,
-    explain: "Overall sense of contrast, HDR, and image dimensionality." });
-
-  return rows;
+  return W.buildComparisonRows(sideA, sideB, statsA, statsB);
 }
 
 // ─── Verdict builder ──────────────────────────────────────────────────────────
@@ -209,43 +209,7 @@ const VERDICT_LABEL = {
 };
 
 function buildVerdict(sideA, sideB, rows, contentLabel) {
-  const aWinsRows = rows.filter(r => r.winner === "a");
-  const bWinsRows = rows.filter(r => r.winner === "b");
-  const tieRows   = rows.filter(r => r.winner === "tie");
-
-  function rowLabel(r) { return VERDICT_LABEL[r.id] || r.label.toLowerCase(); }
-  function joinLabels(labels) {
-    if (labels.length <= 2) return labels.join(" and ");
-    return `${labels.slice(0, -1).join(", ")}, and ${labels[labels.length - 1]}`;
-  }
-  function topLabels(winRows) {
-    const priority = ["area", "visible_vfov", "visible_hfov", "contrast", "brightness", "hdr", "ppd", "util", "depth"];
-    return winRows.slice().sort((a, b) => priority.indexOf(a.id) - priority.indexOf(b.id)).slice(0, 3).map(rowLabel);
-  }
-
-  let sentences = [];
-  if (aWinsRows.length > 0 && bWinsRows.length > 0) {
-    sentences.push({ side: "a", text: `leads on ${joinLabels(topLabels(aWinsRows))}.` });
-    sentences.push({ side: "b", text: `leads on ${joinLabels(topLabels(bWinsRows))}.` });
-  } else if (aWinsRows.length === 0 && bWinsRows.length > 0) {
-    const dominates = bWinsRows.length >= rows.length - 1;
-    sentences.push({ side: "b", text: dominates ? "leads across nearly every measurable category." : `leads on ${joinLabels(topLabels(bWinsRows))}.` });
-  } else if (bWinsRows.length === 0 && aWinsRows.length > 0) {
-    const dominates = aWinsRows.length >= rows.length - 1;
-    sentences.push({ side: "a", text: dominates ? "leads across nearly every measurable category." : `leads on ${joinLabels(topLabels(aWinsRows))}.` });
-  } else {
-    sentences.push({ side: null, text: "These two are closely matched." });
-  }
-
-  const tieNames = tieRows.filter(r => r.id !== "depth").slice(0, 3).map(rowLabel);
-  if (tieNames.length === 1) {
-    sentences.push({ side: null, text: `${tieNames[0].charAt(0).toUpperCase() + tieNames[0].slice(1)} is comparable from this seat.` });
-  } else if (tieNames.length > 1) {
-    const last = tieNames.pop();
-    sentences.push({ side: null, text: `${tieNames.join(", ")} and ${last} are comparable from this seat.` });
-  }
-
-  return { sentences, aWins: aWinsRows, bWins: bWinsRows, ties: tieRows, aName: sideA.name, bName: sideB.name };
+  return W.buildVerdict(sideA, sideB, rows, contentLabel);
 }
 
 // ─── ConfLabel ────────────────────────────────────────────────────────────────
@@ -576,11 +540,194 @@ function Verdict({ verdict, contentLabel }) {
   );
 }
 
+// ─── Education / stats panels ─────────────────────────────────────────────────
+
+function AspectRatioMini({ compact = false }) {
+  const loss = verticalFrameLoss();
+  return (
+    <div className={`ar-mini ${compact ? "ar-mini--compact" : ""}`}>
+      <div className="ar-mini__frames" aria-label="Aspect ratio comparison">
+        <div className="ar-frame ar-frame--143"><span>1.43</span></div>
+        <div className="ar-frame ar-frame--190"><span>1.90</span></div>
+        <div className="ar-frame ar-frame--239"><span>2.39</span></div>
+      </div>
+      <p>
+        1.43 is the tall IMAX frame. Normal digital IMAX is often 1.90, and many movies are 2.39 scope.
+        A 1.43 movie forced into 1.90 retains about <strong>{fmtNum(loss.retainedPct, 1)}%</strong> of its height and loses about <strong>{fmtNum(loss.lostPct, 1)}%</strong>.
+      </p>
+    </div>
+  );
+}
+
+function EducationPrimer() {
+  return (
+    <section className="education" id="learn">
+      <div className="education__head">
+        <div>
+          <div className="education__eyebrow">IMAX 101</div>
+          <h3>What the diagnosis is really checking</h3>
+        </div>
+        <p>
+          IMAX is a brand, a camera ecosystem, a projection standard, a sound package, and sometimes just a multiplex upgrade.
+          This site separates those pieces so the ticket matches the experience.
+        </p>
+      </div>
+
+      <AspectRatioMini />
+
+      <div className="explain-grid">
+        {EXPLAINER_CARDS.map(card => (
+          <article className="explain-card" key={card.title}>
+            <h4>{card.title}</h4>
+            <p>{card.body}</p>
+          </article>
+        ))}
+      </div>
+
+      <div className="film-examples">
+        <div className="film-examples__label">Movie examples, not a database</div>
+        {FORMAT_EXAMPLES.map(group => (
+          <div className="film-example" key={group.label}>
+            <span className="film-example__kicker">{group.kicker}</span>
+            <h4>{group.label}</h4>
+            <div className="film-example__titles">{group.examples}</div>
+            <p>{group.note}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function DataStatsPanel({ selectedState, onSelectState, states }) {
+  const allVenues = realCinemaVenues();
+  const national = categoryCounts(allVenues);
+  const scopedVenues = selectedState
+    ? allVenues.filter(v => v.state === selectedState)
+    : allVenues;
+  const scoped = categoryCounts(scopedVenues);
+  const label = selectedState
+    ? (states.find(s => s.code === selectedState)?.name || selectedState)
+    : "United States snapshot";
+  const statItems = [
+    { label: "IMAX rows", value: scoped.total, sub: selectedState ? "in selected state" : "U.S. film / laser / dome rows" },
+    { label: "LIEMAX", value: `${scoped.liemax} (${pct(scoped.liemax, scoped.total)})`, sub: "digital cap is normally 1.90" },
+    { label: "True flat 1.43", value: scoped.true143, sub: "GT Laser and/or 15/70 + GT" },
+    { label: "15/70 capable", value: scoped.film143, sub: "booked film engagements only" },
+    { label: "Dome", value: scoped.dome, sub: "fixed 180° × 125° coverage" },
+  ];
+
+  return (
+    <section className="data-stats" aria-label="Dataset summary">
+      <div className="data-stats__top">
+        <div>
+          <div className="data-stats__eyebrow">Dataset reality check</div>
+          <h3>{label}</h3>
+        </div>
+        <label className="state-select">
+          <span>State</span>
+          <select value={selectedState} onChange={e => onSelectState(e.target.value)}>
+            <option value="">National</option>
+            {states.map(state => <option key={state.code} value={state.code}>{state.name}</option>)}
+          </select>
+        </label>
+      </div>
+      <div className="data-stats__grid">
+        {statItems.map(item => (
+          <div className="data-stat" key={item.label}>
+            <span className="data-stat__value">{item.value}</span>
+            <span className="data-stat__label">{item.label}</span>
+            <span className="data-stat__sub">{item.sub}</span>
+          </div>
+        ))}
+      </div>
+      <p className="data-stats__note">
+        Based on the current static docs bundle: {national.total} U.S. IMAX rows from 143190 / r-imax plus local prototype records.
+        Older Xenon-only IMAX venues may be missing until a supplemental LF Examiner/community source is merged.
+        State stats only appear after you choose a state; no IP geolocation is used.
+      </p>
+    </section>
+  );
+}
+
+function SeatGeometryPanel({ venue }) {
+  const isDome = venue.screen.geometry === "hemispherical";
+  if (isDome) {
+    return (
+      <div className="seat-geometry seat-geometry--dome">
+        <div className="seat-geometry__head">
+          <span>Seat geometry</span>
+          <strong>Fixed dome coverage</strong>
+        </div>
+        <p>
+          Dome seating does not work like a flat rectangle at different row distances. LIEMAX uses the dome research defaults:
+          <strong> {venue.screen.domeHFov || 180}° horizontal</strong> by <strong>{venue.screen.domeVFov || 125}° vertical</strong>,
+          with radius-style distances only for non-FOV comparisons.
+        </p>
+      </div>
+    );
+  }
+
+  const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
+  const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
+  const rows = ["front", "mid", "back"].map(seat => {
+    const dist = venue.seat[seat];
+    return {
+      seat,
+      dist,
+      multiple: dist / venue.screen.w,
+      hfov: M.horizontalFovDeg(mask.effW, dist),
+      vfov: M.verticalFovDeg(mask.effH, dist),
+    };
+  });
+
+  return (
+    <div className="seat-geometry">
+      <div className="seat-geometry__head">
+        <span>Seat geometry</span>
+        <strong>Flat-screen estimates</strong>
+      </div>
+      <div className="seat-geometry__grid">
+        {rows.map(row => (
+          <div className="seat-geometry__row" key={row.seat}>
+            <span>{row.seat}</span>
+            <strong>{fmtInt(row.hfov)}° H / {fmtInt(row.vfov)}° V</strong>
+            <small>{fmtInt(row.dist)} ft · {fmtNum(row.multiple, 2)}× screen width</small>
+          </div>
+        ))}
+      </div>
+      <p>
+        These are source-aware estimates from the current venue bundle. Published row data is rare; 143190 / r-imax provides screen and projector facts, not seating depth.
+      </p>
+    </div>
+  );
+}
+
+function SourceLinks() {
+  return (
+    <div className="source-links">
+      <span>Sources used in this guide</span>
+      {SOURCE_LINKS.map(link => (
+        <a key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+      ))}
+    </div>
+  );
+}
+
 // ─── Seat selector ────────────────────────────────────────────────────────────
 
 function SeatSelector({ sideA, sideB, seat, onChange }) {
   const labels = { front: "Front", mid: "Mid", back: "Back" };
   const hasDome = sideA.screen.geometry === "hemispherical" || sideB.screen.geometry === "hemispherical";
+  function sideSummary(side, venue) {
+    if (venue.screen.geometry === "hemispherical") return `${side}: fixed dome FOV`;
+    const dist = venue.seat[seat];
+    const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
+    const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
+    const hfov = M.horizontalFovDeg(mask.effW, dist);
+    const vfov = M.verticalFovDeg(mask.effH, dist);
+    return `${side}: ${fmtInt(dist)} ft · ${fmtInt(hfov)}° H / ${fmtInt(vfov)}° V · ${fmtNum(dist / venue.screen.w, 2)}× width`;
+  }
   return (
     <div className="seat-section">
       <div className="seat-row">
@@ -590,7 +737,7 @@ function SeatSelector({ sideA, sideB, seat, onChange }) {
             onClick={() => onChange(s)} type="button">{labels[s]}</button>
         ))}
       </div>
-      <div className="seat-info">A: {fmtInt(sideA.seat[seat])} ft · B: {fmtInt(sideB.seat[seat])} ft · {hasDome ? "dome FOV stays fixed" : "distances estimated"}</div>
+      <div className="seat-info">{sideSummary("A", sideA)} · {sideSummary("B", sideB)} · {hasDome ? "dome FOV stays fixed" : "distances estimated"}</div>
     </div>
   );
 }
@@ -818,7 +965,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
           <circle cx="11" cy="11" r="7" /><line x1="16.5" y1="16.5" x2="21" y2="21" strokeLinecap="round" />
         </svg>
         <input ref={inputRef} className="search__input" type="text" value={value}
-          placeholder="Search your IMAX theater — e.g. Boston Common, Lincoln Square, Providence"
+          placeholder="Search your IMAX theater — e.g. Lincoln Square, Metreon, Grand Canyon"
           onChange={e => { onChange(e.target.value); setOpen(true); }}
           onPointerDown={() => setOpenOnFocusAfterInteraction(true)}
           onClick={() => { setOpenOnFocusAfterInteraction(true); setOpen(true); }}
@@ -885,6 +1032,14 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
   const vfov = isDome ? (venue.screen.domeVFov || 125) : (midDist ? M.verticalFovDeg(mask.effH, midDist) : null);
 
   const isTrue143 = result.category === "true_143_film" || result.category === "true_143_laser";
+  const loss = verticalFrameLoss();
+  const screenSource = venue.sources?.screen;
+  const screenMeta = screenSource ? D.qualityMeta[screenSource.q] : null;
+  const projectorCopy = isDome
+    ? "Dome IMAX uses a hemispherical screen. The meaningful visual metric is fixed coverage, not a rectangular row-distance score."
+    : proj?.min_ar && proj.min_ar <= 1.43
+      ? "This digital projector/mode can drive the full 1.43 height when the movie is mastered and booked that way."
+      : "This normal digital IMAX mode caps at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used.";
 
   return (
     <section className="diagnosis" style={{ "--accent": result.accent }} aria-live="polite">
@@ -905,6 +1060,25 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
       <div className="diagnosis__verdict">
         <p className="diagnosis__verdict-line" dangerouslySetInnerHTML={{ __html: result.headline }} />
         <p className="diagnosis__verdict-body">{result.body}</p>
+      </div>
+
+      <div className="diagnosis__lesson">
+        <div>
+          <span className="diagnosis__lesson-k">Why this verdict?</span>
+          <p>{projectorCopy}</p>
+        </div>
+        {!isDome && proj?.min_ar && proj.min_ar > 1.43 && (
+          <div>
+            <span className="diagnosis__lesson-k">1.43 on this digital mode</span>
+            <p>About <strong>{fmtNum(loss.retainedPct, 1)}%</strong> of the height is retained; about <strong>{fmtNum(loss.lostPct, 1)}%</strong> of the vertical frame is lost.</p>
+          </div>
+        )}
+        {screenSource && (
+          <div>
+            <span className="diagnosis__lesson-k">Source confidence</span>
+            <p><strong>{screenMeta?.label || screenSource.q}</strong>: {screenSource.note}</p>
+          </div>
+        )}
       </div>
 
       <DiagnosisScaleFigure venue={venue} />
@@ -933,6 +1107,8 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
           <span className="spec__sub">{isDome ? `${venue.screen.domeHFov || 180}° horizontal` : (presAr ? `${presAr.toFixed(2)}:1 default` : "—")}</span>
         </div>
       </div>
+
+      <SeatGeometryPanel venue={venue} />
 
       {result.modes.length > 0 && (
         <div className="diagnosis__modes">
@@ -1016,6 +1192,7 @@ function App() {
   // Diagnosis state
   const [query, setQuery]       = useState("");
   const [selected, setSelected] = useState(null);
+  const [selectedState, setSelectedState] = useState("");
 
   // Workbench state (always initialised — hooks must be unconditional)
   const [sideA, setSideA] = useState(D.venues[0]);
@@ -1030,13 +1207,21 @@ function App() {
   const workbenchRef = useRef(null);
 
   const suggestions = useMemo(() => {
-    const ids = [
-      "apple_providence_imax",
-      "imax_us_ma_reading_sunbrella_imax_3d_theater_reading",
-      "imax_us_ma_boston_amc_boston_common_19",
-      "imax_us_ny_new_york_amc_lincoln_square_13_and_imax",
-    ];
-    return ids.map(id => D.venues.find(v => v.id === id)).filter(Boolean);
+    const curated = CURATED_SUGGESTION_IDS
+      .map(id => D.venues.find(v => v.id === id))
+      .filter(Boolean);
+    return shuffleSample(curated, 5);
+  }, []);
+
+  const stateOptions = useMemo(() => {
+    const byCode = new Map();
+    realCinemaVenues().forEach(v => {
+      if (!v.state || v.state === "Format presets") return;
+      byCode.set(v.state, v.stateName || v.state);
+    });
+    return [...byCode.entries()]
+      .sort(([, a], [, b]) => a.localeCompare(b))
+      .map(([code, name]) => ({ code, name }));
   }, []);
 
   function handleChangeA(v) { setSideA(v); setFilmModeA(false); setPresArA(defaultPresArFor(v, false)); }
@@ -1102,19 +1287,20 @@ function App() {
           <span className="brand__strap">A diagnostic for your local IMAX</span>
         </div>
         <nav className="brand__nav">
-          <a href="#legend">Categories</a> · <a href="#workbench">Workbench</a> · <a href="#methodology">Methodology</a>
+          <a href="#learn">IMAX 101</a> · <a href="#stats">Stats</a> · <a href="#legend">Categories</a> · <a href="#methodology">Sources</a>
         </nav>
       </header>
 
       <section className="hero">
-        <div className="hero__eyebrow">Step one · diagnose your theater</div>
+        <div className="hero__eyebrow">Step one · understand the ticket</div>
         <h2 className="hero__headline">
-          Is your IMAX <em>real IMAX</em>, or is it LIEMAX?
+          IMAX can mean <em>very different rooms</em>.
         </h2>
         <p className="hero__sub">
-          Search a U.S. IMAX theater. Get an honest, technical-but-readable verdict
-          on what you'll actually see from your seat — by the digital projector,
-          by the screen geometry, and by film capability where it exists.
+          Your local IMAX might be a full-height 1.43 giant screen, a 1.90 multiplex laser room,
+          a legacy Xenon setup, a rare 15/70 film house, or a dome. LIEMAX is the blunt nickname
+          for an IMAX-branded theater that cannot show the full tall IMAX frame in normal digital shows.
+          Search a theater and we translate the screen, projector, movie format, and seat math into plain English.
         </p>
 
         <SearchBar
@@ -1127,7 +1313,7 @@ function App() {
         />
 
         <div className="suggest">
-          <span className="suggest__label">Try:</span>
+          <span className="suggest__label">Random starts:</span>
           {suggestions.map(v => (
             <button key={v.id} className="suggest__chip" onClick={() => handleSelect(v)} type="button">
               {v.name.replace(/^AMC |^Regal |^Cinemark /, "")}
@@ -1135,6 +1321,13 @@ function App() {
           ))}
         </div>
       </section>
+
+      <div id="stats" />
+      <DataStatsPanel
+        selectedState={selectedState}
+        onSelectState={setSelectedState}
+        states={stateOptions}
+      />
 
       <div id="diagnosis-anchor" />
 
@@ -1148,6 +1341,8 @@ function App() {
       ) : (
         <DiagnosisPlaceholder />
       )}
+
+      <EducationPrimer />
 
       {selected && workbenchOpen && (
         <section className="workbench" id="workbench" ref={workbenchRef}>
@@ -1188,6 +1383,14 @@ function App() {
           <p>A purpose-built screen at roughly <strong>1.43:1</strong> with a projector that can drive its full height — today, that means <strong>IMAX GT dual-laser</strong> or <strong>15/70mm film</strong>.</p>
         </div>
         <div>
+          <h4>15/70 vs 70mm</h4>
+          <p>Standard 70mm runs vertically at 5 perforations per frame and is usually around 2.20:1. IMAX 15/70 runs sideways at 15 perforations per frame, making a much larger 1.43:1 image.</p>
+        </div>
+        <div>
+          <h4>CoLa, Laser XT, Xenon</h4>
+          <p>These are normal multiplex IMAX digital systems. CoLa and Laser XT are 4K laser; Dual Xenon is older 2K digital. They are usually capped at <strong>1.90:1</strong>, not the full 1.43 frame.</p>
+        </div>
+        <div>
           <h4>LIEMAX</h4>
           <p>The IMAX-branded auditorium with a screen taller than the digital projector can fill. The everyday digital window is <strong>1.90:1</strong> (CoLa). 1.43 movies lose ~25% of vertical frame.</p>
         </div>
@@ -1201,12 +1404,13 @@ function App() {
         </div>
         <div>
           <h4>Data sources</h4>
-          <p>U.S. IMAX listings imported from <strong>143190.xyz</strong>, with dome behavior modeled from LIEMAX research. Older Xenon-only IMAX venues may be missing. Seat distances are derived from screen width unless venue rows are published.</p>
+          <p>U.S. IMAX listings imported from <strong>143190 / r-imax</strong>, with dome behavior modeled from LIEMAX research and LF Examiner references. Older Xenon-only IMAX venues may be missing. Seat distances are derived from screen width unless venue rows are published.</p>
         </div>
         <div>
           <h4>Disclaimer</h4>
           <p>This project is not affiliated with IMAX Corporation.</p>
         </div>
+        <SourceLinks />
       </section>
     </div>
   );

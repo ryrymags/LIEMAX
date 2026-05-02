@@ -5,8 +5,8 @@
 - GREEN `.ai/`: All three steps audited 2026-04-26. Steps 1–3 are clean. Ready for Step 4.
 - GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
 - GREEN `schema/`: v1.3.1 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, home displays. Adds `r_imax_csv` source quality for 143190-sourced fields. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
-- GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, and ScreenX capability preservation.
-- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01). Search page → DiagnosisCard (noir panel, category badge, spec strip, mode breakdown, immediate scale visualization) → optional comparison workbench accordion. Dome diagnoses now distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm`, rank Dome above Hybrid/LIEMAX, and draw dome screens as scaled circular cross-sections rather than flat rectangles. Local docs assets are version-tagged together to avoid stale mixed `app.jsx`/`stage.js`/`styles.css` loads during browser testing. `docs/diagnosis.js` module (`window.LIEMAX_DIAGNOSE`) with `classify()`, `diagnose()`, and `LABELS`. Docs validation is 44/44 and full CI passes. Prior: comparison workbench prototype, Reading GT seating correction, XD/Dolby 2025 entries, Xenon-only disclaimer, docs regression validation.
+- GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, ScreenX capability preservation, promoted docs 143190 rows, and frontend comparison/home records.
+- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01), Priority 1 education-first overhaul complete, and Phase 4a canonical data unification complete. Search page now explains why LIEMAX exists for novice users, randomizes curated examples across regions/categories, shows national and explicit state-selected stats, then flows into DiagnosisCard (noir panel, category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, mode breakdown, immediate scale visualization) and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from canonical `src/data`/`src/docs` sources; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. Dome diagnoses distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm`, rank Dome above Hybrid/LIEMAX, and draw dome screens as scaled circular cross-sections rather than flat rectangles. Docs validation is 63/63 and full CI passes.
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames; Batch 2 workbench audit addendum added to Master/Dome research.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
@@ -28,18 +28,19 @@
 
 ### Priority 1 — Core Step 4 Product Work
 
-- Detailed implementation handoff: `.ai/PRIORITY1_PLAN.md`.
-- Unify `docs/` with canonical `src/data` through the resolver instead of duplicated prototype view-model logic.
-- Improve the Diagnosis box with plain-language explanations for GT Dual Laser, 15/70, 1.43, 1.90, CoLa, Xenon, dome, PPD, FOV, and source confidence.
-- Replace static New England-heavy recommendations with privacy-friendly randomized/curated examples and/or explicit state selection. Do not use silent IP geolocation for v1.
-- Add seat geometry stats: front/mid/back horizontal and vertical FOV, seating depth as screen-width multiple, and best-modeled-seat caveats.
+- DONE: Detailed implementation handoff: `.ai/PRIORITY1_PLAN.md`.
+- DONE: Education-first website overhaul with novice homepage framing, integrated IMAX 101, curated film examples, source links, randomized examples, national/state stats, diagnosis source confidence, aspect-ratio penalty metrics, and flat/dome seat geometry treatment.
+- DONE: Unify `docs/` with canonical `src/data` through the resolver instead of duplicated prototype view-model logic.
+- DONE: Improve the Diagnosis box with plain-language explanations for GT Dual Laser, 15/70, 1.43, 1.90, CoLa, Xenon, dome, PPD, FOV, and source confidence.
+- DONE: Replace static New England-heavy recommendations with privacy-friendly randomized/curated examples and explicit state selection. No silent IP geolocation.
+- DONE: Add seat geometry stats: front/mid/back horizontal and vertical FOV, seating depth as screen-width multiple, and best-modeled-seat caveats.
 
 ### Priority 2 — Data Coverage And Nerd Stats
 
 - Add supplemental Xenon-only IMAX coverage, likely LFExaminer/community-sourced, clearly marked lower-confidence than 143190.
-- Add state/national stats after canonical data is wired: percent LIEMAX, true IMAX in state, 1.43-capable venues, and similar aggregate summaries.
-- Add aspect-ratio penalty metrics: vertical frame lost vs 1.43, screen utilization, and visible content area.
-- Add curated examples of 1.43, 1.90, scope, and flat movies.
+- DONE in Phase 4a: state/national stats now read from generated canonical docs data.
+- DONE in Priority 1 docs prototype: add aspect-ratio penalty metrics for 1.43-on-1.90 vertical frame lost/retained; richer screen utilization views remain in workbench.
+- DONE in Priority 1 docs prototype: add curated examples of 1.43, 1.90, scope, and flat movies.
 - Add deferred home presets: `oled_budget` and `iphone_standard`.
 
 ### Priority 3 — Polish
@@ -68,7 +69,7 @@
 2. Aspect-ratio drift: agents must require both 1.43 screen and a 1.43-capable projector/mode, else default digital capability to 1.90.
 3. Future PLF modeling: ScreenX, ACX renovation status, and per-field provenance can be represented loosely today, but richer UI will want additive schema fields before data scales.
 4. **143190 Xenon gap:** 143190.xyz intentionally excludes venues with only Xenon projectors — it only lists IMAX Film and/or Laser locations. Confirmed by site creator anthonylavado (Reddit, ~Apr 2025); no ETA on adding Xenon. Example: Jordan's Furniture Natick IMAX (Xenon + 5.0 speakers) is NOT listed; Jordan's Furniture Reading IMAX (GT Dual Laser + 12.0) IS listed. **Next task:** find a supplemental source (LFExaminer, manual community list) to cover Xenon IMAX venues and decide whether to merge them into `docs/data.js` under a new source quality tag (e.g., `community_estimate` or a new `lfexaminer` tag).
-5. Workbench drift: `docs/` currently duplicates data/math view-model logic. `npm run validate:docs` guards the known Reading/Providence regression, but Phase 4a should still wire the frontend to canonical resolved JSON.
+5. RESOLVED in Phase 4a: workbench drift is now guarded by generated `docs/data.js`, generated `docs/workbench.js`, `npm run check:docs-data`, and docs regressions. Remaining drift risk is future manual edits to generated files, which `validate:docs` should catch.
 
 ## Step 4 Diagnosis Homepage Follow-ups
 

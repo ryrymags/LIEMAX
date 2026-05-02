@@ -1,0 +1,539 @@
+{
+  "cinema_examples": [
+    {
+      "id": "imax_gt_typical",
+      "preset_id": "imax_gt_dual_laser",
+      "name": "IMAX GT Laser (typical)",
+      "state_province": "Format presets",
+      "country": "Format presets",
+      "screen": {
+        "w": 70,
+        "h": 49,
+        "ar": 1.43,
+        "geometry": "slight_curve"
+      },
+      "seat": {
+        "front": 35,
+        "mid": 58,
+        "back": 82,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.43,
+      "presentationModes": [
+        {
+          "id": "digital_143",
+          "ar": 1.43,
+          "label": "1.43 · Full IMAX",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "sub": "Format preset · true 1.43 · dual 4K pixel-offset",
+      "tag": "IMAX GT",
+      "blurb": "Dual-projector pixel-offset supersampling on a purpose-built 1.43:1 screen. ~42 commercial venues globally. The only IMAX format that shows 1.43 digitally without film.",
+      "sources": {
+        "screen": {
+          "q": "preset_typical",
+          "note": "Representative GT auditorium — real venues vary by location."
+        },
+        "brightness": {
+          "q": "trade_reporting",
+          "note": "IMAX target 22 fL."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "~8,000:1 sequential; IMAX CTO statements and trade reporting."
+        },
+        "seat": {
+          "q": "derived",
+          "note": "Derived from typical GT auditorium ratios."
+        }
+      },
+      "isPreset": true
+    },
+    {
+      "id": "dolby_cinema_typical",
+      "preset_id": "dolby_cinema",
+      "name": "Dolby Cinema (typical AMC)",
+      "state_province": "Format presets",
+      "country": "Format presets",
+      "screen": {
+        "w": 55,
+        "h": 23,
+        "ar": 2.39,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 28,
+        "mid": 46,
+        "back": 65,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 2.39,
+      "presentationModes": [
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "Dolby Cinema cannot show 1.43 — screen is 2.39:1 wide format",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "sub": "2.39 · dual 4K laser · Dolby Vision",
+      "tag": "Dolby Cinema",
+      "blurb": "Dual 4K laser with Dolby Vision — the deepest sequential blacks of any commercial cinema format. ~295 locations. Narrower frame than IMAX; wins on contrast and HDR, not size.",
+      "sources": {
+        "screen": {
+          "q": "trade_reporting",
+          "note": "Typical Dolby Cinema auditorium (55 ft wide)."
+        },
+        "brightness": {
+          "q": "community_estimate",
+          "note": "~31 fL from firsthand AMC Dolby Cinema reports, May 2025."
+        },
+        "contrast": {
+          "q": "trade_reporting",
+          "note": "Sequential ~6,250:1; dynamic 1,000,000:1 Dolby Vision claim."
+        },
+        "seat": {
+          "q": "derived",
+          "note": "Derived from typical auditorium ratios."
+        }
+      },
+      "isPreset": true
+    },
+    {
+      "id": "dolby_cinema_single_laser",
+      "preset_id": "dolby_cinema_single_laser",
+      "name": "Dolby Cinema (Christie Eclipse, 2025+)",
+      "state_province": "Format presets",
+      "country": "Format presets",
+      "screen": {
+        "w": 58,
+        "h": 24.3,
+        "ar": 2.39,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 29,
+        "mid": 49,
+        "back": 68,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 2.39,
+      "presentationModes": [
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "Dolby Cinema cannot show 1.43 — screen is a wide-format auditorium",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "sub": "2.39 · single 4K laser · Dolby Vision 20M:1 dynamic",
+      "tag": "Dolby Cinema",
+      "blurb": "New-build Dolby Cinema system rolling out from May 2025 onward. Uses Christie Eclipse single-laser projection with the same Dolby Vision workflow and a much higher dynamic-contrast ceiling.",
+      "sources": {
+        "screen": {
+          "q": "trade_reporting",
+          "note": "Christie Eclipse Dolby builds support screens up to ~58 ft wide."
+        },
+        "brightness": {
+          "q": "community_estimate",
+          "note": "~31 fL from early 2025 reports and Dolby's >2× typical-cinema brightness claim."
+        },
+        "contrast": {
+          "q": "trade_reporting",
+          "note": "Christie Eclipse lists up to 20,000,000:1 dynamic contrast; sequential kept comparable to Dolby Cinema baseline."
+        },
+        "seat": {
+          "q": "derived",
+          "note": "Derived from typical Dolby auditorium ratios; venue rows will override when known."
+        }
+      },
+      "isPreset": true
+    },
+    {
+      "id": "cinemark_xd",
+      "preset_id": "cinemark_xd",
+      "name": "Cinemark XD",
+      "state_province": "Format presets",
+      "country": "Format presets",
+      "screen": {
+        "w": 64.5,
+        "h": 34,
+        "ar": 1.9,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 33,
+        "mid": 54,
+        "back": 76,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · XD / Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "Cinemark XD is not an IMAX 1.43-capable format",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "sub": "1.90 · Barco 4K laser · Auro 11.1",
+      "tag": "Cinemark XD",
+      "blurb": "Cinemark's large-format auditorium: about 70 ft corner-to-corner on a 1.90:1 screen, Barco 4K projection, and Auro 11.1/AuroMax audio. Scope films letterbox; there is no expanded IMAX-format content.",
+      "sources": {
+        "screen": {
+          "q": "derived",
+          "note": "Face dimensions derived from Cinemark's ~70 ft corner-to-corner XD claim at 1.90:1."
+        },
+        "brightness": {
+          "q": "community_estimate",
+          "note": "~16 fL derived from Barco SP4K-15C/20B specs and XD screen geometry."
+        },
+        "contrast": {
+          "q": "trade_reporting",
+          "note": "2,000:1 floor; current Barco SP4K-15C laser installs can reach ~2,700:1."
+        },
+        "seat": {
+          "q": "derived",
+          "note": "Derived from typical large multiplex auditorium ratios."
+        }
+      },
+      "isPreset": true
+    },
+    {
+      "id": "standard_multiplex",
+      "preset_id": "standard_multiplex",
+      "name": "Standard Multiplex",
+      "state_province": "Format presets",
+      "country": "Format presets",
+      "screen": {
+        "w": 45,
+        "h": 24.3,
+        "ar": 1.85,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 23,
+        "mid": 37,
+        "back": 53,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.85,
+      "presentationModes": [
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "Standard multiplex has no IMAX-wide screen or projector",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "sub": "Mainstream 4K digital auditorium",
+      "tag": "Standard",
+      "blurb": "The baseline — DCI 4K at 14 fL with 2,000:1 contrast. Everything premium is measured against this.",
+      "sources": {
+        "screen": {
+          "q": "preset_typical",
+          "note": "Mid-size auditorium from standard_multiplex preset (45 × 24.3 ft)."
+        },
+        "brightness": {
+          "q": "derived",
+          "note": "DCI minimum 14 fL."
+        },
+        "contrast": {
+          "q": "published_official",
+          "note": "DCI Spec v1.0 minimum 2,000:1."
+        },
+        "seat": {
+          "q": "derived",
+          "note": "Stadium seating mid-row derived."
+        }
+      },
+      "isPreset": true
+    }
+  ],
+  "home_displays": [
+    {
+      "id": "oled_flagship_65",
+      "preset_id": "oled_flagship",
+      "user_label": "OLED Flagship 65\"",
+      "screen": {
+        "w": 4.72,
+        "h": 2.65,
+        "ar": 1.78,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 4,
+        "mid": 6,
+        "back": 9,
+        "source": "typical_living_room"
+      },
+      "defaultPresentationAr": 1.78,
+      "presentationModes": [
+        {
+          "id": "native_178",
+          "ar": 1.78,
+          "label": "1.78 · 16:9 native",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "scope_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope letterbox",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "flat_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat letterbox",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "16:9 TV panel cannot show 1.43 natively — content would be pillarboxed heavily",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        }
+      ],
+      "sub": "LG G5 / Samsung S95F tier · living room",
+      "tag": "Home OLED",
+      "blurb": "Per-pixel infinite contrast, peak HDR far exceeds any cinema. But the screen is fundamentally tiny — total visible area is a fraction of even a multiplex.",
+      "sources": {
+        "screen": {
+          "q": "manufacturer_spec",
+          "note": "65\" WOLED — 56.7\" × 31.9\" active area."
+        },
+        "brightness": {
+          "q": "rtings_measurement",
+          "note": "RTINGS: ~331 nits full-field. Cinema comparison uses full-field."
+        },
+        "contrast": {
+          "q": "manufacturer_spec",
+          "note": "Per-pixel OLED — true infinite contrast."
+        },
+        "seat": {
+          "q": "typical_living_room",
+          "note": "6 ft typical viewing, THX recommended ~4 ft for 65\" 4K."
+        }
+      }
+    },
+    {
+      "id": "miniled_75",
+      "preset_id": "miniled_qled",
+      "user_label": "Mini-LED 75\" QLED",
+      "screen": {
+        "w": 5.45,
+        "h": 3.06,
+        "ar": 1.78,
+        "geometry": "flat"
+      },
+      "seat": {
+        "front": 5,
+        "mid": 7,
+        "back": 10,
+        "source": "typical_living_room"
+      },
+      "defaultPresentationAr": 1.78,
+      "presentationModes": [
+        {
+          "id": "native_178",
+          "ar": 1.78,
+          "label": "1.78 · 16:9 native",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "scope_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope letterbox",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "flat_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat letterbox",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        },
+        {
+          "id": "disabled_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX full frame",
+          "enabled": false,
+          "disabledReason": "16:9 TV panel cannot show 1.43 natively",
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "display"
+        }
+      ],
+      "sub": "Samsung QN90D tier · living room",
+      "tag": "Mini-LED",
+      "blurb": "Brighter than OLED on full-field — ~201 fL vs ~97 fL. Zone-based local dimming gives halos. No Dolby Vision (Samsung policy). HDR10/HDR10+ only.",
+      "sources": {
+        "screen": {
+          "q": "manufacturer_spec",
+          "note": "75\" Mini-LED — 65.4\" × 36.7\" active."
+        },
+        "brightness": {
+          "q": "rtings_measurement",
+          "note": "~689 nits full-field on QN90D-tier panel (RTINGS)."
+        },
+        "contrast": {
+          "q": "manufacturer_spec",
+          "note": "Zone local dimming ~10,000:1. No Dolby Vision (Samsung policy)."
+        },
+        "seat": {
+          "q": "typical_living_room",
+          "note": "7 ft typical for 75\" 4K."
+        }
+      }
+    }
+  ]
+}

@@ -10,7 +10,7 @@ import * as path from 'path';
 import schema from '../../schema/theater.schema.json';
 import samples from './fixtures/imax_143190_samples.json';
 import { map143190RowToVenue, type Imax143190ImportRow } from './imaxImport';
-import { resolveVenue } from '../math/resolver';
+import { resolveHomeDisplay, resolveVenue } from '../math/resolver';
 
 type JsonObject = Record<string, any>;
 
@@ -628,6 +628,68 @@ assertEqual('film-only dome import uses dome film preset', filmOnlyDome.preset_i
 assertEqual('film-only dome projection type', filmOnlyDome.projection.type, 'imax_dome_film');
 assertEqual('film-only dome claims 15/70 film capability', filmOnlyDome.capabilities.supports_1570_film, true);
 assertEqual('film-only dome does not claim digital 1.43', filmOnlyDome.capabilities.supports_143_digital, false);
+
+console.log('\n=== Docs Canonical Frontend Data ===');
+const docsRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
+const docsComparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
+const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()}_${String(row[1] + '_' + row[2])
+  .toLowerCase()
+  .replace(/&/g, ' and ')
+  .replace(/[^a-z0-9]+/g, '_')
+  .replace(/^_+|_+$/g, '')}`);
+
+assertEqual('promoted docs 143190 row count', docsRows.length, 133);
+assertEqual('promoted docs 143190 ids are unique', new Set(docsRowIds).size, docsRows.length);
+
+const docsImported = docsRows.map((row) => map143190RowToVenue({
+  region: 'United States',
+  country_area: 'United States',
+  province_state: row[0],
+  city: row[1],
+  location_name: row[2],
+  screen_aspect_ratio: row[3],
+  digital_projector: row[4],
+  max_digital_ar: row[5],
+  film_projector: row[6],
+  screen_height_m: row[7],
+  screen_width_m: row[8],
+  commercial_films: row[9],
+}, {
+  lastVerified: '2026-05-02',
+  sourceUrl: 'https://143190.xyz/',
+}));
+
+assert('promoted docs 143190 rows all map to venue records', docsImported.every((venue) => typeof venue.id === 'string' && Boolean(venue.metadata)));
+assert('promoted docs 143190 rows preserve raw source facts', docsImported.every((venue) => Boolean((venue as any).source_143190)));
+assert('promoted docs 143190 rows include dome laser records', docsImported.some((venue) => (venue as any).preset_id === 'imax_dome_laser'));
+assert('promoted docs 143190 rows include film-only dome records', docsImported.some((venue) => (venue as any).preset_id === 'imax_dome_film'));
+assert('promoted docs 143190 rows include GT laser records', docsImported.some((venue) => (venue as any).preset_id === 'imax_gt_dual_laser'));
+
+const cinemaExamples = docsComparison.cinema_examples ?? [];
+const homeExamples = docsComparison.home_displays ?? [];
+assertEqual('frontend comparison cinema card count', cinemaExamples.length, 5);
+assertEqual('frontend comparison home card count', homeExamples.length, 2);
+assert('frontend cinema cards reference canonical presets', cinemaExamples.every((item: JsonObject) => presetIds.has(item.preset_id)));
+assert('frontend cinema cards have finite screen dimensions', cinemaExamples.every((item: JsonObject) => isFiniteNumber(item.screen?.w) && isFiniteNumber(item.screen?.h)));
+assert('frontend home cards reference canonical home presets', homeExamples.every((item: JsonObject) => homePresetFiles.some((file) => fileBase(file) === item.preset_id)));
+
+const homePresetById = new Map(homePresetFiles.map((file) => {
+  const preset = readJson<JsonObject>(file);
+  return [preset.id, preset];
+}));
+for (const item of homeExamples) {
+  const preset = homePresetById.get(item.preset_id);
+  const diagonal = Math.sqrt((item.screen.w * 12) ** 2 + (item.screen.h * 12) ** 2);
+  const resolved = resolveHomeDisplay(preset!, {
+    id: item.id,
+    preset_id: item.preset_id,
+    user_label: item.user_label,
+    screen_diagonal_in: diagonal,
+    aspect_ratio: item.screen.ar,
+    viewing_distance_ft: item.seat.mid,
+  });
+  assert(`${item.id} resolves as frontend home display`, resolved.screen_diagonal_in > 0 && resolved.display_optics.resolution_horizontal_px > 0);
+}
 
 console.log('\n==============================');
 console.log(`Results: ${passed} passed, ${failed} failed out of ${passed + failed} checks`);

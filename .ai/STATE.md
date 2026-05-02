@@ -1,8 +1,8 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench plus Batch 2 workbench audit fixes."
+Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, and Phase 4a canonical docs data unification."
 
-Current priority: Priority 0 follow-up complete — Priority 1 plan saved in `.ai/PRIORITY1_PLAN.md`, pending user approval before implementation.
+Current priority: Phase 4a canonical `docs/` data unification complete; next likely priority is Priority 2 data coverage, especially supplemental Xenon-only IMAX venues excluded by 143190.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
@@ -44,15 +44,38 @@ Priority 0 follow-up notes:
 
 ## Priority 1 Planning Snapshot
 
-Priority 1 should improve the Step 4 product experience without starting a full redesign or backend. The saved plan is `.ai/PRIORITY1_PLAN.md`.
+Priority 1 improved the Step 4 product experience without starting a full redesign or backend. The saved plan is `.ai/PRIORITY1_PLAN.md`.
 
-Core next goals:
-- Plain-language diagnosis explanations for GT Dual Laser, CoLa, Xenon, 15/70, 1.43, 1.90, PPD, FOV, dome, and source confidence.
-- Replace New England-heavy “Try:” recommendations with privacy-friendly randomized/curated examples.
-- Add static aggregate stats and, where safe, explicit user-selected state stats.
-- Surface flat-screen seat geometry stats while keeping dome FOV as fixed coverage.
-- Add aspect-ratio penalty metrics, especially vertical frame lost for 1.43 content on 1.90 systems.
-- Add docs regression tests and keep CI green.
+Completed Priority 1 goals:
+- Homepage now explains why the site exists before asking for a search: IMAX branding spans 1.43 GT/15/70, 1.90 multiplex digital, legacy Xenon, and dome experiences; LIEMAX is defined for novice users.
+- Integrated IMAX 101 section covers screen/projector taxonomy, 15/70 vs standard 70mm, CoLa/Laser XT/Dual Xenon, dome behavior, PPD/FOV/source confidence, and curated film examples.
+- “Try” recommendations are privacy-friendly randomized curated examples across regions/categories, not static New England defaults.
+- Static national stats and explicit user-selected state stats are shown from the current `docs/data.js` bundle with no IP geolocation.
+- Diagnosis cards now expose source confidence, 1.43-on-1.90 vertical frame loss/retention, and flat front/mid/back seat FOV/distance summaries; dome venues keep fixed 180° × 125° FOV.
+- Docs regression validation expanded to 58 checks and full CI is green.
+
+Priority 1 verification:
+- `npm run validate:docs`: 58 passed, 0 failed.
+- `npm run ci`: passed.
+- `git diff --check`: passed.
+- Browser DOM/runtime check on `http://127.0.0.1:5173/?v=priority1-edu-1`: homepage search remains closed on load; state stats update only after explicit state selection; Lincoln Square diagnosis renders seat geometry/source confidence; workbench opens; McWane dome diagnosis renders fixed dome FOV education; browser console has no errors. Browser screenshot capture timed out in the in-app browser, so visual QA used DOM/runtime inspection.
+
+## Phase 4a Canonical Docs Data Unification
+
+Completed Phase 4a goals:
+- `docs/data.js` is now generated from canonical `src/data` inputs instead of hand-maintained prototype constants.
+- The current U.S. 143190 docs snapshot lives in `src/data/fixtures/imax_143190_us_rows.json`; docs comparison cards/home examples live in `src/data/frontend/comparison_records.json`.
+- `src/docs/buildDocsData.ts` resolves cinema records through `resolveVenue()` and home records through `resolveHomeDisplay()`, then emits the stable `window.LIEMAX_DATA` browser shape with `canonicalId`.
+- `window.LIEMAX_WORKBENCH` is generated in `docs/workbench.js`; `docs/app.jsx` delegates presentation-mode resolution, stats, comparison rows, and verdicts through it.
+- `npm run validate:docs` now checks generated files are current before running docs regressions.
+- `src/data/validate.ts` validates the promoted docs 143190 snapshot and frontend comparison/home records.
+
+Phase 4a verification:
+- `npm run validate:schema`: 147 passed, 0 failed.
+- `npm run validate:docs`: 63 passed, 0 failed.
+- `npm run ci`: passed.
+- `git diff --check`: passed.
+- Browser DOM/runtime check on `http://127.0.0.1:5173/?v=phase4a-canonical-1`: homepage search remains closed on load; national/state stats render; Lincoln Square diagnosis preserves 1.43 display, source confidence, and scale figure; workbench opens; Mugar dome diagnosis renders `IMAX Laser for Dome` and dome scale (`ft dome diameter`, `180° H × 125° V`); browser console has no errors.
 
 ## Completed
 
@@ -67,6 +90,8 @@ Core next goals:
 - Step 3 audit remediation applied: schema-valid standard/ScreenX light sources, computable Mugar dome geometry, Mugar post-2021 dome-laser modeling, corrected RPX geometry, full Step 3 data validation, ScreenX capability preservation, and imax_cola contrast source downgraded to community_estimate with explanation.
 - Step 4 Batch 2 audit remediation applied: `docs/` workbench now exposes `cinemark_xd` and `dolby_cinema_single_laser`, corrects Reading GT mid-seat estimate to ~75 ft, discloses the 143190 Xenon-only venue gap near search, and adds docs regression validation for Providence 15/70 vs Reading GT visible-area/native-contrast winners.
 - Step 4 CoLa utilization clamp applied: `docs/` workbench visible content area/FOV/utilization now clamp presentation windows to physical screen bounds, with regression coverage for Assembly Row vs Boston Common CoLa.
+- Priority 1 education-first website overhaul applied: one-page IMAX 101 explainer, stronger novice homepage copy, curated film examples, source links, randomized example chips, national/state stats, diagnosis AR-loss/source-confidence/seat-geometry panels, and expanded docs regression checks.
+- Phase 4a canonical docs data unification applied: promoted docs 143190 snapshot to `src/data`, added generated docs data/runtime build, routed docs comparisons through resolver-backed generated records, and expanded schema/docs validation.
 
 ## Known Low-Confidence Items (tracked, not blockers)
 
@@ -109,10 +134,10 @@ Priority order: get functional → then design polish. Do not invest in visual d
 
 ## Active
 
-- Step 4: diagnosis-first homepage implemented (2026-05-01). `docs/` now opens on a parchment search page; selecting a venue shows a noir DiagnosisCard with category badge, spec strip, and mode breakdown. The comparison workbench is available as a collapsible accordion below the diagnosis card. `docs/diagnosis.js` provides `window.LIEMAX_DIAGNOSE` (`classify`, `diagnose`, `LABELS`). Diagnosis validation covers Providence, Reading, Boston Common, Metreon, and Lincoln Square. 26 docs workbench checks pass (+ 6 new diagnosis tests). Full CI: 273 pass, 0 fail.
+- Step 4: diagnosis-first homepage implemented (2026-05-01), Priority 1 education-first pass complete, and Phase 4a canonical docs data path complete. `docs/` now opens with novice-friendly LIEMAX/IMAX framing, a privacy-friendly randomized example set, national/state stats, a noir DiagnosisCard with category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, a one-page integrated IMAX 101 section, and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from `src/data`/`src/docs`; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. `docs/diagnosis.js` provides `window.LIEMAX_DIAGNOSE` (`classify`, `diagnose`, `LABELS`). Docs validation covers generated-bundle freshness, workbench math regressions, diagnosis categories, dome guardrails, and education UI invariants.
 - Step 4 diagnosis follow-ups to remember: fix Metreon/Lincoln featured example ids in `docs/app.jsx` (`_and_imax`), and require explicit 1.43-capable dome projection/mode before classifying future dome rows as `true_dome`.
 - Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
-- Current Step 4 caveat: `docs/` still uses a prototype data bundle rather than resolving directly from canonical `src/data` JSON; keep `npm run validate:docs` in CI until Phase 4a unifies the data path.
+- Current Step 4 caveat: `docs/` data is canonical-generated, but supplemental Xenon-only IMAX coverage is still missing because 143190 excludes Xenon-only venues; keep `npm run validate:docs` in CI as the frontend behavior guard.
 - Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).
