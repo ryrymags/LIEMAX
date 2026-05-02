@@ -1,0 +1,131 @@
+{
+  "id": "mcwane_center_imax_dome",
+  "preset_id": "imax_dome_laser",
+  "name": "IMAX Dome, McWane Center",
+  "chain": null,
+  "brand_label": "IMAX",
+  "city": "Birmingham",
+  "state_province": "AL",
+  "country": "United States",
+  "coordinates": null,
+  "screen": {
+    "width_m": 24.0,
+    "height_m": 24.0,
+    "width_ft": 78.7,
+    "height_ft": 78.7,
+    "aspect_ratio": 1.0,
+    "geometry": "hemispherical",
+    "curvature_radius_ft": null,
+    "screen_bottom_height_ft": null,
+    "is_perforated": true,
+    "dome_coverage_pct": 83,
+    "dome_fov_horizontal_deg": 180,
+    "dome_fov_vertical_deg": 125,
+    "dome_fov_above_horizon_deg": 105,
+    "dome_fov_below_horizon_deg": 20
+  },
+  "projection": {
+    "id": "digital",
+    "display_name": "IMAX Laser for Dome",
+    "mode": "digital",
+    "availability": "primary",
+    "type": "imax_dome_laser",
+    "light_source": "rgb_laser",
+    "dual_projector": false,
+    "resolution_horizontal_px": 4096,
+    "resolution_vertical_px": 2160,
+    "resolution_scan_equivalent_low": null,
+    "resolution_scan_equivalent_high": null,
+    "effective_resolution_label": "4K digital IMAX Dome laser with anamorphic/fisheye optics; no 15/70 film scan-equivalent claim.",
+    "brightness_fl": null,
+    "brightness_cdm2": null,
+    "brightness_source": "unknown",
+    "contrast_sequential": null,
+    "contrast_dynamic": null,
+    "contrast_source": "unknown",
+    "contrast_notes": "Venue-specific dome laser brightness and contrast are not publicly confirmed.",
+    "color_gamut": "DCI-P3 via RGB laser",
+    "hdr": "none",
+    "supports_3d": true,
+    "min_content_ar_supported": 1.43,
+    "anamorphic_stretch": true
+  },
+  "projections": null,
+  "sound": null,
+  "seating": null,
+  "capabilities": {
+    "min_content_ar_supported": 1.43,
+    "supports_1570_film": false,
+    "supports_143_digital": true,
+    "has_screenx": false,
+    "has_4dx": false,
+    "has_dbox": false,
+    "infinity_vision_certified": null
+  },
+  "history": [],
+  "metadata": {
+    "data_source": "r_imax_csv",
+    "source_url": "https://github.com/r-imax/imaxguide/blob/main/data/americas/unitedstates.csv",
+    "sources": [
+      {
+        "id": "src_143190_us_2026_05",
+        "label": "r-imax/imaxguide U.S. CSV via 143190.xyz",
+        "url": "https://github.com/r-imax/imaxguide/blob/main/data/americas/unitedstates.csv",
+        "quality": "r_imax_csv",
+        "accessed_at": "2026-05-02"
+      },
+      {
+        "id": "src_dome_research_2026_04",
+        "label": "LIEMAX IMAX Dome research defaults",
+        "url": null,
+        "quality": "derived",
+        "accessed_at": "2026-04-23"
+      }
+    ],
+    "field_sources": [
+      {
+        "field": "screen.height_m",
+        "source_id": "src_143190_us_2026_05",
+        "quality": "r_imax_csv",
+        "notes": "CSV height is 0 m for this dome row; LIEMAX stores dome height as the same diameter as width."
+      },
+      {
+        "field": "screen.dome_fov_horizontal_deg",
+        "source_id": "src_dome_research_2026_04",
+        "quality": "derived",
+        "notes": "Standard IMAX Dome fixed FOV default."
+      }
+    ],
+    "last_verified": "2026-05-02",
+    "created_at": "2026-05-02T00:00:00Z",
+    "updated_at": "2026-05-02T00:00:00Z",
+    "confidence": "medium",
+    "notes": "Imported U.S. IMAX Dome laser venue. CSV reports Dome 1.43:1, IMAX Laser for Dome, 24.00 m width, and 0 m height; LIEMAX stores dome width and height as the dome diameter with physical aspect ratio 1.0. Dome FOV defaults come from LIEMAX dome research."
+  },
+  "source_143190": {
+    "region": "Americas",
+    "country_area": "United States",
+    "province_state": "AL",
+    "city": "Birmingham",
+    "location_name": "IMAX Dome, McWane Center",
+    "screen_aspect_ratio": 1.43,
+    "digital_projector": "IMAX Laser for Dome",
+    "max_digital_ar": 1.43,
+    "film_projector": null,
+    "screen_height_m": 0,
+    "screen_width_m": 24.0,
+    "commercial_films": ["Yes"],
+    "raw": {
+      "State": "AL",
+      "City": "Birmingham",
+      "Location Name": "IMAX Dome, McWane Center",
+      "Screen Aspect Ratio (AR)": "Dome 1.43:1",
+      "Digital Projector": "IMAX Laser for Dome",
+      "Maximum AR for digital projection": "Dome 1.43:1",
+      "Film Projector": "No",
+      "Height": "0 m",
+      "Width": "24.00 m",
+      "Commercial films shown?": "Yes"
+    }
+  }
+}

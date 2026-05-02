@@ -25,8 +25,21 @@ window.LIEMAX_DIAGNOSE = (function () {
                         accent: "var(--cat-unknown)" },
   };
 
-  function isDome(venue) {
+  function hasDomeShape(venue) {
     return /dome|omni/i.test(venue.tag || "") || venue.screen.geometry === "hemispherical";
+  }
+
+  function hasDomeCapableProjection(venue) {
+    const projections = [venue.projection, venue.filmProjection].filter(Boolean);
+    const projectionText = projections
+      .map(p => [p.label, p.display_name, p.light, p.type].filter(Boolean).join(" "))
+      .join(" ");
+    const modeText = (venue.presentationModes || []).map(m => m.label || "").join(" ");
+    return /imax_dome_laser|imax_dome_film|laser\s*for\s*dome|dome\s*15\/?70|gt\s*dome|omni/i.test(`${projectionText} ${modeText}`);
+  }
+
+  function isTrueDome(venue) {
+    return hasDomeShape(venue) && hasDomeCapableProjection(venue);
   }
 
   function hasFilm(venue) {
@@ -45,7 +58,7 @@ window.LIEMAX_DIAGNOSE = (function () {
   function classify(venue) {
     if (!venue) return "unknown";
     if (venue.kind === "home") return "unknown";
-    if (isDome(venue)) return "true_dome";
+    if (isTrueDome(venue)) return "true_dome";
     const d143 = digital143(venue);
     const film = hasFilm(venue);
     if (d143 && film) return "true_143_film";
@@ -82,7 +95,7 @@ window.LIEMAX_DIAGNOSE = (function () {
       case "true_dome":
         return {
           line: `IMAX Dome — different game entirely.`,
-          body: `${name} projects onto a hemispherical screen, not a flat rectangle. It is genuine IMAX, but the comparison metric is immersion (degrees of visual field), not pixel density or 1.43 framing. Standard cinema scoring doesn't apply cleanly.`,
+          body: `${name} projects onto a hemispherical screen, not a flat rectangle. It is genuine IMAX, but the comparison metric is fixed dome coverage — about 180° horizontal by 125° vertical — rather than flat-screen row distance. Standard cinema scoring doesn't apply cleanly, and dome-mastered content matters.`,
         };
       case "liemax":
         return {
@@ -98,7 +111,7 @@ window.LIEMAX_DIAGNOSE = (function () {
   }
 
   function isHighEnd(venue) {
-    return /gt/i.test((venue.projection && venue.projection.label) || "") || digital143(venue);
+    return /gt/i.test((venue.projection && venue.projection.label) || "") || digital143(venue) || isTrueDome(venue);
   }
 
   function modeBreakdown(venue) {
@@ -113,6 +126,9 @@ window.LIEMAX_DIAGNOSE = (function () {
       if (!m.enabled) {
         verdict = "na"; verdictLabel = "NOT POSSIBLE";
         sub = m.disabledReason || "Not supported on this screen";
+      } else if (isTrueDome(venue)) {
+        verdict = "true"; verdictLabel = "DOME IMAX";
+        sub = m.isFilmMode ? "15/70 dome film — fixed 180° × 125° coverage" : "Dome laser — fixed 180° × 125° coverage";
       } else if (m.isFilmMode) {
         verdict = "truefilm"; verdictLabel = "TRUE — ON FILM";
         sub = "Booked engagements only — 15/70mm photochemical";

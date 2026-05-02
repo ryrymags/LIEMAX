@@ -10,6 +10,47 @@
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames; Batch 2 workbench audit addendum added to Master/Dome research.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
+## Prioritized Todo Backlog
+
+### Priority 0 — Trust-Critical Website/Data Fixes
+
+- Persist the roadmap in `.ai/ROADMAP.md` and track active Priority 0 progress in `.ai/STATE.md`.
+- Keep the diagnosis homepage search dropdown closed on initial page load while preserving user-triggered opening.
+- Import U.S. IMAX Dome rows from `r-imax/imaxguide` / 143190 U.S. CSV into canonical venue records and the temporary `docs/` prototype bundle.
+- Use `research/IMAX Dome Research.md` and `research/Master Research.md` for dome defaults and caveats: 180° horizontal FOV, 125° vertical FOV, 83% default hemisphere coverage, 105°/20° vertical split, fixed dome FOV, dome-master caveat, and non-linear digital dome mapping.
+- Tighten diagnosis logic so `true_dome` requires dome geometry/name evidence plus explicit dome-capable projection or mode evidence.
+- Add visible IMAX Corporation non-affiliation copy.
+- Clarify that MIT is the current license but the license choice is under review if non-commercial reuse is desired.
+- Mark the old Metreon/Lincoln `_and_imax` featured-id task resolved if the current code still uses the generated `_and_imax` IDs.
+
+### Priority 1 — Core Step 4 Product Work
+
+- Detailed implementation handoff: `.ai/PRIORITY1_PLAN.md`.
+- Unify `docs/` with canonical `src/data` through the resolver instead of duplicated prototype view-model logic.
+- Improve the Diagnosis box with plain-language explanations for GT Dual Laser, 15/70, 1.43, 1.90, CoLa, Xenon, dome, PPD, FOV, and source confidence.
+- Replace static New England-heavy recommendations with privacy-friendly randomized/curated examples and/or explicit state selection. Do not use silent IP geolocation for v1.
+- Add seat geometry stats: front/mid/back horizontal and vertical FOV, seating depth as screen-width multiple, and best-modeled-seat caveats.
+
+### Priority 2 — Data Coverage And Nerd Stats
+
+- Add supplemental Xenon-only IMAX coverage, likely LFExaminer/community-sourced, clearly marked lower-confidence than 143190.
+- Add state/national stats after canonical data is wired: percent LIEMAX, true IMAX in state, 1.43-capable venues, and similar aggregate summaries.
+- Add aspect-ratio penalty metrics: vertical frame lost vs 1.43, screen utilization, and visible content area.
+- Add curated examples of 1.43, 1.90, scope, and flat movies.
+- Add deferred home presets: `oled_budget` and `iphone_standard`.
+
+### Priority 3 — Polish
+
+- Do design polish only after the functional data path is solid.
+- Add website animations after layout and content are stable.
+- Add sourced qualitative screen curvature/gain tags: flat, mildly curved, strongly curved; low/high gain; hotspot/uniformity caveats.
+
+### Priority 4 — Later Phases
+
+- Add screened community correction workflow with source links and review status.
+- Build the Step 6 Three.js simulation after Step 4 is stable, starting with one generic IMAX layout and front/mid/back/optimal seats.
+- Treat Blender/real-scale renders as later support material, not a Step 4 blocker.
+
 ## Known Low-Confidence Data Items (do not block Step 4)
 
 - `dolby_cinema_single_laser.json` brightness_fl ~31 fL: community estimate from AMC Southlands firsthand reports; no Dolby-published per-venue fL spec yet.
@@ -27,7 +68,7 @@
 
 ## Step 4 Diagnosis Homepage Follow-ups
 
-- Fix featured example IDs in `docs/app.jsx`: Metreon and Lincoln Square generated venue ids include `_and_imax`, not `_imax`, so those chips/empty-search featured rows can silently disappear.
+- RESOLVED/STALENESS NOTE: Metreon and Lincoln Square featured example IDs in `docs/app.jsx` currently use the generated `_and_imax` form, so the older `_imax` follow-up is no longer an active blocker.
 - Before adding dome venues to the `docs/` bundle, tighten `docs/diagnosis.js` dome classification so `true_dome` requires explicit 1.43-capable dome projection/mode, not dome geometry alone.
 - Keep context names aligned with code: the diagnosis module is `window.LIEMAX_DIAGNOSE`, and the public helpers are `classify()`, `diagnose()`, and `LABELS`.
 

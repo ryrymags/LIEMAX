@@ -87,6 +87,22 @@ window.LIEMAX_DATA = (function () {
     min_ar: 1.43,
   };
 
+  const proj_imax_dome_film = {
+    id: "film_dome",
+    label: "IMAX GT Dome 15/70 mm",
+    light: "Xenon (Dome Film)",
+    resH: null, resV: null,
+    scanEquivLow: 8800, scanEquivHigh: 11700,
+    scanEquivLabel: "~8.8K-11.7K scan-equiv. dome film",
+    brightness_fl: 22.0, brightness_nits_full: null,
+    nativeContrast: 4500,
+    isPerPixelEmissive: false,
+    hdrCategory: "photochemical",
+    hdrLabel: "Photochemical latitude",
+    hdrDynamic: null,
+    min_ar: 1.43,
+  };
+
   const proj_imax_digital_generic = {
     id: "digital",
     label: "IMAX digital projection · details unknown",
@@ -241,6 +257,10 @@ window.LIEMAX_DATA = (function () {
     return hasFilm(label) && /dome|omni|15\s*\/?\s*70|1570|70\s*mm/i.test(label);
   }
 
+  function isDomeLabel(label) {
+    return typeof label === "string" && /dome|omni/i.test(label);
+  }
+
   function projectorForLabel(label) {
     const raw = (label || "").trim();
     let base = proj_imax_digital_generic;
@@ -292,8 +312,17 @@ window.LIEMAX_DATA = (function () {
     };
   }
 
-  function generatedPresentationModes(defaultAr, digital143, hasFilm143Mode) {
+  function generatedPresentationModes(defaultAr, digital143, hasFilm143Mode, isDome) {
     const modes = [];
+    if (isDome) {
+      if (digital143) {
+        modes.push({ id: "digital_dome_143", ar: 1.43, label: "1.43 · IMAX Dome Laser", enabled: true, isBookingDependent: false, isFilmMode: false, projection: "digital" });
+      }
+      if (hasFilm143Mode) {
+        modes.push({ id: "film_dome_143", ar: 1.43, label: "1.43 · IMAX Dome 15/70", enabled: true, isBookingDependent: true, isFilmMode: true, projection: "film" });
+      }
+      return modes;
+    }
     if (digital143) {
       modes.push({ id: "digital_143", ar: 1.43, label: "1.43 · IMAX Laser", enabled: true, isBookingDependent: false, isFilmMode: false, projection: "digital" });
     }
@@ -338,17 +367,23 @@ window.LIEMAX_DATA = (function () {
 
   function buildGeneratedImaxVenue(row) {
     const [state, city, name, screenArLabel, digitalLabel, maxDigitalArLabel, filmLabel, screenHeightM, screenWidthM, commercialFilms] = row;
-    const screenAr = parseAspectRatio(screenArLabel);
+    const isDome = isDomeLabel(screenArLabel) || isDomeLabel(digitalLabel) || isDomeLabel(filmLabel);
+    const screenAr = isDome ? 1.0 : parseAspectRatio(screenArLabel);
     const maxDigitalAr = parseAspectRatio(maxDigitalArLabel);
-    const { projection, projectorType, short } = projectorForLabel(digitalLabel);
+    const { projection: digitalProjection, projectorType, short } = projectorForLabel(digitalLabel);
+    const hasDigitalProjection = projectorType !== "generic";
     const digital143 = is143Compatible(screenAr, screenArLabel, projectorType, maxDigitalAr);
     const film143 = isFilm143(filmLabel);
-    const defaultPresentationAr = digital143 ? 1.43 : 1.90;
-    const w = screenWidthM * FT_PER_M;
-    const h = screenHeightM * FT_PER_M;
+    const defaultPresentationAr = isDome ? 1.43 : (digital143 ? 1.43 : 1.90);
+    const domeDiameterM = isDome ? (screenWidthM || screenHeightM) : null;
+    const w = (domeDiameterM || screenWidthM) * FT_PER_M;
+    const h = (domeDiameterM || screenHeightM) * FT_PER_M;
     const stateName = STATE_NAMES[state] || state;
     const sourceProjection = sourcesForProjection(projectorType);
-    const geometry = /dome/i.test(screenArLabel) ? "hemispherical" : (screenAr != null && screenAr <= 1.45) ? "slight_curve" : "flat";
+    const geometry = isDome ? "hemispherical" : (screenAr != null && screenAr <= 1.45) ? "slight_curve" : "flat";
+    const projection = projectorType === "generic" && film143 && isDome
+      ? { ...proj_imax_dome_film, label: filmLabel }
+      : digitalProjection;
 
     const rowKey = `${state}|${city}|${name}`;
     const venue = {
@@ -358,27 +393,29 @@ window.LIEMAX_DATA = (function () {
       city,
       state,
       stateName,
-      sub: `${city} · ${fmtAr(screenAr)} · ${short}`,
-      tag: /dome/i.test(screenArLabel) ? "IMAX Dome" : `IMAX ${fmtAr(screenAr)}`,
-      blurb: `Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.`,
-      screen: { w, h, ar: screenAr, geometry },
+      sub: isDome ? `${city} · Dome · ${film143 && projectorType === "generic" ? "15/70 dome film" : short}` : `${city} · ${fmtAr(screenAr)} · ${short}`,
+      tag: isDome ? "IMAX Dome" : `IMAX ${fmtAr(screenAr)}`,
+      blurb: isDome
+        ? `Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.`
+        : `Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.`,
+      screen: { w, h, ar: screenAr, geometry, domeCoveragePct: isDome ? 0.83 : null, domeHFov: isDome ? 180 : null, domeVFov: isDome ? 125 : null },
       seat: {
-        front: w * 0.87,
-        mid: w * 1.5,
-        back: w * 2.25,
-        source: "derived_from_screen_width",
+        front: isDome ? w / 2 : w * 0.87,
+        mid: isDome ? w / 2 : w * 1.5,
+        back: isDome ? w / 2 : w * 2.25,
+        source: isDome ? "dome_radius_estimate" : "derived_from_screen_width",
       },
       defaultPresentationAr,
-      isHybrid: film143,
-      presentationModes: generatedPresentationModes(defaultPresentationAr, digital143, film143),
+      isHybrid: film143 && hasDigitalProjection,
+      presentationModes: generatedPresentationModes(defaultPresentationAr, digital143, film143, isDome),
       projection,
-      filmProjection: film143 ? { ...proj_1570_film, label: filmLabel } : null,
+      filmProjection: film143 ? { ...(isDome ? proj_imax_dome_film : proj_1570_film), label: filmLabel } : null,
       commercialFilms: commercialFilms === "Yes",
       sources: {
-        screen: { q: "r_imax_csv", note: `143190.xyz CSV (Apr 2026) — ${screenWidthM} × ${screenHeightM} m.` },
+        screen: { q: "r_imax_csv", note: isDome ? `143190.xyz CSV (May 2026) — dome diameter ${domeDiameterM} m; height normalized from CSV 0 m.` : `143190.xyz CSV (Apr 2026) — ${screenWidthM} × ${screenHeightM} m.` },
         brightness: sourceProjection.brightness,
         contrast: sourceProjection.contrast,
-        seat: { q: "derived_from_screen_width", note: "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers." },
+        seat: { q: isDome ? "community_estimate" : "derived_from_screen_width", note: isDome ? "Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics." : "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers." },
       },
     };
 
@@ -386,12 +423,14 @@ window.LIEMAX_DATA = (function () {
   }
 
   const imaxCsvRows = [
+    ["AL","Birmingham","IMAX Dome, McWane Center","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,24.00,"Yes"],
     ["AZ","Grand Canyon","Grand Canyon IMAX, Grand Canyon Visitor Center","1.43:1","IMAX GT Laser","1.43:1","No",18,23.8,"No"],
     ["AZ","Phoenix","AMC Deer Valley 30 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.7,15.6,"Yes"],
     ["AZ","Tempe","Harkins Arizona Mills 25 & IMAX","1.43:1","IMAX CoLa","1.90:1","IMAX GT3D 15/70 mm",18.3,24.4,"Yes"],
     ["CA","Aliso Viejo","Regal Edwards Aliso Viejo & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.4,16.5,"Yes"],
     ["CA","Alhambra","Regal Edwards Alhambra Renaissance & IMAX","1.90:1","IMAX Laser XT","1.90:1","No",10.1,15.4,"Yes"],
     ["CA","Arcadia","AMC Santa Anita 16 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.1,15.9,"Yes"],
+    ["CA","Balboa Park","Fleet Science Center","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,23.20,"Yes"],
     ["CA","Burbank","AMC Burbank 16 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",11.3,19.2,"Yes"],
     ["CA","City of Industry","AMC Puente 20 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.1,17.4,"Yes"],
     ["CA","Dublin","Regal Hacienda Crossings & IMAX","1.43:1","IMAX CoLa","1.90:1","IMAX GT3D 15/70 mm",17,23.28,"Yes"],
@@ -412,6 +451,7 @@ window.LIEMAX_DATA = (function () {
     ["CA","San Diego","AMC Palm Promenade 24 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.9,17.7,"Yes"],
     ["CA","San Diego","Regal Edwards Mira Mesa & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.97,17.52,"Yes"],
     ["CA","San Francisco","AMC Metreon 16 & IMAX","1.43:1","IMAX GT Laser","1.43:1","IMAX GT3D 15/70 mm",23,29.8,"Yes"],
+    ["CA","San Jose","IMAX Dome Theater, The Tech Interactive","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,25.00,"Yes"],
     ["CA","Santa Clara","AMC Mercado 20 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.5,17.4,"Yes"],
     ["CA","Santa Clarita","Regal Edwards Valencia & IMAX","1.90:1","IMAX CoLa","1.90:1","No",12.5,20.9,"Yes"],
     ["CA","South Gate","Regal Edwards South Gate & IMAX","1.90:1","IMAX CoLa","1.90:1","No",11.3,17.7,"Yes"],
@@ -446,7 +486,9 @@ window.LIEMAX_DATA = (function () {
     ["IL","Chicago","AMC Roosevelt Collection 16 & IMAX","1.90:1","IMAX Laser XT","1.90:1","No",10.68,18.28,"Yes"],
     ["IL","Chicago","Regal City North & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9,15.5,"Yes"],
     ["IN","Indianapolis","IMAX, Indiana State Museum","1.43:1","IMAX Digital","1.90:1","IMAX GT3D 15/70 mm",19.2,25.6,"Yes"],
+    ["LA","Shreveport","The Goodman IMAX Dome","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,18.30,"Yes"],
     ["MA","Boston","AMC Boston Common 19","2.40:1","IMAX CoLa","1.90:1","No",9,18.6,"Yes"],
+    ["MA","Boston","Mugar Omni, Museum of Science","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,23.20,"Limited"],
     ["MA","Methuen","AMC Methuen 20 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.4,16.4,"Yes"],
     ["MA","Reading","Sunbrella IMAX 3D Theater Reading","1.43:1","IMAX GT Laser","1.43:1","No",20,25.7,"Yes"],
     ["MA","Somerville","AMC Assembly Row 12 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.4,16.8,"Yes"],
@@ -454,10 +496,14 @@ window.LIEMAX_DATA = (function () {
     ["MD","Frederick","Regal Westview & IMAX","1.90:1","IMAX CoLa","1.90:1","No",7.7,14.3,"Yes"],
     ["MD","Gaithersburg","AMC Rio Cinemas 18 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.2,13.7,"Yes"],
     ["MD","Nottingham","AMC White Marsh 16 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.5,16.2,"Yes"],
+    ["MI","Detroit","Chrysler IMAX Dome Theatre, Michigan Science Center","Dome 1.43:1","N/A","N/A","IMAX GT Dome 15/70 mm",0,20.60,"No"],
     ["MI","Grand Rapids","Celebration! Cinema Grand Rapids North & IMAX","1.43:1","IMAX Digital","1.90:1","IMAX SR 15/70 mm",16.1,21.3,"Yes"],
     ["MN","Roseville","AMC Rosedale 14 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.8,15.7,"Yes"],
+    ["MN","St. Paul","Omnitheater Science Museum of Minnesota","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,27.40,"No"],
     ["MO","Branson","Branson's IMAX - Entertainment Complex","1.43:1","IMAX GT Laser","1.43:1","No",19,25.6,"Yes"],
     ["MO","Kansas City","AMC Barry Woods 24 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.1,17.7,"Yes"],
+    ["MO","St. Louis","OMNIMAX, St. Louis Science Center","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,24.10,"Limited"],
+    ["NC","Charlotte","Charlotte IMAX Dome Theatre at Discovery Place","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,24.10,"Yes"],
     ["NC","Concord","AMC Concord Mills 24 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.2,14.7,"Yes"],
     ["NC","Durham","AMC Southpoint 17 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.5,19.1,"Yes"],
     ["NC","Fayetteville","AMC Fayetteville 14 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",10.9,20.1,"Yes"],
@@ -480,6 +526,7 @@ window.LIEMAX_DATA = (function () {
     ["NY","Staten Island","AMC Staten Island 11 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.4,16.8,"Yes"],
     ["NY","Stony Brook","AMC Stony Brook 17 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",8.5,15.9,"Yes"],
     ["NY","Syracuse","Regal Destiny USA & IMAX","1.90:1","IMAX CoLa","1.90","No",11.6,21.3,"Yes"],
+    ["OH","Cincinnati","Robert D. Lindner Family OMNIMAX Theater","Dome 1.43:1","IMAX Laser for Dome","Dome 1.43:1","No",0,22.00,"No"],
     ["OH","Columbus","Lennox Town Center & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.2,17.7,"Yes"],
     ["OK","Moore","Regal Warren Moore & IMAX","1.43:1","IMAX CoLa","1.90:1","No",18.3,24.4,"Yes"],
     ["PA","Bensalem","AMC Neshaminy 24 & IMAX","1.90:1","IMAX CoLa","1.90:1","No",9.8,18.3,"Yes"],

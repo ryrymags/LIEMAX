@@ -65,5 +65,39 @@
       "screen_width_m": "",
       "commercial_films": []
     }
+  },
+  {
+    "case": "dome_laser_height_zero",
+    "row": {
+      "region": "Americas",
+      "country_area": "United States",
+      "province_state": "AL",
+      "city": "Birmingham",
+      "location_name": "IMAX Dome, McWane Center",
+      "screen_aspect_ratio": "Dome 1.43:1",
+      "digital_projector": "IMAX Laser for Dome",
+      "max_digital_ar": "Dome 1.43:1",
+      "film_projector": "No",
+      "screen_height_m": "0 m",
+      "screen_width_m": "24.00 m",
+      "commercial_films": "Yes"
+    }
+  },
+  {
+    "case": "film_only_dome",
+    "row": {
+      "region": "Americas",
+      "country_area": "United States",
+      "province_state": "MI",
+      "city": "Detroit",
+      "location_name": "Chrysler IMAX Dome Theatre, Michigan Science Center",
+      "screen_aspect_ratio": "Dome 1.43:1",
+      "digital_projector": "N/A",
+      "max_digital_ar": "N/A",
+      "film_projector": "IMAX GT Dome 15/70 mm",
+      "screen_height_m": "0 m",
+      "screen_width_m": "20.60 m",
+      "commercial_films": "No"
+    }
   }
 ]

@@ -613,6 +613,22 @@ const sparse = venues.find((item) => item.caseName === 'missing_screen_dimension
 assertEqual('sparse import is allowed with low confidence', sparse.metadata.confidence, 'low');
 assert('sparse import leaves screen dimensions absent', sparse.screen.width_m === undefined && sparse.screen.height_m === undefined);
 
+const domeLaserImport = venues.find((item) => item.caseName === 'dome_laser_height_zero')!.venue as any;
+assertEqual('dome laser import uses dome laser preset', domeLaserImport.preset_id, 'imax_dome_laser');
+assertEqual('dome laser import normalizes physical aspect ratio', domeLaserImport.screen.aspect_ratio, 1.0);
+assertEqual('dome laser import copies width to height when CSV height is zero', domeLaserImport.screen.height_m, 24.0);
+assertEqual('dome laser import marks hemispherical geometry', domeLaserImport.screen.geometry, 'hemispherical');
+assertEqual('dome laser import projection type', domeLaserImport.projection.type, 'imax_dome_laser');
+assertEqual('dome laser import uses anamorphic stretch', domeLaserImport.projection.anamorphic_stretch, true);
+assertEqual('dome laser import claims digital 1.43', domeLaserImport.capabilities.supports_143_digital, true);
+assertEqual('dome laser import does not claim 15/70 film', domeLaserImport.capabilities.supports_1570_film, false);
+
+const filmOnlyDome = venues.find((item) => item.caseName === 'film_only_dome')!.venue as any;
+assertEqual('film-only dome import uses dome film preset', filmOnlyDome.preset_id, 'imax_dome_film');
+assertEqual('film-only dome projection type', filmOnlyDome.projection.type, 'imax_dome_film');
+assertEqual('film-only dome claims 15/70 film capability', filmOnlyDome.capabilities.supports_1570_film, true);
+assertEqual('film-only dome does not claim digital 1.43', filmOnlyDome.capabilities.supports_143_digital, false);
+
 console.log('\n==============================');
 console.log(`Results: ${passed} passed, ${failed} failed out of ${passed + failed} checks`);
 console.log('==============================\n');

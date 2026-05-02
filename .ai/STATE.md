@@ -2,6 +2,44 @@
 
 Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench plus Batch 2 workbench audit fixes."
 
+Current priority: Priority 0 complete — Priority 1 plan saved in `.ai/PRIORITY1_PLAN.md`, pending user approval before implementation.
+
+## Priority 0 Working Context
+
+Goal: preserve the full todo roadmap in repo context, then make the diagnosis-first website safer to trust before larger Step 4 work continues.
+
+Chunk checklist:
+- [x] Persist full Priority 0-4 roadmap in `.ai/ROADMAP.md`.
+- [x] Keep homepage search dropdown closed on initial load while preserving user-triggered opening.
+- [x] Import U.S. IMAX Dome rows from `r-imax/imaxguide` / 143190 U.S. CSV into canonical `src/data/venues/`.
+- [x] Mirror those dome rows in the temporary `docs/` data bundle until Priority 1 unifies frontend data with canonical JSON.
+- [x] Tighten `docs/diagnosis.js` so `true_dome` requires explicit dome-capable projection/mode evidence.
+- [x] Update site copy for dome caveats, IMAX non-affiliation, and license-under-review language.
+- [x] Run `npm run validate:schema`, `npm run validate:docs`, full `npm run ci`, and `git diff --check`.
+
+Priority 0 caveats:
+- The old Metreon/Lincoln featured example ID follow-up is stale: `docs/app.jsx` already uses generated `_and_imax` IDs for both venues.
+- Dome modeling should use `research/IMAX Dome Research.md` and `research/Master Research.md` for fixed dome FOV and explanatory caveats, not just the sparse CSV fields.
+- Dome CSV rows with `Height = 0 m` and a nonzero width should treat width as dome diameter and store both width and height as that diameter with physical aspect ratio `1.0`.
+
+Priority 0 verification:
+- `npm run validate:schema`: 133 passed, 0 failed.
+- `npm run validate:docs`: 35 passed, 0 failed.
+- `npm run ci`: passed.
+- `git diff --check`: passed.
+
+## Priority 1 Planning Snapshot
+
+Priority 1 should improve the Step 4 product experience without starting a full redesign or backend. The saved plan is `.ai/PRIORITY1_PLAN.md`.
+
+Core next goals:
+- Plain-language diagnosis explanations for GT Dual Laser, CoLa, Xenon, 15/70, 1.43, 1.90, PPD, FOV, dome, and source confidence.
+- Replace New England-heavy “Try:” recommendations with privacy-friendly randomized/curated examples.
+- Add static aggregate stats and, where safe, explicit user-selected state stats.
+- Surface flat-screen seat geometry stats while keeping dome FOV as fixed coverage.
+- Add aspect-ratio penalty metrics, especially vertical frame lost for 1.43 content on 1.90 systems.
+- Add docs regression tests and keep CI green.
+
 ## Completed
 
 - Step 1: Research & Data Schema. Audited 2026-04-26 — schema clean, cinema presets clean, research notes properly caveated.

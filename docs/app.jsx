@@ -53,6 +53,30 @@ function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
   const presAr = resolvePresAr(venue, requestedPresAr, filmMode);
   const proj = (filmMode && venue.filmProjection) ? venue.filmProjection : venue.projection;
   const dist = venue.seat[seat];
+  const isDome = venue.screen.geometry === "hemispherical";
+
+  if (isDome) {
+    const domeHFov = venue.screen.domeHFov || 180;
+    const domeVFov = venue.screen.domeVFov || 125;
+    const coverage = venue.screen.domeCoveragePct || 0.83;
+    const radius = venue.screen.w / 2;
+    const domeArea = 2 * Math.PI * radius * radius * coverage;
+    return {
+      dist,
+      physicalFov: domeHFov,
+      ppdVal: proj.resH != null ? M.ppd(proj.resH, domeHFov) : null,
+      presAr,
+      projWindow: { w: venue.screen.w, h: venue.screen.h, ar: 1.43, geometry: "hemispherical" },
+      mask: { effW: Math.sqrt(domeArea), effH: Math.sqrt(domeArea), areaUtilPct: coverage * 100, letterbox: false, pillarbox: false, cropped: false },
+      contentHFov: domeHFov,
+      contentVFov: domeVFov,
+      fl: M.brightnessFL({ projection: proj }),
+      physicalUtil: coverage * 100,
+      visibleArea: domeArea,
+      isDome: true,
+      proj,
+    };
+  }
 
   const physicalFov = M.horizontalFovDeg(venue.screen.w, dist);
 
@@ -69,7 +93,7 @@ function computeStats(venue, seat, contentAr, requestedPresAr, filmMode) {
   const fl = M.brightnessFL({ projection: proj });
   const physicalUtil = mask.areaUtilPct;
 
-  return { dist, physicalFov, ppdVal, presAr, projWindow, mask, contentHFov, contentVFov, fl, physicalUtil, proj };
+  return { dist, physicalFov, ppdVal, presAr, projWindow, mask, contentHFov, contentVFov, fl, physicalUtil, visibleArea: mask.effW * mask.effH, isDome: false, proj };
 }
 
 // ─── Comparison row builders ──────────────────────────────────────────────────
@@ -143,8 +167,8 @@ function buildComparisonRows(sideA, sideB, statsA, statsB) {
   rows.push({ ...makeRow("ppd", "Pixels per degree", aPpdNum, bPpdNum, aPpdDisp, bPpdDisp, true),
     explain: "Perceived sharpness from this seat; higher usually looks crisper." });
 
-  const aAreaNum = statsA.mask.effW * statsA.mask.effH;
-  const bAreaNum = statsB.mask.effW * statsB.mask.effH;
+  const aAreaNum = statsA.visibleArea;
+  const bAreaNum = statsB.visibleArea;
   rows.push({ ...makeRow("area", "Visible content area", aAreaNum, bAreaNum, fmtInt(aAreaNum) + " sq ft", fmtInt(bAreaNum) + " sq ft", true),
     explain: "How large the actual movie image is, after masking or cropping." });
 
@@ -338,7 +362,7 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
               onKeyDown={e => { if (e.key === "Escape") setOpen(false); }}
               aria-label="Search" />
             <div className="picker-v3__source-note">
-              IMAX theater listings come from 143190.xyz and do not include older Xenon-only IMAX venues yet. Those need a supplemental source.
+              IMAX theater listings come from 143190.xyz, including current U.S. dome rows. Older Xenon-only IMAX venues still need a supplemental source.
             </div>
           </div>
           {groups.length === 0 && <div className="picker-v3__empty">No results for "{query}"</div>}
@@ -547,6 +571,7 @@ function Verdict({ verdict, contentLabel }) {
 
 function SeatSelector({ sideA, sideB, seat, onChange }) {
   const labels = { front: "Front", mid: "Mid", back: "Back" };
+  const hasDome = sideA.screen.geometry === "hemispherical" || sideB.screen.geometry === "hemispherical";
   return (
     <div className="seat-section">
       <div className="seat-row">
@@ -556,7 +581,7 @@ function SeatSelector({ sideA, sideB, seat, onChange }) {
             onClick={() => onChange(s)} type="button">{labels[s]}</button>
         ))}
       </div>
-      <div className="seat-info">A: {fmtInt(sideA.seat[seat])} ft · B: {fmtInt(sideB.seat[seat])} ft · distances estimated</div>
+      <div className="seat-info">A: {fmtInt(sideA.seat[seat])} ft · B: {fmtInt(sideB.seat[seat])} ft · {hasDome ? "dome FOV stays fixed" : "distances estimated"}</div>
     </div>
   );
 }
@@ -574,6 +599,7 @@ function DetailsDrawer({ open, onToggle }) {
           <h3>Visible FOV</h3>
           <p>FOV = 2 × arctan(visible_content_dimension / (2 × viewing_distance))</p>
           <p>Horizontal and vertical FOV use the visible movie image after masking or cropping.</p>
+          <p>IMAX Dome is separate: dome FOV is modeled as fixed 180° horizontal × 125° vertical coverage from the dome research, not as distance to a flat rectangular screen.</p>
 
           <h3>Pixels per degree (PPD)</h3>
           <p>PPD = resolution_horizontal / content_FOV_degrees</p>
@@ -582,6 +608,7 @@ function DetailsDrawer({ open, onToggle }) {
 
           <h3>Viewing distances</h3>
           <p>Cinema seating uses tiered assumptions when published row data is unavailable. Dedicated GT rooms use venue-specific or constrained-depth estimates; CoLa, Dolby, XD, and standard multiplex rooms use auditorium-ratio estimates. Sparse 143190 rows provide screen and projector facts, not seating depth. Home displays use typical living-room distances for the screen size per THX-style recommendations.</p>
+          <p>Dome seat distances are radius-style placeholders for non-FOV comparisons. The meaningful dome metric is visual-field coverage and whether the content is dome-mastered.</p>
 
           <h3>Brightness comparison</h3>
           <p>Cinema: published or community-estimated fL calibration target. Home displays: <code>full-field_nits ÷ 3.426 = fL</code>. Peak HDR nits excluded — full-field is the fair cinema comparison.</p>
@@ -609,6 +636,10 @@ function presentationNoteFor(venue, stats, contentAr, filmMode) {
   const content = fmtAr(contentAr);
   const pres = fmtAr(stats.presAr);
   const is143 = Math.abs(contentAr - 1.43) < 0.01;
+
+  if (venue.screen.geometry === "hemispherical") {
+    return "Dome venue: FOV is fixed dome coverage, not flat-screen row geometry; standard movies may need dome-specific mastering.";
+  }
 
   if (is143 && !filmMode && venue.id === "apple_providence_imax") {
     return `Shown in ${pres} digital window; full 1.43 height is cropped in digital mode.`;
@@ -675,6 +706,7 @@ function quickCategoryTag(venue) {
 function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategoryTags = true }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+  const [openOnFocusAfterInteraction, setOpenOnFocusAfterInteraction] = useState(false);
   const ref = useRef(null);
   const inputRef = useRef(null);
 
@@ -748,7 +780,9 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
         <input ref={inputRef} className="search__input" type="text" value={value}
           placeholder="Search your IMAX theater — e.g. Boston Common, Lincoln Square, Providence"
           onChange={e => { onChange(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
+          onPointerDown={() => setOpenOnFocusAfterInteraction(true)}
+          onClick={() => { setOpenOnFocusAfterInteraction(true); setOpen(true); }}
+          onFocus={() => { if (openOnFocusAfterInteraction || value) setOpen(true); }}
           onKeyDown={handleKey}
           aria-label="Search theaters" aria-autocomplete="list" aria-expanded={open} />
         {value
@@ -761,7 +795,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
         <div className="search__results" role="listbox">
           {groups.length === 0 || flatList.length === 0 ? (
             <div className="search__empty">
-              No theaters match "{value}". The dataset only covers U.S. IMAX venues from 143190.xyz so far — older Xenon-only venues may be missing.
+              No theaters match "{value}". The dataset covers U.S. IMAX film, laser, and dome rows from 143190.xyz so far — older Xenon-only venues may be missing.
             </div>
           ) : groups.map((g, gi) => (
             <div key={g.label}>
@@ -803,11 +837,12 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
   const proj = venue.projection;
   const wFt = venue.screen.w ? Math.round(venue.screen.w) : null;
   const hFt = venue.screen.h ? Math.round(venue.screen.h) : null;
+  const isDome = venue.screen.geometry === "hemispherical";
 
   const midDist = venue.seat?.mid;
   const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
   const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
-  const vfov = midDist ? M.verticalFovDeg(mask.effH, midDist) : null;
+  const vfov = isDome ? (venue.screen.domeVFov || 125) : (midDist ? M.verticalFovDeg(mask.effH, midDist) : null);
 
   const isTrue143 = result.category === "true_143_film" || result.category === "true_143_laser";
 
@@ -835,13 +870,13 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
       <div className="diagnosis__specs">
         <div className="spec">
           <span className="spec__k">Screen</span>
-          <span className="spec__v">{venue.screen.ar ? `${venue.screen.ar.toFixed(2)}:1` : "—"}</span>
-          <span className="spec__sub">{wFt && hFt ? `${wFt} × ${hFt} ft` : "Geometry unknown"}</span>
+          <span className="spec__v">{isDome ? "Dome" : (venue.screen.ar ? `${venue.screen.ar.toFixed(2)}:1` : "—")}</span>
+          <span className="spec__sub">{isDome && wFt ? `${wFt} ft diameter` : (wFt && hFt ? `${wFt} × ${hFt} ft` : "Geometry unknown")}</span>
         </div>
         <div className="spec">
           <span className="spec__k">Digital projector</span>
           <span className="spec__v spec__v--small">{proj?.light || "—"}</span>
-          <span className="spec__sub">caps at {proj?.min_ar ? `${proj.min_ar.toFixed(2)}:1` : "—"}</span>
+          <span className="spec__sub">{isDome ? "dome 1.43 capable" : `caps at ${proj?.min_ar ? `${proj.min_ar.toFixed(2)}:1` : "—"}`}</span>
         </div>
         <div className="spec">
           <span className="spec__k">15/70 film</span>
@@ -851,9 +886,9 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
           <span className="spec__sub">{venue.filmProjection ? "Booked engagements" : "Digital only"}</span>
         </div>
         <div className="spec">
-          <span className="spec__k">Mid-seat vert. FOV</span>
+          <span className="spec__k">{isDome ? "Dome vert. FOV" : "Mid-seat vert. FOV"}</span>
           <span className="spec__v">{vfov ? `${Math.round(vfov)}°` : "—"}</span>
-          <span className="spec__sub">{presAr ? `${presAr.toFixed(2)}:1 default` : "—"}</span>
+          <span className="spec__sub">{isDome ? `${venue.screen.domeHFov || 180}° horizontal` : (presAr ? `${presAr.toFixed(2)}:1 default` : "—")}</span>
         </div>
       </div>
 
@@ -901,7 +936,7 @@ function DiagnosisPlaceholder() {
     { swatch: "var(--cat-truefilm)", name: "True IMAX for 15/70 Film · LIEMAX digitally",
       desc: "Real on film bookings; daily digital is CoLa, capped at 1.90." },
     { swatch: "var(--cat-dome)", name: "True IMAX Dome",
-      desc: "Hemispherical screen. Different geometry, different metrics." },
+      desc: "Hemispherical screen with explicit dome projection. Fixed 180° × 125° coverage, not flat-screen row math." },
     { swatch: "var(--cat-liemax)", name: "LIEMAX",
       desc: "Marketed IMAX, but digital projector caps at 1.90. The LIEMAX everyone complains about." },
     { swatch: "var(--cat-unknown)", name: "Unknown / incomplete",
@@ -1119,8 +1154,16 @@ function App() {
           <p>A 1.43 screen and a working 15/70mm projector — so booked film engagements are real IMAX — but the daily digital is CoLa-class and crops 1.43.</p>
         </div>
         <div>
+          <h4>IMAX Dome</h4>
+          <p>A hemispherical screen with fixed visual-field coverage, typically about <strong>180° horizontal</strong> by <strong>125° vertical</strong>. It is real IMAX, but it is not a flat 1.43 rectangle; dome-mastered content matters.</p>
+        </div>
+        <div>
           <h4>Data sources</h4>
-          <p>U.S. IMAX listings imported from <strong>143190.xyz</strong>. Older Xenon-only IMAX venues may be missing. Seat distances are derived from screen width unless venue rows are published.</p>
+          <p>U.S. IMAX listings imported from <strong>143190.xyz</strong>, with dome behavior modeled from LIEMAX research. Older Xenon-only IMAX venues may be missing. Seat distances are derived from screen width unless venue rows are published.</p>
+        </div>
+        <div>
+          <h4>Disclaimer</h4>
+          <p>This project is not affiliated with IMAX Corporation.</p>
         </div>
       </section>
     </div>

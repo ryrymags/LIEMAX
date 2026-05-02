@@ -154,5 +154,30 @@
     "notes": "Institutional IMAX Dome. Dome screen diameter is 23.20 m (76.1 ft) per 143190.xyz CSV (r_imax_csv). ArcGIS lists 72 ft (~21.9 m); the discrepancy reflects screen-surface measurement vs. structural-shell measurement — using 143190's 23.20 m. Current LIEMAX model treats Mugar as post-2021 digital IMAX Dome laser, not active 15/70 film. FOV values (180° H × 125° V, 83% hemisphere coverage) are standard IMAX Dome architecture — venue-specific measurements not separately confirmed."
   },
 
-  "source_143190": null
+  "source_143190": {
+    "region": "Americas",
+    "country_area": "United States",
+    "province_state": "MA",
+    "city": "Boston",
+    "location_name": "Mugar Omni, Museum of Science",
+    "screen_aspect_ratio": 1.43,
+    "digital_projector": "IMAX Laser for Dome",
+    "max_digital_ar": 1.43,
+    "film_projector": null,
+    "screen_height_m": 0,
+    "screen_width_m": 23.2,
+    "commercial_films": ["Limited"],
+    "raw": {
+      "State": "MA",
+      "City": "Boston",
+      "Location Name": "Mugar Omni, Museum of Science",
+      "Screen Aspect Ratio (AR)": "Dome 1.43:1",
+      "Digital Projector": "IMAX Laser for Dome",
+      "Maximum AR for digital projection": "Dome 1.43:1",
+      "Film Projector": "No",
+      "Height": "0 m",
+      "Width": "23.20 m",
+      "Commercial films shown?": "Limited"
+    }
+  }
 }

@@ -53,8 +53,14 @@ interface ProjectionRecord {
 export function map143190RowToVenue(row: Imax143190ImportRow, options: ImportOptions): Record<string, unknown> {
   const screenAspectRatio = parseAspectRatio(row.screen_aspect_ratio);
   const maxDigitalAr = parseAspectRatio(row.max_digital_ar);
-  const screenWidthM = parseNumber(row.screen_width_m);
-  const screenHeightM = parseNumber(row.screen_height_m);
+  const rawScreenWidthM = parseNumber(row.screen_width_m);
+  const rawScreenHeightM = parseNumber(row.screen_height_m);
+  const domeScreen = isDomeLabel(row.screen_aspect_ratio) || isDomeLabel(row.digital_projector) || isDomeLabel(row.film_projector);
+  const domeDiameterM = domeScreen
+    ? (rawScreenWidthM && rawScreenWidthM > 0 ? rawScreenWidthM : rawScreenHeightM && rawScreenHeightM > 0 ? rawScreenHeightM : null)
+    : null;
+  const screenWidthM = domeDiameterM ?? rawScreenWidthM;
+  const screenHeightM = domeDiameterM ?? rawScreenHeightM;
   const commercialFilms = normalizeCommercialFilms(row.commercial_films);
   const digitalProjection = buildDigitalProjection(row.digital_projector, maxDigitalAr);
   const filmProjection = buildFilmProjection(row.film_projector);
@@ -69,7 +75,18 @@ export function map143190RowToVenue(row: Imax143190ImportRow, options: ImportOpt
   const screen: Record<string, unknown> = {};
   if (screenWidthM != null) screen.width_m = screenWidthM;
   if (screenHeightM != null) screen.height_m = screenHeightM;
-  if (screenAspectRatio != null) screen.aspect_ratio = screenAspectRatio;
+  if (domeScreen) {
+    screen.aspect_ratio = 1.0;
+    screen.geometry = 'hemispherical';
+    screen.is_perforated = true;
+    screen.dome_coverage_pct = 83;
+    screen.dome_fov_horizontal_deg = 180;
+    screen.dome_fov_vertical_deg = 125;
+    screen.dome_fov_above_horizon_deg = 105;
+    screen.dome_fov_below_horizon_deg = 20;
+  } else if (screenAspectRatio != null) {
+    screen.aspect_ratio = screenAspectRatio;
+  }
 
   return {
     id: slugify([row.city, row.location_name].filter(Boolean).join(' ')),
@@ -119,7 +136,7 @@ export function parseAspectRatio(value: string | number | null | undefined): num
   if (typeof value === 'number') return Number.isFinite(value) ? value : null;
 
   const trimmed = value.trim();
-  const ratioMatch = trimmed.match(/^(\d+(?:\.\d+)?)\s*:\s*(\d+(?:\.\d+)?)$/);
+  const ratioMatch = trimmed.match(/(\d+(?:\.\d+)?)\s*:\s*(\d+(?:\.\d+)?)/);
   if (ratioMatch) {
     return Number(ratioMatch[1]) / Number(ratioMatch[2]);
   }
@@ -148,7 +165,7 @@ function buildDigitalProjection(label: string | null | undefined, maxDigitalAr: 
     contrast_sequential: null,
     contrast_dynamic: null,
     hdr: 'none',
-    anamorphic_stretch: false,
+    anamorphic_stretch: type === 'imax_dome_laser',
     min_content_ar_supported: minContentAr,
   };
 }
@@ -179,6 +196,7 @@ function buildFilmProjection(label: string | null | undefined): ProjectionRecord
 }
 
 function inferDigitalProjectorType(label: string): string {
+  if (/dome|omni/i.test(label) && /laser/i.test(label)) return 'imax_dome_laser';
   if (/gt|dual\s*laser/i.test(label)) return 'imax_gt_dual_laser';
   if (/xenon|digital/i.test(label) && !/laser/i.test(label)) return 'imax_dual_xenon';
   if (/xt/i.test(label)) return 'imax_laser_xt';
@@ -193,10 +211,11 @@ function inferFilmProjectorType(label: string): string {
 }
 
 function inferPresetId(digitalProjection: ProjectionRecord | null, filmProjection: ProjectionRecord | null): string {
+  if (digitalProjection?.type === 'imax_dome_laser') return 'imax_dome_laser';
+  if (filmProjection?.type === 'imax_dome_film') return 'imax_dome_film';
   if (digitalProjection?.type === 'imax_gt_dual_laser') return 'imax_gt_dual_laser';
   if (digitalProjection?.type === 'imax_cola') return 'imax_cola';
   if (digitalProjection?.type === 'imax_dual_xenon') return 'imax_dual_xenon';
-  if (filmProjection?.type === 'imax_dome_film') return 'imax_dome_film';
   if (filmProjection?.type === 'imax_1570_film') return 'imax_1570_film';
   return 'imax_cola';
 }
@@ -216,6 +235,10 @@ function parseNumber(value: string | number | null | undefined): number | null {
 
 function hasValue(value: string | null | undefined): value is string {
   return typeof value === 'string' && value.trim().length > 0 && !/^n\/?a$|^none$|^no$/i.test(value.trim());
+}
+
+function isDomeLabel(value: string | number | null | undefined): boolean {
+  return typeof value === 'string' && /dome|omni/i.test(value);
 }
 
 function slugify(value: string): string {

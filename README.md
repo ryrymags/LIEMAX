@@ -33,7 +33,7 @@ Legacy project journals live in [`research/legacy_context/`](./research/legacy_c
 
 ## Current Data Coverage
 
-Step 3 includes 12 cinema format presets (`cinemark_xd` and `imax_dome_laser` included), 8 home display tier presets, 7 content formats, and 2 venue records. Mugar Omni is modeled as current post-2021 IMAX Dome laser with no active 15/70 claim; its 23.20 m / 76.1 ft dome diameter comes from the 143190.xyz CSV at medium confidence.
+Step 3 includes 12 cinema format presets (`cinemark_xd` and `imax_dome_laser` included), 8 home display tier presets, and 7 content formats. Venue coverage now includes Apple Providence plus U.S. IMAX Dome rows imported from the 143190.xyz / r-imax CSV. Mugar Omni is modeled as current post-2021 IMAX Dome laser with no active 15/70 claim; its 23.20 m / 76.1 ft dome diameter comes from the 143190.xyz CSV at medium confidence.
 
 ## Running the math engine validation
 
@@ -57,4 +57,4 @@ site on Netlify/Vercel.
 
 ## License
 
-TBD, MIT as of now
+MIT as of now. License choice is under review because the project may want to prevent commercial reuse; do not assume the final public license has been settled.

@@ -259,8 +259,11 @@ const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 assert("Picker includes Xenon-only database disclaimer", appSource.includes("Xenon-only IMAX venues"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
 assert("Homepage search hides category tags for diagnosis reveal", appSource.includes("showCategoryTags={false}"));
+assert("Homepage search does not auto-open on autofocus", appSource.includes("openOnFocusAfterInteraction"));
 assert("Comparison picker keeps category tags", appSource.includes("picker-v3__item-tag"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
+assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
+assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 
 // ─── Diagnosis module tests ───────────────────────────────────────────────────
 
@@ -274,12 +277,24 @@ const diagReading      = findVenueByName("Sunbrella IMAX 3D Theater Reading");
 const diagBostonCommon = findVenueByName("AMC Boston Common 19");
 const diagMetreon      = findVenueByName("AMC Metreon 16 & IMAX");
 const diagLincoln      = findVenueByName("AMC Lincoln Square 13 & IMAX");
+const diagMugar        = findVenueByName("Mugar Omni, Museum of Science");
+const diagChrysler     = findVenueByName("Chrysler IMAX Dome Theatre, Michigan Science Center");
 
 assert("Providence (CoLa + film) diagnoses as true_film_lie_dig",  DIAG.classify(diagProvidence)   === "true_film_lie_dig");
 assert("Reading (GT Laser, no film) diagnoses as true_143_laser",  DIAG.classify(diagReading)      === "true_143_laser");
 assert("Boston Common (CoLa, no film) diagnoses as liemax",        DIAG.classify(diagBostonCommon) === "liemax");
 assert("Metreon (GT Laser + film) diagnoses as true_143_film",     DIAG.classify(diagMetreon)      === "true_143_film");
 assert("Lincoln Square (GT Laser + film) diagnoses as true_143_film", DIAG.classify(diagLincoln)   === "true_143_film");
+assert("Mugar dome laser diagnoses as true_dome",                  DIAG.classify(diagMugar)        === "true_dome");
+assert("Chrysler 15/70 dome diagnoses as true_dome",               DIAG.classify(diagChrysler)     === "true_dome");
+
+const fakeDome = {
+  ...diagBostonCommon,
+  id: "fake_dome_geometry_only",
+  tag: "IMAX Dome",
+  screen: { ...diagBostonCommon.screen, geometry: "hemispherical" },
+};
+assert("dome geometry alone does not diagnose as true_dome", DIAG.classify(fakeDome) !== "true_dome");
 
 if (failed > 0) {
   console.log(`\n${failed} docs workbench checks failed (${passed} passed).`);
