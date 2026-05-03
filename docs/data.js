@@ -40442,5 +40442,10 @@ window.LIEMAX_DATA = {
       "label": "Unknown",
       "tier": 3
     }
+  },
+  "db": {
+    "dolby_cinema_us_count": 175,
+    "dolby_cinema_us_count_checked_at": "2026-05-03T18:45:19.262Z",
+    "dolby_cinema_us_count_endpoint": "https://cinemafinder.dolby.com/mapBoundedCinemas"
   }
 };

@@ -609,8 +609,10 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
   const label = selectedState
     ? (states.find(s => s.code === selectedState)?.name || selectedState)
     : "United States snapshot";
+  const dolbyCinemaUsCount = D.db?.dolby_cinema_us_count;
   const statItems = [
     { label: "IMAX rows", value: scoped.total, sub: selectedState ? "in selected state" : "U.S. film / laser / dome rows" },
+    { label: "Dolby Cinema US", value: dolbyCinemaUsCount == null ? "—" : dolbyCinemaUsCount, sub: "contiguous U.S.; Dolby finder snapshot" },
     { label: "LIEMAX", value: `${scoped.liemax} (${pct(scoped.liemax, scoped.total)})`, sub: "digital cap is normally 1.90" },
     { label: "True flat 1.43", value: scoped.true143, sub: "GT Laser and/or 15/70 + GT" },
     { label: "15/70 capable", value: scoped.film143, sub: "booked film engagements only" },
@@ -643,6 +645,7 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
       </div>
       <p className="data-stats__note">
         Based on the current static docs bundle: {national.total} U.S. IMAX rows from 143190 / r-imax plus local prototype records.
+        Dolby Cinema count comes from the latest saved Dolby finder endpoint snapshot.
         Xenon-only IMAX venues include archival LFExaminer 2021 rows and may be stale; 143190 remains the fresher source when both list the same theater.
         State stats only appear after you choose a state; no IP geolocation is used.
       </p>

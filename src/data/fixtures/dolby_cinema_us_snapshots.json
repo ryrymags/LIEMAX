@@ -1,0 +1,1411 @@
+[
+  {
+    "checkedAt": "2026-05-03T18:45:19.262Z",
+    "sourceEndpoint": "https://cinemafinder.dolby.com/mapBoundedCinemas",
+    "count": 175,
+    "cinemaIds": [
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "315",
+      "317",
+      "318",
+      "319",
+      "325",
+      "327",
+      "328",
+      "379",
+      "380",
+      "382",
+      "384",
+      "400",
+      "401",
+      "402",
+      "403",
+      "404",
+      "405",
+      "490",
+      "494",
+      "495",
+      "501",
+      "506",
+      "507",
+      "513"
+    ],
+    "theaters": [
+      {
+        "id": "95",
+        "exhibitor": "AMC",
+        "site": "34th Street 14",
+        "latitude": 40.752415,
+        "normalizedLongitude": -73.99444900000003
+      },
+      {
+        "id": "96",
+        "exhibitor": "AMC",
+        "site": "9th & Colorado 10",
+        "latitude": 39.729628,
+        "normalizedLongitude": -104.93897300000003
+      },
+      {
+        "id": "97",
+        "exhibitor": "AMC",
+        "site": "Alderwood 16",
+        "latitude": 47.827427,
+        "normalizedLongitude": -122.27549099999999
+      },
+      {
+        "id": "98",
+        "exhibitor": "AMC",
+        "site": "Altamonte Mall 18",
+        "latitude": 28.666513,
+        "normalizedLongitude": -81.38118400000002
+      },
+      {
+        "id": "99",
+        "exhibitor": "AMC",
+        "site": "Arapahoe Crossing 16",
+        "latitude": 39.596173,
+        "normalizedLongitude": -104.79753399999998
+      },
+      {
+        "id": "100",
+        "exhibitor": "AMC",
+        "site": "Arrowhead Towne Center 14",
+        "latitude": 33.642823,
+        "normalizedLongitude": -112.22576100000003
+      },
+      {
+        "id": "101",
+        "exhibitor": "AMC",
+        "site": "Assembly Row 12",
+        "latitude": 42.394954,
+        "normalizedLongitude": -71.07972799999999
+      },
+      {
+        "id": "102",
+        "exhibitor": "AMC",
+        "site": "Aventura Mall 24",
+        "latitude": 25.956113,
+        "normalizedLongitude": -80.14108499999998
+      },
+      {
+        "id": "103",
+        "exhibitor": "AMC",
+        "site": "Aviation 12",
+        "latitude": 40.620866,
+        "normalizedLongitude": -74.24528599999996
+      },
+      {
+        "id": "104",
+        "exhibitor": "AMC",
+        "site": "Barrywoods 24",
+        "latitude": 39.243103,
+        "normalizedLongitude": -94.656071
+      },
+      {
+        "id": "105",
+        "exhibitor": "AMC",
+        "site": "Barton Creek 14",
+        "latitude": 30.257816,
+        "normalizedLongitude": -97.80814399999997
+      },
+      {
+        "id": "106",
+        "exhibitor": "AMC",
+        "site": "Baton Rouge 16",
+        "latitude": 30.44006,
+        "normalizedLongitude": -91.01038
+      },
+      {
+        "id": "107",
+        "exhibitor": "AMC",
+        "site": "Bay Street 16",
+        "latitude": 37.83293,
+        "normalizedLongitude": -122.29205200000001
+      },
+      {
+        "id": "108",
+        "exhibitor": "AMC",
+        "site": "Boston Common 19",
+        "latitude": 42.353217,
+        "normalizedLongitude": -71.06404299999997
+      },
+      {
+        "id": "109",
+        "exhibitor": "AMC",
+        "site": "Brentwood 14",
+        "latitude": 37.945807,
+        "normalizedLongitude": -121.74082900000002
+      },
+      {
+        "id": "110",
+        "exhibitor": "AMC",
+        "site": "Burbank 16",
+        "latitude": 34.181914,
+        "normalizedLongitude": -118.31201799999997
+      },
+      {
+        "id": "111",
+        "exhibitor": "AMC",
+        "site": "Castleton 14",
+        "latitude": 39.907965,
+        "normalizedLongitude": -86.064074
+      },
+      {
+        "id": "112",
+        "exhibitor": "AMC",
+        "site": "Center Valley 16",
+        "latitude": 40.560551,
+        "normalizedLongitude": -75.40905099999998
+      },
+      {
+        "id": "113",
+        "exhibitor": "AMC",
+        "site": "Century City 15",
+        "latitude": 34.057455,
+        "normalizedLongitude": -118.41857299999998
+      },
+      {
+        "id": "114",
+        "exhibitor": "AMC",
+        "site": "Chapel Hill 13",
+        "latitude": 38.947371,
+        "normalizedLongitude": -104.79354599999999
+      },
+      {
+        "id": "115",
+        "exhibitor": "AMC",
+        "site": "Cherry Hill 24",
+        "latitude": 39.935992,
+        "normalizedLongitude": -75.02866799999998
+      },
+      {
+        "id": "116",
+        "exhibitor": "AMC",
+        "site": "Clearfork 8",
+        "latitude": 32.708841,
+        "normalizedLongitude": -97.40211
+      },
+      {
+        "id": "117",
+        "exhibitor": "AMC",
+        "site": "Clearview 12",
+        "latitude": 30.00248,
+        "normalizedLongitude": -90.18287399999997
+      },
+      {
+        "id": "118",
+        "exhibitor": "AMC",
+        "site": "Clifton Commons 16",
+        "latitude": 40.828915,
+        "normalizedLongitude": -74.14020299999999
+      },
+      {
+        "id": "119",
+        "exhibitor": "AMC",
+        "site": "Columbia 14",
+        "latitude": 39.217373,
+        "normalizedLongitude": -76.863404
+      },
+      {
+        "id": "120",
+        "exhibitor": "AMC",
+        "site": "Concord Mills 24",
+        "latitude": 35.370333,
+        "normalizedLongitude": -80.726044
+      },
+      {
+        "id": "121",
+        "exhibitor": "AMC",
+        "site": "Council Bluffs 17",
+        "latitude": 41.24233,
+        "normalizedLongitude": -95.895626
+      },
+      {
+        "id": "122",
+        "exhibitor": "AMC",
+        "site": "Crestwood 18",
+        "latitude": 41.651649,
+        "normalizedLongitude": -87.74424599999998
+      },
+      {
+        "id": "123",
+        "exhibitor": "AMC",
+        "site": "Danbury 16",
+        "latitude": 41.416126,
+        "normalizedLongitude": -73.41537499999998
+      },
+      {
+        "id": "124",
+        "exhibitor": "AMC",
+        "site": "Deer Valley 17",
+        "latitude": 33.666158,
+        "normalizedLongitude": -112.12404700000002
+      },
+      {
+        "id": "125",
+        "exhibitor": "AMC",
+        "site": "Deerbrook 24",
+        "latitude": 30.009873,
+        "normalizedLongitude": -95.27165000000002
+      },
+      {
+        "id": "126",
+        "exhibitor": "AMC",
+        "site": "Del Amo 18",
+        "latitude": 33.833817,
+        "normalizedLongitude": -118.347331
+      },
+      {
+        "id": "127",
+        "exhibitor": "AMC",
+        "site": "Desert Ridge 18",
+        "latitude": 33.675737,
+        "normalizedLongitude": -111.97067900000002
+      },
+      {
+        "id": "128",
+        "exhibitor": "AMC",
+        "site": "Destin Commons 14",
+        "latitude": 30.392209,
+        "normalizedLongitude": -86.42365000000001
+      },
+      {
+        "id": "129",
+        "exhibitor": "AMC",
+        "site": "Disney Springs 24",
+        "latitude": 28.369717,
+        "normalizedLongitude": -81.52042499999999
+      },
+      {
+        "id": "130",
+        "exhibitor": "AMC",
+        "site": "Easton Town Center 30",
+        "latitude": 40.051305,
+        "normalizedLongitude": -82.91527200000002
+      },
+      {
+        "id": "131",
+        "exhibitor": "AMC",
+        "site": "Eastridge Mall 15",
+        "latitude": 37.324746,
+        "normalizedLongitude": -121.81449199999997
+      },
+      {
+        "id": "132",
+        "exhibitor": "AMC",
+        "site": "Edinburg 18",
+        "latitude": 26.272848,
+        "normalizedLongitude": -98.156252
+      },
+      {
+        "id": "133",
+        "exhibitor": "AMC",
+        "site": "Edwardsville 12",
+        "latitude": 38.783489,
+        "normalizedLongitude": -89.95577400000002
+      },
+      {
+        "id": "134",
+        "exhibitor": "AMC",
+        "site": "Elmwood Palace 20",
+        "latitude": 29.962566,
+        "normalizedLongitude": -90.19180499999999
+      },
+      {
+        "id": "135",
+        "exhibitor": "AMC",
+        "site": "Empire 25",
+        "latitude": 40.756685,
+        "normalizedLongitude": -73.98926599999999
+      },
+      {
+        "id": "136",
+        "exhibitor": "AMC",
+        "site": "Fashion District of Philadelphia 8",
+        "latitude": 39.952368,
+        "normalizedLongitude": -75.15774399999998
+      },
+      {
+        "id": "137",
+        "exhibitor": "AMC",
+        "site": "Fayetteville 14",
+        "latitude": 35.07954,
+        "normalizedLongitude": -78.96846399999998
+      },
+      {
+        "id": "138",
+        "exhibitor": "AMC",
+        "site": "Firewheel Town Center 18",
+        "latitude": 32.950644,
+        "normalizedLongitude": -96.61427000000003
+      },
+      {
+        "id": "139",
+        "exhibitor": "AMC",
+        "site": "First Colony 24",
+        "latitude": 29.586737,
+        "normalizedLongitude": -95.62744499999997
+      },
+      {
+        "id": "140",
+        "exhibitor": "AMC",
+        "site": "Flatiron Crossing 14",
+        "latitude": 39.930146,
+        "normalizedLongitude": -105.13550900000001
+      },
+      {
+        "id": "141",
+        "exhibitor": "AMC",
+        "site": "Forum 30",
+        "latitude": 42.622065,
+        "normalizedLongitude": -83.06014500000003
+      },
+      {
+        "id": "142",
+        "exhibitor": "AMC",
+        "site": "Fountains 18",
+        "latitude": 29.641302,
+        "normalizedLongitude": -95.584742
+      },
+      {
+        "id": "143",
+        "exhibitor": "AMC",
+        "site": "Garden State 16",
+        "latitude": 40.91551,
+        "normalizedLongitude": -74.07709699999998
+      },
+      {
+        "id": "144",
+        "exhibitor": "AMC",
+        "site": "Georgetown 14",
+        "latitude": 38.902793,
+        "normalizedLongitude": -77.061442
+      },
+      {
+        "id": "145",
+        "exhibitor": "AMC",
+        "site": "Glendora 12",
+        "latitude": 34.117173,
+        "normalizedLongitude": -117.83617200000003
+      },
+      {
+        "id": "146",
+        "exhibitor": "AMC",
+        "site": "Grapevine 30",
+        "latitude": 32.96662,
+        "normalizedLongitude": -97.04461500000002
+      },
+      {
+        "id": "147",
+        "exhibitor": "AMC",
+        "site": "Gratiot 15",
+        "latitude": 42.559638,
+        "normalizedLongitude": -82.90007800000001
+      },
+      {
+        "id": "148",
+        "exhibitor": "AMC",
+        "site": "Great Lakes 25",
+        "latitude": 42.702887,
+        "normalizedLongitude": -83.295234
+      },
+      {
+        "id": "149",
+        "exhibitor": "AMC",
+        "site": "Gulf Pointe 30",
+        "latitude": 29.604816,
+        "normalizedLongitude": -95.21299699999997
+      },
+      {
+        "id": "151",
+        "exhibitor": "AMC",
+        "site": "Hampton Town Centre 24",
+        "latitude": 37.061967,
+        "normalizedLongitude": -76.42322000000001
+      },
+      {
+        "id": "152",
+        "exhibitor": "AMC",
+        "site": "Hawthorn 12",
+        "latitude": 42.243956,
+        "normalizedLongitude": -87.94932799999998
+      },
+      {
+        "id": "153",
+        "exhibitor": "AMC",
+        "site": "Hickory Ridge 15",
+        "latitude": 35.699666,
+        "normalizedLongitude": -81.30473699999999
+      },
+      {
+        "id": "154",
+        "exhibitor": "AMC",
+        "site": "Highlands Ranch 24",
+        "latitude": 39.559649,
+        "normalizedLongitude": -104.99153899999999
+      },
+      {
+        "id": "155",
+        "exhibitor": "AMC",
+        "site": "Hoffman 22",
+        "latitude": 38.802373,
+        "normalizedLongitude": -77.070471
+      },
+      {
+        "id": "156",
+        "exhibitor": "AMC",
+        "site": "Huntington Square 12",
+        "latitude": 40.839286,
+        "normalizedLongitude": -73.31487400000003
+      },
+      {
+        "id": "157",
+        "exhibitor": "AMC",
+        "site": "Indianapolis 17",
+        "latitude": 39.701681,
+        "normalizedLongitude": -86.15259200000003
+      },
+      {
+        "id": "158",
+        "exhibitor": "AMC",
+        "site": "Jersey Gardens 20",
+        "latitude": 40.659584,
+        "normalizedLongitude": -74.16820999999999
+      },
+      {
+        "id": "159",
+        "exhibitor": "AMC",
+        "site": "Katy Mills 20",
+        "latitude": 29.772479,
+        "normalizedLongitude": -95.80970400000001
+      },
+      {
+        "id": "160",
+        "exhibitor": "AMC",
+        "site": "Kent Station 14",
+        "latitude": 47.384757,
+        "normalizedLongitude": -122.23417
+      },
+      {
+        "id": "162",
+        "exhibitor": "AMC",
+        "site": "Liberty Tree 20",
+        "latitude": 42.552323,
+        "normalizedLongitude": -70.94118600000002
+      },
+      {
+        "id": "163",
+        "exhibitor": "AMC",
+        "site": "Lincoln Square 13",
+        "latitude": 40.775126,
+        "normalizedLongitude": -73.981855
+      },
+      {
+        "id": "164",
+        "exhibitor": "AMC",
+        "site": "Lynnhaven 18",
+        "latitude": 36.815598,
+        "normalizedLongitude": -76.07288
+      },
+      {
+        "id": "165",
+        "exhibitor": "AMC",
+        "site": "Madison Yards 8",
+        "latitude": 33.745957,
+        "normalizedLongitude": -84.35645499999998
+      },
+      {
+        "id": "166",
+        "exhibitor": "AMC",
+        "site": "Mercado 20",
+        "latitude": 37.389282,
+        "normalizedLongitude": -121.982891
+      },
+      {
+        "id": "167",
+        "exhibitor": "AMC",
+        "site": "Mesa Grand 14",
+        "latitude": 33.384177,
+        "normalizedLongitude": -111.80204800000001
+      },
+      {
+        "id": "168",
+        "exhibitor": "AMC",
+        "site": "Mesquite 30",
+        "latitude": 32.788649,
+        "normalizedLongitude": -96.62748799999997
+      },
+      {
+        "id": "169",
+        "exhibitor": "AMC",
+        "site": "Methuen 20",
+        "latitude": 42.744404,
+        "normalizedLongitude": -71.15731599999998
+      },
+      {
+        "id": "170",
+        "exhibitor": "AMC",
+        "site": "Metreon 16",
+        "latitude": 37.784498,
+        "normalizedLongitude": -122.403661
+      },
+      {
+        "id": "171",
+        "exhibitor": "AMC",
+        "site": "Metropark 10",
+        "latitude": 30.194456,
+        "normalizedLongitude": -95.45110999999997
+      },
+      {
+        "id": "172",
+        "exhibitor": "AMC",
+        "site": "Mission Valley 20",
+        "latitude": 32.767561,
+        "normalizedLongitude": -117.14831500000003
+      },
+      {
+        "id": "173",
+        "exhibitor": "AMC",
+        "site": "MJ Harlem 9",
+        "latitude": 40.809704,
+        "normalizedLongitude": -73.95180600000003
+      },
+      {
+        "id": "174",
+        "exhibitor": "AMC",
+        "site": "Monmouth Mall 15",
+        "latitude": 40.287282,
+        "normalizedLongitude": -74.05350499999997
+      },
+      {
+        "id": "175",
+        "exhibitor": "AMC",
+        "site": "Montclair Place 12",
+        "latitude": 34.08668,
+        "normalizedLongitude": -117.69143099999997
+      },
+      {
+        "id": "176",
+        "exhibitor": "AMC",
+        "site": "Naperville 16",
+        "latitude": 41.712676,
+        "normalizedLongitude": -88.20905399999998
+      },
+      {
+        "id": "177",
+        "exhibitor": "AMC",
+        "site": "Neshaminy 24",
+        "latitude": 40.140226,
+        "normalizedLongitude": -74.95396700000003
+      },
+      {
+        "id": "178",
+        "exhibitor": "AMC",
+        "site": "New Brunswick 18",
+        "latitude": 40.488817,
+        "normalizedLongitude": -74.415661
+      },
+      {
+        "id": "179",
+        "exhibitor": "AMC",
+        "site": "NewPark Mall 12",
+        "latitude": 37.526425,
+        "normalizedLongitude": -122.00148200000001
+      },
+      {
+        "id": "180",
+        "exhibitor": "AMC",
+        "site": "Newport Levee 20",
+        "latitude": 39.095249,
+        "normalizedLongitude": -84.49589600000002
+      },
+      {
+        "id": "181",
+        "exhibitor": "AMC",
+        "site": "North Point Mall 12",
+        "latitude": 34.048077,
+        "normalizedLongitude": -84.29643399999998
+      },
+      {
+        "id": "182",
+        "exhibitor": "AMC",
+        "site": "Northlake 14",
+        "latitude": 35.353355,
+        "normalizedLongitude": -80.85056299999997
+      },
+      {
+        "id": "183",
+        "exhibitor": "AMC",
+        "site": "Northpark 15",
+        "latitude": 32.868667,
+        "normalizedLongitude": -96.77373399999999
+      },
+      {
+        "id": "184",
+        "exhibitor": "AMC",
+        "site": "Northrock 14",
+        "latitude": 37.740307,
+        "normalizedLongitude": -97.24096099999997
+      },
+      {
+        "id": "185",
+        "exhibitor": "AMC",
+        "site": "Norwalk 20",
+        "latitude": 33.913588,
+        "normalizedLongitude": -118.07118300000002
+      },
+      {
+        "id": "186",
+        "exhibitor": "AMC",
+        "site": "Oakbrook Center 12",
+        "latitude": 41.852098,
+        "normalizedLongitude": -87.953237
+      },
+      {
+        "id": "188",
+        "exhibitor": "AMC",
+        "site": "Ontario Mills 30",
+        "latitude": 34.074603,
+        "normalizedLongitude": -117.55277799999999
+      },
+      {
+        "id": "189",
+        "exhibitor": "AMC",
+        "site": "Orange 30",
+        "latitude": 33.782582,
+        "normalizedLongitude": -117.89364899999998
+      },
+      {
+        "id": "190",
+        "exhibitor": "AMC",
+        "site": "Orange Park 24",
+        "latitude": 30.185495,
+        "normalizedLongitude": -81.73598500000003
+      },
+      {
+        "id": "191",
+        "exhibitor": "AMC",
+        "site": "Parkway Pointe 15",
+        "latitude": 33.878889,
+        "normalizedLongitude": -84.45635500000003
+      },
+      {
+        "id": "192",
+        "exhibitor": "AMC",
+        "site": "Pembroke 9",
+        "latitude": 26.010464,
+        "normalizedLongitude": -80.30779100000001
+      },
+      {
+        "id": "193",
+        "exhibitor": "AMC",
+        "site": "Perry Crossing 18",
+        "latitude": 39.711046,
+        "normalizedLongitude": -86.36066299999999
+      },
+      {
+        "id": "194",
+        "exhibitor": "AMC",
+        "site": "Plainville 20",
+        "latitude": 41.674224,
+        "normalizedLongitude": -72.84487899999999
+      },
+      {
+        "id": "195",
+        "exhibitor": "AMC",
+        "site": "Plaza Bonita 14",
+        "latitude": 32.653444,
+        "normalizedLongitude": -117.06569400000001
+      },
+      {
+        "id": "196",
+        "exhibitor": "AMC",
+        "site": "Port Chester 14",
+        "latitude": 40.999865,
+        "normalizedLongitude": -73.66350799999998
+      },
+      {
+        "id": "197",
+        "exhibitor": "AMC",
+        "site": "Potomac Mills 18",
+        "latitude": 38.642454,
+        "normalizedLongitude": -77.297485
+      },
+      {
+        "id": "199",
+        "exhibitor": "AMC",
+        "site": "Puente Hills 20",
+        "latitude": 33.99467,
+        "normalizedLongitude": -117.92627500000003
+      },
+      {
+        "id": "200",
+        "exhibitor": "AMC",
+        "site": "Quail Springs Mall 24",
+        "latitude": 35.612378,
+        "normalizedLongitude": -97.55828200000002
+      },
+      {
+        "id": "201",
+        "exhibitor": "AMC",
+        "site": "Regency Brandon 20",
+        "latitude": 27.943176,
+        "normalizedLongitude": -82.32419900000002
+      },
+      {
+        "id": "202",
+        "exhibitor": "AMC",
+        "site": "Regency Square 24",
+        "latitude": 30.326913,
+        "normalizedLongitude": -81.554981
+      },
+      {
+        "id": "203",
+        "exhibitor": "AMC",
+        "site": "River East 21",
+        "latitude": 41.891417,
+        "normalizedLongitude": -87.61874599999999
+      },
+      {
+        "id": "204",
+        "exhibitor": "AMC",
+        "site": "River Park Square 20",
+        "latitude": 47.659629,
+        "normalizedLongitude": -117.42355099999997
+      },
+      {
+        "id": "205",
+        "exhibitor": "AMC",
+        "site": "Rockaway Plaza 16",
+        "latitude": 40.909668,
+        "normalizedLongitude": -74.55811
+      },
+      {
+        "id": "206",
+        "exhibitor": "AMC",
+        "site": "Rolling Hills 20",
+        "latitude": 33.79247,
+        "normalizedLongitude": -118.328506
+      },
+      {
+        "id": "207",
+        "exhibitor": "AMC",
+        "site": "Rosedale 14",
+        "latitude": 45.012842,
+        "normalizedLongitude": -93.17048199999999
+      },
+      {
+        "id": "209",
+        "exhibitor": "AMC",
+        "site": "Rosemont 12",
+        "latitude": 41.979935,
+        "normalizedLongitude": -87.867907
+      },
+      {
+        "id": "210",
+        "exhibitor": "AMC",
+        "site": "Santa Anita 16",
+        "latitude": 34.135579,
+        "normalizedLongitude": -118.04914200000002
+      },
+      {
+        "id": "211",
+        "exhibitor": "AMC",
+        "site": "Saratoga 14",
+        "latitude": 37.288602,
+        "normalizedLongitude": -121.98997800000001
+      },
+      {
+        "id": "212",
+        "exhibitor": "AMC",
+        "site": "Shops at Riverside 9",
+        "latitude": 40.905053,
+        "normalizedLongitude": -74.02968799999996
+      },
+      {
+        "id": "213",
+        "exhibitor": "AMC",
+        "site": "South Barrington 24",
+        "latitude": 42.06995,
+        "normalizedLongitude": -88.14861000000002
+      },
+      {
+        "id": "214",
+        "exhibitor": "AMC",
+        "site": "South Bay Center 12",
+        "latitude": 42.325454,
+        "normalizedLongitude": -71.062137
+      },
+      {
+        "id": "215",
+        "exhibitor": "AMC",
+        "site": "South Bay Galleria 16",
+        "latitude": 33.871692,
+        "normalizedLongitude": -118.35581000000002
+      },
+      {
+        "id": "216",
+        "exhibitor": "AMC",
+        "site": "Southcenter 16",
+        "latitude": 47.458193,
+        "normalizedLongitude": -122.25858700000003
+      },
+      {
+        "id": "217",
+        "exhibitor": "AMC",
+        "site": "Southdale Center 16",
+        "latitude": 44.879526,
+        "normalizedLongitude": -93.32588199999998
+      },
+      {
+        "id": "218",
+        "exhibitor": "AMC",
+        "site": "Southlake Pavilion 24",
+        "latitude": 33.562948,
+        "normalizedLongitude": -84.32948099999999
+      },
+      {
+        "id": "219",
+        "exhibitor": "AMC",
+        "site": "Southpoint 17",
+        "latitude": 35.905225,
+        "normalizedLongitude": -78.94571000000002
+      },
+      {
+        "id": "220",
+        "exhibitor": "AMC",
+        "site": "Southroads 20",
+        "latitude": 36.106468,
+        "normalizedLongitude": -95.91894400000001
+      },
+      {
+        "id": "221",
+        "exhibitor": "AMC",
+        "site": "Staten Island Mall 11",
+        "latitude": 40.5812,
+        "normalizedLongitude": -74.167126
+      },
+      {
+        "id": "222",
+        "exhibitor": "AMC",
+        "site": "Stonebriar 24",
+        "latitude": 33.099077,
+        "normalizedLongitude": -96.81137100000001
+      },
+      {
+        "id": "223",
+        "exhibitor": "AMC",
+        "site": "Stony Brook 17",
+        "latitude": 40.875387,
+        "normalizedLongitude": -73.126823
+      },
+      {
+        "id": "224",
+        "exhibitor": "AMC",
+        "site": "Studio 28",
+        "latitude": 38.907578,
+        "normalizedLongitude": -94.76667800000001
+      },
+      {
+        "id": "226",
+        "exhibitor": "AMC",
+        "site": "Sugarloaf Mills 18",
+        "latitude": 33.981077,
+        "normalizedLongitude": -84.07716499999998
+      },
+      {
+        "id": "227",
+        "exhibitor": "AMC",
+        "site": "Sunnyvale Town Center 12",
+        "latitude": 37.373857,
+        "normalizedLongitude": -122.030823
+      },
+      {
+        "id": "228",
+        "exhibitor": "AMC",
+        "site": "Sunset Place 24",
+        "latitude": 25.704674,
+        "normalizedLongitude": -80.286183
+      },
+      {
+        "id": "229",
+        "exhibitor": "AMC",
+        "site": "Tallahassee 20",
+        "latitude": 30.475827,
+        "normalizedLongitude": -84.28861799999999
+      },
+      {
+        "id": "230",
+        "exhibitor": "AMC",
+        "site": "Tech Ridge 10",
+        "latitude": 30.409004,
+        "normalizedLongitude": -97.67203999999998
+      },
+      {
+        "id": "231",
+        "exhibitor": "AMC",
+        "site": "The Parks at Arlington 18",
+        "latitude": 32.678838,
+        "normalizedLongitude": -97.12780499999997
+      },
+      {
+        "id": "232",
+        "exhibitor": "AMC",
+        "site": "Thoroughbred 20",
+        "latitude": 35.942993,
+        "normalizedLongitude": -86.82390399999997
+      },
+      {
+        "id": "233",
+        "exhibitor": "AMC",
+        "site": "Thousand Oaks 14",
+        "latitude": 34.181965,
+        "normalizedLongitude": -118.88556399999999
+      },
+      {
+        "id": "234",
+        "exhibitor": "AMC",
+        "site": "Town Center 20",
+        "latitude": 38.915865,
+        "normalizedLongitude": -94.64829099999997
+      },
+      {
+        "id": "235",
+        "exhibitor": "AMC",
+        "site": "Town Square 18",
+        "latitude": 36.068144,
+        "normalizedLongitude": -115.17861900000003
+      },
+      {
+        "id": "236",
+        "exhibitor": "AMC",
+        "site": "Tustin 14",
+        "latitude": 33.700806,
+        "normalizedLongitude": -117.83519799999999
+      },
+      {
+        "id": "237",
+        "exhibitor": "AMC",
+        "site": "Tyler 16",
+        "latitude": 33.912827,
+        "normalizedLongitude": -117.45739600000002
+      },
+      {
+        "id": "238",
+        "exhibitor": "AMC",
+        "site": "Tysons Corner 16",
+        "latitude": 38.917678,
+        "normalizedLongitude": -77.21867600000002
+      },
+      {
+        "id": "239",
+        "exhibitor": "AMC",
+        "site": "Veterans 24",
+        "latitude": 28.032953,
+        "normalizedLongitude": -82.54325799999998
+      },
+      {
+        "id": "240",
+        "exhibitor": "AMC",
+        "site": "Victoria Gardens 12",
+        "latitude": 34.11282,
+        "normalizedLongitude": -117.53014100000001
+      },
+      {
+        "id": "241",
+        "exhibitor": "AMC",
+        "site": "Village Crossing 18",
+        "latitude": 42.009862,
+        "normalizedLongitude": -87.76518599999997
+      },
+      {
+        "id": "242",
+        "exhibitor": "AMC",
+        "site": "Village on the Parkway 9",
+        "latitude": 32.950772,
+        "normalizedLongitude": -96.82003299999997
+      },
+      {
+        "id": "244",
+        "exhibitor": "AMC",
+        "site": "Waterfront 22",
+        "latitude": 40.406015,
+        "normalizedLongitude": -79.91815700000001
+      },
+      {
+        "id": "245",
+        "exhibitor": "AMC",
+        "site": "West Chester 18",
+        "latitude": 39.318733,
+        "normalizedLongitude": -84.42083300000002
+      },
+      {
+        "id": "246",
+        "exhibitor": "AMC",
+        "site": "Westgate 20",
+        "latitude": 33.535491,
+        "normalizedLongitude": -112.26137599999998
+      },
+      {
+        "id": "247",
+        "exhibitor": "AMC",
+        "site": "Westminster Promenade 24",
+        "latitude": 39.889228,
+        "normalizedLongitude": -105.07062400000001
+      },
+      {
+        "id": "248",
+        "exhibitor": "AMC",
+        "site": "West Shore 14",
+        "latitude": 27.946699,
+        "normalizedLongitude": -82.52679899999998
+      },
+      {
+        "id": "249",
+        "exhibitor": "AMC",
+        "site": "White Marsh 16",
+        "latitude": 39.370731,
+        "normalizedLongitude": -76.46431100000001
+      },
+      {
+        "id": "250",
+        "exhibitor": "AMC",
+        "site": "Willowbrook 24",
+        "latitude": 29.953396,
+        "normalizedLongitude": -95.54094700000002
+      },
+      {
+        "id": "251",
+        "exhibitor": "AMC",
+        "site": "Woodinville 12",
+        "latitude": 47.756023,
+        "normalizedLongitude": -122.15423800000002
+      },
+      {
+        "id": "252",
+        "exhibitor": "AMC",
+        "site": "Woodlands Square 20",
+        "latitude": 28.052244,
+        "normalizedLongitude": -82.700062
+      },
+      {
+        "id": "315",
+        "exhibitor": "AMC",
+        "site": "Porter Ranch 9",
+        "latitude": 34.276987,
+        "normalizedLongitude": -118.57258100000001
+      },
+      {
+        "id": "317",
+        "exhibitor": "AMC",
+        "site": "Topanga Mall 12",
+        "latitude": 34.188615,
+        "normalizedLongitude": -118.603994
+      },
+      {
+        "id": "318",
+        "exhibitor": "AMC",
+        "site": "Americana at Brand 18",
+        "latitude": 34.143178,
+        "normalizedLongitude": -118.25744199999997
+      },
+      {
+        "id": "319",
+        "exhibitor": "AMC",
+        "site": "The Grove 14",
+        "latitude": 34.071553,
+        "normalizedLongitude": -118.35830099999998
+      },
+      {
+        "id": "325",
+        "exhibitor": "AMC",
+        "site": "Avenue Forsyth 12",
+        "latitude": 34.155511,
+        "normalizedLongitude": -84.17748499999999
+      },
+      {
+        "id": "327",
+        "exhibitor": "AMC",
+        "site": "Barrett Commons 24",
+        "latitude": 34.015589,
+        "normalizedLongitude": -84.57116300000001
+      },
+      {
+        "id": "328",
+        "exhibitor": "AMC",
+        "site": "Stones River 9",
+        "latitude": 35.848115,
+        "normalizedLongitude": -86.41765499999997
+      },
+      {
+        "id": "379",
+        "exhibitor": "AMC",
+        "site": "Vancouver Mall 23",
+        "latitude": 45.658238,
+        "normalizedLongitude": -122.58365100000003
+      },
+      {
+        "id": "380",
+        "exhibitor": "AMC",
+        "site": "Annapolis 11",
+        "latitude": 38.988418,
+        "normalizedLongitude": -76.54565100000002
+      },
+      {
+        "id": "382",
+        "exhibitor": "AMC",
+        "site": "Marquis 16",
+        "latitude": 41.228761,
+        "normalizedLongitude": -73.18371000000002
+      },
+      {
+        "id": "384",
+        "exhibitor": "AMC",
+        "site": "Streets of St Charles 8",
+        "latitude": 38.765276,
+        "normalizedLongitude": -90.49278300000003
+      },
+      {
+        "id": "400",
+        "exhibitor": "AMC",
+        "site": "Manteca 16",
+        "latitude": 37.780876,
+        "normalizedLongitude": -121.22722699999997
+      },
+      {
+        "id": "401",
+        "exhibitor": "AMC",
+        "site": "Palm Promenade 24",
+        "latitude": 32.579021,
+        "normalizedLongitude": -117.03670699999998
+      },
+      {
+        "id": "402",
+        "exhibitor": "AMC",
+        "site": "Orchard 12",
+        "latitude": 39.963056,
+        "normalizedLongitude": -104.99362300000001
+      },
+      {
+        "id": "403",
+        "exhibitor": "AMC",
+        "site": "University Town Center 14",
+        "latitude": 32.871048,
+        "normalizedLongitude": -117.21150699999998
+      },
+      {
+        "id": "404",
+        "exhibitor": "AMC",
+        "site": "Bellevue 12",
+        "latitude": 36.081792,
+        "normalizedLongitude": -86.94824399999999
+      },
+      {
+        "id": "405",
+        "exhibitor": "AMC",
+        "site": "Holly Springs 9",
+        "latitude": 35.666984,
+        "normalizedLongitude": -78.843526
+      },
+      {
+        "id": "490",
+        "exhibitor": "AMC",
+        "site": "Webb Gin 11",
+        "latitude": 33.903792,
+        "normalizedLongitude": -84.001128
+      },
+      {
+        "id": "494",
+        "exhibitor": "AMC",
+        "site": "Otay Ranch 12",
+        "latitude": 32.625908,
+        "normalizedLongitude": -116.96615600000001
+      },
+      {
+        "id": "495",
+        "exhibitor": "AMC",
+        "site": "Roosevelt 16",
+        "latitude": 41.86967,
+        "normalizedLongitude": -87.63274999999999
+      },
+      {
+        "id": "501",
+        "exhibitor": "The Movie Experience",
+        "site": "Sanborn Theatres",
+        "latitude": 35.280482,
+        "normalizedLongitude": -120.662373
+      },
+      {
+        "id": "506",
+        "exhibitor": "AMC",
+        "site": "Southlands 16",
+        "latitude": 39.606671,
+        "normalizedLongitude": -104.70883700000002
+      },
+      {
+        "id": "507",
+        "exhibitor": "AMC",
+        "site": "Superstition East 12",
+        "latitude": 33.379624,
+        "normalizedLongitude": -111.59859
+      },
+      {
+        "id": "513",
+        "exhibitor": "AMC",
+        "site": "Phipps Plaza 14",
+        "latitude": 33.852959,
+        "normalizedLongitude": -84.362233
+      }
+    ]
+  }
+]

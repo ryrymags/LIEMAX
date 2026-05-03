@@ -51,6 +51,7 @@
 
 ### Priority 4 — Later Phases
 
+- At website launch, enable the commented daily cron schedule in `.github/workflows/dolby-cinema-count.yml` so `db.dolby_cinema_us_count` stays fresh automatically.
 - Add screened community correction workflow with source links and review status.
 - Build the Step 6 Three.js simulation after Step 4 is stable, starting with one generic IMAX layout and front/mid/back/optimal seats.
 - Treat Blender/real-scale renders as later support material, not a Step 4 blocker.

@@ -96,6 +96,21 @@ Priority 2 LFExaminer caveats:
 - Eight LFExaminer U.S. IMAX candidates lack screen dimensions and remain source-fixture only until measured or otherwise sourced.
 - LFExaminer non-IMAX giant-screen `D` rows are intentionally excluded from this pass.
 
+## Dolby Cinema Count Checker
+
+Completed 2026-05-03:
+- Added a TypeScript Dolby Cinema U.S. count checker under `src/data/` that uses Dolby's JSON `mapBoundedCinemas` endpoint, not the static HTML app shell.
+- The checker bootstraps a fresh Dolby finder XSRF cookie/header pair, posts the HAR-derived wide bounding-box request, normalizes longitudes, filters to contiguous U.S. coordinates, saves successful snapshots, and logs count/ID-set diffs.
+- Latest successful baseline snapshot counted 175 contiguous-U.S. Dolby Cinema theaters and is stored in `src/data/fixtures/dolby_cinema_us_snapshots.json`.
+- Generated docs data now exposes `window.LIEMAX_DATA.db.dolby_cinema_us_count` plus snapshot metadata; the website stats panel displays the national Dolby Cinema count.
+- Added manual GitHub Actions groundwork in `.github/workflows/dolby-cinema-count.yml`; the daily cron remains commented until the website is live.
+
+Dolby checker verification:
+- `npm run dolby:check`: baseline saved, 175 contiguous-U.S. theaters.
+- `npm run validate:dolby`: 28 passed, 0 failed.
+- `npm run validate:docs`: 75 passed, 0 failed.
+- `npm run ci`: passed.
+
 ## Completed
 
 - Step 1: Research & Data Schema. Audited 2026-04-26 — schema clean, cinema presets clean, research notes properly caveated.
@@ -112,6 +127,7 @@ Priority 2 LFExaminer caveats:
 - Priority 1 education-first website overhaul applied: one-page IMAX 101 explainer, stronger novice homepage copy, curated film examples, source links, randomized example chips, national/state stats, diagnosis AR-loss/source-confidence/seat-geometry panels, and expanded docs regression checks.
 - Phase 4a canonical docs data unification applied: promoted docs 143190 snapshot to `src/data`, added generated docs data/runtime build, routed docs comparisons through resolver-backed generated records, and expanded schema/docs validation.
 - Priority 2 LFExaminer Xenon supplement applied: parsed the archival 2021 LFExaminer theater table from webarchive, stored U.S. IMAX D/1570+D candidates, and promoted comparable unmatched rows into generated docs data with low-confidence provenance.
+- Dolby Cinema U.S. count checker groundwork applied: snapshot-producing TypeScript checker, generated `db.dolby_cinema_us_count` docs token, manual GitHub Actions workflow, and validation coverage.
 
 ## Known Low-Confidence Items (tracked, not blockers)
 

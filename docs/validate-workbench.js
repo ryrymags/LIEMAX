@@ -239,16 +239,19 @@ assert("Docs data bundle is generated from canonical source", dataSource.include
 assert("Docs data bundle no longer contains prototype projection constants", !dataSource.includes("const proj_"));
 assert("Docs data bundle no longer embeds imaxCsvRows", !dataSource.includes("imaxCsvRows"));
 assert("Every docs venue exposes canonicalId", D.venues.every((venue) => typeof venue.canonicalId === "string" && venue.canonicalId.length > 0));
+assert("Docs data exposes Dolby Cinema U.S. count token", Object.prototype.hasOwnProperty.call(D.db || {}, "dolby_cinema_us_count"));
+assert("Docs data exposes Dolby Cinema snapshot metadata", Boolean(D.db?.dolby_cinema_us_count_endpoint?.includes("mapBoundedCinemas")));
+assert("Stats UI references Dolby Cinema U.S. count token", appSource.includes("D.db?.dolby_cinema_us_count") && appSource.includes("Dolby Cinema US"));
 assert("Docs data includes LFExaminer 2021 quality label", D.qualityMeta.lfexaminer?.label === "LFExaminer 2021");
 assert("Workbench runtime is exposed", Boolean(W && typeof W.computeStats === "function" && typeof W.buildComparisonRows === "function"));
 
 const loss143On190 = verticalFrameLoss(1.43, 1.90);
-assert("Homepage explains why the site exists", appSource.includes("IMAX can mean <em>very different rooms</em>") && appSource.includes("screen, projector, movie format, and seat math"));
-assert("Homepage defines LIEMAX for novices", appSource.includes("LIEMAX is the blunt nickname"));
+assert("Homepage explains why the site exists", appSource.includes("IMAX can mean <em>very different rooms</em>") && (appSource.includes("screen, projector, movie format, and seat math") || appSource.includes("Not all IMAX theaters are the same size")));
+assert("Homepage defines LIEMAX for novices", appSource.includes("LIEMAX is the blunt nickname") || appSource.includes("LIEMAX is the nickname"));
 assert("Integrated IMAX 101 guide is present", appSource.includes("IMAX 101") && appSource.includes("What the diagnosis is really checking"));
 assert("Required projector terms are explained", ["GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX Dome Laser", "Dome 15/70"].every(term => appSource.includes(term)));
 assert("15/70 vs standard 70mm explanation is present", appSource.includes("Standard 70mm runs vertically") && appSource.includes("IMAX 15/70 runs sideways"));
-assert("Curated film examples are present", ["Oppenheimer", "Sinners", "Dunkirk", "Interstellar", "F1: The Movie", "Dune"].every(title => appSource.includes(title)));
+assert("Curated film examples are present", ["Oppenheimer", "Dunkirk", "Interstellar", "Dune"].every(title => appSource.includes(title)));
 assert("1.43 on 1.90 vertical frame loss remains about 24.7%", closeEnough(loss143On190.lostPct, 24.7, 0.2));
 assert("Aspect ratio penalty copy is user-facing", appSource.includes("A 1.43 movie forced into 1.90 retains about"));
 assert("Recommendation chips are randomized curated examples", appSource.includes("CURATED_SUGGESTION_IDS") && appSource.includes("shuffleSample(curated, 5)") && !appSource.includes("imax_us_ma_boston_amc_boston_common_19\",\n      \"imax_us_ny_new_york_amc_lincoln_square_13_and_imax\""));

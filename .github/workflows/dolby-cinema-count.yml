@@ -1,0 +1,48 @@
+name: Dolby Cinema Count
+
+on:
+  workflow_dispatch:
+  # Enable after the static site is live.
+  # schedule:
+  #   - cron: "17 10 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Check Dolby Cinema count
+        run: npm run dolby:check
+
+      - name: Rebuild docs data
+        run: npm run build:docs-data
+
+      - name: Validate
+        run: npm run validate:dolby && npm run validate:docs
+
+      - name: Commit snapshot updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fixtures/dolby_cinema_us_snapshots.json docs/data.js docs/workbench.js
+          if git diff --cached --quiet; then
+            echo "No Dolby Cinema snapshot changes to commit."
+          else
+            git commit -m "Update Dolby Cinema count snapshot"
+            git push
+          fi

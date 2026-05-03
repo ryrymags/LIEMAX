@@ -18,6 +18,11 @@ import {
   source143190MatchKey,
   type LFExaminerImportRow,
 } from '../data/lfexaminerImport';
+import {
+  DOLBY_CINEMA_ENDPOINT,
+  mostRecentDolbyCinemaSnapshot,
+  readDolbyCinemaSnapshots,
+} from '../data/dolbyCinemaCount';
 import { browserWorkbenchSource } from './workbenchRuntime';
 
 type JsonObject = Record<string, any>;
@@ -76,6 +81,15 @@ function sourceLFExaminerKey(value: JsonObject): string | null {
   const source = value.source_lfexaminer;
   if (!source) return null;
   return lfExaminerMatchKey(source as LFExaminerImportRow);
+}
+
+function buildDb(): JsonObject {
+  const latestDolbySnapshot = mostRecentDolbyCinemaSnapshot(readDolbyCinemaSnapshots());
+  return {
+    dolby_cinema_us_count: latestDolbySnapshot?.count ?? null,
+    dolby_cinema_us_count_checked_at: latestDolbySnapshot?.checkedAt ?? null,
+    dolby_cinema_us_count_endpoint: latestDolbySnapshot?.sourceEndpoint ?? DOLBY_CINEMA_ENDPOINT,
+  };
 }
 
 function rowKey(row: any[]): string {
@@ -701,7 +715,9 @@ function buildData() {
     unknown: { label: 'Unknown', tier: 3 },
   };
 
-  return { venues, contentFormats, qualityMeta };
+  const db = buildDb();
+
+  return { venues, contentFormats, qualityMeta, db };
 }
 
 const data = buildData();
