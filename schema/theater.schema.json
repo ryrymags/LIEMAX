@@ -3,7 +3,7 @@
   "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
   "title": "LIEMAX Theater, Home Display & Screen Schema",
   "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
-  "version": "1.4.0",
+  "version": "1.5.0",
 
   "definitions": {
 
@@ -17,6 +17,12 @@
       "type": "string",
       "enum": ["flat", "slight_cylindrical_curve", "hemispherical"],
       "description": "Physical screen shape. 'flat' = standard and most PLF screens. 'slight_cylindrical_curve' = IMAX GT screens (radius unknown, centered on back row). 'hemispherical' = IMAX Dome/OMNIMAX."
+    },
+
+    "screen_width_confidence": {
+      "type": "string",
+      "enum": ["confirmed", "community_estimate"],
+      "description": "Confidence level for using screen width in product sub-labels. 'confirmed' = primary dataset or reliable current source; 'community_estimate' = archival/community/typical estimate. Null or absent means no width-based sub-label should render."
     },
 
     "light_source": {
@@ -107,6 +113,13 @@
         "height_m": { "type": ["number", "null"], "description": "Screen height in meters. For domes, this is the dome diameter." },
         "width_ft":  { "type": ["number", "null"], "description": "Derived: width_m × 3.28084. Stored for convenience." },
         "height_ft": { "type": ["number", "null"], "description": "Derived: height_m × 3.28084." },
+        "width_confidence": {
+          "anyOf": [
+            { "$ref": "#/definitions/screen_width_confidence" },
+            { "type": "null" }
+          ],
+          "description": "Whether screen width is reliable enough for width-band sub-labels. Only 'confirmed' should trigger Large/Giant/Standard sub-labels."
+        },
         "aspect_ratio": {
           "type": ["number", "null"],
           "description": "Physical screen aspect ratio as a decimal (width/height). 1.43 for GT IMAX, 1.90 for CoLa/LIMAX, etc. For dome presets without fixed dimensions, use the content-fit default; for dome venue records where width_m and height_m both store diameter, use 1.0. Nullable for partial venue overrides — when null, derive from width_m/height_m if both present, else fall through to preset. NOTE: this is the physical screen shape, NOT the content display capability (see capabilities.min_content_ar_supported for that)."
@@ -734,7 +747,7 @@
     "schema_version": {
       "type": "string",
       "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
-      "const": "1.4.0"
+      "const": "1.5.0"
     },
     "presets": {
       "type": "array",

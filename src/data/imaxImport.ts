@@ -75,6 +75,7 @@ export function map143190RowToVenue(row: Imax143190ImportRow, options: ImportOpt
   const screen: Record<string, unknown> = {};
   if (screenWidthM != null) screen.width_m = screenWidthM;
   if (screenHeightM != null) screen.height_m = screenHeightM;
+  screen.width_confidence = screenWidthM != null ? 'confirmed' : null;
   if (domeScreen) {
     screen.aspect_ratio = 1.0;
     screen.geometry = 'hemispherical';

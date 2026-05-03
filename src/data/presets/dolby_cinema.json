@@ -2,7 +2,7 @@
   "id": "dolby_cinema",
   "display_name": "Dolby Cinema",
   "brand": "Dolby",
-  "short_description": "Dual-laser Christie E3LH DLP with Dolby Vision HDR. 31 fL, 1,000,000:1 dynamic contrast, Atmos, power recliners with bass transducers. The existing system in all ~295 Dolby Cinema locations.",
+  "short_description": "Dual-laser Christie E3LH DLP with Dolby Vision HDR. 31 fL, 1,000,000:1 dynamic contrast, Atmos, power recliners with bass transducers. Current U.S. location count is generated from the Dolby Cinema finder snapshot in the site stats.",
   "tier": "flagship",
   "default_screen": {
     "width_m": null,

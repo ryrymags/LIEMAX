@@ -823,6 +823,7 @@ button, select, input { font-family: inherit; color: inherit; }
   --cat-true143:      #d6b46a;
   --cat-truefilm:     #b6843f;
   --cat-dome:         #6d8aa8;
+  --cat-imaxlite:     #c78f3a;
   --cat-liemax:       #a8321f;
   --cat-unknown:      #8a8270;
   --ease-cinema:   cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -874,7 +875,7 @@ button, select, input { font-family: inherit; color: inherit; }
   width: 24px;
   height: 1px;
   background: var(--ink);
-  margin-bottom: 5px;
+  align-self: center;
 }
 .brand__strap {
   font-family: var(--font-mono);
@@ -1239,14 +1240,15 @@ button, select, input { font-family: inherit; color: inherit; }
 }
 .ar-mini__frames {
   position: relative;
-  height: 190px;
+  height: 240px;
   border-left: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
 }
 .ar-frame {
   position: absolute;
   left: 16px;
-  bottom: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   border: 2px solid currentColor;
   display: flex;
   align-items: flex-start;
@@ -1258,19 +1260,19 @@ button, select, input { font-family: inherit; color: inherit; }
 }
 .ar-frame--143 {
   width: 210px;
-  height: 147px;
+  height: 205px;
   color: var(--gold-deep);
   background: rgba(201, 165, 90, 0.10);
 }
 .ar-frame--190 {
   width: 210px;
-  height: 111px;
+  height: 155px;
   color: var(--side-a);
   background: rgba(23, 71, 107, 0.10);
 }
 .ar-frame--239 {
   width: 210px;
-  height: 88px;
+  height: 123px;
   color: var(--bad);
   background: rgba(168, 50, 31, 0.08);
 }
@@ -1662,6 +1664,7 @@ button, select, input { font-family: inherit; color: inherit; }
 }
 .v-true     { color: var(--gold); }
 .v-truefilm { color: #d8a86b; }
+.v-lite     { color: var(--cat-imaxlite); }
 .v-lie      { color: #d8654f; }
 .v-na       { color: var(--noir-ink-3); border-style: dashed; }
 
@@ -1851,11 +1854,11 @@ button, select, input { font-family: inherit; color: inherit; }
     border-bottom: 1px solid var(--border);
   }
   .data-stat:last-child { border-bottom: 0; }
-  .ar-mini__frames { height: 170px; overflow: hidden; }
+  .ar-mini__frames { height: 200px; overflow: hidden; }
   .ar-frame { width: 190px; }
-  .ar-frame--143 { height: 133px; }
-  .ar-frame--190 { height: 100px; }
-  .ar-frame--239 { height: 79px; }
+  .ar-frame--143 { height: 170px; }
+  .ar-frame--190 { height: 130px; }
+  .ar-frame--239 { height: 103px; }
   .search__field { padding: 13px 14px; gap: 10px; }
   .search__input { font-size: 1rem; }
   .search__hint { display: none; }

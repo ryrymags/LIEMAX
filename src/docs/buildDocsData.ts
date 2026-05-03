@@ -83,9 +83,62 @@ function sourceLFExaminerKey(value: JsonObject): string | null {
   return lfExaminerMatchKey(source as LFExaminerImportRow);
 }
 
-function buildDb(): JsonObject {
+const IMAX_LITE_PROJECTOR_TYPES = new Set(['imax_cola', 'imax_laser_xt']);
+const LIEMAX_PROJECTOR_TYPES = new Set(['imax_dual_xenon']);
+const DOME_PROJECTOR_TYPES = new Set(['imax_dome_laser', 'imax_dome_film']);
+
+function isRealCinemaVenue(venue: JsonObject): boolean {
+  return venue.kind === 'cinema' && !venue.isPreset;
+}
+
+function isFullFlat143Digital(venue: JsonObject): boolean {
+  return venue.screen?.geometry !== 'hemispherical' &&
+    venue.projection?.type === 'imax_gt_dual_laser' &&
+    venue.projection?.min_ar != null &&
+    venue.projection.min_ar <= 1.43 &&
+    venue.screen?.ar != null &&
+    venue.screen.ar <= 1.45;
+}
+
+function isFilmConditional143(venue: JsonObject): boolean {
+  return Boolean(venue.filmProjection) &&
+    venue.screen?.geometry !== 'hemispherical' &&
+    venue.screen?.ar != null &&
+    venue.screen.ar <= 1.45;
+}
+
+function isDomeVenue(venue: JsonObject): boolean {
+  return venue.screen?.geometry === 'hemispherical' ||
+    DOME_PROJECTOR_TYPES.has(venue.projection?.type);
+}
+
+function pct(part: number, total: number): number {
+  return total > 0 ? Math.round((part / total) * 100) : 0;
+}
+
+function buildDb(venues: JsonObject[]): JsonObject {
   const latestDolbySnapshot = mostRecentDolbyCinemaSnapshot(readDolbyCinemaSnapshots());
+  const cinemaVenues = venues.filter(isRealCinemaVenue);
+  const imaxLiteCount = cinemaVenues.filter((venue) => IMAX_LITE_PROJECTOR_TYPES.has(venue.projection?.type)).length;
+  const liemaxVenues = cinemaVenues.filter((venue) => LIEMAX_PROJECTOR_TYPES.has(venue.projection?.type));
+  const liemaxCount = liemaxVenues.length;
+  const liemaxLfExaminerCount = liemaxVenues.filter((venue) => venue.sources?.screen?.q === 'lfexaminer').length;
+  const liemaxCurrentSourceCount = liemaxCount - liemaxLfExaminerCount;
+  const notFull143DigitalCount = imaxLiteCount + liemaxCount;
+
   return {
+    total_us_imax: cinemaVenues.length,
+    imax_lite_count: imaxLiteCount,
+    liemax_count: liemaxCount,
+    liemax_pct: pct(liemaxCount, cinemaVenues.length),
+    liemax_lfexaminer_count: liemaxLfExaminerCount,
+    liemax_lfexaminer_pct: pct(liemaxLfExaminerCount, cinemaVenues.length),
+    liemax_current_source_count: liemaxCurrentSourceCount,
+    not_full_143_digital_count: notFull143DigitalCount,
+    not_full_143_digital_pct: pct(notFull143DigitalCount, cinemaVenues.length),
+    gt_laser_count: cinemaVenues.filter(isFullFlat143Digital).length,
+    film_conditional_count: cinemaVenues.filter(isFilmConditional143).length,
+    dome_count: cinemaVenues.filter(isDomeVenue).length,
     dolby_cinema_us_count: latestDolbySnapshot?.count ?? null,
     dolby_cinema_us_count_checked_at: latestDolbySnapshot?.checkedAt ?? null,
     dolby_cinema_us_count_endpoint: latestDolbySnapshot?.sourceEndpoint ?? DOLBY_CINEMA_ENDPOINT,
@@ -106,6 +159,7 @@ function screenFromDocs(screen: JsonObject): JsonObject {
     height_m: feetToMeters(screen.h),
     width_ft: screen.w,
     height_ft: screen.h,
+    width_confidence: 'community_estimate',
     aspect_ratio: screen.ar,
     geometry: screen.geometry === 'slight_curve' ? 'slight_cylindrical_curve' : screen.geometry,
     curvature_radius_ft: null,
@@ -558,6 +612,7 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
       w: resolved.screen.width_ft,
       h: resolved.screen.height_ft,
       ar: screenAr,
+      widthConfidence: resolved.screen.width_confidence ?? null,
       geometry: resolved.screen.geometry === 'slight_cylindrical_curve' ? 'slight_curve' : resolved.screen.geometry,
       domeCoveragePct: resolved.screen.dome_coverage_pct == null ? null : resolved.screen.dome_coverage_pct / 100,
       domeHFov: resolved.screen.dome_fov_horizontal_deg ?? null,
@@ -597,6 +652,7 @@ function toDocsHome(record: JsonObject, preset: JsonObject): JsonObject {
       w: dims.width / 12,
       h: dims.height / 12,
       ar: resolved.aspect_ratio,
+      widthConfidence: null,
       geometry: 'flat',
     },
     seat: docsFrontend.seat ?? {
@@ -715,7 +771,7 @@ function buildData() {
     unknown: { label: 'Unknown', tier: 3 },
   };
 
-  const db = buildDb();
+  const db = buildDb(venues);
 
   return { venues, contentFormats, qualityMeta, db };
 }

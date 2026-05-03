@@ -37,32 +37,32 @@ const SOURCE_LINKS = [
 const FORMAT_EXAMPLES = [
   {
     label: "Shot with IMAX film cameras",
-    kicker: "15/70 film camera",
-    examples: "Oppenheimer, Sinners, Dunkirk, Interstellar",
-    note: "This is the tall 1.43:1 IMAX film lineage. It only reaches full height in 15/70 film or GT/Dome laser venues that can actually show 1.43.",
+    kicker: "The real 1.43 tall frame",
+    examples: "Oppenheimer, Interstellar, The Dark Knight, Dunkirk",
+    note: "These movies were partially or fully shot on IMAX film. They fill the full 1.43:1 height — but only at theaters with a 15/70 projector or IMAX GT Laser. Most multiplexes crop about a quarter of the frame.",
   },
   {
-    label: "Filmed for IMAX / certified digital",
-    kicker: "often 1.90 digital",
-    examples: "F1: The Movie, Dune / Dune: Part Two",
-    note: "These use IMAX-certified digital workflows or IMAX-specific framing. Many fill 1.90 IMAX screens; only select titles/venues reach 1.43.",
+    label: "IMAX-certified digital",
+    kicker: "Shot or finished for IMAX",
+    examples: "Top Gun: Maverick, Mission: Impossible — Dead Reckoning, Dune: Part Two",
+    note: "These were finished in IMAX's digital pipeline and often fill a 1.90:1 screen. They do not reach 1.43 unless the venue has GT Laser.",
   },
   {
-    label: "Standard theatrical framing",
-    kicker: "scope / flat",
-    examples: "Dune scope scenes, The Batman, most 1.85 dramas",
-    note: "Most non-IMAX releases are 2.39 scope or 1.85 flat. IMAX branding alone does not create extra image if the movie was mastered wide.",
+    label: "Standard wide / flat",
+    kicker: "Normal theatrical release",
+    examples: "Most Marvel films, The Batman, typical blockbusters",
+    note: "Wide-screen movies (2.39:1 scope or 1.85:1 flat) show letterboxed on any IMAX screen. The IMAX ticket does not change the framing.",
   },
 ];
 
 const EXPLAINER_CARDS = [
   {
     title: "The screen is only half the answer",
-    body: "A tall 1.43 screen can still play normal digital IMAX at 1.90 if the installed projector or booked format cannot drive the full height. LIEMAX is the nickname for IMAX-branded rooms that cap the everyday digital image at 1.90.",
+    body: "A tall 1.43 screen can still play normal digital IMAX at 1.90 if the installed projector or booked format cannot drive the full height. IMAX Lite is the modern laser version of that 1.90 cap; LIEMAX is the legacy Dual Xenon version.",
   },
   {
     title: "Projector tiers, plain English",
-    body: "GT Dual Laser and 15/70 film are the flat-screen routes to full 1.43. CoLa, Laser XT, and Dual Xenon are multiplex digital systems that normally top out at 1.90. IMAX Dome Laser and IMAX Dome 15/70 are real IMAX too, but their geometry wraps around you instead of behaving like a rectangle.",
+    body: "GT Dual Laser and 15/70 film are the flat-screen routes to full 1.43. CoLa and Laser XT are IMAX Lite: modern multiplex laser capped at 1.90. Dual Xenon is LIEMAX: the older lamp-based multiplex format. IMAX Dome Laser and IMAX Dome 15/70 are real IMAX too, but their geometry wraps around you instead of behaving like a rectangle.",
   },
   {
     title: "Why 1.43 matters",
@@ -106,6 +106,7 @@ function categoryCounts(venues) {
   const total = venues.length;
   const counts = {
     total,
+    imaxLite: 0,
     liemax: 0,
     true143: 0,
     film143: 0,
@@ -115,6 +116,7 @@ function categoryCounts(venues) {
   };
   venues.forEach(v => {
     const category = DIAG.classify(v);
+    if (category === "imax_lite") counts.imaxLite += 1;
     if (category === "liemax") counts.liemax += 1;
     if (category === "true_143_film" || category === "true_143_laser") counts.true143 += 1;
     if (category === "true_143_film" || category === "true_film_lie_dig") counts.film143 += 1;
@@ -128,6 +130,29 @@ function categoryCounts(venues) {
 function pct(part, total) {
   if (!total) return "0%";
   return `${Math.round((part / total) * 100)}%`;
+}
+
+function widthBandLabel(venue) {
+  if (!venue?.screen || venue.screen.widthConfidence !== "confirmed" || venue.screen.w == null) return null;
+  if (venue.screen.w >= 70) return "Giant-screen";
+  if (venue.screen.w >= 55) return "Large-screen";
+  return "Standard-screen";
+}
+
+function displayTierLabel(venue) {
+  const category = DIAG.classify(venue);
+  const tier = {
+    imax_lite: "IMAX Lite",
+    liemax: "LIEMAX",
+    true_film_lie_dig: "Film-conditional IMAX",
+    true_143_laser: "True IMAX",
+    true_143_film: "True IMAX + Film",
+    true_dome: "IMAX Dome",
+  }[category];
+  const widthBand = widthBandLabel(venue);
+  return widthBand && (category === "imax_lite" || category === "liemax")
+    ? `${widthBand} ${tier}`
+    : tier;
 }
 
 function verticalFrameLoss(contentAr = 1.43, presentationAr = 1.90) {
@@ -473,7 +498,7 @@ function StatRow({ row, srcA, srcB, projA, projB, maskA, maskB }) {
   return (
     <div className="stats__row">
       <div className="stats__cell stats__cell--a">
-        {row.winner === "a" && <span className={winBadgeClass(row.winner)}>A WINS</span>}
+        {row.winner === "a" && <span className={winBadgeClass(row.winner)}>A WINS{row.pctDiff != null ? ` +${Math.round(row.pctDiff)}%` : ""}</span>}
         {isCategorical ? <CategoricalValue text={row.aDisplay} hdrCategory={catA} /> : <span className="stats__value">{row.aDisplay}</span>}
         {srcA && <ConfLabel src={srcA} mask={maskA} />}
       </div>
@@ -487,7 +512,7 @@ function StatRow({ row, srcA, srcB, projA, projB, maskA, maskB }) {
       <div className="stats__cell stats__cell--b">
         {srcB && <ConfLabel src={srcB} mask={maskB} />}
         {isCategorical ? <CategoricalValue text={row.bDisplay} hdrCategory={catB} /> : <span className="stats__value">{row.bDisplay}</span>}
-        {row.winner === "b" && <span className={winBadgeClass(row.winner)}>B WINS</span>}
+        {row.winner === "b" && <span className={winBadgeClass(row.winner)}>B WINS{row.pctDiff != null ? ` +${Math.round(row.pctDiff)}%` : ""}</span>}
       </div>
     </div>
   );
@@ -610,13 +635,26 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
     ? (states.find(s => s.code === selectedState)?.name || selectedState)
     : "United States snapshot";
   const dolbyCinemaUsCount = D.db?.dolby_cinema_us_count;
+  const stats = selectedState ? scoped : {
+    total: D.db?.total_us_imax ?? national.total,
+    imaxLite: D.db?.imax_lite_count ?? national.imaxLite,
+    liemax: D.db?.liemax_count ?? national.liemax,
+    true143: D.db?.gt_laser_count ?? national.true143,
+    film143: D.db?.film_conditional_count ?? national.film143,
+    dome: D.db?.dome_count ?? national.dome,
+    notFull143Digital: D.db?.not_full_143_digital_count ?? (national.imaxLite + national.liemax),
+    notFull143DigitalPct: D.db?.not_full_143_digital_pct ?? Math.round(((national.imaxLite + national.liemax) / Math.max(1, national.total)) * 100),
+    liemaxLfExaminer: D.db?.liemax_lfexaminer_count ?? null,
+  };
   const statItems = [
-    { label: "IMAX rows", value: scoped.total, sub: selectedState ? "in selected state" : "U.S. film / laser / dome rows" },
+    { label: "IMAX rows", value: stats.total, sub: selectedState ? "in selected state" : "U.S. film / laser / xenon / dome rows" },
     { label: "Dolby Cinema US", value: dolbyCinemaUsCount == null ? "—" : dolbyCinemaUsCount, sub: "contiguous U.S.; Dolby finder snapshot" },
-    { label: "LIEMAX", value: `${scoped.liemax} (${pct(scoped.liemax, scoped.total)})`, sub: "digital cap is normally 1.90" },
-    { label: "True flat 1.43", value: scoped.true143, sub: "GT Laser and/or 15/70 + GT" },
-    { label: "15/70 capable", value: scoped.film143, sub: "booked film engagements only" },
-    { label: "Dome", value: scoped.dome, sub: "fixed 180° × 125° coverage" },
+    { label: "Not full 1.43 digital", value: selectedState ? `${stats.imaxLite + stats.liemax} (${pct(stats.imaxLite + stats.liemax, stats.total)})` : `${stats.notFull143Digital} (${stats.notFull143DigitalPct}%)`, sub: "IMAX Lite + LIEMAX" },
+    { label: "IMAX Lite", value: `${stats.imaxLite} (${pct(stats.imaxLite, stats.total)})`, sub: "CoLa / Laser XT capped at 1.90" },
+    { label: "LIEMAX", value: `${stats.liemax} (${pct(stats.liemax, stats.total)})`, sub: stats.liemaxLfExaminer == null ? "legacy Dual Xenon" : `${stats.liemaxLfExaminer} archival LFExaminer rows` },
+    { label: "True flat 1.43", value: stats.true143, sub: "GT Laser every digital showtime" },
+    { label: "15/70 capable", value: stats.film143, sub: "booked film engagements only" },
+    { label: "Dome", value: stats.dome, sub: "fixed 180° × 125° coverage" },
   ];
 
   return (
@@ -644,9 +682,9 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
         ))}
       </div>
       <p className="data-stats__note">
-        Based on the current static docs bundle: {national.total} U.S. IMAX rows from 143190 / r-imax plus local prototype records.
+        Based on the current static docs bundle: {D.db?.total_us_imax ?? national.total} U.S. IMAX rows from 143190 / r-imax plus low-confidence archival LFExaminer Xenon rows.
         Dolby Cinema count comes from the latest saved Dolby finder endpoint snapshot.
-        Xenon-only IMAX venues include archival LFExaminer 2021 rows and may be stale; 143190 remains the fresher source when both list the same theater.
+        LIEMAX now means legacy Dual Xenon; most LIEMAX rows come from LFExaminer 2021 and may be stale, while 143190 remains the fresher source when both list the same theater.
         State stats only appear after you choose a state; no IP geolocation is used.
       </p>
     </section>
@@ -856,7 +894,8 @@ function quickCategoryTag(venue) {
     true_143_laser:   { text: "TRUE 1.43",        color: "var(--cat-true143)" },
     true_film_lie_dig:{ text: "1.43 ON FILM",     color: "var(--cat-truefilm)" },
     true_dome:        { text: "DOME 1.43",        color: "var(--cat-dome)" },
-    liemax:           { text: "LIEMAX",           color: "var(--cat-liemax)" },
+    imax_lite:        { text: displayTierLabel(venue) || "IMAX LITE", color: "var(--cat-imaxlite, var(--cat-liemax))" },
+    liemax:           { text: displayTierLabel(venue) || "LIEMAX", color: "var(--cat-liemax)" },
     unknown:          { text: "UNKNOWN",          color: "var(--cat-unknown)" },
   };
   return map[cat];
@@ -968,7 +1007,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
           <circle cx="11" cy="11" r="7" /><line x1="16.5" y1="16.5" x2="21" y2="21" strokeLinecap="round" />
         </svg>
         <input ref={inputRef} className="search__input" type="text" value={value}
-          placeholder="Search your IMAX theater — e.g. Lincoln Square, Metreon, Grand Canyon"
+          placeholder="Search your IMAX theater"
           onChange={e => { onChange(e.target.value); setOpen(true); }}
           onPointerDown={() => setOpenOnFocusAfterInteraction(true)}
           onClick={() => { setOpenOnFocusAfterInteraction(true); setOpen(true); }}
@@ -1038,11 +1077,16 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
   const loss = verticalFrameLoss();
   const screenSource = venue.sources?.screen;
   const screenMeta = screenSource ? D.qualityMeta[screenSource.q] : null;
+  const tierLabel = displayTierLabel(venue);
   const projectorCopy = isDome
     ? "Dome IMAX uses a hemispherical screen. The meaningful visual metric is fixed coverage, not a rectangular row-distance score."
     : proj?.min_ar && proj.min_ar <= 1.43
       ? "This digital projector/mode can drive the full 1.43 height when the movie is mastered and booked that way."
-      : "This normal digital IMAX mode caps at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used.";
+      : result.category === "imax_lite"
+        ? "This regular digital showing is IMAX Lite: modern laser projection capped at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used."
+        : result.category === "liemax"
+          ? "This regular digital showing is LIEMAX: legacy Dual Xenon capped at 1.90, so a full-height 1.43 movie is cropped."
+          : "This normal digital IMAX mode caps at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used.";
 
   return (
     <section className="diagnosis" style={{ "--accent": result.accent }} aria-live="polite">
@@ -1066,6 +1110,18 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
       </div>
 
       <div className="diagnosis__lesson">
+        {(wFt || proj?.light) && (
+          <div>
+            <span className="diagnosis__lesson-k">At a glance</span>
+            <p>
+              {isDome
+                ? (wFt ? `${wFt} ft dome diameter. ` : "")
+                : (wFt && hFt ? `${wFt} × ${hFt} ft screen. ` : wFt ? `${wFt} ft wide screen. ` : "")}
+              {tierLabel ? `${tierLabel}. ` : ""}
+              {proj?.light ? `Projector: ${proj.light}.` : ""}
+            </p>
+          </div>
+        )}
         <div>
           <span className="diagnosis__lesson-k">Why this verdict?</span>
           <p>{projectorCopy}</p>
@@ -1156,17 +1212,19 @@ function DiagnosisPlaceholder() {
       desc: "Digital-only true IMAX. Anything mastered for 1.43 fills the screen." },
     { swatch: "var(--cat-dome)", name: "True IMAX Dome 1.43",
       desc: "Laser for Dome or GT Dome 15/70. Fixed 180° × 125° coverage, not flat-screen row math." },
-    { swatch: "var(--cat-truefilm)", name: "True IMAX for 15/70 Film · LIEMAX digitally",
-      desc: "Real on film bookings; daily digital is CoLa, capped at 1.90." },
+    { swatch: "var(--cat-truefilm)", name: "True IMAX for 15/70 Film · IMAX Lite digitally",
+      desc: "Real on film bookings; regular digital showings are CoLa-class laser capped at 1.90." },
+    { swatch: "var(--cat-imaxlite, var(--cat-liemax))", name: "IMAX Lite",
+      desc: "Modern CoLa / Laser XT multiplex IMAX. Better than legacy Xenon, but still capped at 1.90." },
     { swatch: "var(--cat-liemax)", name: "LIEMAX",
-      desc: "Marketed IMAX, but digital projector caps at 1.90. The LIEMAX everyone complains about." },
+      desc: "Legacy Dual Xenon multiplex IMAX: older lamp projection, 2K, and capped at 1.90." },
     { swatch: "var(--cat-unknown)", name: "Unknown / incomplete",
       desc: "Specs are too sparse to classify confidently." },
   ];
   return (
     <section className="diagnosis diagnosis--empty" id="legend">
       <div className="placeholder">
-        <div className="placeholder__legend-title">Six possible verdicts</div>
+        <div className="placeholder__legend-title">Seven possible verdicts</div>
         <div className="legend">
           {items.map((it, i) => (
             <div className="legend__item" key={i}>
@@ -1295,15 +1353,14 @@ function App() {
       </header>
 
       <section className="hero">
-        <div className="hero__eyebrow">Step one · understand the ticket</div>
         <h2 className="hero__headline">
           IMAX can mean <em>very different rooms</em>.
         </h2>
         <p className="hero__sub">
-          Your local IMAX might be a full-height 1.43 giant screen, a 1.90 multiplex laser room,
-          a legacy Xenon setup, a rare 15/70 film house, or a dome. LIEMAX is the blunt nickname
-          for an IMAX-branded theater that cannot show the full tall IMAX frame in normal digital shows.
-          Search a theater and we translate the screen, projector, movie format, and seat math into plain English.
+          Not all IMAX theaters are the same size — or the same quality. Some fill a six-story screen.
+          Others are modern 1.90 laser rooms, and some are older Dual Xenon rooms. LIEMAX means the
+          legacy Xenon version; IMAX Lite means the modern laser version. Search your theater and find
+          out exactly what you're paying for.
         </p>
 
         <SearchBar
@@ -1314,15 +1371,6 @@ function App() {
           autoFocus
           showCategoryTags={false}
         />
-
-        <div className="suggest">
-          <span className="suggest__label">Random starts:</span>
-          {suggestions.map(v => (
-            <button key={v.id} className="suggest__chip" onClick={() => handleSelect(v)} type="button">
-              {v.name.replace(/^AMC |^Regal |^Cinemark /, "")}
-            </button>
-          ))}
-        </div>
       </section>
 
       <div id="stats" />
@@ -1391,15 +1439,19 @@ function App() {
         </div>
         <div>
           <h4>CoLa, Laser XT, Xenon</h4>
-          <p>These are normal multiplex IMAX digital systems. CoLa and Laser XT are 4K laser; Dual Xenon is older 2K digital. They are usually capped at <strong>1.90:1</strong>, not the full 1.43 frame.</p>
+          <p>These are normal multiplex IMAX digital systems. CoLa and Laser XT are 4K laser and are labeled <strong>IMAX Lite</strong> here; Dual Xenon is older 2K lamp projection and is labeled <strong>LIEMAX</strong>. They are usually capped at <strong>1.90:1</strong>, not the full 1.43 frame.</p>
         </div>
         <div>
           <h4>LIEMAX</h4>
-          <p>The IMAX-branded auditorium with a screen taller than the digital projector can fill. The everyday digital window is <strong>1.90:1</strong> (CoLa). 1.43 movies lose ~25% of vertical frame.</p>
+          <p>The legacy Dual Xenon IMAX-branded auditorium: older 2K lamp projection, normally capped at <strong>1.90:1</strong>. 1.43 movies lose about a quarter of the vertical frame.</p>
+        </div>
+        <div>
+          <h4>IMAX Lite</h4>
+          <p>Modern CoLa or Laser XT multiplex IMAX. It is usually brighter and sharper than legacy Xenon, but it is still a <strong>1.90:1</strong> digital presentation rather than full-height 1.43.</p>
         </div>
         <div>
           <h4>Hybrid (film yes, digital no)</h4>
-          <p>A 1.43 screen and a working 15/70mm projector — so booked film engagements are real IMAX — but the daily digital is CoLa-class and crops 1.43.</p>
+          <p>A 1.43 screen and a working 15/70mm projector — so booked film engagements are real IMAX — but regular digital showings are IMAX Lite and crop 1.43.</p>
         </div>
         <div>
           <h4>IMAX Dome</h4>

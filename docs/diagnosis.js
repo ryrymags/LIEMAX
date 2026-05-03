@@ -12,12 +12,15 @@ window.LIEMAX_DIAGNOSE = (function () {
                         badge: "True IMAX 1.43 · GT Laser",
                         accent: "var(--cat-true143)" },
     true_film_lie_dig:{ rank: "Tier B · Hybrid — film yes, digital no",
-                        badge: "True IMAX for 15/70 Film · LIEMAX digitally",
+                        badge: "True IMAX for 15/70 Film · IMAX Lite digitally",
                         accent: "var(--cat-truefilm)" },
     true_dome:        { rank: "Tier A · 1.43 dome immersion",
                         badge: "True IMAX Dome 1.43",
                         accent: "var(--cat-dome)" },
-    liemax:           { rank: "Tier C · Marketing-only IMAX",
+    imax_lite:        { rank: "Tier C · Modern multiplex IMAX",
+                        badge: "IMAX Lite",
+                        accent: "var(--cat-imaxlite, var(--cat-liemax))" },
+    liemax:           { rank: "Tier D · Legacy multiplex IMAX",
                         badge: "LIEMAX",
                         accent: "var(--cat-liemax)" },
     unknown:          { rank: "Insufficient data",
@@ -46,6 +49,18 @@ window.LIEMAX_DIAGNOSE = (function () {
     return !!(venue.isHybrid && venue.filmProjection);
   }
 
+  function projectionType(venue) {
+    return venue && venue.projection ? venue.projection.type : null;
+  }
+
+  function isImaxLite(venue) {
+    return /^(imax_cola|imax_laser_xt)$/.test(projectionType(venue) || "");
+  }
+
+  function isLiemax(venue) {
+    return projectionType(venue) === "imax_dual_xenon";
+  }
+
   function digital143(venue) {
     const proj = venue.projection;
     if (!proj) return false;
@@ -65,7 +80,9 @@ window.LIEMAX_DIAGNOSE = (function () {
     if (d143) return "true_143_laser";
     if (film && venue.screen.ar != null && venue.screen.ar <= 1.45) return "true_film_lie_dig";
     if (venue.projection && venue.projection.label && /unknown/i.test(venue.projection.label)) return "unknown";
-    return "liemax";
+    if (isImaxLite(venue)) return "imax_lite";
+    if (isLiemax(venue)) return "liemax";
+    return "unknown";
   }
 
   function buildVerdict(venue, category) {
@@ -96,17 +113,22 @@ window.LIEMAX_DIAGNOSE = (function () {
       case "true_film_lie_dig":
         return {
           line: `True IMAX <em>only when they run film</em>.`,
-          body: `${name} has a ${arDisplay}:1 screen and a working 15/70mm film projector — so the rare booked film engagement is the real thing, top to bottom. The everyday digital projector is IMAX CoLa, which caps at 1.90:1 and crops about a quarter of the height off any 1.43 movie. Check the venue schedule before you commit.`,
+          body: `${name} has a ${arDisplay}:1 screen and a working 15/70mm film projector — so the rare booked film engagement is the real thing, top to bottom. Regular digital showings are IMAX Lite: usually CoLa-class laser capped at 1.90:1, cropping about a quarter of the height off any 1.43 movie. Check the venue schedule before you commit.`,
         };
       case "true_dome":
         return {
           line: `True IMAX Dome 1.43 — ${domeSystem}.`,
           body: `${name} projects onto a hemispherical screen, not a flat rectangle. It is genuine IMAX, but the comparison metric is fixed dome coverage — about 180° horizontal by 125° vertical — rather than flat-screen row distance. Standard cinema scoring doesn't apply cleanly, and dome-mastered content matters.`,
         };
+      case "imax_lite":
+        return {
+          line: `Modern multiplex IMAX — but not full-height 1.43.`,
+          body: `${name} runs ${projLabel}${sizeStr ? ` on a ${arDisplay}:1 screen (${sizeStr})` : ""}. This is IMAX Lite: a modern laser digital room capped at 1.90:1. It can be a solid premium auditorium, but 1.43-mastered films like Oppenheimer or Sinners still lose roughly a quarter of the vertical frame.`,
+        };
       case "liemax":
         return {
-          line: `Branded "IMAX," but it's <em>LIEMAX</em>.`,
-          body: `${name} runs ${projLabel}${sizeStr ? ` on a ${arDisplay}:1 screen (${sizeStr})` : ""}. The digital projector caps at 1.90:1, and on 1.43-mastered films like Oppenheimer or Sinners you lose roughly a quarter of the vertical frame. It is a perfectly competent premium auditorium — but it is not "real" IMAX in the 1.43 sense, and IMAX's marketing should not be conflated with the format experience.`,
+          line: `Branded "IMAX," but it's legacy <em>LIEMAX</em>.`,
+          body: `${name} runs ${projLabel}${sizeStr ? ` on a ${arDisplay}:1 screen (${sizeStr})` : ""}. This is the older Dual Xenon multiplex format: 2K lamp projection capped at 1.90:1. It is the original LIEMAX setup people complain about — useful to know, especially because many Xenon rows come from archival LFExaminer data and may need current verification.`,
         };
       default:
         return {
@@ -142,14 +164,17 @@ window.LIEMAX_DIAGNOSE = (function () {
         if (digital143(venue)) {
           verdict = "true"; verdictLabel = "TRUE 1.43";
           sub = "Full IMAX height, GT laser pixel-offset";
+        } else if (isImaxLite(venue)) {
+          verdict = "lite"; verdictLabel = "IMAX LITE";
+          sub = "Modern laser caps at 1.90 — ~25% of frame is cropped";
         } else {
           verdict = "lie"; verdictLabel = "LIEMAX";
-          sub = "Digital projector caps at 1.90 — ~25% of frame is cropped";
+          sub = "Legacy Dual Xenon caps at 1.90 — ~25% of frame is cropped";
         }
       } else if (Math.abs(ar - 1.90) < 0.01) {
-        verdict = isHighEnd(venue) ? "true" : "lie";
-        verdictLabel = isHighEnd(venue) ? "STANDARD IMAX 1.90" : "1.90 — but liemax framing";
-        sub = isHighEnd(venue) ? "Full 1.90 frame, GT laser" : "Full 1.90 frame, CoLa digital";
+        verdict = isHighEnd(venue) ? "true" : isImaxLite(venue) ? "lite" : "lie";
+        verdictLabel = isHighEnd(venue) ? "STANDARD IMAX 1.90" : isImaxLite(venue) ? "IMAX LITE 1.90" : "LIEMAX 1.90";
+        sub = isHighEnd(venue) ? "Full 1.90 frame, GT laser" : isImaxLite(venue) ? "Full 1.90 frame, modern laser" : "Full 1.90 frame, legacy Dual Xenon";
       } else {
         verdict = "lie"; verdictLabel = "LETTERBOXED";
         sub = "Scope/flat content windowed inside the IMAX screen";

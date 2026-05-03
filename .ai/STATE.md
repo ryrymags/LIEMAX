@@ -1,8 +1,8 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, Phase 4a canonical docs data unification, and Priority 2 LFExaminer Xenon supplement."
+Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, Phase 4a canonical docs data unification, Priority 2 LFExaminer Xenon supplement, Dolby Cinema count checker, and pre-GUI LIEMAX/IMAX Lite taxonomy + generated stats fixes."
 
-Current priority: LFExaminer archival Xenon supplement complete; next likely priority is verifying stale LFExaminer rows/community corrections and filling remaining screen-dimension gaps.
+Current priority: Pre-GUI taxonomy/stats blockers are complete; next likely priority is verifying stale LFExaminer rows/community corrections and filling remaining screen-dimension gaps before more GUI polish.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
@@ -111,12 +111,28 @@ Dolby checker verification:
 - `npm run validate:docs`: 75 passed, 0 failed.
 - `npm run ci`: passed.
 
+## Pre-GUI Taxonomy + Stats Fixes
+
+Completed 2026-05-03:
+- Updated product taxonomy so LIEMAX means legacy `imax_dual_xenon` only, while `imax_cola` and `imax_laser_xt` classify as `imax_lite`.
+- Hybrid CoLa + 15/70 venues now explain that regular digital showings are IMAX Lite, not LIEMAX.
+- Schema bumped to `1.5.0` with `screen.width_confidence`; 143190/r-imax rows mark confirmed width, LFExaminer/frontend typical rows mark community-estimate width, and width sub-labels only fire from confirmed widths.
+- Generated docs DB now exposes `total_us_imax`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
+- Current generated national split: 392 U.S. IMAX rows; 103 IMAX Lite; 263 LIEMAX; 258 LIEMAX rows from archival LFExaminer; 366 / 93% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 24 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
+- Overhaul V1 planning docs were updated to use `{{db.*}}` tokens, resolve DMR first introduction to Block 4, and keep Layer 3 chevrons inert until real anchors exist.
+
+Pre-GUI taxonomy verification:
+- `npm run validate:schema`: 176 passed, 0 failed.
+- `npm run validate:docs`: 83 passed, 0 failed.
+- `npm run ci`: passed.
+- `git diff --check`: passed.
+
 ## Completed
 
 - Step 1: Research & Data Schema. Audited 2026-04-26 — schema clean, cinema presets clean, research notes properly caveated.
 - Step 2: Math Engine. Audited 2026-04-26 — 133/133 tests pass, all edge cases covered (dome, hybrid, ScreenX, masking, FOV). No blockers.
 - Step 3: All presets, venues, home displays, content formats authored and validated. Audited 2026-04-26 — data quality clean after two fixes (imax_cola contrast_notes added; Home Theater Research naming table corrected to match canonical AGENTS.md IDs).
-- `schema/theater.schema.json` is version `1.4.0` (adds `r_imax_csv` and `lfexaminer` source quality/source-row support).
+- `schema/theater.schema.json` is version `1.5.0` (adds `r_imax_csv`/`lfexaminer` source quality/source-row support and `screen.width_confidence`).
 - `src/math/` exists and has 133 passing validation tests.
 - Sparse 143190.xyz import mapping exists under `src/data/`.
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.
@@ -128,6 +144,7 @@ Dolby checker verification:
 - Phase 4a canonical docs data unification applied: promoted docs 143190 snapshot to `src/data`, added generated docs data/runtime build, routed docs comparisons through resolver-backed generated records, and expanded schema/docs validation.
 - Priority 2 LFExaminer Xenon supplement applied: parsed the archival 2021 LFExaminer theater table from webarchive, stored U.S. IMAX D/1570+D candidates, and promoted comparable unmatched rows into generated docs data with low-confidence provenance.
 - Dolby Cinema U.S. count checker groundwork applied: snapshot-producing TypeScript checker, generated `db.dolby_cinema_us_count` docs token, manual GitHub Actions workflow, and validation coverage.
+- Pre-GUI taxonomy/stat blockers applied: LIEMAX = Dual Xenon, IMAX Lite = CoLa/Laser XT, generated DB count tokens replace hardcoded launch stats, and Dolby count copy uses the generated snapshot token.
 
 ## Known Low-Confidence Items (tracked, not blockers)
 

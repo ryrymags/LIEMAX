@@ -181,6 +181,7 @@ export function mapLFExaminerRowToVenue(row: LFExaminerImportRow, options: LFExa
   if (screenWidthM != null) screen.width_m = screenWidthM;
   if (screenHeightM != null) screen.height_m = screenHeightM;
   if (screenWidthM != null && screenHeightM != null) screen.aspect_ratio = screenWidthM / screenHeightM;
+  screen.width_confidence = screenWidthM != null ? 'community_estimate' : null;
   screen.geometry = isDome ? 'hemispherical' : 'flat';
   screen.is_perforated = true;
   if (isDome) {

@@ -51,6 +51,7 @@ const enumValues = {
   projectorType: schema.definitions.projector_type.enum,
   screen: Object.keys(schema.definitions.screen.properties),
   screenGeometry: schema.definitions.screen_geometry.enum,
+  screenWidthConfidence: schema.definitions.screen_width_confidence.enum,
   seating: Object.keys(schema.definitions.seating.properties),
   seatType: schema.definitions.seat_type.enum,
   sourceQuality: schema.definitions.source_quality.enum,
@@ -166,6 +167,7 @@ function collectScreenIssues(screen: unknown, label: string, allowNull: boolean)
 
   checkKnownKeys(label, screen, enumValues.screen, issues);
   checkEnum(`${label}.geometry`, screen.geometry, enumValues.screenGeometry, issues);
+  checkEnum(`${label}.width_confidence`, screen.width_confidence, enumValues.screenWidthConfidence, issues);
 
   for (const key of [
     'width_m',
@@ -521,11 +523,12 @@ function collectContentFormatIssues(format: JsonObject, label: string): string[]
 }
 
 console.log('\n=== Schema Contract ===');
-assertEqual('schema const version', schema.properties.schema_version.const, '1.4.0');
+assertEqual('schema const version', schema.properties.schema_version.const, '1.5.0');
 assert('schema has 143190 import definition', Boolean(schema.definitions.imax_143190_import));
 assert('schema has LFExaminer import definition', Boolean(schema.definitions.lfexaminer_import));
 assert('schema projection supports mode', Boolean(schema.definitions.projection.properties.mode));
 assert('schema projection supports per-mode min AR', Boolean(schema.definitions.projection.properties.min_content_ar_supported));
+assert('schema screen supports width confidence', Boolean(schema.definitions.screen.properties.width_confidence));
 assert('format presets support projection arrays', Boolean(schema.definitions.format_preset.properties.default_projections));
 assert('venues support projection arrays', Boolean(schema.definitions.venue_record.properties.projections));
 assert('venues support raw 143190 source rows', Boolean(schema.definitions.venue_record.properties.source_143190));
@@ -652,12 +655,14 @@ assertEqual('1.43 physical screen does not claim digital 1.43', physical143.capa
 const sparse = venues.find((item) => item.caseName === 'missing_screen_dimensions')!.venue as any;
 assertEqual('sparse import is allowed with low confidence', sparse.metadata.confidence, 'low');
 assert('sparse import leaves screen dimensions absent', sparse.screen.width_m === undefined && sparse.screen.height_m === undefined);
+assertEqual('sparse import does not unlock width sub-labels', sparse.screen.width_confidence, null);
 
 const domeLaserImport = venues.find((item) => item.caseName === 'dome_laser_height_zero')!.venue as any;
 assertEqual('dome laser import uses dome laser preset', domeLaserImport.preset_id, 'imax_dome_laser');
 assertEqual('dome laser import normalizes physical aspect ratio', domeLaserImport.screen.aspect_ratio, 1.0);
 assertEqual('dome laser import copies width to height when CSV height is zero', domeLaserImport.screen.height_m, 24.0);
 assertEqual('dome laser import marks hemispherical geometry', domeLaserImport.screen.geometry, 'hemispherical');
+assertEqual('143190 import marks screen width confirmed', domeLaserImport.screen.width_confidence, 'confirmed');
 assertEqual('dome laser import projection type', domeLaserImport.projection.type, 'imax_dome_laser');
 assertEqual('dome laser import uses anamorphic stretch', domeLaserImport.projection.anamorphic_stretch, true);
 assertEqual('dome laser import claims digital 1.43', domeLaserImport.capabilities.supports_143_digital, true);
