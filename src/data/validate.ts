@@ -586,7 +586,7 @@ for (const relativePath of venueFiles) {
     isFiniteNumber(resolved.projection.effective_screen_height_ft) && resolved.projection.effective_screen_height_ft > 0);
 }
 
-const digital143ProjectorTypes = new Set(['imax_gt_dual_laser', 'imax_dome_laser']);
+const digital143ProjectorTypes = new Set(['imax_gt_dual_laser', 'imax_dome_laser', 'imax_dome_laser_legacy']);
 for (const preset of presets) {
   const projections = [
     preset.default_projection,
@@ -611,9 +611,9 @@ for (const preset of presets) {
 const mugarOmni = readJson<JsonObject>('src/data/venues/mugar_omni_boston.json');
 const mugarPreset = presetById.get(mugarOmni.preset_id)!;
 const resolvedMugar = resolveVenue(mugarPreset, mugarOmni);
-assertEqual('Mugar uses IMAX Dome laser preset', mugarOmni.preset_id, 'imax_dome_laser');
+assertEqual('Mugar uses IMAX Dome laser preset', mugarOmni.preset_id, 'imax_dome_laser_legacy');
 assertEqual('Mugar physical dome aspect ratio is diameter/diameter', mugarOmni.screen.aspect_ratio, 1.0);
-assertEqual('Mugar current projection type is dome laser', resolvedMugar.projection.type, 'imax_dome_laser');
+assertEqual('Mugar current projection type is dome laser', resolvedMugar.projection.type, 'imax_dome_laser_legacy');
 assertEqual('Mugar does not claim 15/70 film capability', resolvedMugar.capabilities.supports_1570_film, false);
 assertEqual('Mugar claims digital 1.43 dome capability', resolvedMugar.capabilities.supports_143_digital, true);
 assertEqual('Mugar has no low scan-equivalent film field', resolvedMugar.projection.resolution_scan_equivalent_low, null);
@@ -658,12 +658,12 @@ assert('sparse import leaves screen dimensions absent', sparse.screen.width_m ==
 assertEqual('sparse import does not unlock width sub-labels', sparse.screen.width_confidence, null);
 
 const domeLaserImport = venues.find((item) => item.caseName === 'dome_laser_height_zero')!.venue as any;
-assertEqual('dome laser import uses dome laser preset', domeLaserImport.preset_id, 'imax_dome_laser');
+assertEqual('dome laser import uses dome laser preset', domeLaserImport.preset_id, 'imax_dome_laser_legacy');
 assertEqual('dome laser import normalizes physical aspect ratio', domeLaserImport.screen.aspect_ratio, 1.0);
 assertEqual('dome laser import copies width to height when CSV height is zero', domeLaserImport.screen.height_m, 24.0);
 assertEqual('dome laser import marks hemispherical geometry', domeLaserImport.screen.geometry, 'hemispherical');
 assertEqual('143190 import marks screen width confirmed', domeLaserImport.screen.width_confidence, 'confirmed');
-assertEqual('dome laser import projection type', domeLaserImport.projection.type, 'imax_dome_laser');
+assertEqual('dome laser import projection type', domeLaserImport.projection.type, 'imax_dome_laser_legacy');
 assertEqual('dome laser import uses anamorphic stretch', domeLaserImport.projection.anamorphic_stretch, true);
 assertEqual('dome laser import claims digital 1.43', domeLaserImport.capabilities.supports_143_digital, true);
 assertEqual('dome laser import does not claim 15/70 film', domeLaserImport.capabilities.supports_1570_film, false);
@@ -755,7 +755,7 @@ const docsImported = docsRows.map((row) => map143190RowToVenue({
 
 assert('promoted docs 143190 rows all map to venue records', docsImported.every((venue) => typeof venue.id === 'string' && Boolean(venue.metadata)));
 assert('promoted docs 143190 rows preserve raw source facts', docsImported.every((venue) => Boolean((venue as any).source_143190)));
-assert('promoted docs 143190 rows include dome laser records', docsImported.some((venue) => (venue as any).preset_id === 'imax_dome_laser'));
+assert('promoted docs 143190 rows include dome laser records', docsImported.some((venue) => (venue as any).preset_id === 'imax_dome_laser_legacy' || (venue as any).preset_id === 'imax_dome_laser'));
 assert('promoted docs 143190 rows include film-only dome records', docsImported.some((venue) => (venue as any).preset_id === 'imax_dome_film'));
 assert('promoted docs 143190 rows include GT laser records', docsImported.some((venue) => (venue as any).preset_id === 'imax_gt_dual_laser'));
 

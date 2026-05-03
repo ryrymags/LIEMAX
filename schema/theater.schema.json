@@ -41,6 +41,7 @@
         "imax_laser_xt",
         "imax_dome_film",
         "imax_dome_laser",
+        "imax_dome_laser_legacy",
         "dolby_cinema",
         "dolby_cinema_single_laser",
         "barco_4k_laser",

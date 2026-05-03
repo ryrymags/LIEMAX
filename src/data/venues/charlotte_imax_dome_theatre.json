@@ -1,6 +1,6 @@
 {
   "id": "charlotte_imax_dome_theatre",
-  "preset_id": "imax_dome_laser",
+  "preset_id": "imax_dome_laser_legacy",
   "name": "Charlotte IMAX Dome Theatre at Discovery Place",
   "chain": null,
   "brand_label": "IMAX",
@@ -29,7 +29,7 @@
     "display_name": "IMAX Laser for Dome",
     "mode": "digital",
     "availability": "primary",
-    "type": "imax_dome_laser",
+    "type": "imax_dome_laser_legacy",
     "light_source": "rgb_laser",
     "dual_projector": false,
     "resolution_horizontal_px": 4096,

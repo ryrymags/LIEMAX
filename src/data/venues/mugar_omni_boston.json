@@ -1,6 +1,6 @@
 {
   "id": "mugar_omni_boston",
-  "preset_id": "imax_dome_laser",
+  "preset_id": "imax_dome_laser_legacy",
   "name": "Mugar Omni Theater — Museum of Science, Boston",
   "chain": null,
   "brand_label": "IMAX",
@@ -31,7 +31,7 @@
     "display_name": "IMAX Dome Laser Digital",
     "mode": "digital",
     "availability": "primary",
-    "type": "imax_dome_laser",
+    "type": "imax_dome_laser_legacy",
     "light_source": "rgb_laser",
     "dual_projector": false,
     "resolution_horizontal_px": 4096,

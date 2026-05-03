@@ -166,7 +166,7 @@ function buildDigitalProjection(label: string | null | undefined, maxDigitalAr: 
     contrast_sequential: null,
     contrast_dynamic: null,
     hdr: 'none',
-    anamorphic_stretch: type === 'imax_dome_laser',
+    anamorphic_stretch: type === 'imax_dome_laser' || type === 'imax_dome_laser_legacy',
     min_content_ar_supported: minContentAr,
   };
 }
@@ -197,7 +197,10 @@ function buildFilmProjection(label: string | null | undefined): ProjectionRecord
 }
 
 function inferDigitalProjectorType(label: string): string {
-  if (/dome|omni/i.test(label) && /laser/i.test(label)) return 'imax_dome_laser';
+  if (/dome|omni/i.test(label) && /laser/i.test(label)) {
+    if (/laser\s+for\s+dome/i.test(label)) return 'imax_dome_laser_legacy';
+    return 'imax_dome_laser';
+  }
   if (/gt|dual\s*laser/i.test(label)) return 'imax_gt_dual_laser';
   if (/xenon|digital/i.test(label) && !/laser/i.test(label)) return 'imax_dual_xenon';
   if (/xt/i.test(label)) return 'imax_laser_xt';
@@ -212,9 +215,11 @@ function inferFilmProjectorType(label: string): string {
 }
 
 function inferPresetId(digitalProjection: ProjectionRecord | null, filmProjection: ProjectionRecord | null): string {
+  if (digitalProjection?.type === 'imax_dome_laser_legacy') return 'imax_dome_laser_legacy';
   if (digitalProjection?.type === 'imax_dome_laser') return 'imax_dome_laser';
   if (filmProjection?.type === 'imax_dome_film') return 'imax_dome_film';
   if (digitalProjection?.type === 'imax_gt_dual_laser') return 'imax_gt_dual_laser';
+  if (digitalProjection?.type === 'imax_laser_xt') return 'imax_laser_xt';
   if (digitalProjection?.type === 'imax_cola') return 'imax_cola';
   if (digitalProjection?.type === 'imax_dual_xenon') return 'imax_dual_xenon';
   if (filmProjection?.type === 'imax_1570_film') return 'imax_1570_film';
