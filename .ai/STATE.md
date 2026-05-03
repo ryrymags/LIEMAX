@@ -89,6 +89,7 @@ Completed Priority 2 LFExaminer goals:
 Priority 2 LFExaminer verification:
 - `npm run validate:schema`: passed.
 - `npm run validate:docs`: 71 passed, 0 failed.
+- 2026-05-03 follow-up: strengthened LFExaminer-vs-143190 duplicate suppression so 143190 rows win despite venue-name drift such as trailing `& IMAX`, auditorium counts, `Stadium`, or circuit naming differences. Boston Common is now explicitly guarded so the LFExaminer Dual Xenon archival row cannot appear beside the 143190 CoLa row.
 
 Priority 2 LFExaminer caveats:
 - LFExaminer was last updated 2021-10-17; any LFExaminer-sourced venue may have closed or upgraded.

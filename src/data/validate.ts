@@ -12,9 +12,11 @@ import samples from './fixtures/imax_143190_samples.json';
 import { map143190RowToVenue, type Imax143190ImportRow } from './imaxImport';
 import {
   docs143190RowMatchKey,
+  docs143190RowToMatchRow,
   extractLFExaminerWebarchiveHtml,
   filterLFExaminerImaxDigitalRows,
   LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS,
+  lfExaminerHas143190Conflict,
   lfExaminerMatchKey,
   mapLFExaminerRowToVenue,
   parseLFExaminerRowsFromHtml,
@@ -708,8 +710,10 @@ console.log('\n=== Docs Canonical Frontend Data ===');
 const docsRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
 const docsComparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
 const docs143190Keys = new Set(docsRows.map(docs143190RowMatchKey));
+const docs143190MatchRows = docsRows.map(docs143190RowToMatchRow);
 const lfSupplementalRows = lfExaminerRows
   .filter((row) => !docs143190Keys.has(lfExaminerMatchKey(row)))
+  .filter((row) => !lfExaminerHas143190Conflict(row, docs143190MatchRows))
   .filter((row) => !LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS.has(lfExaminerMatchKey(row)));
 const lfComparableSupplementalRows = lfSupplementalRows.filter((row) => row.screen_width_m != null && row.screen_height_m != null);
 const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()}_${String(row[1] + '_' + row[2])
@@ -720,9 +724,11 @@ const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()
 
 assertEqual('promoted docs 143190 row count', docsRows.length, 133);
 assertEqual('promoted docs 143190 ids are unique', new Set(docsRowIds).size, docsRows.length);
-assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 33);
-assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 287);
-assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 279);
+assert('LFExaminer Boston Common row is suppressed by 143190 source precedence',
+  !lfSupplementalRows.some((row) => row.state === 'MA' && row.city === 'Boston' && row.organization === 'AMC Boston Common 19 & IMAX'));
+assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 54);
+assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 266);
+assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 258);
 
 const docsImported = docsRows.map((row) => map143190RowToVenue({
   region: 'United States',

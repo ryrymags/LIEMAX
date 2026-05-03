@@ -143,14 +143,16 @@ const dolbySingleLaser = findVenueById("dolby_cinema_single_laser");
 const assemblyRow = findVenueByName("AMC Assembly Row 12 & IMAX");
 const bostonCommon = findVenueByName("AMC Boston Common 19");
 const lfExaminerXenon = findVenueByName("Regal Tikahtnu Commons Stadium 16 & IMAX");
-const lfExaminerHybrid = findVenueByName("Regal Hacienda Crossings Stadium 21 & IMAX");
+const lfExaminerHybrid = findVenueByName("Edwards Fresno Stadium 22 & IMAX");
 const santaAnita143190 = findVenueByName("AMC Santa Anita 16 & IMAX");
+const bostonCommonRows = D.venues.filter((venue) => venue.name.includes("Boston Common"));
 
 assert("Cinemark XD is present in workbench data", Boolean(cinemarkXd));
 assert("Dolby Cinema 2025 is present in workbench data", Boolean(dolbySingleLaser));
 assert("Reading GT generated venue is present", Boolean(reading));
 assert("Assembly Row CoLa venue is present", Boolean(assemblyRow));
 assert("Boston Common CoLa venue is present", Boolean(bostonCommon));
+assert("Boston Common does not keep stale LFExaminer duplicate", bostonCommonRows.length === 1 && bostonCommonRows[0].sources?.screen?.q === "r_imax_csv");
 assert("LFExaminer supplemental Xenon venue is present", Boolean(lfExaminerXenon));
 assert("LFExaminer supplemental hybrid Xenon/15-70 venue is present", Boolean(lfExaminerHybrid));
 assert("LFExaminer supplemental venue is labeled Dual Xenon", lfExaminerXenon?.projection?.light === "Dual Xenon");

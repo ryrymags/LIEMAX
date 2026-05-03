@@ -10,9 +10,12 @@ import {
 import { map143190RowToVenue, type Imax143190ImportRow } from '../data/imaxImport';
 import {
   docs143190RowMatchKey,
+  docs143190RowToMatchRow,
   LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS,
+  lfExaminerHas143190Conflict,
   lfExaminerMatchKey,
   mapLFExaminerRowToVenue,
+  source143190MatchKey,
   type LFExaminerImportRow,
 } from '../data/lfexaminerImport';
 import { browserWorkbenchSource } from './workbenchRuntime';
@@ -66,7 +69,7 @@ function parseAspectRatio(value: string | number | null | undefined): number | n
 function source143190Key(value: JsonObject): string | null {
   const source = value.source_143190;
   if (!source) return null;
-  return [source.province_state, source.city, source.location_name].join('|');
+  return source143190MatchKey(source);
 }
 
 function sourceLFExaminerKey(value: JsonObject): string | null {
@@ -632,8 +635,10 @@ function buildData() {
   const imaxRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
   const lfExaminerRows = readJson<LFExaminerImportRow[]>('src/data/fixtures/lfexaminer_us_imax_rows.json');
   const imaxRowKeys = new Set(imaxRows.map(docs143190RowMatchKey));
+  const imaxMatchRows = imaxRows.map(docs143190RowToMatchRow);
   const supplementalLFExaminerRows = lfExaminerRows
     .filter((row) => !imaxRowKeys.has(lfExaminerMatchKey(row)))
+    .filter((row) => !lfExaminerHas143190Conflict(row, imaxMatchRows))
     .filter((row) => !LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS.has(lfExaminerMatchKey(row)))
     .filter(hasComparableScreen);
   const apple = authoredVenues.find((venue) => venue.id === 'apple_providence_imax');

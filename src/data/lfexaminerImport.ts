@@ -28,6 +28,12 @@ export interface LFExaminerImportOptions {
   sourceUrl?: string | null;
 }
 
+export interface Source143190MatchRow {
+  province_state?: string | null;
+  city?: string | null;
+  location_name: string;
+}
+
 type ProjectionMode = 'digital' | 'film';
 
 interface ProjectionRecord {
@@ -152,6 +158,18 @@ export function source143190MatchKey(row: { province_state?: string | null; city
 
 export function docs143190RowMatchKey(row: any[]): string {
   return [row[0] ?? '', row[1] ?? '', row[2] ?? ''].map(normalizeMatchPart).join('|');
+}
+
+export function docs143190RowToMatchRow(row: any[]): Source143190MatchRow {
+  return {
+    province_state: row[0] ?? null,
+    city: row[1] ?? null,
+    location_name: String(row[2] ?? ''),
+  };
+}
+
+export function lfExaminerHas143190Conflict(row: LFExaminerImportRow, sourceRows: Source143190MatchRow[]): boolean {
+  return sourceRows.some((sourceRow) => rowsLikelyReferenceSameVenue(row, sourceRow));
 }
 
 export function mapLFExaminerRowToVenue(row: LFExaminerImportRow, options: LFExaminerImportOptions): Record<string, unknown> {
@@ -350,11 +368,74 @@ function normalizeMatchPart(value: string): string {
   return value
     .toLowerCase()
     .replace(/&/g, ' and ')
-    .replace(/\b(theatre|theater|cinema|cinemas|stadium|imax|3d|digital)\b/g, '')
+    .replace(/\b(and|theatre|theater|cinema|cinemas|stadium|imax|3d|digital)\b/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
     .replace(/\s+/g, ' ');
 }
+
+function rowsLikelyReferenceSameVenue(lfRow: LFExaminerImportRow, sourceRow: Source143190MatchRow): boolean {
+  if (normalizeMatchPart(lfRow.state ?? '') !== normalizeMatchPart(sourceRow.province_state ?? '')) return false;
+  if (normalizeMatchPart(lfRow.city) !== normalizeMatchPart(sourceRow.city ?? '')) return false;
+  if (lfExaminerMatchKey(lfRow) === source143190MatchKey(sourceRow)) return true;
+
+  const lfTokens = organizationTokens(lfRow.organization, lfRow.city);
+  const sourceTokens = organizationTokens(sourceRow.location_name, sourceRow.city ?? '');
+  if (lfTokens.size === 0 || sourceTokens.size === 0) return false;
+
+  const sharedTokens = [...lfTokens].filter((token) => sourceTokens.has(token));
+  if (!sharedTokens.some((token) => isDistinctiveVenueToken(token))) return false;
+
+  const shorterSize = Math.min(lfTokens.size, sourceTokens.size);
+  const sharedRatio = sharedTokens.length / shorterSize;
+  if (sharedTokens.length >= Math.min(3, shorterSize) && sharedRatio >= 0.75) return true;
+
+  const sharedNumbers = sharedTokens.filter((token) => /^\d+$/.test(token));
+  return sharedNumbers.length > 0 && sharedTokens.filter(isDistinctiveVenueToken).length >= 1 && sharedTokens.length >= 2;
+}
+
+function organizationTokens(organization: string, city: string): Set<string> {
+  const cityTokens = new Set(normalizeMatchPart(city).split(' ').filter(Boolean).map(normalizeVenueToken));
+  return new Set(
+    normalizeMatchPart(organization)
+      .split(' ')
+      .filter(Boolean)
+      .map(normalizeVenueToken)
+      .filter((token) => !cityTokens.has(token))
+  );
+}
+
+function normalizeVenueToken(token: string): string {
+  if (/^\d+$/.test(token)) return token;
+  return token.length > 4 && token.endsWith('s') ? token.slice(0, -1) : token;
+}
+
+function isDistinctiveVenueToken(token: string): boolean {
+  return !/^\d+$/.test(token) && !GENERIC_ORGANIZATION_TOKENS.has(token);
+}
+
+const GENERIC_ORGANIZATION_TOKENS = new Set([
+  'amc',
+  'b',
+  'cinemark',
+  'carmike',
+  'cmx',
+  'cobb',
+  'edward',
+  'galaxy',
+  'harkin',
+  'loew',
+  'malco',
+  'marcu',
+  'megaplex',
+  'regal',
+  'ua',
+  'united',
+  'artist',
+  'movie',
+  'multiplex',
+  'place',
+]);
 
 function slugify(value: string): string {
   return value
