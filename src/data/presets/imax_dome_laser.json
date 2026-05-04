@@ -40,9 +40,9 @@
     "contrast_dynamic": null,
     "contrast_source": "unknown",
     "contrast_notes": "Venue-specific dome laser contrast is not publicly published; keep null until confirmed measurements or official specs are available.",
-    "color_gamut": "DCI-P3 via RGB laser",
+    "color_gamut": "Rec. 2020 (RGB laser)",
     "hdr": "none",
-    "supports_3d": true,
+    "supports_3d": false,
     "min_content_ar_supported": 1.43,
     "anamorphic_stretch": true
   },
@@ -77,6 +77,7 @@
   },
   "ticket_premium_usd": null,
   "known_limitations": [
+    "No 3D capability — single-projector dome laser system; no dual-projector configuration exists",
     "Not a conventional cinema — requires dome-mastered content for optimal immersion; standard flat IMAX films appear distorted through dome optics",
     "No 15/70 film scan-equivalent resolution claim; this is a digital laser dome system",
     "PPD lower per degree than flat GT screens because resolution is spread over a 180° dome field",

@@ -40,9 +40,9 @@
     "contrast_dynamic": null,
     "contrast_source": "unknown",
     "contrast_notes": "No published specs for this system. Exact hardware identity is uncertain (143190 tag 'Laser for Dome' may refer to an earlier-generation laser or a transitional xenon/laser hybrid). Brightness is a conservative community estimate vs. the GT-class Dome with Laser (~22 fL). Keep null for contrast until confirmed.",
-    "color_gamut": "DCI-P3 via RGB laser",
+    "color_gamut": "Rec. 2020 (RGB laser)",
     "hdr": "none",
-    "supports_3d": true,
+    "supports_3d": false,
     "min_content_ar_supported": 1.43,
     "anamorphic_stretch": true
   },
@@ -77,6 +77,7 @@
   },
   "ticket_premium_usd": null,
   "known_limitations": [
+    "No 3D capability — single-projector dome laser system; no dual-projector configuration exists",
     "Older-generation dome laser system — lower brightness (~14 fL community estimate) vs. current 'Dome with Laser' GT-class system (~22 fL)",
     "Exact hardware identity uncertain per research; no published spec sheet — brightness and contrast are community estimates",
     "Not a conventional cinema — requires dome-mastered content; standard flat IMAX films appear distorted through dome optics",
