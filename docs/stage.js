@@ -45,7 +45,7 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const bW = B.screen.w;
 
   const totalW = PAD + aW + GAP + bW + PAD;
-  const totalH = Math.max(aLift + aH, bLift + bH, HUMAN_H) + 6; // headroom
+  const totalH = Math.max(aLift + aH, bLift + bH, HUMAN_H) + 8; // headroom + bottom clearance for human label
 
   const vbW = totalW;
   const vbH = totalH;
@@ -120,7 +120,7 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
       }).textContent = `${side} · DOME`;
 
       el("text", {
-        x: cx, y: cy + r + 1.2,
+        x: cx, y: cy + r + 1.8,
         "text-anchor": "middle",
         "font-family": "var(--font-mono)",
         "font-size": Math.max(0.75, w * 0.026),
@@ -206,14 +206,15 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
           L ${headCX + hw*0.42} ${bodyBot} Z`,
       fill: "var(--ink)", opacity: 0.85,
     });
-    // 6 ft tag
+    // height label — placed to the right at mid-body height to avoid floor clipping
     el("text", {
-      x: headCX, y: bodyBot - 0.4,
-      "text-anchor": "middle",
+      x: headCX + hw * 0.8,
+      y: -(hh / 2),
+      "text-anchor": "start",
       "font-family": "var(--font-mono)",
       "font-size": 0.95,
       fill: "currentColor", opacity: 0.6,
-    }).textContent = "5'9\"";
+    }).textContent = "5 9″";
   }
 
   // Return ratio info for caption
@@ -317,7 +318,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
       opacity: 0.9,
     }).textContent = "DOME";
     el("text", {
-      x: cx, y: cy + r + 1.2,
+      x: cx, y: cy + r + 1.8,
       "text-anchor": "middle",
       "font-family": "var(--font-mono)",
       "font-size": Math.max(0.75, w * 0.026),
@@ -370,11 +371,12 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
       fill: INK, opacity: 0.85,
     });
     el("text", {
-      x: headCX, y: bodyBot - 0.4,
-      "text-anchor": "middle",
+      x: headCX + hw * 0.8,
+      y: -(hh / 2),
+      "text-anchor": "start",
       "font-family": "var(--font-mono)",
       "font-size": 0.95,
       fill: "currentColor", opacity: 0.6,
-    }).textContent = "5'9\"";
+    }).textContent = "5 9″";
   }
 };

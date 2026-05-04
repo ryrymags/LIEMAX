@@ -1,8 +1,8 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. GUI-work has the Step 4 comparison workbench, Priority 1 education-first website overhaul, Phase 4a canonical docs data unification, Priority 2 LFExaminer Xenon supplement, Dolby Cinema count checker, and pre-GUI LIEMAX/IMAX Lite taxonomy + generated stats fixes."
+Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype — intentionally not polished. A full Overhaul V2 redesign is next."
 
-Current priority: Pre-GUI taxonomy/stats blockers are complete; next likely priority is verifying stale LFExaminer rows/community corrections and filling remaining screen-dimension gaps before more GUI polish.
+Current priority: Overhaul V2 — ground-up website redesign per the Overhaul Bible (`Downloads/Overhaul V2/LIEMAX-Overhaul-Bible.md`). Data layer is ready; no new data work is needed before starting the build.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
@@ -187,10 +187,36 @@ Priority order: get functional → then design polish. Do not invest in visual d
 
 ## Active
 
-- Step 4: diagnosis-first homepage implemented (2026-05-01), Priority 1 education-first pass complete, and Phase 4a canonical docs data path complete. `docs/` now opens with novice-friendly LIEMAX/IMAX framing, a privacy-friendly randomized example set, national/state stats, a noir DiagnosisCard with category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, a one-page integrated IMAX 101 section, and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from `src/data`/`src/docs`; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. `docs/diagnosis.js` provides `window.LIEMAX_DIAGNOSE` (`classify`, `diagnose`, `LABELS`). Docs validation covers generated-bundle freshness, workbench math regressions, diagnosis categories, dome guardrails, and education UI invariants.
+### Current GUI Status
+
+The `docs/` frontend is a **rough functional prototype only**. It was built to prove out the data layer and comparison logic — not as a shippable design. The current implementation includes the IMAX 101 section, diagnosis cards, state/national stats, and comparison workbench, but the layout, flow, and visual design are all placeholder-quality. Do not polish or extend the current `docs/` UI — a full overhaul is planned (see below).
+
+### Next Priority: Overhaul V2
+
+The next major work item is a ground-up redesign of the website based on the Overhaul Bible at `.ai/OVERHAUL_BIBLE.md`.
+
+**Key architectural decisions in the V2 design:**
+- Four-page structure: Home (guided flow), Compare (standalone workbench), IMAX 101 (standalone with Deep Dive), with a persistent four-item nav bar.
+- Home page is a single-scroll progressive disclosure: Splash → Layer 1 (plain-English verdict) → Layer 2 (IMAX 101 curriculum, six ordered blocks) → Layer 3 (full technical diagnosis) → Layer 4 (Deep Dive entry point). Theater selection unlocks layers below the splash in-place — no page navigation.
+- Layer 1 is zero-jargon; Layer 3 is technically full — same user, same session, but vocabulary is built by Layer 2 before Layer 3 is reached.
+- Verdict tiers: TRUE IMAX (🟢, sub-states: gt_laser / film_conditional / both), IMAX LITE (🟡, CoLa/XT), LIEMAX (🔴, dual xenon), DOME (⚪, categorically distinct — not ranked against flat-screen tiers).
+- Splash has a three-stat strip driven by `{{db.*}}` tokens (already generated); headline is *"You're probably not getting real IMAX."*
+- Sitewide tooltip system: dotted underline on first use only, small card on hover/tap, optional anchor to IMAX 101 block.
+- Geolocation or static region-lookup for "nearest True IMAX" callout in Layer 1; fallback to Lincoln Square (national best, not nearest).
+- Build sequence in Bible section 11 defines implementation order (nav → splash → verdict transform → venue sub-states → tooltips → Layer 1 card → Blocks 1–6 → Layer 3 → accordion → workbench → Layer 4 → standalone pages → Deep Dive → stat sync).
+- All `{{db.*}}` stat tokens already exist in `window.LIEMAX_DATA.db` — no new data work needed for the splash strip.
+
+**Open questions from Bible (resolve before affected sections are built):**
+- Dolby Cinema 2025 single-laser fL spec not yet published by Dolby.
+- 15/70-capable venue list beyond Providence + Lincoln Square needs full tagging.
+- Infinity Vision: no official venue list as of April 2026 — exclude from ladder and workbench until verifiable.
+- RPX laser vs. xenon split is not uniform; do not present RPX as uniformly laser.
+
+### Step 4 Legacy Notes
+
 - Step 4 diagnosis follow-ups to remember: fix Metreon/Lincoln featured example ids in `docs/app.jsx` (`_and_imax`), and require explicit 1.43-capable dome projection/mode before classifying future dome rows as `true_dome`.
-- Step 4: functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
-- Current Step 4 caveat: `docs/` data is canonical-generated and includes LFExaminer archival Xenon-only IMAX supplement, but those rows are stale 2021 data; keep `npm run validate:docs` in CI as the frontend behavior guard.
+- Functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
+- `docs/` data is canonical-generated and includes LFExaminer archival Xenon-only IMAX supplement, but those rows are stale 2021 data; keep `npm run validate:docs` in CI as the frontend behavior guard.
 - Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).

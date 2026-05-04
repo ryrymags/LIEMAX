@@ -4,9 +4,11 @@ These files are working research, not runtime data. Use them to understand LIEMA
 
 ## Live Research Files
 
-- `Master Research.md`: broad premium-cinema reference covering IMAX tiers, Dolby Cinema, PLFs, business context, New England venue notes, misconceptions, and open questions.
+- `Master Research.md`: broad premium-cinema reference covering IMAX tiers, Dolby Cinema, PLFs, business context, some initial New England venue notes from when this project was earlier on, misconceptions, and open questions.
 - `IMAX Dome Research.md`: dome-specific geometry, optical offset, rolling-loop transport, hemisphere coverage, digital dome caveats, and presentation constraints.
 - `Home Theater Research.md`: home display presets, brightness/contrast/color/HDR baselines, viewing-distance assumptions, and schema guidance for home comparisons.
+- `Projector-Types-Deep-Dive.md`: per-projector-type technical profiles (CoLa, GT Dual Laser, Xenon, 15/70, Dome Film/Laser, Laser XT, Legacy Dome) sourced from 143190 and LFExaminer; maps each type to verdict tier, aspect-ratio ceiling, and known research gaps. Compiled May 2026.
+- `Fixing Research Gaps part 2.md`: confidence-rated resolution of projection spec gaps for `imax_cola`, `imax_dual_xenon`, `imax_gt_dual_laser`, `dolby_cinema`, and `cinemark_xd` presets. Covers contrast, brightness, resolution, and 3D figures. Each finding is rated HIGH / MEDIUM / LOW with primary-source citations. v2 corrects CoLa screen threshold wording, Cinemark XD aspect ratio (1.90:1), and Dolby 2025 single-laser brightness estimate.
 
 ## How Agents Should Use This Research
 

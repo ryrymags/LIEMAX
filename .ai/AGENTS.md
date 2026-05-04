@@ -1,6 +1,6 @@
 # Agent Briefing
 
-Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`. Read `.ai/STEP3.md` when auditing or extending preset data.
+Cold-start order: read `.ai/STATE.md`, then this file, then `.ai/REQUIREMENTS.md`. Read `.ai/STEP3.md` when auditing or extending preset data. Read `.ai/OVERHAUL_BIBLE.md` before any frontend work.
 
 ## Mission
 
@@ -12,8 +12,8 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - Audited 2026-04-26: Steps 1, 2, and 3 are clean. All 133 math tests + 87 schema/data checks pass.
 - Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; LFExaminer supplemental Xenon import foundation; schema v1.4.0 (adds r_imax_csv + lfexaminer source quality/source rows).
 - Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, Cinemark XD, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.
-- Active: Step 4 — functional comparison workbench exists in `docs/`; next pass should harden data flow and then polish design.
-- GUI design tooling (use AFTER Step 4b functional baseline): Claude Design skill (`/design:frontend-design`), Figma MCP connector, or equivalent. Do not start design polish before the comparison feature works end-to-end.
+- Active: Step 4 — the `docs/` GUI is a **rough functional prototype only**; the next major work item is the Overhaul V2 redesign. Read `.ai/OVERHAUL_BIBLE.md` before touching any frontend code.
+- GUI design tooling for Overhaul V2: Claude Design skill (`/design:frontend-design`), Figma MCP connector, or equivalent.
 
 ## Rules
 
@@ -43,6 +43,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `.ai/ROADMAP.md`: active Summary Pane + next tasks.
 - `.ai/STATE.md`: branch/status snapshot.
 - `.ai/STEP3.md`: detailed Step 3 preset inventory, specs, pitfalls, verification.
+- `.ai/OVERHAUL_BIBLE.md`: master reference for the Overhaul V2 redesign — site architecture, page flow, layer structure, verdict tier logic, tooltip system, build sequence, and data accuracy commitments. Read this before any frontend work.
 - `CLAUDE.md`: Claude pointer.
 - `README.md`: public overview.
 - `schema/theater.schema.json`: canonical model v1.4.0.

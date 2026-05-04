@@ -4,10 +4,10 @@
     {
       "name": "docs",
       "cwd": "/Users/rymag/Documents/GitHub/LIEMAX/docs",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server"],
-      "port": 5174,
-      "autoPort": true
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "5173", "--no-clipboard"],
+      "port": 5173,
+      "autoPort": false
     }
   ]
 }
