@@ -221,19 +221,33 @@ function has190OnlyDigital(venue) {
     venue.projection.min_ar >= 1.89;
 }
 
+const PROJECTOR_TYPE_MAP = {
+  imax_gt_dual_laser: "gt_dual_laser",
+  imax_cola: "cola",
+  imax_laser_xt: "laser_xt",
+  imax_dual_xenon: "dual_xenon",
+  imax_dome_laser: "dome_laser",
+  imax_dome_film: "dome_film",
+  imax_1570_film: "1570_film",
+};
+
 function projectorKeys(venue) {
   if (!venue || venue.kind !== "cinema") return ["other_unknown"];
   const keys = new Set();
   const addProjection = projection => {
     if (!projection) return;
-    const text = [projection.type, projection.label, projection.display_name, projection.light].filter(Boolean).join(" ").toLowerCase();
-    if (projection.type === "imax_gt_dual_laser" || /gt.*dual|dual.*gt|dual 4k/.test(text)) keys.add("gt_dual_laser");
-    else if (projection.type === "imax_cola" || /\bcola\b/.test(text)) keys.add("cola");
-    else if (projection.type === "imax_laser_xt" || /laser xt/.test(text)) keys.add("laser_xt");
-    else if (projection.type === "imax_dual_xenon" || /xenon/.test(text)) keys.add("dual_xenon");
-    else if (projection.type === "imax_dome_laser" || /laser.*dome|dome.*laser/.test(text)) keys.add("dome_laser");
-    else if (projection.type === "imax_dome_film" || /dome.*15\/?70|gt dome/.test(text)) keys.add("dome_film");
-    else if (projection.type === "imax_1570_film" || /15\/?70|film/.test(text)) keys.add("1570_film");
+    if (projection.type && PROJECTOR_TYPE_MAP[projection.type]) {
+      keys.add(PROJECTOR_TYPE_MAP[projection.type]);
+      return;
+    }
+    const text = [projection.label, projection.display_name, projection.light].filter(Boolean).join(" ").toLowerCase();
+    if (/gt.*dual|dual.*gt|dual 4k/.test(text)) keys.add("gt_dual_laser");
+    else if (/\bcola\b/.test(text)) keys.add("cola");
+    else if (/laser xt/.test(text)) keys.add("laser_xt");
+    else if (/xenon/.test(text)) keys.add("dual_xenon");
+    else if (/laser.*dome|dome.*laser/.test(text)) keys.add("dome_laser");
+    else if (/dome.*15\/?70|gt dome/.test(text)) keys.add("dome_film");
+    else if (/15\/?70|film/.test(text)) keys.add("1570_film");
   };
   addProjection(venue.projection);
   addProjection(venue.filmProjection);

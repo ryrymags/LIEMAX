@@ -710,7 +710,7 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
     projection: docsProj,
     filmProjection: docsFilm,
     commercialFilms: Array.isArray(record.source_143190?.commercial_films)
-      ? record.source_143190.commercial_films.length > 0
+      ? record.source_143190.commercial_films.some((v: string) => typeof v === 'string' && !/^n\/?a$|^none$|^no$/i.test(v.trim()))
       : Boolean(record.source_143190?.commercial_films),
     sources: docsFrontend.sources ? docsSources(record, activeProjection, docsFrontend.sources) : (docsFrontend.sourcesFull ?? docsSources(record, activeProjection)),
   };

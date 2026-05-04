@@ -847,7 +847,7 @@ window.LIEMAX_DATA = {
         "display_name": "IMAX GT Laser"
       },
       "filmProjection": null,
-      "commercialFilms": true,
+      "commercialFilms": false,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
@@ -2701,7 +2701,7 @@ window.LIEMAX_DATA = {
         "display_name": "IMAX GT Laser"
       },
       "filmProjection": null,
-      "commercialFilms": true,
+      "commercialFilms": false,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
@@ -8563,7 +8563,7 @@ window.LIEMAX_DATA = {
         "type": "imax_dome_film",
         "display_name": "IMAX 15/70 Film (Dome)"
       },
-      "commercialFilms": true,
+      "commercialFilms": false,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
@@ -8882,7 +8882,7 @@ window.LIEMAX_DATA = {
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
-      "commercialFilms": true,
+      "commercialFilms": false,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
@@ -11692,7 +11692,7 @@ window.LIEMAX_DATA = {
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
-      "commercialFilms": true,
+      "commercialFilms": false,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
