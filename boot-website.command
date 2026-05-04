@@ -21,6 +21,11 @@ if [[ ! -d "$DOCS_DIR" || ! -f "$DOCS_DIR/index.html" ]]; then
   exit 1
 fi
 
+echo "Rebuilding docs/data.js from latest source data..."
+(cd "$ROOT_DIR" && npm run build:docs-data)
+echo "Build complete."
+echo
+
 PYTHON_BIN="$(command -v python3 || command -v python || true)"
 if [[ -z "$PYTHON_BIN" ]]; then
   echo "Could not find python3 or python on PATH."
