@@ -96,7 +96,7 @@ function sourceLFExaminerKey(value: JsonObject): string | null {
   return lfExaminerMatchKey(source as LFExaminerImportRow);
 }
 
-const IMAX_LITE_PROJECTOR_TYPES = new Set(['imax_cola', 'imax_laser_xt']);
+const IMAX_LITE_PROJECTOR_TYPES = new Set(['imax_cola', 'imax_laser_xt', 'imax_gt_dual_laser']);
 const LIEMAX_PROJECTOR_TYPES = new Set(['imax_dual_xenon']);
 const DOME_PROJECTOR_TYPES = new Set(['imax_dome_laser', 'imax_dome_film']);
 
@@ -125,6 +125,12 @@ function isDomeVenue(venue: JsonObject): boolean {
     DOME_PROJECTOR_TYPES.has(venue.projection?.type);
 }
 
+function isImaxLiteVenue(venue: JsonObject): boolean {
+  return !isDomeVenue(venue) &&
+    !isFullFlat143Digital(venue) &&
+    IMAX_LITE_PROJECTOR_TYPES.has(venue.projection?.type);
+}
+
 function screenSizeTier(screen: JsonObject | null | undefined): { tier: string; label: string } | null {
   if (!screen) return null;
   if (screen.geometry === 'hemispherical') return { tier: 'dome', label: 'Dome' };
@@ -143,7 +149,7 @@ function pct(part: number, total: number): number {
 function buildDb(venues: JsonObject[]): JsonObject {
   const latestDolbySnapshot = mostRecentDolbyCinemaSnapshot(readDolbyCinemaSnapshots());
   const cinemaVenues = venues.filter(isRealCinemaVenue);
-  const imaxLiteCount = cinemaVenues.filter((venue) => IMAX_LITE_PROJECTOR_TYPES.has(venue.projection?.type)).length;
+  const imaxLiteCount = cinemaVenues.filter(isImaxLiteVenue).length;
   const liemaxVenues = cinemaVenues.filter((venue) => LIEMAX_PROJECTOR_TYPES.has(venue.projection?.type));
   const liemaxCount = liemaxVenues.length;
   const liemaxLfExaminerCount = liemaxVenues.filter((venue) => venue.sources?.screen?.q === 'lfexaminer').length;
@@ -438,13 +444,13 @@ function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: 
     };
     record.docs_frontend = {
       ...record.docs_frontend,
-      sub: 'Natick · official Jordan’s specs · advanced digital',
-      blurb: 'Official Jordan’s Furniture specs list a 76 × 55 ft screen, 279 seats, and an advanced digital projection system. Projector classification stays conservative as legacy IMAX digital unless current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.',
+      sub: 'Natick · official Jordan’s specs · Dual Xenon',
+      blurb: 'Official Jordan’s Furniture specs list a 76 × 55 ft screen and 279 seats. Projector classification is Dual Xenon from the LFExaminer IMAX Digital Xenon row; update if current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.',
       sources: {
         ...record.docs_frontend.sources,
         screen: {
           q: 'published_official',
-          note: 'Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen, 279 seats, advanced digital projection system. https://www.jordans.com/imax',
+          note: 'Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen and 279 seats. Projector type remains from LFExaminer IMAX Digital Xenon. https://www.jordans.com/imax',
         },
         seat: {
           q: 'published_official',

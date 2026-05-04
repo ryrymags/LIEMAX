@@ -188,6 +188,11 @@ assert("Natick uses official 76 x 55 ft screen, 279 seats, and Large Screen tier
   natick?.sources?.screen?.q === "published_official" &&
   natick?.sources?.screen?.note.includes("Jordan") &&
   natick?.projection?.type === "imax_dual_xenon");
+assert("Natick visible copy names Dual Xenon instead of vague advanced digital",
+  natick?.sub.includes("Dual Xenon") &&
+  natick?.blurb.includes("Dual Xenon") &&
+  !natick?.sub.toLowerCase().includes("advanced digital") &&
+  !natick?.blurb.toLowerCase().includes("advanced digital"));
 assert("LFExaminer 1570+D row keeps film mode", Boolean(lfExaminerHybrid?.filmProjection && lfExaminerHybrid.presentationModes.some((mode) => mode.isFilmMode)));
 assert("143190 hybrid picker subtitles show both projectors",
   Boolean(esquire?.filmProjection && esquire.sub.includes("IMAX Digital") && esquire.sub.includes("15/70")));
@@ -251,6 +256,7 @@ assert("Verdict names Reading for B-side wins", Boolean(readingSentence && verdi
 assert("Verdict mentions Reading visible area and contrast wins", Boolean(readingSentence && readingSentence.text.includes("visible image area") && readingSentence.text.includes("native contrast")));
 
 const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
+const diagnosisSource = fs.readFileSync(path.join(root, "docs/diagnosis.js"), "utf8");
 const stageSource = fs.readFileSync(path.join(root, "docs/stage.js"), "utf8");
 const indexSource = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
 const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8");
@@ -265,7 +271,7 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", indexSource.includes("styles.css?v=phase4a-canonical-1") && indexSource.includes("workbench.js?v=phase4a-canonical-1") && indexSource.includes("stage.js?v=phase4a-canonical-1") && indexSource.includes("app.jsx?v=phase4a-canonical-1"));
+assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=imax-verdict-190-1`)));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -306,8 +312,16 @@ assert("External source links are included", ["LF Examiner large formats", "IMAX
 assert("Launch-facing app copy does not hardcode old 89% stat", !appSource.includes("89%"));
 assert("Picker result tags use simple screen-size and category labels", appSource.includes("quickResultTags") && appSource.includes("Small Screen") && appSource.includes("Medium Screen") && appSource.includes("Large Screen") && appSource.includes("Giant Screen"));
 assert("Picker result tags do not include hidden 1.43 capability labels", !appSource.includes("TRUE 1.43") && !appSource.includes("1.43 Screen") && !appSource.includes("1.43 Compatible"));
-assert("Visible theater tags expose brief hover/focus explanations", appSource.includes("VisibleTag") && appSource.includes("data-tooltip") && appSource.includes("70-84.9 ft wide.") && appSource.includes("Modern laser IMAX, usually capped at 1.90."));
+assert("Visible theater tags expose brief hover/focus explanations", appSource.includes("VisibleTag") && appSource.includes("data-tooltip") && appSource.includes("70-84.9 ft wide.") && appSource.includes("Modern laser IMAX capped at 1.90"));
 assert("Unknown visible tag briefly explains verdict uncertainty", appSource.includes("text: \"Unknown\"") && appSource.includes("Not enough projector or screen data to classify."));
+assert("Non-IMAX format presets do not get an IMAX verdict tag", appSource.includes("hasImaxVerdict") && appSource.includes("if (showImaxVerdict) tags.push"));
+const inventedVerdictKey = ["standard", "imax", "190"].join("_");
+const inventedVerdictLabel = ["Standard IMAX", "1.90"].join(" ");
+assert("Invented GT 1.90 verdict has been removed from app and diagnosis sources",
+  !appSource.includes(inventedVerdictKey) &&
+  !diagnosisSource.includes(inventedVerdictKey) &&
+  !appSource.includes(inventedVerdictLabel) &&
+  !diagnosisSource.includes(inventedVerdictLabel));
 assert("Visible tag tooltip CSS is present", stylesSource.includes(".tag-with-help::after") && stylesSource.includes("content: attr(data-tooltip)") && stylesSource.includes(".tag-with-help:focus::after"));
 assert("Picker/search result tag tooltips open inward to avoid clipping", stylesSource.includes(".picker-v3__item-tags .tag-with-help::after") && stylesSource.includes(".search__item-tag.tag-with-help::after") && stylesSource.includes("right: 0"));
 assert("Diagnosis tag tooltips open downward to avoid card-edge clipping", stylesSource.includes(".diagnosis__tags .tag-with-help::after") && stylesSource.includes("top: calc(100% + 8px)") && !/\.diagnosis\s*\{[^}]*overflow:\s*hidden/.test(stylesSource));
@@ -332,11 +346,22 @@ const diagMetreon      = findVenueByName("AMC Metreon 16 & IMAX");
 const diagLincoln      = findVenueByName("AMC Lincoln Square 13 & IMAX");
 const diagMugar        = findVenueByName("Mugar Omni, Museum of Science");
 const diagChrysler     = findVenueByName("Chrysler IMAX Dome Theatre, Michigan Science Center");
+const diagTclChinese   = findVenueByName("TCL Chinese Theatres IMAX");
+const diagPalmsWaukee  = findVenueByName("The Palms Theatre & IMAX");
 
 assert("Providence (CoLa + film) diagnoses as true_film_lie_dig",  DIAG.classify(diagProvidence)   === "true_film_lie_dig");
 assert("Reading (GT Laser, no film) diagnoses as true_143_laser",  DIAG.classify(diagReading)      === "true_143_laser");
 assert("Boston Common (CoLa, no film) diagnoses as imax_lite",     DIAG.classify(diagBostonCommon) === "imax_lite");
 assert("LFExaminer Dual Xenon diagnoses as liemax",                DIAG.classify(lfExaminerXenon)  === "liemax");
+assert("TCL Chinese GT Laser 1.90 diagnoses as imax_lite",         DIAG.classify(diagTclChinese)   === "imax_lite");
+assert("The Palms Theatre GT Laser 1.90 diagnoses as imax_lite",   DIAG.classify(diagPalmsWaukee) === "imax_lite");
+assert("TCL and The Palms keep Giant Screen tags",
+  diagTclChinese?.screen?.sizeLabel === "Giant Screen" &&
+  diagPalmsWaukee?.screen?.sizeLabel === "Giant Screen");
+assert("TCL 15/70 hardware does not display as true film on a 1.90 screen",
+  DIAG.diagnose(diagTclChinese).modes
+    .filter((mode) => mode.name.includes("15/70"))
+    .every((mode) => mode.verdictLabel !== "TRUE — ON FILM" && mode.verdict === "lite"));
 assert("Metreon (GT Laser + film) diagnoses as true_143_film",     DIAG.classify(diagMetreon)      === "true_143_film");
 assert("Lincoln Square (GT Laser + film) diagnoses as true_143_film", DIAG.classify(diagLincoln)   === "true_143_film");
 assert("Mugar dome laser diagnoses as true_dome",                  DIAG.classify(diagMugar)        === "true_dome");
@@ -364,7 +389,10 @@ function hasDigital143(venue) {
 }
 
 function hasFilm1570(venue) {
-  return Boolean(venue?.filmProjection || (venue?.presentationModes || []).some((mode) => mode.isFilmMode));
+  return Boolean(venue?.filmProjection || (venue?.presentationModes || []).some((mode) => mode.isFilmMode)) &&
+    venue?.screen?.geometry !== "hemispherical" &&
+    venue.screen?.ar != null &&
+    venue.screen.ar <= 1.45;
 }
 
 function hasDomePresentation(venue) {
@@ -373,6 +401,7 @@ function hasDomePresentation(venue) {
 
 assert("Capability filters can find Digital 1.43 rows", D.venues.some(hasDigital143));
 assert("Capability filters can find 15/70 rows", D.venues.some(hasFilm1570));
+assert("Capability filters do not mark 1.90-screen film hardware as 1.43-capable", !hasFilm1570(diagTclChinese));
 assert("Capability filters can find Dome rows", D.venues.some(hasDomePresentation));
 assert("Capability/category filters can find LIEMAX rows", D.venues.some((venue) => DIAG.classify(venue) === "liemax"));
 assert("Capability/category filters can find IMAX Lite rows", D.venues.some((venue) => DIAG.classify(venue) === "imax_lite"));

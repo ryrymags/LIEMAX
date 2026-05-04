@@ -54,7 +54,7 @@ window.LIEMAX_DIAGNOSE = (function () {
   }
 
   function isImaxLite(venue) {
-    return /^(imax_cola|imax_laser_xt)$/.test(projectionType(venue) || "");
+    return /^(imax_cola|imax_laser_xt|imax_gt_dual_laser)$/.test(projectionType(venue) || "");
   }
 
   function isLiemax(venue) {
@@ -123,7 +123,7 @@ window.LIEMAX_DIAGNOSE = (function () {
       case "imax_lite":
         return {
           line: `Modern multiplex IMAX — but not full-height 1.43.`,
-          body: `${name} runs ${projLabel}${sizeStr ? ` on a ${arDisplay}:1 screen (${sizeStr})` : ""}. This is IMAX Lite: a modern laser digital room capped at 1.90:1. It can be a solid premium auditorium, but 1.43-mastered films like Oppenheimer or Sinners still lose roughly a quarter of the vertical frame.`,
+          body: `${name} runs ${projLabel}${sizeStr ? ` on a ${arDisplay}:1 screen (${sizeStr})` : ""}. This is IMAX Lite: a modern laser IMAX room capped at 1.90:1. It can still be a giant, premium auditorium${/gt/i.test(projLabel) ? " with GT Laser hardware" : ""}, but 1.43-mastered films like Oppenheimer or Sinners lose roughly a quarter of the vertical frame${venue.filmProjection && venue.screen.ar > 1.45 ? ", even though a 15/70 film projector is listed" : ""}.`,
         };
       case "liemax":
         return {
@@ -158,8 +158,13 @@ window.LIEMAX_DIAGNOSE = (function () {
         verdict = "true"; verdictLabel = "DOME IMAX";
         sub = m.isFilmMode ? "15/70 dome film — fixed 180° × 125° coverage" : "Dome laser — fixed 180° × 125° coverage";
       } else if (m.isFilmMode) {
-        verdict = "truefilm"; verdictLabel = "TRUE — ON FILM";
-        sub = "Booked engagements only — 15/70mm photochemical";
+        if (venue.screen.ar != null && venue.screen.ar <= 1.45) {
+          verdict = "truefilm"; verdictLabel = "TRUE — ON FILM";
+          sub = "Booked engagements only — 15/70mm photochemical";
+        } else {
+          verdict = "lite"; verdictLabel = "IMAX LITE";
+          sub = "15/70 film hardware is listed, but the 1.90 screen cannot show full-height 1.43";
+        }
       } else if (Math.abs(ar - 1.43) < 0.01) {
         if (digital143(venue)) {
           verdict = "true"; verdictLabel = "TRUE 1.43";
@@ -172,9 +177,9 @@ window.LIEMAX_DIAGNOSE = (function () {
           sub = "Legacy Dual Xenon caps at 1.90 — ~25% of frame is cropped";
         }
       } else if (Math.abs(ar - 1.90) < 0.01) {
-        verdict = isHighEnd(venue) ? "true" : isImaxLite(venue) ? "lite" : "lie";
-        verdictLabel = isHighEnd(venue) ? "STANDARD IMAX 1.90" : isImaxLite(venue) ? "IMAX LITE 1.90" : "LIEMAX 1.90";
-        sub = isHighEnd(venue) ? "Full 1.90 frame, GT laser" : isImaxLite(venue) ? "Full 1.90 frame, modern laser" : "Full 1.90 frame, legacy Dual Xenon";
+        verdict = digital143(venue) ? "true" : isImaxLite(venue) ? "lite" : "lie";
+        verdictLabel = digital143(venue) ? "TRUE 1.90" : isImaxLite(venue) ? "IMAX LITE 1.90" : "LIEMAX 1.90";
+        sub = digital143(venue) ? "Full 1.90 frame on full-height GT laser" : isImaxLite(venue) ? "Full 1.90 frame, modern laser" : "Full 1.90 frame, legacy Dual Xenon";
       } else {
         verdict = "lie"; verdictLabel = "LETTERBOXED";
         sub = "Scope/flat content windowed inside the IMAX screen";

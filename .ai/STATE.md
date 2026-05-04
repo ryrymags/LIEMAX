@@ -115,11 +115,11 @@ Dolby checker verification:
 ## Pre-GUI Taxonomy + Stats Fixes
 
 Completed 2026-05-03:
-- Updated product taxonomy so LIEMAX means legacy `imax_dual_xenon` only, while `imax_cola` and `imax_laser_xt` classify as `imax_lite`.
+- Updated product taxonomy so LIEMAX means legacy `imax_dual_xenon` only, while modern laser IMAX capped at 1.90 (`imax_cola`, `imax_laser_xt`, and GT Laser on a 1.90 screen) classifies as `imax_lite`.
 - Hybrid CoLa + 15/70 venues now explain that regular digital showings are IMAX Lite, not LIEMAX.
 - Schema bumped to `1.5.0` with `screen.width_confidence`; 143190/r-imax rows mark confirmed width, LFExaminer/frontend typical rows mark community-estimate width, and width sub-labels only fire from confirmed widths.
 - Generated docs DB now exposes `total_us_imax`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
-- Current generated national split: 380 U.S. IMAX rows; 103 IMAX Lite; 251 LIEMAX; 246 LIEMAX rows from archival LFExaminer; 354 / 93% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
+- Current generated national split: 380 U.S. IMAX rows; 105 IMAX Lite; 251 LIEMAX; 246 LIEMAX rows from archival LFExaminer; 356 / 94% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
 - Overhaul V1 planning docs were updated to use `{{db.*}}` tokens, resolve DMR first introduction to Block 4, and keep Layer 3 chevrons inert until real anchors exist.
 
 Pre-GUI taxonomy verification:
@@ -137,11 +137,15 @@ Completed 2026-05-04:
 - Side A / Side B pickers now include compact filters for category, screen size, projector, projection capability, and U.S. state, with active removable chips and a `Clear filters` action. Free-text picker search indexes these concepts.
 - Visible theater tags now expose hover/focus tooltips that explain whether the tag is a screen-size tier or IMAX category; `Unknown` explicitly means the IMAX category lacks enough projector/screen evidence.
 - The visible Dolby Cinema count card was removed from the main stats panel while preserving `window.LIEMAX_DATA.db.dolby_cinema_us_count` and snapshot metadata for later use.
+- Follow-up: non-IMAX format presets no longer receive an IMAX verdict/category tag in picker/diagnosis surfaces; they keep only screen-size tags where applicable.
+- Follow-up: GT Laser venues with known 1.90 screens/modes, including TCL Chinese Theatres IMAX and The Palms Theatre & IMAX, now diagnose as existing `imax_lite` instead of `unknown`; no separate GT 1.90 verdict tier exists.
+- Follow-up: docs asset cache key bumped to `imax-verdict-190-1` for all static assets, including `diagnosis.js`, so browsers do not keep the stale Unknown verdict classifier.
 
 Screen Tags + Filters verification:
 - `npm run build:docs-data`: passed.
 - `npm run validate:docs`: 108 passed, 0 failed.
 - `npm run ci`: passed.
+- 2026-05-04 follow-up verification: `npm run validate:docs` passed with 120 checks; `npm run ci` passed.
 
 ## Completed
 

@@ -45,7 +45,7 @@ const FORMAT_EXAMPLES = [
     label: "IMAX-certified digital",
     kicker: "Shot or finished for IMAX",
     examples: "Top Gun: Maverick, Mission: Impossible — Dead Reckoning, Dune: Part Two",
-    note: "These were finished in IMAX's digital pipeline and often fill a 1.90:1 screen. They do not reach 1.43 unless the venue has GT Laser.",
+    note: "These were finished in IMAX's digital pipeline and often fill a 1.90:1 screen. They do not reach 1.43 unless the venue has GT Laser and a full-height 1.43 screen.",
   },
   {
     label: "Standard wide / flat",
@@ -155,7 +155,7 @@ function screenSizeKey(venue) {
 }
 
 function categoryKey(venue) {
-  return DIAG.classify(venue);
+  return hasImaxVerdict(venue) ? DIAG.classify(venue) : null;
 }
 
 function categoryLabel(venue) {
@@ -168,11 +168,25 @@ function categoryLabel(venue) {
     true_143_film: "True IMAX + Film",
     true_dome: "Dome",
     unknown: "Unknown",
-  }[category] || "Unknown";
+  }[category] || null;
 }
 
 function displayTierLabel(venue) {
   return categoryLabel(venue);
+}
+
+function hasImaxVerdict(venue) {
+  if (!venue || venue.kind !== "cinema") return false;
+  const text = [
+    venue.name,
+    venue.tag,
+    venue.sub,
+    venue.projection?.type,
+    venue.projection?.label,
+    venue.filmProjection?.type,
+    venue.filmProjection?.label,
+  ].filter(Boolean).join(" ");
+  return /\bIMAX\b|^imax_/i.test(text);
 }
 
 function hasDigital143(venue) {
@@ -186,6 +200,13 @@ function hasDigital143(venue) {
 
 function hasFilm1570(venue) {
   return Boolean(venue?.filmProjection || (venue?.presentationModes || []).some(mode => mode.isFilmMode));
+}
+
+function hasFilm1570Capability(venue) {
+  return hasFilm1570(venue) &&
+    venue?.screen?.geometry !== "hemispherical" &&
+    venue.screen?.ar != null &&
+    venue.screen.ar <= 1.45;
 }
 
 function hasDomePresentation(venue) {
@@ -224,8 +245,8 @@ function capabilityKeys(venue) {
   if (!venue || venue.kind !== "cinema") return [];
   const keys = new Set();
   if (hasDigital143(venue)) keys.add("digital_143");
-  if (hasFilm1570(venue)) keys.add("film_1570");
-  if (hasDigital143(venue) || hasFilm1570(venue)) keys.add("any_143");
+  if (hasFilm1570Capability(venue)) keys.add("film_1570");
+  if (hasDigital143(venue) || hasFilm1570Capability(venue)) keys.add("any_143");
   if (has190OnlyDigital(venue)) keys.add("digital_190_only");
   if (hasDomePresentation(venue)) {
     keys.add("dome_presentation");
@@ -1135,6 +1156,7 @@ function quickResultTags(venue) {
   if (!venue || venue.kind === "home") return [];
   const cat = DIAG.classify(venue);
   const size = screenSizeLabel(venue);
+  const showImaxVerdict = hasImaxVerdict(venue);
   const sizeTooltip = {
     "Small Screen": "Under 55 ft wide.",
     "Medium Screen": "55-69.9 ft wide.",
@@ -1147,13 +1169,13 @@ function quickResultTags(venue) {
     true_143_laser:   { text: "True IMAX",        color: "var(--cat-true143)", tooltip: "Full-height 1.43 digital IMAX." },
     true_film_lie_dig:{ text: "Film-conditional IMAX", color: "var(--cat-truefilm)", tooltip: "True IMAX only for booked 15/70 film showings." },
     true_dome:        { text: "Dome",             color: "var(--cat-dome)", tooltip: "IMAX dome presentation, not a flat screen tier." },
-    imax_lite:        { text: "IMAX Lite",        color: "var(--cat-imaxlite, var(--cat-liemax))", tooltip: "Modern laser IMAX, usually capped at 1.90." },
+    imax_lite:        { text: "IMAX Lite",        color: "var(--cat-imaxlite, var(--cat-liemax))", tooltip: "Modern laser IMAX capped at 1.90, including giant GT Laser rooms without a 1.43 screen." },
     liemax:           { text: "LIEMAX",           color: "var(--cat-liemax)", tooltip: "Legacy Dual Xenon IMAX, capped at 1.90." },
     unknown:          { text: "Unknown",          color: "var(--cat-unknown)", tooltip: "Not enough projector or screen data to classify." },
   };
   const tags = [];
   if (size) tags.push({ text: size, color: "var(--ink-3)", tooltip: sizeTooltip });
-  tags.push(map[cat] || map.unknown);
+  if (showImaxVerdict) tags.push(map[cat] || map.unknown);
   return tags;
 }
 
@@ -1360,7 +1382,7 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
     : proj?.min_ar && proj.min_ar <= 1.43
       ? "This digital projector/mode can drive the full 1.43 height when the movie is mastered and booked that way."
       : result.category === "imax_lite"
-        ? "This regular digital showing is IMAX Lite: modern laser projection capped at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used."
+        ? "This regular digital showing is IMAX Lite: modern laser projection capped at 1.90, so a full-height 1.43 movie is cropped unless both the screen and booked projection mode can show 1.43."
         : result.category === "liemax"
           ? "This regular digital showing is LIEMAX: legacy Dual Xenon capped at 1.90, so a full-height 1.43 movie is cropped."
           : "This normal digital IMAX mode caps at 1.90, so a full-height 1.43 movie is cropped unless a separate 15/70 film booking is used.";

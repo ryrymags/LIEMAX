@@ -27225,9 +27225,9 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
-      "sub": "Natick · official Jordan’s specs · advanced digital",
+      "sub": "Natick · official Jordan’s specs · Dual Xenon",
       "tag": "IMAX Xenon",
-      "blurb": "Official Jordan’s Furniture specs list a 76 × 55 ft screen, 279 seats, and an advanced digital projection system. Projector classification stays conservative as legacy IMAX digital unless current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.",
+      "blurb": "Official Jordan’s Furniture specs list a 76 × 55 ft screen and 279 seats. Projector classification is Dual Xenon from the LFExaminer IMAX Digital Xenon row; update if current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.",
       "screen": {
         "w": 76,
         "h": 55,
@@ -27303,7 +27303,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "published_official",
-          "note": "Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen, 279 seats, advanced digital projection system. https://www.jordans.com/imax"
+          "note": "Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen and 279 seats. Projector type remains from LFExaminer IMAX Digital Xenon. https://www.jordans.com/imax"
         },
         "brightness": {
           "q": "published_cto",
@@ -40719,14 +40719,14 @@ window.LIEMAX_DATA = {
   },
   "db": {
     "total_us_imax": 380,
-    "imax_lite_count": 103,
+    "imax_lite_count": 105,
     "liemax_count": 251,
     "liemax_pct": 66,
     "liemax_lfexaminer_count": 245,
     "liemax_lfexaminer_pct": 64,
     "liemax_current_source_count": 6,
-    "not_full_143_digital_count": 354,
-    "not_full_143_digital_pct": 93,
+    "not_full_143_digital_count": 356,
+    "not_full_143_digital_pct": 94,
     "gt_laser_count": 14,
     "film_conditional_count": 21,
     "dome_count": 11,
