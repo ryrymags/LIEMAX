@@ -32,6 +32,8 @@ export interface Source143190MatchRow {
   province_state?: string | null;
   city?: string | null;
   location_name: string;
+  screen_height_m?: number | null;
+  screen_width_m?: number | null;
 }
 
 type ProjectionMode = 'digital' | 'film';
@@ -62,7 +64,7 @@ const LFEXAMINER_SOURCE_URL = 'https://lfexaminer.com/theaters/';
 export const LFEXAMINER_CURRENT_SOURCE_ALIAS_KEYS = new Set([
   // Authored current 143190 row is "Providence Place Cinemas & IMAX";
   // LFExaminer's archival row includes the auditorium count.
-  'ri|providence|providence place 16 and',
+  'ri|providence|providence place 16',
 ]);
 
 export function extractLFExaminerWebarchiveHtml(webarchivePath: string): string {
@@ -165,6 +167,8 @@ export function docs143190RowToMatchRow(row: any[]): Source143190MatchRow {
     province_state: row[0] ?? null,
     city: row[1] ?? null,
     location_name: String(row[2] ?? ''),
+    screen_height_m: typeof row[7] === 'number' ? row[7] : null,
+    screen_width_m: typeof row[8] === 'number' ? row[8] : null,
   };
 }
 
@@ -379,6 +383,7 @@ function rowsLikelyReferenceSameVenue(lfRow: LFExaminerImportRow, sourceRow: Sou
   if (normalizeMatchPart(lfRow.state ?? '') !== normalizeMatchPart(sourceRow.province_state ?? '')) return false;
   if (normalizeMatchPart(lfRow.city) !== normalizeMatchPart(sourceRow.city ?? '')) return false;
   if (lfExaminerMatchKey(lfRow) === source143190MatchKey(sourceRow)) return true;
+  if (screenDimensionsMatch(lfRow, sourceRow)) return true;
 
   const lfTokens = organizationTokens(lfRow.organization, lfRow.city);
   const sourceTokens = organizationTokens(sourceRow.location_name, sourceRow.city ?? '');
@@ -393,6 +398,24 @@ function rowsLikelyReferenceSameVenue(lfRow: LFExaminerImportRow, sourceRow: Sou
 
   const sharedNumbers = sharedTokens.filter((token) => /^\d+$/.test(token));
   return sharedNumbers.length > 0 && sharedTokens.filter(isDistinctiveVenueToken).length >= 1 && sharedTokens.length >= 2;
+}
+
+function screenDimensionsMatch(lfRow: LFExaminerImportRow, sourceRow: Source143190MatchRow): boolean {
+  if (
+    lfRow.screen_height_m == null ||
+    lfRow.screen_width_m == null ||
+    sourceRow.screen_height_m == null ||
+    sourceRow.screen_width_m == null
+  ) {
+    return false;
+  }
+
+  return closeMeters(lfRow.screen_height_m, sourceRow.screen_height_m) &&
+    closeMeters(lfRow.screen_width_m, sourceRow.screen_width_m);
+}
+
+function closeMeters(a: number, b: number): boolean {
+  return Math.abs(a - b) <= 0.15;
 }
 
 function organizationTokens(organization: string, city: string): Set<string> {

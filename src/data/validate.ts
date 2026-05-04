@@ -21,6 +21,7 @@ import {
   mapLFExaminerRowToVenue,
   parseLFExaminerRowsFromHtml,
   type LFExaminerImportRow,
+  type Source143190MatchRow,
 } from './lfexaminerImport';
 import { resolveHomeDisplay, resolveVenue } from '../math/resolver';
 
@@ -540,6 +541,7 @@ const homePresetFiles = listJson('src/data/home_display_presets');
 const venueFiles = listJson('src/data/venues');
 const contentFormats = readJson<JsonObject[]>('src/data/content_formats/content_formats.json');
 const presets = presetFiles.map((relativePath) => readJson<JsonObject>(relativePath));
+const authoredVenues = venueFiles.map((relativePath) => readJson<JsonObject>(relativePath));
 const presetIds = new Set(presets.map((preset) => preset.id));
 const presetById = new Map(presets.map((preset) => [preset.id, preset]));
 
@@ -715,7 +717,23 @@ console.log('\n=== Docs Canonical Frontend Data ===');
 const docsRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
 const docsComparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
 const docs143190Keys = new Set(docsRows.map(docs143190RowMatchKey));
-const docs143190MatchRows = docsRows.map(docs143190RowToMatchRow);
+const authored143190MatchRows = authoredVenues
+  .map((venue): Source143190MatchRow | null => {
+    const source = venue.source_143190;
+    if (!source) return null;
+    return {
+      province_state: source.province_state ?? venue.state_province ?? null,
+      city: source.city ?? venue.city ?? null,
+      location_name: source.location_name ?? venue.name,
+      screen_height_m: source.screen_height_m ?? venue.screen?.height_m ?? null,
+      screen_width_m: source.screen_width_m ?? venue.screen?.width_m ?? null,
+    };
+  })
+  .filter((row): row is Source143190MatchRow => Boolean(row));
+const docs143190MatchRows = [
+  ...docsRows.map(docs143190RowToMatchRow),
+  ...authored143190MatchRows,
+];
 const lfSupplementalRows = lfExaminerRows
   .filter((row) => !docs143190Keys.has(lfExaminerMatchKey(row)))
   .filter((row) => !lfExaminerHas143190Conflict(row, docs143190MatchRows))
@@ -731,9 +749,21 @@ assertEqual('promoted docs 143190 row count', docsRows.length, 133);
 assertEqual('promoted docs 143190 ids are unique', new Set(docsRowIds).size, docsRows.length);
 assert('LFExaminer Boston Common row is suppressed by 143190 source precedence',
   !lfSupplementalRows.some((row) => row.state === 'MA' && row.city === 'Boston' && row.organization === 'AMC Boston Common 19 & IMAX'));
-assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 54);
-assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 266);
-assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 258);
+assert('LFExaminer Providence Place row is suppressed by authored 143190 source precedence',
+  !lfSupplementalRows.some((row) => row.state === 'RI' && row.city === 'Providence' && row.organization === 'Providence Place Cinemas 16 & IMAX'));
+assert('LFExaminer renamed current-source duplicates are suppressed by matching screen dimensions',
+  [
+    ['NC', 'Fayetteville', 'AMC Fayetteville 14 & MAX'],
+    ['CA', 'Alhambra', 'Edwards Renaissance Stadium 14 & IMAX'],
+    ['CA', 'Ontario', 'Edwards Ontario Palace Stadium 22 & IMAX'],
+    ['CA', 'Santa Clarita', 'Edwards Valencia Stadium 12 & IMAX'],
+    ['CA', 'Stockton', 'Regal Stockton City Center Stadium 16 & IMAX'],
+  ].every(([state, city, organization]) =>
+    !lfSupplementalRows.some((row) => row.state === state && row.city === city && row.organization === organization)
+  ));
+assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 66);
+assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 254);
+assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 246);
 
 const docsImported = docsRows.map((row) => map143190RowToVenue({
   region: 'United States',

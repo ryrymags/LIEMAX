@@ -16,6 +16,7 @@ import {
   lfExaminerMatchKey,
   mapLFExaminerRowToVenue,
   source143190MatchKey,
+  type Source143190MatchRow,
   type LFExaminerImportRow,
 } from '../data/lfexaminerImport';
 import {
@@ -77,6 +78,18 @@ function source143190Key(value: JsonObject): string | null {
   return source143190MatchKey(source);
 }
 
+function source143190MatchRow(value: JsonObject): Source143190MatchRow | null {
+  const source = value.source_143190;
+  if (!source) return null;
+  return {
+    province_state: source.province_state ?? value.state_province ?? null,
+    city: source.city ?? value.city ?? null,
+    location_name: source.location_name ?? value.name,
+    screen_height_m: source.screen_height_m ?? value.screen?.height_m ?? null,
+    screen_width_m: source.screen_width_m ?? value.screen?.width_m ?? null,
+  };
+}
+
 function sourceLFExaminerKey(value: JsonObject): string | null {
   const source = value.source_lfexaminer;
   if (!source) return null;
@@ -110,6 +123,17 @@ function isFilmConditional143(venue: JsonObject): boolean {
 function isDomeVenue(venue: JsonObject): boolean {
   return venue.screen?.geometry === 'hemispherical' ||
     DOME_PROJECTOR_TYPES.has(venue.projection?.type);
+}
+
+function screenSizeTier(screen: JsonObject | null | undefined): { tier: string; label: string } | null {
+  if (!screen) return null;
+  if (screen.geometry === 'hemispherical') return { tier: 'dome', label: 'Dome' };
+  const widthFt = screen.width_ft ?? screen.w;
+  if (widthFt == null || !Number.isFinite(widthFt)) return null;
+  if (widthFt < 55) return { tier: 'small', label: 'Small Screen' };
+  if (widthFt < 70) return { tier: 'medium', label: 'Medium Screen' };
+  if (widthFt < 85) return { tier: 'large', label: 'Large Screen' };
+  return { tier: 'giant', label: 'Giant Screen' };
 }
 
 function pct(part: number, total: number): number {
@@ -366,6 +390,9 @@ function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: 
   const isDome = record.screen?.geometry === 'hemispherical';
   const authored = authoredByKey.get(lfExaminerMatchKey(row));
   const hasFilm = row.format.includes('1570');
+  const isNatick = row.state === 'MA' &&
+    row.city === 'Natick' &&
+    row.organization === "Sunbrella IMAX 3D Theater, Jordan's Furniture Natick";
 
   record.id = docsId;
   record.name = row.organization;
@@ -375,7 +402,7 @@ function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: 
   record.docs_canonical_id = authored?.id ?? docsId;
   record.docs_frontend = {
     canonicalId: authored?.id ?? docsId,
-    sub: `${row.city} · ${isDome ? 'Dome · ' : ''}LFExaminer 2021 · IMAX Digital Xenon`,
+    sub: `${row.city} · ${isDome ? 'Dome · ' : ''}LFExaminer 2021 · IMAX Digital Xenon${hasFilm ? ' + 15/70 Film' : ''}`,
     tag: hasFilm ? 'IMAX 15/70 + Xenon' : 'IMAX Xenon',
     blurb: hasFilm
       ? 'Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.'
@@ -394,24 +421,58 @@ function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: 
     },
   };
 
+  if (isNatick) {
+    record.screen = {
+      ...record.screen,
+      width_m: feetToMeters(76),
+      height_m: feetToMeters(55),
+      width_ft: 76,
+      height_ft: 55,
+      width_confidence: 'confirmed',
+      aspect_ratio: 76 / 55,
+      geometry: 'flat',
+    };
+    record.seating = {
+      ...record.seating,
+      capacity: 279,
+    };
+    record.docs_frontend = {
+      ...record.docs_frontend,
+      sub: 'Natick · official Jordan’s specs · advanced digital',
+      blurb: 'Official Jordan’s Furniture specs list a 76 × 55 ft screen, 279 seats, and an advanced digital projection system. Projector classification stays conservative as legacy IMAX digital unless current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.',
+      sources: {
+        ...record.docs_frontend.sources,
+        screen: {
+          q: 'published_official',
+          note: 'Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen, 279 seats, advanced digital projection system. https://www.jordans.com/imax',
+        },
+        seat: {
+          q: 'published_official',
+          note: 'Jordan’s Furniture IMAX page lists comfortable seats for 279 guests at Natick. https://www.jordans.com/imax',
+        },
+      },
+    };
+  }
+
   if (screenWidthFt != null) {
+    const resolvedScreenWidthFt = isNatick ? 76 : screenWidthFt;
     const seating = isDome
       ? {
-          viewing_distance_front_ft: screenWidthFt / 2,
-          viewing_distance_mid_ft: screenWidthFt / 2,
-          viewing_distance_back_ft: screenWidthFt / 2,
+          viewing_distance_front_ft: resolvedScreenWidthFt / 2,
+          viewing_distance_mid_ft: resolvedScreenWidthFt / 2,
+          viewing_distance_back_ft: resolvedScreenWidthFt / 2,
           viewing_distance_source: 'community_estimate',
         }
       : {
-          viewing_distance_front_ft: screenWidthFt * 0.87,
-          viewing_distance_mid_ft: screenWidthFt * 1.5,
-          viewing_distance_back_ft: screenWidthFt * 2.25,
+          viewing_distance_front_ft: resolvedScreenWidthFt * 0.87,
+          viewing_distance_mid_ft: resolvedScreenWidthFt * 1.5,
+          viewing_distance_back_ft: resolvedScreenWidthFt * 2.25,
           viewing_distance_source: 'derived_from_screen_width',
         };
     record.seating = {
       ...record.seating,
       ...seating,
-      capacity: row.seats,
+      capacity: isNatick ? 279 : row.seats,
       seat_offset_from_center_ft: 0,
     };
   }
@@ -516,6 +577,11 @@ function docsProjection(projection: JsonObject | null | undefined, homeOptics?: 
   };
 }
 
+function projectorSummaryLabel(digitalProjection: JsonObject, filmProjection: JsonObject | null): string {
+  if (filmProjection && filmProjection.label === digitalProjection.label) return digitalProjection.label;
+  return filmProjection ? `${digitalProjection.label} + ${filmProjection.label}` : digitalProjection.label;
+}
+
 function docsSources(record: JsonObject, resolvedProjection: JsonObject, maskSources?: JsonObject): JsonObject {
   const generic = resolvedProjection.type === 'other';
   const isDome = record.screen?.geometry === 'hemispherical';
@@ -595,6 +661,7 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
   const defaultPresentationAr = docsFrontend.defaultPresentationAr ?? (isDome ? 1.43 : resolved.capabilities.supports_143_digital ? 1.43 : 1.90);
   const docsProj = docsProjection(activeProjection);
   const docsFilm = filmProjection ? docsProjection(filmProjection) : null;
+  const sizeTier = screenSizeTier(resolved.screen);
 
   return {
     id: record.id,
@@ -605,13 +672,19 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
     state: record.state_province ?? '',
     stateName: record.state_province === 'Format presets' ? 'Format presets' : stateName(record.state_province),
     isPreset: Boolean(docsFrontend.isPreset),
-    sub: docsFrontend.sub ?? (isDome ? `${record.city} · Dome · ${docsProj.label}` : `${record.city} · ${fmtAr(screenAr)} · ${docsProj.label}`),
+    sub: docsFrontend.sub ?? (
+      isDome
+        ? `${record.city} · Dome · ${projectorSummaryLabel(docsProj, docsFilm)}`
+        : `${record.city} · ${fmtAr(screenAr)} · ${projectorSummaryLabel(docsProj, docsFilm)}`
+    ),
     tag: docsFrontend.tag ?? (isDome ? 'IMAX Dome' : `IMAX ${fmtAr(screenAr)}`),
     blurb: docsFrontend.blurb ?? record.metadata?.notes ?? '',
     screen: {
       w: resolved.screen.width_ft,
       h: resolved.screen.height_ft,
       ar: screenAr,
+      sizeTier: sizeTier?.tier ?? null,
+      sizeLabel: sizeTier?.label ?? null,
       widthConfidence: resolved.screen.width_confidence ?? null,
       geometry: resolved.screen.geometry === 'slight_cylindrical_curve' ? 'slight_curve' : resolved.screen.geometry,
       domeCoveragePct: resolved.screen.dome_coverage_pct == null ? null : resolved.screen.dome_coverage_pct / 100,
@@ -619,6 +692,7 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
       domeVFov: resolved.screen.dome_fov_vertical_deg ?? null,
     },
     seat: {
+      capacity: resolved.seating.capacity ?? null,
       front: resolved.seating.viewing_distance_front_ft,
       mid: resolved.seating.viewing_distance_mid_ft,
       back: resolved.seating.viewing_distance_back_ft,
@@ -652,6 +726,8 @@ function toDocsHome(record: JsonObject, preset: JsonObject): JsonObject {
       w: dims.width / 12,
       h: dims.height / 12,
       ar: resolved.aspect_ratio,
+      sizeTier: null,
+      sizeLabel: null,
       widthConfidence: null,
       geometry: 'flat',
     },
@@ -705,7 +781,13 @@ function buildData() {
   const imaxRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
   const lfExaminerRows = readJson<LFExaminerImportRow[]>('src/data/fixtures/lfexaminer_us_imax_rows.json');
   const imaxRowKeys = new Set(imaxRows.map(docs143190RowMatchKey));
-  const imaxMatchRows = imaxRows.map(docs143190RowToMatchRow);
+  const authored143190MatchRows = authoredVenues
+    .map(source143190MatchRow)
+    .filter((row): row is Source143190MatchRow => Boolean(row));
+  const imaxMatchRows = [
+    ...imaxRows.map(docs143190RowToMatchRow),
+    ...authored143190MatchRows,
+  ];
   const supplementalLFExaminerRows = lfExaminerRows
     .filter((row) => !imaxRowKeys.has(lfExaminerMatchKey(row)))
     .filter((row) => !lfExaminerHas143190Conflict(row, imaxMatchRows))
@@ -724,7 +806,7 @@ function buildData() {
     },
     docs_frontend: {
       canonicalId: 'apple_providence_imax',
-      sub: 'Providence, RI · 1.43 screen · CoLa digital',
+      sub: 'Providence, RI · 1.43 screen · CoLa digital + 15/70 Film',
       tag: 'IMAX 1.43',
       blurb: 'Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.',
       defaultPresentationAr: 1.90,

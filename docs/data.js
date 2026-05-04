@@ -11,13 +11,15 @@ window.LIEMAX_DATA = {
       "state": "RI",
       "stateName": "Rhode Island",
       "isPreset": false,
-      "sub": "Providence, RI · 1.43 screen · CoLa digital",
+      "sub": "Providence, RI · 1.43 screen · CoLa digital + 15/70 Film",
       "tag": "IMAX 1.43",
       "blurb": "Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.",
       "screen": {
         "w": 81.036748,
         "h": 56.758532,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": null,
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -25,6 +27,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40,
         "mid": 67,
         "back": 95,
@@ -146,6 +149,8 @@ window.LIEMAX_DATA = {
         "w": 70,
         "h": 49,
         "ar": 1.4285714285714286,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -153,6 +158,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 35,
         "mid": 58,
         "back": 82,
@@ -255,6 +261,8 @@ window.LIEMAX_DATA = {
         "w": 55,
         "h": 23,
         "ar": 2.391304347826087,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -262,6 +270,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 28,
         "mid": 46,
         "back": 65,
@@ -356,6 +365,8 @@ window.LIEMAX_DATA = {
         "w": 58,
         "h": 24.3,
         "ar": 2.386831275720165,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -363,6 +374,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 29,
         "mid": 49,
         "back": 68,
@@ -457,6 +469,8 @@ window.LIEMAX_DATA = {
         "w": 64.5,
         "h": 34,
         "ar": 1.8970588235294117,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -464,6 +478,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 33,
         "mid": 54,
         "back": 76,
@@ -567,6 +582,8 @@ window.LIEMAX_DATA = {
         "w": 45,
         "h": 24.3,
         "ar": 1.8518518518518519,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -574,6 +591,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 23,
         "mid": 37,
         "back": 53,
@@ -668,6 +686,8 @@ window.LIEMAX_DATA = {
         "w": 78.74016,
         "h": 78.74016,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -675,6 +695,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 39.37008,
         "mid": 39.37008,
         "back": 39.37008,
@@ -701,8 +722,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -710,7 +731,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -750,6 +771,8 @@ window.LIEMAX_DATA = {
         "w": 78.083992,
         "h": 59.05512,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -757,6 +780,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 67.93307304,
         "mid": 117.12598799999999,
         "back": 175.68898199999998,
@@ -859,6 +883,8 @@ window.LIEMAX_DATA = {
         "w": 51.181104,
         "h": 28.543307999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -866,6 +892,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.52756048,
         "mid": 76.771656,
         "back": 115.157484,
@@ -952,13 +979,15 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
-      "sub": "Tempe · 1.43 · IMAX CoLa",
+      "sub": "Tempe · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 80.05249599999999,
         "h": 60.039372,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -966,6 +995,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -1087,6 +1117,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 34.120736,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1094,6 +1126,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -1187,6 +1220,8 @@ window.LIEMAX_DATA = {
         "w": 50.524936000000004,
         "h": 33.136483999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1194,6 +1229,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.956694320000004,
         "mid": 75.78740400000001,
         "back": 113.68110600000001,
@@ -1258,11 +1294,11 @@ window.LIEMAX_DATA = {
           "note": "143190.xyz CSV — 15.4 × 10.1 m."
         },
         "brightness": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
@@ -1287,6 +1323,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 33.136483999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1294,6 +1332,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -1387,6 +1426,8 @@ window.LIEMAX_DATA = {
         "w": 76.115488,
         "h": 76.115488,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -1394,6 +1435,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 38.057744,
         "mid": 38.057744,
         "back": 38.057744,
@@ -1420,8 +1462,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -1429,7 +1471,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -1469,6 +1511,8 @@ window.LIEMAX_DATA = {
         "w": 62.992127999999994,
         "h": 37.073492,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1476,6 +1520,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 54.803151359999994,
         "mid": 94.488192,
         "back": 141.73228799999998,
@@ -1569,6 +1614,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 29.855643999999998,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1576,6 +1623,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -1662,13 +1710,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Dublin · 1.43 · IMAX CoLa",
+      "sub": "Dublin · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 76.3779552,
         "h": 55.77428,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1676,6 +1726,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 66.448821024,
         "mid": 114.5669328,
         "back": 171.8503992,
@@ -1797,6 +1848,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 28.871392000000004,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1804,6 +1857,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -1897,6 +1951,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 27.559056,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -1904,6 +1960,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -1990,13 +2047,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Hollywood · 1.90 · IMAX GT Laser",
+      "sub": "Hollywood · 1.90 · IMAX GT Laser + IMAX SR 15/70 mm, (2D Only)(Temporary)",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 94.160108,
         "h": 45.93176,
         "ar": 1.9,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -2004,6 +2063,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 81.91929395999999,
         "mid": 141.240162,
         "back": 211.860243,
@@ -2118,13 +2178,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Irvine · 1.43 · IMAX CoLa",
+      "sub": "Irvine · 1.43 · IMAX CoLa + IMAX 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 87.926512,
         "h": 67.58530400000001,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2132,6 +2194,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 76.49606544,
         "mid": 131.889768,
         "back": 197.834652,
@@ -2253,6 +2316,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 33.792652000000004,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2260,6 +2325,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -2353,6 +2419,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2360,6 +2428,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -2453,6 +2522,8 @@ window.LIEMAX_DATA = {
         "w": 55.44619599999999,
         "h": 31.496063999999997,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2460,6 +2531,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 48.238190519999996,
         "mid": 83.169294,
         "back": 124.75394099999998,
@@ -2553,6 +2625,8 @@ window.LIEMAX_DATA = {
         "w": 89.895016,
         "h": 66.601052,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -2560,6 +2634,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 78.20866391999999,
         "mid": 134.842524,
         "back": 202.26378599999998,
@@ -2662,6 +2737,8 @@ window.LIEMAX_DATA = {
         "w": 56.6929152,
         "h": 29.986877600000003,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2669,6 +2746,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.322836224,
         "mid": 85.0393728,
         "back": 127.55905920000001,
@@ -2762,6 +2840,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 32.8084,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2769,6 +2849,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -2833,11 +2914,11 @@ window.LIEMAX_DATA = {
           "note": "143190.xyz CSV — 15.5 × 10 m."
         },
         "brightness": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
@@ -2862,6 +2943,8 @@ window.LIEMAX_DATA = {
         "w": 60.69554,
         "h": 33.464568,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2869,6 +2952,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.8051198,
         "mid": 91.04331,
         "back": 136.564965,
@@ -2955,13 +3039,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Ontario · 1.43 · IMAX CoLa",
+      "sub": "Ontario · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 88.910764,
         "h": 66.929136,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -2969,6 +3055,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 77.35236468,
         "mid": 133.36614600000001,
         "back": 200.049219,
@@ -3090,6 +3177,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 28.871392000000004,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3097,6 +3186,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -3183,13 +3273,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Sacramento · 1.43 · IMAX Digital",
+      "sub": "Sacramento · 1.43 · IMAX Digital + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 75.78740400000001,
         "h": 59.05512,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3197,6 +3289,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 65.93504148000001,
         "mid": 113.68110600000001,
         "back": 170.52165900000003,
@@ -3318,6 +3411,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 32.480316,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3325,6 +3420,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -3418,6 +3514,8 @@ window.LIEMAX_DATA = {
         "w": 57.4803168,
         "h": 35.9908148,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3425,6 +3523,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.007875616,
         "mid": 86.2204752,
         "back": 129.3307128,
@@ -3511,13 +3610,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "San Francisco · 1.43 · IMAX GT Laser",
+      "sub": "San Francisco · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 97.769032,
         "h": 75.45932,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -3525,6 +3626,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 85.05905784,
         "mid": 146.653548,
         "back": 219.980322,
@@ -3655,6 +3757,8 @@ window.LIEMAX_DATA = {
         "w": 82.021,
         "h": 82.021,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -3662,6 +3766,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 41.0105,
         "mid": 41.0105,
         "back": 41.0105,
@@ -3688,8 +3793,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -3697,7 +3802,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -3737,6 +3842,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3744,6 +3851,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -3837,6 +3945,8 @@ window.LIEMAX_DATA = {
         "w": 68.56955599999999,
         "h": 41.0105,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3844,6 +3954,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 59.655513719999995,
         "mid": 102.854334,
         "back": 154.281501,
@@ -3937,6 +4048,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 37.073492,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -3944,6 +4057,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -4037,6 +4151,8 @@ window.LIEMAX_DATA = {
         "w": 52.821524000000004,
         "h": 31.496063999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4044,6 +4160,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.954725880000005,
         "mid": 79.232286,
         "back": 118.84842900000001,
@@ -4137,6 +4254,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 33.464568,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4144,6 +4263,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -4237,6 +4357,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 32.152232000000005,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4244,6 +4366,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -4337,6 +4460,8 @@ window.LIEMAX_DATA = {
         "w": 46.6863532,
         "h": 22.7034128,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4344,6 +4469,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40.617127284,
         "mid": 70.0295298,
         "back": 105.0442947,
@@ -4430,13 +4556,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Universal City · 1.43 · IMAX GT Laser",
+      "sub": "Universal City · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 79.068244,
         "h": 58.070868,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -4444,6 +4572,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 68.78937228000001,
         "mid": 118.60236600000002,
         "back": 177.90354900000003,
@@ -4574,6 +4703,8 @@ window.LIEMAX_DATA = {
         "w": 51.181104,
         "h": 32.8084,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4581,6 +4712,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.52756048,
         "mid": 76.771656,
         "back": 115.157484,
@@ -4674,6 +4806,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 34.776904,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4681,6 +4815,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -4774,6 +4909,8 @@ window.LIEMAX_DATA = {
         "w": 57.414699999999996,
         "h": 34.776904,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4781,6 +4918,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.95078899999999,
         "mid": 86.12205,
         "back": 129.183075,
@@ -4874,6 +5012,8 @@ window.LIEMAX_DATA = {
         "w": 59.711287999999996,
         "h": 33.136483999999996,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4881,6 +5021,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 51.948820559999994,
         "mid": 89.566932,
         "back": 134.35039799999998,
@@ -4974,6 +5115,8 @@ window.LIEMAX_DATA = {
         "w": 44.947508,
         "h": 22.96588,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -4981,6 +5124,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.104331959999996,
         "mid": 67.421262,
         "back": 101.13189299999999,
@@ -5074,6 +5218,8 @@ window.LIEMAX_DATA = {
         "w": 75.45932,
         "h": 45.93176,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -5081,6 +5227,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 65.6496084,
         "mid": 113.18898000000002,
         "back": 169.78347000000002,
@@ -5183,6 +5330,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.543307999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5190,6 +5339,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -5283,6 +5433,8 @@ window.LIEMAX_DATA = {
         "w": 55.44619599999999,
         "h": 30.511812000000003,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5290,6 +5442,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 48.238190519999996,
         "mid": 83.169294,
         "back": 124.75394099999998,
@@ -5383,6 +5536,8 @@ window.LIEMAX_DATA = {
         "w": 84.973756,
         "h": 55.118112,
         "ar": 1.9,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5390,6 +5545,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 73.92716772,
         "mid": 127.460634,
         "back": 191.19095099999998,
@@ -5476,13 +5632,15 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
-      "sub": "Fort Lauderdale · 1.43 · IMAX GT Laser",
+      "sub": "Fort Lauderdale · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 80.05249599999999,
         "h": 60.039372,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -5490,6 +5648,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -5620,6 +5779,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 31.824147999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5627,6 +5788,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -5720,6 +5882,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 26.902887999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5727,6 +5891,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -5820,6 +5985,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5827,6 +5994,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -5920,6 +6088,8 @@ window.LIEMAX_DATA = {
         "w": 60.367456,
         "h": 33.792652000000004,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -5927,6 +6097,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.519686719999996,
         "mid": 90.55118399999999,
         "back": 135.826776,
@@ -6020,6 +6191,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 32.152232000000005,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6027,6 +6200,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -6120,6 +6294,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 29.855643999999998,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6127,6 +6303,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -6220,6 +6397,8 @@ window.LIEMAX_DATA = {
         "w": 56.430448,
         "h": 31.824147999999997,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6227,6 +6406,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.09448976,
         "mid": 84.64567199999999,
         "back": 126.968508,
@@ -6313,13 +6493,15 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
-      "sub": "Buford · 1.43 · IMAX CoLa",
+      "sub": "Buford · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 81.364832,
         "h": 59.383204000000006,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6327,6 +6509,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 70.78740384000001,
         "mid": 122.04724800000001,
         "back": 183.070872,
@@ -6448,6 +6631,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 30.839896,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6455,6 +6640,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -6548,6 +6734,8 @@ window.LIEMAX_DATA = {
         "w": 58.398952,
         "h": 32.480316,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6555,6 +6743,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.80708824,
         "mid": 87.598428,
         "back": 131.397642,
@@ -6648,6 +6837,8 @@ window.LIEMAX_DATA = {
         "w": 101.04987200000001,
         "h": 76.115488,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -6655,6 +6846,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 87.91338864000001,
         "mid": 151.57480800000002,
         "back": 227.36221200000003,
@@ -6757,6 +6949,8 @@ window.LIEMAX_DATA = {
         "w": 92.22441239999999,
         "h": 48.6548572,
         "ar": 1.9,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -6764,6 +6958,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 80.23523878799999,
         "mid": 138.33661859999998,
         "back": 207.50492789999998,
@@ -6857,6 +7052,8 @@ window.LIEMAX_DATA = {
         "w": 56.988190800000005,
         "h": 28.9698172,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6864,6 +7061,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.57972599600001,
         "mid": 85.4822862,
         "back": 128.22342930000002,
@@ -6928,11 +7126,11 @@ window.LIEMAX_DATA = {
           "note": "143190.xyz CSV — 17.37 × 8.83 m."
         },
         "brightness": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
@@ -6957,6 +7155,8 @@ window.LIEMAX_DATA = {
         "w": 59.97375520000001,
         "h": 35.0393712,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -6964,6 +7164,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.177167024000006,
         "mid": 89.96063280000001,
         "back": 134.9409492,
@@ -7028,11 +7229,11 @@ window.LIEMAX_DATA = {
           "note": "143190.xyz CSV — 18.28 × 10.68 m."
         },
         "brightness": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
@@ -7057,6 +7258,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 29.52756,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7064,6 +7267,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -7150,13 +7354,15 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
-      "sub": "Indianapolis · 1.43 · IMAX Digital",
+      "sub": "Indianapolis · 1.43 · IMAX Digital + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 83.98950400000001,
         "h": 62.992127999999994,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7164,6 +7370,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 73.07086848000002,
         "mid": 125.98425600000002,
         "back": 188.97638400000002,
@@ -7285,6 +7492,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 60.039372,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -7292,6 +7501,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 30.019686,
         "mid": 30.019686,
         "back": 30.019686,
@@ -7318,8 +7528,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -7327,7 +7537,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -7367,6 +7577,8 @@ window.LIEMAX_DATA = {
         "w": 61.023624000000005,
         "h": 29.52756,
         "ar": 2.4,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7374,6 +7586,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 53.090552880000004,
         "mid": 91.535436,
         "back": 137.303154,
@@ -7467,6 +7680,8 @@ window.LIEMAX_DATA = {
         "w": 76.115488,
         "h": 76.115488,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -7474,6 +7689,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 38.057744,
         "mid": 38.057744,
         "back": 38.057744,
@@ -7500,8 +7716,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -7509,7 +7725,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -7549,6 +7765,8 @@ window.LIEMAX_DATA = {
         "w": 53.805775999999994,
         "h": 30.839896,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7556,6 +7774,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.81102512,
         "mid": 80.708664,
         "back": 121.06299599999998,
@@ -7649,6 +7868,8 @@ window.LIEMAX_DATA = {
         "w": 84.317588,
         "h": 65.6168,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -7656,6 +7877,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40,
         "mid": 75,
         "back": 84,
@@ -7758,6 +7980,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 30.839896,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7765,6 +7989,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -7858,6 +8083,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 23.950132,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7865,6 +8092,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -7958,6 +8186,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 25.262468000000002,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -7965,6 +8195,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -8058,6 +8289,8 @@ window.LIEMAX_DATA = {
         "w": 44.947508,
         "h": 26.902887999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -8065,6 +8298,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.104331959999996,
         "mid": 67.421262,
         "back": 101.13189299999999,
@@ -8158,6 +8392,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -8165,6 +8401,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -8258,6 +8495,8 @@ window.LIEMAX_DATA = {
         "w": 67.58530400000001,
         "h": 67.58530400000001,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -8265,6 +8504,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 33.792652000000004,
         "mid": 33.792652000000004,
         "back": 33.792652000000004,
@@ -8352,13 +8592,15 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
-      "sub": "Grand Rapids · 1.43 · IMAX Digital",
+      "sub": "Grand Rapids · 1.43 · IMAX Digital + IMAX SR 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.43,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -8366,6 +8608,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -8487,6 +8730,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 28.871392000000004,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -8494,6 +8739,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -8587,6 +8833,8 @@ window.LIEMAX_DATA = {
         "w": 89.895016,
         "h": 89.895016,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -8594,6 +8842,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 44.947508,
         "mid": 44.947508,
         "back": 44.947508,
@@ -8620,8 +8869,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -8629,7 +8878,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -8669,6 +8918,8 @@ window.LIEMAX_DATA = {
         "w": 83.98950400000001,
         "h": 62.33596,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -8676,6 +8927,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 73.07086848000002,
         "mid": 125.98425600000002,
         "back": 188.97638400000002,
@@ -8778,6 +9030,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 33.136483999999996,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -8785,6 +9039,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -8878,6 +9133,8 @@ window.LIEMAX_DATA = {
         "w": 79.068244,
         "h": 79.068244,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -8885,6 +9142,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 39.534122,
         "mid": 39.534122,
         "back": 39.534122,
@@ -8911,8 +9169,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -8920,7 +9178,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -8960,6 +9218,8 @@ window.LIEMAX_DATA = {
         "w": 79.068244,
         "h": 79.068244,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -8967,6 +9227,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 39.534122,
         "mid": 39.534122,
         "back": 39.534122,
@@ -8993,8 +9254,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -9002,7 +9263,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -9042,6 +9303,8 @@ window.LIEMAX_DATA = {
         "w": 48.228348,
         "h": 26.902887999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9049,6 +9312,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 41.958662759999996,
         "mid": 72.342522,
         "back": 108.51378299999999,
@@ -9142,6 +9406,8 @@ window.LIEMAX_DATA = {
         "w": 62.664044000000004,
         "h": 34.44882,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9149,6 +9415,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 54.517718280000004,
         "mid": 93.99606600000001,
         "back": 140.994099,
@@ -9242,6 +9509,8 @@ window.LIEMAX_DATA = {
         "w": 65.944884,
         "h": 35.761156,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9249,6 +9518,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 57.372049080000004,
         "mid": 98.917326,
         "back": 148.375989,
@@ -9342,6 +9612,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 29.855643999999998,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9349,6 +9621,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -9442,6 +9715,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9449,6 +9724,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -9542,6 +9818,8 @@ window.LIEMAX_DATA = {
         "w": 44.947508,
         "h": 23.950132,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9549,6 +9827,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.104331959999996,
         "mid": 67.421262,
         "back": 101.13189299999999,
@@ -9642,6 +9921,8 @@ window.LIEMAX_DATA = {
         "w": 58.398952,
         "h": 31.824147999999997,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9649,6 +9930,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.80708824,
         "mid": 87.598428,
         "back": 131.397642,
@@ -9742,6 +10024,8 @@ window.LIEMAX_DATA = {
         "w": 63.648295999999995,
         "h": 37.401576,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9749,6 +10033,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 55.374017519999995,
         "mid": 95.472444,
         "back": 143.208666,
@@ -9842,6 +10127,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 30.183728,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9849,6 +10136,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -9942,6 +10230,8 @@ window.LIEMAX_DATA = {
         "w": 65.944884,
         "h": 37.073492,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -9949,6 +10239,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 57.372049080000004,
         "mid": 98.917326,
         "back": 148.375989,
@@ -10042,6 +10333,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 33.136483999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10049,6 +10342,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -10142,6 +10436,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 26.902887999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10149,6 +10445,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -10242,6 +10539,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10249,6 +10548,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -10342,6 +10642,8 @@ window.LIEMAX_DATA = {
         "w": 81.364832,
         "h": 59.383204000000006,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10349,6 +10651,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 70.78740384000001,
         "mid": 122.04724800000001,
         "back": 183.070872,
@@ -10442,6 +10745,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 30.183728,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10449,6 +10754,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -10542,6 +10848,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10549,6 +10857,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -10642,6 +10951,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 27.559056,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10649,6 +10960,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -10735,13 +11047,15 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
-      "sub": "New York · 1.43 · IMAX GT Laser",
+      "sub": "New York · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 100.9842552,
         "h": 75.59055359999999,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -10749,6 +11063,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 87.856302024,
         "mid": 151.4763828,
         "back": 227.21457420000002,
@@ -10872,13 +11187,15 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
-      "sub": "Rochester · 1.90 · IMAX CoLa",
+      "sub": "Rochester · 1.90 · IMAX CoLa + IMAX SR 15/70 mm",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -10886,6 +11203,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -11016,6 +11334,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 30.839896,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11023,6 +11343,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -11116,6 +11437,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11123,6 +11446,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -11216,6 +11540,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 38.057744,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11223,6 +11549,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -11316,6 +11643,8 @@ window.LIEMAX_DATA = {
         "w": 72.17848,
         "h": 72.17848,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -11323,6 +11652,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": null,
         "front": 36.08924,
         "mid": 36.08924,
         "back": 36.08924,
@@ -11349,8 +11679,8 @@ window.LIEMAX_DATA = {
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K DCI digital projection with dome anamorphic/fisheye optics; no 15/70 scan-equivalent film resolution claim.",
-        "brightness_fl": 22,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
         "brightness_nits_full": null,
         "nativeContrast": null,
         "isPerPixelEmissive": false,
@@ -11358,7 +11688,7 @@ window.LIEMAX_DATA = {
         "hdrLabel": "—",
         "hdrDynamic": null,
         "min_ar": 1.43,
-        "type": "imax_dome_laser",
+        "type": "imax_dome_laser_legacy",
         "display_name": "IMAX Laser for Dome"
       },
       "filmProjection": null,
@@ -11398,6 +11728,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 30.183728,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11405,6 +11737,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -11498,6 +11831,8 @@ window.LIEMAX_DATA = {
         "w": 80.05249599999999,
         "h": 60.039372,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11505,6 +11840,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -11598,6 +11934,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 32.152232000000005,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11605,6 +11943,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -11691,13 +12030,15 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
-      "sub": "King of Prussia · 1.43 · IMAX CoLa",
+      "sub": "King of Prussia · 1.43 · IMAX CoLa + IMAX 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 73.162732,
         "h": 52.165356,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11705,6 +12046,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 63.651576840000004,
         "mid": 109.74409800000001,
         "back": 164.616147,
@@ -11826,6 +12168,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 26.902887999999997,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11833,6 +12177,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -11926,6 +12271,8 @@ window.LIEMAX_DATA = {
         "w": 50.196852,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -11933,6 +12280,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.67126124,
         "mid": 75.295278,
         "back": 112.942917,
@@ -12026,6 +12374,8 @@ window.LIEMAX_DATA = {
         "w": 87.27034400000001,
         "h": 68.89764,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -12033,6 +12383,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 75.92519928,
         "mid": 130.905516,
         "back": 196.35827400000002,
@@ -12135,6 +12486,8 @@ window.LIEMAX_DATA = {
         "w": 69.225724,
         "h": 38.057744,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12142,6 +12495,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.226379879999996,
         "mid": 103.83858599999999,
         "back": 155.757879,
@@ -12235,6 +12589,8 @@ window.LIEMAX_DATA = {
         "w": 61.023624000000005,
         "h": 36.745408,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12242,6 +12598,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 53.090552880000004,
         "mid": 91.535436,
         "back": 137.303154,
@@ -12328,13 +12685,15 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
-      "sub": "Nashville · 1.43 · IMAX CoLa",
+      "sub": "Nashville · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 89.895016,
         "h": 65.6168,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12342,6 +12701,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 78.20866391999999,
         "mid": 134.842524,
         "back": 202.26378599999998,
@@ -12463,6 +12823,8 @@ window.LIEMAX_DATA = {
         "w": 82.349084,
         "h": 62.33596,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -12470,6 +12832,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 71.64370308000001,
         "mid": 123.52362600000001,
         "back": 185.285439,
@@ -12572,6 +12935,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 29.52756,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12579,6 +12944,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -12672,6 +13038,8 @@ window.LIEMAX_DATA = {
         "w": 65.6168,
         "h": 36.417324,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12679,6 +13047,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 57.086616,
         "mid": 98.42519999999999,
         "back": 147.6378,
@@ -12765,13 +13134,15 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
-      "sub": "Dallas · 1.43 · IMAX Digital",
+      "sub": "Dallas · 1.43 · IMAX Digital + IMAX SR 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 70.866144,
         "h": 52.821524000000004,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12779,6 +13150,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 61.65354528,
         "mid": 106.299216,
         "back": 159.448824,
@@ -12900,6 +13272,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 28.871392000000004,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -12907,6 +13281,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -13000,6 +13375,8 @@ window.LIEMAX_DATA = {
         "w": 56.102364,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13007,6 +13384,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 48.80905668,
         "mid": 84.153546,
         "back": 126.23031900000001,
@@ -13100,6 +13478,8 @@ window.LIEMAX_DATA = {
         "w": 75.131236,
         "h": 57.08661599999999,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13107,6 +13487,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 65.36417532,
         "mid": 112.696854,
         "back": 169.045281,
@@ -13200,6 +13581,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.43,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13207,6 +13590,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -13300,6 +13684,8 @@ window.LIEMAX_DATA = {
         "w": 52.49344,
         "h": 32.8084,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13307,6 +13693,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.6692928,
         "mid": 78.74016,
         "back": 118.11024,
@@ -13400,6 +13787,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 27.88714,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13407,6 +13796,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -13500,6 +13890,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 31.16798,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13507,6 +13899,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -13600,6 +13993,8 @@ window.LIEMAX_DATA = {
         "w": 85.629924,
         "h": 62.33596,
         "ar": 1.43,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -13607,6 +14002,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 74.49803388000001,
         "mid": 128.444886,
         "back": 192.667329,
@@ -13709,6 +14105,8 @@ window.LIEMAX_DATA = {
         "w": 64.960632,
         "h": 40.026247999999995,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13716,6 +14114,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 56.515749840000005,
         "mid": 97.440948,
         "back": 146.16142200000002,
@@ -13809,6 +14208,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 29.855643999999998,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13816,6 +14217,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -13909,6 +14311,8 @@ window.LIEMAX_DATA = {
         "w": 52.49344,
         "h": 29.52756,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -13916,6 +14320,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.6692928,
         "mid": 78.74016,
         "back": 118.11024,
@@ -14009,6 +14414,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 28.871392000000004,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14016,6 +14423,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -14109,6 +14517,8 @@ window.LIEMAX_DATA = {
         "w": 62.992127999999994,
         "h": 35.104988,
         "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14116,6 +14526,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 54.803151359999994,
         "mid": 94.488192,
         "back": 141.73228799999998,
@@ -14209,6 +14620,8 @@ window.LIEMAX_DATA = {
         "w": 80.05249599999999,
         "h": 59.383204000000006,
         "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "domeCoveragePct": null,
@@ -14216,6 +14629,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -14318,6 +14732,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.543307999999996,
         "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14325,6 +14741,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -14389,11 +14806,11 @@ window.LIEMAX_DATA = {
           "note": "143190.xyz CSV — 15.8 × 8.7 m."
         },
         "brightness": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "published_cto",
+          "q": "community_estimate",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
@@ -14418,6 +14835,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14425,6 +14844,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 350,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -14518,6 +14938,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 27.559056,
         "ar": 1.8928571428571428,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14525,6 +14947,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 250,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -14618,6 +15041,8 @@ window.LIEMAX_DATA = {
         "w": 61.351707999999995,
         "h": 32.8084,
         "ar": 1.8699999999999999,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14625,6 +15050,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 338,
         "front": 53.375985959999994,
         "mid": 92.02756199999999,
         "back": 138.04134299999998,
@@ -14718,6 +15144,8 @@ window.LIEMAX_DATA = {
         "w": 60.69554,
         "h": 34.44882,
         "ar": 1.7619047619047619,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14725,6 +15153,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 338,
         "front": 52.8051198,
         "mid": 91.04331,
         "back": 136.564965,
@@ -14818,6 +15247,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 26.574804,
         "ar": 1.8024691358024691,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14825,6 +15256,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -14918,6 +15350,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 27.88714,
         "ar": 1.9529411764705884,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -14925,6 +15359,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 306,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -15018,6 +15453,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.871392000000004,
         "ar": 1.7954545454545454,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15025,6 +15462,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -15118,6 +15556,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 42.322836,
         "ar": 1.6511627906976745,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15125,6 +15565,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 375,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -15218,6 +15659,8 @@ window.LIEMAX_DATA = {
         "w": 60.69554,
         "h": 33.464568,
         "ar": 1.8137254901960786,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15225,6 +15668,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 409,
         "front": 52.8051198,
         "mid": 91.04331,
         "back": 136.564965,
@@ -15318,6 +15762,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 35.104988,
         "ar": 1.6542056074766356,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15325,6 +15771,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -15418,6 +15865,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 29.199476,
         "ar": 1.8202247191011234,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15425,6 +15874,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 283,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -15518,6 +15968,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 26.902887999999997,
         "ar": 1.8414634146341464,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15525,6 +15977,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -15618,6 +16071,8 @@ window.LIEMAX_DATA = {
         "w": 47.57218,
         "h": 23.950132,
         "ar": 1.9863013698630136,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15625,6 +16080,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 342,
         "front": 41.3877966,
         "mid": 71.35827,
         "back": 107.037405,
@@ -15703,206 +16159,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_alhambra_edwards_renaissance_stadium_14_and_imax",
-      "canonicalId": "imax_us_ca_alhambra_edwards_renaissance_stadium_14_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Renaissance Stadium 14 & IMAX",
-      "city": "Alhambra",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Alhambra · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 50.524936000000004,
-        "h": 33.136483999999996,
-        "ar": 1.5247524752475248,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 43.956694320000004,
-        "mid": 75.78740400000001,
-        "back": 113.68110600000001,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.0 x 50.5 ft./ 10.1 x 15.4 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
-      "id": "imax_us_ca_aliso_viejo_edwards_aliso_viejo_stadium_20_and_imax",
-      "canonicalId": "imax_us_ca_aliso_viejo_edwards_aliso_viejo_stadium_20_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Aliso Viejo Stadium 20 & IMAX",
-      "city": "Aliso Viejo",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Aliso Viejo · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 54.13386,
-        "h": 34.120736,
-        "ar": 1.5865384615384615,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 34.0 x 54.0 ft./ 10.4 x 16.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_bakersfield_reading_cinemas_valley_plaza_16_and_imax",
       "canonicalId": "imax_us_ca_bakersfield_reading_cinemas_valley_plaza_16_and_imax",
       "kind": "cinema",
@@ -15918,6 +16174,8 @@ window.LIEMAX_DATA = {
         "w": 58.398952,
         "h": 32.480316,
         "ar": 1.797979797979798,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -15925,6 +16183,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.80708824,
         "mid": 87.598428,
         "back": 131.397642,
@@ -16018,6 +16277,8 @@ window.LIEMAX_DATA = {
         "w": 57.74278400000001,
         "h": 35.104988,
         "ar": 1.6448598130841123,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16025,6 +16286,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 353,
         "front": 50.236222080000005,
         "mid": 86.61417600000001,
         "back": 129.921264,
@@ -16118,6 +16380,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 28.871392000000004,
         "ar": 1.659090909090909,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16125,6 +16389,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 230,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -16218,6 +16483,8 @@ window.LIEMAX_DATA = {
         "w": 74.475068,
         "h": 42.65092,
         "ar": 1.7461538461538462,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16225,6 +16492,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 64.79330915999999,
         "mid": 111.71260199999999,
         "back": 167.56890299999998,
@@ -16318,6 +16586,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 27.88714,
         "ar": 1.9529411764705884,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16325,6 +16595,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 375,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -16418,6 +16689,8 @@ window.LIEMAX_DATA = {
         "w": 50.524936000000004,
         "h": 27.559056,
         "ar": 1.8333333333333333,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16425,6 +16698,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 316,
         "front": 43.956694320000004,
         "mid": 75.78740400000001,
         "back": 113.68110600000001,
@@ -16518,6 +16792,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 31.496063999999997,
         "ar": 1.5729166666666667,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16525,6 +16801,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 290,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -16618,6 +16895,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 33.136483999999996,
         "ar": 1.5346534653465347,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16625,6 +16904,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 331,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -16718,6 +16998,8 @@ window.LIEMAX_DATA = {
         "w": 48.228348,
         "h": 29.52756,
         "ar": 1.6333333333333333,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16725,6 +17007,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 41.958662759999996,
         "mid": 72.342522,
         "back": 108.51378299999999,
@@ -16811,13 +17094,15 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
-      "sub": "Fresno · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Fresno · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.3229813664596273,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16825,6 +17110,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 273,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -16946,6 +17232,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 32.152232000000005,
         "ar": 1.6224489795918366,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -16953,6 +17241,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -17031,106 +17320,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_long_beach_edwards_long_beach_stadium_26_and_imax",
-      "canonicalId": "imax_us_ca_long_beach_edwards_long_beach_stadium_26_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Long Beach Stadium 26 & IMAX",
-      "city": "Long Beach",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Long Beach · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 54.13386,
-        "h": 33.792652000000004,
-        "ar": 1.6019417475728155,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.8 x 54.0 ft./ 10.3 x 16.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_norwalk_amc_norwalk_20_and_imax",
       "canonicalId": "imax_us_ca_norwalk_amc_norwalk_20_and_imax",
       "kind": "cinema",
@@ -17146,6 +17335,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 26.902887999999997,
         "ar": 2.0121951219512195,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17153,6 +17344,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 334,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -17231,134 +17423,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_ontario_edwards_ontario_palace_stadium_22_and_imax",
-      "canonicalId": "imax_us_ca_ontario_edwards_ontario_palace_stadium_22_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Ontario Palace Stadium 22 & IMAX",
-      "city": "Ontario",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Ontario · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX 15/70 + Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 88.910764,
-        "h": 66.929136,
-        "ar": 1.3284313725490198,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 77.35236468,
-        "mid": 133.36614600000001,
-        "back": 200.049219,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": true,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "film_143",
-          "ar": 1.43,
-          "label": "1.43 · 15/70mm Film",
-          "enabled": true,
-          "isBookingDependent": true,
-          "isFilmMode": true,
-          "projection": "film"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": {
-        "id": "film_1570",
-        "label": "IMAX 15/70 Film",
-        "light": "Xenon (Film)",
-        "resH": null,
-        "resV": null,
-        "scanEquivLow": 8800,
-        "scanEquivHigh": 11700,
-        "scanEquivLabel": null,
-        "brightness_fl": null,
-        "brightness_nits_full": null,
-        "nativeContrast": null,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "photochemical",
-        "hdrLabel": "Photochemical latitude",
-        "hdrDynamic": null,
-        "min_ar": 1.43,
-        "type": "imax_1570_film",
-        "display_name": "IMAX 15/70 Film"
-      },
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 67.0 x 89.0 ft./ 20.4 x 27.1 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_rancho_mirage_regal_rancho_mirage_stadium_16_and_imax",
       "canonicalId": "imax_us_ca_rancho_mirage_regal_rancho_mirage_stadium_16_and_imax",
       "kind": "cinema",
@@ -17374,6 +17438,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 28.543307999999996,
         "ar": 1.781609195402299,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17381,6 +17447,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -17474,6 +17541,8 @@ window.LIEMAX_DATA = {
         "w": 70.866144,
         "h": 39.698164,
         "ar": 1.785123966942149,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17481,6 +17550,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 61.65354528,
         "mid": 106.299216,
         "back": 159.448824,
@@ -17574,6 +17644,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 36.08924,
         "ar": 1.5818181818181818,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17581,6 +17653,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 250,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -17674,6 +17747,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 30.511812000000003,
         "ar": 1.7741935483870965,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17681,6 +17756,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -17774,6 +17850,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 25.918636,
         "ar": 1.9113924050632911,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17781,6 +17859,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -17874,6 +17953,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 29.855643999999998,
         "ar": 1.7362637362637363,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17881,6 +17962,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 298,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -17974,6 +18056,8 @@ window.LIEMAX_DATA = {
         "w": 55.44619599999999,
         "h": 29.52756,
         "ar": 1.8777777777777775,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -17981,6 +18065,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 350,
         "front": 48.238190519999996,
         "mid": 83.169294,
         "back": 124.75394099999998,
@@ -18059,106 +18144,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_santa_clarita_edwards_valencia_stadium_12_and_imax",
-      "canonicalId": "imax_us_ca_santa_clarita_edwards_valencia_stadium_12_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Valencia Stadium 12 & IMAX",
-      "city": "Santa Clarita",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Santa Clarita · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 68.56955599999999,
-        "h": 41.0105,
-        "ar": 1.672,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 59.655513719999995,
-        "mid": 102.854334,
-        "back": 154.281501,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 41.0 x 68.5 ft./ 12.5 x 20.9 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_simi_valley_regal_civic_center_stadium_16_and_imax",
       "canonicalId": "imax_us_ca_simi_valley_regal_civic_center_stadium_16_and_imax",
       "kind": "cinema",
@@ -18174,6 +18159,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 27.88714,
         "ar": 1.6823529411764706,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18181,6 +18168,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 283,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -18259,306 +18247,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_south_gate_edwards_south_gate_stadium_20_and_imax",
-      "canonicalId": "imax_us_ca_south_gate_edwards_south_gate_stadium_20_and_imax",
-      "kind": "cinema",
-      "name": "Edwards South Gate Stadium 20 & IMAX",
-      "city": "South Gate",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "South Gate · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 58.070868,
-        "h": 37.073492,
-        "ar": 1.566371681415929,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 37.0 x 58.0 ft./ 11.3 x 17.7 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
-      "id": "imax_us_ca_stockton_regal_stockton_city_center_stadium_16_and_imax",
-      "canonicalId": "imax_us_ca_stockton_regal_stockton_city_center_stadium_16_and_imax",
-      "kind": "cinema",
-      "name": "Regal Stockton City Center Stadium 16 & IMAX",
-      "city": "Stockton",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Stockton · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 52.821524000000004,
-        "h": 31.496063999999997,
-        "ar": 1.6770833333333335,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 45.954725880000005,
-        "mid": 79.232286,
-        "back": 118.84842900000001,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 52.8 ft./ 9.6 x 16.1 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
-      "id": "imax_us_ca_temecula_edwards_temecula_stadium_15_and_imax",
-      "canonicalId": "imax_us_ca_temecula_edwards_temecula_stadium_15_and_imax",
-      "kind": "cinema",
-      "name": "Edwards Temecula Stadium 15 & IMAX",
-      "city": "Temecula",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "Temecula · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 50.85302,
-        "h": 33.464568,
-        "ar": 1.519607843137255,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 33.5 x 51.0 ft./ 10.2 x 15.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_torrance_amc_rolling_hills_20_and_imax",
       "canonicalId": "imax_us_ca_torrance_amc_rolling_hills_20_and_imax",
       "kind": "cinema",
@@ -18574,6 +18262,8 @@ window.LIEMAX_DATA = {
         "w": 46.587928,
         "h": 25.262468000000002,
         "ar": 1.844155844155844,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18581,6 +18271,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40.531497359999996,
         "mid": 69.881892,
         "back": 104.82283799999999,
@@ -18674,6 +18365,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 26.902887999999997,
         "ar": 1.8902439024390245,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18681,6 +18374,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 361,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -18774,6 +18468,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 29.855643999999998,
         "ar": 1.945054945054945,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18781,6 +18477,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 335,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -18874,6 +18571,8 @@ window.LIEMAX_DATA = {
         "w": 45.603676,
         "h": 28.215224,
         "ar": 1.616279069767442,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18881,6 +18580,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.67519812,
         "mid": 68.405514,
         "back": 102.608271,
@@ -18974,6 +18674,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.3229813664596273,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -18981,6 +18683,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 263,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -19074,6 +18777,8 @@ window.LIEMAX_DATA = {
         "w": 64.632548,
         "h": 40.682416,
         "ar": 1.5887096774193548,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19081,6 +18786,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 413,
         "front": 56.23031676,
         "mid": 96.948822,
         "back": 145.423233,
@@ -19167,13 +18873,15 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
-      "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 70.866144,
         "h": 41.994752000000005,
         "ar": 1.6875,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19181,6 +18889,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 365,
         "front": 61.65354528,
         "mid": 106.299216,
         "back": 159.448824,
@@ -19302,6 +19011,8 @@ window.LIEMAX_DATA = {
         "w": 56.102364,
         "h": 42.979003999999996,
         "ar": 1.3053435114503817,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19309,6 +19020,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 416,
         "front": 48.80905668,
         "mid": 84.153546,
         "back": 126.23031900000001,
@@ -19402,6 +19114,8 @@ window.LIEMAX_DATA = {
         "w": 51.181104,
         "h": 32.8084,
         "ar": 1.56,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19409,6 +19123,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 272,
         "front": 44.52756048,
         "mid": 76.771656,
         "back": 115.157484,
@@ -19502,6 +19217,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 27.559056,
         "ar": 1.7976190476190474,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19509,6 +19226,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 304,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -19602,6 +19320,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 22.96588,
         "ar": 2.085714285714286,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19609,6 +19329,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 226,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -19702,6 +19423,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 35.104988,
         "ar": 1.7102803738317758,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19709,6 +19432,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 586,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -19802,6 +19526,8 @@ window.LIEMAX_DATA = {
         "w": 75.131236,
         "h": 47.900264,
         "ar": 1.5684931506849316,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19809,6 +19535,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 300,
         "front": 65.36417532,
         "mid": 112.696854,
         "back": 169.045281,
@@ -19902,6 +19629,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.543307999999996,
         "ar": 1.8160919540229887,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -19909,6 +19638,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 265,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -20002,6 +19732,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 23.622048,
         "ar": 1.9861111111111112,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20009,6 +19741,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 295,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -20102,6 +19835,8 @@ window.LIEMAX_DATA = {
         "w": 58.398952,
         "h": 32.152232000000005,
         "ar": 1.816326530612245,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20109,6 +19844,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 50.80708824,
         "mid": 87.598428,
         "back": 131.397642,
@@ -20187,106 +19923,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_fl_delray_beach_frank_delray_marketplace_stadium_12_and_imax",
-      "canonicalId": "imax_us_fl_delray_beach_frank_delray_marketplace_stadium_12_and_imax",
-      "kind": "cinema",
-      "name": "Frank Delray MarketPlace Stadium 12 & IMAX",
-      "city": "Delray Beach",
-      "state": "FL",
-      "stateName": "Florida",
-      "isPreset": false,
-      "sub": "Delray Beach · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 84.973756,
-        "h": 55.118112,
-        "ar": 1.5416666666666665,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 73.92716772,
-        "mid": 127.460634,
-        "back": 191.19095099999998,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.0 x 85.0 ft./ 16.8 x 25.9 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_fl_destin_amc_destin_commons_14_and_imax",
       "canonicalId": "imax_us_fl_destin_amc_destin_commons_14_and_imax",
       "kind": "cinema",
@@ -20302,6 +19938,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 32.152232000000005,
         "ar": 1.7755102040816324,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20309,6 +19947,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 285,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -20402,6 +20041,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 30.183728,
         "ar": 1.8260869565217392,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20409,6 +20050,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 387,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -20502,6 +20144,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 29.52756,
         "ar": 1.8111111111111111,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20509,6 +20153,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 349,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -20602,6 +20247,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 29.199476,
         "ar": 1.8651685393258428,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20609,6 +20256,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 298,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -20702,6 +20350,8 @@ window.LIEMAX_DATA = {
         "w": 43.307088,
         "h": 23.950132,
         "ar": 1.8082191780821917,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20709,6 +20359,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 187,
         "front": 37.67716656,
         "mid": 64.960632,
         "back": 97.440948,
@@ -20802,6 +20453,8 @@ window.LIEMAX_DATA = {
         "w": 43.307088,
         "h": 23.950132,
         "ar": 1.8082191780821917,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20809,6 +20462,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 187,
         "front": 37.67716656,
         "mid": 64.960632,
         "back": 97.440948,
@@ -20902,6 +20556,8 @@ window.LIEMAX_DATA = {
         "w": 46.259844,
         "h": 25.918636,
         "ar": 1.7848101265822784,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -20909,6 +20565,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40.24606428,
         "mid": 69.38976600000001,
         "back": 104.084649,
@@ -21002,6 +20659,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 26.902887999999997,
         "ar": 1.853658536585366,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21009,6 +20668,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -21102,6 +20762,8 @@ window.LIEMAX_DATA = {
         "w": 56.430448,
         "h": 31.16798,
         "ar": 1.8105263157894735,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21109,6 +20771,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 375,
         "front": 49.09448976,
         "mid": 84.64567199999999,
         "back": 126.968508,
@@ -21202,6 +20865,8 @@ window.LIEMAX_DATA = {
         "w": 58.070868,
         "h": 32.152232000000005,
         "ar": 1.8061224489795917,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21209,6 +20874,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 447,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -21295,13 +20961,15 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
-      "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 84.645672,
         "h": 63.97638,
         "ar": 1.323076923076923,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21309,6 +20977,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 424,
         "front": 73.64173464000001,
         "mid": 126.96850800000001,
         "back": 190.452762,
@@ -21430,6 +21099,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 28.871392000000004,
         "ar": 1.727272727272727,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21437,6 +21108,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 380,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -21530,6 +21202,8 @@ window.LIEMAX_DATA = {
         "w": 56.430448,
         "h": 31.824147999999997,
         "ar": 1.77319587628866,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21537,6 +21211,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 307,
         "front": 49.09448976,
         "mid": 84.64567199999999,
         "back": 126.968508,
@@ -21630,6 +21305,8 @@ window.LIEMAX_DATA = {
         "w": 60.367456,
         "h": 34.44882,
         "ar": 1.7523809523809522,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21637,6 +21314,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 328,
         "front": 52.519686719999996,
         "mid": 90.55118399999999,
         "back": 135.826776,
@@ -21730,6 +21408,8 @@ window.LIEMAX_DATA = {
         "w": 80.05249599999999,
         "h": 59.05512,
         "ar": 1.3555555555555554,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21737,6 +21417,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -21830,6 +21511,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 27.88714,
         "ar": 1.8470588235294116,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21837,6 +21520,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 261,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -21930,6 +21614,8 @@ window.LIEMAX_DATA = {
         "w": 56.430448,
         "h": 29.855643999999998,
         "ar": 1.89010989010989,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -21937,6 +21623,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 429,
         "front": 49.09448976,
         "mid": 84.64567199999999,
         "back": 126.968508,
@@ -22030,6 +21717,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 29.855643999999998,
         "ar": 1.7912087912087913,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22037,6 +21726,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 375,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -22130,6 +21820,8 @@ window.LIEMAX_DATA = {
         "w": 59.383204000000006,
         "h": 33.136483999999996,
         "ar": 1.7920792079207923,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22137,6 +21829,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 366,
         "front": 51.663387480000004,
         "mid": 89.07480600000001,
         "back": 133.612209,
@@ -22230,6 +21923,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.3229813664596273,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22237,6 +21932,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 287,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -22330,6 +22026,8 @@ window.LIEMAX_DATA = {
         "w": 64.30446400000001,
         "h": 34.776904,
         "ar": 1.8490566037735852,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22337,6 +22035,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 55.94488368000001,
         "mid": 96.45669600000002,
         "back": 144.68504400000003,
@@ -22430,6 +22129,8 @@ window.LIEMAX_DATA = {
         "w": 47.244096,
         "h": 28.215224,
         "ar": 1.6744186046511629,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22437,6 +22138,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 41.10236352,
         "mid": 70.86614399999999,
         "back": 106.299216,
@@ -22530,6 +22232,8 @@ window.LIEMAX_DATA = {
         "w": 74.146984,
         "h": 40.026247999999995,
         "ar": 1.852459016393443,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22537,6 +22241,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 570,
         "front": 64.50787608,
         "mid": 111.220476,
         "back": 166.830714,
@@ -22630,6 +22335,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.871392000000004,
         "ar": 1.7954545454545454,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22637,6 +22344,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 270,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -22730,6 +22438,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 26.902887999999997,
         "ar": 1.853658536585366,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22737,6 +22447,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 305,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -22830,6 +22541,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.543307999999996,
         "ar": 1.8160919540229887,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22837,6 +22550,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 305,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -22930,6 +22644,8 @@ window.LIEMAX_DATA = {
         "w": 45.93176,
         "h": 23.293964,
         "ar": 1.971830985915493,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -22937,6 +22653,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 251,
         "front": 39.960631199999995,
         "mid": 68.89764,
         "back": 103.34646,
@@ -23030,6 +22747,8 @@ window.LIEMAX_DATA = {
         "w": 52.821524000000004,
         "h": 30.839896,
         "ar": 1.7127659574468086,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23037,6 +22756,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 374,
         "front": 45.954725880000005,
         "mid": 79.232286,
         "back": 118.84842900000001,
@@ -23130,6 +22850,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 43.963256,
         "ar": 1.5895522388059702,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23137,6 +22859,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 346,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -23230,6 +22953,8 @@ window.LIEMAX_DATA = {
         "w": 54.790028,
         "h": 28.871392000000004,
         "ar": 1.8977272727272725,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23237,6 +22962,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 388,
         "front": 47.66732436,
         "mid": 82.185042,
         "back": 123.277563,
@@ -23323,13 +23049,15 @@ window.LIEMAX_DATA = {
       "state": "ID",
       "stateName": "Idaho",
       "isPreset": false,
-      "sub": "Boise · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Boise · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 69.88189200000001,
         "h": 60.039372,
         "ar": 1.1639344262295082,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23337,6 +23065,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 268,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -23458,6 +23187,8 @@ window.LIEMAX_DATA = {
         "w": 65.944884,
         "h": 36.745408,
         "ar": 1.7946428571428574,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23465,6 +23196,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 356,
         "front": 57.372049080000004,
         "mid": 98.917326,
         "back": 148.375989,
@@ -23558,6 +23290,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 27.559056,
         "ar": 1.8690476190476188,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23565,6 +23299,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 274,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -23658,6 +23393,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 25.918636,
         "ar": 1.9240506329113922,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23665,6 +23402,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 242,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -23758,6 +23496,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.3229813664596273,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23765,6 +23505,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 128,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -23858,6 +23599,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 25.262468000000002,
         "ar": 1.9740259740259738,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23865,6 +23608,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 342,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -23958,6 +23702,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 27.230972,
         "ar": 1.8674698795180722,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -23965,6 +23711,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 284,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -24058,6 +23805,8 @@ window.LIEMAX_DATA = {
         "w": 45.93176,
         "h": 25.262468000000002,
         "ar": 1.8181818181818181,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24065,6 +23814,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 236,
         "front": 39.960631199999995,
         "mid": 68.89764,
         "back": 103.34646,
@@ -24158,6 +23908,8 @@ window.LIEMAX_DATA = {
         "w": 62.664044000000004,
         "h": 33.464568,
         "ar": 1.8725490196078434,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24165,6 +23917,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 388,
         "front": 54.517718280000004,
         "mid": 93.99606600000001,
         "back": 140.994099,
@@ -24258,6 +24011,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 29.855643999999998,
         "ar": 1.7912087912087913,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24265,6 +24020,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -24358,6 +24114,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 29.855643999999998,
         "ar": 2.010989010989011,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24365,6 +24123,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 341,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -24458,6 +24217,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24465,6 +24226,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 251,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -24558,6 +24320,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 27.88714,
         "ar": 1.8235294117647058,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24565,6 +24329,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 303,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -24658,6 +24423,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 29.855643999999998,
         "ar": 1.7912087912087913,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24665,6 +24432,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 363,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -24758,6 +24526,8 @@ window.LIEMAX_DATA = {
         "w": 62.664044000000004,
         "h": 34.120736,
         "ar": 1.8365384615384617,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24765,6 +24535,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 439,
         "front": 54.517718280000004,
         "mid": 93.99606600000001,
         "back": 140.994099,
@@ -24858,6 +24629,8 @@ window.LIEMAX_DATA = {
         "w": 45.93176,
         "h": 25.590552,
         "ar": 1.794871794871795,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24865,6 +24638,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.960631199999995,
         "mid": 68.89764,
         "back": 103.34646,
@@ -24951,13 +24725,15 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
-      "sub": "Woodridge · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Woodridge · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 69.88189200000001,
         "h": 49.868767999999996,
         "ar": 1.4013157894736843,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -24965,6 +24741,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 252,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -25086,6 +24863,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 44.29134,
         "ar": 1.5777777777777777,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25093,6 +24872,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 296,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -25186,6 +24966,8 @@ window.LIEMAX_DATA = {
         "w": 51.181104,
         "h": 28.543307999999996,
         "ar": 1.793103448275862,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25193,6 +24975,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.52756048,
         "mid": 76.771656,
         "back": 115.157484,
@@ -25286,6 +25069,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 41.994752000000005,
         "ar": 1.6640625,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25293,6 +25078,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 351,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -25386,6 +25172,8 @@ window.LIEMAX_DATA = {
         "w": 50.196852,
         "h": 25.918636,
         "ar": 1.9367088607594938,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25393,6 +25181,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 280,
         "front": 43.67126124,
         "mid": 75.295278,
         "back": 112.942917,
@@ -25486,6 +25275,8 @@ window.LIEMAX_DATA = {
         "w": 45.275592,
         "h": 24.278216,
         "ar": 1.864864864864865,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25493,6 +25284,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 39.38976504,
         "mid": 67.913388,
         "back": 101.87008200000001,
@@ -25586,6 +25378,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 25.262468000000002,
         "ar": 1.9740259740259738,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25593,6 +25387,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 301,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -25686,6 +25481,8 @@ window.LIEMAX_DATA = {
         "w": 83.98950400000001,
         "h": 47.57218,
         "ar": 1.7655172413793105,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25693,6 +25490,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 73.07086848000002,
         "mid": 125.98425600000002,
         "back": 188.97638400000002,
@@ -25786,6 +25584,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 27.88714,
         "ar": 1.788235294117647,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25793,6 +25593,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -25886,6 +25687,8 @@ window.LIEMAX_DATA = {
         "w": 75.131236,
         "h": 40.026247999999995,
         "ar": 1.8770491803278688,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25893,6 +25696,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 65.36417532,
         "mid": 112.696854,
         "back": 169.045281,
@@ -25986,6 +25790,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 31.496063999999997,
         "ar": 1.65625,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -25993,6 +25799,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 288,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -26086,6 +25893,8 @@ window.LIEMAX_DATA = {
         "w": 85.95800799999999,
         "h": 58.070868,
         "ar": 1.480225988700565,
+        "sizeTier": "giant",
+        "sizeLabel": "Giant Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26093,6 +25902,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 600,
         "front": 74.78346696,
         "mid": 128.93701199999998,
         "back": 193.40551799999997,
@@ -26186,6 +25996,8 @@ window.LIEMAX_DATA = {
         "w": 46.259844,
         "h": 26.902887999999997,
         "ar": 1.7195121951219514,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26193,6 +26005,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 40.24606428,
         "mid": 69.38976600000001,
         "back": 104.084649,
@@ -26286,6 +26099,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 23.950132,
         "ar": 1.9589041095890412,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26293,6 +26108,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 207,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -26386,6 +26202,8 @@ window.LIEMAX_DATA = {
         "w": 49.2126,
         "h": 29.855643999999998,
         "ar": 1.6483516483516485,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26393,6 +26211,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 349,
         "front": 42.814962,
         "mid": 73.8189,
         "back": 110.72835,
@@ -26486,6 +26305,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 33.136483999999996,
         "ar": 1.811881188118812,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26493,6 +26314,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -26586,6 +26408,8 @@ window.LIEMAX_DATA = {
         "w": 61.023624000000005,
         "h": 35.104988,
         "ar": 1.738317757009346,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26593,6 +26417,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 330,
         "front": 53.090552880000004,
         "mid": 91.535436,
         "back": 137.303154,
@@ -26686,6 +26511,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 38.057744,
         "ar": 1.5775862068965518,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26693,6 +26520,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 413,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -26786,6 +26614,8 @@ window.LIEMAX_DATA = {
         "w": 59.383204000000006,
         "h": 37.073492,
         "ar": 1.6017699115044248,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26793,6 +26623,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 400,
         "front": 51.663387480000004,
         "mid": 89.07480600000001,
         "back": 133.612209,
@@ -26886,6 +26717,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 29.855643999999998,
         "ar": 1.8131868131868132,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26893,6 +26726,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -26986,6 +26820,8 @@ window.LIEMAX_DATA = {
         "w": 48.884516,
         "h": 29.855643999999998,
         "ar": 1.6373626373626375,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -26993,6 +26829,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 235,
         "front": 42.52952892,
         "mid": 73.326774,
         "back": 109.990161,
@@ -27086,6 +26923,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 31.824147999999997,
         "ar": 1.6185567010309279,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27093,6 +26932,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 246,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -27186,6 +27026,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 28.871392000000004,
         "ar": 1.8522727272727273,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27193,6 +27035,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 400,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -27286,6 +27129,8 @@ window.LIEMAX_DATA = {
         "w": 60.367456,
         "h": 33.464568,
         "ar": 1.803921568627451,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27293,6 +27138,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.519686719999996,
         "mid": 90.55118399999999,
         "back": 135.826776,
@@ -27379,23 +27225,26 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
-      "sub": "Natick · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Natick · official Jordan’s specs · advanced digital",
       "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
+      "blurb": "Official Jordan’s Furniture specs list a 76 × 55 ft screen, 279 seats, and an advanced digital projection system. Projector classification stays conservative as legacy IMAX digital unless current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.",
       "screen": {
-        "w": 67.913388,
-        "h": 52.821524000000004,
-        "ar": 1.2857142857142856,
-        "widthConfidence": "community_estimate",
+        "w": 76,
+        "h": 55,
+        "ar": 1.3818181818181816,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
+        "widthConfidence": "confirmed",
         "geometry": "flat",
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
-        "front": 59.08464756,
-        "mid": 101.870082,
-        "back": 152.80512299999998,
+        "capacity": 279,
+        "front": 66.12,
+        "mid": 114,
+        "back": 171,
         "source": "derived_from_screen_width"
       },
       "defaultPresentationAr": 1.9,
@@ -27453,8 +27302,8 @@ window.LIEMAX_DATA = {
       "commercialFilms": false,
       "sources": {
         "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 68.0 ft./ 16.1 x 20.7 m.."
+          "q": "published_official",
+          "note": "Jordan’s Furniture IMAX page — Natick Sunbrella IMAX 3D Theater: 76 × 55 foot projector screen, 279 seats, advanced digital projection system. https://www.jordans.com/imax"
         },
         "brightness": {
           "q": "published_cto",
@@ -27465,8 +27314,8 @@ window.LIEMAX_DATA = {
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "q": "published_official",
+          "note": "Jordan’s Furniture IMAX page lists comfortable seats for 279 guests at Natick. https://www.jordans.com/imax"
         }
       }
     },
@@ -27486,6 +27335,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 27.88714,
         "ar": 1.9764705882352942,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27493,6 +27344,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 441,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -27586,6 +27438,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 27.88714,
         "ar": 1.9058823529411764,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27593,6 +27447,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 445,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -27686,6 +27541,8 @@ window.LIEMAX_DATA = {
         "w": 72.17848,
         "h": 54.461944,
         "ar": 1.325301204819277,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27693,6 +27550,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 400,
         "front": 62.79527759999999,
         "mid": 108.26772,
         "back": 162.40158,
@@ -27786,6 +27644,8 @@ window.LIEMAX_DATA = {
         "w": 56.102364,
         "h": 34.120736,
         "ar": 1.6442307692307694,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27793,6 +27653,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 369,
         "front": 48.80905668,
         "mid": 84.153546,
         "back": 126.23031900000001,
@@ -27886,6 +27747,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 33.136483999999996,
         "ar": 1.811881188118812,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27893,6 +27756,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 322,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -27986,6 +27850,8 @@ window.LIEMAX_DATA = {
         "w": 44.947508,
         "h": 23.950132,
         "ar": 1.8767123287671232,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -27993,6 +27859,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 230,
         "front": 39.104331959999996,
         "mid": 67.421262,
         "back": 101.13189299999999,
@@ -28086,6 +27953,8 @@ window.LIEMAX_DATA = {
         "w": 64.960632,
         "h": 32.152232000000005,
         "ar": 2.020408163265306,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28093,6 +27962,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 434,
         "front": 56.515749840000005,
         "mid": 97.440948,
         "back": 146.16142200000002,
@@ -28186,6 +28056,8 @@ window.LIEMAX_DATA = {
         "w": 59.711287999999996,
         "h": 30.839896,
         "ar": 1.9361702127659572,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28193,6 +28065,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 494,
         "front": 51.948820559999994,
         "mid": 89.566932,
         "back": 134.35039799999998,
@@ -28286,6 +28159,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 28.543307999999996,
         "ar": 1.9080459770114946,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28293,6 +28168,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 303,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -28386,6 +28262,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28393,6 +28271,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 327,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -28486,6 +28365,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 43.963256,
         "ar": 1.5895522388059702,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28493,6 +28374,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 330,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -28586,6 +28468,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 29.855643999999998,
         "ar": 1.8241758241758244,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28593,6 +28477,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 320,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -28686,6 +28571,8 @@ window.LIEMAX_DATA = {
         "w": 63.97638,
         "h": 41.994752000000005,
         "ar": 1.5234375,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28693,6 +28580,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 270,
         "front": 55.6594506,
         "mid": 95.96457,
         "back": 143.946855,
@@ -28786,6 +28674,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 33.136483999999996,
         "ar": 1.5346534653465347,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28793,6 +28683,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 259,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -28886,6 +28777,8 @@ window.LIEMAX_DATA = {
         "w": 64.30446400000001,
         "h": 35.761156,
         "ar": 1.798165137614679,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28893,6 +28786,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 55.94488368000001,
         "mid": 96.45669600000002,
         "back": 144.68504400000003,
@@ -28986,6 +28880,8 @@ window.LIEMAX_DATA = {
         "w": 54.790028,
         "h": 28.543307999999996,
         "ar": 1.9195402298850575,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -28993,6 +28889,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 422,
         "front": 47.66732436,
         "mid": 82.185042,
         "back": 123.277563,
@@ -29086,6 +28983,8 @@ window.LIEMAX_DATA = {
         "w": 47.244096,
         "h": 26.24672,
         "ar": 1.8,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29093,6 +28992,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 249,
         "front": 41.10236352,
         "mid": 70.86614399999999,
         "back": 106.299216,
@@ -29186,6 +29086,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 29.855643999999998,
         "ar": 1.8131868131868132,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29193,6 +29095,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 340,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -29286,6 +29189,8 @@ window.LIEMAX_DATA = {
         "w": 54.790028,
         "h": 30.511812000000003,
         "ar": 1.7956989247311825,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29293,6 +29198,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 372,
         "front": 47.66732436,
         "mid": 82.185042,
         "back": 123.277563,
@@ -29386,6 +29292,8 @@ window.LIEMAX_DATA = {
         "w": 65.944884,
         "h": 36.08924,
         "ar": 1.8272727272727274,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29393,6 +29301,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 57.372049080000004,
         "mid": 98.917326,
         "back": 148.375989,
@@ -29486,6 +29395,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 28.871392000000004,
         "ar": 1.784090909090909,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29493,6 +29404,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 271,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -29586,6 +29498,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 24.934383999999998,
         "ar": 2,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29593,6 +29507,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 282,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -29686,6 +29601,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.49344,
         "ar": 1.33125,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29693,6 +29610,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 270,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -29786,6 +29704,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 41.994752000000005,
         "ar": 1.6640625,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29793,6 +29713,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 300,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -29886,6 +29807,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 28.215224,
         "ar": 1.8488372093023258,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29893,6 +29816,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -29986,6 +29910,8 @@ window.LIEMAX_DATA = {
         "w": 64.960632,
         "h": 36.417324,
         "ar": 1.783783783783784,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -29993,6 +29919,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 56.515749840000005,
         "mid": 97.440948,
         "back": 146.16142200000002,
@@ -30086,6 +30013,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 25.590552,
         "ar": 1.8717948717948718,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30093,6 +30022,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 238,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -30186,6 +30116,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 28.215224,
         "ar": 1.8372093023255816,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30193,6 +30125,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 272,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -30286,6 +30219,8 @@ window.LIEMAX_DATA = {
         "w": 48.228348,
         "h": 25.590552,
         "ar": 1.8846153846153846,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30293,6 +30228,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 282,
         "front": 41.958662759999996,
         "mid": 72.342522,
         "back": 108.51378299999999,
@@ -30371,106 +30307,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_nc_fayetteville_amc_fayetteville_14_and_max",
-      "canonicalId": "imax_us_nc_fayetteville_amc_fayetteville_14_and_max",
-      "kind": "cinema",
-      "name": "AMC Fayetteville 14 & MAX",
-      "city": "Fayetteville",
-      "state": "NC",
-      "stateName": "North Carolina",
-      "isPreset": false,
-      "sub": "Fayetteville · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 65.944884,
-        "h": 35.761156,
-        "ar": 1.8440366972477065,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.7 x 65.8 ft./ 10.9 x 20.1 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_nc_raleigh_marbles_kids_museum",
       "canonicalId": "imax_us_nc_raleigh_marbles_kids_museum",
       "kind": "cinema",
@@ -30486,6 +30322,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.821524000000004,
         "ar": 1.3229813664596273,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30493,6 +30331,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 267,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -30586,6 +30425,8 @@ window.LIEMAX_DATA = {
         "w": 48.884516,
         "h": 29.52756,
         "ar": 1.6555555555555557,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30593,6 +30434,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 296,
         "front": 42.52952892,
         "mid": 73.326774,
         "back": 109.990161,
@@ -30686,6 +30528,8 @@ window.LIEMAX_DATA = {
         "w": 58.727036,
         "h": 32.8084,
         "ar": 1.7899999999999998,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30693,6 +30537,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 352,
         "front": 51.092521319999996,
         "mid": 88.090554,
         "back": 132.135831,
@@ -30786,6 +30631,8 @@ window.LIEMAX_DATA = {
         "w": 62.007875999999996,
         "h": 34.120736,
         "ar": 1.817307692307692,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30793,6 +30640,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 53.946852119999996,
         "mid": 93.01181399999999,
         "back": 139.517721,
@@ -30886,6 +30734,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.49344,
         "ar": 1.33125,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30893,6 +30743,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 287,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -30986,6 +30837,8 @@ window.LIEMAX_DATA = {
         "w": 52.821524000000004,
         "h": 29.52756,
         "ar": 1.788888888888889,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -30993,6 +30846,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 230,
         "front": 45.954725880000005,
         "mid": 79.232286,
         "back": 118.84842900000001,
@@ -31086,6 +30940,8 @@ window.LIEMAX_DATA = {
         "w": 59.05512,
         "h": 31.496063999999997,
         "ar": 1.875,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31093,6 +30949,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 585,
         "front": 51.3779544,
         "mid": 88.58268000000001,
         "back": 132.87402,
@@ -31186,6 +31043,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 28.215224,
         "ar": 1.8255813953488371,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31193,6 +31052,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 209,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -31286,6 +31146,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 39.37008,
         "ar": 1.7750000000000001,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31293,6 +31155,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -31386,6 +31249,8 @@ window.LIEMAX_DATA = {
         "w": 68.89764,
         "h": 40.354332,
         "ar": 1.7073170731707317,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31393,6 +31258,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 59.9409468,
         "mid": 103.34646,
         "back": 155.01969,
@@ -31486,6 +31352,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 23.950132,
         "ar": 2,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31493,6 +31361,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 291,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -31579,13 +31448,15 @@ window.LIEMAX_DATA = {
       "state": "NV",
       "stateName": "Nevada",
       "isPreset": false,
-      "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 56.102364,
         "h": 41.0105,
         "ar": 1.368,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31593,6 +31464,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 183,
         "front": 48.80905668,
         "mid": 84.153546,
         "back": 126.23031900000001,
@@ -31714,6 +31586,8 @@ window.LIEMAX_DATA = {
         "w": 57.414699999999996,
         "h": 35.104988,
         "ar": 1.6355140186915889,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31721,6 +31595,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 350,
         "front": 49.95078899999999,
         "mid": 86.12205,
         "back": 129.183075,
@@ -31814,6 +31689,8 @@ window.LIEMAX_DATA = {
         "w": 75.131236,
         "h": 40.026247999999995,
         "ar": 1.8770491803278688,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31821,6 +31698,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 65.36417532,
         "mid": 112.696854,
         "back": 169.045281,
@@ -31914,6 +31792,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 26.902887999999997,
         "ar": 1.7439024390243905,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -31921,6 +31801,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 137,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -32014,6 +31895,8 @@ window.LIEMAX_DATA = {
         "w": 52.49344,
         "h": 29.52756,
         "ar": 1.7777777777777777,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32021,6 +31904,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 270,
         "front": 45.6692928,
         "mid": 78.74016,
         "back": 118.11024,
@@ -32107,13 +31991,15 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
-      "sub": "Garden City · Dome · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Garden City · Dome · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 78.74016,
         "h": 78.74016,
         "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
         "widthConfidence": "community_estimate",
         "geometry": "hemispherical",
         "domeCoveragePct": 0.83,
@@ -32121,6 +32007,7 @@ window.LIEMAX_DATA = {
         "domeVFov": 125
       },
       "seat": {
+        "capacity": 300,
         "front": 39.37008,
         "mid": 39.37008,
         "back": 39.37008,
@@ -32208,13 +32095,15 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
-      "sub": "New York · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "New York · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 65.944884,
         "h": 40.026247999999995,
         "ar": 1.6475409836065575,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32222,6 +32111,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 598,
         "front": 57.372049080000004,
         "mid": 98.917326,
         "back": 148.375989,
@@ -32343,6 +32233,8 @@ window.LIEMAX_DATA = {
         "w": 56.102364,
         "h": 30.183728,
         "ar": 1.8586956521739133,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32350,6 +32242,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 312,
         "front": 48.80905668,
         "mid": 84.153546,
         "back": 126.23031900000001,
@@ -32443,6 +32336,8 @@ window.LIEMAX_DATA = {
         "w": 59.711287999999996,
         "h": 32.8084,
         "ar": 1.8199999999999998,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32450,6 +32345,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 267,
         "front": 51.948820559999994,
         "mid": 89.566932,
         "back": 134.35039799999998,
@@ -32543,6 +32439,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 30.511812000000003,
         "ar": 1.7419354838709675,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32550,6 +32448,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 267,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -32643,6 +32542,8 @@ window.LIEMAX_DATA = {
         "w": 59.383204000000006,
         "h": 27.559056,
         "ar": 2.1547619047619047,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32650,6 +32551,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 339,
         "front": 51.663387480000004,
         "mid": 89.07480600000001,
         "back": 133.612209,
@@ -32743,6 +32645,8 @@ window.LIEMAX_DATA = {
         "w": 72.17848,
         "h": 52.821524000000004,
         "ar": 1.3664596273291925,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32750,6 +32654,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 62.79527759999999,
         "mid": 108.26772,
         "back": 162.40158,
@@ -32843,6 +32748,8 @@ window.LIEMAX_DATA = {
         "w": 56.758532,
         "h": 31.824147999999997,
         "ar": 1.7835051546391754,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32850,6 +32757,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 303,
         "front": 49.37992284,
         "mid": 85.137798,
         "back": 127.706697,
@@ -32943,6 +32851,8 @@ window.LIEMAX_DATA = {
         "w": 53.477692000000005,
         "h": 27.88714,
         "ar": 1.9176470588235295,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -32950,6 +32860,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 353,
         "front": 46.52559204000001,
         "mid": 80.21653800000001,
         "back": 120.324807,
@@ -33043,6 +32954,8 @@ window.LIEMAX_DATA = {
         "w": 49.868767999999996,
         "h": 32.152232000000005,
         "ar": 1.551020408163265,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33050,6 +32963,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 277,
         "front": 43.385828159999996,
         "mid": 74.803152,
         "back": 112.20472799999999,
@@ -33143,6 +33057,8 @@ window.LIEMAX_DATA = {
         "w": 62.33596,
         "h": 34.120736,
         "ar": 1.8269230769230769,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33150,6 +33066,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 54.2322852,
         "mid": 93.50394,
         "back": 140.25591,
@@ -33243,6 +33160,8 @@ window.LIEMAX_DATA = {
         "w": 62.007875999999996,
         "h": 34.120736,
         "ar": 1.817307692307692,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33250,6 +33169,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 53.946852119999996,
         "mid": 93.01181399999999,
         "back": 139.517721,
@@ -33343,6 +33263,8 @@ window.LIEMAX_DATA = {
         "w": 46.587928,
         "h": 29.52756,
         "ar": 1.5777777777777777,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33350,6 +33272,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 288,
         "front": 40.531497359999996,
         "mid": 69.881892,
         "back": 104.82283799999999,
@@ -33443,6 +33366,8 @@ window.LIEMAX_DATA = {
         "w": 70.53806,
         "h": 40.026247999999995,
         "ar": 1.7622950819672132,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33450,6 +33375,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 61.3681122,
         "mid": 105.80709,
         "back": 158.710635,
@@ -33543,6 +33469,8 @@ window.LIEMAX_DATA = {
         "w": 59.05512,
         "h": 32.8084,
         "ar": 1.8,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33550,6 +33478,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 450,
         "front": 51.3779544,
         "mid": 88.58268000000001,
         "back": 132.87402,
@@ -33643,6 +33572,8 @@ window.LIEMAX_DATA = {
         "w": 58.398952,
         "h": 32.480316,
         "ar": 1.797979797979798,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33650,6 +33581,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 405,
         "front": 50.80708824,
         "mid": 87.598428,
         "back": 131.397642,
@@ -33743,6 +33675,8 @@ window.LIEMAX_DATA = {
         "w": 71.522312,
         "h": 52.821524000000004,
         "ar": 1.3540372670807452,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33750,6 +33684,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 260,
         "front": 62.22441144,
         "mid": 107.283468,
         "back": 160.925202,
@@ -33843,6 +33778,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 25.590552,
         "ar": 1.8717948717948718,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33850,6 +33787,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 290,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -33943,6 +33881,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 39.041996,
         "ar": 1.5378151260504203,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -33950,6 +33890,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 400,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -34043,6 +33984,8 @@ window.LIEMAX_DATA = {
         "w": 57.08661599999999,
         "h": 32.152232000000005,
         "ar": 1.7755102040816324,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34050,6 +33993,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 414,
         "front": 49.665355919999996,
         "mid": 85.62992399999999,
         "back": 128.444886,
@@ -34143,6 +34087,8 @@ window.LIEMAX_DATA = {
         "w": 54.461944,
         "h": 30.511812000000003,
         "ar": 1.7849462365591398,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34150,6 +34096,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 318,
         "front": 47.381891280000005,
         "mid": 81.692916,
         "back": 122.53937400000001,
@@ -34243,6 +34190,8 @@ window.LIEMAX_DATA = {
         "w": 62.007875999999996,
         "h": 34.44882,
         "ar": 1.7999999999999998,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34250,6 +34199,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 324,
         "front": 53.946852119999996,
         "mid": 93.01181399999999,
         "back": 139.517721,
@@ -34343,6 +34293,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 41.994752000000005,
         "ar": 1.6640625,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34350,6 +34302,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 400,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -34443,6 +34396,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 28.871392000000004,
         "ar": 1.7613636363636362,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34450,6 +34405,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -34543,6 +34499,8 @@ window.LIEMAX_DATA = {
         "w": 50.196852,
         "h": 27.88714,
         "ar": 1.8,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34550,6 +34508,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 345,
         "front": 43.67126124,
         "mid": 75.295278,
         "back": 112.942917,
@@ -34643,6 +34602,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34650,6 +34611,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 420,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -34743,6 +34705,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 26.574804,
         "ar": 1.9135802469135803,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34750,6 +34714,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 336,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -34843,6 +34808,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 41.994752000000005,
         "ar": 1.6640625,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34850,6 +34817,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 340,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -34943,6 +34911,8 @@ window.LIEMAX_DATA = {
         "w": 54.790028,
         "h": 29.855643999999998,
         "ar": 1.835164835164835,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -34950,6 +34920,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 210,
         "front": 47.66732436,
         "mid": 82.185042,
         "back": 123.277563,
@@ -35043,6 +35014,8 @@ window.LIEMAX_DATA = {
         "w": 80.05249599999999,
         "h": 46.259844,
         "ar": 1.730496453900709,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35050,6 +35023,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -35128,134 +35102,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ri_providence_providence_place_cinemas_16_and_imax",
-      "canonicalId": "imax_us_ri_providence_providence_place_cinemas_16_and_imax",
-      "kind": "cinema",
-      "name": "Providence Place Cinemas 16 & IMAX",
-      "city": "Providence",
-      "state": "RI",
-      "stateName": "Rhode Island",
-      "isPreset": false,
-      "sub": "Providence · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX 15/70 + Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 81.036748,
-        "h": 61.023624000000005,
-        "ar": 1.3279569892473118,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 70.50197076,
-        "mid": 121.55512200000001,
-        "back": 182.332683,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": true,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "film_143",
-          "ar": 1.43,
-          "label": "1.43 · 15/70mm Film",
-          "enabled": true,
-          "isBookingDependent": true,
-          "isFilmMode": true,
-          "projection": "film"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": {
-        "id": "film_1570",
-        "label": "IMAX 15/70 Film",
-        "light": "Xenon (Film)",
-        "resH": null,
-        "resV": null,
-        "scanEquivLow": 8800,
-        "scanEquivHigh": 11700,
-        "scanEquivLabel": null,
-        "brightness_fl": null,
-        "brightness_nits_full": null,
-        "nativeContrast": null,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "photochemical",
-        "hdrLabel": "Photochemical latitude",
-        "hdrDynamic": null,
-        "min_ar": 1.43,
-        "type": "imax_1570_film",
-        "display_name": "IMAX 15/70 Film"
-      },
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 61.0 x 81.0 ft./ 18.6 x 24.7 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_sc_columbia_regal_sandhill_stadium_16_and_imax",
       "canonicalId": "imax_us_sc_columbia_regal_sandhill_stadium_16_and_imax",
       "kind": "cinema",
@@ -35271,6 +35117,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 30.839896,
         "ar": 1.7234042553191489,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35278,6 +35126,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -35371,6 +35220,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35378,6 +35229,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 399,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -35471,6 +35323,8 @@ window.LIEMAX_DATA = {
         "w": 61.351707999999995,
         "h": 32.8084,
         "ar": 1.8699999999999999,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35478,6 +35332,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 347,
         "front": 53.375985959999994,
         "mid": 92.02756199999999,
         "back": 138.04134299999998,
@@ -35571,6 +35426,8 @@ window.LIEMAX_DATA = {
         "w": 50.196852,
         "h": 27.88714,
         "ar": 1.8,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35578,6 +35435,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 318,
         "front": 43.67126124,
         "mid": 75.295278,
         "back": 112.942917,
@@ -35671,6 +35529,8 @@ window.LIEMAX_DATA = {
         "w": 65.6168,
         "h": 36.08924,
         "ar": 1.8181818181818181,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35678,6 +35538,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 57.086616,
         "mid": 98.42519999999999,
         "back": 147.6378,
@@ -35771,6 +35632,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 30.511812000000003,
         "ar": 1.7096774193548385,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35778,6 +35641,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 375,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -35871,6 +35735,8 @@ window.LIEMAX_DATA = {
         "w": 46.916012,
         "h": 25.918636,
         "ar": 1.8101265822784811,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35878,6 +35744,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 285,
         "front": 40.81693044,
         "mid": 70.374018,
         "back": 105.56102700000001,
@@ -35971,6 +35838,8 @@ window.LIEMAX_DATA = {
         "w": 44.947508,
         "h": 24.934383999999998,
         "ar": 1.8026315789473684,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -35978,6 +35847,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 245,
         "front": 39.104331959999996,
         "mid": 67.421262,
         "back": 101.13189299999999,
@@ -36071,6 +35941,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 40.026247999999995,
         "ar": 1.7459016393442623,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36078,6 +35950,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -36171,6 +36044,8 @@ window.LIEMAX_DATA = {
         "w": 54.790028,
         "h": 30.839896,
         "ar": 1.776595744680851,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36178,6 +36053,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 293,
         "front": 47.66732436,
         "mid": 82.185042,
         "back": 123.277563,
@@ -36256,134 +36132,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_tx_dallas_cinemark_17_and_imax",
-      "canonicalId": "imax_us_tx_dallas_cinemark_17_and_imax",
-      "kind": "cinema",
-      "name": "Cinemark 17 & IMAX",
-      "city": "Dallas",
-      "state": "TX",
-      "stateName": "Texas",
-      "isPreset": false,
-      "sub": "Dallas · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX 15/70 + Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 70.866144,
-        "h": 52.821524000000004,
-        "ar": 1.341614906832298,
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": true,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "film_143",
-          "ar": 1.43,
-          "label": "1.43 · 15/70mm Film",
-          "enabled": true,
-          "isBookingDependent": true,
-          "isFilmMode": true,
-          "projection": "film"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": {
-        "id": "film_1570",
-        "label": "IMAX 15/70 Film",
-        "light": "Xenon (Film)",
-        "resH": null,
-        "resV": null,
-        "scanEquivLow": 8800,
-        "scanEquivHigh": 11700,
-        "scanEquivLabel": null,
-        "brightness_fl": null,
-        "brightness_nits_full": null,
-        "nativeContrast": null,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "photochemical",
-        "hdrLabel": "Photochemical latitude",
-        "hdrDynamic": null,
-        "min_ar": 1.43,
-        "type": "imax_1570_film",
-        "display_name": "IMAX 15/70 Film"
-      },
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 52.9 x 70.7 ft./ 16.1 x 21.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_tx_el_paso_premiere_cinema_el_paso_bassett_imax",
       "canonicalId": "imax_us_tx_el_paso_premiere_cinema_el_paso_bassett_imax",
       "kind": "cinema",
@@ -36399,6 +36147,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 49.868767999999996,
         "ar": 1.4013157894736843,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36406,6 +36156,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -36499,6 +36250,8 @@ window.LIEMAX_DATA = {
         "w": 51.509187999999995,
         "h": 28.871392000000004,
         "ar": 1.784090909090909,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36506,6 +36259,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 271,
         "front": 44.812993559999995,
         "mid": 77.26378199999999,
         "back": 115.89567299999999,
@@ -36599,6 +36353,8 @@ window.LIEMAX_DATA = {
         "w": 60.039372,
         "h": 32.480316,
         "ar": 1.8484848484848484,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36606,6 +36362,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 52.23425364,
         "mid": 90.059058,
         "back": 135.088587,
@@ -36699,6 +36456,8 @@ window.LIEMAX_DATA = {
         "w": 52.165356,
         "h": 29.199476,
         "ar": 1.7865168539325842,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36706,6 +36465,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 45.383859720000004,
         "mid": 78.248034,
         "back": 117.372051,
@@ -36799,6 +36559,8 @@ window.LIEMAX_DATA = {
         "w": 60.69554,
         "h": 35.104988,
         "ar": 1.7289719626168225,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36806,6 +36568,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 464,
         "front": 52.8051198,
         "mid": 91.04331,
         "back": 136.564965,
@@ -36899,6 +36662,8 @@ window.LIEMAX_DATA = {
         "w": 50.196852,
         "h": 27.88714,
         "ar": 1.8,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -36906,6 +36671,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 140,
         "front": 43.67126124,
         "mid": 75.295278,
         "back": 112.942917,
@@ -36999,6 +36765,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 39.37008,
         "ar": 1.7750000000000001,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37006,6 +36774,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 383,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -37099,6 +36868,8 @@ window.LIEMAX_DATA = {
         "w": 62.664044000000004,
         "h": 34.120736,
         "ar": 1.8365384615384617,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37106,6 +36877,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 441,
         "front": 54.517718280000004,
         "mid": 93.99606600000001,
         "back": 140.994099,
@@ -37199,6 +36971,8 @@ window.LIEMAX_DATA = {
         "w": 48.228348,
         "h": 29.52756,
         "ar": 1.6333333333333333,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37206,6 +36980,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 41.958662759999996,
         "mid": 72.342522,
         "back": 108.51378299999999,
@@ -37299,6 +37074,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 30.839896,
         "ar": 1.553191489361702,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37306,6 +37083,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -37399,6 +37177,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 43.963256,
         "ar": 1.5895522388059702,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37406,6 +37186,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 393,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -37499,6 +37280,8 @@ window.LIEMAX_DATA = {
         "w": 54.13386,
         "h": 29.855643999999998,
         "ar": 1.8131868131868132,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37506,6 +37289,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 243,
         "front": 47.0964582,
         "mid": 81.20079,
         "back": 121.801185,
@@ -37599,6 +37383,8 @@ window.LIEMAX_DATA = {
         "w": 56.430448,
         "h": 34.120736,
         "ar": 1.6538461538461537,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37606,6 +37392,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 420,
         "front": 49.09448976,
         "mid": 84.64567199999999,
         "back": 126.968508,
@@ -37699,6 +37486,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 39.698164,
         "ar": 1.7603305785123968,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37706,6 +37495,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -37792,13 +37582,15 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
-      "sub": "Tomball · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Tomball · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 70.866144,
         "h": 44.947508,
         "ar": 1.5766423357664237,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37806,6 +37598,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 411,
         "front": 61.65354528,
         "mid": 106.299216,
         "back": 159.448824,
@@ -37927,6 +37720,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 28.543307999999996,
         "ar": 1.8620689655172415,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -37934,6 +37729,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -38027,6 +37823,8 @@ window.LIEMAX_DATA = {
         "w": 56.758532,
         "h": 31.496063999999997,
         "ar": 1.8020833333333335,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38034,6 +37832,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 49.37992284,
         "mid": 85.137798,
         "back": 127.706697,
@@ -38127,6 +37926,8 @@ window.LIEMAX_DATA = {
         "w": 76.115488,
         "h": 41.994752000000005,
         "ar": 1.8124999999999998,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38134,6 +37935,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 603,
         "front": 66.22047456,
         "mid": 114.173232,
         "back": 171.259848,
@@ -38227,6 +38029,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 52.49344,
         "ar": 1.33125,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38234,6 +38038,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 292,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -38327,6 +38132,8 @@ window.LIEMAX_DATA = {
         "w": 80.708664,
         "h": 56.430448,
         "ar": 1.430232558139535,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38334,6 +38141,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 446,
         "front": 70.21653768,
         "mid": 121.062996,
         "back": 181.594494,
@@ -38427,6 +38235,8 @@ window.LIEMAX_DATA = {
         "w": 68.89764,
         "h": 38.057744,
         "ar": 1.8103448275862069,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38434,6 +38244,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 514,
         "front": 59.9409468,
         "mid": 103.34646,
         "back": 155.01969,
@@ -38527,6 +38338,8 @@ window.LIEMAX_DATA = {
         "w": 80.05249599999999,
         "h": 45.275592,
         "ar": 1.7681159420289854,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38534,6 +38347,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 69.64567152,
         "mid": 120.07874399999999,
         "back": 180.118116,
@@ -38627,6 +38441,8 @@ window.LIEMAX_DATA = {
         "w": 76.115488,
         "h": 42.65092,
         "ar": 1.7846153846153845,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38634,6 +38450,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 639,
         "front": 66.22047456,
         "mid": 114.173232,
         "back": 171.259848,
@@ -38727,6 +38544,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 29.199476,
         "ar": 1.7752808988764046,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38734,6 +38553,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 293,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -38827,6 +38647,8 @@ window.LIEMAX_DATA = {
         "w": 48.884516,
         "h": 28.543307999999996,
         "ar": 1.7126436781609198,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38834,6 +38656,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 42.52952892,
         "mid": 73.326774,
         "back": 109.990161,
@@ -38927,6 +38750,8 @@ window.LIEMAX_DATA = {
         "w": 59.05512,
         "h": 32.8084,
         "ar": 1.8,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -38934,6 +38759,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 420,
         "front": 51.3779544,
         "mid": 88.58268000000001,
         "back": 132.87402,
@@ -39027,6 +38853,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 55.118112,
         "ar": 1.2678571428571428,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39034,6 +38862,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 285,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -39127,6 +38956,8 @@ window.LIEMAX_DATA = {
         "w": 51.837272,
         "h": 30.183728,
         "ar": 1.7173913043478264,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39134,6 +38965,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 404,
         "front": 45.09842664,
         "mid": 77.755908,
         "back": 116.633862,
@@ -39227,6 +39059,8 @@ window.LIEMAX_DATA = {
         "w": 49.2126,
         "h": 26.574804,
         "ar": 1.8518518518518519,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39234,6 +39068,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 42.814962,
         "mid": 73.8189,
         "back": 110.72835,
@@ -39327,6 +39162,8 @@ window.LIEMAX_DATA = {
         "w": 50.85302,
         "h": 29.199476,
         "ar": 1.7415730337078652,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39334,6 +39171,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 44.2421274,
         "mid": 76.27953,
         "back": 114.419295,
@@ -39427,6 +39265,8 @@ window.LIEMAX_DATA = {
         "w": 65.288716,
         "h": 36.745408,
         "ar": 1.7767857142857142,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39434,6 +39274,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 438,
         "front": 56.801182919999995,
         "mid": 97.93307399999999,
         "back": 146.899611,
@@ -39527,6 +39368,8 @@ window.LIEMAX_DATA = {
         "w": 55.118112,
         "h": 33.464568,
         "ar": 1.647058823529412,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39534,6 +39377,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 356,
         "front": 47.952757440000006,
         "mid": 82.67716800000001,
         "back": 124.015752,
@@ -39627,6 +39471,8 @@ window.LIEMAX_DATA = {
         "w": 70.866144,
         "h": 40.026247999999995,
         "ar": 1.7704918032786887,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39634,6 +39480,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 35,
         "front": 61.65354528,
         "mid": 106.299216,
         "back": 159.448824,
@@ -39727,6 +39574,8 @@ window.LIEMAX_DATA = {
         "w": 62.664044000000004,
         "h": 35.104988,
         "ar": 1.785046728971963,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39734,6 +39583,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 54.517718280000004,
         "mid": 93.99606600000001,
         "back": 140.994099,
@@ -39827,6 +39677,8 @@ window.LIEMAX_DATA = {
         "w": 56.758532,
         "h": 35.433072,
         "ar": 1.6018518518518519,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39834,6 +39686,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 387,
         "front": 49.37992284,
         "mid": 85.137798,
         "back": 127.706697,
@@ -39920,13 +39773,15 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
-      "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon",
+      "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
       "screen": {
         "w": 58.070868,
         "h": 34.44882,
         "ar": 1.6857142857142857,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -39934,6 +39789,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 290,
         "front": 50.521655159999995,
         "mid": 87.106302,
         "back": 130.65945299999998,
@@ -40055,6 +39911,8 @@ window.LIEMAX_DATA = {
         "w": 47.900264,
         "h": 26.574804,
         "ar": 1.8024691358024691,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -40062,6 +39920,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 299,
         "front": 41.67322968,
         "mid": 71.850396,
         "back": 107.775594,
@@ -40155,6 +40014,8 @@ window.LIEMAX_DATA = {
         "w": 52.821524000000004,
         "h": 26.902887999999997,
         "ar": 1.9634146341463419,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -40162,6 +40023,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 315,
         "front": 45.954725880000005,
         "mid": 79.232286,
         "back": 118.84842900000001,
@@ -40255,6 +40117,8 @@ window.LIEMAX_DATA = {
         "w": 53.149608,
         "h": 28.871392000000004,
         "ar": 1.8409090909090906,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -40262,6 +40126,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": null,
         "front": 46.24015896,
         "mid": 79.724412,
         "back": 119.586618,
@@ -40355,6 +40220,8 @@ window.LIEMAX_DATA = {
         "w": 69.88189200000001,
         "h": 43.963256,
         "ar": 1.5895522388059702,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -40362,6 +40229,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 349,
         "front": 60.797246040000005,
         "mid": 104.82283800000002,
         "back": 157.234257,
@@ -40455,6 +40323,8 @@ window.LIEMAX_DATA = {
         "w": 49.540684,
         "h": 26.24672,
         "ar": 1.8875,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "domeCoveragePct": null,
@@ -40462,6 +40332,7 @@ window.LIEMAX_DATA = {
         "domeVFov": null
       },
       "seat": {
+        "capacity": 340,
         "front": 43.10039508,
         "mid": 74.311026,
         "back": 111.466539,
@@ -40551,6 +40422,8 @@ window.LIEMAX_DATA = {
         "w": 4.71928047327078,
         "h": 2.651281164758865,
         "ar": 1.78,
+        "sizeTier": null,
+        "sizeLabel": null,
         "widthConfidence": null,
         "geometry": "flat"
       },
@@ -40651,6 +40524,8 @@ window.LIEMAX_DATA = {
         "w": 5.449232490686114,
         "h": 3.0613665678011874,
         "ar": 1.78,
+        "sizeTier": null,
+        "sizeLabel": null,
         "widthConfidence": null,
         "geometry": "flat"
       },
@@ -40843,17 +40718,17 @@ window.LIEMAX_DATA = {
     }
   },
   "db": {
-    "total_us_imax": 392,
+    "total_us_imax": 380,
     "imax_lite_count": 103,
-    "liemax_count": 263,
-    "liemax_pct": 67,
-    "liemax_lfexaminer_count": 258,
-    "liemax_lfexaminer_pct": 66,
-    "liemax_current_source_count": 5,
-    "not_full_143_digital_count": 366,
+    "liemax_count": 251,
+    "liemax_pct": 66,
+    "liemax_lfexaminer_count": 245,
+    "liemax_lfexaminer_pct": 64,
+    "liemax_current_source_count": 6,
+    "not_full_143_digital_count": 354,
     "not_full_143_digital_pct": 93,
     "gt_laser_count": 14,
-    "film_conditional_count": 24,
+    "film_conditional_count": 21,
     "dome_count": 11,
     "dolby_cinema_us_count": 175,
     "dolby_cinema_us_count_checked_at": "2026-05-03T18:45:19.262Z",

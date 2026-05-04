@@ -133,26 +133,188 @@ function pct(part, total) {
 }
 
 function widthBandLabel(venue) {
-  if (!venue?.screen || venue.screen.widthConfidence !== "confirmed" || venue.screen.w == null) return null;
-  if (venue.screen.w >= 70) return "Giant-screen";
-  if (venue.screen.w >= 55) return "Large-screen";
-  return "Standard-screen";
+  return screenSizeLabel(venue);
 }
 
-function displayTierLabel(venue) {
-  const category = DIAG.classify(venue);
-  const tier = {
+function screenSizeLabel(venue) {
+  if (!venue?.screen) return null;
+  if (venue.screen.sizeLabel) return venue.screen.sizeLabel;
+  if (venue.screen.geometry === "hemispherical") return "Dome";
+  if (venue.screen.w == null) return null;
+  if (venue.screen.w < 55) return "Small Screen";
+  if (venue.screen.w < 70) return "Medium Screen";
+  if (venue.screen.w < 85) return "Large Screen";
+  return "Giant Screen";
+}
+
+function screenSizeKey(venue) {
+  if (!venue?.screen) return "unknown";
+  if (venue.screen.sizeTier) return venue.screen.sizeTier;
+  const label = screenSizeLabel(venue);
+  return label ? label.toLowerCase().replace(/\s+screen$/, "").replace(/\s+/g, "_") : "unknown";
+}
+
+function categoryKey(venue) {
+  return DIAG.classify(venue);
+}
+
+function categoryLabel(venue) {
+  const category = categoryKey(venue);
+  return {
     imax_lite: "IMAX Lite",
     liemax: "LIEMAX",
     true_film_lie_dig: "Film-conditional IMAX",
     true_143_laser: "True IMAX",
     true_143_film: "True IMAX + Film",
-    true_dome: "IMAX Dome",
-  }[category];
-  const widthBand = widthBandLabel(venue);
-  return widthBand && (category === "imax_lite" || category === "liemax")
-    ? `${widthBand} ${tier}`
-    : tier;
+    true_dome: "Dome",
+    unknown: "Unknown",
+  }[category] || "Unknown";
+}
+
+function displayTierLabel(venue) {
+  return categoryLabel(venue);
+}
+
+function hasDigital143(venue) {
+  return venue?.kind === "cinema" &&
+    venue.screen?.geometry !== "hemispherical" &&
+    venue.projection?.min_ar != null &&
+    venue.projection.min_ar <= 1.43 &&
+    venue.screen?.ar != null &&
+    venue.screen.ar <= 1.45;
+}
+
+function hasFilm1570(venue) {
+  return Boolean(venue?.filmProjection || (venue?.presentationModes || []).some(mode => mode.isFilmMode));
+}
+
+function hasDomePresentation(venue) {
+  return venue?.screen?.geometry === "hemispherical" || categoryKey(venue) === "true_dome";
+}
+
+function has190OnlyDigital(venue) {
+  return venue?.kind === "cinema" &&
+    !hasDomePresentation(venue) &&
+    !hasDigital143(venue) &&
+    venue.projection?.min_ar != null &&
+    venue.projection.min_ar >= 1.89;
+}
+
+function projectorKeys(venue) {
+  if (!venue || venue.kind !== "cinema") return ["other_unknown"];
+  const keys = new Set();
+  const addProjection = projection => {
+    if (!projection) return;
+    const text = [projection.type, projection.label, projection.display_name, projection.light].filter(Boolean).join(" ").toLowerCase();
+    if (projection.type === "imax_gt_dual_laser" || /gt.*dual|dual.*gt|dual 4k/.test(text)) keys.add("gt_dual_laser");
+    else if (projection.type === "imax_cola" || /\bcola\b/.test(text)) keys.add("cola");
+    else if (projection.type === "imax_laser_xt" || /laser xt/.test(text)) keys.add("laser_xt");
+    else if (projection.type === "imax_dual_xenon" || /xenon/.test(text)) keys.add("dual_xenon");
+    else if (projection.type === "imax_dome_laser" || /laser.*dome|dome.*laser/.test(text)) keys.add("dome_laser");
+    else if (projection.type === "imax_dome_film" || /dome.*15\/?70|gt dome/.test(text)) keys.add("dome_film");
+    else if (projection.type === "imax_1570_film" || /15\/?70|film/.test(text)) keys.add("1570_film");
+  };
+  addProjection(venue.projection);
+  addProjection(venue.filmProjection);
+  if (keys.size === 0) keys.add("other_unknown");
+  return [...keys];
+}
+
+function capabilityKeys(venue) {
+  if (!venue || venue.kind !== "cinema") return [];
+  const keys = new Set();
+  if (hasDigital143(venue)) keys.add("digital_143");
+  if (hasFilm1570(venue)) keys.add("film_1570");
+  if (hasDigital143(venue) || hasFilm1570(venue)) keys.add("any_143");
+  if (has190OnlyDigital(venue)) keys.add("digital_190_only");
+  if (hasDomePresentation(venue)) {
+    keys.add("dome_presentation");
+    keys.add("any_143");
+  }
+  return [...keys];
+}
+
+const PICKER_FILTERS = {
+  category: {
+    label: "IMAX verdict",
+    options: [
+      ["true_143_laser", "True IMAX"],
+      ["true_143_film", "True IMAX + Film"],
+      ["true_film_lie_dig", "Film-conditional IMAX"],
+      ["imax_lite", "IMAX Lite"],
+      ["liemax", "LIEMAX"],
+      ["true_dome", "Dome"],
+      ["unknown", "Unknown"],
+    ],
+  },
+  screenSize: {
+    label: "Screen size",
+    options: [
+      ["small", "Small"],
+      ["medium", "Medium"],
+      ["large", "Large"],
+      ["giant", "Giant"],
+      ["dome", "Dome"],
+    ],
+  },
+  projector: {
+    label: "Projector",
+    options: [
+      ["gt_dual_laser", "GT Dual Laser"],
+      ["cola", "CoLa"],
+      ["laser_xt", "Laser XT"],
+      ["dual_xenon", "Dual Xenon"],
+      ["1570_film", "IMAX 15/70 Film"],
+      ["dome_laser", "Dome Laser"],
+      ["dome_film", "IMAX Dome 15/70 Film"],
+      ["other_unknown", "Other/Unknown Digital"],
+    ],
+  },
+  capability: {
+    label: "Projection capability",
+    options: [
+      ["digital_143", "Digital 1.43"],
+      ["film_1570", "15/70 film"],
+      ["any_143", "Any 1.43-capable"],
+      ["digital_190_only", "1.90-only digital"],
+      ["dome_presentation", "Dome presentation"],
+    ],
+  },
+};
+
+function filterOptionLabel(group, value) {
+  return PICKER_FILTERS[group]?.options.find(([key]) => key === value)?.[1] || value;
+}
+
+function selectedPickerFilterGroups(filters) {
+  return Object.entries(filters).filter(([, value]) => Boolean(value)).map(([group, value]) => ({
+    group,
+    label: group === "state" ? "State" : PICKER_FILTERS[group]?.label || group,
+    value,
+    valueLabel: group === "state" ? value : filterOptionLabel(group, value),
+  }));
+}
+
+function venueSearchText(venue) {
+  const parts = [
+    venue.name,
+    venue.city,
+    venue.state,
+    venue.stateName,
+    venue.sub,
+    venue.projection?.label,
+    venue.projection?.light,
+    venue.projection?.type,
+    venue.filmProjection?.label,
+    venue.filmProjection?.type,
+    screenSizeLabel(venue),
+    screenSizeKey(venue),
+    categoryLabel(venue),
+    categoryKey(venue),
+    ...projectorKeys(venue).map(key => filterOptionLabel("projector", key)),
+    ...capabilityKeys(venue).map(key => filterOptionLabel("capability", key)),
+  ];
+  return parts.filter(Boolean).join(" ").toLowerCase().replace(/-/g, " ");
 }
 
 function verticalFrameLoss(contentAr = 1.43, presentationAr = 1.90) {
@@ -260,11 +422,25 @@ function ConfLabel({ src, mask }) {
   );
 }
 
+function VisibleTag({ tag, className = "" }) {
+  const tooltip = tag.tooltip || "";
+  return (
+    <span className={`${className} tag-with-help`.trim()}
+      style={{ color: tag.color }}
+      data-tooltip={tooltip}
+      aria-label={tooltip ? `${tag.text}: ${tooltip}` : tag.text}
+      tabIndex={tooltip ? 0 : undefined}>
+      {tag.text}
+    </span>
+  );
+}
+
 // ─── Picker ───────────────────────────────────────────────────────────────────
 
 function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, onChangeVenue, onChangePresAr, onChangeFilmMode, excludeId }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [filters, setFilters] = useState({ category: "", screenSize: "", projector: "", capability: "", state: "" });
   const ref = useRef(null);
   const searchRef = useRef(null);
 
@@ -284,9 +460,16 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
     const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
     const matches = v => {
       if (v.id === excludeId) return false;
+      const anyFilterActive = Object.values(filters).some(Boolean);
+      if (anyFilterActive && v.kind !== "cinema") return false;
+      if (filters.category && categoryKey(v) !== filters.category) return false;
+      if (filters.screenSize && screenSizeKey(v) !== filters.screenSize) return false;
+      if (filters.projector && !projectorKeys(v).includes(filters.projector)) return false;
+      if (filters.capability && !capabilityKeys(v).includes(filters.capability)) return false;
+      if (filters.state && v.state !== filters.state) return false;
       if (tokens.length === 0) return true;
-      const fields = [v.name, v.city, v.state, v.stateName].filter(Boolean).map(s => String(s).toLowerCase());
-      return tokens.every(token => fields.some(field => field.includes(token)));
+      const searchText = venueSearchText(v);
+      return tokens.every(token => searchText.includes(token));
     };
     const filtered = D.venues.filter(matches);
     const cinemas = filtered.filter(v => v.kind === "cinema");
@@ -315,13 +498,38 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
     }
 
     return cinemaGroups;
-  }, [query, excludeId]);
+  }, [query, filters, excludeId]);
+
+  const stateFilterOptions = useMemo(() => {
+    const byCode = new Map();
+    realCinemaVenues().forEach(v => {
+      if (!v.state || v.state === "Format presets") return;
+      byCode.set(v.state, v.stateName || v.state);
+    });
+    return [...byCode.entries()]
+      .sort(([, a], [, b]) => a.localeCompare(b))
+      .map(([code, name]) => ({ code, name }));
+  }, []);
+
+  const activeFilters = selectedPickerFilterGroups(filters);
+
+  function updateFilter(group, value) {
+    setFilters(current => ({ ...current, [group]: value }));
+  }
+
+  function removeFilter(group) {
+    setFilters(current => ({ ...current, [group]: "" }));
+  }
+
+  function clearFilters() {
+    setFilters({ category: "", screenSize: "", projector: "", capability: "", state: "" });
+  }
 
   function pickVenue(v) { onChangeVenue(v); setOpen(false); setQuery(""); }
 
-  const proj = (filmMode && venue.filmProjection) ? venue.filmProjection : venue.projection;
   const screenSrc = venue.sources.screen;
   const meta = D.qualityMeta[screenSrc.q] || { label: screenSrc.q, tier: 3 };
+  const selectedTags = quickResultTags(venue);
 
   return (
     <div ref={ref} className="picker-v3">
@@ -333,10 +541,16 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
         </div>
         <div className="picker-v3__name">{venue.name}</div>
         <div className="picker-v3__sub">{venue.sub}</div>
+        {selectedTags.length > 0 && (
+          <div className="picker-v3__selected-tags" aria-label={`Side ${side} selected tags`}>
+            {selectedTags.map(tag => <VisibleTag key={tag.text} tag={tag} />)}
+          </div>
+        )}
         <div className="meta-chips" onClick={e => e.stopPropagation()}>
           <span className="meta-chip meta-chip--screen">Screen {venue.screen.ar.toFixed(2)}:1</span>
           <span className="meta-chip meta-chip--pres">Showing {presAr.toFixed(2)}:1</span>
-          <span className="meta-chip meta-chip--proj">{proj.label}</span>
+          <span className="meta-chip meta-chip--proj">{venue.projection.label}</span>
+          {venue.filmProjection && <span className="meta-chip meta-chip--proj">{venue.filmProjection.label}</span>}
           <span className="meta-chip meta-chip--source" data-tier={meta.tier}>{meta.label}</span>
         </div>
         {presentationNote && <div className="presentation-note">{presentationNote}</div>}
@@ -346,10 +560,38 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
         <div className="picker-v3__dropdown" role="listbox">
           <div className="picker-v3__search-wrap">
             <input ref={searchRef} type="text" className="picker-v3__search"
-              placeholder="Search theaters, formats, displays…"
+              placeholder="Search theaters, formats, displays… try “large liemax ma” or “15/70”"
               value={query} onChange={e => setQuery(e.target.value)}
               onKeyDown={e => { if (e.key === "Escape") setOpen(false); }}
               aria-label="Search" />
+            <div className="picker-v3__filters" aria-label={`Side ${side} filters`}>
+              {Object.entries(PICKER_FILTERS).map(([group, config]) => (
+                <label className="picker-filter" key={group}>
+                  <span>{config.label}</span>
+                  <select value={filters[group]} onChange={e => updateFilter(group, e.target.value)}>
+                    <option value="">All</option>
+                    {config.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                  </select>
+                </label>
+              ))}
+              <label className="picker-filter">
+                <span>State</span>
+                <select value={filters.state} onChange={e => updateFilter("state", e.target.value)}>
+                  <option value="">All</option>
+                  {stateFilterOptions.map(state => <option key={state.code} value={state.code}>{state.name}</option>)}
+                </select>
+              </label>
+            </div>
+            {activeFilters.length > 0 && (
+              <div className="picker-filter-chips">
+                {activeFilters.map(filter => (
+                  <button className="picker-filter-chip" key={filter.group} type="button" onClick={() => removeFilter(filter.group)}>
+                    {filter.label}: {filter.valueLabel} ×
+                  </button>
+                ))}
+                <button className="picker-filter-clear" type="button" onClick={clearFilters}>Clear filters</button>
+              </div>
+            )}
             <div className="picker-v3__source-note">
               IMAX theater listings come from 143190.xyz, with supplemental Xenon-only rows from LFExaminer's archival 2021 table.
             </div>
@@ -359,14 +601,18 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
             <div key={g.label}>
               <div className="picker-v3__group-label">{g.label}{g.count != null ? ` (${g.count})` : ""}</div>
               {g.items.map(v => {
-                const tag = quickCategoryTag(v);
+                const tags = quickResultTags(v);
                 return (
                   <button key={v.id} className="picker-v3__item" role="option" onClick={() => pickVenue(v)}>
                     <div className="picker-v3__item-main">
                       <div className="picker-v3__item-name">{v.name}</div>
                       <div className="picker-v3__item-sub">{v.sub}</div>
                     </div>
-                    {tag && <span className="picker-v3__item-tag" style={{ color: tag.color }}>{tag.text}</span>}
+                    {tags.length > 0 && (
+                      <span className="picker-v3__item-tags">
+                        {tags.map(tag => <VisibleTag key={tag.text} tag={tag} className="picker-v3__item-tag" />)}
+                      </span>
+                    )}
                   </button>
                 );
               })}
@@ -456,14 +702,16 @@ function Stage({ venueA, venueB, statsA, statsB, filmModeA, filmModeB }) {
   const stageTitle = contentArA === contentArB
     ? `SCREEN SCALE · ${contentArA.toFixed(2)} CONTENT AR`
     : `SCREEN SCALE · A ${contentArA.toFixed(2)} / B ${contentArB.toFixed(2)}`;
+  const legendA = comparisonLegendLabel(venueA);
+  const legendB = comparisonLegendLabel(venueB);
 
   return (
     <section className="stage">
       <div className="stage__header">
         <span className="stage__title">{stageTitle}</span>
         <div className="stage__legend">
-          <span className="stage__legend-item"><span className="stage__swatch" style={{ background: "var(--side-a)" }} />A · {venueA.tag}</span>
-          <span className="stage__legend-item"><span className="stage__swatch" style={{ background: "var(--side-b)" }} />B · {venueB.tag}</span>
+          <span className="stage__legend-item"><span className="stage__swatch" style={{ background: "var(--side-a)" }} />A · {legendA}</span>
+          <span className="stage__legend-item"><span className="stage__swatch" style={{ background: "var(--side-b)" }} />B · {legendB}</span>
         </div>
       </div>
       <svg ref={svgRef} className="stage__svg" style={{ minHeight: 360 }} aria-label="Screen scale visualization" />
@@ -634,7 +882,6 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
   const label = selectedState
     ? (states.find(s => s.code === selectedState)?.name || selectedState)
     : "United States snapshot";
-  const dolbyCinemaUsCount = D.db?.dolby_cinema_us_count;
   const stats = selectedState ? scoped : {
     total: D.db?.total_us_imax ?? national.total,
     imaxLite: D.db?.imax_lite_count ?? national.imaxLite,
@@ -648,7 +895,6 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
   };
   const statItems = [
     { label: "IMAX rows", value: stats.total, sub: selectedState ? "in selected state" : "U.S. film / laser / xenon / dome rows" },
-    { label: "Dolby Cinema US", value: dolbyCinemaUsCount == null ? "—" : dolbyCinemaUsCount, sub: "contiguous U.S.; Dolby finder snapshot" },
     { label: "Not full 1.43 digital", value: selectedState ? `${stats.imaxLite + stats.liemax} (${pct(stats.imaxLite + stats.liemax, stats.total)})` : `${stats.notFull143Digital} (${stats.notFull143DigitalPct}%)`, sub: "IMAX Lite + LIEMAX" },
     { label: "IMAX Lite", value: `${stats.imaxLite} (${pct(stats.imaxLite, stats.total)})`, sub: "CoLa / Laser XT capped at 1.90" },
     { label: "LIEMAX", value: `${stats.liemax} (${pct(stats.liemax, stats.total)})`, sub: stats.liemaxLfExaminer == null ? "legacy Dual Xenon" : `${stats.liemaxLfExaminer} archival LFExaminer rows` },
@@ -683,7 +929,6 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
       </div>
       <p className="data-stats__note">
         Based on the current static docs bundle: {D.db?.total_us_imax ?? national.total} U.S. IMAX rows from 143190 / r-imax plus low-confidence archival LFExaminer Xenon rows.
-        Dolby Cinema count comes from the latest saved Dolby finder endpoint snapshot.
         LIEMAX now means legacy Dual Xenon; most LIEMAX rows come from LFExaminer 2021 and may be stale, while 143190 remains the fresher source when both list the same theater.
         State stats only appear after you choose a state; no IP geolocation is used.
       </p>
@@ -886,19 +1131,50 @@ function Highlight({ text, query }) {
   return <>{parts}</>;
 }
 
-function quickCategoryTag(venue) {
-  if (!venue || venue.kind === "home") return null;
+function quickResultTags(venue) {
+  if (!venue || venue.kind === "home") return [];
   const cat = DIAG.classify(venue);
+  const size = screenSizeLabel(venue);
+  const sizeTooltip = {
+    "Small Screen": "Under 55 ft wide.",
+    "Medium Screen": "55-69.9 ft wide.",
+    "Large Screen": "70-84.9 ft wide.",
+    "Giant Screen": "85+ ft wide.",
+    "Dome": "Hemispherical dome screen.",
+  }[size] || "Physical screen-size tier.";
   const map = {
-    true_143_film:    { text: "TRUE 1.43 + FILM", color: "var(--cat-true143-film)" },
-    true_143_laser:   { text: "TRUE 1.43",        color: "var(--cat-true143)" },
-    true_film_lie_dig:{ text: "1.43 ON FILM",     color: "var(--cat-truefilm)" },
-    true_dome:        { text: "DOME 1.43",        color: "var(--cat-dome)" },
-    imax_lite:        { text: displayTierLabel(venue) || "IMAX LITE", color: "var(--cat-imaxlite, var(--cat-liemax))" },
-    liemax:           { text: displayTierLabel(venue) || "LIEMAX", color: "var(--cat-liemax)" },
-    unknown:          { text: "UNKNOWN",          color: "var(--cat-unknown)" },
+    true_143_film:    { text: "True IMAX + Film", color: "var(--cat-true143-film)", tooltip: "Full-height digital IMAX, plus 15/70 film when booked." },
+    true_143_laser:   { text: "True IMAX",        color: "var(--cat-true143)", tooltip: "Full-height 1.43 digital IMAX." },
+    true_film_lie_dig:{ text: "Film-conditional IMAX", color: "var(--cat-truefilm)", tooltip: "True IMAX only for booked 15/70 film showings." },
+    true_dome:        { text: "Dome",             color: "var(--cat-dome)", tooltip: "IMAX dome presentation, not a flat screen tier." },
+    imax_lite:        { text: "IMAX Lite",        color: "var(--cat-imaxlite, var(--cat-liemax))", tooltip: "Modern laser IMAX, usually capped at 1.90." },
+    liemax:           { text: "LIEMAX",           color: "var(--cat-liemax)", tooltip: "Legacy Dual Xenon IMAX, capped at 1.90." },
+    unknown:          { text: "Unknown",          color: "var(--cat-unknown)", tooltip: "Not enough projector or screen data to classify." },
   };
-  return map[cat];
+  const tags = [];
+  if (size) tags.push({ text: size, color: "var(--ink-3)", tooltip: sizeTooltip });
+  tags.push(map[cat] || map.unknown);
+  return tags;
+}
+
+function quickCategoryTag(venue) {
+  return quickResultTags(venue)[1] || quickResultTags(venue)[0] || null;
+}
+
+function comparisonLegendLabel(venue) {
+  if (!venue || venue.kind !== "cinema") return venue?.tag || "Unknown";
+  return quickResultTags(venue).map(tag => tag.text).join(" · ") || venue.tag;
+}
+
+function projectorDisplayName(projection) {
+  return projection?.label || projection?.display_name || projection?.type || "—";
+}
+
+function projectorTechSummary(projection) {
+  const parts = [];
+  if (projection?.light) parts.push(projection.light);
+  if (projection?.min_ar != null) parts.push(`caps at ${projection.min_ar.toFixed(2)}:1`);
+  return parts.join(" · ") || "Projector details incomplete";
 }
 
 // ─── Single screen scale figure ───────────────────────────────────────────────
@@ -1047,7 +1323,7 @@ function SearchBar({ value, onChange, onSelect, onClear, autoFocus, showCategory
                         {[v.city, v.stateName || v.state].filter(Boolean).join(", ") || v.sub}
                       </div>
                     </div>
-                    {tag && <span className="search__item-tag" style={{ color: tag.color }}>{tag.text}</span>}
+                    {tag && <VisibleTag tag={tag} className="search__item-tag" />}
                   </button>
                 );
               })}
@@ -1078,6 +1354,7 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
   const screenSource = venue.sources?.screen;
   const screenMeta = screenSource ? D.qualityMeta[screenSource.q] : null;
   const tierLabel = displayTierLabel(venue);
+  const sizeLabel = screenSizeLabel(venue);
   const projectorCopy = isDome
     ? "Dome IMAX uses a hemispherical screen. The meaningful visual metric is fixed coverage, not a rectangular row-distance score."
     : proj?.min_ar && proj.min_ar <= 1.43
@@ -1096,6 +1373,9 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
           <h2 className="diagnosis__theater-name">{venue.name}</h2>
           <div className="diagnosis__theater-loc">
             {[venue.city, venue.stateName || venue.state].filter(Boolean).join(" · ")}
+          </div>
+          <div className="diagnosis__tags" aria-label="Visible theater tags">
+            {quickResultTags(venue).map(tag => <VisibleTag key={tag.text} tag={tag} />)}
           </div>
         </div>
         <div className="cat-badge">
@@ -1117,8 +1397,12 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
               {isDome
                 ? (wFt ? `${wFt} ft dome diameter. ` : "")
                 : (wFt && hFt ? `${wFt} × ${hFt} ft screen. ` : wFt ? `${wFt} ft wide screen. ` : "")}
+              {sizeLabel ? `${sizeLabel}. ` : ""}
               {tierLabel ? `${tierLabel}. ` : ""}
-              {proj?.light ? `Projector: ${proj.light}.` : ""}
+              {proj ? `Projector: ${projectorDisplayName(proj)}. ` : ""}
+              {venue.filmProjection && projectorDisplayName(venue.filmProjection) !== projectorDisplayName(proj)
+                ? `Film: ${projectorDisplayName(venue.filmProjection)}.`
+                : ""}
             </p>
           </div>
         )}
@@ -1149,16 +1433,16 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
           <span className="spec__sub">{isDome && wFt ? `${wFt} ft diameter` : (wFt && hFt ? `${wFt} × ${hFt} ft` : "Geometry unknown")}</span>
         </div>
         <div className="spec">
-          <span className="spec__k">{isDome ? "Dome projection" : "Digital projector"}</span>
-          <span className="spec__v spec__v--small">{proj?.light || "—"}</span>
-          <span className="spec__sub">{isDome ? (venue.filmProjection ? "15/70 dome 1.43" : "laser dome 1.43") : `caps at ${proj?.min_ar ? `${proj.min_ar.toFixed(2)}:1` : "—"}`}</span>
+          <span className="spec__k">{proj?.type?.includes("film") ? "Primary projector" : isDome ? "Dome projector" : "Digital projector"}</span>
+          <span className="spec__v spec__v--small">{projectorDisplayName(proj)}</span>
+          <span className="spec__sub">{projectorTechSummary(proj)}</span>
         </div>
         <div className="spec">
-          <span className="spec__k">15/70 film</span>
+          <span className="spec__k">Film projector</span>
           <span className="spec__v spec__v--small" style={{ color: venue.filmProjection ? "var(--gold)" : "var(--noir-ink-3)" }}>
-            {venue.filmProjection ? "Installed" : "No"}
+            {venue.filmProjection ? projectorDisplayName(venue.filmProjection) : "None listed"}
           </span>
-          <span className="spec__sub">{venue.filmProjection ? "Booked engagements" : "Digital only"}</span>
+          <span className="spec__sub">{venue.filmProjection ? projectorTechSummary(venue.filmProjection) : "No 15/70 film projector in this row"}</span>
         </div>
         <div className="spec">
           <span className="spec__k">{isDome ? "Dome vert. FOV" : "Mid-seat vert. FOV"}</span>

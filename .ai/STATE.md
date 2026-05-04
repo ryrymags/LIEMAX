@@ -83,13 +83,14 @@ Completed Priority 2 LFExaminer goals:
 - Added `src/data/lfexaminerImport.ts` to parse the attached LFExaminer all-entries Apple webarchive, preserve raw LFExaminer rows, and map U.S. IMAX-labeled `D`/`1570+D` rows to `imax_dual_xenon` venue records.
 - Added `src/data/fixtures/lfexaminer_us_imax_rows.json` with 320 U.S. IMAX LFExaminer candidates from the 1,617-row archived table.
 - Schema bumped to `1.4.0` with `lfexaminer` source quality and `source_lfexaminer` raw row support.
-- `docs/data.js` now promotes 279 comparable unmatched LFExaminer rows into search/comparison/state-national stats as low-confidence archival 2021 data; 143190/authored current records win conflicts.
+- `docs/data.js` now promotes 246 comparable unmatched LFExaminer rows into search/comparison/state-national stats as low-confidence archival 2021 data; 143190/authored current records win conflicts.
 - Site copy now says Xenon-only rows include archival LFExaminer 2021 data and may be stale, instead of saying older Xenon-only rows are simply missing.
 
 Priority 2 LFExaminer verification:
 - `npm run validate:schema`: passed.
 - `npm run validate:docs`: 71 passed, 0 failed.
 - 2026-05-03 follow-up: strengthened LFExaminer-vs-143190 duplicate suppression so 143190 rows win despite venue-name drift such as trailing `& IMAX`, auditorium counts, `Stadium`, or circuit naming differences. Boston Common is now explicitly guarded so the LFExaminer Dual Xenon archival row cannot appear beside the 143190 CoLa row.
+- 2026-05-04 follow-up: extended duplicate suppression to authored current 143190 venues and matching screen dimensions, removing stale LFExaminer overlaps from search/stats for rows such as Providence Place, Fayetteville 14, Edwards Renaissance, Ontario Palace, Edwards Valencia, and Stockton City Centre/Center.
 
 Priority 2 LFExaminer caveats:
 - LFExaminer was last updated 2021-10-17; any LFExaminer-sourced venue may have closed or upgraded.
@@ -118,14 +119,29 @@ Completed 2026-05-03:
 - Hybrid CoLa + 15/70 venues now explain that regular digital showings are IMAX Lite, not LIEMAX.
 - Schema bumped to `1.5.0` with `screen.width_confidence`; 143190/r-imax rows mark confirmed width, LFExaminer/frontend typical rows mark community-estimate width, and width sub-labels only fire from confirmed widths.
 - Generated docs DB now exposes `total_us_imax`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
-- Current generated national split: 392 U.S. IMAX rows; 103 IMAX Lite; 263 LIEMAX; 258 LIEMAX rows from archival LFExaminer; 366 / 93% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 24 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
+- Current generated national split: 380 U.S. IMAX rows; 103 IMAX Lite; 251 LIEMAX; 246 LIEMAX rows from archival LFExaminer; 354 / 93% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
 - Overhaul V1 planning docs were updated to use `{{db.*}}` tokens, resolve DMR first introduction to Block 4, and keep Layer 3 chevrons inert until real anchors exist.
 
 Pre-GUI taxonomy verification:
-- `npm run validate:schema`: 176 passed, 0 failed.
-- `npm run validate:docs`: 83 passed, 0 failed.
+- `npm run validate:schema`: 182 passed, 0 failed.
+- `npm run validate:docs`: 85 passed, 0 failed.
 - `npm run ci`: passed.
 - `git diff --check`: passed.
+
+## Screen Tags + Side Picker Filters
+
+Completed 2026-05-04:
+- Generated docs venues now expose `screen.sizeTier` / `screen.sizeLabel` for every non-preset cinema row using physical width only: Small <55 ft, Medium 55-69.9 ft, Large 70-84.9 ft, Giant >=85 ft, and Dome by hemispherical geometry.
+- Natick is overridden in generated docs data from Jordan’s official IMAX page: 76 x 55 ft screen, 279 seats, official source notes, `Large Screen`, and conservative legacy digital classification until current GT Laser, CoLa/Laser XT, or 15/70 evidence exists.
+- Side A / Side B pickers now show simple visible result tags only: screen-size label plus IMAX category, with 1.43/aspect-ratio capability labels kept out of default result rows.
+- Side A / Side B pickers now include compact filters for category, screen size, projector, projection capability, and U.S. state, with active removable chips and a `Clear filters` action. Free-text picker search indexes these concepts.
+- Visible theater tags now expose hover/focus tooltips that explain whether the tag is a screen-size tier or IMAX category; `Unknown` explicitly means the IMAX category lacks enough projector/screen evidence.
+- The visible Dolby Cinema count card was removed from the main stats panel while preserving `window.LIEMAX_DATA.db.dolby_cinema_us_count` and snapshot metadata for later use.
+
+Screen Tags + Filters verification:
+- `npm run build:docs-data`: passed.
+- `npm run validate:docs`: 108 passed, 0 failed.
+- `npm run ci`: passed.
 
 ## Completed
 

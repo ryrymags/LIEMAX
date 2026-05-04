@@ -364,6 +364,92 @@ button, select, input { font-family: inherit; color: inherit; }
   margin-top: 4px;
   letter-spacing: 0.02em;
 }
+.picker-v3__selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+.picker-v3__selected-tags span {
+  border: 1px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 3px 7px;
+  white-space: nowrap;
+}
+.tag-with-help {
+  position: relative;
+  cursor: help;
+}
+.tag-with-help::after,
+.tag-with-help::before {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transition: opacity 120ms, transform 120ms;
+  z-index: 80;
+}
+.tag-with-help::after {
+  content: attr(data-tooltip);
+  bottom: calc(100% + 8px);
+  width: min(240px, 72vw);
+  transform: translate(-50%, 4px);
+  background: var(--ink);
+  color: var(--bg-elev);
+  border: 1px solid var(--ink);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.35;
+  padding: 8px 9px;
+  text-transform: none;
+  white-space: normal;
+}
+.tag-with-help::before {
+  content: "";
+  bottom: calc(100% + 3px);
+  transform: translate(-50%, 4px);
+  border: 5px solid transparent;
+  border-top-color: var(--ink);
+}
+.tag-with-help:hover::after,
+.tag-with-help:hover::before,
+.tag-with-help:focus::after,
+.tag-with-help:focus::before {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.tag-with-help:focus {
+  outline: 2px solid color-mix(in srgb, currentColor 55%, transparent);
+  outline-offset: 2px;
+}
+.picker-v3__item-tags .tag-with-help::after,
+.search__item-tag.tag-with-help::after {
+  left: auto;
+  right: 0;
+  transform: translate(0, 4px);
+}
+.picker-v3__item-tags .tag-with-help::before,
+.search__item-tag.tag-with-help::before {
+  left: auto;
+  right: 12px;
+  transform: translate(0, 4px);
+}
+.picker-v3__item-tags .tag-with-help:hover::after,
+.picker-v3__item-tags .tag-with-help:hover::before,
+.picker-v3__item-tags .tag-with-help:focus::after,
+.picker-v3__item-tags .tag-with-help:focus::before,
+.search__item-tag.tag-with-help:hover::after,
+.search__item-tag.tag-with-help:hover::before,
+.search__item-tag.tag-with-help:focus::after,
+.search__item-tag.tag-with-help:focus::before {
+  transform: translate(0, 0);
+}
 
 /* Combobox dropdown */
 .picker-v3__dropdown {
@@ -404,6 +490,56 @@ button, select, input { font-family: inherit; color: inherit; }
   font-size: 0.6rem;
   line-height: 1.35;
   color: var(--ink-3);
+}
+.picker-v3__filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+}
+.picker-filter span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+.picker-filter select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-card);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 5px 6px;
+}
+.picker-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+.picker-filter-chip,
+.picker-filter-clear {
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+.picker-filter-chip:hover,
+.picker-filter-clear:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.picker-filter-clear {
+  border-style: dashed;
 }
 .picker-v3__group-label {
   font-family: var(--font-mono);
@@ -446,13 +582,20 @@ button, select, input { font-family: inherit; color: inherit; }
   color: var(--ink-3);
   margin-top: 2px;
 }
+.picker-v3__item-tags {
+  flex: 0 1 170px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
 .picker-v3__item-tag {
-  flex: 0 0 auto;
   font-family: var(--font-mono);
   font-size: 0.54rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   font-weight: 800;
-  text-transform: uppercase;
+  text-transform: none;
   padding: 3px 7px;
   border: 1px solid currentColor;
   white-space: nowrap;
@@ -1073,9 +1216,9 @@ button, select, input { font-family: inherit; color: inherit; }
   flex: 0 0 auto;
   font-family: var(--font-mono);
   font-size: 0.56rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   font-weight: 800;
-  text-transform: uppercase;
+  text-transform: none;
   padding: 3px 7px;
   border: 1px solid currentColor;
   white-space: nowrap;
@@ -1451,7 +1594,6 @@ button, select, input { font-family: inherit; color: inherit; }
   color: var(--noir-ink);
   border: 1px solid var(--noir-line);
   margin-bottom: 28px;
-  overflow: hidden;
   animation: diag-in 380ms var(--ease-cinema);
   box-shadow: 0 24px 60px -24px rgba(0,0,0,0.45);
 }
@@ -1509,6 +1651,41 @@ button, select, input { font-family: inherit; color: inherit; }
   font-size: 0.74rem;
   letter-spacing: 0.06em;
   color: var(--noir-ink-2);
+}
+.diagnosis__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.diagnosis__tags span {
+  border: 1px solid var(--accent, var(--gold));
+  color: var(--accent, var(--gold));
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 3px 7px;
+}
+.diagnosis__tags .tag-with-help::after {
+  top: calc(100% + 8px);
+  bottom: auto;
+  left: 0;
+  transform: translate(0, -4px);
+}
+.diagnosis__tags .tag-with-help::before {
+  top: calc(100% + 3px);
+  bottom: auto;
+  left: 12px;
+  transform: translate(0, -4px);
+  border-top-color: transparent;
+  border-bottom-color: var(--ink);
+}
+.diagnosis__tags .tag-with-help:hover::after,
+.diagnosis__tags .tag-with-help:hover::before,
+.diagnosis__tags .tag-with-help:focus::after,
+.diagnosis__tags .tag-with-help:focus::before {
+  transform: translate(0, 0);
 }
 
 /* Category badge — bordered box in top-right of card head */
