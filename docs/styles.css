@@ -2022,6 +2022,7 @@ button, select, input { font-family: inherit; color: inherit; }
   min-height: 320px;
 }
 .pov__grid {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1px;
@@ -2030,14 +2031,29 @@ button, select, input { font-family: inherit; color: inherit; }
 .pov__grid--compare {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.pov__grid:fullscreen,
+.pov__grid.is-pseudo-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background: #d9d2c4;
+}
+.pov__grid:fullscreen .pov__viewport,
+.pov__grid.is-pseudo-fullscreen .pov__viewport {
+  height: 100vh;
+}
+.pov__grid.is-pseudo-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
 .pov__panel {
   min-width: 0;
-  background: #0b0d10;
+  background: #171c22;
 }
 .pov__viewport {
   position: relative;
   height: clamp(340px, 42vw, 560px);
-  background: #0b0d10;
+  background: #171c22;
   color: #efe7d4;
   overflow: hidden;
 }
@@ -2089,7 +2105,8 @@ button, select, input { font-family: inherit; color: inherit; }
 }
 .pov__warn,
 .pov__hint,
-.pov__fullscreen {
+.pov__fullscreen,
+.pov__split-fullscreen {
   position: absolute;
   font-family: var(--font-mono);
   font-size: 0.58rem;
@@ -2126,6 +2143,19 @@ button, select, input { font-family: inherit; color: inherit; }
   cursor: pointer;
 }
 .pov__fullscreen:hover {
+  border-color: #efe7d4;
+}
+.pov__split-fullscreen {
+  right: 12px;
+  top: 12px;
+  z-index: 10;
+  border: 1px solid rgba(239, 231, 212, 0.52);
+  background: rgba(20, 17, 13, 0.7);
+  color: #efe7d4;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.pov__split-fullscreen:hover {
   border-color: #efe7d4;
 }
 .pov__caption,

@@ -242,6 +242,8 @@ const povProvidenceFilm = POV?.modelForVenue ? POV.modelForVenue(providence, { s
 const povReadingGt = POV?.modelForVenue ? POV.modelForVenue(reading, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
 const povLincolnGt = POV?.modelForVenue ? POV.modelForVenue(lincolnSquare, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
 const povDolbyTypical = POV?.modelForVenue ? POV.modelForVenue(dolbyTypical, { side: "A", presentationAr: 2.39, seat: "mid" }) : null;
+const dolbyScopeStats = computeStats(dolbyTypical, "mid", 2.39, 2.39, false);
+const dolbyFlatStats = computeStats(dolbyTypical, "mid", 1.85, 1.85, false);
 const expectedProvidenceGtFrontFloor = providence?.screen?.h * 0.33 - 3.7;
 const expectedReadingGtFrontFloor = reading?.screen?.h * 0.33 - 3.7;
 const expectedLincolnGtFrontFloor = lincolnSquare?.screen?.h * 0.33 - 3.7;
@@ -308,6 +310,11 @@ assert("Dolby preset uses recliner row spacing and close-row depth audit",
   closeEnough(dolbySingleLaser?.seat?.mid, dolbySingleLaser?.screen?.w * 0.75, 0.02) &&
   closeEnough(dolbySingleLaser?.seat?.back, dolbySingleLaser?.screen?.w * 1.30, 0.02) &&
   closeEnough(dolbyTypical?.seat?.rowSpacingFt, 5.2, 0.01));
+assert("Dolby 2D scale changes between scope and flat masking",
+  dolbyScopeStats?.mask?.effW > dolbyFlatStats?.mask?.effW &&
+  closeEnough(dolbyScopeStats?.mask?.effH, dolbyFlatStats?.mask?.effH, 0.02) &&
+  !dolbyScopeStats?.mask?.pillarbox &&
+  dolbyFlatStats?.mask?.pillarbox);
 assert("Standard multiplex preset uses conventional 1.50W/2.00W/2.50W depth audit",
   closeEnough(standardMultiplex?.seat?.front, standardMultiplex?.screen?.w * 1.50, 0.02) &&
   closeEnough(standardMultiplex?.seat?.mid, standardMultiplex?.screen?.w * 2.00, 0.02) &&
@@ -344,12 +351,16 @@ const statsAssemblyRowCola = computeStats(assemblyRow, "front", 1.90, 1.90, fals
 const statsBostonCommonCola = computeStats(bostonCommon, "front", 1.90, 1.90, false);
 const assemblyArea = statsAssemblyRowCola.mask.effW * statsAssemblyRowCola.mask.effH;
 const bostonArea = statsBostonCommonCola.mask.effW * statsBostonCommonCola.mask.effH;
-const bostonPhysicalArea = bostonCommon.screen.w * bostonCommon.screen.h;
+const bostonFitted190Area = bostonCommon.screen.h * 1.90 * bostonCommon.screen.h;
 
 assert("Assembly Row 1.90 visible area remains about 1,599 sq ft", closeEnough(assemblyArea, 1599, 1));
 assert("Assembly Row 1.90 utilization remains about 94%", closeEnough(statsAssemblyRowCola.physicalUtil, 94, 0.5));
-assert("Boston Common 1.90 visible area clamps to physical area", closeEnough(bostonArea, bostonPhysicalArea, 0.1));
-assert("Boston Common 1.90 utilization clamps to 100%", closeEnough(statsBostonCommonCola.physicalUtil, 100, 0.01));
+assert("Boston Common 1.90 visible area uses fitted side-masked presentation window",
+  closeEnough(bostonArea, bostonFitted190Area, 0.1) &&
+  statsBostonCommonCola.mask.pillarbox);
+assert("Boston Common 1.90 utilization reflects fitted presentation window",
+  closeEnough(statsBostonCommonCola.physicalUtil, 91.94, 0.02) &&
+  !statsBostonCommonCola.mask.physicalClipped);
 
 function visibleBoundsViolations() {
   const offenders = [];
@@ -472,6 +483,19 @@ assert("Docs data generator does not carry hidden hard-coded Providence or Readi
   !docsBuildSource.includes("viewing_distance_mid_ft: 75") &&
   !docsBuildSource.includes("viewing_distance_back_ft: 84"));
 assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const syncLook = options.syncLook !== false") && povSource.includes("const sharedLook = { yaw: 0, pitch: 0 }") && povSource.includes("syncLook ? viewers : [viewer]"));
+assert("POV comparison supports split-screen fullscreen",
+  povSource.includes("pov__split-fullscreen") &&
+  povSource.includes("root.requestFullscreen") &&
+  stylesSource.includes(".pov__grid:fullscreen") &&
+  stylesSource.includes(".pov__grid.is-pseudo-fullscreen"));
+assert("POV source removes chair rows and keeps scale human beside the screen",
+  !povSource.includes("buildSeatRow") &&
+  povSource.includes("const humanX = W / 2 + Math.max") &&
+  stageSource.includes("Keep the scale human beside the first screen"));
+assert("POV theater background is brightened while screen masking remains black",
+  povSource.includes("THEATER_BG_COLOR = 0x171c22") &&
+  povSource.includes("SCREEN_FRAME_COLOR = 0x3a424d") &&
+  povSource.includes("color: 0x000000"));
 assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov__viewport.is-pseudo-fullscreen") && stylesSource.includes(".pov__wip"));
 assert("Sanitized POV prototype archive is preserved", prototypeReadmeSource.includes("rough prototype") && prototypeReadmeSource.includes("archive-only") && prototypeSource.includes("neutral reference frame") && !prototypeSource.includes("data:image/jpeg") && !prototypeSource.includes("base64"));
 const dataSource = fs.readFileSync(path.join(root, "docs/data.js"), "utf8");

@@ -9,6 +9,9 @@ window.LIEMAX_POV = (function () {
   const SCREEN_Z_FT = 0;
   const DEFAULT_GT_EDGE_BOW_FT = 2.5;
   const IMMERSION_WARN_HFOV = 53;
+  const THEATER_BG_COLOR = 0x171c22;
+  const THEATER_FLOOR_COLOR = 0x202833;
+  const SCREEN_FRAME_COLOR = 0x3a424d;
   const REFERENCE_IMAGE_SRC = "assets/pov/spiderverse-143-reference.webp";
   const REFERENCE_IMAGE_LABEL = "Spider-Verse 1.43 reference frame";
 
@@ -140,10 +143,62 @@ window.LIEMAX_POV = (function () {
     const root = document.createElement("div");
     root.className = `pov__grid ${models.length > 1 ? "pov__grid--compare" : ""}`;
     container.appendChild(root);
+    const rootDisposers = [];
+    let viewers = [];
+
+    if (models.length > 1) {
+      const splitButton = document.createElement("button");
+      splitButton.className = "pov__split-fullscreen";
+      splitButton.type = "button";
+      splitButton.title = "Fullscreen split-screen comparison";
+      splitButton.textContent = "Split FS";
+      root.appendChild(splitButton);
+
+      const exitPseudoFullscreen = () => {
+        root.classList.remove("is-pseudo-fullscreen");
+        viewers.forEach((viewer) => viewer.size());
+      };
+      const toggleSplitFullscreen = async () => {
+        if (document.fullscreenElement === root) {
+          if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+          return;
+        }
+        if (root.classList.contains("is-pseudo-fullscreen")) {
+          exitPseudoFullscreen();
+          return;
+        }
+        let enteredNative = false;
+        if (root.requestFullscreen) {
+          try {
+            await root.requestFullscreen();
+            enteredNative = document.fullscreenElement === root;
+          } catch (error) {
+            enteredNative = false;
+          }
+        }
+        if (!enteredNative) {
+          root.classList.add("is-pseudo-fullscreen");
+          viewers.forEach((viewer) => viewer.size());
+        }
+      };
+      const onFullscreenChange = () => {
+        if (document.fullscreenElement !== root) exitPseudoFullscreen();
+        else viewers.forEach((viewer) => viewer.size());
+      };
+      const onKeyDown = (event) => {
+        if (event.key === "Escape" && root.classList.contains("is-pseudo-fullscreen")) exitPseudoFullscreen();
+      };
+      splitButton.addEventListener("click", toggleSplitFullscreen);
+      document.addEventListener("fullscreenchange", onFullscreenChange);
+      window.addEventListener("keydown", onKeyDown);
+      rootDisposers.push(() => splitButton.removeEventListener("click", toggleSplitFullscreen));
+      rootDisposers.push(() => document.removeEventListener("fullscreenchange", onFullscreenChange));
+      rootDisposers.push(() => window.removeEventListener("keydown", onKeyDown));
+    }
 
     const syncLook = options.syncLook !== false;
     const sharedLook = { yaw: 0, pitch: 0 };
-    const viewers = models.map((model, index) => {
+    viewers = models.map((model, index) => {
       const look = syncLook ? sharedLook : { yaw: 0, pitch: 0 };
       const panel = document.createElement("div");
       panel.className = "pov__panel";
@@ -165,6 +220,7 @@ window.LIEMAX_POV = (function () {
 
     return {
       dispose() {
+        rootDisposers.forEach((fn) => fn());
         viewers.forEach((viewer) => viewer.dispose());
         if (root.parentNode === container) container.removeChild(root);
       },
@@ -192,7 +248,7 @@ window.LIEMAX_POV = (function () {
     this.renderer = renderer;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0b0d10);
+    scene.background = new THREE.Color(THEATER_BG_COLOR);
     this.scene = scene;
 
     const camera = new THREE.PerspectiveCamera(70, 1.6, 0.1, 4000);
@@ -346,7 +402,7 @@ window.LIEMAX_POV = (function () {
 
     const frame = new THREE.Mesh(
       buildCurvedPlane(W, H, 72, m.curveRadiusFactor),
-      new THREE.MeshBasicMaterial({ color: 0x2a3038, side: THREE.DoubleSide })
+      new THREE.MeshBasicMaterial({ color: SCREEN_FRAME_COLOR, side: THREE.DoubleSide })
     );
     frame.position.set(0, screenCenterY, screenZ);
     scene.add(frame);
@@ -370,16 +426,9 @@ window.LIEMAX_POV = (function () {
     scene.add(image);
     this.meshes.push(image);
 
-    ["front", "mid", "back"].forEach((key) => {
-      const seatDist = n(m.seatDistances[key]);
-      if (seatDist == null || seatDist >= D - 2) return;
-      const row = buildSeatRow(screenZ + seatDist, this.floorHeightAt(seatDist), m);
-      scene.add(row);
-      this.meshes.push(row);
-    });
-
     const human = buildHuman();
-    human.position.set(W * 0.34, 0, screenZ + 1.4);
+    const humanX = W / 2 + Math.max(3, W * 0.035);
+    human.position.set(humanX, screenBottom, screenZ + 0.9);
     scene.add(human);
     this.meshes.push(human);
 
@@ -506,7 +555,7 @@ window.LIEMAX_POV = (function () {
 
   function buildFloor(cameraDistance, model, floorHeightAt) {
     const THREE = window.THREE;
-    const halfW = Math.max(24, model.screen.w * 0.46);
+    const halfW = Math.max(24, model.screen.w * 0.58);
     const screenZ = n(model.layout?.screenZ, SCREEN_Z_FT);
     const farthestSeat = Math.max(
       cameraDistance,
@@ -536,26 +585,7 @@ window.LIEMAX_POV = (function () {
     geo.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
     geo.setIndex(index);
     geo.computeVertexNormals();
-    return new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0x11161d, side: THREE.DoubleSide }));
-  }
-
-  function buildSeatRow(z, floorY, model) {
-    const THREE = window.THREE;
-    const group = new THREE.Group();
-    const recliner = model?.geometryProfile === "dolby_recliner";
-    const sw = recliner ? 3.1 : 2.4;
-    const sh = recliner ? 2.0 : 2.3;
-    const sd = recliner ? 2.2 : 1.2;
-    const gap = recliner ? 0.65 : 0.45;
-    const count = recliner ? 9 : 11;
-    const total = count * (sw + gap);
-    const mat = new THREE.MeshBasicMaterial({ color: 0x0a0f14 });
-    for (let i = 0; i < count; i++) {
-      const seat = new THREE.Mesh(new THREE.BoxGeometry(sw, sh, sd), mat);
-      seat.position.set(-total / 2 + i * (sw + gap) + sw / 2, floorY + sh / 2, z);
-      group.add(seat);
-    }
-    return group;
+    return new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: THEATER_FLOOR_COLOR, side: THREE.DoubleSide }));
   }
 
   function buildHuman() {

@@ -44,9 +44,8 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   // Clear
   while (svg.firstChild) svg.removeChild(svg.firstChild);
 
-  // Layout: SVG viewBox in feet. We need to fit A.screen, B.screen, and a 6 ft human.
-  // Place: [HumanA] [ScreenA] [GAP] [ScreenB] [HumanB]? — actually one human is enough,
-  // place between the two screens at the floor for scale.
+  // Layout: SVG viewBox in feet. Keep the scale human beside the first screen
+  // at floor level so it never obscures either screen's masking rectangle.
   const PAD = 8; // ft
   const GAP = 14; // ft between screens
   const FLOOR_Y = 0; // baseline at floor
@@ -214,8 +213,8 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   // Side B
   drawScreen(bX, "B", B.screen, bLift, bMask, B.name, SIDE_B);
 
-  // Human silhouette between the screens, at floor level
-  const humanX = PAD + aW + GAP/2 - HUMAN_W/2;
+  // Human silhouette beside the left screen, at floor level.
+  const humanX = Math.max(1, PAD - HUMAN_W - 2);
   drawHuman(humanX, HUMAN_H, HUMAN_W);
 
   function drawHuman(hx, hh, hw) {

@@ -74,9 +74,11 @@ window.LIEMAX_MATH = (function () {
         physicalClipped: false,
       };
     }
+    const screenAR = screen.w / screen.h;
+    const fillsWidth = screenAR <= presAR;
     const projectedWindow = {
-      w: screen.w,
-      h: screen.w / presAR,
+      w: fillsWidth ? screen.w : screen.h * presAR,
+      h: fillsWidth ? screen.w / presAR : screen.h,
       ar: presAR,
       geometry: screen.geometry,
     };
@@ -85,12 +87,16 @@ window.LIEMAX_MATH = (function () {
     const effH = Math.min(projectedMask.effH, screen.h);
     const physicalArea = screen.w * screen.h;
     const areaUtilPct = Math.min(100, (effW * effH) / physicalArea * 100);
+    const physicalLetterbox = projectedWindow.h < screen.h - 0.05;
+    const physicalPillarbox = projectedWindow.w < screen.w - 0.05;
 
     return {
       ...projectedMask,
       effW,
       effH,
       areaUtilPct,
+      letterbox: projectedMask.letterbox || physicalLetterbox,
+      pillarbox: projectedMask.pillarbox || physicalPillarbox,
       projectedWindow,
       physicalClipped: effW < projectedMask.effW - 0.05 || effH < projectedMask.effH - 0.05,
     };
