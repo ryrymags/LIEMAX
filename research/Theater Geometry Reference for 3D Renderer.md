@@ -4,6 +4,8 @@
 
 This document compiles sourced, cross-validated geometry specifications for IMAX GT, LIEMAX/retrofit, Dolby Cinema, and standard multiplex auditoriums — intended as a reference for building accurate 3D render environments in a theater comparison tool. Confidence levels are noted per claim based on number of corroborating sources, whether values were derived vs. directly cited, and the authoritativeness of the source.
 
+**June 2026 seating-distance addendum:** Use `Seating Distance Audit for 3D Renderer.md` for the latest front/mid/back profile ratios. That audit supersedes the older Dolby and standard multiplex depth fallbacks in this document while preserving the same source-confidence posture.
+
 ***
 
 ## 1. IMAX GT (Grand Theater) — Screen Setup & the "Pit"

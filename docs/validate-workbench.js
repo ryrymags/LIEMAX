@@ -143,6 +143,7 @@ const reading = findVenueByName("Sunbrella IMAX 3D Theater Reading");
 const cinemarkXd = findVenueById("cinemark_xd");
 const dolbyTypical = findVenueById("dolby_cinema_typical");
 const dolbySingleLaser = findVenueById("dolby_cinema_single_laser");
+const standardMultiplex = findVenueById("standard_multiplex");
 const assemblyRow = findVenueByName("AMC Assembly Row 12 & IMAX");
 const bostonCommon = findVenueByName("AMC Boston Common 19");
 const natick = findVenueByName("Sunbrella IMAX 3D Theater, Jordan's Furniture Natick");
@@ -166,6 +167,7 @@ const suppressedLFExaminerDuplicates = [
 assert("Cinemark XD is present in workbench data", Boolean(cinemarkXd));
 assert("Dolby Cinema typical preset is present", Boolean(dolbyTypical));
 assert("Dolby Cinema 2025 is present in workbench data", Boolean(dolbySingleLaser));
+assert("Standard multiplex preset is present", Boolean(standardMultiplex));
 assert("Reading GT generated venue is present", Boolean(reading));
 assert("Lincoln Square GT fallback is present", Boolean(lincolnSquare));
 assert("Assembly Row CoLa venue is present", Boolean(assemblyRow));
@@ -225,16 +227,24 @@ assert("143190 hybrid picker subtitles show both projectors",
 assert("LFExaminer hybrid picker subtitles show both projectors",
   Boolean(pointeOrlando?.filmProjection && pointeOrlando.sub.includes("IMAX Digital Xenon") && pointeOrlando.sub.includes("15/70")));
 assert("143190 overlap keeps fresher non-Xenon projection", santaAnita143190?.projection?.type !== "imax_dual_xenon" && santaAnita143190?.sources?.screen?.q === "r_imax_csv");
-assert("Reading mid distance is corrected to ~75 ft", closeEnough(reading.seat.mid, 75));
-assert("Reading mid distance is not old 1.5x fallback", reading.seat.mid < 90);
-assert("Reading seating source is caveated", reading.sources.seat.q === "community_estimate");
+assert("Reading generated GT seating comes from profile math, not hidden venue hard-coding",
+  reading?.seat?.geometryProfile === "gt_pit" &&
+  reading?.sources?.seat?.q === "derived_from_screen_width" &&
+  closeEnough(reading?.seat?.front, reading?.screen?.w * 0.35, 0.02) &&
+  closeEnough(reading?.seat?.mid, reading?.screen?.w * 0.65, 0.02) &&
+  closeEnough(reading?.seat?.back, reading?.screen?.w * 0.90, 0.02));
 assert("LIEMAX_POV runtime is exposed", Boolean(POV && typeof POV.modelForVenue === "function" && typeof POV.createComparison === "function"));
 
 const povBostonCommon = POV?.modelForVenue ? POV.modelForVenue(bostonCommon, { side: "A", presentationAr: 1.90, seat: "mid" }) : null;
 const povAssemblyRow = POV?.modelForVenue ? POV.modelForVenue(assemblyRow, { side: "A", presentationAr: 1.90, seat: "mid" }) : null;
+const povProvidenceDigital = POV?.modelForVenue ? POV.modelForVenue(providence, { side: "A", presentationAr: 1.90, seat: "back", filmMode: false }) : null;
+const povProvidenceFilm = POV?.modelForVenue ? POV.modelForVenue(providence, { side: "A", presentationAr: 1.43, seat: "back", filmMode: true }) : null;
 const povReadingGt = POV?.modelForVenue ? POV.modelForVenue(reading, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
 const povLincolnGt = POV?.modelForVenue ? POV.modelForVenue(lincolnSquare, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
 const povDolbyTypical = POV?.modelForVenue ? POV.modelForVenue(dolbyTypical, { side: "A", presentationAr: 2.39, seat: "mid" }) : null;
+const expectedProvidenceGtFrontFloor = providence?.screen?.h * 0.33 - 3.7;
+const expectedReadingGtFrontFloor = reading?.screen?.h * 0.33 - 3.7;
+const expectedLincolnGtFrontFloor = lincolnSquare?.screen?.h * 0.33 - 3.7;
 const povDomeVenue = D.venues.find((venue) => venue.screen?.geometry === "hemispherical");
 const povDome = POV?.modelForVenue ? POV.modelForVenue(povDomeVenue, { presentationAr: 1.43, seat: "mid" }) : null;
 const povDomeCopy = "3D dome POV is WIP because dome projection needs fisheye/hemisphere mapping. Use the 2D dome scale for now.";
@@ -242,29 +252,66 @@ const statsDesertRidge = computeStats(desertRidgeNoDims, "mid", 1.90, 1.90, fals
 const desertRows = buildComparisonRows(statsDesertRidge, computeStats(bostonCommon, "mid", 1.90, 1.90, false));
 assert("POV flat venue model is data-bound to 1.90 mid seat", povBostonCommon?.supported && povBostonCommon.seatKey === "mid" && closeEnough(povBostonCommon.presentationAr, 1.90, 0.01) && povBostonCommon.seatingStyle === "retrofit");
 assert("POV GT model applies curved screen and GT seating", povReadingGt?.supported && povReadingGt.curveRadiusFactor > 0 && povReadingGt.seatingStyle === "gt");
+assert("Providence hybrid 15/70 room uses GT profile seating independent of film toggle",
+  providence?.seat?.geometryProfile === "gt_pit" &&
+  providence?.sources?.seat?.q === "derived_from_screen_width" &&
+  closeEnough(providence?.seat?.front, providence?.screen?.w * 0.35, 0.02) &&
+  closeEnough(providence?.seat?.mid, providence?.screen?.w * 0.65, 0.02) &&
+  closeEnough(providence?.seat?.back, providence?.screen?.w * 0.90, 0.02) &&
+  closeEnough(providence?.seat?.frontRowFloorElevationFt, expectedProvidenceGtFrontFloor, 0.05) &&
+  povProvidenceDigital?.geometryProfile === "gt_pit" &&
+  povProvidenceFilm?.geometryProfile === "gt_pit" &&
+  closeEnough(povProvidenceDigital?.seatDistance, povProvidenceFilm?.seatDistance, 0.01) &&
+  povProvidenceDigital?.projection?.type === "imax_cola" &&
+  povProvidenceFilm?.projection?.type === "imax_1570_film" &&
+  closeEnough(povProvidenceDigital?.presentationAr, 1.90, 0.01) &&
+  closeEnough(povProvidenceFilm?.presentationAr, 1.43, 0.01));
 assert("POV GT geometry uses pit profile, shallow curve, and elevated front deck",
   povReadingGt?.geometryProfile === "gt_pit" &&
   povReadingGt?.screen?.screenBottomFt === 0 &&
-  closeEnough(povReadingGt?.frontRowFloorElevationFt, 16, 0.01) &&
+  closeEnough(povReadingGt?.frontRowFloorElevationFt, expectedReadingGtFrontFloor, 0.05) &&
   closeEnough(povReadingGt?.rakeDeg, 25, 0.01) &&
   closeEnough(povReadingGt?.rowSpacingFt, 3.2, 0.01) &&
   povReadingGt?.curveRadiusFactor > 3);
-assert("Reading and Lincoln Square GT back rows stay within one screen width",
-  reading?.seat?.back / reading?.screen?.w <= 1 &&
-  closeEnough(lincolnSquare?.seat?.back, lincolnSquare?.screen?.w * 0.95, 0.02) &&
+assert("Reading and Lincoln Square GT rows use the compact GT profile",
+  closeEnough(reading?.seat?.front, reading?.screen?.w * 0.35, 0.02) &&
+  closeEnough(reading?.seat?.mid, reading?.screen?.w * 0.65, 0.02) &&
+  closeEnough(reading?.seat?.back, reading?.screen?.w * 0.90, 0.02) &&
+  closeEnough(lincolnSquare?.seat?.front, lincolnSquare?.screen?.w * 0.35, 0.02) &&
+  closeEnough(lincolnSquare?.seat?.mid, lincolnSquare?.screen?.w * 0.65, 0.02) &&
+  closeEnough(lincolnSquare?.seat?.back, lincolnSquare?.screen?.w * 0.90, 0.02) &&
   povLincolnGt?.geometryProfile === "gt_pit" &&
-  closeEnough(povLincolnGt?.frontRowFloorElevationFt, 16, 0.01));
+  closeEnough(povLincolnGt?.frontRowFloorElevationFt, expectedLincolnGtFrontFloor, 0.05));
 assert("POV retrofit IMAX geometry uses no-pit profile",
   povBostonCommon?.geometryProfile === "retrofit_no_pit" &&
   povAssemblyRow?.geometryProfile === "retrofit_no_pit" &&
   povBostonCommon?.screen?.screenBottomFt === 4 &&
   povBostonCommon?.frontRowFloorElevationFt === 0 &&
   closeEnough(povBostonCommon?.rakeDeg, 10, 0.01));
+assert("Retrofit IMAX generated rows use the updated no-pit depth audit",
+  closeEnough(bostonCommon?.seat?.front, bostonCommon?.screen?.w * 1.10, 0.02) &&
+  closeEnough(bostonCommon?.seat?.mid, bostonCommon?.screen?.w * 1.20, 0.02) &&
+  closeEnough(bostonCommon?.seat?.back, bostonCommon?.screen?.w * 1.40, 0.02) &&
+  closeEnough(assemblyRow?.seat?.front, assemblyRow?.screen?.w * 1.10, 0.02) &&
+  closeEnough(assemblyRow?.seat?.mid, assemblyRow?.screen?.w * 1.20, 0.02) &&
+  closeEnough(assemblyRow?.seat?.back, assemblyRow?.screen?.w * 1.40, 0.02));
 assert("POV Dolby geometry uses recliner no-pit profile",
   povDolbyTypical?.geometryProfile === "dolby_recliner" &&
   povDolbyTypical?.screen?.screenBottomFt === 4 &&
   povDolbyTypical?.frontRowFloorElevationFt === 0 &&
   closeEnough(povDolbyTypical?.rowSpacingFt, 5.2, 0.01));
+assert("Dolby preset uses recliner row spacing and close-row depth audit",
+  closeEnough(dolbyTypical?.seat?.front, dolbyTypical?.screen?.w * 0.35, 0.02) &&
+  closeEnough(dolbyTypical?.seat?.mid, dolbyTypical?.screen?.w * 0.75, 0.02) &&
+  closeEnough(dolbyTypical?.seat?.back, dolbyTypical?.screen?.w * 1.30, 0.02) &&
+  closeEnough(dolbySingleLaser?.seat?.front, dolbySingleLaser?.screen?.w * 0.35, 0.02) &&
+  closeEnough(dolbySingleLaser?.seat?.mid, dolbySingleLaser?.screen?.w * 0.75, 0.02) &&
+  closeEnough(dolbySingleLaser?.seat?.back, dolbySingleLaser?.screen?.w * 1.30, 0.02) &&
+  closeEnough(dolbyTypical?.seat?.rowSpacingFt, 5.2, 0.01));
+assert("Standard multiplex preset uses conventional 1.50W/2.00W/2.50W depth audit",
+  closeEnough(standardMultiplex?.seat?.front, standardMultiplex?.screen?.w * 1.50, 0.02) &&
+  closeEnough(standardMultiplex?.seat?.mid, standardMultiplex?.screen?.w * 2.00, 0.02) &&
+  closeEnough(standardMultiplex?.seat?.back, standardMultiplex?.screen?.w * 2.50, 0.02));
 assert("POV models share a fixed screen anchor for side-by-side alignment",
   povBostonCommon?.layout?.screenZ === 0 &&
   povReadingGt?.layout?.screenZ === povBostonCommon.layout.screenZ);
@@ -349,6 +396,7 @@ const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 const diagnosisSource = fs.readFileSync(path.join(root, "docs/diagnosis.js"), "utf8");
 const stageSource = fs.readFileSync(path.join(root, "docs/stage.js"), "utf8");
 const povSource = fs.readFileSync(path.join(root, "docs/pov.js"), "utf8");
+const docsBuildSource = fs.readFileSync(path.join(root, "src/docs/buildDocsData.ts"), "utf8");
 const indexSource = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
 const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8");
 const prototypeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/imax-3d-pov-simulator.prototype.html"), "utf8");
@@ -418,6 +466,11 @@ assert("Diagnosis CTA opens the 3D POV comparison", appSource.includes("See the 
 assert("Diagnosis True IMAX comparison uses Lincoln Square fallback", appSource.includes("imax_us_ny_new_york_amc_lincoln_square_13_and_imax") && appSource.includes("D.venues.find(v => v.id === \"imax_gt_typical\")"));
 assert("POV module source exposes public API and the 1.43 reference image", povSource.includes("window.LIEMAX_POV") && povSource.includes("modelForVenue") && povSource.includes("createComparison") && povSource.includes("spiderverse-143-reference.webp") && fs.existsSync(povReferenceImagePath) && fs.statSync(povReferenceImagePath).size > 1000);
 assert("POV source keeps dome renderer excluded", povSource.includes(povDomeCopy));
+assert("Docs data generator does not carry hidden hard-coded Providence or Reading seat distances",
+  !docsBuildSource.includes("generatedVenueOverrides") &&
+  !docsBuildSource.includes("viewing_distance_back_ft: 95") &&
+  !docsBuildSource.includes("viewing_distance_mid_ft: 75") &&
+  !docsBuildSource.includes("viewing_distance_back_ft: 84"));
 assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const syncLook = options.syncLook !== false") && povSource.includes("const sharedLook = { yaw: 0, pitch: 0 }") && povSource.includes("syncLook ? viewers : [viewer]"));
 assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov__viewport.is-pseudo-fullscreen") && stylesSource.includes(".pov__wip"));
 assert("Sanitized POV prototype archive is preserved", prototypeReadmeSource.includes("rough prototype") && prototypeReadmeSource.includes("archive-only") && prototypeSource.includes("neutral reference frame") && !prototypeSource.includes("data:image/jpeg") && !prototypeSource.includes("base64"));

@@ -15,7 +15,7 @@
       "seat": {
         "front": 24.5,
         "mid": 45.5,
-        "back": 66.5,
+        "back": 63,
         "source": "derived_from_screen_width",
         "geometryProfile": "gt_pit"
       },
@@ -94,9 +94,9 @@
         "geometry": "flat"
       },
       "seat": {
-        "front": 49.5,
-        "mid": 74.25,
-        "back": 110,
+        "front": 19.25,
+        "mid": 41.25,
+        "back": 71.5,
         "source": "derived_from_screen_width",
         "geometryProfile": "dolby_recliner"
       },
@@ -149,7 +149,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from Dolby no-pit recliner-profile geometry; exact per-venue row depth is not published."
+          "note": "Derived from Dolby no-pit recliner-profile geometry using the seating-distance audit's 0.35W/0.75W/1.30W row-depth guide; exact per-venue row depth is not published."
         }
       },
       "isPreset": true
@@ -167,9 +167,9 @@
         "geometry": "flat"
       },
       "seat": {
-        "front": 52.2,
-        "mid": 78.3,
-        "back": 116,
+        "front": 20.3,
+        "mid": 43.5,
+        "back": 75.4,
         "source": "derived_from_screen_width",
         "geometryProfile": "dolby_recliner"
       },
@@ -222,7 +222,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from Dolby no-pit recliner-profile geometry; venue rows will override when known."
+          "note": "Derived from Dolby no-pit recliner-profile geometry using the seating-distance audit's 0.35W/0.75W/1.30W row-depth guide; venue rows will override when known."
         }
       },
       "isPreset": true
@@ -321,9 +321,9 @@
         "geometry": "flat"
       },
       "seat": {
-        "front": 23,
-        "mid": 37,
-        "back": 53,
+        "front": 67.5,
+        "mid": 90,
+        "back": 112.5,
         "source": "derived_from_screen_width"
       },
       "defaultPresentationAr": 1.85,
@@ -375,7 +375,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Stadium seating mid-row derived."
+          "note": "Derived from conventional auditorium ratios: front/mid/back use 1.50W/2.00W/2.50W."
         }
       },
       "isPreset": true

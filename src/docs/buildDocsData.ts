@@ -107,34 +107,37 @@ const LIEMAX_PROJECTOR_TYPES = new Set(['imax_dual_xenon']);
 const DOME_PROJECTOR_TYPES = new Set(['imax_dome_laser', 'imax_dome_film']);
 const RETROFIT_IMAX_PROJECTOR_TYPES = new Set(['imax_cola', 'imax_laser_xt', 'imax_dual_xenon']);
 const DOLBY_PROJECTOR_TYPES = new Set(['dolby_cinema', 'dolby_cinema_single_laser']);
+const EYE_ABOVE_FLOOR_FT = 3.7;
+const GT_FRONT_EYE_SCREEN_PCT = 0.33;
+const GT_REFERENCE_FRONT_ROW_FLOOR_ELEVATION_FT = 13.5;
 
 const GEOMETRY_PROFILE_DEFAULTS: Record<string, JsonObject> = {
   gt_pit: {
     rake_angle_deg: 25,
     row_spacing_ft: 3.2,
-    front_row_floor_elevation_ft: 16,
-    ratios: { front: 0.35, mid: 0.65, back: 0.95 },
+    front_row_floor_elevation_ft: GT_REFERENCE_FRONT_ROW_FLOOR_ELEVATION_FT,
+    ratios: { front: 0.35, mid: 0.65, back: 0.9 },
     source: 'derived_from_screen_width',
   },
   retrofit_no_pit: {
     rake_angle_deg: 10,
     row_spacing_ft: 3.25,
     front_row_floor_elevation_ft: 0,
-    ratios: { front: 1.05, mid: 1.25, back: 1.5 },
+    ratios: { front: 1.1, mid: 1.2, back: 1.4 },
     source: 'derived_from_screen_width',
   },
   dolby_recliner: {
     rake_angle_deg: 10,
     row_spacing_ft: 5.2,
     front_row_floor_elevation_ft: 0,
-    ratios: { front: 0.9, mid: 1.35, back: 2.0 },
+    ratios: { front: 0.35, mid: 0.75, back: 1.3 },
     source: 'derived_from_screen_width',
   },
   standard_conventional: {
     rake_angle_deg: 7,
     row_spacing_ft: 3.5,
     front_row_floor_elevation_ft: 0,
-    ratios: { front: 0.87, mid: 1.5, back: 2.25 },
+    ratios: { front: 1.5, mid: 2.0, back: 2.5 },
     source: 'derived_from_screen_width',
   },
   dome: {
@@ -182,9 +185,19 @@ function geometryProfileFor(record: JsonObject, resolved?: JsonObject): string {
   return 'standard_conventional';
 }
 
-function profileSeating(screenWidthFt: number, profile: string): JsonObject {
+function gtFrontRowFloorElevation(screenHeightFt: number | null | undefined): number {
+  if (screenHeightFt == null || !Number.isFinite(screenHeightFt) || screenHeightFt <= 0) {
+    return GT_REFERENCE_FRONT_ROW_FLOOR_ELEVATION_FT;
+  }
+  return Math.max(0, screenHeightFt * GT_FRONT_EYE_SCREEN_PCT - EYE_ABOVE_FLOOR_FT);
+}
+
+function profileSeating(screenWidthFt: number, profile: string, screenHeightFt?: number | null): JsonObject {
   const defaults = GEOMETRY_PROFILE_DEFAULTS[profile] ?? GEOMETRY_PROFILE_DEFAULTS.standard_conventional;
   const ratios = defaults.ratios;
+  const frontRowFloorElevationFt = profile === 'gt_pit'
+    ? gtFrontRowFloorElevation(screenHeightFt)
+    : defaults.front_row_floor_elevation_ft;
   return {
     viewing_distance_front_ft: screenWidthFt * ratios.front,
     viewing_distance_mid_ft: screenWidthFt * ratios.mid,
@@ -192,24 +205,24 @@ function profileSeating(screenWidthFt: number, profile: string): JsonObject {
     viewing_distance_source: defaults.source,
     rake_angle_deg: defaults.rake_angle_deg,
     row_spacing_ft: defaults.row_spacing_ft,
-    front_row_floor_elevation_ft: defaults.front_row_floor_elevation_ft,
+    front_row_floor_elevation_ft: frontRowFloorElevationFt,
   };
 }
 
 function profileSeatSourceNote(profile: string): string {
   if (profile === 'gt_pit') {
-    return 'Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements.';
+    return 'Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements.';
   }
   if (profile === 'retrofit_no_pit') {
-    return 'Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research.';
+    return 'Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit.';
   }
   if (profile === 'dolby_recliner') {
-    return 'Profile-derived Dolby Cinema estimate: no screen pit; recliner row spacing is wider than standard seating and exact per-venue row depth is not published.';
+    return 'Profile-derived Dolby Cinema estimate: no screen pit; front/mid/back use 0.35×, 0.75×, and 1.30× screen width, with wider recliner row spacing and exact per-venue row depth still unpublished.';
   }
   if (profile === 'dome') {
     return 'Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics.';
   }
-  return 'Profile-derived conventional auditorium estimate; exact per-venue row depth is not published.';
+  return 'Profile-derived conventional auditorium estimate: front/mid/back use 1.50×, 2.00×, and 2.50× screen width; exact per-venue row depth is not published.';
 }
 
 function isFullFlat143Digital(venue: JsonObject): boolean {
@@ -329,13 +342,16 @@ function screenFromDocs(screen: JsonObject, profile = 'standard_conventional'): 
   };
 }
 
-function seatingFromDocs(seat: JsonObject, profile = 'standard_conventional'): JsonObject {
+function seatingFromDocs(seat: JsonObject, profile = 'standard_conventional', screenHeightFt?: number | null): JsonObject {
   const profileDefaults = GEOMETRY_PROFILE_DEFAULTS[profile] ?? GEOMETRY_PROFILE_DEFAULTS.standard_conventional;
+  const defaultFrontRowFloorElevationFt = profile === 'gt_pit'
+    ? gtFrontRowFloorElevation(screenHeightFt)
+    : profileDefaults.front_row_floor_elevation_ft;
   return {
     capacity: null,
     rake_angle_deg: seat.rakeDeg ?? profileDefaults.rake_angle_deg,
     row_spacing_ft: seat.rowSpacingFt ?? profileDefaults.row_spacing_ft,
-    front_row_floor_elevation_ft: seat.frontRowFloorElevationFt ?? profileDefaults.front_row_floor_elevation_ft,
+    front_row_floor_elevation_ft: seat.frontRowFloorElevationFt ?? defaultFrontRowFloorElevationFt,
     seat_type: profile === 'dolby_recliner' ? 'recliner' : 'standard',
     has_bass_transducers: profile === 'dolby_recliner',
     viewing_distance_front_ft: seat.front,
@@ -384,7 +400,7 @@ function buildFrontendCinemaRecord(item: JsonObject): JsonObject {
     projection: null,
     projections: null,
     sound: null,
-    seating: seatingFromDocs(item.seat, profile),
+    seating: seatingFromDocs(item.seat, profile, item.screen?.h),
     capabilities: null,
     history: [],
     metadata: completeMetadata('frontend_comparison_record', 'medium', item.blurb),
@@ -439,24 +455,6 @@ function rowToImportObject(row: any[]): Imax143190ImportRow {
   };
 }
 
-const generatedVenueOverrides: Record<string, JsonObject> = {
-  'MA|Reading|Sunbrella IMAX 3D Theater Reading': {
-    blurb: 'Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances use a venue-specific GT estimate because the sparse CSV does not include row depth.',
-    seating: {
-      viewing_distance_front_ft: 40,
-      viewing_distance_mid_ft: 75,
-      viewing_distance_back_ft: 84,
-      viewing_distance_source: 'community_estimate',
-    },
-    sources: {
-      seat: {
-        q: 'community_estimate',
-        note: 'Commercial GT estimate constrained by GSCA-style large-format geometry: back rows are roughly within one screen width; mid-row modeled at ~75 ft, not the generic 1.5× screen-width fallback.',
-      },
-    },
-  },
-};
-
 function buildGeneratedImaxVenue(row: any[], authoredByKey: Map<string, JsonObject>): JsonObject {
   const record = map143190RowToVenue(rowToImportObject(row), {
     lastVerified: R_IMAX_LAST_VERIFIED,
@@ -468,7 +466,6 @@ function buildGeneratedImaxVenue(row: any[], authoredByKey: Map<string, JsonObje
   const isDome = record.screen?.geometry === 'hemispherical';
   const key = rowKey(row);
   const authored = authoredByKey.get(key);
-  const override = generatedVenueOverrides[key];
   const geometryProfile = geometryProfileFor(record);
 
   record.id = docsId;
@@ -486,27 +483,21 @@ function buildGeneratedImaxVenue(row: any[], authoredByKey: Map<string, JsonObje
   record.docs_frontend = {
     canonicalId: authored?.id ?? docsId,
     geometryProfile,
-    blurb: override?.blurb ?? (
-      isDome
-        ? 'Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.'
-        : 'Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.'
-    ),
+    blurb: isDome
+      ? 'Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.'
+      : 'Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.',
   };
 
   if (screenWidthFt != null) {
-    const seating = profileSeating(screenWidthFt, isDome ? 'dome' : geometryProfile);
+    const screenHeightFt = record.screen?.height_m != null ? metersToFeet(record.screen.height_m) : null;
+    const seating = profileSeating(screenWidthFt, isDome ? 'dome' : geometryProfile, screenHeightFt);
     record.seating = {
       capacity: null,
       seat_type: 'standard',
       has_bass_transducers: false,
       ...seating,
-      ...(override?.seating ?? {}),
       seat_offset_from_center_ft: 0,
     };
-  }
-
-  if (override?.sources) {
-    record.docs_frontend.sources = override.sources;
   }
 
   return record;
@@ -590,7 +581,8 @@ function buildGeneratedLFExaminerVenue(row: LFExaminerImportRow, authoredByKey: 
   if (screenWidthFt != null) {
     const resolvedScreenWidthFt = isNatick ? 76 : screenWidthFt;
     const geometryProfile = geometryProfileFor(record);
-    const seating = profileSeating(resolvedScreenWidthFt, isDome ? 'dome' : geometryProfile);
+    const screenHeightFt = record.screen?.height_m != null ? metersToFeet(record.screen.height_m) : null;
+    const seating = profileSeating(resolvedScreenWidthFt, isDome ? 'dome' : geometryProfile, screenHeightFt);
     record.seating = {
       ...record.seating,
       ...seating,
@@ -936,17 +928,20 @@ function buildData() {
     .filter(hasComparableScreen);
   const apple = authoredVenues.find((venue) => venue.id === 'apple_providence_imax');
   if (!apple) throw new Error('Missing apple_providence_imax canonical venue');
+  const appleGeometryProfile = geometryProfileFor(apple);
+  const appleScreenWidthFt = apple.screen?.width_ft ?? (apple.screen?.width_m != null ? metersToFeet(apple.screen.width_m) : null);
+  const appleScreenHeightFt = apple.screen?.height_ft ?? (apple.screen?.height_m != null ? metersToFeet(apple.screen.height_m) : null);
   const appleDocs = {
     ...apple,
     seating: {
       ...apple.seating,
-      viewing_distance_front_ft: 40,
-      viewing_distance_mid_ft: 67,
-      viewing_distance_back_ft: 95,
-      viewing_distance_source: 'derived_from_screen_width',
+      ...(appleScreenWidthFt != null
+        ? profileSeating(appleScreenWidthFt, appleGeometryProfile, appleScreenHeightFt)
+        : {}),
     },
     docs_frontend: {
       canonicalId: 'apple_providence_imax',
+      geometryProfile: appleGeometryProfile,
       sub: 'Providence, RI · 1.43 screen · CoLa digital + 15/70 Film',
       tag: 'IMAX 1.43',
       blurb: 'Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.',
@@ -955,7 +950,6 @@ function buildData() {
         screen: { q: 'r_imax_csv', note: '143190.xyz CSV (Apr 2026) — 24.7 × 17.3 m.' },
         brightness: { q: 'trade_reporting', note: 'IMAX calibration target 22 fL; per-venue fL not published.' },
         contrast: { q: 'trade_reporting', note: 'IMAX CTO Bonnick, CinemaCon 2018.' },
-        seat: { q: 'derived', note: 'Front/mid/back are derived estimates; 1.43 film-capable screen uses GT pit-profile rake/deck defaults unless measured row data is found.' },
       },
     },
   };

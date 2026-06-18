@@ -657,9 +657,9 @@ False. It is a certification label overlaid on existing auditoriums meeting mini
 
 The Perplexity Batch 2 audit confirmed that most comparison math in the Step 4 prototype was algebraically sound, but it exposed data/modeling drift between the validated source data and the static `docs/` workbench.
 
-* **Reading GT seating:** The prototype's generated 143190 import path used a generic 1.5x screen-width mid-row distance, putting Sunbrella IMAX Reading at roughly 126 ft. That is too deep for a dedicated 500-seat GT room. LIEMAX now models Reading in the workbench with a venue-specific estimate of front 40 ft, mid 75 ft, back 84 ft, caveated as a community/derived GT estimate rather than a published measurement.
+* **Reading GT seating:** The prototype's generated 143190 import path originally used a generic 1.5x screen-width mid-row distance, putting Sunbrella IMAX Reading at roughly 126 ft. A later local 40 ft / 75 ft / 84 ft generated override also proved too brittle because it was not canonical measured data. LIEMAX now generates Reading through the GT profile math, using 0.35x / 0.65x / 0.90x screen width unless a future canonical venue record provides measured row depths with provenance.
 
-* **Seating framework:** Sparse 143190 rows do not include seating depth. Dedicated GT/institutional rooms should use venue-specific or constrained-depth estimates when known; CoLa, Dolby Cinema, Cinemark XD, and standard multiplex presets may use auditorium-ratio estimates; domes are separate and should not be explained as flat front/mid/back screen-plane distances.
+* **Seating framework:** Sparse 143190 rows do not include seating depth. Generated rows should come from the profile engine, while real venue-specific front/mid/back values must live in canonical venue data with source/provenance. CoLa, Dolby Cinema, Cinemark XD, and standard multiplex presets may use auditorium-ratio estimates; domes are separate and should not be explained as flat front/mid/back screen-plane distances.
 
 * **Verified regression:** Providence 15/70 film vs Reading GT Laser at 1.43:1 should show Reading winning visible image area and native contrast. Providence still leads on some immersion rows from the modeled mid-row seat.
 
@@ -671,13 +671,15 @@ The Perplexity Batch 2 audit confirmed that most comparison math in the Step 4 p
 
 The dedicated renderer reference now lives at `research/Theater Geometry Reference for 3D Renderer.md`. Use it to separate displayable theater data from renderer-only visual heuristics:
 
-* **GT pit/deck geometry:** True flat GT rooms should be modeled as screen walls extending below the first row into a pit. The front-row deck is estimated roughly 15–25 ft above the screen-bottom datum; LIEMAX uses 16 ft as the default profile estimate, not a measured venue fact.
+* **GT pit/deck geometry:** True flat GT rooms should be modeled as screen walls extending below the first row into a pit. The generated profile treats `front_row_floor_elevation_ft` as floor height, not eye height: front-row eye level targets about one-third up the screen, then subtracts eye height to estimate the deck floor. This remains renderer/profile geometry, not venue measurement.
 
-* **GT seating depth:** Purpose-built flat GT rooms should use compact screen-width ratios when row measurements are absent: front roughly 0.35× screen width, back no deeper than about 0.9–1.0× screen width, with mid-row around 0.65× as a practical renderer fallback.
+* **Seating distance audit:** The follow-up audit in `research/Seating Distance Audit for 3D Renderer.md` refines profile fallbacks: GT 0.35× / 0.65× / 0.90×, retrofit IMAX 1.10× / 1.20× / 1.40×, Dolby Cinema 0.35× / 0.75× / 1.30×, and standard multiplex 1.50× / 2.00× / 2.50× screen width for front/mid/back. Projector-distance estimates are recorded for future booth visualization but are not public model fields yet.
 
-* **Retrofit IMAX geometry:** CoLa, Laser XT, and Dual Xenon retrofit rooms should be modeled as no-pit rooms with conventional screen-bottom height around 3–5 ft, standard multiplex rake around 8–15°, and deeper seating than GT. The docs generator uses 1.05× / 1.25× / 1.50× screen-width front/mid/back fallbacks for this profile.
+* **Hybrid geometry policy:** Projection verdict and room geometry are separate. A venue like Providence can be IMAX Lite for regular CoLa digital showings but still use GT-profile seating/deck geometry when modeling the physical full-height 1.43 screen with a 15/70 film path. Generated docs data should use profile math for these hybrid rooms unless canonical venue data provides measured seating with provenance.
 
-* **Dolby Cinema geometry:** Dolby should stay no-pit and conventional in screen mounting, but row spacing should reflect recliners rather than fixed stadium seats. Use wider row pitch around 5.2 ft as a renderer/profile default, with exact per-venue geometry still unpublished.
+* **Retrofit IMAX geometry:** CoLa, Laser XT, and Dual Xenon retrofit rooms should be modeled as no-pit rooms with conventional screen-bottom height around 3–5 ft, standard multiplex rake around 8–15°, and deeper seating than GT. The docs generator uses 1.10× / 1.20× / 1.40× screen-width front/mid/back fallbacks for this profile.
+
+* **Dolby Cinema geometry:** Dolby should stay no-pit and conventional in screen mounting, but the audit moves generated row depths much closer than the earlier conventional fallback: 0.35× / 0.75× / 1.30× screen width. Keep wider row pitch around 5.2 ft as a renderer/profile default, and caveat exact per-venue geometry as unpublished.
 
 * **Curvature confidence:** IMAX GT curvature is well-supported qualitatively, but public sources do not publish exact radii. The 3D renderer may use a shallow 1–4 ft edge bow visual approximation, while public data should keep `curvature_radius_ft` null unless a venue-specific source exists.
 

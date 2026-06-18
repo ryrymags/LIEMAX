@@ -392,7 +392,7 @@ window.LIEMAX_POV = (function () {
       `<div><span>venue</span><strong>${escapeHtml(m.name)}</strong></div>` +
       `<div><span>screen</span><strong>${W.toFixed(0)} x ${H.toFixed(0)} ft</strong></div>` +
       `<div><span>seat</span><strong>${m.seatKey} \u00b7 ${D.toFixed(0)} ft</strong></div>` +
-      `<div><span>geometry</span><strong>${escapeHtml(profileLabel(m.geometryProfile))} \u00b7 ${n(m.rakeDeg, 0).toFixed(0)}\u00b0 rake</strong></div>` +
+      `<div><span>geometry</span><strong>${escapeHtml(profileLabel(m.geometryProfile))} \u00b7 ${n(m.rakeDeg, 0).toFixed(0)}\u00b0 rake \u00b7 profile-derived</strong></div>` +
       `<div><span>format</span><strong>${m.presentationAr.toFixed(2)} on 1.43 source</strong></div>` +
       `<div><span>image</span><strong>${escapeHtml(m.sourceLabel || REFERENCE_IMAGE_LABEL)}</strong></div>` +
       `<div><span>fov</span><strong>${hFov.toFixed(0)}\u00b0 H \u00b7 ${vFov.toFixed(0)}\u00b0 V</strong></div>`;
@@ -459,7 +459,7 @@ window.LIEMAX_POV = (function () {
 
   function profileDefaultsFor(profile) {
     if (profile === "gt_pit") {
-      return { screenBottomFt: 0, rakeDeg: 25, rowSpacingFt: 3.2, frontRowFloorElevationFt: 16 };
+      return { screenBottomFt: 0, rakeDeg: 25, rowSpacingFt: 3.2, frontRowFloorElevationFt: 13.5 };
     }
     if (profile === "dolby_recliner") {
       return { screenBottomFt: 4, rakeDeg: 10, rowSpacingFt: 5.2, frontRowFloorElevationFt: 0 };

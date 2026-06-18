@@ -31,13 +31,13 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 40,
-        "mid": 67,
-        "back": 95,
+        "front": 28.364,
+        "mid": 52.67600000000001,
+        "back": 72.936,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.0308,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -135,8 +135,8 @@ window.LIEMAX_DATA = {
           "note": "IMAX CTO Bonnick, CinemaCon 2018."
         },
         "seat": {
-          "q": "derived",
-          "note": "Front/mid/back are derived estimates; 1.43 film-capable screen uses GT pit-profile rake/deck defaults unless measured row data is found."
+          "q": "derived_from_screen_width",
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -171,11 +171,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 24.5,
         "mid": 45.5,
-        "back": 66.5,
+        "back": 63,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 12.470000000000002,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -288,9 +288,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 49.5,
-        "mid": 74.25,
-        "back": 110,
+        "front": 19.25,
+        "mid": 41.25,
+        "back": 71.5,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 5.2,
@@ -366,7 +366,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from Dolby no-pit recliner-profile geometry; exact per-venue row depth is not published."
+          "note": "Derived from Dolby no-pit recliner-profile geometry using the seating-distance audit's 0.35W/0.75W/1.30W row-depth guide; exact per-venue row depth is not published."
         }
       }
     },
@@ -399,9 +399,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.2,
-        "mid": 78.3,
-        "back": 116,
+        "front": 20.3,
+        "mid": 43.5,
+        "back": 75.4,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 5.2,
@@ -477,7 +477,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from Dolby no-pit recliner-profile geometry; venue rows will override when known."
+          "note": "Derived from Dolby no-pit recliner-profile geometry using the seating-distance audit's 0.35W/0.75W/1.30W row-depth guide; venue rows will override when known."
         }
       }
     },
@@ -630,9 +630,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 23,
-        "mid": 37,
-        "back": 53,
+        "front": 67.5,
+        "mid": 90,
+        "back": 112.5,
         "source": "derived_from_screen_width",
         "rakeDeg": 7,
         "rowSpacingFt": 3.5,
@@ -708,7 +708,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Stadium seating mid-row derived."
+          "note": "Derived from conventional auditorium ratios: front/mid/back use 1.50W/2.00W/2.50W."
         }
       }
     },
@@ -835,11 +835,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 27.329397199999995,
         "mid": 50.7545948,
-        "back": 74.1797924,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.788189600000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -919,7 +919,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -952,9 +952,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.7401592,
-        "mid": 63.97638,
-        "back": 76.771656,
+        "front": 56.299214400000004,
+        "mid": 61.417324799999996,
+        "back": 71.65354559999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1029,7 +1029,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1139,7 +1139,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1174,11 +1174,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 28.018373599999993,
         "mid": 52.034122399999994,
-        "back": 76.04987119999998,
+        "back": 72.04724639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.11299276,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -1277,7 +1277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -1310,9 +1310,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1387,7 +1387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1420,9 +1420,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.05118280000001,
-        "mid": 63.15617,
-        "back": 75.78740400000001,
+        "front": 55.57742960000001,
+        "mid": 60.6299232,
+        "back": 70.7349104,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1497,7 +1497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1530,9 +1530,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1607,7 +1607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1732,9 +1732,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 66.14173439999999,
-        "mid": 78.74015999999999,
-        "back": 94.488192,
+        "front": 69.2913408,
+        "mid": 75.59055359999999,
+        "back": 88.18897919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1809,7 +1809,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1919,7 +1919,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -1952,9 +1952,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2029,7 +2029,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2139,7 +2139,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2174,11 +2174,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 26.732284319999998,
         "mid": 49.645670880000004,
-        "back": 72.55905744,
+        "back": 68.74015968,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 14.7055124,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -2277,7 +2277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -2310,9 +2310,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2387,7 +2387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2497,7 +2497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2530,9 +2530,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2607,7 +2607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2640,9 +2640,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 81.91929395999999,
-        "mid": 141.240162,
-        "back": 211.860243,
+        "front": 141.240162,
+        "mid": 188.320216,
+        "back": 235.40026999999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 7,
         "rowSpacingFt": 3.5,
@@ -2745,7 +2745,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived conventional auditorium estimate; exact per-venue row depth is not published."
+          "note": "Profile-derived conventional auditorium estimate: front/mid/back use 1.50×, 2.00×, and 2.50× screen width; exact per-venue row depth is not published."
         }
       }
     },
@@ -2855,7 +2855,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -2890,11 +2890,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 30.7742792,
         "mid": 57.1522328,
-        "back": 83.5301864,
+        "back": 79.13386080000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 18.603150320000005,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -2993,7 +2993,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -3026,9 +3026,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3103,7 +3103,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3136,9 +3136,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3213,7 +3213,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3246,9 +3246,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 58.218505799999996,
-        "mid": 69.307745,
-        "back": 83.169294,
+        "front": 60.9908156,
+        "mid": 66.5354352,
+        "back": 77.62467439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3323,7 +3323,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3358,11 +3358,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 31.463255599999997,
         "mid": 58.4317604,
-        "back": 85.40026519999999,
+        "back": 80.9055144,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 18.27834716,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -3442,7 +3442,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -3552,7 +3552,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3585,9 +3585,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.52756096,
-        "mid": 70.866144,
-        "back": 85.0393728,
+        "front": 62.36220672000001,
+        "mid": 68.03149824,
+        "back": 79.37008128,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3662,7 +3662,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3695,9 +3695,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3772,7 +3772,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3805,9 +3805,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.73031700000001,
-        "mid": 75.869425,
-        "back": 91.04331,
+        "front": 66.765094,
+        "mid": 72.834648,
+        "back": 84.973756,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3882,7 +3882,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -3917,11 +3917,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 31.1187674,
         "mid": 57.791996600000004,
-        "back": 84.4652258,
+        "back": 80.0196876,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 18.386614880000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -4020,7 +4020,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -4053,9 +4053,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -4130,7 +4130,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -4165,11 +4165,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 26.525591400000003,
         "mid": 49.261812600000006,
-        "back": 71.9980338,
+        "back": 68.20866360000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.788189600000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -4268,7 +4268,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -4301,9 +4301,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -4378,7 +4378,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -4411,9 +4411,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.35433264,
-        "mid": 71.85039599999999,
-        "back": 86.2204752,
+        "front": 63.22834848,
+        "mid": 68.97638015999999,
+        "back": 80.47244351999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -4488,7 +4488,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -4523,11 +4523,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 34.219161199999995,
         "mid": 63.5498708,
-        "back": 92.88058039999999,
+        "back": 87.9921288,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 21.201575600000005,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -4635,7 +4635,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -4837,7 +4837,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -4870,9 +4870,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -4947,7 +4947,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -4980,9 +4980,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 71.99803379999999,
-        "mid": 85.71194499999999,
-        "back": 102.854334,
+        "front": 75.4265116,
+        "mid": 82.28346719999999,
+        "back": 95.99737839999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5057,7 +5057,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5090,9 +5090,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5167,7 +5167,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5200,9 +5200,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.462600200000004,
-        "mid": 66.026905,
-        "back": 79.232286,
+        "front": 58.10367640000001,
+        "mid": 63.3858288,
+        "back": 73.9501336,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5277,7 +5277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5387,7 +5387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5420,9 +5420,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5497,7 +5497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5530,9 +5530,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5607,7 +5607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5640,9 +5640,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 49.02067086,
-        "mid": 58.357941499999995,
-        "back": 70.0295298,
+        "front": 51.354988520000006,
+        "mid": 56.02362384,
+        "back": 65.36089448,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5717,7 +5717,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -5752,11 +5752,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 27.6738854,
         "mid": 51.394358600000004,
-        "back": 75.1148318,
+        "back": 71.1614196,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.46338644,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -5864,7 +5864,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -5974,7 +5974,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6084,7 +6084,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6117,9 +6117,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.7401592,
-        "mid": 63.97638,
-        "back": 76.771656,
+        "front": 56.299214400000004,
+        "mid": 61.417324799999996,
+        "back": 71.65354559999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6194,7 +6194,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6227,9 +6227,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6304,7 +6304,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6337,9 +6337,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.285435,
-        "mid": 71.76837499999999,
-        "back": 86.12205,
+        "front": 63.15617,
+        "mid": 68.89764,
+        "back": 80.38058,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6414,7 +6414,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6524,7 +6524,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6557,9 +6557,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 62.6968524,
-        "mid": 74.63910999999999,
-        "back": 89.566932,
+        "front": 65.6824168,
+        "mid": 71.65354559999999,
+        "back": 83.59580319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6634,7 +6634,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6667,9 +6667,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 47.1948834,
-        "mid": 56.184385,
-        "back": 67.421262,
+        "front": 49.442258800000005,
+        "mid": 53.937009599999996,
+        "back": 62.92651119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6744,7 +6744,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -6779,11 +6779,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 26.410762000000002,
         "mid": 49.04855800000001,
-        "back": 71.68635400000001,
+        "back": 67.91338800000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 11.457480799999999,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -6863,7 +6863,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -6896,9 +6896,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6973,7 +6973,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7006,9 +7006,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 58.218505799999996,
-        "mid": 69.307745,
-        "back": 83.169294,
+        "front": 60.9908156,
+        "mid": 66.5354352,
+        "back": 77.62467439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7083,7 +7083,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7116,9 +7116,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 89.2224438,
-        "mid": 106.21719499999999,
-        "back": 127.460634,
+        "front": 93.4711316,
+        "mid": 101.96850719999999,
+        "back": 118.96325839999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7193,7 +7193,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7228,11 +7228,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 28.018373599999993,
         "mid": 52.034122399999994,
-        "back": 76.04987119999998,
+        "back": 72.04724639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.11299276,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -7340,7 +7340,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -7373,9 +7373,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7450,7 +7450,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7560,7 +7560,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7670,7 +7670,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7703,9 +7703,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7780,7 +7780,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -7813,9 +7813,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7890,7 +7890,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8000,7 +8000,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8110,7 +8110,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8220,7 +8220,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8330,7 +8330,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8363,9 +8363,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.3858288,
-        "mid": 75.45931999999999,
-        "back": 90.55118399999999,
+        "front": 66.40420160000001,
+        "mid": 72.4409472,
+        "back": 84.51443839999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8440,7 +8440,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8473,9 +8473,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8550,7 +8550,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8583,9 +8583,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8660,7 +8660,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8693,9 +8693,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.2519704,
-        "mid": 70.53806,
-        "back": 84.64567199999999,
+        "front": 62.073492800000004,
+        "mid": 67.7165376,
+        "back": 79.00262719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8770,7 +8770,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -8805,11 +8805,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 28.4776912,
         "mid": 52.887140800000005,
-        "back": 77.2965904,
+        "back": 73.2283488,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.896457320000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -8908,7 +8908,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -8941,9 +8941,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9018,7 +9018,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9051,9 +9051,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 61.3188996,
-        "mid": 72.99869,
-        "back": 87.598428,
+        "front": 64.23884720000001,
+        "mid": 70.0787424,
+        "back": 81.7585328,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9128,7 +9128,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9163,11 +9163,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 35.3674552,
         "mid": 65.68241680000001,
-        "back": 95.9973784,
+        "back": 90.94488480000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 21.418111040000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -9247,7 +9247,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -9357,7 +9357,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9390,9 +9390,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 80.23523878799999,
-        "mid": 138.33661859999998,
-        "back": 207.50492789999998,
+        "front": 138.33661859999998,
+        "mid": 184.44882479999998,
+        "back": 230.56103099999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 7,
         "rowSpacingFt": 3.5,
@@ -9467,7 +9467,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived conventional auditorium estimate; exact per-venue row depth is not published."
+          "note": "Profile-derived conventional auditorium estimate: front/mid/back use 1.50×, 2.00×, and 2.50× screen width; exact per-venue row depth is not published."
         }
       }
     },
@@ -9500,9 +9500,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.83760034000001,
-        "mid": 71.23523850000001,
-        "back": 85.4822862,
+        "front": 62.68700988000001,
+        "mid": 68.38582896,
+        "back": 79.78346712,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9577,7 +9577,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9610,9 +9610,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 62.97244296000001,
-        "mid": 74.967194,
-        "back": 89.96063280000001,
+        "front": 65.97113072000002,
+        "mid": 71.96850624000001,
+        "back": 83.96325728000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9687,7 +9687,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9720,9 +9720,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9797,7 +9797,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9907,7 +9907,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -9942,11 +9942,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 29.396326400000003,
         "mid": 54.59317760000001,
-        "back": 79.7900288,
+        "back": 75.5905536,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 17.08740224,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -10045,7 +10045,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -10155,7 +10155,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10265,7 +10265,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10375,7 +10375,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10592,9 +10592,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 64.07480520000001,
-        "mid": 76.27953000000001,
-        "back": 91.535436,
+        "front": 67.12598640000002,
+        "mid": 73.2283488,
+        "back": 85.4330736,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10669,7 +10669,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10779,7 +10779,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10812,9 +10812,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.4960648,
-        "mid": 67.25721999999999,
-        "back": 80.708664,
+        "front": 59.1863536,
+        "mid": 64.56693119999998,
+        "back": 75.32808639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10889,7 +10889,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -10905,7 +10905,7 @@ window.LIEMAX_DATA = {
       "dataSource": "r_imax_csv",
       "sub": "Reading · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
-      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances use a venue-specific GT estimate because the sparse CSV does not include row depth.",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 84.317588,
         "h": 65.6168,
@@ -10922,13 +10922,13 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 40,
-        "mid": 75,
-        "back": 84,
-        "source": "community_estimate",
+        "front": 29.511155799999997,
+        "mid": 54.8064322,
+        "back": 75.8858292,
+        "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 17.953544,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -11007,8 +11007,8 @@ window.LIEMAX_DATA = {
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
-          "q": "community_estimate",
-          "note": "Commercial GT estimate constrained by GSCA-style large-format geometry: back rows are roughly within one screen width; mid-row modeled at ~75 ft, not the generic 1.5× screen-width fallback."
+          "q": "derived_from_screen_width",
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -11041,9 +11041,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11118,7 +11118,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11151,9 +11151,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11228,7 +11228,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11261,9 +11261,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11338,7 +11338,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11371,9 +11371,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 47.1948834,
-        "mid": 56.184385,
-        "back": 67.421262,
+        "front": 49.442258800000005,
+        "mid": 53.937009599999996,
+        "back": 62.92651119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11448,7 +11448,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11481,9 +11481,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11558,7 +11558,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11779,7 +11779,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -11814,11 +11814,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 24.458662200000003,
         "mid": 45.42322980000001,
-        "back": 66.38779740000001,
+        "back": 62.89370280000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 13.731102920000001,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -11917,7 +11917,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -12027,7 +12027,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -12137,7 +12137,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -12170,9 +12170,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12247,7 +12247,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -12374,11 +12374,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 29.396326400000003,
         "mid": 54.59317760000001,
-        "back": 79.7900288,
+        "back": 75.5905536,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.8708668,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -12458,7 +12458,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -12568,7 +12568,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -12601,9 +12601,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12678,7 +12678,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -12972,7 +12972,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13005,9 +13005,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 50.6397654,
-        "mid": 60.28543499999999,
-        "back": 72.342522,
+        "front": 53.0511828,
+        "mid": 57.874017599999995,
+        "back": 67.51968719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13082,7 +13082,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13115,9 +13115,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 65.7972462,
-        "mid": 78.330055,
-        "back": 93.99606600000001,
+        "front": 68.9304484,
+        "mid": 75.1968528,
+        "back": 87.7296616,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13192,7 +13192,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13225,9 +13225,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 69.24212820000001,
-        "mid": 82.431105,
-        "back": 98.917326,
+        "front": 72.5393724,
+        "mid": 79.1338608,
+        "back": 92.3228376,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13302,7 +13302,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13412,7 +13412,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13445,9 +13445,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13522,7 +13522,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13555,9 +13555,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13632,7 +13632,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13665,9 +13665,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 47.1948834,
-        "mid": 56.184385,
-        "back": 67.421262,
+        "front": 49.442258800000005,
+        "mid": 53.937009599999996,
+        "back": 62.92651119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13742,7 +13742,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13775,9 +13775,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 61.3188996,
-        "mid": 72.99869,
-        "back": 87.598428,
+        "front": 64.23884720000001,
+        "mid": 70.0787424,
+        "back": 81.7585328,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13852,7 +13852,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13885,9 +13885,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 66.83071079999999,
-        "mid": 79.56036999999999,
-        "back": 95.472444,
+        "front": 70.0131256,
+        "mid": 76.37795519999999,
+        "back": 89.10761439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13962,7 +13962,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -13995,9 +13995,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14072,7 +14072,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14182,7 +14182,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14215,9 +14215,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 69.24212820000001,
-        "mid": 82.431105,
-        "back": 98.917326,
+        "front": 72.5393724,
+        "mid": 79.1338608,
+        "back": 92.3228376,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14292,7 +14292,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14402,7 +14402,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14435,9 +14435,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14512,7 +14512,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14545,9 +14545,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14622,7 +14622,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14655,9 +14655,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14732,7 +14732,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14842,7 +14842,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14875,9 +14875,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 85.43307360000001,
-        "mid": 101.70604,
-        "back": 122.04724800000001,
+        "front": 89.50131520000002,
+        "mid": 97.63779840000001,
+        "back": 113.9107648,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14952,7 +14952,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -14985,9 +14985,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15062,7 +15062,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15095,9 +15095,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15172,7 +15172,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15205,9 +15205,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15282,7 +15282,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15317,11 +15317,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 35.34448932,
         "mid": 65.63976588000001,
-        "back": 95.93504244,
+        "back": 90.88582968000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 21.244882688,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -15429,7 +15429,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -15462,9 +15462,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 58.907482200000004,
-        "mid": 70.127955,
-        "back": 84.153546,
+        "front": 61.71260040000001,
+        "mid": 67.3228368,
+        "back": 78.5433096,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15539,7 +15539,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15572,9 +15572,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15686,7 +15686,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15719,9 +15719,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15796,7 +15796,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15829,9 +15829,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -15906,7 +15906,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -15939,9 +15939,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16016,7 +16016,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16049,9 +16049,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 62.35236420000001,
-        "mid": 74.229005,
-        "back": 89.07480600000001,
+        "front": 65.32152440000002,
+        "mid": 71.25984480000001,
+        "back": 83.1364856,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16126,7 +16126,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16251,9 +16251,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16328,7 +16328,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16361,9 +16361,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 84.0551208,
-        "mid": 100.06562,
-        "back": 120.07874399999999,
+        "front": 88.0577456,
+        "mid": 96.06299519999999,
+        "back": 112.07349439999997,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16438,7 +16438,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16548,7 +16548,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16581,9 +16581,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16658,7 +16658,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16693,11 +16693,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 25.6069562,
         "mid": 47.555775800000006,
-        "back": 69.5045954,
+        "back": 65.84645880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 13.514567480000004,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -16796,7 +16796,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -16829,9 +16829,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16906,7 +16906,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -16939,9 +16939,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.7066946,
-        "mid": 62.746065,
-        "back": 75.295278,
+        "front": 55.216537200000005,
+        "mid": 60.236222399999996,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17016,7 +17016,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -17126,7 +17126,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -17161,11 +17161,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 30.5446204,
         "mid": 56.72572360000001,
-        "back": 82.9068268,
+        "back": 78.54330960000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 19.0362212,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -17245,7 +17245,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -17278,9 +17278,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 72.6870102,
-        "mid": 86.532155,
-        "back": 103.83858599999999,
+        "front": 76.1482964,
+        "mid": 83.0708688,
+        "back": 96.9160136,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17355,7 +17355,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -17388,9 +17388,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 64.07480520000001,
-        "mid": 76.27953000000001,
-        "back": 91.535436,
+        "front": 67.12598640000002,
+        "mid": 73.2283488,
+        "back": 85.4330736,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17465,7 +17465,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -17500,11 +17500,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 31.463255599999997,
         "mid": 58.4317604,
-        "back": 85.40026519999999,
+        "back": 80.9055144,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 17.953544,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -17603,7 +17603,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -17638,11 +17638,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 28.8221794,
         "mid": 53.5269046,
-        "back": 78.23162980000001,
+        "back": 74.11417560000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.8708668,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -17722,7 +17722,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -17755,9 +17755,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17832,7 +17832,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -17942,7 +17942,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18052,7 +18052,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18085,9 +18085,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 68.89764,
-        "mid": 82.021,
-        "back": 98.42519999999999,
+        "front": 72.17848000000001,
+        "mid": 78.74015999999999,
+        "back": 91.86352,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18162,7 +18162,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18197,11 +18197,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 24.8031504,
         "mid": 46.062993600000006,
-        "back": 67.3228368,
+        "back": 63.779529600000004,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 13.731102920000001,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -18300,7 +18300,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -18333,9 +18333,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 79.232286,
-        "mid": 94.32415,
-        "back": 113.18898000000002,
+        "front": 83.00525200000001,
+        "mid": 90.551184,
+        "back": 105.64304800000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18410,7 +18410,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18443,9 +18443,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18520,7 +18520,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18630,7 +18630,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18663,9 +18663,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 58.907482200000004,
-        "mid": 70.127955,
-        "back": 84.153546,
+        "front": 61.71260040000001,
+        "mid": 67.3228368,
+        "back": 78.5433096,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18740,7 +18740,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18773,9 +18773,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 78.8877978,
-        "mid": 93.914045,
-        "back": 112.696854,
+        "front": 82.6443596,
+        "mid": 90.1574832,
+        "back": 105.1837304,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18850,7 +18850,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -18960,7 +18960,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19070,7 +19070,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19103,9 +19103,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19180,7 +19180,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19213,9 +19213,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.118112,
-        "mid": 65.6168,
-        "back": 78.74016,
+        "front": 57.74278400000001,
+        "mid": 62.992127999999994,
+        "back": 73.490816,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19290,7 +19290,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19400,7 +19400,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19433,9 +19433,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19510,7 +19510,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19543,9 +19543,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 84.7440972,
-        "mid": 100.88583,
-        "back": 121.062996,
+        "front": 88.77953040000001,
+        "mid": 96.8503968,
+        "back": 112.99212959999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19620,7 +19620,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19653,9 +19653,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19730,7 +19730,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19763,9 +19763,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19840,7 +19840,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -19875,11 +19875,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 29.9704734,
         "mid": 55.65945060000001,
-        "back": 81.3484278,
+        "back": 77.0669316,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.8708668,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -19959,7 +19959,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -19992,9 +19992,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 68.20866360000001,
-        "mid": 81.20079000000001,
-        "back": 97.440948,
+        "front": 71.45669520000001,
+        "mid": 77.95275840000001,
+        "back": 90.9448848,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20069,7 +20069,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20102,9 +20102,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20179,7 +20179,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20212,9 +20212,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.118112,
-        "mid": 65.6168,
-        "back": 78.74016,
+        "front": 57.74278400000001,
+        "mid": 62.992127999999994,
+        "back": 73.490816,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20289,7 +20289,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20322,9 +20322,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20399,7 +20399,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20432,9 +20432,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 66.14173439999999,
-        "mid": 78.74015999999999,
-        "back": 94.488192,
+        "front": 69.2913408,
+        "mid": 75.59055359999999,
+        "back": 88.18897919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20509,7 +20509,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20544,11 +20544,11 @@ window.LIEMAX_DATA = {
         "capacity": null,
         "front": 28.018373599999993,
         "mid": 52.034122399999994,
-        "back": 76.04987119999998,
+        "back": 72.04724639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 15.896457320000003,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
@@ -20628,7 +20628,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -20738,7 +20738,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20771,9 +20771,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20848,7 +20848,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20881,9 +20881,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 350,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20958,7 +20958,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -20991,9 +20991,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 250,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21068,7 +21068,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21101,9 +21101,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 338,
-        "front": 64.4192934,
-        "mid": 76.689635,
-        "back": 92.02756199999999,
+        "front": 67.4868788,
+        "mid": 73.6220496,
+        "back": 85.89239119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21178,7 +21178,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21211,9 +21211,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 338,
-        "front": 63.73031700000001,
-        "mid": 75.869425,
-        "back": 91.04331,
+        "front": 66.765094,
+        "mid": 72.834648,
+        "back": 84.973756,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21288,7 +21288,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21321,9 +21321,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21398,7 +21398,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21431,9 +21431,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 306,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21508,7 +21508,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21541,9 +21541,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21618,7 +21618,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21651,9 +21651,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 375,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21728,7 +21728,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21761,9 +21761,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 409,
-        "front": 63.73031700000001,
-        "mid": 75.869425,
-        "back": 91.04331,
+        "front": 66.765094,
+        "mid": 72.834648,
+        "back": 84.973756,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21838,7 +21838,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21871,9 +21871,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -21948,7 +21948,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -21981,9 +21981,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22058,7 +22058,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22091,9 +22091,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 342,
-        "front": 49.95078900000001,
-        "mid": 59.465225000000004,
-        "back": 71.35827,
+        "front": 52.329398000000005,
+        "mid": 57.086616,
+        "back": 66.601052,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22168,7 +22168,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22201,9 +22201,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 61.3188996,
-        "mid": 72.99869,
-        "back": 87.598428,
+        "front": 64.23884720000001,
+        "mid": 70.0787424,
+        "back": 81.7585328,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22278,7 +22278,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22311,9 +22311,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 353,
-        "front": 60.62992320000001,
-        "mid": 72.17848000000001,
-        "back": 86.61417600000001,
+        "front": 63.517062400000015,
+        "mid": 69.2913408,
+        "back": 80.8398976,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22388,7 +22388,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22421,9 +22421,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 230,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22498,7 +22498,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22531,9 +22531,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 78.1988214,
-        "mid": 93.09383499999998,
-        "back": 111.71260199999999,
+        "front": 81.92257479999999,
+        "mid": 89.37008159999999,
+        "back": 104.26509519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22608,7 +22608,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22641,9 +22641,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 375,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22718,7 +22718,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22751,9 +22751,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 316,
-        "front": 53.05118280000001,
-        "mid": 63.15617,
-        "back": 75.78740400000001,
+        "front": 55.57742960000001,
+        "mid": 60.6299232,
+        "back": 70.7349104,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22828,7 +22828,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22861,9 +22861,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 290,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -22938,7 +22938,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -22971,9 +22971,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 331,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23048,7 +23048,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23081,9 +23081,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 50.6397654,
-        "mid": 60.28543499999999,
-        "back": 72.342522,
+        "front": 53.0511828,
+        "mid": 57.874017599999995,
+        "back": 67.51968719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23158,7 +23158,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23193,11 +23193,11 @@ window.LIEMAX_DATA = {
         "capacity": 273,
         "front": 24.458662200000003,
         "mid": 45.42322980000001,
-        "back": 66.38779740000001,
+        "back": 62.89370280000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 13.731102920000001,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -23296,7 +23296,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -23329,9 +23329,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23406,7 +23406,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23439,9 +23439,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 334,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23516,7 +23516,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23549,9 +23549,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23626,7 +23626,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23659,9 +23659,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 74.4094512,
-        "mid": 88.58268000000001,
-        "back": 106.299216,
+        "front": 77.95275840000001,
+        "mid": 85.03937280000001,
+        "back": 99.2126016,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23736,7 +23736,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23769,9 +23769,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 250,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23846,7 +23846,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23879,9 +23879,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -23956,7 +23956,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -23989,9 +23989,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24066,7 +24066,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24099,9 +24099,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 350,
-        "front": 58.218505799999996,
-        "mid": 69.307745,
-        "back": 83.169294,
+        "front": 60.9908156,
+        "mid": 66.5354352,
+        "back": 77.62467439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24176,7 +24176,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24209,9 +24209,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 283,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24286,7 +24286,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24319,9 +24319,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 48.9173244,
-        "mid": 58.23491,
-        "back": 69.881892,
+        "front": 51.2467208,
+        "mid": 55.9055136,
+        "back": 65.2230992,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24396,7 +24396,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24429,9 +24429,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 361,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24506,7 +24506,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24539,9 +24539,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 335,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24616,7 +24616,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24649,9 +24649,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 263,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24726,7 +24726,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24759,9 +24759,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 413,
-        "front": 67.86417540000001,
-        "mid": 80.790685,
-        "back": 96.948822,
+        "front": 71.0958028,
+        "mid": 77.5590576,
+        "back": 90.48556719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24836,7 +24836,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -24869,9 +24869,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 365,
-        "front": 74.4094512,
-        "mid": 88.58268000000001,
-        "back": 106.299216,
+        "front": 77.95275840000001,
+        "mid": 85.03937280000001,
+        "back": 99.2126016,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -24974,7 +24974,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25007,9 +25007,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 416,
-        "front": 58.907482200000004,
-        "mid": 70.127955,
-        "back": 84.153546,
+        "front": 61.71260040000001,
+        "mid": 67.3228368,
+        "back": 78.5433096,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25084,7 +25084,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25117,9 +25117,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 272,
-        "front": 53.7401592,
-        "mid": 63.97638,
-        "back": 76.771656,
+        "front": 56.299214400000004,
+        "mid": 61.417324799999996,
+        "back": 71.65354559999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25194,7 +25194,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25227,9 +25227,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 304,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25304,7 +25304,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25337,9 +25337,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 226,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25414,7 +25414,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25447,9 +25447,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 586,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25524,7 +25524,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25557,9 +25557,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 300,
-        "front": 78.8877978,
-        "mid": 93.914045,
-        "back": 112.696854,
+        "front": 82.6443596,
+        "mid": 90.1574832,
+        "back": 105.1837304,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25634,7 +25634,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25667,9 +25667,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 265,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25744,7 +25744,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25777,9 +25777,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 295,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25854,7 +25854,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25887,9 +25887,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 61.3188996,
-        "mid": 72.99869,
-        "back": 87.598428,
+        "front": 64.23884720000001,
+        "mid": 70.0787424,
+        "back": 81.7585328,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -25964,7 +25964,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -25997,9 +25997,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 285,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26074,7 +26074,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26107,9 +26107,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 387,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26184,7 +26184,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26217,9 +26217,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 349,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26294,7 +26294,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26327,9 +26327,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 298,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26404,7 +26404,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26437,9 +26437,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 187,
-        "front": 45.472442400000006,
-        "mid": 54.13386,
-        "back": 64.960632,
+        "front": 47.637796800000004,
+        "mid": 51.9685056,
+        "back": 60.62992319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26514,7 +26514,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26547,9 +26547,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 187,
-        "front": 45.472442400000006,
-        "mid": 54.13386,
-        "back": 64.960632,
+        "front": 47.637796800000004,
+        "mid": 51.9685056,
+        "back": 60.62992319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26624,7 +26624,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26657,9 +26657,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 48.572836200000005,
-        "mid": 57.824805,
-        "back": 69.38976600000001,
+        "front": 50.88582840000001,
+        "mid": 55.5118128,
+        "back": 64.7637816,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26734,7 +26734,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26767,9 +26767,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26844,7 +26844,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26877,9 +26877,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 447,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -26954,7 +26954,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -26989,11 +26989,11 @@ window.LIEMAX_DATA = {
         "capacity": 424,
         "front": 29.6259852,
         "mid": 55.0196868,
-        "back": 80.4133884,
+        "back": 76.1811048,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 17.4122054,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -27092,7 +27092,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -27125,9 +27125,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 307,
-        "front": 59.2519704,
-        "mid": 70.53806,
-        "back": 84.64567199999999,
+        "front": 62.073492800000004,
+        "mid": 67.7165376,
+        "back": 79.00262719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27202,7 +27202,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27235,9 +27235,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 328,
-        "front": 63.3858288,
-        "mid": 75.45931999999999,
-        "back": 90.55118399999999,
+        "front": 66.40420160000001,
+        "mid": 72.4409472,
+        "back": 84.51443839999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27312,7 +27312,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27345,9 +27345,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 299,
-        "front": 84.0551208,
-        "mid": 100.06562,
-        "back": 120.07874399999999,
+        "front": 88.0577456,
+        "mid": 96.06299519999999,
+        "back": 112.07349439999997,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27422,7 +27422,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27455,9 +27455,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 261,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27532,7 +27532,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27565,9 +27565,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 429,
-        "front": 59.2519704,
-        "mid": 70.53806,
-        "back": 84.64567199999999,
+        "front": 62.073492800000004,
+        "mid": 67.7165376,
+        "back": 79.00262719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27642,7 +27642,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27675,9 +27675,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 375,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27752,7 +27752,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27785,9 +27785,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 366,
-        "front": 62.35236420000001,
-        "mid": 74.229005,
-        "back": 89.07480600000001,
+        "front": 65.32152440000002,
+        "mid": 71.25984480000001,
+        "back": 83.1364856,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27862,7 +27862,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -27895,9 +27895,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 287,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -27972,7 +27972,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28005,9 +28005,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 67.5196872,
-        "mid": 80.38058000000001,
-        "back": 96.45669600000002,
+        "front": 70.73491040000002,
+        "mid": 77.16535680000001,
+        "back": 90.02624960000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28082,7 +28082,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28115,9 +28115,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 299,
-        "front": 49.6063008,
-        "mid": 59.05512,
-        "back": 70.86614399999999,
+        "front": 51.9685056,
+        "mid": 56.692915199999995,
+        "back": 66.14173439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28192,7 +28192,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28225,9 +28225,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 570,
-        "front": 77.85433320000001,
-        "mid": 92.68373,
-        "back": 111.220476,
+        "front": 81.56168240000001,
+        "mid": 88.9763808,
+        "back": 103.8057776,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28302,7 +28302,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28335,9 +28335,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 270,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28412,7 +28412,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28445,9 +28445,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 305,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28522,7 +28522,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28555,9 +28555,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 305,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28632,7 +28632,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28665,9 +28665,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 251,
-        "front": 48.228348,
-        "mid": 57.414699999999996,
-        "back": 68.89764,
+        "front": 50.524936000000004,
+        "mid": 55.118111999999996,
+        "back": 64.304464,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28742,7 +28742,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28775,9 +28775,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 374,
-        "front": 55.462600200000004,
-        "mid": 66.026905,
-        "back": 79.232286,
+        "front": 58.10367640000001,
+        "mid": 63.3858288,
+        "back": 73.9501336,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28852,7 +28852,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28885,9 +28885,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 346,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -28962,7 +28962,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -28995,9 +28995,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 388,
-        "front": 57.5295294,
-        "mid": 68.487535,
-        "back": 82.185042,
+        "front": 60.2690308,
+        "mid": 65.7480336,
+        "back": 76.70603919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29072,7 +29072,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29107,11 +29107,11 @@ window.LIEMAX_DATA = {
         "capacity": 268,
         "front": 24.458662200000003,
         "mid": 45.42322980000001,
-        "back": 66.38779740000001,
+        "back": 62.89370280000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 16.11299276,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -29210,7 +29210,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -29243,9 +29243,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 356,
-        "front": 69.24212820000001,
-        "mid": 82.431105,
-        "back": 98.917326,
+        "front": 72.5393724,
+        "mid": 79.1338608,
+        "back": 92.3228376,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29320,7 +29320,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29353,9 +29353,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 274,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29430,7 +29430,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29463,9 +29463,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 242,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29540,7 +29540,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29573,9 +29573,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 128,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29650,7 +29650,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29683,9 +29683,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 342,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29760,7 +29760,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29793,9 +29793,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 284,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29870,7 +29870,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -29903,9 +29903,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 236,
-        "front": 48.228348,
-        "mid": 57.414699999999996,
-        "back": 68.89764,
+        "front": 50.524936000000004,
+        "mid": 55.118111999999996,
+        "back": 64.304464,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -29980,7 +29980,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30013,9 +30013,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 388,
-        "front": 65.7972462,
-        "mid": 78.330055,
-        "back": 93.99606600000001,
+        "front": 68.9304484,
+        "mid": 75.1968528,
+        "back": 87.7296616,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30090,7 +30090,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30123,9 +30123,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30200,7 +30200,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30233,9 +30233,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 341,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30310,7 +30310,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30343,9 +30343,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 251,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30420,7 +30420,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30453,9 +30453,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 303,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30530,7 +30530,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30563,9 +30563,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 363,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30640,7 +30640,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30673,9 +30673,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 439,
-        "front": 65.7972462,
-        "mid": 78.330055,
-        "back": 93.99606600000001,
+        "front": 68.9304484,
+        "mid": 75.1968528,
+        "back": 87.7296616,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30750,7 +30750,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30783,9 +30783,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 48.228348,
-        "mid": 57.414699999999996,
-        "back": 68.89764,
+        "front": 50.524936000000004,
+        "mid": 55.118111999999996,
+        "back": 64.304464,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -30860,7 +30860,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -30895,11 +30895,11 @@ window.LIEMAX_DATA = {
         "capacity": 252,
         "front": 24.458662200000003,
         "mid": 45.42322980000001,
-        "back": 66.38779740000001,
+        "back": 62.89370280000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 12.75669344,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -30998,7 +30998,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -31031,9 +31031,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 296,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31108,7 +31108,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31141,9 +31141,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.7401592,
-        "mid": 63.97638,
-        "back": 76.771656,
+        "front": 56.299214400000004,
+        "mid": 61.417324799999996,
+        "back": 71.65354559999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31218,7 +31218,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31251,9 +31251,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 351,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31328,7 +31328,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31361,9 +31361,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 280,
-        "front": 52.7066946,
-        "mid": 62.746065,
-        "back": 75.295278,
+        "front": 55.216537200000005,
+        "mid": 60.236222399999996,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31438,7 +31438,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31471,9 +31471,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 47.5393716,
-        "mid": 56.59449000000001,
-        "back": 67.913388,
+        "front": 49.80315120000001,
+        "mid": 54.3307104,
+        "back": 63.3858288,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31548,7 +31548,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31581,9 +31581,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 301,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31658,7 +31658,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31691,9 +31691,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 78.8877978,
-        "mid": 93.914045,
-        "back": 112.696854,
+        "front": 82.6443596,
+        "mid": 90.1574832,
+        "back": 105.1837304,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31768,7 +31768,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31801,9 +31801,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 600,
-        "front": 90.2559084,
-        "mid": 107.44751,
-        "back": 128.93701199999998,
+        "front": 94.5538088,
+        "mid": 103.14960959999999,
+        "back": 120.34121119999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31878,7 +31878,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -31911,9 +31911,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 48.572836200000005,
-        "mid": 57.824805,
-        "back": 69.38976600000001,
+        "front": 50.88582840000001,
+        "mid": 55.5118128,
+        "back": 64.7637816,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -31988,7 +31988,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32021,9 +32021,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 207,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32098,7 +32098,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32131,9 +32131,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 349,
-        "front": 51.673230000000004,
-        "mid": 61.515750000000004,
-        "back": 73.8189,
+        "front": 54.133860000000006,
+        "mid": 59.05512,
+        "back": 68.89764,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32208,7 +32208,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32241,9 +32241,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32318,7 +32318,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32351,9 +32351,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 330,
-        "front": 64.07480520000001,
-        "mid": 76.27953000000001,
-        "back": 91.535436,
+        "front": 67.12598640000002,
+        "mid": 73.2283488,
+        "back": 85.4330736,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32428,7 +32428,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32461,9 +32461,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 413,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32538,7 +32538,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32571,9 +32571,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 400,
-        "front": 62.35236420000001,
-        "mid": 74.229005,
-        "back": 89.07480600000001,
+        "front": 65.32152440000002,
+        "mid": 71.25984480000001,
+        "back": 83.1364856,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32648,7 +32648,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32681,9 +32681,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32758,7 +32758,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32791,9 +32791,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 235,
-        "front": 51.3287418,
-        "mid": 61.105644999999996,
-        "back": 73.326774,
+        "front": 53.7729676,
+        "mid": 58.6614192,
+        "back": 68.43832239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32868,7 +32868,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -32901,9 +32901,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 246,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -32978,7 +32978,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33011,9 +33011,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.3858288,
-        "mid": 75.45931999999999,
-        "back": 90.55118399999999,
+        "front": 66.40420160000001,
+        "mid": 72.4409472,
+        "back": 84.51443839999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33088,7 +33088,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33121,9 +33121,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 279,
-        "front": 79.8,
-        "mid": 95,
-        "back": 114,
+        "front": 83.60000000000001,
+        "mid": 91.2,
+        "back": 106.39999999999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33231,9 +33231,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 441,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33308,7 +33308,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33341,9 +33341,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 445,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33418,7 +33418,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33451,9 +33451,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 400,
-        "front": 75.787404,
-        "mid": 90.22309999999999,
-        "back": 108.26772,
+        "front": 79.396328,
+        "mid": 86.61417599999999,
+        "back": 101.04987199999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33528,7 +33528,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33561,9 +33561,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 369,
-        "front": 58.907482200000004,
-        "mid": 70.127955,
-        "back": 84.153546,
+        "front": 61.71260040000001,
+        "mid": 67.3228368,
+        "back": 78.5433096,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33638,7 +33638,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33671,9 +33671,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 322,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33748,7 +33748,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33781,9 +33781,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 230,
-        "front": 47.1948834,
-        "mid": 56.184385,
-        "back": 67.421262,
+        "front": 49.442258800000005,
+        "mid": 53.937009599999996,
+        "back": 62.92651119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33858,7 +33858,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -33891,9 +33891,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 434,
-        "front": 68.20866360000001,
-        "mid": 81.20079000000001,
-        "back": 97.440948,
+        "front": 71.45669520000001,
+        "mid": 77.95275840000001,
+        "back": 90.9448848,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -33968,7 +33968,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34001,9 +34001,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 494,
-        "front": 62.6968524,
-        "mid": 74.63910999999999,
-        "back": 89.566932,
+        "front": 65.6824168,
+        "mid": 71.65354559999999,
+        "back": 83.59580319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34078,7 +34078,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34111,9 +34111,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 303,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34188,7 +34188,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34221,9 +34221,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 330,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34298,7 +34298,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34331,9 +34331,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 320,
-        "front": 57.18504120000001,
-        "mid": 68.07743,
-        "back": 81.692916,
+        "front": 59.908138400000006,
+        "mid": 65.3543328,
+        "back": 76.2467216,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34408,7 +34408,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34441,9 +34441,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 270,
-        "front": 67.175199,
-        "mid": 79.970475,
-        "back": 95.96457,
+        "front": 70.374018,
+        "mid": 76.771656,
+        "back": 89.566932,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34518,7 +34518,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34551,9 +34551,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 259,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34628,7 +34628,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34661,9 +34661,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 67.5196872,
-        "mid": 80.38058000000001,
-        "back": 96.45669600000002,
+        "front": 70.73491040000002,
+        "mid": 77.16535680000001,
+        "back": 90.02624960000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34738,7 +34738,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34771,9 +34771,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 422,
-        "front": 57.5295294,
-        "mid": 68.487535,
-        "back": 82.185042,
+        "front": 60.2690308,
+        "mid": 65.7480336,
+        "back": 76.70603919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34848,7 +34848,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34881,9 +34881,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 249,
-        "front": 49.6063008,
-        "mid": 59.05512,
-        "back": 70.86614399999999,
+        "front": 51.9685056,
+        "mid": 56.692915199999995,
+        "back": 66.14173439999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -34958,7 +34958,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -34991,9 +34991,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 372,
-        "front": 57.5295294,
-        "mid": 68.487535,
-        "back": 82.185042,
+        "front": 60.2690308,
+        "mid": 65.7480336,
+        "back": 76.70603919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35068,7 +35068,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35101,9 +35101,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 69.24212820000001,
-        "mid": 82.431105,
-        "back": 98.917326,
+        "front": 72.5393724,
+        "mid": 79.1338608,
+        "back": 92.3228376,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35178,7 +35178,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35211,9 +35211,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 271,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35288,7 +35288,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35321,9 +35321,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 282,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35398,7 +35398,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35431,9 +35431,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 270,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35508,7 +35508,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35541,9 +35541,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 300,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35618,7 +35618,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35651,9 +35651,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35728,7 +35728,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35761,9 +35761,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 68.20866360000001,
-        "mid": 81.20079000000001,
-        "back": 97.440948,
+        "front": 71.45669520000001,
+        "mid": 77.95275840000001,
+        "back": 90.9448848,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35838,7 +35838,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35871,9 +35871,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 238,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -35948,7 +35948,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -35981,9 +35981,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 272,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36058,7 +36058,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36091,9 +36091,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 267,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36168,7 +36168,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36201,9 +36201,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 296,
-        "front": 51.3287418,
-        "mid": 61.105644999999996,
-        "back": 73.326774,
+        "front": 53.7729676,
+        "mid": 58.6614192,
+        "back": 68.43832239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36278,7 +36278,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36311,9 +36311,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 352,
-        "front": 61.6633878,
-        "mid": 73.408795,
-        "back": 88.090554,
+        "front": 64.5997396,
+        "mid": 70.4724432,
+        "back": 82.21785039999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36388,7 +36388,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36421,9 +36421,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 65.1082698,
-        "mid": 77.509845,
-        "back": 93.01181399999999,
+        "front": 68.2086636,
+        "mid": 74.40945119999999,
+        "back": 86.81102639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36498,7 +36498,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36531,9 +36531,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 287,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36608,7 +36608,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36641,9 +36641,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 230,
-        "front": 55.462600200000004,
-        "mid": 66.026905,
-        "back": 79.232286,
+        "front": 58.10367640000001,
+        "mid": 63.3858288,
+        "back": 73.9501336,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36718,7 +36718,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36751,9 +36751,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 585,
-        "front": 62.007876,
-        "mid": 73.8189,
-        "back": 88.58268000000001,
+        "front": 64.960632,
+        "mid": 70.866144,
+        "back": 82.677168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36828,7 +36828,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36861,9 +36861,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 209,
-        "front": 54.084647399999994,
-        "mid": 64.386485,
-        "back": 77.26378199999999,
+        "front": 56.6601068,
+        "mid": 61.811025599999994,
+        "back": 72.11286319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -36938,7 +36938,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -36971,9 +36971,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37048,7 +37048,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37081,9 +37081,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 72.342522,
-        "mid": 86.12205,
-        "back": 103.34646,
+        "front": 75.787404,
+        "mid": 82.677168,
+        "back": 96.456696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37158,7 +37158,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37193,11 +37193,11 @@ window.LIEMAX_DATA = {
         "capacity": 183,
         "front": 19.6358274,
         "mid": 36.466536600000005,
-        "back": 53.2972458,
+        "back": 50.4921276,
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 16,
+        "frontRowFloorElevationFt": 9.833465,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -37296,7 +37296,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.90× screen width; pit/deck elevation targets front-row eyes about one-third up the screen, with row pitch/rake still renderer estimates rather than venue measurements."
         }
       }
     },
@@ -37329,9 +37329,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 78.8877978,
-        "mid": 93.914045,
-        "back": 112.696854,
+        "front": 82.6443596,
+        "mid": 90.1574832,
+        "back": 105.1837304,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37406,7 +37406,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37439,9 +37439,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 137,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37516,7 +37516,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37549,9 +37549,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 270,
-        "front": 55.118112,
-        "mid": 65.6168,
-        "back": 78.74016,
+        "front": 57.74278400000001,
+        "mid": 62.992127999999994,
+        "back": 73.490816,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37626,7 +37626,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37770,9 +37770,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 598,
-        "front": 69.24212820000001,
-        "mid": 82.431105,
-        "back": 98.917326,
+        "front": 72.5393724,
+        "mid": 79.1338608,
+        "back": 92.3228376,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37875,7 +37875,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -37908,9 +37908,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 267,
-        "front": 62.6968524,
-        "mid": 74.63910999999999,
-        "back": 89.566932,
+        "front": 65.6824168,
+        "mid": 71.65354559999999,
+        "back": 83.59580319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -37985,7 +37985,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38018,9 +38018,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 267,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38095,7 +38095,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38128,9 +38128,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 75.787404,
-        "mid": 90.22309999999999,
-        "back": 108.26772,
+        "front": 79.396328,
+        "mid": 86.61417599999999,
+        "back": 101.04987199999998,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38205,7 +38205,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38238,9 +38238,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 303,
-        "front": 59.596458600000005,
-        "mid": 70.948165,
-        "back": 85.137798,
+        "front": 62.43438520000001,
+        "mid": 68.1102384,
+        "back": 79.4619448,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38315,7 +38315,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38348,9 +38348,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 353,
-        "front": 56.151576600000006,
-        "mid": 66.847115,
-        "back": 80.21653800000001,
+        "front": 58.82546120000001,
+        "mid": 64.17323040000001,
+        "back": 74.8687688,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38425,7 +38425,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38458,9 +38458,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 277,
-        "front": 52.3622064,
-        "mid": 62.33595999999999,
-        "back": 74.803152,
+        "front": 54.8556448,
+        "mid": 59.84252159999999,
+        "back": 69.81627519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38535,7 +38535,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38568,9 +38568,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 65.452758,
-        "mid": 77.91995,
-        "back": 93.50394,
+        "front": 68.569556,
+        "mid": 74.803152,
+        "back": 87.270344,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38645,7 +38645,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38678,9 +38678,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 65.1082698,
-        "mid": 77.509845,
-        "back": 93.01181399999999,
+        "front": 68.2086636,
+        "mid": 74.40945119999999,
+        "back": 86.81102639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38755,7 +38755,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38788,9 +38788,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 288,
-        "front": 48.9173244,
-        "mid": 58.23491,
-        "back": 69.881892,
+        "front": 51.2467208,
+        "mid": 55.9055136,
+        "back": 65.2230992,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38865,7 +38865,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -38898,9 +38898,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 74.064963,
-        "mid": 88.172575,
-        "back": 105.80709,
+        "front": 77.59186600000001,
+        "mid": 84.645672,
+        "back": 98.753284,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -38975,7 +38975,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39008,9 +39008,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 450,
-        "front": 62.007876,
-        "mid": 73.8189,
-        "back": 88.58268000000001,
+        "front": 64.960632,
+        "mid": 70.866144,
+        "back": 82.677168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39085,7 +39085,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39118,9 +39118,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 405,
-        "front": 61.3188996,
-        "mid": 72.99869,
-        "back": 87.598428,
+        "front": 64.23884720000001,
+        "mid": 70.0787424,
+        "back": 81.7585328,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39195,7 +39195,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39228,9 +39228,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 260,
-        "front": 75.09842760000001,
-        "mid": 89.40289,
-        "back": 107.283468,
+        "front": 78.6745432,
+        "mid": 85.82677439999999,
+        "back": 100.1312368,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39305,7 +39305,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39338,9 +39338,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 290,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39415,7 +39415,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39448,9 +39448,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 400,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39525,7 +39525,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39558,9 +39558,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 414,
-        "front": 59.94094679999999,
-        "mid": 71.35826999999999,
-        "back": 85.62992399999999,
+        "front": 62.7952776,
+        "mid": 68.50393919999999,
+        "back": 79.92126239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39635,7 +39635,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39668,9 +39668,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 324,
-        "front": 65.1082698,
-        "mid": 77.509845,
-        "back": 93.01181399999999,
+        "front": 68.2086636,
+        "mid": 74.40945119999999,
+        "back": 86.81102639999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39745,7 +39745,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39778,9 +39778,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 400,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39855,7 +39855,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39888,9 +39888,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -39965,7 +39965,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -39998,9 +39998,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 345,
-        "front": 52.7066946,
-        "mid": 62.746065,
-        "back": 75.295278,
+        "front": 55.216537200000005,
+        "mid": 60.236222399999996,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40075,7 +40075,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40108,9 +40108,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 420,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40185,7 +40185,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40218,9 +40218,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 336,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40295,7 +40295,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40328,9 +40328,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 340,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40405,7 +40405,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40438,9 +40438,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 210,
-        "front": 57.5295294,
-        "mid": 68.487535,
-        "back": 82.185042,
+        "front": 60.2690308,
+        "mid": 65.7480336,
+        "back": 76.70603919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40515,7 +40515,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40548,9 +40548,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 84.0551208,
-        "mid": 100.06562,
-        "back": 120.07874399999999,
+        "front": 88.0577456,
+        "mid": 96.06299519999999,
+        "back": 112.07349439999997,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40625,7 +40625,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40658,9 +40658,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40735,7 +40735,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40768,9 +40768,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 399,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40845,7 +40845,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40878,9 +40878,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 347,
-        "front": 64.4192934,
-        "mid": 76.689635,
-        "back": 92.02756199999999,
+        "front": 67.4868788,
+        "mid": 73.6220496,
+        "back": 85.89239119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -40955,7 +40955,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -40988,9 +40988,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 318,
-        "front": 52.7066946,
-        "mid": 62.746065,
-        "back": 75.295278,
+        "front": 55.216537200000005,
+        "mid": 60.236222399999996,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41065,7 +41065,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41098,9 +41098,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 68.89764,
-        "mid": 82.021,
-        "back": 98.42519999999999,
+        "front": 72.17848000000001,
+        "mid": 78.74015999999999,
+        "back": 91.86352,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41175,7 +41175,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41208,9 +41208,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 375,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41285,7 +41285,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41318,9 +41318,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 285,
-        "front": 49.261812600000006,
-        "mid": 58.645015,
-        "back": 70.374018,
+        "front": 51.6076132,
+        "mid": 56.299214400000004,
+        "back": 65.6824168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41395,7 +41395,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41428,9 +41428,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 245,
-        "front": 47.1948834,
-        "mid": 56.184385,
-        "back": 67.421262,
+        "front": 49.442258800000005,
+        "mid": 53.937009599999996,
+        "back": 62.92651119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41505,7 +41505,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41538,9 +41538,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41615,7 +41615,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41648,9 +41648,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 293,
-        "front": 57.5295294,
-        "mid": 68.487535,
-        "back": 82.185042,
+        "front": 60.2690308,
+        "mid": 65.7480336,
+        "back": 76.70603919999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41725,7 +41725,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41758,9 +41758,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41835,7 +41835,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41868,9 +41868,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 63.041340600000005,
-        "mid": 75.049215,
-        "back": 90.059058,
+        "front": 66.04330920000001,
+        "mid": 72.04724639999999,
+        "back": 84.0551208,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -41945,7 +41945,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -41978,9 +41978,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 299,
-        "front": 54.7736238,
-        "mid": 65.206695,
-        "back": 78.248034,
+        "front": 57.38189160000001,
+        "mid": 62.5984272,
+        "back": 73.0314984,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42055,7 +42055,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42088,9 +42088,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 140,
-        "front": 52.7066946,
-        "mid": 62.746065,
-        "back": 75.295278,
+        "front": 55.216537200000005,
+        "mid": 60.236222399999996,
+        "back": 70.2755928,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42165,7 +42165,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42198,9 +42198,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 383,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42275,7 +42275,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42308,9 +42308,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 441,
-        "front": 65.7972462,
-        "mid": 78.330055,
-        "back": 93.99606600000001,
+        "front": 68.9304484,
+        "mid": 75.1968528,
+        "back": 87.7296616,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42385,7 +42385,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42418,9 +42418,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 50.6397654,
-        "mid": 60.28543499999999,
-        "back": 72.342522,
+        "front": 53.0511828,
+        "mid": 57.874017599999995,
+        "back": 67.51968719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42495,7 +42495,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42528,9 +42528,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 50.2952772,
-        "mid": 59.87533,
-        "back": 71.850396,
+        "front": 52.6902904,
+        "mid": 57.4803168,
+        "back": 67.0603696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42605,7 +42605,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42638,9 +42638,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 393,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42715,7 +42715,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42748,9 +42748,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 243,
-        "front": 56.840553,
-        "mid": 67.667325,
-        "back": 81.20079,
+        "front": 59.547246,
+        "mid": 64.96063199999999,
+        "back": 75.787404,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42825,7 +42825,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42858,9 +42858,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 420,
-        "front": 59.2519704,
-        "mid": 70.53806,
-        "back": 84.64567199999999,
+        "front": 62.073492800000004,
+        "mid": 67.7165376,
+        "back": 79.00262719999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -42935,7 +42935,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -42968,9 +42968,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43045,7 +43045,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43078,9 +43078,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 411,
-        "front": 74.4094512,
-        "mid": 88.58268000000001,
-        "back": 106.299216,
+        "front": 77.95275840000001,
+        "mid": 85.03937280000001,
+        "back": 99.2126016,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43183,7 +43183,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43216,9 +43216,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43293,7 +43293,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43326,9 +43326,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 59.596458600000005,
-        "mid": 70.948165,
-        "back": 85.137798,
+        "front": 62.43438520000001,
+        "mid": 68.1102384,
+        "back": 79.4619448,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43403,7 +43403,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43436,9 +43436,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 603,
-        "front": 79.9212624,
-        "mid": 95.14436,
-        "back": 114.173232,
+        "front": 83.72703680000001,
+        "mid": 91.3385856,
+        "back": 106.56168319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43513,7 +43513,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43546,9 +43546,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 514,
-        "front": 72.342522,
-        "mid": 86.12205,
-        "back": 103.34646,
+        "front": 75.787404,
+        "mid": 82.677168,
+        "back": 96.456696,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43623,7 +43623,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43656,9 +43656,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 84.0551208,
-        "mid": 100.06562,
-        "back": 120.07874399999999,
+        "front": 88.0577456,
+        "mid": 96.06299519999999,
+        "back": 112.07349439999997,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43733,7 +43733,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43766,9 +43766,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 639,
-        "front": 79.9212624,
-        "mid": 95.14436,
-        "back": 114.173232,
+        "front": 83.72703680000001,
+        "mid": 91.3385856,
+        "back": 106.56168319999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43843,7 +43843,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43876,9 +43876,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 293,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -43953,7 +43953,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -43986,9 +43986,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 51.3287418,
-        "mid": 61.105644999999996,
-        "back": 73.326774,
+        "front": 53.7729676,
+        "mid": 58.6614192,
+        "back": 68.43832239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44063,7 +44063,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44096,9 +44096,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 420,
-        "front": 62.007876,
-        "mid": 73.8189,
-        "back": 88.58268000000001,
+        "front": 64.960632,
+        "mid": 70.866144,
+        "back": 82.677168,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44173,7 +44173,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44206,9 +44206,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 285,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44283,7 +44283,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44316,9 +44316,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 404,
-        "front": 54.4291356,
-        "mid": 64.79659,
-        "back": 77.755908,
+        "front": 57.020999200000006,
+        "mid": 62.2047264,
+        "back": 72.5721808,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44393,7 +44393,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44426,9 +44426,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 299,
-        "front": 51.673230000000004,
-        "mid": 61.515750000000004,
-        "back": 73.8189,
+        "front": 54.133860000000006,
+        "mid": 59.05512,
+        "back": 68.89764,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44503,7 +44503,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44536,9 +44536,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 53.395671,
-        "mid": 63.566275000000005,
-        "back": 76.27953,
+        "front": 55.93832200000001,
+        "mid": 61.023624,
+        "back": 71.194228,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44613,7 +44613,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44646,9 +44646,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 438,
-        "front": 68.5531518,
-        "mid": 81.610895,
-        "back": 97.93307399999999,
+        "front": 71.8175876,
+        "mid": 78.34645919999998,
+        "back": 91.40420239999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44723,7 +44723,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44756,9 +44756,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 356,
-        "front": 57.87401760000001,
-        "mid": 68.89764000000001,
-        "back": 82.67716800000001,
+        "front": 60.62992320000001,
+        "mid": 66.1417344,
+        "back": 77.1653568,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44833,7 +44833,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44866,9 +44866,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 35,
-        "front": 74.4094512,
-        "mid": 88.58268000000001,
-        "back": 106.299216,
+        "front": 77.95275840000001,
+        "mid": 85.03937280000001,
+        "back": 99.2126016,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -44943,7 +44943,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -44976,9 +44976,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 65.7972462,
-        "mid": 78.330055,
-        "back": 93.99606600000001,
+        "front": 68.9304484,
+        "mid": 75.1968528,
+        "back": 87.7296616,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45053,7 +45053,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45086,9 +45086,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 387,
-        "front": 59.596458600000005,
-        "mid": 70.948165,
-        "back": 85.137798,
+        "front": 62.43438520000001,
+        "mid": 68.1102384,
+        "back": 79.4619448,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45163,7 +45163,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45196,9 +45196,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 290,
-        "front": 60.9744114,
-        "mid": 72.588585,
-        "back": 87.106302,
+        "front": 63.877954800000005,
+        "mid": 69.68504159999999,
+        "back": 81.29921519999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45301,7 +45301,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45334,9 +45334,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 315,
-        "front": 55.462600200000004,
-        "mid": 66.026905,
-        "back": 79.232286,
+        "front": 58.10367640000001,
+        "mid": 63.3858288,
+        "back": 73.9501336,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45411,7 +45411,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45444,9 +45444,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 55.807088400000005,
-        "mid": 66.43701,
-        "back": 79.724412,
+        "front": 58.4645688,
+        "mid": 63.7795296,
+        "back": 74.40945119999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45521,7 +45521,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45554,9 +45554,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 349,
-        "front": 73.3759866,
-        "mid": 87.352365,
-        "back": 104.82283800000002,
+        "front": 76.87008120000002,
+        "mid": 83.85827040000001,
+        "back": 97.83464880000001,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45631,7 +45631,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
@@ -45664,9 +45664,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": 340,
-        "front": 52.017718200000004,
-        "mid": 61.925855,
-        "back": 74.311026,
+        "front": 54.4947524,
+        "mid": 59.44882079999999,
+        "back": 69.35695759999999,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -45741,7 +45741,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.10×, 1.20×, and 1.40× screen width from the seating-distance audit."
         }
       }
     },
