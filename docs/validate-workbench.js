@@ -15,10 +15,12 @@ function loadScript(relativePath) {
 loadScript("docs/math.js");
 loadScript("docs/data.js");
 loadScript("docs/workbench.js");
+loadScript("docs/pov.js");
 
 const D = context.window.LIEMAX_DATA;
 const M = context.window.LIEMAX_MATH;
 const W = context.window.LIEMAX_WORKBENCH;
+const POV = context.window.LIEMAX_POV;
 let passed = 0;
 let failed = 0;
 
@@ -150,6 +152,7 @@ const lfExaminerHybrid = findVenueByName("Edwards Fresno Stadium 22 & IMAX");
 const santaAnita143190 = findVenueByName("AMC Santa Anita 16 & IMAX");
 const bostonCommonRows = D.venues.filter((venue) => venue.name.includes("Boston Common"));
 const providenceRows = D.venues.filter((venue) => venue.city === "Providence" && venue.state === "RI");
+const lincolnSquare = findVenueById("imax_us_ny_new_york_amc_lincoln_square_13_and_imax");
 const suppressedLFExaminerDuplicates = [
   ["NC", "Fayetteville", "AMC Fayetteville 14 & MAX"],
   ["CA", "Alhambra", "Edwards Renaissance Stadium 14 & IMAX"],
@@ -161,6 +164,7 @@ const suppressedLFExaminerDuplicates = [
 assert("Cinemark XD is present in workbench data", Boolean(cinemarkXd));
 assert("Dolby Cinema 2025 is present in workbench data", Boolean(dolbySingleLaser));
 assert("Reading GT generated venue is present", Boolean(reading));
+assert("Lincoln Square GT fallback is present", Boolean(lincolnSquare));
 assert("Assembly Row CoLa venue is present", Boolean(assemblyRow));
 assert("Boston Common CoLa venue is present", Boolean(bostonCommon));
 assert("Natick generated venue is present", Boolean(natick));
@@ -202,6 +206,22 @@ assert("143190 overlap keeps fresher non-Xenon projection", santaAnita143190?.pr
 assert("Reading mid distance is corrected to ~75 ft", closeEnough(reading.seat.mid, 75));
 assert("Reading mid distance is not old 1.5x fallback", reading.seat.mid < 90);
 assert("Reading seating source is caveated", reading.sources.seat.q === "community_estimate");
+assert("LIEMAX_POV runtime is exposed", Boolean(POV && typeof POV.modelForVenue === "function" && typeof POV.createComparison === "function"));
+
+const povBostonCommon = POV?.modelForVenue ? POV.modelForVenue(bostonCommon, { side: "A", presentationAr: 1.90, seat: "mid" }) : null;
+const povReadingGt = POV?.modelForVenue ? POV.modelForVenue(reading, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
+const povDomeVenue = D.venues.find((venue) => venue.screen?.geometry === "hemispherical");
+const povDome = POV?.modelForVenue ? POV.modelForVenue(povDomeVenue, { presentationAr: 1.43, seat: "mid" }) : null;
+const povDomeCopy = "3D dome POV is WIP because dome projection needs fisheye/hemisphere mapping. Use the 2D dome scale for now.";
+assert("POV flat venue model is data-bound to 1.90 mid seat", povBostonCommon?.supported && povBostonCommon.seatKey === "mid" && closeEnough(povBostonCommon.presentationAr, 1.90, 0.01) && povBostonCommon.seatingStyle === "retrofit");
+assert("POV GT model applies curved screen and GT seating", povReadingGt?.supported && povReadingGt.curveRadiusFactor > 0 && povReadingGt.seatingStyle === "gt");
+assert("POV projection window and texture crop match 1.90 vs GT 1.43 behavior",
+  closeEnough(povBostonCommon?.projectionWindow?.w / povBostonCommon?.projectionWindow?.h, 1.90, 0.03) &&
+  closeEnough(povBostonCommon?.sourceCrop?.v, 1.43 / 1.90, 0.02) &&
+  povBostonCommon?.sourceCrop?.offsetV > 0.10 &&
+  closeEnough(povReadingGt?.projectionWindow?.w / povReadingGt?.projectionWindow?.h, 1.43, 0.03) &&
+  closeEnough(povReadingGt?.sourceCrop?.v, 1, 0.01));
+assert("POV dome model returns WIP copy instead of a renderer target", povDome && !povDome.supported && povDome.unsupportedReason === povDomeCopy);
 
 const statsAssemblyRowCola = computeStats(assemblyRow, "front", 1.90, 1.90, false);
 const statsBostonCommonCola = computeStats(bostonCommon, "front", 1.90, 1.90, false);
@@ -258,8 +278,12 @@ assert("Verdict mentions Reading visible area and contrast wins", Boolean(readin
 const appSource = fs.readFileSync(path.join(root, "docs/app.jsx"), "utf8");
 const diagnosisSource = fs.readFileSync(path.join(root, "docs/diagnosis.js"), "utf8");
 const stageSource = fs.readFileSync(path.join(root, "docs/stage.js"), "utf8");
+const povSource = fs.readFileSync(path.join(root, "docs/pov.js"), "utf8");
 const indexSource = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
 const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8");
+const prototypeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/imax-3d-pov-simulator.prototype.html"), "utf8");
+const prototypeReadmeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/README.md"), "utf8");
+const povReferenceImagePath = path.join(root, "docs/assets/pov/spiderverse-143-reference.webp");
 assert("Picker includes LFExaminer Xenon database disclaimer", appSource.includes("supplemental Xenon-only rows from LFExaminer"));
 assert("Stats copy caveats LFExaminer 2021", appSource.includes("most LIEMAX rows come from LFExaminer 2021 and may be stale"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
@@ -271,7 +295,8 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=imax-verdict-190-1`)));
+assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-4`)));
+assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-4"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -279,15 +304,31 @@ assert("Single-stage renderer is available for diagnosis scale", stageSource.inc
 assert("Stage renderer draws dome diameter instead of rectangle only", stageSource.includes("ft dome diameter"));
 assert("Stage renderer uses resolved colors for SVG visibility", stageSource.includes("stageColor(\"--side-a\""));
 assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis-stage__svg") && stylesSource.includes("height: clamp(240px"));
+assert("PovComparison is mounted after the 2D stage", appSource.includes("function PovComparison") && appSource.includes("<PovComparison") && appSource.indexOf("<Stage venueA") < appSource.indexOf("<PovComparison"));
+assert("Diagnosis CTA opens the 3D POV comparison", appSource.includes("See the 3D POV comparison") && appSource.includes("handleCompareTrue"));
+assert("Diagnosis True IMAX comparison uses Lincoln Square fallback", appSource.includes("imax_us_ny_new_york_amc_lincoln_square_13_and_imax") && appSource.includes("D.venues.find(v => v.id === \"imax_gt_typical\")"));
+assert("POV module source exposes public API and the 1.43 reference image", povSource.includes("window.LIEMAX_POV") && povSource.includes("modelForVenue") && povSource.includes("createComparison") && povSource.includes("spiderverse-143-reference.webp") && fs.existsSync(povReferenceImagePath) && fs.statSync(povReferenceImagePath).size > 1000);
+assert("POV source keeps dome renderer excluded", povSource.includes(povDomeCopy));
+assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const look = { yaw: 0, pitch: 0 }") && povSource.includes("viewer.onLookChanged = () => viewers.forEach") && povSource.includes("syncLook"));
+assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov__viewport.is-pseudo-fullscreen") && stylesSource.includes(".pov__wip"));
+assert("Sanitized POV prototype archive is preserved", prototypeReadmeSource.includes("rough prototype") && prototypeReadmeSource.includes("archive-only") && prototypeSource.includes("neutral reference frame") && !prototypeSource.includes("data:image/jpeg") && !prototypeSource.includes("base64"));
 const dataSource = fs.readFileSync(path.join(root, "docs/data.js"), "utf8");
 assert("Docs data bundle is generated from canonical source", dataSource.includes("canonical src/data JSON resolved through src/math/resolver"));
 assert("Docs data bundle no longer contains prototype projection constants", !dataSource.includes("const proj_"));
 assert("Docs data bundle no longer embeds imaxCsvRows", !dataSource.includes("imaxCsvRows"));
 assert("Every docs venue exposes canonicalId", D.venues.every((venue) => typeof venue.canonicalId === "string" && venue.canonicalId.length > 0));
+assert("Every docs venue exposes POV screen extension fields", D.venues.every((venue) =>
+  Object.prototype.hasOwnProperty.call(venue.screen || {}, "curvatureRadiusFt") &&
+  Object.prototype.hasOwnProperty.call(venue.screen || {}, "screenBottomFt")
+));
 assert("Docs data exposes Dolby Cinema U.S. count token", Object.prototype.hasOwnProperty.call(D.db || {}, "dolby_cinema_us_count"));
 assert("Docs data exposes Dolby Cinema snapshot metadata", Boolean(D.db?.dolby_cinema_us_count_endpoint?.includes("mapBoundedCinemas")));
 assert("Docs data exposes not-full-143 digital percent token", typeof D.db?.not_full_143_digital_pct === "number");
 assert("Docs data exposes LFExaminer LIEMAX count token", typeof D.db?.liemax_lfexaminer_count === "number" && D.db.liemax_lfexaminer_count > 0);
+assert("Docs data exposes current r-imax count token", D.db?.current_r_imax_count === 180);
+assert("Docs data exposes LFExaminer supplemental count token", D.db?.lfexaminer_supplemental_count === 224);
+assert("Docs data exposes full 1.43 projection capable count token", D.db?.full_143_projection_capable_count === 26);
+assert("Docs data exposes commercial full 1.43 projection capable count token", D.db?.commercial_full_143_projection_capable_count === 24);
 assert("Dolby Cinema U.S. count token is preserved in docs data", typeof D.db?.dolby_cinema_us_count === "number");
 assert("Stats UI does not render a Dolby Cinema count card", !appSource.includes("Dolby Cinema US") && !appSource.includes("D.db?.dolby_cinema_us_count"));
 assert("Stats UI caveats LFExaminer LIEMAX count", appSource.includes("archival LFExaminer rows") && appSource.includes("LIEMAX now means legacy Dual Xenon"));
@@ -326,6 +367,7 @@ assert("Visible tag tooltip CSS is present", stylesSource.includes(".tag-with-he
 assert("Picker/search result tag tooltips open inward to avoid clipping", stylesSource.includes(".picker-v3__item-tags .tag-with-help::after") && stylesSource.includes(".search__item-tag.tag-with-help::after") && stylesSource.includes("right: 0"));
 assert("Diagnosis tag tooltips open downward to avoid card-edge clipping", stylesSource.includes(".diagnosis__tags .tag-with-help::after") && stylesSource.includes("top: calc(100% + 8px)") && !/\.diagnosis\s*\{[^}]*overflow:\s*hidden/.test(stylesSource));
 assert("Selected comparison cards carry screen-size and category tags", appSource.includes("picker-v3__selected-tags") && appSource.includes("selectedTags.map"));
+assert("Visible tag keys disambiguate duplicate labels like dome", (appSource.match(/key=\{`\$\{tag\.text\}-\$\{tag\.tooltip \|\| ""\}`\}/g) || []).length >= 3);
 assert("Selected comparison cards show both projectors for hybrid venues", appSource.includes("venue.filmProjection && <span className=\"meta-chip meta-chip--proj\">"));
 assert("Screen-scale legend carries simple screen-size and category tags", appSource.includes("comparisonLegendLabel") && !appSource.includes("A · {venueA.tag}") && !appSource.includes("B · {venueB.tag}"));
 assert("Diagnosis breakdown exposes screen-size and category tags", appSource.includes("diagnosis__tags") && appSource.includes("sizeLabel") && appSource.includes("tierLabel"));

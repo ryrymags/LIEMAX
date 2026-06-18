@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMAX POV Simulator</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --panel: #121519;
+    --panel-2: #171b20;
+    --line: #232a31;
+    --amber: #e0a23a;
+    --cyan: #4fd0e0;
+    --text: #d8dee4;
+    --muted: #8a949d;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: var(--mono);
+    min-height: 100vh; padding: 24px 16px; -webkit-font-smoothing: antialiased;
+  }
+  .shell { width: 100%; max-width: 1180px; margin: 0 auto; }
+  .titlebar {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+  }
+  .titlebar h1 {
+    font-size: 15px; font-weight: 500; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--amber);
+  }
+  .titlebar .sub { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+
+  .stage {
+    display: grid; grid-template-columns: 1fr; gap: 18px;
+  }
+  .stage.compare { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 760px){ .stage.compare { grid-template-columns: 1fr; } }
+
+  .panel-unit {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px; display: flex; flex-direction: column;
+  }
+  .unit-label {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+  }
+  .unit-label .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+  .unit-label .dot.b { background: var(--cyan); }
+  .unit-label input {
+    flex: 1; background: var(--panel-2); border: 1px solid var(--line);
+    border-radius: 5px; color: var(--text); font-family: var(--mono);
+    font-size: 12px; padding: 6px 9px; outline: none;
+  }
+  .unit-label input:focus { border-color: var(--cyan); }
+
+  .viewport {
+    position: relative; width: 100%; aspect-ratio: 16 / 10;
+    border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+    background: #0c0f15;
+  }
+  .viewport canvas { display: block; width: 100%; height: 100%; }
+
+  .hud {
+    position: absolute; top: 10px; left: 10px;
+    padding: 9px 11px; border-radius: 6px;
+    background: rgba(7,10,14,0.76); border: 1px solid var(--line);
+    font-size: 11px; line-height: 1.7; letter-spacing: 0.3px;
+    pointer-events: none; color: var(--text);
+  }
+  .hud .r { display: flex; gap: 6px; }
+  .hud .k { color: var(--muted); }
+  .hud .v { color: var(--cyan); }
+
+  .hint {
+    position: absolute; bottom: 9px; right: 11px;
+    font-size: 10px; color: rgba(255,255,255,0.4);
+    letter-spacing: 1px; pointer-events: none;
+  }
+  .warn {
+    position: absolute; bottom: 9px; left: 11px;
+    font-size: 10px; letter-spacing: 0.5px; pointer-events: none;
+    color: var(--amber); opacity: 0; transition: opacity 0.3s;
+  }
+  .warn.show { opacity: 0.92; }
+  .vp-fs {
+    position: absolute; top: 10px; right: 10px;
+    width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+    background: rgba(7,10,14,0.76); border: 1px solid var(--line); border-radius: 6px;
+    cursor: pointer; color: var(--text); font-size: 15px; line-height: 1;
+  }
+  .vp-fs:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  .controls {
+    margin-top: 12px; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;
+  }
+  .ctrl label {
+    display: block; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 7px;
+  }
+  .ctrl label .num { color: var(--text); font-weight: 500; }
+  input[type=range] {
+    width: 100%; -webkit-appearance: none; appearance: none;
+    height: 3px; background: var(--line); border-radius: 2px; outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 14px; height: 14px;
+    border-radius: 50%; background: var(--amber); cursor: pointer; border: 2px solid var(--bg);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--amber); cursor: pointer; border: 2px solid var(--bg);
+  }
+  select {
+    width: 100%; background: var(--panel-2); color: var(--text);
+    border: 1px solid var(--line); border-radius: 5px; padding: 7px 9px;
+    font-family: var(--mono); font-size: 11.5px; cursor: pointer; outline: none;
+  }
+  select:focus { border-color: var(--cyan); }
+
+  .unit-buttons { margin-top: 12px; display: flex; gap: 7px; flex-wrap: wrap; }
+  button.btn {
+    background: var(--panel-2); color: var(--text);
+    border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 13px; font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.5px; cursor: pointer; transition: border-color 0.15s, color 0.15s;
+  }
+  button.btn:hover { border-color: var(--cyan); color: var(--cyan); }
+  button.btn:active { transform: scale(0.98); }
+  button.btn.on { border-color: var(--amber); color: var(--amber); }
+
+  .topbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+
+  .footnote {
+    margin-top: 18px; font-size: 10.5px; line-height: 1.7;
+    color: var(--muted); letter-spacing: 0.3px; max-width: 920px;
+  }
+  .footnote b { color: var(--text); font-weight: 500; }
+
+  /* Fullscreen overlay */
+  .fs-overlay {
+    position: fixed; inset: 0; z-index: 50; background: var(--bg);
+    display: none; flex-direction: column; padding: 0;
+  }
+  .fs-overlay.show { display: flex; }
+  .fs-overlay .viewport {
+    flex: 1; width: 100%; height: 100%; aspect-ratio: auto;
+    border: none; border-radius: 0;
+  }
+  .fs-close {
+    position: absolute; top: 16px; right: 16px; z-index: 51;
+    background: rgba(7,10,14,0.8); border: 1px solid var(--line); border-radius: 6px;
+    color: var(--text); font-family: var(--mono); font-size: 12px; letter-spacing: 1px;
+    padding: 9px 14px; cursor: pointer;
+  }
+  .fs-close:hover { border-color: var(--cyan); color: var(--cyan); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="titlebar">
+    <h1>IMAX&nbsp;&middot;&nbsp;POV Simulator</h1>
+    <span class="sub">drag the screen to look around</span>
+  </div>
+
+  <div class="topbar">
+    <button class="btn" id="compareBtn">compare two theaters</button>
+  </div>
+
+  <div class="stage" id="stage"></div>
+
+  <p class="footnote">
+    <b>Reading the model.</b> Camera FOV is held constant across configurations, so the screen's real size and
+    your distance determine how much of the frame it fills &mdash; relative scale is accurate, absolute degrees
+    on your monitor are not. The lit footprint is sized off the physical screen first, then the native 1.43:1
+    frame is cropped (never stretched) to fill it; black bars are unlit screen, the lighter gray is the
+    auditorium itself. Per IMAX classic-design geometry, all seating sits within roughly one screen height of
+    the screen, which reaches near floor level. The amber block at the screen base is a simple average-height
+    (5 ft 9 in) scale reference, not an anatomical figure, toggle it on or off per view. Riser height per row is
+    held constant as a simplification.
+  </p>
+</div>
+
+<div class="fs-overlay" id="fsOverlay">
+  <button class="fs-close" id="fsClose">close &nbsp;esc &times;</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// Sanitized generated neutral reference frame; no embedded film still.
+var SPIDEY_SRC = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1430 1000%22%3E%3Crect width=%221430%22 height=%221000%22 fill=%22%2311161d%22/%3E%3Crect x=%2260%22 y=%2260%22 width=%221310%22 height=%22880%22 fill=%22%231d2733%22 stroke=%22%23d8dee4%22 stroke-width=%2212%22/%3E%3Cpath d=%22M60 500H1370M715 60V940%22 stroke=%22%23e0a23a%22 stroke-width=%226%22 opacity=%22.75%22/%3E%3Ctext x=%22715%22 y=%22480%22 font-family=%22monospace%22 font-size=%2272%22 text-anchor=%22middle%22 fill=%22%23d8dee4%22%3E1.43 reference frame%3C/text%3E%3Ctext x=%22715%22 y=%22580%22 font-family=%22monospace%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%238a949d%22%3Egenerated neutral texture%3C/text%3E%3C/svg%3E';
+
+(function(){
+  var FORMATS = [
+    {v: '1.43', t: '1.43:1 \u00b7 full IMAX frame'},
+    {v: '1.90', t: '1.90:1 \u00b7 digital IMAX'},
+    {v: '1.85', t: '1.85:1 \u00b7 flat'},
+    {v: '2.39', t: '2.39:1 \u00b7 scope'}
+  ];
+  var SEATING = {
+    stadium:  {rowDepth: 4.0, riser: 2.13, minF: 0.6, maxF: 1.05, label: 'steep IMAX GT stadium (~28\u00b0)'},
+    standard: {rowDepth: 3.8, riser: 1.10, minF: 0.9, maxF: 1.6,  label: 'retrofit stadium slope (~16\u00b0)'}
+  };
+  var IMAGE_AR = 1.43;
+  var EYE_ABOVE_FLOOR = 3.7;
+  var SCREEN_BOTTOM = 2;
+
+  // Shared texture (load once, reuse across instances).
+  var sharedTex = new THREE.Texture();
+  sharedTex.colorSpace = THREE.SRGBColorSpace;
+  sharedTex.minFilter = THREE.LinearFilter;
+  sharedTex.generateMipmaps = false;
+  (function(){
+    var img = new Image();
+    img.onload = function(){ sharedTex.image = img; sharedTex.needsUpdate = true; };
+    img.src = SPIDEY_SRC;
+  })();
+
+  function buildCurvedPlane(W, H, segs, radiusFactor){
+    var geo = new THREE.PlaneGeometry(W, H, segs, 1);
+    if (radiusFactor > 0){
+      var R = W * radiusFactor, pos = geo.attributes.position;
+      for (var i = 0; i < pos.count; i++){
+        var x = pos.getX(i), a = x / R;
+        pos.setX(i, R * Math.sin(a));
+        pos.setZ(i, R * (1 - Math.cos(a)));
+      }
+      pos.needsUpdate = true; geo.computeVertexNormals();
+    }
+    return geo;
+  }
+
+  function fitActive(W, H, AR){
+    var sAR = W / H, aw, ah;
+    if (AR >= sAR){ aw = W; ah = W / AR; } else { ah = H; aw = H * AR; }
+    return {w: aw, h: ah};
+  }
+
+  // Per-instance the texture crop must differ (scope vs flat), so each instance
+  // clones the shared texture's image into its own Texture wrapper.
+  function makeInstanceTexture(){
+    var t = new THREE.Texture();
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.minFilter = THREE.LinearFilter;
+    t.generateMipmaps = false;
+    function sync(){ if (sharedTex.image){ t.image = sharedTex.image; t.needsUpdate = true; } }
+    if (sharedTex.image) sync();
+    else {
+      var iv = setInterval(function(){ if (sharedTex.image){ sync(); clearInterval(iv); } }, 60);
+    }
+    return t;
+  }
+
+  function setCoverCrop(tex, AR, srcAR){
+    var u, v;
+    if (AR > srcAR){ u = 1; v = srcAR / AR; } else { v = 1; u = AR / srcAR; }
+    tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
+    tex.repeat.set(u, v);
+    tex.offset.set((1 - u) / 2, (1 - v) / 2);
+    tex.needsUpdate = true;
+  }
+
+  var HUMAN_HEIGHT = 5.75; // ft, average adult height reference
+  function buildHuman(){
+    var mat = new THREE.MeshBasicMaterial({color: 0xe0a23a});
+    var geo = new THREE.BoxGeometry(0.85, HUMAN_HEIGHT, 0.3);
+    geo.translate(0, HUMAN_HEIGHT/2, 0); // base sits at local y=0, so placement code can treat y=0 as floor level
+    return new THREE.Mesh(geo, mat);
+  }
+
+  function Sim(viewport, hud, warn){
+    var self = this;
+    this.viewport = viewport;
+    this.hud = hud; this.warn = warn;
+    this.showHuman = true;
+    this.params = {W: 72, H: 53, D: 44, AR: 1.43, seating: 'stadium', curve: 1.5};
+    this.offsetYaw = 0; this.offsetPitch = 0; this.basePitch = 0; this.eye = EYE_ABOVE_FLOOR;
+
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    this.renderer = renderer;
+    viewport.appendChild(renderer.domElement);
+
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0c0f15);
+    this.scene = scene;
+    var camera = new THREE.PerspectiveCamera(70, 1.6, 0.1, 4000);
+    this.camera = camera;
+    this.tex = makeInstanceTexture();
+
+    this.meshes = {};
+
+    function size(){
+      var w = viewport.clientWidth, h = viewport.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+    }
+    this.size = size;
+    size();
+    if (window.ResizeObserver) new ResizeObserver(size).observe(viewport);
+
+    // drag look
+    var dragging = false, lx = 0, ly = 0;
+    var cv = renderer.domElement;
+    cv.style.cursor = 'grab'; cv.style.touchAction = 'none';
+    cv.addEventListener('pointerdown', function(e){ dragging = true; lx = e.clientX; ly = e.clientY; cv.style.cursor = 'grabbing'; });
+    window.addEventListener('pointerup', function(){ dragging = false; cv.style.cursor = 'grab'; });
+    cv.addEventListener('pointermove', function(e){
+      if (!dragging) return;
+      self.offsetYaw   -= (e.clientX - lx) * 0.004;
+      self.offsetPitch += (e.clientY - ly) * 0.004;
+      lx = e.clientX; ly = e.clientY;
+      var lim = 0.95;
+      self.offsetYaw = Math.max(-lim, Math.min(lim, self.offsetYaw));
+      self.offsetPitch = Math.max(-lim, Math.min(lim, self.offsetPitch));
+      self.applyCamera();
+    });
+
+    this.rebuild(); this.applyCamera();
+    (function loop(){ requestAnimationFrame(loop); renderer.render(scene, camera); })();
+  }
+
+  Sim.prototype.floorHeightAt = function(dist, DMIN, preset){
+    if (dist <= DMIN) return 0;
+    return Math.floor((dist - DMIN) / preset.rowDepth) * preset.riser;
+  };
+
+  Sim.prototype.dispose = function(key){
+    var o = this.meshes[key];
+    if (!o) return;
+    this.scene.remove(o);
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) o.material.dispose();
+    if (o.children) o.children.forEach(function(c){ if (c.geometry) c.geometry.dispose(); });
+    this.meshes[key] = null;
+  };
+
+  Sim.prototype.distBounds = function(){
+    var preset = SEATING[this.params.seating];
+    var H = this.params.H;
+    return {lo: Math.round(preset.minF * H * 2) / 2, hi: Math.round(preset.maxF * H * 2) / 2};
+  };
+
+  Sim.prototype.rebuild = function(){
+    var p = this.params, scene = this.scene;
+    var preset = SEATING[p.seating];
+    var b = this.distBounds();
+    if (p.D < b.lo) p.D = b.lo;
+    if (p.D > b.hi) p.D = b.hi;
+    var DMIN = b.lo;
+    var screenCenterY = SCREEN_BOTTOM + p.H/2;
+    var rf = p.curve;
+
+    // auditorium shell: lighter-than-black so the black screen bars stand out
+    this.dispose('floor');
+    var halfW = 24, zFront = -p.D - 10, zBack = 26, steps = 120;
+    var pos = [], idx = [];
+    for (var j = 0; j <= steps; j++){
+      var z = zFront + (j/steps)*(zBack - zFront);
+      var y = this.floorHeightAt(z + p.D, DMIN, preset);
+      pos.push(-halfW, y, z, halfW, y, z);
+    }
+    for (var k = 0; k < steps; k++){
+      var a = k*2, bb = k*2+1, c = (k+1)*2, d = (k+1)*2+1;
+      idx.push(a, c, bb, bb, c, d);
+    }
+    var fg = new THREE.BufferGeometry();
+    fg.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    fg.setIndex(idx); fg.computeVertexNormals();
+    var floor = new THREE.Mesh(fg, new THREE.MeshBasicMaterial({color: 0x0c0f15, side: THREE.DoubleSide}));
+    scene.add(floor); this.meshes.floor = floor;
+
+    // screen frame (full physical screen) -- subtle, since the black mask covers it
+    this.dispose('screen');
+    var screen = new THREE.Mesh(
+      buildCurvedPlane(p.W, p.H, 64, rf),
+      new THREE.MeshBasicMaterial({color: 0x2a3038, side: THREE.DoubleSide})
+    );
+    screen.position.set(0, screenCenterY, -p.D);
+    scene.add(screen); this.meshes.screen = screen;
+
+    // BLACK mask over full screen: unlit area reads pure black (distinct from gray room)
+    this.dispose('mask');
+    var mask = new THREE.Mesh(
+      buildCurvedPlane(p.W, p.H, 64, rf),
+      new THREE.MeshBasicMaterial({color: 0x000000, side: THREE.DoubleSide})
+    );
+    mask.position.set(0, screenCenterY, -p.D + 0.05);
+    scene.add(mask); this.meshes.mask = mask;
+
+    // lit footprint + cropped image
+    var fit = fitActive(p.W, p.H, p.AR);
+    this.dispose('active');
+    var active = new THREE.Mesh(
+      buildCurvedPlane(fit.w, fit.h, 64, rf),
+      new THREE.MeshBasicMaterial({map: this.tex, side: THREE.DoubleSide})
+    );
+    active.position.set(0, screenCenterY, -p.D + 0.10);
+    scene.add(active); this.meshes.active = active;
+    setCoverCrop(this.tex, p.AR, IMAGE_AR);
+
+    // seat rows ahead of camera
+    this.dispose('seatA'); this.dispose('seatB');
+    var d1 = Math.max(0, p.D - preset.rowDepth), d2 = Math.max(0, p.D - 2*preset.rowDepth);
+    this.meshes.seatA = this.seatRow(-(p.D - d1), this.floorHeightAt(d1, DMIN, preset)); scene.add(this.meshes.seatA);
+    this.meshes.seatB = this.seatRow(-(p.D - d2), this.floorHeightAt(d2, DMIN, preset)); scene.add(this.meshes.seatB);
+
+    // human for scale
+    this.dispose('human');
+    if (this.showHuman){
+      var human = buildHuman();
+      human.position.set(p.W * 0.34, 0, -p.D + 1.4);
+      scene.add(human); this.meshes.human = human;
+    }
+
+    this.eye = this.floorHeightAt(p.D, DMIN, preset) + EYE_ABOVE_FLOOR;
+    this.basePitch = Math.atan2(screenCenterY - this.eye, p.D);
+
+    // HUD
+    var hFOV = 2*Math.atan((p.W/2)/p.D)*180/Math.PI;
+    var vFOV = 2*Math.atan((p.H/2)/p.D)*180/Math.PI;
+    if (this.hud){
+      this.hud.innerHTML =
+        '<div class="r"><span class="k">screen</span><span class="v">'+p.W+' \u00d7 '+p.H+' ft</span></div>' +
+        '<div class="r"><span class="k">seat</span><span class="v">'+p.D+' ft from screen</span></div>' +
+        '<div class="r"><span class="k">eye height</span><span class="v">'+this.eye.toFixed(1)+' ft</span></div>' +
+        '<div class="r"><span class="k">h-fov</span><span class="v">'+hFOV.toFixed(0)+'\u00b0</span>' +
+        '<span class="k">v-fov</span><span class="v">'+vFOV.toFixed(0)+'\u00b0</span></div>' +
+        '<div class="r"><span class="k">lit area</span><span class="v">'+fit.w.toFixed(0)+' \u00d7 '+fit.h.toFixed(0)+' ft</span></div>';
+    }
+    if (this.warn && this.warn.classList) this.warn.classList.toggle('show', hFOV < 53);
+  };
+
+  Sim.prototype.seatRow = function(z, floorY){
+    var g = new THREE.Group();
+    var sw = 2.4, sh = 2.5, sd = 1.3, gap = 0.45, n = 11, total = n*(sw+gap);
+    var mat = new THREE.MeshBasicMaterial({color: 0x0d1217});
+    for (var i = 0; i < n; i++){
+      var m = new THREE.Mesh(new THREE.BoxGeometry(sw, sh, sd), mat);
+      m.position.set(-total/2 + i*(sw+gap) + sw/2, floorY + sh/2, z);
+      g.add(m);
+    }
+    return g;
+  };
+
+  Sim.prototype.applyCamera = function(){
+    var cam = this.camera;
+    cam.position.set(0, this.eye, 0);
+    var pitch = this.basePitch + this.offsetPitch, yaw = this.offsetYaw;
+    var dir = new THREE.Vector3(
+      Math.sin(yaw)*Math.cos(pitch), Math.sin(pitch), -Math.cos(yaw)*Math.cos(pitch)
+    );
+    cam.lookAt(cam.position.x+dir.x, cam.position.y+dir.y, cam.position.z+dir.z);
+  };
+
+  // ---- UI assembly ----
+  function buildUnit(side){
+    var unit = document.createElement('div');
+    unit.className = 'panel-unit';
+    unit.innerHTML =
+      '<div class="unit-label"><span class="dot '+(side==='b'?'b':'')+'"></span>' +
+        '<input type="text" value="'+ (side==='b'?'Theater B':'Theater A') +'" spellcheck="false"></div>' +
+      '<div class="viewport"><div class="hud"></div>' +
+        '<div class="warn">below 53\u00b0 immersion floor</div>' +
+        '<div class="hint">click + drag</div>' +
+        '<div class="vp-fs" title="fullscreen">\u26F6</div></div>' +
+      '<div class="controls">' +
+        ctrlSlider('w','screen width','ft',40,100,72) +
+        ctrlSlider('h','screen height','ft',22,100,53) +
+        ctrlSlider('d','seat distance','ft',32,56,44) +
+        ctrlSelect('ar','projected format', FORMATS.map(function(f){return {v:f.v,t:f.t};}), '1.43') +
+        ctrlSelect('seat','seating style', Object.keys(SEATING).map(function(kk){return {v:kk,t:SEATING[kk].label};}), 'stadium') +
+        ctrlSelect('curve','screen curve', [{v:'1.5',t:'GT curve (1.5\u00d7 width)'},{v:'0',t:'flat'}], '1.5') +
+      '</div>' +
+      '<div class="unit-buttons">' +
+        '<button class="btn" data-act="front">front row</button>' +
+        '<button class="btn" data-act="mid">middle row</button>' +
+        '<button class="btn" data-act="back">back row</button>' +
+        '<button class="btn on" data-act="human">human scale: on</button>' +
+        '<button class="btn" data-act="reset">reset look</button>' +
+      '</div>';
+
+    var vp = unit.querySelector('.viewport');
+    var hud = unit.querySelector('.hud');
+    var warn = unit.querySelector('.warn');
+    var sim = new Sim(vp, hud, warn);
+
+    function q(n){ return unit.querySelector('[data-c="'+n+'"]'); }
+    function syncDistBounds(){
+      var b = sim.distBounds();
+      var ds = q('d');
+      ds.min = b.lo; ds.max = b.hi;
+      if (+ds.value < b.lo) ds.value = b.lo;
+      if (+ds.value > b.hi) ds.value = b.hi;
+      ds.parentNode.querySelector('.num').textContent = ds.value;
+    }
+    // center the opening seat
+    (function(){ var b = sim.distBounds(); var mid = Math.round((b.lo+b.hi)/2*2)/2; q('d').value = mid; sim.params.D = mid; })();
+    syncDistBounds();
+    sim.rebuild(); sim.applyCamera();
+
+    q('w').addEventListener('input', function(){ sim.params.W = +this.value; this.parentNode.querySelector('.num').textContent = this.value; sim.rebuild(); sim.applyCamera(); });
+    q('h').addEventListener('input', function(){ sim.params.H = +this.value; this.parentNode.querySelector('.num').textContent = this.value; syncDistBounds(); sim.params.D = +q('d').value; sim.rebuild(); sim.applyCamera(); });
+    q('d').addEventListener('input', function(){ sim.params.D = +this.value; this.parentNode.querySelector('.num').textContent = this.value; sim.rebuild(); sim.applyCamera(); });
+    q('ar').addEventListener('change', function(){ sim.params.AR = +this.value; sim.rebuild(); });
+    q('seat').addEventListener('change', function(){ sim.params.seating = this.value; syncDistBounds(); sim.params.D = +q('d').value; sim.rebuild(); sim.applyCamera(); });
+    q('curve').addEventListener('change', function(){ sim.params.curve = +this.value; sim.rebuild(); });
+
+    unit.querySelectorAll('[data-act]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var act = btn.getAttribute('data-act');
+        if (act === 'front'){ q('d').value = q('d').min; sim.params.D = +q('d').value; q('d').parentNode.querySelector('.num').textContent = q('d').value; sim.rebuild(); sim.applyCamera(); }
+        else if (act === 'back'){ q('d').value = q('d').max; sim.params.D = +q('d').value; q('d').parentNode.querySelector('.num').textContent = q('d').value; sim.rebuild(); sim.applyCamera(); }
+        else if (act === 'mid'){ var mid = Math.round((+q('d').min + +q('d').max)/2*2)/2; q('d').value = mid; sim.params.D = mid; q('d').parentNode.querySelector('.num').textContent = mid; sim.rebuild(); sim.applyCamera(); }
+        else if (act === 'reset'){ sim.offsetYaw = 0; sim.offsetPitch = 0; sim.applyCamera(); }
+        else if (act === 'human'){ sim.showHuman = !sim.showHuman; btn.classList.toggle('on', sim.showHuman); btn.textContent = 'human scale: ' + (sim.showHuman ? 'on' : 'off'); sim.rebuild(); }
+      });
+    });
+
+    // fullscreen
+    unit.querySelector('.vp-fs').addEventListener('click', function(){ enterFullscreen(sim, vp); });
+
+    unit._sim = sim; unit._vp = vp;
+    return unit;
+  }
+
+  function ctrlSlider(c, label, unit, min, max, val){
+    return '<div class="ctrl"><label>'+label+' <span class="num">'+val+'</span> '+unit+'</label>' +
+      '<input type="range" data-c="'+c+'" min="'+min+'" max="'+max+'" value="'+val+'" step="'+(c==='d'?'0.5':'1')+'"></div>';
+  }
+  function ctrlSelect(c, label, opts, sel){
+    var o = opts.map(function(x){ return '<option value="'+x.v+'"'+(x.v===sel?' selected':'')+'>'+x.t+'</option>'; }).join('');
+    return '<div class="ctrl"><label>'+label+'</label><select data-c="'+c+'">'+o+'</select></div>';
+  }
+
+  // ---- fullscreen overlay ----
+  var fsOverlay = document.getElementById('fsOverlay');
+  var fsClose = document.getElementById('fsClose');
+  var fsActive = null, fsHomeVp = null;
+
+  function enterFullscreen(sim, homeVp){
+    var fsVp = homeVp.cloneNode(false);  // placeholder div with same class
+    fsVp.className = 'viewport';
+    // move renderer canvas + overlays into a fresh viewport in the overlay
+    var hud = document.createElement('div'); hud.className = 'hud';
+    var warn = document.createElement('div'); warn.className = 'warn'; warn.textContent = 'below 53\u00b0 immersion floor';
+    var hint = document.createElement('div'); hint.className = 'hint'; hint.textContent = 'click + drag \u00b7 esc to exit';
+    fsVp.appendChild(sim.renderer.domElement);
+    fsVp.appendChild(hud); fsVp.appendChild(warn); fsVp.appendChild(hint);
+    fsOverlay.appendChild(fsVp);
+    fsOverlay.classList.add('show');
+    // rewire sim hud/warn targets
+    sim._hudHome = sim.hud; sim._warnHome = warn;
+    sim.hud = hud; sim.warn = warn;
+    fsActive = sim; fsHomeVp = homeVp; fsActiveVp = fsVp;
+    sim.size(); sim.rebuild(); sim.applyCamera();
+    if (fsOverlay.requestFullscreen) fsOverlay.requestFullscreen().catch(function(){});
+  }
+  var fsActiveVp = null;
+  function exitFullscreen(){
+    if (!fsActive) return;
+    var sim = fsActive;
+    fsHomeVp.insertBefore(sim.renderer.domElement, fsHomeVp.firstChild);
+    sim.hud = fsHomeVp.querySelector('.hud');
+    sim.warn = fsHomeVp.querySelector('.warn');
+    if (fsActiveVp && fsActiveVp.parentNode) fsActiveVp.parentNode.removeChild(fsActiveVp);
+    fsOverlay.classList.remove('show');
+    sim.size(); sim.rebuild(); sim.applyCamera();
+    fsActive = null; fsActiveVp = null; fsHomeVp = null;
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function(){});
+  }
+  fsClose.addEventListener('click', exitFullscreen);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && fsActive) exitFullscreen(); });
+  document.addEventListener('fullscreenchange', function(){ if (!document.fullscreenElement && fsActive) exitFullscreen(); });
+
+  // ---- stage assembly ----
+  var stage = document.getElementById('stage');
+  var unitA = buildUnit('a');
+  stage.appendChild(unitA);
+  var unitB = null;
+
+  document.getElementById('compareBtn').addEventListener('click', function(){
+    if (!unitB){
+      unitB = buildUnit('b');
+      stage.appendChild(unitB);
+      stage.classList.add('compare');
+      this.textContent = 'close comparison';
+      this.classList.add('on');
+      setTimeout(function(){ unitA._sim.size(); unitB._sim.size(); }, 30);
+    } else {
+      stage.removeChild(unitB); unitB = null;
+      stage.classList.remove('compare');
+      this.textContent = 'compare two theaters';
+      this.classList.remove('on');
+      setTimeout(function(){ unitA._sim.size(); }, 30);
+    }
+  });
+})();
+</script>
+</body>
+</html>

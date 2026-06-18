@@ -6,7 +6,7 @@
 - GREEN `src/math/`: 133/133 tests pass. Resolver handles dome, hybrid, ScreenX, masking, and FOV correctly. No edge case gaps that block Step 4.
 - GREEN `schema/`: v1.5.0 source of truth. Supports all required projector types, projection-mode arrays, dome geometry, sparse 143190 imports, LFExaminer archival source rows, screen width confidence, home displays, and `r_imax_csv`/`lfexaminer` source quality. Multi-wall ScreenX geometry and structured renovation status remain additive future work.
 - GREEN `src/data/`: All Step 3 JSON records pass schema validation. 12 format presets (added cinemark_xd). imax_cola/xenon contrast/brightness sources upgraded to published_cto; Dolby single-laser updated to Christie Eclipse specs. Validation suite covers Mugar dome-laser/no-film invariants, 1.43 digital guardrails, ScreenX capability preservation, promoted docs 143190 rows, LFExaminer U.S. IMAX D/1570+D rows, and frontend comparison/home records.
-- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01), Priority 1 education-first overhaul complete, Phase 4a canonical data unification complete, Priority 2 LFExaminer Xenon supplement added, and pre-GUI LIEMAX/IMAX Lite taxonomy fixed. Search page now explains why LIEMAX exists for novice users, randomizes curated examples across regions/categories, shows national and explicit state-selected stats from generated DB tokens, then flows into DiagnosisCard (noir panel, category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, mode breakdown, immediate scale visualization) and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from canonical `src/data`/`src/docs` sources; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. Dome diagnoses distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm`, rank Dome above Hybrid/LIEMAX, and draw dome screens as scaled circular cross-sections rather than flat rectangles. Docs validation is 83/83 and full CI passes.
+- GREEN `docs/`: Step 4 diagnosis-first homepage shipped (2026-05-01), Priority 1 education-first overhaul complete, Phase 4a canonical data unification complete, Priority 2 LFExaminer Xenon supplement added, and pre-GUI LIEMAX/IMAX Lite taxonomy fixed. Search page now explains why LIEMAX exists for novice users, randomizes curated examples across regions/categories, shows national and explicit state-selected stats from generated DB tokens, then flows into DiagnosisCard (noir panel, category badge/spec strip/source confidence/seat geometry/aspect-ratio penalty, mode breakdown, immediate scale visualization) and optional comparison workbench accordion. `docs/data.js` and `docs/workbench.js` are generated from canonical `src/data`/`src/docs` sources; `window.LIEMAX_DATA` remains stable and `window.LIEMAX_WORKBENCH` owns comparison helpers. Dome diagnoses distinguish `IMAX Laser for Dome` from `IMAX GT Dome 15/70mm`, rank Dome above Hybrid/LIEMAX, and draw dome screens as scaled circular cross-sections rather than flat rectangles. Step 6 now has an archived rough 3D POV prototype and a first flat/curved venue-bound `docs/pov.js` production module in the advanced comparison workbench; dome 3D stays WIP. The POV module now uses a local user-supplied 1.43:1 WebP test image and validates 1.90/1.43 projection-window placement. Docs validation is 141/141 and full CI passes.
 - GREEN `research/`: Home Theater Research preset ID table corrected to match canonical AGENTS.md filenames; Batch 2 workbench audit addendum added to Master/Dome research.
 - GREEN repo root/docs: README and `CLAUDE.md` are good entry points.
 
@@ -54,7 +54,8 @@
 
 - At website launch, enable the commented daily cron schedule in `.github/workflows/dolby-cinema-count.yml` so `db.dolby_cinema_us_count` stays fresh automatically.
 - Add screened community correction workflow with source links and review status.
-- Build the Step 6 Three.js simulation after Step 4 is stable, starting with one generic IMAX layout and front/mid/back/optimal seats.
+- DONE first seed: archive the rough Step 6 Three.js POV prototype and integrate a flat/curved, venue-bound `docs/pov.js` module after the 2D comparison stage.
+- Continue Step 6 after Step 4 is stable: broaden the Three.js simulation beyond the first venue-bound flat/curved pass, add better optimal-seat modeling, and keep dome rendering separate until fisheye/hemisphere mapping is designed.
 - Treat Blender/real-scale renders as later support material, not a Step 4 blocker.
 
 ## Known Low-Confidence Data Items (do not block Step 4)
@@ -128,10 +129,12 @@ Add a lightweight contribution path after the static comparison app exists:
 
 Use Three.js for the advanced simulation phase:
 
-- start with one generic IMAX layout
+- current first pass: `docs/pov.js` renders flat/curved venue-bound IMAX comparisons from generated docs data, with the rough prototype archived under `docs/archive/prototypes/`
+- current reference media: a standalone local 1.43:1 WebP test image lives under `docs/assets/pov/` for projection-placement verification; replace/remove it before public redistribution unless licensing is cleared
+- keep `imax-3d-pov-simulator.prototype.html` archive-only; harvest behavior and ideas from it, not production code
 - support front, middle, back, and optimal seats
-- render flat screens, dome screens, and future premium formats separately
+- render flat screens, dome screens, and future premium formats separately; dome 3D is WIP until fisheye/hemisphere mapping exists
 - show aspect-ratio changes on the virtual screen
 - include human-scale reference near the screen base
 
-Do not begin this phase before presets and the website foundation are in place.
+Do not broaden this phase beyond the first flat/curved module until the website foundation is stable and validated.

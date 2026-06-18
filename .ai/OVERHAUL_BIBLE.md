@@ -97,6 +97,7 @@ The scroll order is:
   - `{{db.total_us_imax}} IMAX locations in the US`
   - `{{db.not_full_143_digital_count}} ({{db.not_full_143_digital_pct}}%) are not full-height 1.43 digital`
   - `Only {{db.gt_laser_count}} show the full image at every digital showtime`
+  - `{{db.commercial_full_143_projection_capable_count}}` current r-imax U.S. venues both show movies and have a flat 1.43 screen plus at least one 1.43 projection path; `{{db.full_143_projection_capable_count}}` is the raw current r-imax capability count before excluding non-commercial rows.
   - *Note on the GT Laser count: this refers specifically to venues where the 1.43:1 presentation is unconditional — every digital showtime, every film. The `{{db.film_conditional_count}}` 15/70-capable venues are a separate category because their True IMAX status is conditional on a physical film print being booked for that specific showtime.*
 - **One-line purpose statement:** *"Search your theater. Find out what you're actually paying for."*
 - **Search bar:** The only interactive element. Centered, prominent, unmistakable. Placeholder: *"Search your theater or city…"*
@@ -427,7 +428,11 @@ Sitewide. Every jargon term, on **first use only** across the entire page, gets 
 
 All stats on the splash derive from the site's own database engine:
 - `{{db.total_us_imax}}` total US IMAX rows
+- `{{db.current_r_imax_count}}` current 143190 / r-imax U.S. rows
+- `{{db.lfexaminer_supplemental_count}}` archival LFExaminer Xenon supplement rows
 - `{{db.not_full_143_digital_count}}` (`{{db.not_full_143_digital_pct}}%`) not full-height 1.43 digital
+- `{{db.commercial_full_143_projection_capable_count}}` current r-imax U.S. movie-showing venues with a flat 1.43 screen and at least one 1.43 projection path
+- `{{db.full_143_projection_capable_count}}` raw current r-imax U.S. venues with a flat 1.43 screen and at least one 1.43 projection path, before excluding non-commercial rows
 - `{{db.imax_lite_count}}` IMAX Lite rows (CoLa / Laser XT)
 - `{{db.liemax_count}}` LIEMAX rows (Dual Xenon), including `{{db.liemax_lfexaminer_count}}` archival LFExaminer rows
 - `{{db.gt_laser_count}}` True IMAX unconditional (GT Laser, every showtime)

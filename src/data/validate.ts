@@ -745,7 +745,7 @@ const docsRowIds = docsRows.map((row) => `imax_us_${String(row[0]).toLowerCase()
   .replace(/[^a-z0-9]+/g, '_')
   .replace(/^_+|_+$/g, '')}`);
 
-assertEqual('promoted docs 143190 row count', docsRows.length, 133);
+assertEqual('promoted docs 143190 row count', docsRows.length, 180);
 assertEqual('promoted docs 143190 ids are unique', new Set(docsRowIds).size, docsRows.length);
 assert('LFExaminer Boston Common row is suppressed by 143190 source precedence',
   !lfSupplementalRows.some((row) => row.state === 'MA' && row.city === 'Boston' && row.organization === 'AMC Boston Common 19 & IMAX'));
@@ -761,9 +761,9 @@ assert('LFExaminer renamed current-source duplicates are suppressed by matching 
   ].every(([state, city, organization]) =>
     !lfSupplementalRows.some((row) => row.state === state && row.city === city && row.organization === organization)
   ));
-assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 66);
-assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 254);
-assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 246);
+assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 89);
+assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 231);
+assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 224);
 
 const docsImported = docsRows.map((row) => map143190RowToVenue({
   region: 'United States',

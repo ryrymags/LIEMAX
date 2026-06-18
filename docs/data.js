@@ -11,6 +11,7 @@ window.LIEMAX_DATA = {
       "state": "RI",
       "stateName": "Rhode Island",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Providence, RI · 1.43 screen · CoLa digital + 15/70 Film",
       "tag": "IMAX 1.43",
       "blurb": "Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.",
@@ -22,6 +23,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": null,
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -142,6 +145,7 @@ window.LIEMAX_DATA = {
       "state": "Format presets",
       "stateName": "Format presets",
       "isPreset": true,
+      "dataSource": "frontend_comparison_record",
       "sub": "Format preset · true 1.43 · dual 4K pixel-offset",
       "tag": "IMAX GT",
       "blurb": "Dual-projector pixel-offset supersampling on a purpose-built 1.43:1 screen. ~42 commercial venues globally. The only IMAX format that shows 1.43 digitally without film.",
@@ -153,6 +157,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -254,6 +260,7 @@ window.LIEMAX_DATA = {
       "state": "Format presets",
       "stateName": "Format presets",
       "isPreset": true,
+      "dataSource": "frontend_comparison_record",
       "sub": "2.39 · dual 4K laser · Dolby Vision",
       "tag": "Dolby Cinema",
       "blurb": "Dual 4K laser with Dolby Vision — the deepest sequential blacks of any commercial cinema format. Narrower frame than IMAX; wins on contrast and HDR, not size. Current U.S. count is generated from the saved Dolby finder snapshot.",
@@ -265,6 +272,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -358,6 +367,7 @@ window.LIEMAX_DATA = {
       "state": "Format presets",
       "stateName": "Format presets",
       "isPreset": true,
+      "dataSource": "frontend_comparison_record",
       "sub": "2.39 · single 4K laser · Dolby Vision 20M:1 dynamic",
       "tag": "Dolby Cinema",
       "blurb": "New-build Dolby Cinema system rolling out from May 2025 onward. Uses Christie Eclipse single-laser projection with the same Dolby Vision workflow and a much higher dynamic-contrast ceiling.",
@@ -369,6 +379,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -462,6 +474,7 @@ window.LIEMAX_DATA = {
       "state": "Format presets",
       "stateName": "Format presets",
       "isPreset": true,
+      "dataSource": "frontend_comparison_record",
       "sub": "1.90 · Barco 4K laser · Auro 11.1",
       "tag": "Cinemark XD",
       "blurb": "Cinemark's large-format auditorium: about 70 ft corner-to-corner on a 1.90:1 screen, Barco 4K projection, and Auro 11.1/AuroMax audio. Scope films letterbox; there is no expanded IMAX-format content.",
@@ -473,6 +486,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -575,6 +590,7 @@ window.LIEMAX_DATA = {
       "state": "Format presets",
       "stateName": "Format presets",
       "isPreset": true,
+      "dataSource": "frontend_comparison_record",
       "sub": "Mainstream 4K digital auditorium",
       "tag": "Standard",
       "blurb": "The baseline — DCI 4K at 14 fL with 2,000:1 contrast. Everything premium is measured against this.",
@@ -586,6 +602,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -679,6 +697,7 @@ window.LIEMAX_DATA = {
       "state": "AL",
       "stateName": "Alabama",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Birmingham · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -690,6 +709,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -764,6 +785,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Grand Canyon · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -775,6 +797,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -876,6 +900,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Phoenix · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -887,6 +912,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -971,6 +998,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_az_phoenix_amc_dine_in_desert_ridge_18_and_imax",
+      "canonicalId": "imax_us_az_phoenix_amc_dine_in_desert_ridge_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC DINE-IN Desert Ridge 18 & IMAX",
+      "city": "Phoenix",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Phoenix · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_az_tempe_harkins_arizona_mills_25_and_imax",
       "canonicalId": "imax_us_az_tempe_harkins_arizona_mills_25_and_imax",
       "kind": "cinema",
@@ -979,6 +1112,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Tempe · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -990,6 +1124,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1110,6 +1246,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Aliso Viejo · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1121,6 +1258,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1213,6 +1352,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Alhambra · 1.90 · IMAX Laser XT",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1224,6 +1364,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1316,6 +1458,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Arcadia · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1327,6 +1470,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1419,6 +1564,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Balboa Park · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -1430,6 +1576,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -1504,6 +1652,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Burbank · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1515,6 +1664,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1599,6 +1750,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_canoga_park_amc_topanga_12_and_imax",
+      "canonicalId": "imax_us_ca_canoga_park_amc_topanga_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC Topanga 12 & IMAX",
+      "city": "Canoga Park",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Canoga Park · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_city_of_industry_amc_puente_20_and_imax",
       "canonicalId": "imax_us_ca_city_of_industry_amc_puente_20_and_imax",
       "kind": "cinema",
@@ -1607,6 +1864,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "City of Industry · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1618,6 +1876,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1702,6 +1962,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_daly_city_cinemark_century_daly_city_20_and_imax",
+      "canonicalId": "imax_us_ca_daly_city_cinemark_century_daly_city_20_and_imax",
+      "kind": "cinema",
+      "name": "Cinemark Century Daly City 20 & IMAX",
+      "city": "Daly City",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Daly City · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_dublin_regal_hacienda_crossings_and_imax",
       "canonicalId": "imax_us_ca_dublin_regal_hacienda_crossings_and_imax",
       "kind": "cinema",
@@ -1710,6 +2076,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Dublin · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1721,6 +2088,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1841,6 +2210,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Emeryville · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1852,6 +2222,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1936,6 +2308,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_fresno_regal_edwards_fresno_and_imax",
+      "canonicalId": "imax_us_ca_fresno_regal_edwards_fresno_and_imax",
+      "kind": "cinema",
+      "name": "Regal Edwards Fresno & IMAX",
+      "city": "Fresno",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Fresno · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_glendale_amc_the_americana_at_brand_18_and_imax",
       "canonicalId": "imax_us_ca_glendale_amc_the_americana_at_brand_18_and_imax",
       "kind": "cinema",
@@ -1944,6 +2422,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Glendale · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -1955,6 +2434,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2047,6 +2528,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Hollywood · 1.90 · IMAX GT Laser + IMAX SR 15/70 mm, (2D Only)(Temporary)",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2058,6 +2540,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2170,6 +2654,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_inglewood_cinepolis_luxury_cinemas_inglewood_and_imax",
+      "canonicalId": "imax_us_ca_inglewood_cinepolis_luxury_cinemas_inglewood_and_imax",
+      "kind": "cinema",
+      "name": "Cinepolis Luxury Cinemas Inglewood & IMAX",
+      "city": "Inglewood",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Inglewood · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_irvine_regal_edwards_irvine_spectrum_and_imax",
       "canonicalId": "imax_us_ca_irvine_regal_edwards_irvine_spectrum_and_imax",
       "kind": "cinema",
@@ -2178,6 +2768,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Irvine · 1.43 · IMAX CoLa + IMAX 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2189,6 +2780,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2309,6 +2902,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Long Beach · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2320,6 +2914,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2412,6 +3008,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Los Angeles · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2423,6 +3020,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2515,6 +3114,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Los Angeles · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2526,6 +3126,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2618,6 +3220,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Los Angeles · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2629,6 +3232,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2722,6 +3327,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_merced_regal_hollywood_merced_and_imax",
+      "canonicalId": "imax_us_ca_merced_regal_hollywood_merced_and_imax",
+      "kind": "cinema",
+      "name": "Regal Hollywood Merced & IMAX",
+      "city": "Merced",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Merced · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_montclair_amc_dine_in_montclair_12_and_imax",
       "canonicalId": "imax_us_ca_montclair_amc_dine_in_montclair_12_and_imax",
       "kind": "cinema",
@@ -2730,6 +3441,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Montclair · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2741,6 +3453,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2833,6 +3547,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "National City · 1.90 · IMAX Laser XT",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2844,6 +3559,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2936,6 +3653,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Newark · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -2947,6 +3665,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3039,6 +3759,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Ontario · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3050,6 +3771,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3170,6 +3893,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Orange · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3181,6 +3905,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3273,6 +3999,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Sacramento · 1.43 · IMAX Digital + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3284,6 +4011,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3404,6 +4133,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "San Diego · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3415,6 +4145,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3507,6 +4239,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "San Diego · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3518,6 +4251,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3610,6 +4345,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "San Francisco · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3621,6 +4357,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3750,6 +4488,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "San Jose · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -3761,6 +4500,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -3827,6 +4568,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
+      "canonicalId": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
+      "kind": "cinema",
+      "name": "AMC Eastridge 15 & IMAX",
+      "city": "San Jose",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "San Jose · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_santa_clara_amc_mercado_20_and_imax",
       "canonicalId": "imax_us_ca_santa_clara_amc_mercado_20_and_imax",
       "kind": "cinema",
@@ -3835,6 +4682,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Santa Clara · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3846,6 +4694,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3938,6 +4788,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Santa Clarita · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -3949,6 +4800,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4041,6 +4894,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "South Gate · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4052,6 +4906,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4144,6 +5000,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Stockton · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4155,6 +5012,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4239,6 +5098,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_sunnyvale_amc_dine_in_sunnyvale_12_and_imax",
+      "canonicalId": "imax_us_ca_sunnyvale_amc_dine_in_sunnyvale_12_and_imax",
+      "kind": "cinema",
+      "name": "AMC DINE-IN Sunnyvale 12 & IMAX",
+      "city": "Sunnyvale",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Sunnyvale · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ca_temecula_regal_edwards_temecula_and_imax",
       "canonicalId": "imax_us_ca_temecula_regal_edwards_temecula_and_imax",
       "kind": "cinema",
@@ -4247,6 +5212,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Temecula · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4258,6 +5224,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4350,6 +5318,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Torrance · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4361,6 +5330,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4453,6 +5424,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Tustin · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4464,6 +5436,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4556,6 +5530,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Universal City · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4567,6 +5542,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4688,6 +5665,218 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ca_yorba_linda_regal_yorba_linda_and_imax",
+      "canonicalId": "imax_us_ca_yorba_linda_regal_yorba_linda_and_imax",
+      "kind": "cinema",
+      "name": "Regal Yorba Linda & IMAX",
+      "city": "Yorba Linda",
+      "state": "CA",
+      "stateName": "California",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Yorba Linda · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
+      "canonicalId": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Flatiron Crossing 14 & IMAX",
+      "city": "Broomfield",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Broomfield · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_co_denver_amc_orchard_12_and_imax",
       "canonicalId": "imax_us_co_denver_amc_orchard_12_and_imax",
       "kind": "cinema",
@@ -4696,6 +5885,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Denver · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4707,6 +5897,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4799,6 +5991,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Denver · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4810,6 +6003,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4902,6 +6097,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Highlands Ranch · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -4913,6 +6109,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4997,6 +6195,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_co_loveland_metrolux_12_and_imax",
+      "canonicalId": "imax_us_co_loveland_metrolux_12_and_imax",
+      "kind": "cinema",
+      "name": "Metrolux 12 & IMAX",
+      "city": "Loveland",
+      "state": "CO",
+      "stateName": "Colorado",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Loveland · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ct_milford_cinemark_connecticut_post_14_and_imax",
       "canonicalId": "imax_us_ct_milford_cinemark_connecticut_post_14_and_imax",
       "kind": "cinema",
@@ -5005,6 +6309,7 @@ window.LIEMAX_DATA = {
       "state": "CT",
       "stateName": "Connecticut",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Milford · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5016,6 +6321,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5108,6 +6415,7 @@ window.LIEMAX_DATA = {
       "state": "DC",
       "stateName": "District of Columbia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Washington · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5119,6 +6427,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5211,6 +6521,7 @@ window.LIEMAX_DATA = {
       "state": "DC",
       "stateName": "District of Columbia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Washington · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5222,6 +6533,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5323,6 +6636,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Altamonte Springs · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5334,6 +6648,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5426,6 +6742,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Aventura · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5437,6 +6754,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5529,6 +6848,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Delray Beach · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5540,6 +6860,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5632,6 +6954,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Fort Lauderdale · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5643,6 +6966,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5772,6 +7097,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Fort Myers · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5783,6 +7109,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5867,6 +7195,218 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_fl_homestead_evo_entertainment_homestead_and_imax",
+      "canonicalId": "imax_us_fl_homestead_evo_entertainment_homestead_and_imax",
+      "kind": "cinema",
+      "name": "EVO Entertainment Homestead & IMAX",
+      "city": "Homestead",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Homestead · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_kennedy_space_center_imax_kennedy_space_center",
+      "canonicalId": "imax_us_fl_kennedy_space_center_imax_kennedy_space_center",
+      "kind": "cinema",
+      "name": "IMAX, Kennedy Space Center",
+      "city": "Kennedy Space Center",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Kennedy Space Center · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": false,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_fl_miami_cmx_dolphin_19_and_imax",
       "canonicalId": "imax_us_fl_miami_cmx_dolphin_19_and_imax",
       "kind": "cinema",
@@ -5875,6 +7415,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Miami · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5886,6 +7427,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5978,6 +7521,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Miami · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -5989,6 +7533,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6073,6 +7619,430 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_fl_naples_regal_naples_and_imax",
+      "canonicalId": "imax_us_fl_naples_regal_naples_and_imax",
+      "kind": "cinema",
+      "name": "Regal Naples & IMAX",
+      "city": "Naples",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Naples · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_oldsmar_amc_woodlands_square_20_and_imax",
+      "canonicalId": "imax_us_fl_oldsmar_amc_woodlands_square_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Woodlands Square 20 & IMAX",
+      "city": "Oldsmar",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Oldsmar · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_orlando_regal_waterford_lakes_and_imax",
+      "canonicalId": "imax_us_fl_orlando_regal_waterford_lakes_and_imax",
+      "kind": "cinema",
+      "name": "Regal Waterford Lakes & IMAX",
+      "city": "Orlando",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Orlando · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_fl_palm_beach_gardens_cmx_downtown_at_the_gardens_16_and_imax",
+      "canonicalId": "imax_us_fl_palm_beach_gardens_cmx_downtown_at_the_gardens_16_and_imax",
+      "kind": "cinema",
+      "name": "CMX Downtown at The Gardens 16 & IMAX",
+      "city": "Palm Beach Gardens",
+      "state": "FL",
+      "stateName": "Florida",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Palm Beach Gardens · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_fl_pembroke_pines_amc_pembroke_lakes_9_and_imax",
       "canonicalId": "imax_us_fl_pembroke_pines_amc_pembroke_lakes_9_and_imax",
       "kind": "cinema",
@@ -6081,6 +8051,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Pembroke Pines · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6092,6 +8063,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6184,6 +8157,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Tampa · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6195,6 +8169,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6287,6 +8263,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Alpharetta · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6298,6 +8275,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6390,6 +8369,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Atlanta · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6401,6 +8381,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6493,6 +8475,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Buford · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6504,6 +8487,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6624,6 +8609,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Kennesaw · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6635,6 +8621,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6727,6 +8715,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Morrow · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6738,6 +8727,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6830,6 +8821,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Pooler · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6841,6 +8833,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6934,6 +8928,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ga_sharpsburg_ncg_peachtree_city_and_imax",
+      "canonicalId": "imax_us_ga_sharpsburg_ncg_peachtree_city_and_imax",
+      "kind": "cinema",
+      "name": "NCG Peachtree City & IMAX",
+      "city": "Sharpsburg",
+      "state": "GA",
+      "stateName": "Georgia",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Sharpsburg · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ia_waukee_the_palms_theatre_and_imax",
       "canonicalId": "imax_us_ia_waukee_the_palms_theatre_and_imax",
       "kind": "cinema",
@@ -6942,6 +9042,7 @@ window.LIEMAX_DATA = {
       "state": "IA",
       "stateName": "Iowa",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Waukee · 1.90 · IMAX GT Laser",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -6953,6 +9054,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7045,6 +9148,7 @@ window.LIEMAX_DATA = {
       "state": "ID",
       "stateName": "Idaho",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Boise · 1.90 · IMAX Laser XT",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7056,6 +9160,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7148,6 +9254,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Chicago · 1.90 · IMAX Laser XT",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7159,6 +9266,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7251,6 +9360,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Chicago · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7262,6 +9372,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7346,6 +9458,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_il_savoy_savoy_16_and_imax",
+      "canonicalId": "imax_us_il_savoy_savoy_16_and_imax",
+      "kind": "cinema",
+      "name": "Savoy 16 & IMAX",
+      "city": "Savoy",
+      "state": "IL",
+      "stateName": "Illinois",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Savoy · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_in_indianapolis_imax_indiana_state_museum",
       "canonicalId": "imax_us_in_indianapolis_imax_indiana_state_museum",
       "kind": "cinema",
@@ -7354,6 +9572,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Indianapolis · 1.43 · IMAX Digital + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7365,6 +9584,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7477,6 +9698,324 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
+      "canonicalId": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Legends 14 & IMAX",
+      "city": "Kansas City",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Kansas City · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_leawood_amc_town_center_20_and_imax",
+      "canonicalId": "imax_us_ks_leawood_amc_town_center_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Town Center 20 & IMAX",
+      "city": "Leawood",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Leawood · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ks_olathe_amc_studio_28_and_imax",
+      "canonicalId": "imax_us_ks_olathe_amc_studio_28_and_imax",
+      "kind": "cinema",
+      "name": "AMC Studio 28 & IMAX",
+      "city": "Olathe",
+      "state": "KS",
+      "stateName": "Kansas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Olathe · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_la_shreveport_the_goodman_imax_dome",
       "canonicalId": "imax_us_la_shreveport_the_goodman_imax_dome",
       "kind": "cinema",
@@ -7485,6 +10024,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Shreveport · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -7496,6 +10036,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -7562,6 +10104,94 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ma_boston_mugar_omni_museum_of_science",
+      "canonicalId": "imax_us_ma_boston_mugar_omni_museum_of_science",
+      "kind": "cinema",
+      "name": "Mugar Omni, Museum of Science",
+      "city": "Boston",
+      "state": "MA",
+      "stateName": "Massachusetts",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Boston · Dome · IMAX Laser for Dome",
+      "tag": "IMAX Dome",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
+      "screen": {
+        "w": 76.115488,
+        "h": 76.115488,
+        "ar": 1,
+        "sizeTier": "dome",
+        "sizeLabel": "Dome",
+        "widthConfidence": "confirmed",
+        "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": 0.83,
+        "domeHFov": 180,
+        "domeVFov": 125
+      },
+      "seat": {
+        "capacity": null,
+        "front": 38.057744,
+        "mid": 38.057744,
+        "back": 38.057744,
+        "source": "community_estimate"
+      },
+      "defaultPresentationAr": 1.43,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_dome_143",
+          "ar": 1.43,
+          "label": "1.43 · IMAX Dome Laser",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Laser for Dome",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
+        "brightness_fl": 14,
+        "brightness_nits_full": null,
+        "nativeContrast": null,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.43,
+        "type": "imax_dome_laser_legacy",
+        "display_name": "IMAX Laser for Dome"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — dome diameter 23.20 m; height normalized from CSV when needed."
+        },
+        "brightness": {
+          "q": "community_estimate",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "unknown",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "community_estimate",
+          "note": "Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics."
+        }
+      }
+    },
+    {
       "id": "imax_us_ma_boston_amc_boston_common_19",
       "canonicalId": "imax_us_ma_boston_amc_boston_common_19",
       "kind": "cinema",
@@ -7570,6 +10200,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Boston · 2.40 · IMAX CoLa",
       "tag": "IMAX 2.40",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7581,6 +10212,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7665,43 +10298,64 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ma_boston_mugar_omni_museum_of_science",
-      "canonicalId": "imax_us_ma_boston_mugar_omni_museum_of_science",
+      "id": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
+      "canonicalId": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
       "kind": "cinema",
-      "name": "Mugar Omni, Museum of Science",
-      "city": "Boston",
+      "name": "AMC Liberty Tree Mall 20 & IMAX",
+      "city": "Danvers",
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
-      "sub": "Boston · Dome · IMAX Laser for Dome",
-      "tag": "IMAX Dome",
-      "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
+      "dataSource": "r_imax_csv",
+      "sub": "Danvers · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 76.115488,
-        "h": 76.115488,
-        "ar": 1,
-        "sizeTier": "dome",
-        "sizeLabel": "Dome",
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
-        "geometry": "hemispherical",
-        "domeCoveragePct": 0.83,
-        "domeHFov": 180,
-        "domeVFov": 125
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 38.057744,
-        "mid": 38.057744,
-        "back": 38.057744,
-        "source": "community_estimate"
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
       },
-      "defaultPresentationAr": 1.43,
+      "defaultPresentationAr": 1.9,
       "isHybrid": false,
       "presentationModes": [
         {
-          "id": "digital_dome_143",
-          "ar": 1.43,
-          "label": "1.43 · IMAX Dome Laser",
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
           "enabled": true,
           "isBookingDependent": false,
           "isFilmMode": false,
@@ -7710,42 +10364,42 @@ window.LIEMAX_DATA = {
       ],
       "projection": {
         "id": "digital",
-        "label": "IMAX Laser for Dome",
+        "label": "IMAX CoLa",
         "light": "RGB Laser",
         "resH": 4096,
         "resV": 2160,
         "scanEquivLow": null,
         "scanEquivHigh": null,
-        "scanEquivLabel": "4K digital laser dome projection with fisheye/anamorphic optics; pre-2018 generation.",
-        "brightness_fl": 14,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
         "brightness_nits_full": null,
-        "nativeContrast": null,
+        "nativeContrast": 10000,
         "isPerPixelEmissive": false,
         "hdrCategory": "sdr",
         "hdrLabel": "—",
         "hdrDynamic": null,
-        "min_ar": 1.43,
-        "type": "imax_dome_laser_legacy",
-        "display_name": "IMAX Laser for Dome"
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
       },
       "filmProjection": null,
       "commercialFilms": true,
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — dome diameter 23.20 m; height normalized from CSV when needed."
+          "note": "143190.xyz CSV — 0 × 0 m."
         },
         "brightness": {
-          "q": "community_estimate",
+          "q": "published_cto",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "contrast": {
-          "q": "unknown",
+          "q": "published_cto",
           "note": "Format average inherited from the matching canonical projection preset."
         },
         "seat": {
-          "q": "community_estimate",
-          "note": "Dome comparisons use fixed 180° × 125° FOV; radius-style seat distances are placeholders for non-FOV metrics."
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
         }
       }
     },
@@ -7758,6 +10412,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Methuen · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7769,6 +10424,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7861,6 +10518,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Reading · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances use a venue-specific GT estimate because the sparse CSV does not include row depth.",
@@ -7872,6 +10530,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7973,6 +10633,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Somerville · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -7984,6 +10645,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8076,6 +10739,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Columbia · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8087,6 +10751,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8179,6 +10845,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Frederick · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8190,6 +10857,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8282,6 +10951,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Gaithersburg · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8293,6 +10963,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8385,6 +11057,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Nottingham · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8396,6 +11069,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8488,6 +11163,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Detroit · Dome · IMAX 15/70 Film (Dome)",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -8499,6 +11175,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -8584,6 +11262,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
+      "canonicalId": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
+      "kind": "cinema",
+      "name": "NCG Trillium & IMAX",
+      "city": "Grand Blanc",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Grand Blanc · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_mi_grand_rapids_celebration_cinema_grand_rapids_north_and_imax",
       "canonicalId": "imax_us_mi_grand_rapids_celebration_cinema_grand_rapids_north_and_imax",
       "kind": "cinema",
@@ -8592,6 +11376,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Grand Rapids · 1.43 · IMAX Digital + IMAX SR 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8603,6 +11388,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8715,6 +11502,218 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_mi_southgate_mjr_southgate_and_imax",
+      "canonicalId": "imax_us_mi_southgate_mjr_southgate_and_imax",
+      "kind": "cinema",
+      "name": "MJR Southgate & IMAX",
+      "city": "Southgate",
+      "state": "MI",
+      "stateName": "Michigan",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Southgate · 1.90 · IMAX Laser XT",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Laser XT",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_laser_xt",
+        "display_name": "IMAX Laser XT"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "community_estimate",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "community_estimate",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_mn_edina_amc_southdale_16_and_imax",
+      "canonicalId": "imax_us_mn_edina_amc_southdale_16_and_imax",
+      "kind": "cinema",
+      "name": "AMC Southdale 16 & IMAX",
+      "city": "Edina",
+      "state": "MN",
+      "stateName": "Minnesota",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Edina · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_mn_roseville_amc_rosedale_14_and_imax",
       "canonicalId": "imax_us_mn_roseville_amc_rosedale_14_and_imax",
       "kind": "cinema",
@@ -8723,6 +11722,7 @@ window.LIEMAX_DATA = {
       "state": "MN",
       "stateName": "Minnesota",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Roseville · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8734,6 +11734,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8826,6 +11828,7 @@ window.LIEMAX_DATA = {
       "state": "MN",
       "stateName": "Minnesota",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "St. Paul · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -8837,6 +11840,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -8911,6 +11916,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Branson · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -8922,6 +11928,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9015,6 +12023,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_mo_independence_amc_independence_20_and_imax",
+      "canonicalId": "imax_us_mo_independence_amc_independence_20_and_imax",
+      "kind": "cinema",
+      "name": "AMC Independence 20 & IMAX",
+      "city": "Independence",
+      "state": "MO",
+      "stateName": "Missouri",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Independence · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_mo_kansas_city_amc_barry_woods_24_and_imax",
       "canonicalId": "imax_us_mo_kansas_city_amc_barry_woods_24_and_imax",
       "kind": "cinema",
@@ -9023,6 +12137,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Kansas City · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9034,6 +12149,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9126,6 +12243,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "St. Louis · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -9137,6 +12255,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -9211,6 +12331,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Charlotte · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -9222,6 +12343,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -9288,6 +12411,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_nc_charlotte_regal_stonecrest_at_piper_glen_and_imax",
+      "canonicalId": "imax_us_nc_charlotte_regal_stonecrest_at_piper_glen_and_imax",
+      "kind": "cinema",
+      "name": "Regal Stonecrest At Piper Glen & IMAX",
+      "city": "Charlotte",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Charlotte · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_nc_concord_amc_concord_mills_24_and_imax",
       "canonicalId": "imax_us_nc_concord_amc_concord_mills_24_and_imax",
       "kind": "cinema",
@@ -9296,6 +12525,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Concord · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9307,6 +12537,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9399,6 +12631,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Durham · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9410,6 +12643,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9502,6 +12737,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Fayetteville · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9513,6 +12749,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9597,6 +12835,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_nc_greenville_greenville_grande_and_imax",
+      "canonicalId": "imax_us_nc_greenville_greenville_grande_and_imax",
+      "kind": "cinema",
+      "name": "Greenville Grande & IMAX",
+      "city": "Greenville",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Greenville · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_nc_high_point_regal_palladium_and_imax",
       "canonicalId": "imax_us_nc_high_point_regal_palladium_and_imax",
       "kind": "cinema",
@@ -9605,6 +12949,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "High Point · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9616,6 +12961,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9708,6 +13055,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Cherry Hill · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9719,6 +13067,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9811,6 +13161,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Clifton · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9822,6 +13173,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9914,6 +13267,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New Brunswick · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -9925,6 +13279,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10017,6 +13373,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Paramus · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10028,6 +13385,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10120,6 +13479,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Rockaway · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10131,6 +13491,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10215,6 +13577,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_nv_henderson_regal_sunset_station_and_imax",
+      "canonicalId": "imax_us_nv_henderson_regal_sunset_station_and_imax",
+      "kind": "cinema",
+      "name": "Regal Sunset Station & IMAX",
+      "city": "Henderson",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Henderson · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_nv_las_vegas_amc_town_square_18_and_imax",
       "canonicalId": "imax_us_nv_las_vegas_amc_town_square_18_and_imax",
       "kind": "cinema",
@@ -10223,6 +13691,7 @@ window.LIEMAX_DATA = {
       "state": "NV",
       "stateName": "Nevada",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Las Vegas · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10234,6 +13703,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10318,6 +13789,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_nv_las_vegas_regal_red_rock_and_imax",
+      "canonicalId": "imax_us_nv_las_vegas_regal_red_rock_and_imax",
+      "kind": "cinema",
+      "name": "Regal Red Rock & IMAX",
+      "city": "Las Vegas",
+      "state": "NV",
+      "stateName": "Nevada",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Las Vegas · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_nv_north_las_vegas_regal_aliante_and_imax",
       "canonicalId": "imax_us_nv_north_las_vegas_regal_aliante_and_imax",
       "kind": "cinema",
@@ -10326,6 +13903,7 @@ window.LIEMAX_DATA = {
       "state": "NV",
       "stateName": "Nevada",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "North Las Vegas · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10337,6 +13915,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10429,6 +14009,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Albany · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10440,6 +14021,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10532,6 +14115,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Deer Park · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10543,6 +14127,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10627,6 +14213,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ny_fresh_meadows_amc_fresh_meadows_7_and_imax",
+      "canonicalId": "imax_us_ny_fresh_meadows_amc_fresh_meadows_7_and_imax",
+      "kind": "cinema",
+      "name": "AMC Fresh Meadows 7 & IMAX",
+      "city": "Fresh Meadows",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Fresh Meadows · 0.00 · IMAX CoLa",
+      "tag": "IMAX 0.00",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 0,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ny_new_rochelle_regal_new_roc_and_imax",
       "canonicalId": "imax_us_ny_new_rochelle_regal_new_roc_and_imax",
       "kind": "cinema",
@@ -10635,6 +14327,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New Rochelle · 1.43 · IMAX CoLa",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10646,6 +14339,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10738,6 +14433,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New York · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10749,6 +14445,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10841,6 +14539,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New York · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10852,6 +14551,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10944,6 +14645,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New York · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -10955,6 +14657,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11047,6 +14751,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "New York · 1.43 · IMAX GT Laser + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11058,6 +14763,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11179,6 +14886,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
+      "canonicalId": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
+      "kind": "cinema",
+      "name": "AMC Port Chester 14 & IMAX",
+      "city": "Port Chester",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Port Chester · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 56.102364,
+        "h": 30.183728,
+        "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 48.80905668,
+        "mid": 84.153546,
+        "back": 126.23031900000001,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 17.1 × 9.2 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_ny_rochester_cinemark_tinseltown_rochester_and_imax",
       "canonicalId": "imax_us_ny_rochester_cinemark_tinseltown_rochester_and_imax",
       "kind": "cinema",
@@ -11187,6 +15000,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Rochester · 1.90 · IMAX CoLa + IMAX SR 15/70 mm",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11198,6 +15012,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11327,6 +15143,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Staten Island · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11338,6 +15155,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11430,6 +15249,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Stony Brook · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11441,6 +15261,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11533,6 +15355,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Syracuse · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11544,6 +15367,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11628,14 +15453,121 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_ny_white_plains_apple_cinemas_white_plains_city_center_and_imax",
+      "canonicalId": "imax_us_ny_white_plains_apple_cinemas_white_plains_city_center_and_imax",
+      "kind": "cinema",
+      "name": "Apple Cinemas White Plains City Center & IMAX",
+      "city": "White Plains",
+      "state": "NY",
+      "stateName": "New York",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "White Plains · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 59.383204000000006,
+        "h": 27.559056,
+        "ar": 1.9,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 51.663387480000004,
+        "mid": 89.07480600000001,
+        "back": 133.612209,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 18.1 × 8.4 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_oh_cincinnati_robert_d_lindner_family_omnimax_theater",
       "canonicalId": "imax_us_oh_cincinnati_robert_d_lindner_family_omnimax_theater",
       "kind": "cinema",
-      "name": "Robert D. Lindner Family OMNIMAX Theater",
+      "name": "Robert D. Lindner Family OMNIMAX® Theater",
       "city": "Cincinnati",
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Cincinnati · Dome · IMAX Laser for Dome",
       "tag": "IMAX Dome",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Dome diameter is sourced from the CSV; dome FOV uses LIEMAX research defaults.",
@@ -11647,6 +15579,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "confirmed",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -11721,6 +15655,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Columbus · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11732,6 +15667,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11824,6 +15761,7 @@ window.LIEMAX_DATA = {
       "state": "OK",
       "stateName": "Oklahoma",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Moore · 1.43 · IMAX CoLa",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11835,6 +15773,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11919,6 +15859,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_or_tigard_regal_bridgeport_village_and_imax",
+      "canonicalId": "imax_us_or_tigard_regal_bridgeport_village_and_imax",
+      "kind": "cinema",
+      "name": "Regal Bridgeport Village & IMAX",
+      "city": "Tigard",
+      "state": "OR",
+      "stateName": "Oregon",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Tigard · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_pa_bensalem_amc_neshaminy_24_and_imax",
       "canonicalId": "imax_us_pa_bensalem_amc_neshaminy_24_and_imax",
       "kind": "cinema",
@@ -11927,6 +15973,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Bensalem · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -11938,6 +15985,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12030,6 +16079,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "King of Prussia · 1.43 · IMAX CoLa + IMAX 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12041,6 +16091,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12161,6 +16213,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Warrington · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12172,6 +16225,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12264,6 +16319,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "West Homestead · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12275,6 +16331,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12359,6 +16417,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_sc_simpsonville_regal_simpsonville_and_imax",
+      "canonicalId": "imax_us_sc_simpsonville_regal_simpsonville_and_imax",
+      "kind": "cinema",
+      "name": "Regal Simpsonville & IMAX",
+      "city": "Simpsonville",
+      "state": "SC",
+      "stateName": "South Carolina",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Simpsonville · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_tn_chattanooga_imax_3d_tennessee_aquarium",
       "canonicalId": "imax_us_tn_chattanooga_imax_3d_tennessee_aquarium",
       "kind": "cinema",
@@ -12367,6 +16531,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Chattanooga · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12378,6 +16543,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12479,6 +16646,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Franklin · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12490,6 +16658,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12582,6 +16752,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Knoxville · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12593,6 +16764,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12685,6 +16858,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Nashville · 1.43 · IMAX CoLa + IMAX GT3D 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12696,6 +16870,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12816,6 +16992,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Austin · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12827,6 +17004,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12928,6 +17107,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Austin · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -12939,6 +17119,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13023,6 +17205,218 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_tx_austin_evo_cinemas_belterra_village_and_imax",
+      "canonicalId": "imax_us_tx_austin_evo_cinemas_belterra_village_and_imax",
+      "kind": "cinema",
+      "name": "EVO Cinemas Belterra Village & IMAX",
+      "city": "Austin",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Austin · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_baytown_showbiz_cinemas_baytown_and_imax",
+      "canonicalId": "imax_us_tx_baytown_showbiz_cinemas_baytown_and_imax",
+      "kind": "cinema",
+      "name": "Showbiz Cinemas Baytown & IMAX",
+      "city": "Baytown",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Baytown · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_tx_dallas_amc_northpark_15_and_imax",
       "canonicalId": "imax_us_tx_dallas_amc_northpark_15_and_imax",
       "kind": "cinema",
@@ -13031,6 +17425,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Dallas · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13042,6 +17437,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13134,6 +17531,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Dallas · 1.43 · IMAX Digital + IMAX SR 15/70 mm",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13145,6 +17543,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13257,6 +17657,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_tx_edinburg_amc_edinburg_18_and_imax",
+      "canonicalId": "imax_us_tx_edinburg_amc_edinburg_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Edinburg 18 & IMAX",
+      "city": "Edinburg",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Edinburg · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 75.45932,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 65.6496084,
+        "mid": 113.18898000000002,
+        "back": 169.78347000000002,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 23 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_tx_frisco_amc_stonebriar_24_and_imax",
       "canonicalId": "imax_us_tx_frisco_amc_stonebriar_24_and_imax",
       "kind": "cinema",
@@ -13265,6 +17771,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Frisco · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13276,6 +17783,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13360,6 +17869,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_tx_garland_amc_firewheel_18_and_imax",
+      "canonicalId": "imax_us_tx_garland_amc_firewheel_18_and_imax",
+      "kind": "cinema",
+      "name": "AMC Firewheel 18 & IMAX",
+      "city": "Garland",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Garland · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_tx_houston_amc_willowbrook_24_and_imax",
       "canonicalId": "imax_us_tx_houston_amc_willowbrook_24_and_imax",
       "kind": "cinema",
@@ -13368,6 +17983,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Houston · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13379,6 +17995,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13471,6 +18089,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Houston · 1.43 · IMAX CoLa",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13482,6 +18101,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13566,6 +18187,218 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
+      "canonicalId": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
+      "kind": "cinema",
+      "name": "AMC Gulf Pointe 30 & IMAX",
+      "city": "Houston",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Houston · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_tx_houston_showbiz_cinemas_liberty_lakes_and_imax",
+      "canonicalId": "imax_us_tx_houston_showbiz_cinemas_liberty_lakes_and_imax",
+      "kind": "cinema",
+      "name": "Showbiz Cinemas Liberty Lakes & IMAX",
+      "city": "Houston",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Houston · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax_auditorium_11",
       "canonicalId": "imax_us_tx_san_antonio_amc_rivercenter_11_and_imax_auditorium_11",
       "kind": "cinema",
@@ -13574,6 +18407,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "San Antonio · 1.43 · IMAX Digital",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13585,6 +18419,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13677,6 +18513,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Shenandoah · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13688,6 +18525,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13772,6 +18611,324 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_tx_waxahachie_evo_entertainment_waxahachie_and_imax",
+      "canonicalId": "imax_us_tx_waxahachie_evo_entertainment_waxahachie_and_imax",
+      "kind": "cinema",
+      "name": "EVO Entertainment Waxahachie & IMAX",
+      "city": "Waxahachie",
+      "state": "TX",
+      "stateName": "Texas",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Waxahachie · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_salt_lake_city_clark_planetarium_northrop_grumman_imax_theatre",
+      "canonicalId": "imax_us_ut_salt_lake_city_clark_planetarium_northrop_grumman_imax_theatre",
+      "kind": "cinema",
+      "name": "Clark Planetarium (Northrop Grumman IMAX Theatre)",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Salt Lake City · 1.43 · IMAX Digital",
+      "tag": "IMAX 1.43",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 69.88189200000001,
+        "h": 55.118112,
+        "ar": 1.43,
+        "sizeTier": "medium",
+        "sizeLabel": "Medium Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 60.797246040000005,
+        "mid": 104.82283800000002,
+        "back": 157.234257,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 21.3 × 16.8 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
+      "id": "imax_us_ut_sandy_megaplex_sandy_at_jordan_commons_and_imax",
+      "canonicalId": "imax_us_ut_sandy_megaplex_sandy_at_jordan_commons_and_imax",
+      "kind": "cinema",
+      "name": "Megaplex Sandy at Jordan Commons & IMAX",
+      "city": "Sandy",
+      "state": "UT",
+      "stateName": "Utah",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Sandy · 1.43 · IMAX Digital",
+      "tag": "IMAX 1.43",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 80.708664,
+        "h": 56.430448,
+        "ar": 1.43,
+        "sizeTier": "large",
+        "sizeLabel": "Large Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 70.21653768,
+        "mid": 121.062996,
+        "back": 181.594494,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX Digital",
+        "light": "Dual Xenon",
+        "resH": 2048,
+        "resV": 1080,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 2500,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_dual_xenon",
+        "display_name": "IMAX Digital"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 24.6 × 17.2 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_va_alexandria_amc_hoffman_center_22_and_imax",
       "canonicalId": "imax_us_va_alexandria_amc_hoffman_center_22_and_imax",
       "kind": "cinema",
@@ -13780,6 +18937,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Alexandria · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13791,6 +18949,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13883,6 +19043,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Ashburn · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13894,6 +19055,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13986,6 +19149,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Chantilly · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -13997,6 +19161,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14098,6 +19264,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "McLean · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14109,6 +19276,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14201,6 +19370,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Virginia Beach · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14212,6 +19382,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14304,6 +19476,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Woodbridge · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14315,6 +19488,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14407,6 +19582,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Kent · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14418,6 +19594,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14510,6 +19688,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Lynnwood · 1.90 · IMAX CoLa",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14521,6 +19700,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14613,6 +19794,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Seattle · 1.43 · IMAX GT Laser",
       "tag": "IMAX 1.43",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14624,6 +19806,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14717,6 +19901,112 @@ window.LIEMAX_DATA = {
       }
     },
     {
+      "id": "imax_us_wa_seattle_regal_thornton_place_and_imax",
+      "canonicalId": "imax_us_wa_seattle_regal_thornton_place_and_imax",
+      "kind": "cinema",
+      "name": "Regal Thornton Place & IMAX",
+      "city": "Seattle",
+      "state": "WA",
+      "stateName": "Washington",
+      "isPreset": false,
+      "dataSource": "r_imax_csv",
+      "sub": "Seattle · 1.90 · IMAX CoLa",
+      "tag": "IMAX 1.90",
+      "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
+      "screen": {
+        "w": 0,
+        "h": 0,
+        "ar": 1.9,
+        "sizeTier": "small",
+        "sizeLabel": "Small Screen",
+        "widthConfidence": "confirmed",
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
+        "domeCoveragePct": null,
+        "domeHFov": null,
+        "domeVFov": null
+      },
+      "seat": {
+        "capacity": null,
+        "front": 0,
+        "mid": 0,
+        "back": 0,
+        "source": "derived_from_screen_width"
+      },
+      "defaultPresentationAr": 1.9,
+      "isHybrid": false,
+      "presentationModes": [
+        {
+          "id": "digital_190",
+          "ar": 1.9,
+          "label": "1.90 · IMAX Digital",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_239",
+          "ar": 2.39,
+          "label": "2.39 · Scope",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        },
+        {
+          "id": "digital_185",
+          "ar": 1.85,
+          "label": "1.85 · Flat",
+          "enabled": true,
+          "isBookingDependent": false,
+          "isFilmMode": false,
+          "projection": "digital"
+        }
+      ],
+      "projection": {
+        "id": "digital",
+        "label": "IMAX CoLa",
+        "light": "RGB Laser",
+        "resH": 4096,
+        "resV": 2160,
+        "scanEquivLow": null,
+        "scanEquivHigh": null,
+        "scanEquivLabel": null,
+        "brightness_fl": 22,
+        "brightness_nits_full": null,
+        "nativeContrast": 10000,
+        "isPerPixelEmissive": false,
+        "hdrCategory": "sdr",
+        "hdrLabel": "—",
+        "hdrDynamic": null,
+        "min_ar": 1.9,
+        "type": "imax_cola",
+        "display_name": "IMAX CoLa"
+      },
+      "filmProjection": null,
+      "commercialFilms": true,
+      "sources": {
+        "screen": {
+          "q": "r_imax_csv",
+          "note": "143190.xyz CSV — 0 × 0 m."
+        },
+        "brightness": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "contrast": {
+          "q": "published_cto",
+          "note": "Format average inherited from the matching canonical projection preset."
+        },
+        "seat": {
+          "q": "derived_from_screen_width",
+          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+        }
+      }
+    },
+    {
       "id": "imax_us_wa_tukwila_amc_southcenter_16_and_imax",
       "canonicalId": "imax_us_wa_tukwila_amc_southcenter_16_and_imax",
       "kind": "cinema",
@@ -14725,6 +20015,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "r_imax_csv",
       "sub": "Tukwila · 1.90 · IMAX Laser XT",
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
@@ -14736,6 +20027,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14828,6 +20121,7 @@ window.LIEMAX_DATA = {
       "state": "AK",
       "stateName": "Alaska",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Anchorage · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -14839,6 +20133,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14931,6 +20227,7 @@ window.LIEMAX_DATA = {
       "state": "AK",
       "stateName": "Alaska",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fairbanks · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -14942,6 +20239,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15034,6 +20333,7 @@ window.LIEMAX_DATA = {
       "state": "AL",
       "stateName": "Alabama",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Hoover · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15045,6 +20345,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15137,6 +20439,7 @@ window.LIEMAX_DATA = {
       "state": "AL",
       "stateName": "Alabama",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Huntsville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15148,6 +20451,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15240,6 +20545,7 @@ window.LIEMAX_DATA = {
       "state": "AL",
       "stateName": "Alabama",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Montgomery · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15251,6 +20557,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15343,6 +20651,7 @@ window.LIEMAX_DATA = {
       "state": "AL",
       "stateName": "Alabama",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tuscaloosa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15354,6 +20663,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15446,6 +20757,7 @@ window.LIEMAX_DATA = {
       "state": "AR",
       "stateName": "Arkansas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fayetteville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15457,6 +20769,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15549,6 +20863,7 @@ window.LIEMAX_DATA = {
       "state": "AR",
       "stateName": "Arkansas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Little Rock · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15560,6 +20875,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15652,6 +20969,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Glendale · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15663,6 +20981,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15755,6 +21075,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Mesa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15766,6 +21087,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15850,109 +21173,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_az_phoenix_amc_desert_ridge_18_and_imax",
-      "canonicalId": "imax_us_az_phoenix_amc_desert_ridge_18_and_imax",
-      "kind": "cinema",
-      "name": "AMC Desert Ridge 18 & IMAX",
-      "city": "Phoenix",
-      "state": "AZ",
-      "stateName": "Arizona",
-      "isPreset": false,
-      "sub": "Phoenix · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 53.149608,
-        "h": 29.199476,
-        "ar": 1.8202247191011234,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 283,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.2 x 53.1 ft./ 8.9 x 16.2 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_az_surprise_amc_surprise_pointe_14_and_imax",
       "canonicalId": "imax_us_az_surprise_amc_surprise_pointe_14_and_imax",
       "kind": "cinema",
@@ -15961,6 +21181,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Surprise · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -15972,6 +21193,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16064,6 +21287,7 @@ window.LIEMAX_DATA = {
       "state": "AZ",
       "stateName": "Arizona",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tucson · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16075,6 +21299,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16167,6 +21393,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bakersfield · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16178,6 +21405,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16270,6 +21499,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Brentwood · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16281,6 +21511,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16373,6 +21605,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Camarillo · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16384,6 +21617,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16476,6 +21711,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Concord · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16487,6 +21723,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16579,6 +21817,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Covina · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16590,6 +21829,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16682,6 +21923,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "El Cajon · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16693,6 +21935,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16785,6 +22029,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "El Dorado Hills · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16796,6 +22041,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16888,6 +22135,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Escondido · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -16899,6 +22147,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16991,6 +22241,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fairfield · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17002,6 +22253,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17094,6 +22347,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fresno · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -17105,6 +22359,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17225,6 +22481,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Glendora · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17236,6 +22493,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17328,6 +22587,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Norwalk · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17339,6 +22599,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17431,6 +22693,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Rancho Mirage · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17442,6 +22705,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17534,6 +22799,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Riverbank · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17545,6 +22811,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17637,6 +22905,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Riverside · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17648,6 +22917,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17740,6 +23011,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sacramento · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17751,6 +23023,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17843,6 +23117,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "San Diego · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -17854,6 +23129,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17938,109 +23215,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
-      "canonicalId": "imax_us_ca_san_jose_amc_eastridge_15_and_imax",
-      "kind": "cinema",
-      "name": "AMC Eastridge 15 & IMAX",
-      "city": "San Jose",
-      "state": "CA",
-      "stateName": "California",
-      "isPreset": false,
-      "sub": "San Jose · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 51.837272,
-        "h": 29.855643999999998,
-        "ar": 1.7362637362637363,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 298,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 51.8 ft./ 9.1 x 15.8 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ca_san_jose_amc_saratoga_14_and_imax",
       "canonicalId": "imax_us_ca_san_jose_amc_saratoga_14_and_imax",
       "kind": "cinema",
@@ -18049,6 +23223,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "San Jose · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18060,6 +23235,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18152,6 +23329,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Simi Valley · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18163,6 +23341,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18255,6 +23435,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Torrance · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18266,6 +23447,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18358,6 +23541,7 @@ window.LIEMAX_DATA = {
       "state": "CA",
       "stateName": "California",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Woodland Hills · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18369,6 +23553,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18461,6 +23647,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Aurora · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18472,6 +23659,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18556,109 +23745,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
-      "canonicalId": "imax_us_co_broomfield_amc_flatiron_crossing_14_and_imax",
-      "kind": "cinema",
-      "name": "AMC Flatiron Crossing 14 & IMAX",
-      "city": "Broomfield",
-      "state": "CO",
-      "stateName": "Colorado",
-      "isPreset": false,
-      "sub": "Broomfield · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 45.603676,
-        "h": 28.215224,
-        "ar": 1.616279069767442,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": null,
-        "front": 39.67519812,
-        "mid": 68.405514,
-        "back": 102.608271,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.1 x 45.6 ft./ 8.6 x 13.9 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_co_colorado_springs_cinemark_carefree_circle_and_imax",
       "canonicalId": "imax_us_co_colorado_springs_cinemark_carefree_circle_and_imax",
       "kind": "cinema",
@@ -18667,6 +23753,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Colorado Springs · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18678,6 +23765,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18770,6 +23859,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -18781,6 +23871,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18873,6 +23965,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Denver · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -18884,6 +23977,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19004,6 +24099,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lakewood · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19015,6 +24111,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19107,6 +24205,7 @@ window.LIEMAX_DATA = {
       "state": "CO",
       "stateName": "Colorado",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Westminster · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19118,6 +24217,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19210,6 +24311,7 @@ window.LIEMAX_DATA = {
       "state": "CT",
       "stateName": "Connecticut",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Danbury · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19221,6 +24323,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19313,6 +24417,7 @@ window.LIEMAX_DATA = {
       "state": "CT",
       "stateName": "Connecticut",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Manchester · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19324,6 +24429,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19416,6 +24523,7 @@ window.LIEMAX_DATA = {
       "state": "CT",
       "stateName": "Connecticut",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Plainville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19427,6 +24535,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19519,6 +24629,7 @@ window.LIEMAX_DATA = {
       "state": "DE",
       "stateName": "Delaware",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Wilmington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19530,6 +24641,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19622,6 +24735,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Altamonte · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19633,6 +24747,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19725,6 +24841,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Brandon · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19736,6 +24853,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19828,6 +24947,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Davenport · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19839,6 +24959,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19931,6 +25053,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Destin · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -19942,6 +25065,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20034,6 +25159,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Jacksonville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20045,6 +25171,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20137,6 +25265,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lakeland · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20148,6 +25277,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20240,6 +25371,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Merritt Island · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20251,6 +25383,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20343,6 +25477,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Miami · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20354,6 +25489,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20446,6 +25583,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Miami · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20457,6 +25595,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20549,6 +25689,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Miami Beach · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20560,6 +25701,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20652,6 +25795,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Ocala · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20663,6 +25807,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20747,109 +25893,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_fl_oldsmar_amc_woodland_square_20_and_imax",
-      "canonicalId": "imax_us_fl_oldsmar_amc_woodland_square_20_and_imax",
-      "kind": "cinema",
-      "name": "AMC Woodland Square 20 & IMAX",
-      "city": "Oldsmar",
-      "state": "FL",
-      "stateName": "Florida",
-      "isPreset": false,
-      "sub": "Oldsmar · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 56.430448,
-        "h": 31.16798,
-        "ar": 1.8105263157894735,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 375,
-        "front": 49.09448976,
-        "mid": 84.64567199999999,
-        "back": 126.968508,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.2 x 56.4 ft./ 9.5 x 17.2 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_fl_orange_park_amc_orange_park_24_and_imax",
       "canonicalId": "imax_us_fl_orange_park_amc_orange_park_24_and_imax",
       "kind": "cinema",
@@ -20858,6 +25901,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Orange Park · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -20869,6 +25913,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -20961,6 +26007,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -20972,6 +26019,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21084,109 +26133,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_fl_orlando_regal_waterford_lakes_stadium_20_and_imax",
-      "canonicalId": "imax_us_fl_orlando_regal_waterford_lakes_stadium_20_and_imax",
-      "kind": "cinema",
-      "name": "Regal Waterford Lakes Stadium 20 & IMAX",
-      "city": "Orlando",
-      "state": "FL",
-      "stateName": "Florida",
-      "isPreset": false,
-      "sub": "Orlando · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 49.868767999999996,
-        "h": 28.871392000000004,
-        "ar": 1.727272727272727,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 380,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.9 x 49.9 ft./ 8.8 x 15.2 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_fl_panama_city_beach_grand_pier_park_16_and_imax",
       "canonicalId": "imax_us_fl_panama_city_beach_grand_pier_park_16_and_imax",
       "kind": "cinema",
@@ -21195,6 +26141,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Panama City Beach · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21206,6 +26153,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21298,6 +26247,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Pensacola · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21309,6 +26259,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21401,6 +26353,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Saint Augustine · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21412,6 +26365,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21504,6 +26459,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sarasota · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21515,6 +26471,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21607,6 +26565,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "South Miami · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21618,6 +26577,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21710,6 +26671,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sunrise · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21721,6 +26683,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21813,6 +26777,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tallahassee · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21824,6 +26789,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -21916,6 +26883,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tallahassee · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -21927,6 +26895,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22019,6 +26989,7 @@ window.LIEMAX_DATA = {
       "state": "FL",
       "stateName": "Florida",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "West Melbourne · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22030,6 +27001,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22122,6 +27095,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Augusta · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22133,6 +27107,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22225,6 +27201,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Columbus · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22236,6 +27213,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22328,6 +27307,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Cumming · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22339,6 +27319,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22431,6 +27413,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Douglasville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22442,6 +27425,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22534,6 +27519,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lithonia · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22545,6 +27531,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22637,6 +27625,7 @@ window.LIEMAX_DATA = {
       "state": "GA",
       "stateName": "Georgia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Macon · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22648,6 +27637,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22740,6 +27731,7 @@ window.LIEMAX_DATA = {
       "state": "HI",
       "stateName": "Hawaii",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Honolulu · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22751,6 +27743,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22843,6 +27837,7 @@ window.LIEMAX_DATA = {
       "state": "IA",
       "stateName": "Iowa",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Council Bluffs · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22854,6 +27849,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -22946,6 +27943,7 @@ window.LIEMAX_DATA = {
       "state": "IA",
       "stateName": "Iowa",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Davenport · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -22957,6 +27955,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23049,6 +28049,7 @@ window.LIEMAX_DATA = {
       "state": "ID",
       "stateName": "Idaho",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Boise · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -23060,6 +28061,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23180,6 +28183,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bloomington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23191,6 +28195,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23283,6 +28289,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Edwardsville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23294,6 +28301,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23386,6 +28395,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Hodgkins · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23397,6 +28407,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23489,6 +28501,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lincolnshire · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23500,6 +28513,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23592,6 +28607,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lombard · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23603,6 +28619,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23695,6 +28713,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Naperville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23706,6 +28725,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23798,6 +28819,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "New Lenox · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23809,6 +28831,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -23901,6 +28925,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Niles · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -23912,6 +28937,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24004,6 +29031,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Oak Brook · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24015,6 +29043,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24107,6 +29137,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Peoria · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24118,6 +29149,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24210,6 +29243,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Rockford · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24221,6 +29255,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24313,6 +29349,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Schaumburg · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24324,6 +29361,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24416,6 +29455,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Skokie · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24427,6 +29467,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24519,6 +29561,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "South Barrington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24530,6 +29573,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24622,6 +29667,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Springfield · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24633,6 +29679,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24725,6 +29773,7 @@ window.LIEMAX_DATA = {
       "state": "IL",
       "stateName": "Illinois",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Woodridge · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -24736,6 +29785,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24856,6 +29907,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Evansville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24867,6 +29919,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -24959,6 +30013,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -24970,6 +30025,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25062,6 +30119,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25073,6 +30131,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25165,6 +30225,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Indianapolis · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25176,6 +30237,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25268,6 +30331,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Muncie · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25279,6 +30343,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25371,6 +30437,7 @@ window.LIEMAX_DATA = {
       "state": "IN",
       "stateName": "Indiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Schererville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25382,6 +30449,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25466,212 +30535,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
-      "canonicalId": "imax_us_ks_kansas_city_amc_legends_14_and_imax",
-      "kind": "cinema",
-      "name": "AMC Legends 14 & IMAX",
-      "city": "Kansas City",
-      "state": "KS",
-      "stateName": "Kansas",
-      "isPreset": false,
-      "sub": "Kansas City · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 83.98950400000001,
-        "h": 47.57218,
-        "ar": 1.7655172413793105,
-        "sizeTier": "large",
-        "sizeLabel": "Large Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": null,
-        "front": 73.07086848000002,
-        "mid": 125.98425600000002,
-        "back": 188.97638400000002,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 47.6 x 84.0 ft./ 14.5 x 25.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
-      "id": "imax_us_ks_leawood_amc_town_center_20_and_imax",
-      "canonicalId": "imax_us_ks_leawood_amc_town_center_20_and_imax",
-      "kind": "cinema",
-      "name": "AMC Town Center 20 & IMAX",
-      "city": "Leawood",
-      "state": "KS",
-      "stateName": "Kansas",
-      "isPreset": false,
-      "sub": "Leawood · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 49.868767999999996,
-        "h": 27.88714,
-        "ar": 1.788235294117647,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 299,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.8 x 50.0 ft./ 8.5 x 15.2 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ks_manhattan_amc_dine_in_manhattan_13_and_imax",
       "canonicalId": "imax_us_ks_manhattan_amc_dine_in_manhattan_13_and_imax",
       "kind": "cinema",
@@ -25680,6 +30543,7 @@ window.LIEMAX_DATA = {
       "state": "KS",
       "stateName": "Kansas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Manhattan · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25691,6 +30555,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25775,109 +30641,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ks_olathe_amc_studio_28_and_imax",
-      "canonicalId": "imax_us_ks_olathe_amc_studio_28_and_imax",
-      "kind": "cinema",
-      "name": "AMC Studio 28 & IMAX",
-      "city": "Olathe",
-      "state": "KS",
-      "stateName": "Kansas",
-      "isPreset": false,
-      "sub": "Olathe · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 52.165356,
-        "h": 31.496063999999997,
-        "ar": 1.65625,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 288,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 31.5 x 52.2 ft./ 9.6 x 15.9 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ks_wichita_regal_warren_west_17_and_imax",
       "canonicalId": "imax_us_ks_wichita_regal_warren_west_17_and_imax",
       "kind": "cinema",
@@ -25886,6 +30649,7 @@ window.LIEMAX_DATA = {
       "state": "KS",
       "stateName": "Kansas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Wichita · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -25897,6 +30661,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Giant Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -25989,6 +30755,7 @@ window.LIEMAX_DATA = {
       "state": "KY",
       "stateName": "Kentucky",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lexington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26000,6 +30767,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26092,6 +30861,7 @@ window.LIEMAX_DATA = {
       "state": "KY",
       "stateName": "Kentucky",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Louisville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26103,6 +30873,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26195,6 +30967,7 @@ window.LIEMAX_DATA = {
       "state": "KY",
       "stateName": "Kentucky",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Newport · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26206,6 +30979,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26298,6 +31073,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Baton Rouge · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26309,6 +31085,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26401,6 +31179,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Baton Rouge · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26412,6 +31191,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26504,6 +31285,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bossier City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26515,6 +31297,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26607,6 +31391,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Harahan · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26618,6 +31403,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26710,6 +31497,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Harvey · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26721,6 +31509,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26813,6 +31603,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Metairie · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26824,6 +31615,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -26916,6 +31709,7 @@ window.LIEMAX_DATA = {
       "state": "LA",
       "stateName": "Louisiana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Slidell · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -26927,6 +31721,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27011,109 +31807,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
-      "canonicalId": "imax_us_ma_danvers_amc_liberty_tree_mall_20_and_imax",
-      "kind": "cinema",
-      "name": "AMC Liberty Tree Mall 20 & IMAX",
-      "city": "Danvers",
-      "state": "MA",
-      "stateName": "Massachusetts",
-      "isPreset": false,
-      "sub": "Danvers · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 53.477692000000005,
-        "h": 28.871392000000004,
-        "ar": 1.8522727272727273,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 400,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.0 x 53.4 ft./ 8.8 x 16.3 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ma_dorchester_amc_south_bay_12_and_imax",
       "canonicalId": "imax_us_ma_dorchester_amc_south_bay_12_and_imax",
       "kind": "cinema",
@@ -27122,6 +31815,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Dorchester · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27133,6 +31827,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27225,6 +31921,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Natick · official Jordan’s specs · Dual Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Official Jordan’s Furniture specs list a 76 × 55 ft screen and 279 seats. Projector classification is Dual Xenon from the LFExaminer IMAX Digital Xenon row; update if current GT Laser, CoLa/Laser XT, or 15/70 evidence is found.",
@@ -27236,6 +31933,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27328,6 +32027,7 @@ window.LIEMAX_DATA = {
       "state": "MA",
       "stateName": "Massachusetts",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Randolph · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27339,6 +32039,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27431,6 +32133,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Baltimore · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27442,6 +32145,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27534,6 +32239,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Baltimore · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27545,6 +32251,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27637,6 +32345,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Gambrills · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27648,6 +32357,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27740,6 +32451,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Largo · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27751,6 +32463,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27843,6 +32557,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Owings Mills · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27854,6 +32569,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -27946,6 +32663,7 @@ window.LIEMAX_DATA = {
       "state": "MD",
       "stateName": "Maryland",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Silver Spring · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -27957,6 +32675,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28049,6 +32769,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Auburn Hills · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28060,6 +32781,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28152,6 +32875,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Dearborn · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28163,6 +32887,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28247,109 +32973,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
-      "canonicalId": "imax_us_mi_grand_blanc_ncg_trillium_and_imax",
-      "kind": "cinema",
-      "name": "NCG Trillium & IMAX",
-      "city": "Grand Blanc",
-      "state": "MI",
-      "stateName": "Michigan",
-      "isPreset": false,
-      "sub": "Grand Blanc · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 69.88189200000001,
-        "h": 40.026247999999995,
-        "ar": 1.7459016393442623,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 327,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 40.0 x 70.0 ft./ 12.2 x 21.3 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_mi_lansing_celebration_cinema_and_imax",
       "canonicalId": "imax_us_mi_lansing_celebration_cinema_and_imax",
       "kind": "cinema",
@@ -28358,6 +32981,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lansing · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28369,6 +32993,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28461,6 +33087,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Livonia · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28472,6 +33099,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28564,6 +33193,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Portage · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28575,6 +33205,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28667,6 +33299,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sterling Heights · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28678,6 +33311,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28770,6 +33405,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Traverse City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28781,6 +33417,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28873,6 +33511,7 @@ window.LIEMAX_DATA = {
       "state": "MI",
       "stateName": "Michigan",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Ypsilanti · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28884,6 +33523,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -28976,6 +33617,7 @@ window.LIEMAX_DATA = {
       "state": "MN",
       "stateName": "Minnesota",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Eden Prairie · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -28987,6 +33629,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29071,109 +33715,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_mn_edina_amc_southdale_16_and_imax",
-      "canonicalId": "imax_us_mn_edina_amc_southdale_16_and_imax",
-      "kind": "cinema",
-      "name": "AMC Southdale 16 & IMAX",
-      "city": "Edina",
-      "state": "MN",
-      "stateName": "Minnesota",
-      "isPreset": false,
-      "sub": "Edina · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 54.13386,
-        "h": 29.855643999999998,
-        "ar": 1.8131868131868132,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 340,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 29.9 x 54.1 ft./ 9.1 x 16.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_mn_maple_grove_amc_arbor_lakes_16_and_imax",
       "canonicalId": "imax_us_mn_maple_grove_amc_arbor_lakes_16_and_imax",
       "kind": "cinema",
@@ -29182,6 +33723,7 @@ window.LIEMAX_DATA = {
       "state": "MN",
       "stateName": "Minnesota",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Maple Grove · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29193,6 +33735,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29285,6 +33829,7 @@ window.LIEMAX_DATA = {
       "state": "MN",
       "stateName": "Minnesota",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Rochester · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29296,6 +33841,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29388,6 +33935,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Chesterfield · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29399,6 +33947,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29491,6 +34041,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Independence · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29502,6 +34053,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29594,6 +34147,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sappington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29605,6 +34159,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29697,6 +34253,7 @@ window.LIEMAX_DATA = {
       "state": "MO",
       "stateName": "Missouri",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Springfield · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29708,6 +34265,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29800,6 +34359,7 @@ window.LIEMAX_DATA = {
       "state": "MT",
       "stateName": "Montana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Billings · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29811,6 +34371,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -29903,6 +34465,7 @@ window.LIEMAX_DATA = {
       "state": "MT",
       "stateName": "Montana",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Missoula · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -29914,6 +34477,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30006,6 +34571,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Cary · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30017,6 +34583,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30109,6 +34677,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Charlotte · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30120,6 +34689,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30204,109 +34775,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_nc_charlotte_regal_stonecrest_at_pipers_glen_stadium_22_and_imax",
-      "canonicalId": "imax_us_nc_charlotte_regal_stonecrest_at_pipers_glen_stadium_22_and_imax",
-      "kind": "cinema",
-      "name": "Regal Stonecrest at Pipers Glen Stadium 22 & IMAX",
-      "city": "Charlotte",
-      "state": "NC",
-      "stateName": "North Carolina",
-      "isPreset": false,
-      "sub": "Charlotte · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 48.228348,
-        "h": 25.590552,
-        "ar": 1.8846153846153846,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 282,
-        "front": 41.958662759999996,
-        "mid": 72.342522,
-        "back": 108.51378299999999,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 25.6 x 48.2 ft./ 7.8 x 14.7 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_nc_raleigh_marbles_kids_museum",
       "canonicalId": "imax_us_nc_raleigh_marbles_kids_museum",
       "kind": "cinema",
@@ -30315,6 +34783,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Raleigh · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30326,6 +34795,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30418,6 +34889,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Wilmington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30429,6 +34901,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30521,6 +34995,7 @@ window.LIEMAX_DATA = {
       "state": "NC",
       "stateName": "North Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Winston-Salem · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30532,6 +35007,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30624,6 +35101,7 @@ window.LIEMAX_DATA = {
       "state": "NE",
       "stateName": "Nebraska",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Omaha · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30635,6 +35113,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30727,6 +35207,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Atlantic City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30738,6 +35219,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30830,6 +35313,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Eatontown · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30841,6 +35325,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -30933,6 +35419,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Elizabeth · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -30944,6 +35431,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31036,6 +35525,7 @@ window.LIEMAX_DATA = {
       "state": "NJ",
       "stateName": "New Jersey",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Linden · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31047,6 +35537,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31139,6 +35631,7 @@ window.LIEMAX_DATA = {
       "state": "NM",
       "stateName": "New Mexico",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Albuquerque · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31150,6 +35643,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31242,6 +35737,7 @@ window.LIEMAX_DATA = {
       "state": "NM",
       "stateName": "New Mexico",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Albuquerque · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31253,6 +35749,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31337,109 +35835,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_nv_henderson_regal_sunset_station_13_and_imax",
-      "canonicalId": "imax_us_nv_henderson_regal_sunset_station_13_and_imax",
-      "kind": "cinema",
-      "name": "Regal Sunset Station 13 & IMAX",
-      "city": "Henderson",
-      "state": "NV",
-      "stateName": "Nevada",
-      "isPreset": false,
-      "sub": "Henderson · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 47.900264,
-        "h": 23.950132,
-        "ar": 2,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 291,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 24.0 x 48.0 ft./ 7.3 x 14.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_nv_las_vegas_brenden_theatres_and_imax_at_the_palms",
       "canonicalId": "imax_us_nv_las_vegas_brenden_theatres_and_imax_at_the_palms",
       "kind": "cinema",
@@ -31448,6 +35843,7 @@ window.LIEMAX_DATA = {
       "state": "NV",
       "stateName": "Nevada",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -31459,6 +35855,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31571,109 +35969,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_nv_las_vegas_regal_red_rock_stadium_16_and_imax",
-      "canonicalId": "imax_us_nv_las_vegas_regal_red_rock_stadium_16_and_imax",
-      "kind": "cinema",
-      "name": "Regal Red Rock Stadium 16 & IMAX",
-      "city": "Las Vegas",
-      "state": "NV",
-      "stateName": "Nevada",
-      "isPreset": false,
-      "sub": "Las Vegas · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 57.414699999999996,
-        "h": 35.104988,
-        "ar": 1.6355140186915889,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 350,
-        "front": 49.95078899999999,
-        "mid": 86.12205,
-        "back": 129.183075,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 57.5 ft./ 10.7 x 17.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_nv_sparks_galaxy_theatres_legends_imax",
       "canonicalId": "imax_us_nv_sparks_galaxy_theatres_legends_imax",
       "kind": "cinema",
@@ -31682,6 +35977,7 @@ window.LIEMAX_DATA = {
       "state": "NV",
       "stateName": "Nevada",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sparks · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31693,6 +35989,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31785,6 +36083,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Brooklyn · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31796,6 +36095,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31888,6 +36189,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Farmingdale · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -31899,6 +36201,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -31991,6 +36295,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Garden City · Dome · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -32002,6 +36307,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Dome",
         "widthConfidence": "community_estimate",
         "geometry": "hemispherical",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -32095,6 +36402,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "New York · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -32106,6 +36414,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32218,109 +36528,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
-      "canonicalId": "imax_us_ny_port_chester_amc_port_chester_14_and_imax",
-      "kind": "cinema",
-      "name": "AMC Port Chester 14 & IMAX",
-      "city": "Port Chester",
-      "state": "NY",
-      "stateName": "New York",
-      "isPreset": false,
-      "sub": "Port Chester · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 56.102364,
-        "h": 30.183728,
-        "ar": 1.8586956521739133,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 312,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.2 x 56.1 ft./ 9.2 x 17.1 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ny_west_nyack_amc_palisades_center_21_and_imax",
       "canonicalId": "imax_us_ny_west_nyack_amc_palisades_center_21_and_imax",
       "kind": "cinema",
@@ -32329,6 +36536,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "West Nyack · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32340,6 +36548,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32432,6 +36642,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Westbury · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32443,6 +36654,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32527,109 +36740,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ny_white_plains_city_center_15_cinema_de_lux_and_imax",
-      "canonicalId": "imax_us_ny_white_plains_city_center_15_cinema_de_lux_and_imax",
-      "kind": "cinema",
-      "name": "City Center 15: Cinema De Lux & IMAX",
-      "city": "White Plains",
-      "state": "NY",
-      "stateName": "New York",
-      "isPreset": false,
-      "sub": "White Plains · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 59.383204000000006,
-        "h": 27.559056,
-        "ar": 2.1547619047619047,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 339,
-        "front": 51.663387480000004,
-        "mid": 89.07480600000001,
-        "back": 133.612209,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 27.5 x 59.5 ft./ 8.4 x 18.1 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ny_williamsville_regal_transit_center_stadium_18_and_imax",
       "canonicalId": "imax_us_ny_williamsville_regal_transit_center_stadium_18_and_imax",
       "kind": "cinema",
@@ -32638,6 +36748,7 @@ window.LIEMAX_DATA = {
       "state": "NY",
       "stateName": "New York",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Williamsville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32649,6 +36760,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32741,6 +36854,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Beavercreek · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32752,6 +36866,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32844,6 +36960,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Cincinnati · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32855,6 +36972,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -32947,6 +37066,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Columbus · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -32958,6 +37078,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33050,6 +37172,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Grove City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33061,6 +37184,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33153,6 +37278,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "West Chester · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33164,6 +37290,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33256,6 +37384,7 @@ window.LIEMAX_DATA = {
       "state": "OH",
       "stateName": "Ohio",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Westlake · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33267,6 +37396,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33359,6 +37490,7 @@ window.LIEMAX_DATA = {
       "state": "OK",
       "stateName": "Oklahoma",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lawton · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33370,6 +37502,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33462,6 +37596,7 @@ window.LIEMAX_DATA = {
       "state": "OK",
       "stateName": "Oklahoma",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Oklahoma City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33473,6 +37608,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33565,6 +37702,7 @@ window.LIEMAX_DATA = {
       "state": "OK",
       "stateName": "Oklahoma",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tulsa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33576,6 +37714,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33668,6 +37808,7 @@ window.LIEMAX_DATA = {
       "state": "OK",
       "stateName": "Oklahoma",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tulsa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33679,6 +37820,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33771,6 +37914,7 @@ window.LIEMAX_DATA = {
       "state": "OR",
       "stateName": "Oregon",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bend · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33782,6 +37926,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33874,6 +38020,7 @@ window.LIEMAX_DATA = {
       "state": "OR",
       "stateName": "Oregon",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Eugene · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33885,6 +38032,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -33977,6 +38126,7 @@ window.LIEMAX_DATA = {
       "state": "OR",
       "stateName": "Oregon",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Portland · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -33988,6 +38138,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34072,109 +38224,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_or_tigard_regal_bridgeport_village_stadium_18_and_imax",
-      "canonicalId": "imax_us_or_tigard_regal_bridgeport_village_stadium_18_and_imax",
-      "kind": "cinema",
-      "name": "Regal Bridgeport Village Stadium 18 & IMAX",
-      "city": "Tigard",
-      "state": "OR",
-      "stateName": "Oregon",
-      "isPreset": false,
-      "sub": "Tigard · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 54.461944,
-        "h": 30.511812000000003,
-        "ar": 1.7849462365591398,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 318,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 30.6 x 54.5 ft./ 9.3 x 16.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_pa_center_valley_amc_center_valley_16_and_imax",
       "canonicalId": "imax_us_pa_center_valley_amc_center_valley_16_and_imax",
       "kind": "cinema",
@@ -34183,6 +38232,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Center Valley · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34194,6 +38244,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34286,6 +38338,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Dickson City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34297,6 +38350,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34389,6 +38444,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Downingtown · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34400,6 +38456,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34492,6 +38550,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Homestead · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34503,6 +38562,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34595,6 +38656,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lititz · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34606,6 +38668,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34698,6 +38762,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Philadelphia · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34709,6 +38774,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34801,6 +38868,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Reading · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34812,6 +38880,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34904,6 +38974,7 @@ window.LIEMAX_DATA = {
       "state": "PA",
       "stateName": "Pennsylvania",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "York · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -34915,6 +38986,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35007,6 +39080,7 @@ window.LIEMAX_DATA = {
       "state": "PR",
       "stateName": "PR",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "San Juan · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35018,6 +39092,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35110,6 +39186,7 @@ window.LIEMAX_DATA = {
       "state": "SC",
       "stateName": "South Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Columbia · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35121,6 +39198,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35213,6 +39292,7 @@ window.LIEMAX_DATA = {
       "state": "SC",
       "stateName": "South Carolina",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Simpsonville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35224,6 +39304,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35316,6 +39398,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Chattanooga · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35327,6 +39410,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35419,6 +39504,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Hendersonville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35430,6 +39516,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35522,6 +39610,7 @@ window.LIEMAX_DATA = {
       "state": "TN",
       "stateName": "Tennessee",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Memphis · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35533,6 +39622,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35625,6 +39716,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Amarillo · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35636,6 +39728,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35728,6 +39822,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Arlington · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35739,6 +39834,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35831,6 +39928,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Austin · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35842,6 +39940,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -35934,6 +40034,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bryan · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -35945,6 +40046,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36037,6 +40140,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Corpus Christi · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36048,6 +40152,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36140,6 +40246,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "El Paso · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36151,6 +40258,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36235,109 +40344,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_tx_garland_amc_firewheel_18_and_imax",
-      "canonicalId": "imax_us_tx_garland_amc_firewheel_18_and_imax",
-      "kind": "cinema",
-      "name": "AMC Firewheel 18 & IMAX",
-      "city": "Garland",
-      "state": "TX",
-      "stateName": "Texas",
-      "isPreset": false,
-      "sub": "Garland · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 51.509187999999995,
-        "h": 28.871392000000004,
-        "ar": 1.784090909090909,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 271,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 28.9 x 51.5 ft./ 8.8 x 15.7 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_tx_grapevine_amc_grapevine_mills_30_and_imax",
       "canonicalId": "imax_us_tx_grapevine_amc_grapevine_mills_30_and_imax",
       "kind": "cinema",
@@ -36346,6 +40352,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Grapevine · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36357,6 +40364,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36449,6 +40458,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Highland Village · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36460,6 +40470,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36544,109 +40556,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
-      "canonicalId": "imax_us_tx_houston_amc_gulf_pointe_30_and_imax",
-      "kind": "cinema",
-      "name": "AMC Gulf Pointe 30 & IMAX",
-      "city": "Houston",
-      "state": "TX",
-      "stateName": "Texas",
-      "isPreset": false,
-      "sub": "Houston · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 60.69554,
-        "h": 35.104988,
-        "ar": 1.7289719626168225,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 464,
-        "front": 52.8051198,
-        "mid": 91.04331,
-        "back": 136.564965,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 35.0 x 60.8 ft./ 10.7 x 18.5 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_tx_humble_amc_deerbrook_24_and_imax",
       "canonicalId": "imax_us_tx_humble_amc_deerbrook_24_and_imax",
       "kind": "cinema",
@@ -36655,6 +40564,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Humble · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36666,6 +40576,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36758,6 +40670,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lubbock · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36769,6 +40682,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36861,6 +40776,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Mesquite · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36872,6 +40788,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -36964,6 +40882,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Midland · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -36975,6 +40894,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37067,6 +40988,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Odessa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37078,6 +41000,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37170,6 +41094,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "San Antonio · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37181,6 +41106,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37273,6 +41200,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Stafford · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37284,6 +41212,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37376,6 +41306,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Sugar Land · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37387,6 +41318,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37479,6 +41412,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Temple · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37490,6 +41424,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37582,6 +41518,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tomball · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -37593,6 +41530,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37713,6 +41652,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Tyler · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37724,6 +41664,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37816,6 +41758,7 @@ window.LIEMAX_DATA = {
       "state": "TX",
       "stateName": "Texas",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Waco · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37827,6 +41770,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -37919,6 +41864,7 @@ window.LIEMAX_DATA = {
       "state": "UT",
       "stateName": "Utah",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Centerville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -37930,6 +41876,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38014,212 +41962,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_ut_salt_lake_city_clark_planetarium",
-      "canonicalId": "imax_us_ut_salt_lake_city_clark_planetarium",
-      "kind": "cinema",
-      "name": "Clark Planetarium",
-      "city": "Salt Lake City",
-      "state": "UT",
-      "stateName": "Utah",
-      "isPreset": false,
-      "sub": "Salt Lake City · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 69.88189200000001,
-        "h": 52.49344,
-        "ar": 1.33125,
-        "sizeTier": "medium",
-        "sizeLabel": "Medium Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 292,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 55.0 x 69.8 ft./ 16.0 x 21.3 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
-      "id": "imax_us_ut_sandy_megaplex_17_and_imax_jordan_commons",
-      "canonicalId": "imax_us_ut_sandy_megaplex_17_and_imax_jordan_commons",
-      "kind": "cinema",
-      "name": "Megaplex 17 & IMAX, Jordan Commons",
-      "city": "Sandy",
-      "state": "UT",
-      "stateName": "Utah",
-      "isPreset": false,
-      "sub": "Sandy · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 80.708664,
-        "h": 56.430448,
-        "ar": 1.430232558139535,
-        "sizeTier": "large",
-        "sizeLabel": "Large Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 446,
-        "front": 70.21653768,
-        "mid": 121.062996,
-        "back": 181.594494,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 56.3 x 80.8 ft./ 17.2 x 24.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_ut_south_jordan_megaplex_20_and_imax_at_the_district",
       "canonicalId": "imax_us_ut_south_jordan_megaplex_20_and_imax_at_the_district",
       "kind": "cinema",
@@ -38228,6 +41970,7 @@ window.LIEMAX_DATA = {
       "state": "UT",
       "stateName": "Utah",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "South Jordan · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38239,6 +41982,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38331,6 +42076,7 @@ window.LIEMAX_DATA = {
       "state": "UT",
       "stateName": "Utah",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Vineyard · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38342,6 +42088,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38434,6 +42182,7 @@ window.LIEMAX_DATA = {
       "state": "UT",
       "stateName": "Utah",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "West Valley City · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38445,6 +42194,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38537,6 +42288,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Charlottesville · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38548,6 +42300,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38640,6 +42394,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fredericksburg · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38651,6 +42406,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38743,6 +42500,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Hampton · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38754,6 +42512,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38846,6 +42606,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Hampton · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38857,6 +42618,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -38949,6 +42712,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Manassas · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -38960,6 +42724,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39052,6 +42818,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Midlothian · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39063,6 +42830,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39155,6 +42924,7 @@ window.LIEMAX_DATA = {
       "state": "VA",
       "stateName": "Virginia",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Richmond · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39166,6 +42936,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39258,6 +43030,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bellevue · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39269,6 +43042,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39361,6 +43136,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Bellingham · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39372,6 +43148,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39464,6 +43242,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Gig Harbor · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39475,6 +43254,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39567,6 +43348,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Issaquah · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39578,6 +43360,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39670,6 +43454,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Lacey · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -39681,6 +43466,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39773,6 +43560,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon + 15/70 Film",
       "tag": "IMAX 15/70 + Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as 15/70 film plus digital Xenon; current venue status and projection status may have changed.",
@@ -39784,6 +43572,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -39896,109 +43686,6 @@ window.LIEMAX_DATA = {
       }
     },
     {
-      "id": "imax_us_wa_seattle_regal_thornton_place_stadium_14_and_imax",
-      "canonicalId": "imax_us_wa_seattle_regal_thornton_place_stadium_14_and_imax",
-      "kind": "cinema",
-      "name": "Regal Thornton Place Stadium 14 & IMAX",
-      "city": "Seattle",
-      "state": "WA",
-      "stateName": "Washington",
-      "isPreset": false,
-      "sub": "Seattle · LFExaminer 2021 · IMAX Digital Xenon",
-      "tag": "IMAX Xenon",
-      "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
-      "screen": {
-        "w": 47.900264,
-        "h": 26.574804,
-        "ar": 1.8024691358024691,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "community_estimate",
-        "geometry": "flat",
-        "domeCoveragePct": null,
-        "domeHFov": null,
-        "domeVFov": null
-      },
-      "seat": {
-        "capacity": 299,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
-      },
-      "defaultPresentationAr": 1.9,
-      "isHybrid": false,
-      "presentationModes": [
-        {
-          "id": "digital_190",
-          "ar": 1.9,
-          "label": "1.90 · IMAX Digital",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_239",
-          "ar": 2.39,
-          "label": "2.39 · Scope",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        },
-        {
-          "id": "digital_185",
-          "ar": 1.85,
-          "label": "1.85 · Flat",
-          "enabled": true,
-          "isBookingDependent": false,
-          "isFilmMode": false,
-          "projection": "digital"
-        }
-      ],
-      "projection": {
-        "id": "digital",
-        "label": "IMAX Digital Xenon",
-        "light": "Dual Xenon",
-        "resH": 2048,
-        "resV": 1080,
-        "scanEquivLow": null,
-        "scanEquivHigh": null,
-        "scanEquivLabel": "2K per projector (2048 × 1080); dual-stacked for brightness, not resolution",
-        "brightness_fl": 22,
-        "brightness_nits_full": null,
-        "nativeContrast": 2500,
-        "isPerPixelEmissive": false,
-        "hdrCategory": "sdr",
-        "hdrLabel": "—",
-        "hdrDynamic": null,
-        "min_ar": 1.9,
-        "type": "imax_dual_xenon",
-        "display_name": "IMAX Digital Xenon"
-      },
-      "filmProjection": null,
-      "commercialFilms": false,
-      "sources": {
-        "screen": {
-          "q": "lfexaminer",
-          "note": "LFExaminer theater table, last updated 2021-10-17 — 26.5 x 48.0 ft./ 8.1 x 14.6 m.."
-        },
-        "brightness": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "contrast": {
-          "q": "published_cto",
-          "note": "Format average inherited from the matching canonical projection preset."
-        },
-        "seat": {
-          "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
-        }
-      }
-    },
-    {
       "id": "imax_us_wa_spokane_amc_river_park_square_20_and_imax",
       "canonicalId": "imax_us_wa_spokane_amc_river_park_square_20_and_imax",
       "kind": "cinema",
@@ -40007,6 +43694,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Spokane · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -40018,6 +43706,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -40110,6 +43800,7 @@ window.LIEMAX_DATA = {
       "state": "WA",
       "stateName": "Washington",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Vancouver · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -40121,6 +43812,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -40213,6 +43906,7 @@ window.LIEMAX_DATA = {
       "state": "WI",
       "stateName": "Wisconsin",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Fitchburg · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -40224,6 +43918,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -40316,6 +44012,7 @@ window.LIEMAX_DATA = {
       "state": "WI",
       "stateName": "Wisconsin",
       "isPreset": false,
+      "dataSource": "lfexaminer",
       "sub": "Wauwatosa · LFExaminer 2021 · IMAX Digital Xenon",
       "tag": "IMAX Xenon",
       "blurb": "Supplemental LFExaminer archival row last updated in 2021. Listed as IMAX digital Xenon; current venue status and projection status may have changed.",
@@ -40327,6 +44024,8 @@ window.LIEMAX_DATA = {
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
         "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": 5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -40425,7 +44124,9 @@ window.LIEMAX_DATA = {
         "sizeTier": null,
         "sizeLabel": null,
         "widthConfidence": null,
-        "geometry": "flat"
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": null
       },
       "seat": {
         "front": 4,
@@ -40527,7 +44228,9 @@ window.LIEMAX_DATA = {
         "sizeTier": null,
         "sizeLabel": null,
         "widthConfidence": null,
-        "geometry": "flat"
+        "geometry": "flat",
+        "curvatureRadiusFt": null,
+        "screenBottomFt": null
       },
       "seat": {
         "front": 5,
@@ -40718,14 +44421,18 @@ window.LIEMAX_DATA = {
     }
   },
   "db": {
-    "total_us_imax": 380,
-    "imax_lite_count": 105,
-    "liemax_count": 251,
-    "liemax_pct": 66,
-    "liemax_lfexaminer_count": 245,
-    "liemax_lfexaminer_pct": 64,
-    "liemax_current_source_count": 6,
-    "not_full_143_digital_count": 356,
+    "total_us_imax": 404,
+    "current_r_imax_count": 180,
+    "lfexaminer_supplemental_count": 224,
+    "full_143_projection_capable_count": 26,
+    "commercial_full_143_projection_capable_count": 24,
+    "imax_lite_count": 149,
+    "liemax_count": 231,
+    "liemax_pct": 57,
+    "liemax_lfexaminer_count": 224,
+    "liemax_lfexaminer_pct": 55,
+    "liemax_current_source_count": 7,
+    "not_full_143_digital_count": 380,
     "not_full_143_digital_pct": 94,
     "gt_laser_count": 14,
     "film_conditional_count": 21,

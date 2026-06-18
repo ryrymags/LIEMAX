@@ -1,11 +1,18 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype — intentionally not polished. A full Overhaul V2 redesign is next."
+Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype with a new Step 6 seed: a venue-bound flat/curved IMAX 3D POV comparison module. A full Overhaul V2 redesign is still pending."
 
 Current priority: Overhaul V2 — ground-up website redesign per the Overhaul Bible (`Downloads/Overhaul V2/LIEMAX-Overhaul-Bible.md`). Data layer is ready; no new data work is needed before starting the build.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
+
+Step 6 POV seed complete as of 2026-06-18:
+- The rough `imax-3Dpov-simulator.html` prototype is archived at `docs/archive/prototypes/imax-3d-pov-simulator.prototype.html` with README notes and a generated neutral reference-frame texture replacing the embedded film/base64 image.
+- First production target is `docs/pov.js`, exposed as `window.LIEMAX_POV`, data-bound to generated venue screen/seat/projection fields.
+- First supported scope is flat and slightly curved IMAX rooms in the advanced comparison workbench after the existing 2D scale stage.
+- Dome POV remains WIP because it needs fisheye/hemisphere mapping; dome venues should show the WIP copy and continue using the 2D dome scale.
+- 2026-06-18 follow-up: added a user-supplied local 1.43:1 WebP test asset at `docs/assets/pov/spiderverse-143-reference.webp` and tightened `docs/pov.js` projection-window fitting so wide physical screens render the active 1.90/1.43 presentation rectangle before source-image crop is applied.
 
 ## Priority 0 Working Context
 
@@ -118,8 +125,8 @@ Completed 2026-05-03:
 - Updated product taxonomy so LIEMAX means legacy `imax_dual_xenon` only, while modern laser IMAX capped at 1.90 (`imax_cola`, `imax_laser_xt`, and GT Laser on a 1.90 screen) classifies as `imax_lite`.
 - Hybrid CoLa + 15/70 venues now explain that regular digital showings are IMAX Lite, not LIEMAX.
 - Schema bumped to `1.5.0` with `screen.width_confidence`; 143190/r-imax rows mark confirmed width, LFExaminer/frontend typical rows mark community-estimate width, and width sub-labels only fire from confirmed widths.
-- Generated docs DB now exposes `total_us_imax`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
-- Current generated national split: 380 U.S. IMAX rows; 105 IMAX Lite; 251 LIEMAX; 246 LIEMAX rows from archival LFExaminer; 356 / 94% not full-height 1.43 digital; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
+- Generated docs DB now exposes `total_us_imax`, `current_r_imax_count`, `lfexaminer_supplemental_count`, `full_143_projection_capable_count`, `commercial_full_143_projection_capable_count`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
+- Current generated national split after the 2026-06-05 r-imax refresh: 404 U.S. IMAX rows total; 180 current r-imax rows; 224 archival LFExaminer supplemental Xenon rows; 149 IMAX Lite; 231 LIEMAX; 224 LIEMAX rows from archival LFExaminer; 380 / 94% not full-height 1.43 digital; 26 current r-imax rows with a flat 1.43 screen and at least one 1.43 projection path, 24 of which show commercial movies; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional by the current flat/full-height predicate; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
 - Overhaul V1 planning docs were updated to use `{{db.*}}` tokens, resolve DMR first introduction to Block 4, and keep Layer 3 chevrons inert until real anchors exist.
 
 Pre-GUI taxonomy verification:
@@ -168,6 +175,8 @@ Screen Tags + Filters verification:
 
 ## Known Low-Confidence Items (tracked, not blockers)
 
+- 2026-06-05 Odyssey / 15/70 history audit: IMAX's June 4, 2026 `THE ODYSSEY in IMAX 70mm Film` list and the user-provided `IMAX - 70mm Theater History - 70mm History.csv` both show 39 open global Odyssey 15/70 bookings, including 24 U.S. venues. Current generated stats expose `film_conditional_count: 21`, with only 18 direct U.S. overlaps under the site's current flat/1.43 predicate. Official/history lists include LA Live, Colorado Springs, and Tennessee Aquarium without matching `filmProjection` in current docs data, and include TCL Chinese, Denver, and Rochester despite current screen AR rows excluding them from `film_conditional_count`; current stats also count stale LFExaminer rows like Fresno, Orlando, and Boise that are not on the Odyssey booking list. Resolve by splitting "can run/book IMAX 15/70 film" from "can show full-height 1.43 on film" before publicizing 15/70 counts.
+- 2026-06-05 live 143190/r-imax U.S. refresh complete: `src/data/fixtures/imax_143190_us_rows.json` now has 180 U.S. rows from current `r-imax/imaxguide` `data/americas/unitedstates.csv`, up from the repo's old 133-row imported snapshot. Docs generation suppresses the generated Providence duplicate in favor of the authored `apple_providence_imax` record while still using the full r-imax set for LFExaminer conflict suppression. Live r-imax still yields 14 flat 1.43 GT Laser rows and 10 dome rows under current predicates; 26 current r-imax rows have both a flat 1.43-ish screen and at least one 1.43 projection path, or 24 when restricted to rows that show commercial movies. 15/70 still differs: 19 U.S. rows have a non-`No` film projector, only 16 are flat full-height 1.43, and the Odyssey/history list proves at least 24 U.S. venues can be booked for Odyssey 15/70. Current `total_us_imax: 404` is a mixed docs-bundle count: 180 current r-imax rows plus 224 LFExaminer archival Xenon supplement rows.
 - `dolby_cinema_single_laser.json` brightness_fl: ~31 fL is a community estimate from firsthand AMC Southlands reports (May 2025); no Dolby-published per-venue fL spec yet.
 - `cinemark_xd.json` brightness_fl: ~16 fL is derived from Barco SP4K specs + screen geometry; Cinemark publishes no fL target.
 - Reading GT workbench seating distances: front 40 ft / mid 75 ft / back 84 ft are community/derived estimates for a dedicated GT auditorium, not published venue measurements.

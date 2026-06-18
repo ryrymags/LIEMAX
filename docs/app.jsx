@@ -11,6 +11,7 @@ const M = window.LIEMAX_MATH;
 const W = window.LIEMAX_WORKBENCH;
 const STAGE = window.LIEMAX_STAGE;
 const DIAG = window.LIEMAX_DIAGNOSE;
+const POV = window.LIEMAX_POV;
 
 // ─── Formatting helpers ────────────────────────────────────────────────────────
 
@@ -102,6 +103,16 @@ function realCinemaVenues() {
   return D.venues.filter(v => v.kind === "cinema" && !v.isPreset);
 }
 
+function hasFlat143Screen(venue) {
+  return venue?.screen?.geometry !== "hemispherical" && venue?.screen?.ar != null && venue.screen.ar <= 1.45;
+}
+
+function hasFlat143ProjectionPath(venue) {
+  return hasFlat143Screen(venue) &&
+    ((venue?.projection?.type === "imax_gt_dual_laser" && venue.projection?.min_ar != null && venue.projection.min_ar <= 1.43) ||
+      venue?.filmProjection?.min_ar <= 1.43);
+}
+
 function categoryCounts(venues) {
   const total = venues.length;
   const counts = {
@@ -110,6 +121,8 @@ function categoryCounts(venues) {
     liemax: 0,
     true143: 0,
     film143: 0,
+    full143Projection: 0,
+    commercialFull143Projection: 0,
     dome: 0,
     hybrid: 0,
     unknown: 0,
@@ -120,6 +133,8 @@ function categoryCounts(venues) {
     if (category === "liemax") counts.liemax += 1;
     if (category === "true_143_film" || category === "true_143_laser") counts.true143 += 1;
     if (category === "true_143_film" || category === "true_film_lie_dig") counts.film143 += 1;
+    if (hasFlat143ProjectionPath(v)) counts.full143Projection += 1;
+    if (v.commercialFilms && hasFlat143ProjectionPath(v)) counts.commercialFull143Projection += 1;
     if (category === "true_dome") counts.dome += 1;
     if (category === "true_film_lie_dig") counts.hybrid += 1;
     if (category === "unknown") counts.unknown += 1;
@@ -578,7 +593,7 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
         <div className="picker-v3__sub">{venue.sub}</div>
         {selectedTags.length > 0 && (
           <div className="picker-v3__selected-tags" aria-label={`Side ${side} selected tags`}>
-            {selectedTags.map(tag => <VisibleTag key={tag.text} tag={tag} />)}
+            {selectedTags.map(tag => <VisibleTag key={`${tag.text}-${tag.tooltip || ""}`} tag={tag} />)}
           </div>
         )}
         <div className="meta-chips" onClick={e => e.stopPropagation()}>
@@ -645,7 +660,7 @@ function Picker({ side, sideColor, venue, presAr, filmMode, presentationNote, on
                     </div>
                     {tags.length > 0 && (
                       <span className="picker-v3__item-tags">
-                        {tags.map(tag => <VisibleTag key={tag.text} tag={tag} className="picker-v3__item-tag" />)}
+                        {tags.map(tag => <VisibleTag key={`${tag.text}-${tag.tooltip || ""}`} tag={tag} className="picker-v3__item-tag" />)}
                       </span>
                     )}
                   </button>
@@ -754,6 +769,56 @@ function Stage({ venueA, venueB, statsA, statsB, filmModeA, filmModeB }) {
         Drawn to true relative scale. {hasDome ? "Dome shown as scaled circular cross-section with filled research-default coverage." : "Solid fill = visible content area · Translucent outline = full physical screen."} Figure = 5ʹ9ʺ.
         {" "}Side {biggerSide} screen surface is <strong>{ratio}×</strong> the other.
       </div>
+    </section>
+  );
+}
+
+// ─── 3D POV comparison ───────────────────────────────────────────────────────
+
+function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB, seat }) {
+  const mountRef = useRef(null);
+  const modelA = useMemo(() => POV?.modelForVenue(venueA, {
+    side: "A",
+    presentationAr: presArA,
+    filmMode: filmModeA,
+    seat,
+  }), [venueA, presArA, filmModeA, seat]);
+  const modelB = useMemo(() => POV?.modelForVenue(venueB, {
+    side: "B",
+    presentationAr: presArB,
+    filmMode: filmModeB,
+    seat,
+  }), [venueB, presArB, filmModeB, seat]);
+
+  useEffect(() => {
+    if (!mountRef.current || !POV || !modelA || !modelB) return undefined;
+    const comparison = POV.createComparison(mountRef.current, modelA, modelB, { syncLook: true });
+    return () => comparison.dispose();
+  }, [modelA, modelB]);
+
+  function modelSummary(model) {
+    if (!model) return "POV module unavailable";
+    if (!model.supported) return model.unsupportedReason;
+    const curve = model.curveRadiusFactor > 0 ? "curved screen" : "flat screen";
+    return `${model.seatKey} seat · ${model.presentationAr.toFixed(2)}:1 presentation · ${curve} · ${model.seatingStyle} seating`;
+  }
+
+  return (
+    <section className="pov" id="pov-comparison" aria-label="3D POV comparison">
+      <div className="pov__head">
+        <div>
+          <span className="pov__eyebrow">3D POV comparison</span>
+          <h4>What that seat actually feels like</h4>
+        </div>
+        <div className="pov__meta">
+          <span>A · {modelSummary(modelA)}</span>
+          <span>B · {modelSummary(modelB)}</span>
+        </div>
+      </div>
+      <div ref={mountRef} className="pov__mount" />
+      <p className="pov__caption">
+        Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. The projected image is a local 1.43 reference asset so the 1.90 crop and GT full-height frame are visible.
+      </p>
     </section>
   );
 }
@@ -923,17 +988,20 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
     liemax: D.db?.liemax_count ?? national.liemax,
     true143: D.db?.gt_laser_count ?? national.true143,
     film143: D.db?.film_conditional_count ?? national.film143,
+    full143Projection: D.db?.full_143_projection_capable_count ?? national.full143Projection,
+    commercialFull143Projection: D.db?.commercial_full_143_projection_capable_count ?? national.commercialFull143Projection,
     dome: D.db?.dome_count ?? national.dome,
     notFull143Digital: D.db?.not_full_143_digital_count ?? (national.imaxLite + national.liemax),
     notFull143DigitalPct: D.db?.not_full_143_digital_pct ?? Math.round(((national.imaxLite + national.liemax) / Math.max(1, national.total)) * 100),
     liemaxLfExaminer: D.db?.liemax_lfexaminer_count ?? null,
   };
   const statItems = [
-    { label: "IMAX rows", value: stats.total, sub: selectedState ? "in selected state" : "U.S. film / laser / xenon / dome rows" },
+    { label: "IMAX rows", value: stats.total, sub: selectedState ? "in selected state" : "current r-imax + archival Xenon" },
     { label: "Not full 1.43 digital", value: selectedState ? `${stats.imaxLite + stats.liemax} (${pct(stats.imaxLite + stats.liemax, stats.total)})` : `${stats.notFull143Digital} (${stats.notFull143DigitalPct}%)`, sub: "IMAX Lite + LIEMAX" },
     { label: "IMAX Lite", value: `${stats.imaxLite} (${pct(stats.imaxLite, stats.total)})`, sub: "CoLa / Laser XT capped at 1.90" },
     { label: "LIEMAX", value: `${stats.liemax} (${pct(stats.liemax, stats.total)})`, sub: stats.liemaxLfExaminer == null ? "legacy Dual Xenon" : `${stats.liemaxLfExaminer} archival LFExaminer rows` },
     { label: "True flat 1.43", value: stats.true143, sub: "GT Laser every digital showtime" },
+    { label: "Full 1.43 capable", value: selectedState ? stats.full143Projection : `${stats.commercialFull143Projection} movie / ${stats.full143Projection} raw`, sub: "1.43 screen + 1.43 projection path" },
     { label: "15/70 capable", value: stats.film143, sub: "booked film engagements only" },
     { label: "Dome", value: stats.dome, sub: "fixed 180° × 125° coverage" },
   ];
@@ -963,7 +1031,7 @@ function DataStatsPanel({ selectedState, onSelectState, states }) {
         ))}
       </div>
       <p className="data-stats__note">
-        Based on the current static docs bundle: {D.db?.total_us_imax ?? national.total} U.S. IMAX rows from 143190 / r-imax plus low-confidence archival LFExaminer Xenon rows.
+        Based on the current static docs bundle: {D.db?.total_us_imax ?? national.total} U.S. IMAX rows, split between {D.db?.current_r_imax_count ?? "current"} current 143190 / r-imax rows and {D.db?.lfexaminer_supplemental_count ?? "supplemental"} low-confidence archival LFExaminer Xenon rows.
         LIEMAX now means legacy Dual Xenon; most LIEMAX rows come from LFExaminer 2021 and may be stale, while 143190 remains the fresher source when both list the same theater.
         State stats only appear after you choose a state; no IP geolocation is used.
       </p>
@@ -1411,7 +1479,7 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
             {[venue.city, venue.stateName || venue.state].filter(Boolean).join(" · ")}
           </div>
           <div className="diagnosis__tags" aria-label="Visible theater tags">
-            {quickResultTags(venue).map(tag => <VisibleTag key={tag.text} tag={tag} />)}
+            {quickResultTags(venue).map(tag => <VisibleTag key={`${tag.text}-${tag.tooltip || ""}`} tag={tag} />)}
           </div>
         </div>
         <div className="cat-badge">
@@ -1508,7 +1576,7 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
       <div className="diagnosis__actions">
         {!isTrue143 && (
           <button className="action-btn action-btn--primary" onClick={onCompareTrue} type="button">
-            Compare against True IMAX GT<span className="action-btn__arrow">→</span>
+            See the 3D POV comparison<span className="action-btn__arrow">→</span>
           </button>
         )}
         <button className="action-btn" onClick={onCompareAnother} type="button">
@@ -1647,7 +1715,8 @@ function App() {
 
   function handleCompareTrue() {
     if (selected) handleChangeA(selected);
-    const gt = D.venues.find(v => v.id === "imax_gt_typical");
+    const gt = D.venues.find(v => v.id === "imax_us_ny_new_york_amc_lincoln_square_13_and_imax") ||
+      D.venues.find(v => v.id === "imax_gt_typical");
     if (gt) handleChangeB(gt);
     openWorkbench();
   }
@@ -1741,9 +1810,18 @@ function App() {
 
           <Stage venueA={sideA} venueB={sideB} statsA={statsA} statsB={statsB}
             filmModeA={filmModeA} filmModeB={filmModeB} />
+          <SeatSelector sideA={sideA} sideB={sideB} seat={seat} onChange={setSeat} />
+          <PovComparison
+            venueA={sideA}
+            venueB={sideB}
+            presArA={statsA.presAr}
+            presArB={statsB.presAr}
+            filmModeA={filmModeA}
+            filmModeB={filmModeB}
+            seat={seat}
+          />
           <Verdict verdict={verdict} contentLabel={verdictContentLabel} />
           <StatGrid rows={rows} sideA={sideA} sideB={sideB} statsA={statsA} statsB={statsB} />
-          <SeatSelector sideA={sideA} sideB={sideB} seat={seat} onChange={setSeat} />
           <DetailsDrawer open={detailsOpen} onToggle={() => setDetailsOpen(o => !o)} />
         </section>
       )}

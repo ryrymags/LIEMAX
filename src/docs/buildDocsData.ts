@@ -30,6 +30,12 @@ type JsonObject = Record<string, any>;
 
 const root = path.resolve(__dirname, '../..');
 const checkOnly = process.argv.includes('--check');
+const R_IMAX_LAST_VERIFIED = '2026-06-05';
+const R_IMAX_SOURCE_URL = 'https://github.com/r-imax/imaxguide/blob/main/data/americas/unitedstates.csv';
+const GENERATED_143190_ROW_SUPPRESSIONS = new Set([
+  // Authored canonical record carries venue-specific Providence caveats; live r-imax uses the older venue name.
+  'RI|Providence|Providence Place Cinemas 16 and IMAX',
+]);
 
 function readJson<T = any>(relativePath: string): T {
   return JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8')) as T;
@@ -113,11 +119,20 @@ function isFullFlat143Digital(venue: JsonObject): boolean {
     venue.screen.ar <= 1.45;
 }
 
-function isFilmConditional143(venue: JsonObject): boolean {
-  return Boolean(venue.filmProjection) &&
-    venue.screen?.geometry !== 'hemispherical' &&
+function isFlat143Screen(venue: JsonObject): boolean {
+  return venue.screen?.geometry !== 'hemispherical' &&
     venue.screen?.ar != null &&
     venue.screen.ar <= 1.45;
+}
+
+function hasFlat143ProjectionPath(venue: JsonObject): boolean {
+  return isFlat143Screen(venue) &&
+    (isFullFlat143Digital(venue) || venue.filmProjection?.min_ar <= 1.43);
+}
+
+function isFilmConditional143(venue: JsonObject): boolean {
+  return Boolean(venue.filmProjection) &&
+    isFlat143Screen(venue);
 }
 
 function isDomeVenue(venue: JsonObject): boolean {
@@ -149,15 +164,24 @@ function pct(part: number, total: number): number {
 function buildDb(venues: JsonObject[]): JsonObject {
   const latestDolbySnapshot = mostRecentDolbyCinemaSnapshot(readDolbyCinemaSnapshots());
   const cinemaVenues = venues.filter(isRealCinemaVenue);
+  const currentRimaxVenues = cinemaVenues.filter((venue) => venue.dataSource === 'r_imax_csv');
+  const lfExaminerVenues = cinemaVenues.filter((venue) => venue.dataSource === 'lfexaminer');
   const imaxLiteCount = cinemaVenues.filter(isImaxLiteVenue).length;
   const liemaxVenues = cinemaVenues.filter((venue) => LIEMAX_PROJECTOR_TYPES.has(venue.projection?.type));
   const liemaxCount = liemaxVenues.length;
-  const liemaxLfExaminerCount = liemaxVenues.filter((venue) => venue.sources?.screen?.q === 'lfexaminer').length;
+  const liemaxLfExaminerCount = liemaxVenues.filter((venue) => venue.dataSource === 'lfexaminer').length;
   const liemaxCurrentSourceCount = liemaxCount - liemaxLfExaminerCount;
   const notFull143DigitalCount = imaxLiteCount + liemaxCount;
+  const currentFull143ProjectionCapableCount = currentRimaxVenues.filter(hasFlat143ProjectionPath).length;
 
   return {
     total_us_imax: cinemaVenues.length,
+    current_r_imax_count: currentRimaxVenues.length,
+    lfexaminer_supplemental_count: lfExaminerVenues.length,
+    full_143_projection_capable_count: currentFull143ProjectionCapableCount,
+    commercial_full_143_projection_capable_count: currentRimaxVenues
+      .filter((venue) => venue.commercialFilms)
+      .filter(hasFlat143ProjectionPath).length,
     imax_lite_count: imaxLiteCount,
     liemax_count: liemaxCount,
     liemax_pct: pct(liemaxCount, cinemaVenues.length),
@@ -321,8 +345,8 @@ const generatedVenueOverrides: Record<string, JsonObject> = {
 
 function buildGeneratedImaxVenue(row: any[], authoredByKey: Map<string, JsonObject>): JsonObject {
   const record = map143190RowToVenue(rowToImportObject(row), {
-    lastVerified: '2026-05-02',
-    sourceUrl: 'https://143190.xyz/',
+    lastVerified: R_IMAX_LAST_VERIFIED,
+    sourceUrl: R_IMAX_SOURCE_URL,
   }) as JsonObject;
   const docsId = `imax_us_${String(row[0]).toLowerCase()}_${slugify(`${row[1]}_${row[2]}`)}`;
   const screenWidthM = record.screen?.width_m;
@@ -678,6 +702,7 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
     state: record.state_province ?? '',
     stateName: record.state_province === 'Format presets' ? 'Format presets' : stateName(record.state_province),
     isPreset: Boolean(docsFrontend.isPreset),
+    dataSource: record.metadata?.data_source ?? null,
     sub: docsFrontend.sub ?? (
       isDome
         ? `${record.city} · Dome · ${projectorSummaryLabel(docsProj, docsFilm)}`
@@ -693,6 +718,8 @@ function toDocsVenue(record: JsonObject, preset: JsonObject): JsonObject {
       sizeLabel: sizeTier?.label ?? null,
       widthConfidence: resolved.screen.width_confidence ?? null,
       geometry: resolved.screen.geometry === 'slight_cylindrical_curve' ? 'slight_curve' : resolved.screen.geometry,
+      curvatureRadiusFt: resolved.screen.curvature_radius_ft ?? null,
+      screenBottomFt: resolved.screen.screen_bottom_height_ft ?? null,
       domeCoveragePct: resolved.screen.dome_coverage_pct == null ? null : resolved.screen.dome_coverage_pct / 100,
       domeHFov: resolved.screen.dome_fov_horizontal_deg ?? null,
       domeVFov: resolved.screen.dome_fov_vertical_deg ?? null,
@@ -736,6 +763,8 @@ function toDocsHome(record: JsonObject, preset: JsonObject): JsonObject {
       sizeLabel: null,
       widthConfidence: null,
       geometry: 'flat',
+      curvatureRadiusFt: null,
+      screenBottomFt: null,
     },
     seat: docsFrontend.seat ?? {
       front: Math.max(1, resolved.viewing_distance_ft - 2),
@@ -785,6 +814,7 @@ function buildData() {
 
   const comparison = readJson<JsonObject>('src/data/frontend/comparison_records.json');
   const imaxRows = readJson<any[][]>('src/data/fixtures/imax_143190_us_rows.json');
+  const promotedImaxRows = imaxRows.filter((row) => !GENERATED_143190_ROW_SUPPRESSIONS.has(rowKey(row)));
   const lfExaminerRows = readJson<LFExaminerImportRow[]>('src/data/fixtures/lfexaminer_us_imax_rows.json');
   const imaxRowKeys = new Set(imaxRows.map(docs143190RowMatchKey));
   const authored143190MatchRows = authoredVenues
@@ -826,7 +856,7 @@ function buildData() {
   };
 
   const cinemaExamples = comparison.cinema_examples.map(buildFrontendCinemaRecord);
-  const generatedImaxVenues = imaxRows.map((row) => buildGeneratedImaxVenue(row, authoredByKey));
+  const generatedImaxVenues = promotedImaxRows.map((row) => buildGeneratedImaxVenue(row, authoredByKey));
   const generatedLFExaminerVenues = supplementalLFExaminerRows.map((row) => buildGeneratedLFExaminerVenue(row, authoredByKey));
   const homeRecords = comparison.home_displays.map(buildHomeRecord);
 
