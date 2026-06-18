@@ -215,6 +215,12 @@ const povDome = POV?.modelForVenue ? POV.modelForVenue(povDomeVenue, { presentat
 const povDomeCopy = "3D dome POV is WIP because dome projection needs fisheye/hemisphere mapping. Use the 2D dome scale for now.";
 assert("POV flat venue model is data-bound to 1.90 mid seat", povBostonCommon?.supported && povBostonCommon.seatKey === "mid" && closeEnough(povBostonCommon.presentationAr, 1.90, 0.01) && povBostonCommon.seatingStyle === "retrofit");
 assert("POV GT model applies curved screen and GT seating", povReadingGt?.supported && povReadingGt.curveRadiusFactor > 0 && povReadingGt.seatingStyle === "gt");
+assert("POV models share a fixed screen anchor for side-by-side alignment",
+  povBostonCommon?.layout?.screenZ === 0 &&
+  povReadingGt?.layout?.screenZ === povBostonCommon.layout.screenZ);
+assert("POV selected seats remain measured from the fixed screen anchor",
+  closeEnough(povBostonCommon?.seatDistance, bostonCommon.seat.mid, 0.01) &&
+  closeEnough(povReadingGt?.seatDistance, reading.seat.mid, 0.01));
 assert("POV projection window and texture crop match 1.90 vs GT 1.43 behavior",
   closeEnough(povBostonCommon?.projectionWindow?.w / povBostonCommon?.projectionWindow?.h, 1.90, 0.03) &&
   closeEnough(povBostonCommon?.sourceCrop?.v, 1.43 / 1.90, 0.02) &&
@@ -295,8 +301,8 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-4`)));
-assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-4"));
+assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-5`)));
+assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-5"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -309,7 +315,7 @@ assert("Diagnosis CTA opens the 3D POV comparison", appSource.includes("See the 
 assert("Diagnosis True IMAX comparison uses Lincoln Square fallback", appSource.includes("imax_us_ny_new_york_amc_lincoln_square_13_and_imax") && appSource.includes("D.venues.find(v => v.id === \"imax_gt_typical\")"));
 assert("POV module source exposes public API and the 1.43 reference image", povSource.includes("window.LIEMAX_POV") && povSource.includes("modelForVenue") && povSource.includes("createComparison") && povSource.includes("spiderverse-143-reference.webp") && fs.existsSync(povReferenceImagePath) && fs.statSync(povReferenceImagePath).size > 1000);
 assert("POV source keeps dome renderer excluded", povSource.includes(povDomeCopy));
-assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const look = { yaw: 0, pitch: 0 }") && povSource.includes("viewer.onLookChanged = () => viewers.forEach") && povSource.includes("syncLook"));
+assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const syncLook = options.syncLook !== false") && povSource.includes("const sharedLook = { yaw: 0, pitch: 0 }") && povSource.includes("syncLook ? viewers : [viewer]"));
 assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov__viewport.is-pseudo-fullscreen") && stylesSource.includes(".pov__wip"));
 assert("Sanitized POV prototype archive is preserved", prototypeReadmeSource.includes("rough prototype") && prototypeReadmeSource.includes("archive-only") && prototypeSource.includes("neutral reference frame") && !prototypeSource.includes("data:image/jpeg") && !prototypeSource.includes("base64"));
 const dataSource = fs.readFileSync(path.join(root, "docs/data.js"), "utf8");

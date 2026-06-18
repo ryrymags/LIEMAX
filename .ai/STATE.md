@@ -14,6 +14,7 @@ Step 6 POV seed complete as of 2026-06-18:
 - First supported scope is flat and slightly curved IMAX rooms in the advanced comparison workbench after the existing 2D scale stage.
 - Dome POV remains WIP because it needs fisheye/hemisphere mapping; dome venues should show the WIP copy and continue using the 2D dome scale.
 - 2026-06-18 follow-up: added a user-supplied local 1.43:1 WebP test asset at `docs/assets/pov/spiderverse-143-reference.webp` and tightened `docs/pov.js` projection-window fitting so wide physical screens render the active 1.90/1.43 presentation rectangle before source-image crop is applied.
+- 2026-06-18 follow-up: rebased `docs/pov.js` around a fixed screen-plane anchor so side-by-side POV renders keep screens aligned while selected seats, floor rake, and row markers remain measured from the screen; docs validation now covers the fixed anchor and seat-distance mapping.
 
 ## Priority 0 Working Context
 

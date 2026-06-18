@@ -7,6 +7,7 @@ window.LIEMAX_POV = (function () {
   const EYE_ABOVE_FLOOR_FT = 3.7;
   const DEFAULT_SCREEN_BOTTOM_FT = 5.0;
   const GT_SCREEN_BOTTOM_FT = 2.0;
+  const SCREEN_Z_FT = 0;
   const GT_CURVE_RADIUS_FACTOR = 1.5;
   const IMMERSION_WARN_HFOV = 53;
   const REFERENCE_IMAGE_SRC = "assets/pov/spiderverse-143-reference.webp";
@@ -101,6 +102,9 @@ window.LIEMAX_POV = (function () {
       seatKey,
       seatDistance: n(seatDistances[seatKey], n(seatDistances.mid, n(seatDistances.front, n(seatDistances.back, 60)))),
       seatDistances,
+      layout: {
+        screenZ: SCREEN_Z_FT,
+      },
       seatingStyle: curved && fullHeight ? "gt" : "retrofit",
       curveRadiusFactor: curved
         ? (curvatureRadiusFt && screenW ? curvatureRadiusFt / screenW : GT_CURVE_RADIUS_FACTOR)
@@ -132,8 +136,10 @@ window.LIEMAX_POV = (function () {
     root.className = `pov__grid ${models.length > 1 ? "pov__grid--compare" : ""}`;
     container.appendChild(root);
 
-    const look = { yaw: 0, pitch: 0 };
+    const syncLook = options.syncLook !== false;
+    const sharedLook = { yaw: 0, pitch: 0 };
     const viewers = models.map((model, index) => {
+      const look = syncLook ? sharedLook : { yaw: 0, pitch: 0 };
       const panel = document.createElement("div");
       panel.className = "pov__panel";
       panel.innerHTML =
@@ -148,7 +154,7 @@ window.LIEMAX_POV = (function () {
     });
 
     viewers.forEach((viewer) => {
-      viewer.onLookChanged = () => viewers.forEach((item) => item.applyCamera());
+      viewer.onLookChanged = () => (syncLook ? viewers : [viewer]).forEach((item) => item.applyCamera());
       viewer.applyCamera();
     });
 
@@ -315,6 +321,7 @@ window.LIEMAX_POV = (function () {
     const D = m.seatDistance;
     const screenBottom = m.screen.screenBottomFt;
     const screenCenterY = screenBottom + H / 2;
+    const screenZ = n(m.layout?.screenZ, SCREEN_Z_FT);
 
     const floor = buildFloor(D, m, this.floorHeightAt.bind(this));
     scene.add(floor);
@@ -324,7 +331,7 @@ window.LIEMAX_POV = (function () {
       buildCurvedPlane(W, H, 72, m.curveRadiusFactor),
       new THREE.MeshBasicMaterial({ color: 0x2a3038, side: THREE.DoubleSide })
     );
-    frame.position.set(0, screenCenterY, -D);
+    frame.position.set(0, screenCenterY, screenZ);
     scene.add(frame);
     this.meshes.push(frame);
 
@@ -332,7 +339,7 @@ window.LIEMAX_POV = (function () {
       buildCurvedPlane(W, H, 72, m.curveRadiusFactor),
       new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.DoubleSide })
     );
-    mask.position.set(0, screenCenterY, -D + 0.05);
+    mask.position.set(0, screenCenterY, screenZ + 0.05);
     scene.add(mask);
     this.meshes.push(mask);
 
@@ -342,20 +349,20 @@ window.LIEMAX_POV = (function () {
       buildCurvedPlane(active.w, active.h, 72, m.curveRadiusFactor),
       new THREE.MeshBasicMaterial({ map: this.texture, side: THREE.DoubleSide })
     );
-    image.position.set(0, screenCenterY, -D + 0.10);
+    image.position.set(0, screenCenterY, screenZ + 0.10);
     scene.add(image);
     this.meshes.push(image);
 
     ["front", "mid", "back"].forEach((key) => {
       const seatDist = n(m.seatDistances[key]);
       if (seatDist == null || seatDist >= D - 2) return;
-      const row = buildSeatRow(-(D - seatDist), this.floorHeightAt(seatDist));
+      const row = buildSeatRow(screenZ + seatDist, this.floorHeightAt(seatDist));
       scene.add(row);
       this.meshes.push(row);
     });
 
     const human = buildHuman();
-    human.position.set(W * 0.34, 0, -D + 1.4);
+    human.position.set(W * 0.34, 0, screenZ + 1.4);
     scene.add(human);
     this.meshes.push(human);
 
@@ -377,7 +384,9 @@ window.LIEMAX_POV = (function () {
   Viewer.prototype.applyCamera = function () {
     const THREE = window.THREE;
     const cam = this.camera;
-    cam.position.set(0, this.eye, 0);
+    const D = this.model.seatDistance;
+    const screenZ = n(this.model.layout?.screenZ, SCREEN_Z_FT);
+    cam.position.set(0, this.eye, screenZ + D);
     const pitch = this.basePitch + this.sharedLook.pitch;
     const yaw = this.sharedLook.yaw;
     const dir = new THREE.Vector3(
@@ -444,14 +453,21 @@ window.LIEMAX_POV = (function () {
   function buildFloor(cameraDistance, model, floorHeightAt) {
     const THREE = window.THREE;
     const halfW = Math.max(24, model.screen.w * 0.46);
-    const zFront = -cameraDistance - 10;
-    const zBack = 28;
+    const screenZ = n(model.layout?.screenZ, SCREEN_Z_FT);
+    const farthestSeat = Math.max(
+      cameraDistance,
+      n(model.seatDistances.back, cameraDistance),
+      n(model.seatDistances.mid, cameraDistance),
+      n(model.seatDistances.front, cameraDistance)
+    );
+    const zFront = screenZ - 10;
+    const zBack = screenZ + farthestSeat + 28;
     const steps = 90;
     const positions = [];
     const index = [];
     for (let j = 0; j <= steps; j++) {
       const z = zFront + (j / steps) * (zBack - zFront);
-      const distance = z + cameraDistance;
+      const distance = z - screenZ;
       const y = floorHeightAt(distance);
       positions.push(-halfW, y, z, halfW, y, z);
     }
