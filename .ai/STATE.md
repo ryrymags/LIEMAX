@@ -3,6 +3,7 @@
 Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype with a new Step 6 seed: a venue-bound flat/curved IMAX 3D POV comparison module. A full Overhaul V2 redesign is still pending."
 
 Current priority: Overhaul V2 — ground-up website redesign per the Overhaul Bible (`Downloads/Overhaul V2/LIEMAX-Overhaul-Bible.md`). Data layer is ready; no new data work is needed before starting the build.
+Branch cleanup note: `gui-wip` is now treated as the primary working branch. Useful artifacts from stale local experiment branches/worktrees were preserved under `.ai/archive/branch-salvage/` before pruning.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
