@@ -151,6 +151,7 @@ const pointeOrlando = findVenueByName("Regal Pointe Orlando Stadium 20 & IMAX");
 const lfExaminerXenon = findVenueByName("Regal Tikahtnu Commons Stadium 16 & IMAX");
 const lfExaminerHybrid = findVenueByName("Edwards Fresno Stadium 22 & IMAX");
 const santaAnita143190 = findVenueByName("AMC Santa Anita 16 & IMAX");
+const desertRidgeNoDims = findVenueByName("AMC DINE-IN Desert Ridge 18 & IMAX");
 const bostonCommonRows = D.venues.filter((venue) => venue.name.includes("Boston Common"));
 const providenceRows = D.venues.filter((venue) => venue.city === "Providence" && venue.state === "RI");
 const lincolnSquare = findVenueById("imax_us_ny_new_york_amc_lincoln_square_13_and_imax");
@@ -182,10 +183,29 @@ assert("LFExaminer supplemental venue is labeled Dual Xenon", lfExaminerXenon?.p
 assert("LFExaminer supplemental venue exposes archival source", lfExaminerXenon?.sources?.screen?.q === "lfexaminer" && lfExaminerXenon.sources.screen.note.includes("2021-10-17"));
 assert("143190 venues expose confirmed screen width confidence", bostonCommon?.screen?.widthConfidence === "confirmed");
 assert("LFExaminer venues expose community-estimate screen width confidence", lfExaminerXenon?.screen?.widthConfidence === "community_estimate");
-assert("Every non-preset cinema venue exposes a screen-size tier and label",
+assert("Every dimensioned non-preset cinema venue exposes a screen-size tier and label",
   D.venues
     .filter((venue) => venue.kind === "cinema" && !venue.isPreset)
+    .filter((venue) => venue.screen?.geometry === "hemispherical" || venue.screen?.w > 0)
     .every((venue) => typeof venue.screen?.sizeTier === "string" && typeof venue.screen?.sizeLabel === "string"));
+assert("Zero-valued r-imax dimensions are normalized to unknown instead of Small Screen",
+  desertRidgeNoDims?.screen?.w == null &&
+  desertRidgeNoDims?.screen?.h == null &&
+  desertRidgeNoDims?.seat?.front == null &&
+  desertRidgeNoDims?.seat?.mid == null &&
+  desertRidgeNoDims?.seat?.back == null &&
+  desertRidgeNoDims?.screen?.sizeTier == null &&
+  desertRidgeNoDims?.screen?.sizeLabel == null);
+assert("Generated non-dome cinema rows never expose zero screen dimensions or zero derived seat distances",
+  D.venues
+    .filter((venue) => venue.kind === "cinema" && !venue.isPreset && venue.screen?.geometry !== "hemispherical")
+    .every((venue) =>
+      venue.screen?.w !== 0 &&
+      venue.screen?.h !== 0 &&
+      venue.seat?.front !== 0 &&
+      venue.seat?.mid !== 0 &&
+      venue.seat?.back !== 0
+    ));
 assert("Natick uses official 76 x 55 ft screen, 279 seats, and Large Screen tier",
   closeEnough(natick?.screen?.w, 76, 0.01) &&
   closeEnough(natick?.screen?.h, 55, 0.01) &&
@@ -218,6 +238,8 @@ const povDolbyTypical = POV?.modelForVenue ? POV.modelForVenue(dolbyTypical, { s
 const povDomeVenue = D.venues.find((venue) => venue.screen?.geometry === "hemispherical");
 const povDome = POV?.modelForVenue ? POV.modelForVenue(povDomeVenue, { presentationAr: 1.43, seat: "mid" }) : null;
 const povDomeCopy = "3D dome POV is WIP because dome projection needs fisheye/hemisphere mapping. Use the 2D dome scale for now.";
+const statsDesertRidge = computeStats(desertRidgeNoDims, "mid", 1.90, 1.90, false);
+const desertRows = buildComparisonRows(statsDesertRidge, computeStats(bostonCommon, "mid", 1.90, 1.90, false));
 assert("POV flat venue model is data-bound to 1.90 mid seat", povBostonCommon?.supported && povBostonCommon.seatKey === "mid" && closeEnough(povBostonCommon.presentationAr, 1.90, 0.01) && povBostonCommon.seatingStyle === "retrofit");
 assert("POV GT model applies curved screen and GT seating", povReadingGt?.supported && povReadingGt.curveRadiusFactor > 0 && povReadingGt.seatingStyle === "gt");
 assert("POV GT geometry uses pit profile, shallow curve, and elevated front deck",
@@ -256,6 +278,20 @@ assert("POV projection window and texture crop match 1.90 vs GT 1.43 behavior",
   closeEnough(povReadingGt?.projectionWindow?.w / povReadingGt?.projectionWindow?.h, 1.43, 0.03) &&
   closeEnough(povReadingGt?.sourceCrop?.v, 1, 0.01));
 assert("POV dome model returns WIP copy instead of a renderer target", povDome && !povDome.supported && povDome.unsupportedReason === povDomeCopy);
+assert("POV invalid-dimension model reports unknown crop values instead of NaN",
+  POV?.modelForVenue &&
+  !POV.modelForVenue(desertRidgeNoDims, { presentationAr: 1.90, seat: "mid" }).supported &&
+  POV.modelForVenue(desertRidgeNoDims, { presentationAr: 1.90, seat: "mid" }).projectionWindow.w == null &&
+  POV.modelForVenue(desertRidgeNoDims, { presentationAr: 1.90, seat: "mid" }).sourceCrop.retainedPct == null);
+assert("Workbench invalid dimensions produce unknown scale stats instead of fake 180 degree wins",
+  statsDesertRidge.invalidGeometry === true &&
+  statsDesertRidge.dist == null &&
+  statsDesertRidge.contentHFov == null &&
+  statsDesertRidge.contentVFov == null &&
+  statsDesertRidge.visibleArea == null &&
+  desertRows.find((row) => row.id === "visible_hfov")?.winner === "unknown" &&
+  desertRows.find((row) => row.id === "area")?.aDisplay === "Unknown" &&
+  desertRows.find((row) => row.id === "util")?.aDisplay === "Unknown");
 
 const statsAssemblyRowCola = computeStats(assemblyRow, "front", 1.90, 1.90, false);
 const statsBostonCommonCola = computeStats(bostonCommon, "front", 1.90, 1.90, false);
@@ -318,6 +354,42 @@ const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8")
 const prototypeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/imax-3d-pov-simulator.prototype.html"), "utf8");
 const prototypeReadmeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/README.md"), "utf8");
 const povReferenceImagePath = path.join(root, "docs/assets/pov/spiderverse-143-reference.webp");
+
+class FakeSvgNode {
+  constructor(tag) {
+    this.tag = tag;
+    this.attrs = {};
+    this.children = [];
+    this.textContent = "";
+  }
+  get firstChild() {
+    return this.children[0] || null;
+  }
+  appendChild(child) {
+    this.children.push(child);
+    return child;
+  }
+  removeChild(child) {
+    this.children = this.children.filter((item) => item !== child);
+    return child;
+  }
+  setAttribute(key, value) {
+    this.attrs[key] = String(value);
+  }
+}
+
+function flattenSvg(node) {
+  return [node, ...node.children.flatMap(flattenSvg)];
+}
+
+context.document = {
+  documentElement: {},
+  createElementNS: (_ns, tag) => new FakeSvgNode(tag),
+};
+loadScript("docs/stage.js");
+const invalidStageSvg = new FakeSvgNode("svg");
+context.window.LIEMAX_STAGE_SINGLE(invalidStageSvg, desertRidgeNoDims, 1.90);
+
 assert("Picker includes LFExaminer Xenon database disclaimer", appSource.includes("supplemental Xenon-only rows from LFExaminer"));
 assert("Stats copy caveats LFExaminer 2021", appSource.includes("most LIEMAX rows come from LFExaminer 2021 and may be stale"));
 assert("Details drawer describes tiered seating assumptions", appSource.includes("tiered assumptions"));
@@ -336,6 +408,9 @@ assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not 
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
 assert("Single-stage renderer is available for diagnosis scale", stageSource.includes("LIEMAX_STAGE_SINGLE"));
 assert("Stage renderer draws dome diameter instead of rectangle only", stageSource.includes("ft dome diameter"));
+assert("Stage renderer renders fallback for unavailable dimensions",
+  flattenSvg(invalidStageSvg).some((node) => node.textContent === "Screen dimensions unavailable") &&
+  !flattenSvg(invalidStageSvg).some((node) => node.tag === "rect"));
 assert("Stage renderer uses resolved colors for SVG visibility", stageSource.includes("stageColor(\"--side-a\""));
 assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis-stage__svg") && stylesSource.includes("height: clamp(240px"));
 assert("PovComparison is mounted after the 2D stage", appSource.includes("function PovComparison") && appSource.includes("<PovComparison") && appSource.indexOf("<Stage venueA") < appSource.indexOf("<PovComparison"));

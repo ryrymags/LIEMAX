@@ -252,7 +252,7 @@ function screenSizeTier(screen: JsonObject | null | undefined): { tier: string; 
   if (!screen) return null;
   if (screen.geometry === 'hemispherical') return { tier: 'dome', label: 'Dome' };
   const widthFt = screen.width_ft ?? screen.w;
-  if (widthFt == null || !Number.isFinite(widthFt)) return null;
+  if (widthFt == null || !Number.isFinite(widthFt) || widthFt <= 0) return null;
   if (widthFt < 55) return { tier: 'small', label: 'Small Screen' };
   if (widthFt < 70) return { tier: 'medium', label: 'Medium Screen' };
   if (widthFt < 85) return { tier: 'large', label: 'Large Screen' };

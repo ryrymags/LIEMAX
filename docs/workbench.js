@@ -3,7 +3,17 @@ window.LIEMAX_WORKBENCH = (function () {
   const M = window.LIEMAX_MATH;
   const HDR_RANK = { dolby_vision: 4, hdr10plus: 3, hdr10: 2, photochemical: 1, sdr: 0, unknown: -1 };
   const VERDICT_LABEL = { visible_hfov: "horizontal immersion", visible_vfov: "vertical immersion", ppd: "sharpness", area: "visible image area", util: "screen utilization", brightness: "brightness", contrast: "native contrast", hdr: "HDR black level", depth: "picture depth" };
+  function isPositiveNumber(value) {
+    return typeof value === "number" && Number.isFinite(value) && value > 0;
+  }
+  function emptyMask(presAr, geometry) {
+    return { effW: null, effH: null, areaUtilPct: null, letterbox: false, pillarbox: false, cropped: false, projectedWindow: { w: null, h: null, ar: presAr ?? null, geometry: geometry ?? null }, physicalClipped: false };
+  }
+  function hasRenderableFlatGeometry(venue, dist) {
+    return isPositiveNumber(venue?.screen?.w) && isPositiveNumber(venue?.screen?.h) && isPositiveNumber(dist);
+  }
   function visibleContentRect(screen, contentAR, presentation) {
+    if (!isPositiveNumber(screen?.w) || !isPositiveNumber(screen?.h) || !isPositiveNumber(presentation.ar)) return emptyMask(presentation.ar, screen?.geometry);
     return M.visibleContentRect(screen, contentAR, presentation);
   }
   function brightnessFL(venue) { return M.brightnessFL(venue); }
@@ -38,8 +48,14 @@ window.LIEMAX_WORKBENCH = (function () {
       const ppdVal = proj.resH != null ? proj.resH / domeHFov : (proj.scanEquivLow != null && proj.scanEquivHigh != null ? ((proj.scanEquivLow + proj.scanEquivHigh) / 2) / domeHFov : null);
       return { dist, physicalFov: domeHFov, ppdVal, presAr, projWindow: { w: venue.screen.w, h: venue.screen.h, ar: 1.43, geometry: "hemispherical" }, mask: { effW: Math.sqrt(domeArea), effH: Math.sqrt(domeArea), areaUtilPct: coverage * 100, letterbox: false, pillarbox: false, cropped: false }, contentHFov: domeHFov, contentVFov: domeVFov, fl: brightnessFL({ projection: proj }), physicalUtil: coverage * 100, visibleArea: domeArea, isDome: true, proj };
     }
+    if (!hasRenderableFlatGeometry(venue, dist)) {
+      return { dist: isPositiveNumber(dist) ? dist : null, physicalFov: null, ppdVal: null, presAr, projWindow: { w: null, h: null, ar: presAr, geometry: venue.screen.geometry }, mask: emptyMask(presAr, venue.screen.geometry), contentHFov: null, contentVFov: null, fl: brightnessFL({ projection: proj }), physicalUtil: null, visibleArea: null, isDome: false, invalidGeometry: true, proj };
+    }
     const physicalFov = M.horizontalFovDeg(venue.screen.w, dist);
     const mask = visibleContentRect(venue.screen, contentAr, { ar: presAr, min_ar: presAr });
+    if (!isPositiveNumber(mask.effW) || !isPositiveNumber(mask.effH)) {
+      return { dist, physicalFov, ppdVal: null, presAr, projWindow: mask.projectedWindow, mask, contentHFov: null, contentVFov: null, fl: brightnessFL({ projection: proj }), physicalUtil: null, visibleArea: null, isDome: false, invalidGeometry: true, proj };
+    }
     const projWindow = mask.projectedWindow;
     const contentHFov = M.horizontalFovDeg(mask.effW, dist);
     const contentVFov = M.horizontalFovDeg(mask.effH, dist);
@@ -77,10 +93,10 @@ window.LIEMAX_WORKBENCH = (function () {
     rows.push({ ...makeRow("visible_hfov", "Visible horizontal FOV", statsA.contentHFov, statsB.contentHFov, fmtInt(statsA.contentHFov) + "°", fmtInt(statsB.contentHFov) + "°", true), explain: "How wide the movie image feels from your seat." });
     rows.push({ ...makeRow("visible_vfov", "Visible vertical FOV", statsA.contentVFov, statsB.contentVFov, fmtInt(statsA.contentVFov) + "°", fmtInt(statsB.contentVFov) + "°", true), explain: "How tall the movie image feels — the key IMAX immersion factor." });
     rows.push({ ...makeRow("ppd", "Pixels per degree", statsA.ppdVal, statsB.ppdVal, statsA.ppdVal == null ? projA.scanEquivLabel || "Unknown" : fmtInt(statsA.ppdVal) + " ppd", statsB.ppdVal == null ? projB.scanEquivLabel || "Unknown" : fmtInt(statsB.ppdVal) + " ppd", true), explain: "Perceived sharpness from this seat; higher usually looks crisper." });
-    const aArea = statsA.visibleArea ?? statsA.mask.effW * statsA.mask.effH;
-    const bArea = statsB.visibleArea ?? statsB.mask.effW * statsB.mask.effH;
-    rows.push({ ...makeRow("area", "Visible content area", aArea, bArea, fmtInt(aArea) + " sq ft", fmtInt(bArea) + " sq ft", true), explain: "How large the actual movie image is, after masking or cropping." });
-    rows.push({ ...makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, fmtInt(statsA.physicalUtil) + "%", fmtInt(statsB.physicalUtil) + "%", true), explain: "How much of the physical screen this movie format fills." });
+    const aArea = isPositiveNumber(statsA.visibleArea) ? statsA.visibleArea : (isPositiveNumber(statsA.mask.effW) && isPositiveNumber(statsA.mask.effH) ? statsA.mask.effW * statsA.mask.effH : null);
+    const bArea = isPositiveNumber(statsB.visibleArea) ? statsB.visibleArea : (isPositiveNumber(statsB.mask.effW) && isPositiveNumber(statsB.mask.effH) ? statsB.mask.effW * statsB.mask.effH : null);
+    rows.push({ ...makeRow("area", "Visible content area", aArea, bArea, aArea == null ? "Unknown" : fmtInt(aArea) + " sq ft", bArea == null ? "Unknown" : fmtInt(bArea) + " sq ft", true), explain: "How large the actual movie image is, after masking or cropping." });
+    rows.push({ ...makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, statsA.physicalUtil == null ? "Unknown" : fmtInt(statsA.physicalUtil) + "%", statsB.physicalUtil == null ? "Unknown" : fmtInt(statsB.physicalUtil) + "%", true), explain: "How much of the physical screen this movie format fills." });
     rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown", statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown", true), explain: "How much light reaches the screen; higher helps HDR and punch." });
     const aContrNum = projA.isPerPixelEmissive ? Infinity : projA.nativeContrast;
     const bContrNum = projB.isPerPixelEmissive ? Infinity : projB.nativeContrast;

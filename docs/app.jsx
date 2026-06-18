@@ -153,13 +153,23 @@ function widthBandLabel(venue) {
 
 function screenSizeLabel(venue) {
   if (!venue?.screen) return null;
-  if (venue.screen.sizeLabel) return venue.screen.sizeLabel;
   if (venue.screen.geometry === "hemispherical") return "Dome";
-  if (venue.screen.w == null) return null;
+  if (!isPositiveNumber(venue.screen.w)) return null;
+  if (venue.screen.sizeLabel) return venue.screen.sizeLabel;
   if (venue.screen.w < 55) return "Small Screen";
   if (venue.screen.w < 70) return "Medium Screen";
   if (venue.screen.w < 85) return "Large Screen";
   return "Giant Screen";
+}
+
+function isPositiveNumber(value) {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+function hasRenderableScreenGeometry(venue) {
+  if (!venue?.screen) return false;
+  if (venue.screen.geometry === "hemispherical") return isPositiveNumber(venue.screen.w);
+  return isPositiveNumber(venue.screen.w) && isPositiveNumber(venue.screen.h);
 }
 
 function screenSizeKey(venue) {
@@ -1064,16 +1074,31 @@ function SeatGeometryPanel({ venue }) {
     );
   }
 
+  if (!hasRenderableScreenGeometry(venue)) {
+    return (
+      <div className="seat-geometry">
+        <div className="seat-geometry__head">
+          <span>Seat geometry</span>
+          <strong>Dimensions unavailable</strong>
+        </div>
+        <p>
+          This source row does not publish usable screen dimensions yet, so LIEMAX does not estimate FOV or row-distance scale for it.
+        </p>
+      </div>
+    );
+  }
+
   const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
   const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
   const rows = ["front", "mid", "back"].map(seat => {
     const dist = venue.seat[seat];
+    const hasDist = isPositiveNumber(dist);
     return {
       seat,
       dist,
-      multiple: dist / venue.screen.w,
-      hfov: M.horizontalFovDeg(mask.effW, dist),
-      vfov: M.verticalFovDeg(mask.effH, dist),
+      multiple: hasDist ? dist / venue.screen.w : null,
+      hfov: hasDist ? M.horizontalFovDeg(mask.effW, dist) : null,
+      vfov: hasDist ? M.verticalFovDeg(mask.effH, dist) : null,
     };
   });
 
@@ -1117,6 +1142,7 @@ function SeatSelector({ sideA, sideB, seat, onChange }) {
   const hasDome = sideA.screen.geometry === "hemispherical" || sideB.screen.geometry === "hemispherical";
   function sideSummary(side, venue) {
     if (venue.screen.geometry === "hemispherical") return `${side}: fixed dome FOV`;
+    if (!hasRenderableScreenGeometry(venue) || !isPositiveNumber(venue.seat?.[seat])) return `${side}: screen dimensions unavailable`;
     const dist = venue.seat[seat];
     const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
     const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
@@ -1457,8 +1483,12 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
 
   const midDist = venue.seat?.mid;
   const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
-  const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
-  const vfov = isDome ? (venue.screen.domeVFov || 125) : (midDist ? M.verticalFovDeg(mask.effH, midDist) : null);
+  const mask = hasRenderableScreenGeometry(venue)
+    ? M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr })
+    : null;
+  const vfov = isDome
+    ? (venue.screen.domeVFov || 125)
+    : (midDist && mask ? M.verticalFovDeg(mask.effH, midDist) : null);
 
   const isTrue143 = result.category === "true_143_film" || result.category === "true_143_laser";
   const loss = verticalFrameLoss();

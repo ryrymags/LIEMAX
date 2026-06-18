@@ -1047,12 +1047,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -1062,9 +1062,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1127,7 +1127,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -1827,12 +1827,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -1842,9 +1842,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -1907,7 +1907,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -2047,12 +2047,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -2062,9 +2062,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2127,7 +2127,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -2405,12 +2405,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -2420,9 +2420,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2485,7 +2485,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -2763,12 +2763,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -2778,9 +2778,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -2843,7 +2843,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -3460,12 +3460,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -3475,9 +3475,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -3540,7 +3540,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -4745,12 +4745,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -4760,9 +4760,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -4825,7 +4825,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -5295,12 +5295,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -5310,9 +5310,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5375,7 +5375,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -5882,12 +5882,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -5897,9 +5897,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -5962,7 +5962,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -5992,12 +5992,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -6007,9 +6007,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6072,7 +6072,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -6432,12 +6432,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -6447,9 +6447,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -6512,7 +6512,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -7468,12 +7468,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -7483,9 +7483,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7548,7 +7548,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -7578,12 +7578,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -7593,9 +7593,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7658,7 +7658,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -7908,12 +7908,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -7923,9 +7923,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -7988,7 +7988,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -8018,12 +8018,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -8033,9 +8033,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8098,7 +8098,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -8128,12 +8128,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -8143,9 +8143,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8208,7 +8208,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -8238,12 +8238,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -8253,9 +8253,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -8318,7 +8318,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -9265,12 +9265,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -9280,9 +9280,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9345,7 +9345,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -9815,12 +9815,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -9830,9 +9830,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -9895,7 +9895,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -10063,12 +10063,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -10078,9 +10078,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10143,7 +10143,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -10173,12 +10173,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -10188,9 +10188,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10253,7 +10253,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -10283,12 +10283,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -10298,9 +10298,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10363,7 +10363,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -10687,12 +10687,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -10702,9 +10702,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -10767,7 +10767,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -11687,12 +11687,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -11702,9 +11702,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -11767,7 +11767,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -11935,12 +11935,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -11950,9 +11950,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12015,7 +12015,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "community_estimate",
@@ -12045,12 +12045,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -12060,9 +12060,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12125,7 +12125,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -12476,12 +12476,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -12491,9 +12491,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12556,7 +12556,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -12880,12 +12880,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -12895,9 +12895,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -12960,7 +12960,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -13320,12 +13320,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -13335,9 +13335,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -13400,7 +13400,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -14090,12 +14090,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -14105,9 +14105,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14170,7 +14170,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -14310,12 +14310,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -14325,9 +14325,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14390,7 +14390,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -14750,12 +14750,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 0.00",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 0,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -14765,9 +14765,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -14830,7 +14830,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -16456,12 +16456,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -16471,9 +16471,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -16536,7 +16536,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -17034,12 +17034,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -17049,9 +17049,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17114,7 +17114,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -17850,12 +17850,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -17865,9 +17865,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -17930,7 +17930,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -17960,12 +17960,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -17975,9 +17975,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18040,7 +18040,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -18319,7 +18319,7 @@ window.LIEMAX_DATA = {
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
         "w": 75.45932,
-        "h": 0,
+        "h": null,
         "ar": 1.9,
         "sizeTier": "large",
         "sizeLabel": "Large Screen",
@@ -18398,7 +18398,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 23 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -18538,12 +18538,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -18553,9 +18553,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18618,7 +18618,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -18868,12 +18868,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -18883,9 +18883,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -18948,7 +18948,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -18978,12 +18978,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -18993,9 +18993,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19058,7 +19058,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -19308,12 +19308,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -19323,9 +19323,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -19388,7 +19388,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",
@@ -20646,12 +20646,12 @@ window.LIEMAX_DATA = {
       "tag": "IMAX 1.90",
       "blurb": "Imported from 143190.xyz U.S. IMAX data. Screen dimensions are published; seat distances are derived from screen width.",
       "screen": {
-        "w": 0,
-        "h": 0,
+        "w": null,
+        "h": null,
         "ar": 1.9,
-        "sizeTier": "small",
-        "sizeLabel": "Small Screen",
-        "widthConfidence": "confirmed",
+        "sizeTier": null,
+        "sizeLabel": null,
+        "widthConfidence": null,
         "geometry": "flat",
         "curvatureRadiusFt": null,
         "screenBottomFt": 4,
@@ -20661,9 +20661,9 @@ window.LIEMAX_DATA = {
       },
       "seat": {
         "capacity": null,
-        "front": 0,
-        "mid": 0,
-        "back": 0,
+        "front": null,
+        "mid": null,
+        "back": null,
         "source": "derived_from_screen_width",
         "rakeDeg": 10,
         "rowSpacingFt": 3.25,
@@ -20726,7 +20726,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV — 0 × 0 m."
+          "note": "Canonical frontend comparison record."
         },
         "brightness": {
           "q": "published_cto",

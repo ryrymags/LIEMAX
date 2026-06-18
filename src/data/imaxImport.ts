@@ -53,8 +53,8 @@ interface ProjectionRecord {
 export function map143190RowToVenue(row: Imax143190ImportRow, options: ImportOptions): Record<string, unknown> {
   const screenAspectRatio = parseAspectRatio(row.screen_aspect_ratio);
   const maxDigitalAr = parseAspectRatio(row.max_digital_ar);
-  const rawScreenWidthM = parseNumber(row.screen_width_m);
-  const rawScreenHeightM = parseNumber(row.screen_height_m);
+  const rawScreenWidthM = positiveNumberOrNull(parseNumber(row.screen_width_m));
+  const rawScreenHeightM = positiveNumberOrNull(parseNumber(row.screen_height_m));
   const domeScreen = isDomeLabel(row.screen_aspect_ratio) || isDomeLabel(row.digital_projector) || isDomeLabel(row.film_projector);
   const domeDiameterM = domeScreen
     ? (rawScreenWidthM && rawScreenWidthM > 0 ? rawScreenWidthM : rawScreenHeightM && rawScreenHeightM > 0 ? rawScreenHeightM : null)
@@ -237,6 +237,10 @@ function parseNumber(value: string | number | null | undefined): number | null {
   if (typeof value === 'number') return Number.isFinite(value) ? value : null;
   const parsed = Number(value.replace(/[^\d.-]/g, ''));
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+function positiveNumberOrNull(value: number | null): number | null {
+  return value != null && Number.isFinite(value) && value > 0 ? value : null;
 }
 
 function hasValue(value: string | null | undefined): value is string {

@@ -11,6 +11,31 @@ function stageColor(name, fallback) {
   return value || fallback;
 }
 
+function isPositiveStageNumber(value) {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+function hasRenderableStageScreen(screen) {
+  if (!screen) return false;
+  if (screen.geometry === "hemispherical") return isPositiveStageNumber(screen.w);
+  return isPositiveStageNumber(screen.w) && isPositiveStageNumber(screen.h);
+}
+
+function renderStageUnavailable(svg, message) {
+  svg.setAttribute("viewBox", "0 -80 160 80");
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  const text = document.createElementNS(SVG_NS, "text");
+  text.setAttribute("x", "80");
+  text.setAttribute("y", "-40");
+  text.setAttribute("text-anchor", "middle");
+  text.setAttribute("font-family", "var(--font-mono)");
+  text.setAttribute("font-size", "5");
+  text.setAttribute("fill", "currentColor");
+  text.setAttribute("opacity", "0.75");
+  text.textContent = message;
+  svg.appendChild(text);
+}
+
 window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const M = window.LIEMAX_MATH;
   // contentARB defaults to contentARA when not supplied (legacy single-AR call)
@@ -30,6 +55,11 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
   const SIDE_A = stageColor("--side-a", "#17476b");
   const SIDE_B = stageColor("--side-b", "#7a3f5c");
   const INK = stageColor("--ink", "#1f1b16");
+
+  if (!hasRenderableStageScreen(A?.screen) || !hasRenderableStageScreen(B?.screen)) {
+    renderStageUnavailable(svg, "Screen dimensions unavailable");
+    return { aArea: null, bArea: null, aMask: null, bMask: null };
+  }
 
   const aMask = maskFor(A, contentARA);
   const bMask = maskFor(B, contentARB);
@@ -262,6 +292,12 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
   const lift = venue.kind === "cinema" ? 5 : 2;
   const screen = venue.screen;
   const isDome = screen.geometry === "hemispherical";
+
+  if (!hasRenderableStageScreen(screen)) {
+    renderStageUnavailable(svg, "Screen dimensions unavailable");
+    return;
+  }
+
   const w = screen.w;
   const h = screen.h;
   const totalW = PAD + w + PAD + HUMAN_W + 5;

@@ -9,19 +9,19 @@ window.LIEMAX_MATH = (function () {
   // --- Field of View (horizontal) ---
   // Angle subtended by the screen from the seat. 2 * atan( (w/2) / dist )
   function horizontalFovDeg(screenWidthFt, distanceFt) {
-    if (distanceFt <= 0) return 180;
+    if (!isPositiveNumber(screenWidthFt) || !isPositiveNumber(distanceFt)) return null;
     return 2 * Math.atan((screenWidthFt / 2) / distanceFt) * DEG;
   }
 
   function verticalFovDeg(screenHeightFt, distanceFt) {
-    if (distanceFt <= 0) return 180;
+    if (!isPositiveNumber(screenHeightFt) || !isPositiveNumber(distanceFt)) return null;
     return 2 * Math.atan((screenHeightFt / 2) / distanceFt) * DEG;
   }
 
   // --- Pixels per degree ---
   // Resolution along width / horizontal FOV in degrees.
   function ppd(resolutionPx, fovDeg) {
-    if (fovDeg <= 0) return 0;
+    if (!isPositiveNumber(resolutionPx) || !isPositiveNumber(fovDeg)) return null;
     return resolutionPx / fovDeg;
   }
 
@@ -29,6 +29,9 @@ window.LIEMAX_MATH = (function () {
   // Returns { effW, effH, areaUtilPct, letterbox, pillarbox, cropped }
   // contentAR = content aspect ratio (w/h). screen has w, h, ar, projection.min_ar.
   function masking(screen, contentAR, projection) {
+    if (!isPositiveNumber(screen?.w) || !isPositiveNumber(screen?.h) || !isPositiveNumber(contentAR)) {
+      return { effW: null, effH: null, areaUtilPct: null, letterbox: false, pillarbox: false, cropped: false };
+    }
     const screenAR = screen.ar;
     const minAR = projection.min_ar ?? 0;
     let effW, effH;
@@ -52,12 +55,25 @@ window.LIEMAX_MATH = (function () {
       effW = screen.h * contentAR;
       if (effW < screen.w - 0.05) pillarbox = true;
     }
-    const areaUtilPct = (effW * effH) / (screen.w * screen.h) * 100;
+    const physicalArea = screen.w * screen.h;
+    const areaUtilPct = physicalArea > 0 ? (effW * effH) / physicalArea * 100 : null;
     return { effW, effH, areaUtilPct, letterbox, pillarbox, cropped };
   }
 
   function visibleContentRect(screen, contentAR, presentation) {
     const presAR = presentation.ar;
+    if (!isPositiveNumber(screen?.w) || !isPositiveNumber(screen?.h) || !isPositiveNumber(presAR)) {
+      return {
+        effW: null,
+        effH: null,
+        areaUtilPct: null,
+        letterbox: false,
+        pillarbox: false,
+        cropped: false,
+        projectedWindow: { w: null, h: null, ar: presAR ?? null, geometry: screen?.geometry ?? null },
+        physicalClipped: false,
+      };
+    }
     const projectedWindow = {
       w: screen.w,
       h: screen.w / presAR,
@@ -86,6 +102,10 @@ window.LIEMAX_MATH = (function () {
     if (venue.projection.brightness_fl != null) return venue.projection.brightness_fl;
     if (venue.projection.brightness_nits_full != null) return venue.projection.brightness_nits_full / 3.426;
     return null;
+  }
+
+  function isPositiveNumber(value) {
+    return typeof value === "number" && Number.isFinite(value) && value > 0;
   }
 
   // --- Pick "viewing distance" for the venue ---

@@ -482,6 +482,14 @@ window.LIEMAX_POV = (function () {
   }
 
   function projectionRectFor(screenW, screenH, presentationAr) {
+    if (!isPositiveNumber(screenW) || !isPositiveNumber(screenH) || !isPositiveNumber(presentationAr)) {
+      return {
+        w: null,
+        h: null,
+        horizontalFillPct: null,
+        verticalFillPct: null,
+      };
+    }
     const W = screenW;
     const H = screenH;
     const screenAr = W / H;
@@ -639,6 +647,15 @@ window.LIEMAX_POV = (function () {
   }
 
   function textureCropFor(targetAr, sourceAr) {
+    if (!isPositiveNumber(targetAr) || !isPositiveNumber(sourceAr)) {
+      return {
+        u: null,
+        v: null,
+        offsetU: null,
+        offsetV: null,
+        retainedPct: null,
+      };
+    }
     let u;
     let v;
     if (targetAr > sourceAr) {
@@ -675,6 +692,10 @@ window.LIEMAX_POV = (function () {
 
   function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
+  }
+
+  function isPositiveNumber(value) {
+    return typeof value === "number" && Number.isFinite(value) && value > 0;
   }
 
   function escapeHtml(value) {
