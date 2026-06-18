@@ -24,7 +24,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": null,
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -34,7 +34,11 @@ window.LIEMAX_DATA = {
         "front": 40,
         "mid": 67,
         "back": 95,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -132,7 +136,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Front/mid/back derived from screen width — no published row distances."
+          "note": "Front/mid/back are derived estimates; 1.43 film-capable screen uses GT pit-profile rake/deck defaults unless measured row data is found."
         }
       }
     },
@@ -158,17 +162,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 35,
-        "mid": 58,
-        "back": 82,
-        "source": "derived_from_screen_width"
+        "front": 24.5,
+        "mid": 45.5,
+        "back": 66.5,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -247,7 +255,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical GT auditorium ratios."
+          "note": "Derived from GT pit-profile geometry: compact row depth, steep rake, and estimated elevated front deck; not a measured venue."
         }
       }
     },
@@ -273,17 +281,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 28,
-        "mid": 46,
-        "back": 65,
-        "source": "derived_from_screen_width"
+        "front": 49.5,
+        "mid": 74.25,
+        "back": 110,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 5.2,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "dolby_recliner"
       },
       "defaultPresentationAr": 2.39,
       "isHybrid": false,
@@ -354,7 +366,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical auditorium ratios."
+          "note": "Derived from Dolby no-pit recliner-profile geometry; exact per-venue row depth is not published."
         }
       }
     },
@@ -380,17 +392,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 29,
-        "mid": 49,
-        "back": 68,
-        "source": "derived_from_screen_width"
+        "front": 52.2,
+        "mid": 78.3,
+        "back": 116,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 5.2,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "dolby_recliner"
       },
       "defaultPresentationAr": 2.39,
       "isHybrid": false,
@@ -461,7 +477,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical Dolby auditorium ratios; venue rows will override when known."
+          "note": "Derived from Dolby no-pit recliner-profile geometry; venue rows will override when known."
         }
       }
     },
@@ -487,7 +503,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 3.5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -497,7 +513,11 @@ window.LIEMAX_DATA = {
         "front": 33,
         "mid": 54,
         "back": 76,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 7,
+        "rowSpacingFt": 3.5,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "standard_conventional"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -603,7 +623,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 3.5,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -613,7 +633,11 @@ window.LIEMAX_DATA = {
         "front": 23,
         "mid": 37,
         "back": 53,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 7,
+        "rowSpacingFt": 3.5,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "standard_conventional"
       },
       "defaultPresentationAr": 1.85,
       "isHybrid": false,
@@ -720,7 +744,11 @@ window.LIEMAX_DATA = {
         "front": 39.37008,
         "mid": 39.37008,
         "back": 39.37008,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -798,17 +826,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 67.93307304,
-        "mid": 117.12598799999999,
-        "back": 175.68898199999998,
-        "source": "derived_from_screen_width"
+        "front": 27.329397199999995,
+        "mid": 50.7545948,
+        "back": 74.1797924,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -887,7 +919,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -913,17 +945,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.52756048,
-        "mid": 76.771656,
-        "back": 115.157484,
-        "source": "derived_from_screen_width"
+        "front": 53.7401592,
+        "mid": 63.97638,
+        "back": 76.771656,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -993,7 +1029,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1019,7 +1055,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1029,7 +1065,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1099,7 +1139,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1125,17 +1165,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 28.018373599999993,
+        "mid": 52.034122399999994,
+        "back": 76.04987119999998,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -1233,7 +1277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -1259,17 +1303,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1339,7 +1387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1365,17 +1413,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.956694320000004,
-        "mid": 75.78740400000001,
-        "back": 113.68110600000001,
-        "source": "derived_from_screen_width"
+        "front": 53.05118280000001,
+        "mid": 63.15617,
+        "back": 75.78740400000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1445,7 +1497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1471,17 +1523,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1551,7 +1607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1587,7 +1643,11 @@ window.LIEMAX_DATA = {
         "front": 38.057744,
         "mid": 38.057744,
         "back": 38.057744,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -1665,17 +1725,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 54.803151359999994,
-        "mid": 94.488192,
-        "back": 141.73228799999998,
-        "source": "derived_from_screen_width"
+        "front": 66.14173439999999,
+        "mid": 78.74015999999999,
+        "back": 94.488192,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1745,7 +1809,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1771,7 +1835,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1781,7 +1845,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1851,7 +1919,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1877,17 +1945,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -1957,7 +2029,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -1983,7 +2055,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -1993,7 +2065,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2063,7 +2139,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -2089,17 +2165,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 66.448821024,
-        "mid": 114.5669328,
-        "back": 171.8503992,
-        "source": "derived_from_screen_width"
+        "front": 26.732284319999998,
+        "mid": 49.645670880000004,
+        "back": 72.55905744,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -2197,7 +2277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -2223,17 +2303,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2303,7 +2387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -2329,7 +2413,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2339,7 +2423,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2409,7 +2497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -2435,17 +2523,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2515,7 +2607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -2541,7 +2633,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2551,7 +2643,11 @@ window.LIEMAX_DATA = {
         "front": 81.91929395999999,
         "mid": 141.240162,
         "back": 211.860243,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 7,
+        "rowSpacingFt": 3.5,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "standard_conventional"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -2649,7 +2745,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived conventional auditorium estimate; exact per-venue row depth is not published."
         }
       }
     },
@@ -2675,7 +2771,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -2685,7 +2781,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2755,7 +2855,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -2781,17 +2881,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 76.49606544,
-        "mid": 131.889768,
-        "back": 197.834652,
-        "source": "derived_from_screen_width"
+        "front": 30.7742792,
+        "mid": 57.1522328,
+        "back": 83.5301864,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -2889,7 +2993,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -2915,17 +3019,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -2995,7 +3103,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3021,17 +3129,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3101,7 +3213,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3127,17 +3239,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 48.238190519999996,
-        "mid": 83.169294,
-        "back": 124.75394099999998,
-        "source": "derived_from_screen_width"
+        "front": 58.218505799999996,
+        "mid": 69.307745,
+        "back": 83.169294,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3207,7 +3323,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3233,17 +3349,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 78.20866391999999,
-        "mid": 134.842524,
-        "back": 202.26378599999998,
-        "source": "derived_from_screen_width"
+        "front": 31.463255599999997,
+        "mid": 58.4317604,
+        "back": 85.40026519999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -3322,7 +3442,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -3348,7 +3468,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -3358,7 +3478,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3428,7 +3552,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3454,17 +3578,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.322836224,
-        "mid": 85.0393728,
-        "back": 127.55905920000001,
-        "source": "derived_from_screen_width"
+        "front": 59.52756096,
+        "mid": 70.866144,
+        "back": 85.0393728,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3534,7 +3662,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3560,17 +3688,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3640,7 +3772,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3666,17 +3798,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.8051198,
-        "mid": 91.04331,
-        "back": 136.564965,
-        "source": "derived_from_screen_width"
+        "front": 63.73031700000001,
+        "mid": 75.869425,
+        "back": 91.04331,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3746,7 +3882,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -3772,17 +3908,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 77.35236468,
-        "mid": 133.36614600000001,
-        "back": 200.049219,
-        "source": "derived_from_screen_width"
+        "front": 31.1187674,
+        "mid": 57.791996600000004,
+        "back": 84.4652258,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -3880,7 +4020,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -3906,17 +4046,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -3986,7 +4130,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4012,17 +4156,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.93504148000001,
-        "mid": 113.68110600000001,
-        "back": 170.52165900000003,
-        "source": "derived_from_screen_width"
+        "front": 26.525591400000003,
+        "mid": 49.261812600000006,
+        "back": 71.9980338,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -4120,7 +4268,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -4146,17 +4294,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4226,7 +4378,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4252,17 +4404,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.007875616,
-        "mid": 86.2204752,
-        "back": 129.3307128,
-        "source": "derived_from_screen_width"
+        "front": 60.35433264,
+        "mid": 71.85039599999999,
+        "back": 86.2204752,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4332,7 +4488,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4358,17 +4514,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 85.05905784,
-        "mid": 146.653548,
-        "back": 219.980322,
-        "source": "derived_from_screen_width"
+        "front": 34.219161199999995,
+        "mid": 63.5498708,
+        "back": 92.88058039999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -4475,7 +4635,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -4511,7 +4671,11 @@ window.LIEMAX_DATA = {
         "front": 41.0105,
         "mid": 41.0105,
         "back": 41.0105,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -4589,7 +4753,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -4599,7 +4763,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4669,7 +4837,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4695,17 +4863,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4775,7 +4947,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4801,17 +4973,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 59.655513719999995,
-        "mid": 102.854334,
-        "back": 154.281501,
-        "source": "derived_from_screen_width"
+        "front": 71.99803379999999,
+        "mid": 85.71194499999999,
+        "back": 102.854334,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4881,7 +5057,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -4907,17 +5083,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -4987,7 +5167,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5013,17 +5193,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.954725880000005,
-        "mid": 79.232286,
-        "back": 118.84842900000001,
-        "source": "derived_from_screen_width"
+        "front": 55.462600200000004,
+        "mid": 66.026905,
+        "back": 79.232286,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5093,7 +5277,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5119,7 +5303,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5129,7 +5313,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5199,7 +5387,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5225,17 +5413,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5305,7 +5497,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5331,17 +5523,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5411,7 +5607,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5437,17 +5633,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 40.617127284,
-        "mid": 70.0295298,
-        "back": 105.0442947,
-        "source": "derived_from_screen_width"
+        "front": 49.02067086,
+        "mid": 58.357941499999995,
+        "back": 70.0295298,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5517,7 +5717,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5543,17 +5743,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 68.78937228000001,
-        "mid": 118.60236600000002,
-        "back": 177.90354900000003,
-        "source": "derived_from_screen_width"
+        "front": 27.6738854,
+        "mid": 51.394358600000004,
+        "back": 75.1148318,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -5660,7 +5864,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -5686,7 +5890,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5696,7 +5900,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5766,7 +5974,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5792,7 +6000,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -5802,7 +6010,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5872,7 +6084,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -5898,17 +6110,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.52756048,
-        "mid": 76.771656,
-        "back": 115.157484,
-        "source": "derived_from_screen_width"
+        "front": 53.7401592,
+        "mid": 63.97638,
+        "back": 76.771656,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -5978,7 +6194,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6004,17 +6220,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6084,7 +6304,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6110,17 +6330,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.95078899999999,
-        "mid": 86.12205,
-        "back": 129.183075,
-        "source": "derived_from_screen_width"
+        "front": 60.285435,
+        "mid": 71.76837499999999,
+        "back": 86.12205,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6190,7 +6414,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6216,7 +6440,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -6226,7 +6450,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6296,7 +6524,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6322,17 +6550,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 51.948820559999994,
-        "mid": 89.566932,
-        "back": 134.35039799999998,
-        "source": "derived_from_screen_width"
+        "front": 62.6968524,
+        "mid": 74.63910999999999,
+        "back": 89.566932,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6402,7 +6634,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6428,17 +6660,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 39.104331959999996,
-        "mid": 67.421262,
-        "back": 101.13189299999999,
-        "source": "derived_from_screen_width"
+        "front": 47.1948834,
+        "mid": 56.184385,
+        "back": 67.421262,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6508,7 +6744,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6534,17 +6770,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.6496084,
-        "mid": 113.18898000000002,
-        "back": 169.78347000000002,
-        "source": "derived_from_screen_width"
+        "front": 26.410762000000002,
+        "mid": 49.04855800000001,
+        "back": 71.68635400000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -6623,7 +6863,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -6649,17 +6889,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6729,7 +6973,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6755,17 +6999,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 48.238190519999996,
-        "mid": 83.169294,
-        "back": 124.75394099999998,
-        "source": "derived_from_screen_width"
+        "front": 58.218505799999996,
+        "mid": 69.307745,
+        "back": 83.169294,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6835,7 +7083,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6861,17 +7109,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 73.92716772,
-        "mid": 127.460634,
-        "back": 191.19095099999998,
-        "source": "derived_from_screen_width"
+        "front": 89.2224438,
+        "mid": 106.21719499999999,
+        "back": 127.460634,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -6941,7 +7193,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -6967,17 +7219,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 28.018373599999993,
+        "mid": 52.034122399999994,
+        "back": 76.04987119999998,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -7084,7 +7340,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -7110,17 +7366,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7190,7 +7450,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7216,7 +7476,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7226,7 +7486,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7296,7 +7560,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7322,7 +7586,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7332,7 +7596,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7402,7 +7670,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7428,17 +7696,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7508,7 +7780,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7534,17 +7806,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7614,7 +7890,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7640,7 +7916,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7650,7 +7926,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7720,7 +8000,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7746,7 +8026,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7756,7 +8036,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7826,7 +8110,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7852,7 +8136,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7862,7 +8146,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -7932,7 +8220,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -7958,7 +8246,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -7968,7 +8256,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8038,7 +8330,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8064,17 +8356,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.519686719999996,
-        "mid": 90.55118399999999,
-        "back": 135.826776,
-        "source": "derived_from_screen_width"
+        "front": 63.3858288,
+        "mid": 75.45931999999999,
+        "back": 90.55118399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8144,7 +8440,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8170,17 +8466,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8250,7 +8550,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8276,17 +8576,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8356,7 +8660,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8382,17 +8686,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.09448976,
-        "mid": 84.64567199999999,
-        "back": 126.968508,
-        "source": "derived_from_screen_width"
+        "front": 59.2519704,
+        "mid": 70.53806,
+        "back": 84.64567199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8462,7 +8770,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8488,17 +8796,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 70.78740384000001,
-        "mid": 122.04724800000001,
-        "back": 183.070872,
-        "source": "derived_from_screen_width"
+        "front": 28.4776912,
+        "mid": 52.887140800000005,
+        "back": 77.2965904,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -8596,7 +8908,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -8622,17 +8934,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8702,7 +9018,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8728,17 +9044,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.80708824,
-        "mid": 87.598428,
-        "back": 131.397642,
-        "source": "derived_from_screen_width"
+        "front": 61.3188996,
+        "mid": 72.99869,
+        "back": 87.598428,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -8808,7 +9128,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -8834,17 +9154,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 87.91338864000001,
-        "mid": 151.57480800000002,
-        "back": 227.36221200000003,
-        "source": "derived_from_screen_width"
+        "front": 35.3674552,
+        "mid": 65.68241680000001,
+        "back": 95.9973784,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -8923,7 +9247,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -8949,7 +9273,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -8959,7 +9283,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9029,7 +9357,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9055,7 +9383,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9065,7 +9393,11 @@ window.LIEMAX_DATA = {
         "front": 80.23523878799999,
         "mid": 138.33661859999998,
         "back": 207.50492789999998,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 7,
+        "rowSpacingFt": 3.5,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "standard_conventional"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9135,7 +9467,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived conventional auditorium estimate; exact per-venue row depth is not published."
         }
       }
     },
@@ -9161,17 +9493,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.57972599600001,
-        "mid": 85.4822862,
-        "back": 128.22342930000002,
-        "source": "derived_from_screen_width"
+        "front": 59.83760034000001,
+        "mid": 71.23523850000001,
+        "back": 85.4822862,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9241,7 +9577,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9267,17 +9603,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.177167024000006,
-        "mid": 89.96063280000001,
-        "back": 134.9409492,
-        "source": "derived_from_screen_width"
+        "front": 62.97244296000001,
+        "mid": 74.967194,
+        "back": 89.96063280000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9347,7 +9687,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9373,17 +9713,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9453,7 +9797,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9479,7 +9823,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9489,7 +9833,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9559,7 +9907,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9585,17 +9933,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 73.07086848000002,
-        "mid": 125.98425600000002,
-        "back": 188.97638400000002,
-        "source": "derived_from_screen_width"
+        "front": 29.396326400000003,
+        "mid": 54.59317760000001,
+        "back": 79.7900288,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -9693,7 +10045,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -9719,7 +10071,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9729,7 +10081,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9799,7 +10155,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9825,7 +10181,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9835,7 +10191,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -9905,7 +10265,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -9931,7 +10291,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -9941,7 +10301,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10011,7 +10375,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10047,7 +10411,11 @@ window.LIEMAX_DATA = {
         "front": 30.019686,
         "mid": 30.019686,
         "back": 30.019686,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -10135,7 +10503,11 @@ window.LIEMAX_DATA = {
         "front": 38.057744,
         "mid": 38.057744,
         "back": 38.057744,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -10213,17 +10585,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 53.090552880000004,
-        "mid": 91.535436,
-        "back": 137.303154,
-        "source": "derived_from_screen_width"
+        "front": 64.07480520000001,
+        "mid": 76.27953000000001,
+        "back": 91.535436,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10293,7 +10669,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10319,7 +10695,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10329,7 +10705,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10399,7 +10779,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10425,17 +10805,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.81102512,
-        "mid": 80.708664,
-        "back": 121.06299599999998,
-        "source": "derived_from_screen_width"
+        "front": 56.4960648,
+        "mid": 67.25721999999999,
+        "back": 80.708664,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10505,7 +10889,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10531,7 +10915,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -10541,7 +10925,11 @@ window.LIEMAX_DATA = {
         "front": 40,
         "mid": 75,
         "back": 84,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -10646,17 +11034,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10726,7 +11118,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10752,17 +11144,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10832,7 +11228,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10858,17 +11254,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -10938,7 +11338,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -10964,17 +11364,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 39.104331959999996,
-        "mid": 67.421262,
-        "back": 101.13189299999999,
-        "source": "derived_from_screen_width"
+        "front": 47.1948834,
+        "mid": 56.184385,
+        "back": 67.421262,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11044,7 +11448,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11070,17 +11474,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11150,7 +11558,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11186,7 +11594,11 @@ window.LIEMAX_DATA = {
         "front": 33.792652000000004,
         "mid": 33.792652000000004,
         "back": 33.792652000000004,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -11283,7 +11695,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11293,7 +11705,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11363,7 +11779,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11389,17 +11805,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 24.458662200000003,
+        "mid": 45.42322980000001,
+        "back": 66.38779740000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -11497,7 +11917,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -11523,7 +11943,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11533,7 +11953,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11603,7 +12027,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11629,7 +12053,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -11639,7 +12063,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11709,7 +12137,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11735,17 +12163,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -11815,7 +12247,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -11851,7 +12283,11 @@ window.LIEMAX_DATA = {
         "front": 44.947508,
         "mid": 44.947508,
         "back": 44.947508,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -11929,17 +12365,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 73.07086848000002,
-        "mid": 125.98425600000002,
-        "back": 188.97638400000002,
-        "source": "derived_from_screen_width"
+        "front": 29.396326400000003,
+        "mid": 54.59317760000001,
+        "back": 79.7900288,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -12018,7 +12458,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -12044,7 +12484,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12054,7 +12494,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12124,7 +12568,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12150,17 +12594,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12230,7 +12678,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12266,7 +12714,11 @@ window.LIEMAX_DATA = {
         "front": 39.534122,
         "mid": 39.534122,
         "back": 39.534122,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -12354,7 +12806,11 @@ window.LIEMAX_DATA = {
         "front": 39.534122,
         "mid": 39.534122,
         "back": 39.534122,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -12432,7 +12888,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12442,7 +12898,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12512,7 +12972,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12538,17 +12998,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 41.958662759999996,
-        "mid": 72.342522,
-        "back": 108.51378299999999,
-        "source": "derived_from_screen_width"
+        "front": 50.6397654,
+        "mid": 60.28543499999999,
+        "back": 72.342522,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12618,7 +13082,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12644,17 +13108,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 54.517718280000004,
-        "mid": 93.99606600000001,
-        "back": 140.994099,
-        "source": "derived_from_screen_width"
+        "front": 65.7972462,
+        "mid": 78.330055,
+        "back": 93.99606600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12724,7 +13192,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12750,17 +13218,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
+        "front": 69.24212820000001,
+        "mid": 82.431105,
+        "back": 98.917326,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12830,7 +13302,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12856,7 +13328,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -12866,7 +13338,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -12936,7 +13412,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -12962,17 +13438,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13042,7 +13522,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13068,17 +13548,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13148,7 +13632,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13174,17 +13658,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 39.104331959999996,
-        "mid": 67.421262,
-        "back": 101.13189299999999,
-        "source": "derived_from_screen_width"
+        "front": 47.1948834,
+        "mid": 56.184385,
+        "back": 67.421262,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13254,7 +13742,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13280,17 +13768,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.80708824,
-        "mid": 87.598428,
-        "back": 131.397642,
-        "source": "derived_from_screen_width"
+        "front": 61.3188996,
+        "mid": 72.99869,
+        "back": 87.598428,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13360,7 +13852,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13386,17 +13878,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 55.374017519999995,
-        "mid": 95.472444,
-        "back": 143.208666,
-        "source": "derived_from_screen_width"
+        "front": 66.83071079999999,
+        "mid": 79.56036999999999,
+        "back": 95.472444,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13466,7 +13962,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13492,17 +13988,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13572,7 +14072,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13598,7 +14098,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13608,7 +14108,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13678,7 +14182,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13704,17 +14208,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
+        "front": 69.24212820000001,
+        "mid": 82.431105,
+        "back": 98.917326,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13784,7 +14292,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13810,7 +14318,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -13820,7 +14328,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13890,7 +14402,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -13916,17 +14428,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -13996,7 +14512,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14022,17 +14538,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14102,7 +14622,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14128,17 +14648,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14208,7 +14732,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14234,7 +14758,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -14244,7 +14768,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14314,7 +14842,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14340,17 +14868,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 70.78740384000001,
-        "mid": 122.04724800000001,
-        "back": 183.070872,
-        "source": "derived_from_screen_width"
+        "front": 85.43307360000001,
+        "mid": 101.70604,
+        "back": 122.04724800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14420,7 +14952,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14446,17 +14978,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14526,7 +15062,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14552,17 +15088,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14632,7 +15172,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14658,17 +15198,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14738,7 +15282,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -14764,17 +15308,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 87.856302024,
-        "mid": 151.4763828,
-        "back": 227.21457420000002,
-        "source": "derived_from_screen_width"
+        "front": 35.34448932,
+        "mid": 65.63976588000001,
+        "back": 95.93504244,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -14881,7 +15429,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -14907,17 +15455,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
+        "front": 58.907482200000004,
+        "mid": 70.127955,
+        "back": 84.153546,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -14987,7 +15539,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15013,17 +15565,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -15130,7 +15686,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15156,17 +15712,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15236,7 +15796,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15262,17 +15822,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15342,7 +15906,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15368,17 +15932,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15448,7 +16016,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15474,17 +16042,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 51.663387480000004,
-        "mid": 89.07480600000001,
-        "back": 133.612209,
-        "source": "derived_from_screen_width"
+        "front": 62.35236420000001,
+        "mid": 74.229005,
+        "back": 89.07480600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15554,7 +16126,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15590,7 +16162,11 @@ window.LIEMAX_DATA = {
         "front": 36.08924,
         "mid": 36.08924,
         "back": 36.08924,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": null,
+        "frontRowFloorElevationFt": null,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -15668,17 +16244,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15748,7 +16328,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15774,17 +16354,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 84.0551208,
+        "mid": 100.06562,
+        "back": 120.07874399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15854,7 +16438,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15880,7 +16464,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -15890,7 +16474,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -15960,7 +16548,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -15986,17 +16574,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16066,7 +16658,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16092,17 +16684,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 63.651576840000004,
-        "mid": 109.74409800000001,
-        "back": 164.616147,
-        "source": "derived_from_screen_width"
+        "front": 25.6069562,
+        "mid": 47.555775800000006,
+        "back": 69.5045954,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -16200,7 +16796,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -16226,17 +16822,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16306,7 +16906,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16332,17 +16932,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.67126124,
-        "mid": 75.295278,
-        "back": 112.942917,
-        "source": "derived_from_screen_width"
+        "front": 52.7066946,
+        "mid": 62.746065,
+        "back": 75.295278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16412,7 +17016,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16438,7 +17042,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -16448,7 +17052,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16518,7 +17126,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16544,17 +17152,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 75.92519928,
-        "mid": 130.905516,
-        "back": 196.35827400000002,
-        "source": "derived_from_screen_width"
+        "front": 30.5446204,
+        "mid": 56.72572360000001,
+        "back": 82.9068268,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -16633,7 +17245,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -16659,17 +17271,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.226379879999996,
-        "mid": 103.83858599999999,
-        "back": 155.757879,
-        "source": "derived_from_screen_width"
+        "front": 72.6870102,
+        "mid": 86.532155,
+        "back": 103.83858599999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16739,7 +17355,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16765,17 +17381,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 53.090552880000004,
-        "mid": 91.535436,
-        "back": 137.303154,
-        "source": "derived_from_screen_width"
+        "front": 64.07480520000001,
+        "mid": 76.27953000000001,
+        "back": 91.535436,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -16845,7 +17465,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -16871,17 +17491,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 78.20866391999999,
-        "mid": 134.842524,
-        "back": 202.26378599999998,
-        "source": "derived_from_screen_width"
+        "front": 31.463255599999997,
+        "mid": 58.4317604,
+        "back": 85.40026519999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -16979,7 +17603,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -17005,17 +17629,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 71.64370308000001,
-        "mid": 123.52362600000001,
-        "back": 185.285439,
-        "source": "derived_from_screen_width"
+        "front": 28.8221794,
+        "mid": 53.5269046,
+        "back": 78.23162980000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -17094,7 +17722,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -17120,17 +17748,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17200,7 +17832,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17226,7 +17858,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17236,7 +17868,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17306,7 +17942,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17332,7 +17968,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17342,7 +17978,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17412,7 +18052,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17438,17 +18078,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 57.086616,
-        "mid": 98.42519999999999,
-        "back": 147.6378,
-        "source": "derived_from_screen_width"
+        "front": 68.89764,
+        "mid": 82.021,
+        "back": 98.42519999999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17518,7 +18162,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17544,17 +18188,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
+        "front": 24.8031504,
+        "mid": 46.062993600000006,
+        "back": 67.3228368,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -17652,7 +18300,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -17678,17 +18326,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.6496084,
-        "mid": 113.18898000000002,
-        "back": 169.78347000000002,
-        "source": "derived_from_screen_width"
+        "front": 79.232286,
+        "mid": 94.32415,
+        "back": 113.18898000000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17758,7 +18410,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17784,17 +18436,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17864,7 +18520,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17890,7 +18546,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -17900,7 +18556,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -17970,7 +18630,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -17996,17 +18656,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
+        "front": 58.907482200000004,
+        "mid": 70.127955,
+        "back": 84.153546,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18076,7 +18740,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18102,17 +18766,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.36417532,
-        "mid": 112.696854,
-        "back": 169.045281,
-        "source": "derived_from_screen_width"
+        "front": 78.8877978,
+        "mid": 93.914045,
+        "back": 112.696854,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18182,7 +18850,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18208,7 +18876,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18218,7 +18886,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18288,7 +18960,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18314,7 +18986,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18324,7 +18996,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18394,7 +19070,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18420,17 +19096,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18500,7 +19180,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18526,17 +19206,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.6692928,
-        "mid": 78.74016,
-        "back": 118.11024,
-        "source": "derived_from_screen_width"
+        "front": 55.118112,
+        "mid": 65.6168,
+        "back": 78.74016,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18606,7 +19290,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18632,7 +19316,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -18642,7 +19326,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18712,7 +19400,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18738,17 +19426,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18818,7 +19510,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18844,17 +19536,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 70.21653768,
-        "mid": 121.062996,
-        "back": 181.594494,
-        "source": "derived_from_screen_width"
+        "front": 84.7440972,
+        "mid": 100.88583,
+        "back": 121.062996,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -18924,7 +19620,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -18950,17 +19646,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19030,7 +19730,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19056,17 +19756,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19136,7 +19840,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19162,17 +19866,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 74.49803388000001,
-        "mid": 128.444886,
-        "back": 192.667329,
-        "source": "derived_from_screen_width"
+        "front": 29.9704734,
+        "mid": 55.65945060000001,
+        "back": 81.3484278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -19251,7 +19959,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -19277,17 +19985,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 56.515749840000005,
-        "mid": 97.440948,
-        "back": 146.16142200000002,
-        "source": "derived_from_screen_width"
+        "front": 68.20866360000001,
+        "mid": 81.20079000000001,
+        "back": 97.440948,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19357,7 +20069,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19383,17 +20095,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19463,7 +20179,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19489,17 +20205,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.6692928,
-        "mid": 78.74016,
-        "back": 118.11024,
-        "source": "derived_from_screen_width"
+        "front": 55.118112,
+        "mid": 65.6168,
+        "back": 78.74016,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19569,7 +20289,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19595,17 +20315,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19675,7 +20399,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19701,17 +20425,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 54.803151359999994,
-        "mid": 94.488192,
-        "back": 141.73228799999998,
-        "source": "derived_from_screen_width"
+        "front": 66.14173439999999,
+        "mid": 78.74015999999999,
+        "back": 94.488192,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -19781,7 +20509,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -19807,17 +20535,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 28.018373599999993,
+        "mid": 52.034122399999994,
+        "back": 76.04987119999998,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": false,
@@ -19896,7 +20628,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -19922,7 +20654,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
@@ -19932,7 +20664,11 @@ window.LIEMAX_DATA = {
         "front": 0,
         "mid": 0,
         "back": 0,
-        "source": "derived_from_screen_width"
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20002,7 +20738,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20028,17 +20764,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20108,7 +20848,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20134,17 +20874,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 350,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20214,7 +20958,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20240,17 +20984,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 250,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20320,7 +21068,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20346,17 +21094,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 338,
-        "front": 53.375985959999994,
-        "mid": 92.02756199999999,
-        "back": 138.04134299999998,
-        "source": "derived_from_screen_width"
+        "front": 64.4192934,
+        "mid": 76.689635,
+        "back": 92.02756199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20426,7 +21178,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20452,17 +21204,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 338,
-        "front": 52.8051198,
-        "mid": 91.04331,
-        "back": 136.564965,
-        "source": "derived_from_screen_width"
+        "front": 63.73031700000001,
+        "mid": 75.869425,
+        "back": 91.04331,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20532,7 +21288,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20558,17 +21314,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20638,7 +21398,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20664,17 +21424,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 306,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20744,7 +21508,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20770,17 +21534,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20850,7 +21618,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20876,17 +21644,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 375,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -20956,7 +21728,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -20982,17 +21754,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 409,
-        "front": 52.8051198,
-        "mid": 91.04331,
-        "back": 136.564965,
-        "source": "derived_from_screen_width"
+        "front": 63.73031700000001,
+        "mid": 75.869425,
+        "back": 91.04331,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21062,7 +21838,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21088,17 +21864,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21168,7 +21948,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21194,17 +21974,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21274,7 +22058,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21300,17 +22084,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 342,
-        "front": 41.3877966,
-        "mid": 71.35827,
-        "back": 107.037405,
-        "source": "derived_from_screen_width"
+        "front": 49.95078900000001,
+        "mid": 59.465225000000004,
+        "back": 71.35827,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21380,7 +22168,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21406,17 +22194,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.80708824,
-        "mid": 87.598428,
-        "back": 131.397642,
-        "source": "derived_from_screen_width"
+        "front": 61.3188996,
+        "mid": 72.99869,
+        "back": 87.598428,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21486,7 +22278,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21512,17 +22304,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 353,
-        "front": 50.236222080000005,
-        "mid": 86.61417600000001,
-        "back": 129.921264,
-        "source": "derived_from_screen_width"
+        "front": 60.62992320000001,
+        "mid": 72.17848000000001,
+        "back": 86.61417600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21592,7 +22388,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21618,17 +22414,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 230,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21698,7 +22498,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21724,17 +22524,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 64.79330915999999,
-        "mid": 111.71260199999999,
-        "back": 167.56890299999998,
-        "source": "derived_from_screen_width"
+        "front": 78.1988214,
+        "mid": 93.09383499999998,
+        "back": 111.71260199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21804,7 +22608,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21830,17 +22634,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 375,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -21910,7 +22718,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -21936,17 +22744,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 316,
-        "front": 43.956694320000004,
-        "mid": 75.78740400000001,
-        "back": 113.68110600000001,
-        "source": "derived_from_screen_width"
+        "front": 53.05118280000001,
+        "mid": 63.15617,
+        "back": 75.78740400000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22016,7 +22828,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22042,17 +22854,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 290,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22122,7 +22938,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22148,17 +22964,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 331,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22228,7 +23048,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22254,17 +23074,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 41.958662759999996,
-        "mid": 72.342522,
-        "back": 108.51378299999999,
-        "source": "derived_from_screen_width"
+        "front": 50.6397654,
+        "mid": 60.28543499999999,
+        "back": 72.342522,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22334,7 +23158,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22360,17 +23184,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 273,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 24.458662200000003,
+        "mid": 45.42322980000001,
+        "back": 66.38779740000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -22468,7 +23296,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -22494,17 +23322,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22574,7 +23406,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22600,17 +23432,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 334,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22680,7 +23516,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22706,17 +23542,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22786,7 +23626,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22812,17 +23652,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
+        "front": 74.4094512,
+        "mid": 88.58268000000001,
+        "back": 106.299216,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22892,7 +23736,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -22918,17 +23762,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 250,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -22998,7 +23846,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23024,17 +23872,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23104,7 +23956,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23130,17 +23982,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23210,7 +24066,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23236,17 +24092,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 350,
-        "front": 48.238190519999996,
-        "mid": 83.169294,
-        "back": 124.75394099999998,
-        "source": "derived_from_screen_width"
+        "front": 58.218505799999996,
+        "mid": 69.307745,
+        "back": 83.169294,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23316,7 +24176,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23342,17 +24202,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 283,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23422,7 +24286,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23448,17 +24312,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 40.531497359999996,
-        "mid": 69.881892,
-        "back": 104.82283799999999,
-        "source": "derived_from_screen_width"
+        "front": 48.9173244,
+        "mid": 58.23491,
+        "back": 69.881892,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23528,7 +24396,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23554,17 +24422,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 361,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23634,7 +24506,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23660,17 +24532,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 335,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23740,7 +24616,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23766,17 +24642,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 263,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23846,7 +24726,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23872,17 +24752,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 413,
-        "front": 56.23031676,
-        "mid": 96.948822,
-        "back": 145.423233,
-        "source": "derived_from_screen_width"
+        "front": 67.86417540000001,
+        "mid": 80.790685,
+        "back": 96.948822,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -23952,7 +24836,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -23978,17 +24862,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 365,
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
+        "front": 74.4094512,
+        "mid": 88.58268000000001,
+        "back": 106.299216,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -24086,7 +24974,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24112,17 +25000,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 416,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
+        "front": 58.907482200000004,
+        "mid": 70.127955,
+        "back": 84.153546,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24192,7 +25084,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24218,17 +25110,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 272,
-        "front": 44.52756048,
-        "mid": 76.771656,
-        "back": 115.157484,
-        "source": "derived_from_screen_width"
+        "front": 53.7401592,
+        "mid": 63.97638,
+        "back": 76.771656,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24298,7 +25194,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24324,17 +25220,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 304,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24404,7 +25304,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24430,17 +25330,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 226,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24510,7 +25414,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24536,17 +25440,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 586,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24616,7 +25524,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24642,17 +25550,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 300,
-        "front": 65.36417532,
-        "mid": 112.696854,
-        "back": 169.045281,
-        "source": "derived_from_screen_width"
+        "front": 78.8877978,
+        "mid": 93.914045,
+        "back": 112.696854,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24722,7 +25634,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24748,17 +25660,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 265,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24828,7 +25744,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24854,17 +25770,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 295,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -24934,7 +25854,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -24960,17 +25880,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 50.80708824,
-        "mid": 87.598428,
-        "back": 131.397642,
-        "source": "derived_from_screen_width"
+        "front": 61.3188996,
+        "mid": 72.99869,
+        "back": 87.598428,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25040,7 +25964,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25066,17 +25990,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 285,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25146,7 +26074,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25172,17 +26100,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 387,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25252,7 +26184,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25278,17 +26210,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 349,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25358,7 +26294,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25384,17 +26320,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 298,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25464,7 +26404,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25490,17 +26430,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 187,
-        "front": 37.67716656,
-        "mid": 64.960632,
-        "back": 97.440948,
-        "source": "derived_from_screen_width"
+        "front": 45.472442400000006,
+        "mid": 54.13386,
+        "back": 64.960632,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25570,7 +26514,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25596,17 +26540,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 187,
-        "front": 37.67716656,
-        "mid": 64.960632,
-        "back": 97.440948,
-        "source": "derived_from_screen_width"
+        "front": 45.472442400000006,
+        "mid": 54.13386,
+        "back": 64.960632,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25676,7 +26624,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25702,17 +26650,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 40.24606428,
-        "mid": 69.38976600000001,
-        "back": 104.084649,
-        "source": "derived_from_screen_width"
+        "front": 48.572836200000005,
+        "mid": 57.824805,
+        "back": 69.38976600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25782,7 +26734,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25808,17 +26760,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25888,7 +26844,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -25914,17 +26870,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 447,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -25994,7 +26954,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26020,17 +26980,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 424,
-        "front": 73.64173464000001,
-        "mid": 126.96850800000001,
-        "back": 190.452762,
-        "source": "derived_from_screen_width"
+        "front": 29.6259852,
+        "mid": 55.0196868,
+        "back": 80.4133884,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -26128,7 +27092,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -26154,17 +27118,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 307,
-        "front": 49.09448976,
-        "mid": 84.64567199999999,
-        "back": 126.968508,
-        "source": "derived_from_screen_width"
+        "front": 59.2519704,
+        "mid": 70.53806,
+        "back": 84.64567199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26234,7 +27202,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26260,17 +27228,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 328,
-        "front": 52.519686719999996,
-        "mid": 90.55118399999999,
-        "back": 135.826776,
-        "source": "derived_from_screen_width"
+        "front": 63.3858288,
+        "mid": 75.45931999999999,
+        "back": 90.55118399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26340,7 +27312,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26366,17 +27338,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 299,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 84.0551208,
+        "mid": 100.06562,
+        "back": 120.07874399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26446,7 +27422,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26472,17 +27448,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 261,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26552,7 +27532,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26578,17 +27558,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 429,
-        "front": 49.09448976,
-        "mid": 84.64567199999999,
-        "back": 126.968508,
-        "source": "derived_from_screen_width"
+        "front": 59.2519704,
+        "mid": 70.53806,
+        "back": 84.64567199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26658,7 +27642,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26684,17 +27668,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 375,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26764,7 +27752,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26790,17 +27778,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 366,
-        "front": 51.663387480000004,
-        "mid": 89.07480600000001,
-        "back": 133.612209,
-        "source": "derived_from_screen_width"
+        "front": 62.35236420000001,
+        "mid": 74.229005,
+        "back": 89.07480600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26870,7 +27862,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -26896,17 +27888,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 287,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -26976,7 +27972,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27002,17 +27998,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 55.94488368000001,
-        "mid": 96.45669600000002,
-        "back": 144.68504400000003,
-        "source": "derived_from_screen_width"
+        "front": 67.5196872,
+        "mid": 80.38058000000001,
+        "back": 96.45669600000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27082,7 +28082,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27108,17 +28108,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 299,
-        "front": 41.10236352,
-        "mid": 70.86614399999999,
-        "back": 106.299216,
-        "source": "derived_from_screen_width"
+        "front": 49.6063008,
+        "mid": 59.05512,
+        "back": 70.86614399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27188,7 +28192,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27214,17 +28218,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 570,
-        "front": 64.50787608,
-        "mid": 111.220476,
-        "back": 166.830714,
-        "source": "derived_from_screen_width"
+        "front": 77.85433320000001,
+        "mid": 92.68373,
+        "back": 111.220476,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27294,7 +28302,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27320,17 +28328,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 270,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27400,7 +28412,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27426,17 +28438,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 305,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27506,7 +28522,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27532,17 +28548,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 305,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27612,7 +28632,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27638,17 +28658,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 251,
-        "front": 39.960631199999995,
-        "mid": 68.89764,
-        "back": 103.34646,
-        "source": "derived_from_screen_width"
+        "front": 48.228348,
+        "mid": 57.414699999999996,
+        "back": 68.89764,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27718,7 +28742,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27744,17 +28768,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 374,
-        "front": 45.954725880000005,
-        "mid": 79.232286,
-        "back": 118.84842900000001,
-        "source": "derived_from_screen_width"
+        "front": 55.462600200000004,
+        "mid": 66.026905,
+        "back": 79.232286,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27824,7 +28852,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27850,17 +28878,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 346,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -27930,7 +28962,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -27956,17 +28988,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 388,
-        "front": 47.66732436,
-        "mid": 82.185042,
-        "back": 123.277563,
-        "source": "derived_from_screen_width"
+        "front": 57.5295294,
+        "mid": 68.487535,
+        "back": 82.185042,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28036,7 +29072,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28062,17 +29098,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 268,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 24.458662200000003,
+        "mid": 45.42322980000001,
+        "back": 66.38779740000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -28170,7 +29210,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -28196,17 +29236,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 356,
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
+        "front": 69.24212820000001,
+        "mid": 82.431105,
+        "back": 98.917326,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28276,7 +29320,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28302,17 +29346,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 274,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28382,7 +29430,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28408,17 +29456,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 242,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28488,7 +29540,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28514,17 +29566,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 128,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28594,7 +29650,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28620,17 +29676,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 342,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28700,7 +29760,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28726,17 +29786,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 284,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28806,7 +29870,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28832,17 +29896,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 236,
-        "front": 39.960631199999995,
-        "mid": 68.89764,
-        "back": 103.34646,
-        "source": "derived_from_screen_width"
+        "front": 48.228348,
+        "mid": 57.414699999999996,
+        "back": 68.89764,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -28912,7 +29980,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -28938,17 +30006,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 388,
-        "front": 54.517718280000004,
-        "mid": 93.99606600000001,
-        "back": 140.994099,
-        "source": "derived_from_screen_width"
+        "front": 65.7972462,
+        "mid": 78.330055,
+        "back": 93.99606600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29018,7 +30090,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29044,17 +30116,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29124,7 +30200,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29150,17 +30226,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 341,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29230,7 +30310,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29256,17 +30336,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 251,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29336,7 +30420,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29362,17 +30446,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 303,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29442,7 +30530,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29468,17 +30556,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 363,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29548,7 +30640,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29574,17 +30666,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 439,
-        "front": 54.517718280000004,
-        "mid": 93.99606600000001,
-        "back": 140.994099,
-        "source": "derived_from_screen_width"
+        "front": 65.7972462,
+        "mid": 78.330055,
+        "back": 93.99606600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29654,7 +30750,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29680,17 +30776,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 39.960631199999995,
-        "mid": 68.89764,
-        "back": 103.34646,
-        "source": "derived_from_screen_width"
+        "front": 48.228348,
+        "mid": 57.414699999999996,
+        "back": 68.89764,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -29760,7 +30860,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -29786,17 +30886,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 252,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 24.458662200000003,
+        "mid": 45.42322980000001,
+        "back": 66.38779740000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -29894,7 +30998,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -29920,17 +31024,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 296,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30000,7 +31108,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30026,17 +31134,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.52756048,
-        "mid": 76.771656,
-        "back": 115.157484,
-        "source": "derived_from_screen_width"
+        "front": 53.7401592,
+        "mid": 63.97638,
+        "back": 76.771656,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30106,7 +31218,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30132,17 +31244,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 351,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30212,7 +31328,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30238,17 +31354,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 280,
-        "front": 43.67126124,
-        "mid": 75.295278,
-        "back": 112.942917,
-        "source": "derived_from_screen_width"
+        "front": 52.7066946,
+        "mid": 62.746065,
+        "back": 75.295278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30318,7 +31438,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30344,17 +31464,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 39.38976504,
-        "mid": 67.913388,
-        "back": 101.87008200000001,
-        "source": "derived_from_screen_width"
+        "front": 47.5393716,
+        "mid": 56.59449000000001,
+        "back": 67.913388,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30424,7 +31548,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30450,17 +31574,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 301,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30530,7 +31658,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30556,17 +31684,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.36417532,
-        "mid": 112.696854,
-        "back": 169.045281,
-        "source": "derived_from_screen_width"
+        "front": 78.8877978,
+        "mid": 93.914045,
+        "back": 112.696854,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30636,7 +31768,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30662,17 +31794,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 600,
-        "front": 74.78346696,
-        "mid": 128.93701199999998,
-        "back": 193.40551799999997,
-        "source": "derived_from_screen_width"
+        "front": 90.2559084,
+        "mid": 107.44751,
+        "back": 128.93701199999998,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30742,7 +31878,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30768,17 +31904,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 40.24606428,
-        "mid": 69.38976600000001,
-        "back": 104.084649,
-        "source": "derived_from_screen_width"
+        "front": 48.572836200000005,
+        "mid": 57.824805,
+        "back": 69.38976600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30848,7 +31988,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30874,17 +32014,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 207,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -30954,7 +32098,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -30980,17 +32124,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 349,
-        "front": 42.814962,
-        "mid": 73.8189,
-        "back": 110.72835,
-        "source": "derived_from_screen_width"
+        "front": 51.673230000000004,
+        "mid": 61.515750000000004,
+        "back": 73.8189,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31060,7 +32208,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31086,17 +32234,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31166,7 +32318,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31192,17 +32344,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 330,
-        "front": 53.090552880000004,
-        "mid": 91.535436,
-        "back": 137.303154,
-        "source": "derived_from_screen_width"
+        "front": 64.07480520000001,
+        "mid": 76.27953000000001,
+        "back": 91.535436,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31272,7 +32428,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31298,17 +32454,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 413,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31378,7 +32538,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31404,17 +32564,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 400,
-        "front": 51.663387480000004,
-        "mid": 89.07480600000001,
-        "back": 133.612209,
-        "source": "derived_from_screen_width"
+        "front": 62.35236420000001,
+        "mid": 74.229005,
+        "back": 89.07480600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31484,7 +32648,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31510,17 +32674,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31590,7 +32758,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31616,17 +32784,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 235,
-        "front": 42.52952892,
-        "mid": 73.326774,
-        "back": 109.990161,
-        "source": "derived_from_screen_width"
+        "front": 51.3287418,
+        "mid": 61.105644999999996,
+        "back": 73.326774,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31696,7 +32868,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31722,17 +32894,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 246,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31802,7 +32978,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31828,17 +33004,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.519686719999996,
-        "mid": 90.55118399999999,
-        "back": 135.826776,
-        "source": "derived_from_screen_width"
+        "front": 63.3858288,
+        "mid": 75.45931999999999,
+        "back": 90.55118399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -31908,7 +33088,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -31934,17 +33114,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "confirmed",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 279,
-        "front": 66.12,
-        "mid": 114,
-        "back": 171,
-        "source": "derived_from_screen_width"
+        "front": 79.8,
+        "mid": 95,
+        "back": 114,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32040,17 +33224,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 441,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32120,7 +33308,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32146,17 +33334,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 445,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32226,7 +33418,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32252,17 +33444,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 400,
-        "front": 62.79527759999999,
-        "mid": 108.26772,
-        "back": 162.40158,
-        "source": "derived_from_screen_width"
+        "front": 75.787404,
+        "mid": 90.22309999999999,
+        "back": 108.26772,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32332,7 +33528,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32358,17 +33554,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 369,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
+        "front": 58.907482200000004,
+        "mid": 70.127955,
+        "back": 84.153546,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32438,7 +33638,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32464,17 +33664,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 322,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32544,7 +33748,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32570,17 +33774,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 230,
-        "front": 39.104331959999996,
-        "mid": 67.421262,
-        "back": 101.13189299999999,
-        "source": "derived_from_screen_width"
+        "front": 47.1948834,
+        "mid": 56.184385,
+        "back": 67.421262,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32650,7 +33858,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32676,17 +33884,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 434,
-        "front": 56.515749840000005,
-        "mid": 97.440948,
-        "back": 146.16142200000002,
-        "source": "derived_from_screen_width"
+        "front": 68.20866360000001,
+        "mid": 81.20079000000001,
+        "back": 97.440948,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32756,7 +33968,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32782,17 +33994,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 494,
-        "front": 51.948820559999994,
-        "mid": 89.566932,
-        "back": 134.35039799999998,
-        "source": "derived_from_screen_width"
+        "front": 62.6968524,
+        "mid": 74.63910999999999,
+        "back": 89.566932,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32862,7 +34078,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32888,17 +34104,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 303,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -32968,7 +34188,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -32994,17 +34214,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 330,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33074,7 +34298,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33100,17 +34324,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 320,
-        "front": 47.381891280000005,
-        "mid": 81.692916,
-        "back": 122.53937400000001,
-        "source": "derived_from_screen_width"
+        "front": 57.18504120000001,
+        "mid": 68.07743,
+        "back": 81.692916,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33180,7 +34408,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33206,17 +34434,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 270,
-        "front": 55.6594506,
-        "mid": 95.96457,
-        "back": 143.946855,
-        "source": "derived_from_screen_width"
+        "front": 67.175199,
+        "mid": 79.970475,
+        "back": 95.96457,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33286,7 +34518,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33312,17 +34544,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 259,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33392,7 +34628,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33418,17 +34654,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 55.94488368000001,
-        "mid": 96.45669600000002,
-        "back": 144.68504400000003,
-        "source": "derived_from_screen_width"
+        "front": 67.5196872,
+        "mid": 80.38058000000001,
+        "back": 96.45669600000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33498,7 +34738,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33524,17 +34764,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 422,
-        "front": 47.66732436,
-        "mid": 82.185042,
-        "back": 123.277563,
-        "source": "derived_from_screen_width"
+        "front": 57.5295294,
+        "mid": 68.487535,
+        "back": 82.185042,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33604,7 +34848,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33630,17 +34874,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 249,
-        "front": 41.10236352,
-        "mid": 70.86614399999999,
-        "back": 106.299216,
-        "source": "derived_from_screen_width"
+        "front": 49.6063008,
+        "mid": 59.05512,
+        "back": 70.86614399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33710,7 +34958,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33736,17 +34984,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 372,
-        "front": 47.66732436,
-        "mid": 82.185042,
-        "back": 123.277563,
-        "source": "derived_from_screen_width"
+        "front": 57.5295294,
+        "mid": 68.487535,
+        "back": 82.185042,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33816,7 +35068,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33842,17 +35094,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
+        "front": 69.24212820000001,
+        "mid": 82.431105,
+        "back": 98.917326,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -33922,7 +35178,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -33948,17 +35204,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 271,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34028,7 +35288,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34054,17 +35314,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 282,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34134,7 +35398,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34160,17 +35424,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 270,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34240,7 +35508,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34266,17 +35534,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 300,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34346,7 +35618,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34372,17 +35644,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34452,7 +35728,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34478,17 +35754,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 56.515749840000005,
-        "mid": 97.440948,
-        "back": 146.16142200000002,
-        "source": "derived_from_screen_width"
+        "front": 68.20866360000001,
+        "mid": 81.20079000000001,
+        "back": 97.440948,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34558,7 +35838,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34584,17 +35864,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 238,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34664,7 +35948,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34690,17 +35974,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 272,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34770,7 +36058,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34796,17 +36084,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 267,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34876,7 +36168,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -34902,17 +36194,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 296,
-        "front": 42.52952892,
-        "mid": 73.326774,
-        "back": 109.990161,
-        "source": "derived_from_screen_width"
+        "front": 51.3287418,
+        "mid": 61.105644999999996,
+        "back": 73.326774,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -34982,7 +36278,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35008,17 +36304,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 352,
-        "front": 51.092521319999996,
-        "mid": 88.090554,
-        "back": 132.135831,
-        "source": "derived_from_screen_width"
+        "front": 61.6633878,
+        "mid": 73.408795,
+        "back": 88.090554,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35088,7 +36388,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35114,17 +36414,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 53.946852119999996,
-        "mid": 93.01181399999999,
-        "back": 139.517721,
-        "source": "derived_from_screen_width"
+        "front": 65.1082698,
+        "mid": 77.509845,
+        "back": 93.01181399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35194,7 +36498,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35220,17 +36524,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 287,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35300,7 +36608,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35326,17 +36634,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 230,
-        "front": 45.954725880000005,
-        "mid": 79.232286,
-        "back": 118.84842900000001,
-        "source": "derived_from_screen_width"
+        "front": 55.462600200000004,
+        "mid": 66.026905,
+        "back": 79.232286,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35406,7 +36718,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35432,17 +36744,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 585,
-        "front": 51.3779544,
-        "mid": 88.58268000000001,
-        "back": 132.87402,
-        "source": "derived_from_screen_width"
+        "front": 62.007876,
+        "mid": 73.8189,
+        "back": 88.58268000000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35512,7 +36828,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35538,17 +36854,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 209,
-        "front": 44.812993559999995,
-        "mid": 77.26378199999999,
-        "back": 115.89567299999999,
-        "source": "derived_from_screen_width"
+        "front": 54.084647399999994,
+        "mid": 64.386485,
+        "back": 77.26378199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35618,7 +36938,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35644,17 +36964,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35724,7 +37048,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35750,17 +37074,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 59.9409468,
-        "mid": 103.34646,
-        "back": 155.01969,
-        "source": "derived_from_screen_width"
+        "front": 72.342522,
+        "mid": 86.12205,
+        "back": 103.34646,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -35830,7 +37158,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -35856,17 +37184,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 0,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 183,
-        "front": 48.80905668,
-        "mid": 84.153546,
-        "back": 126.23031900000001,
-        "source": "derived_from_screen_width"
+        "front": 19.6358274,
+        "mid": 36.466536600000005,
+        "back": 53.2972458,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 25,
+        "rowSpacingFt": 3.2,
+        "frontRowFloorElevationFt": 16,
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -35964,7 +37296,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived GT estimate: front/mid/back use 0.35×, 0.65×, and 0.95× screen width; pit/deck elevation and row pitch are renderer estimates from theater-geometry research, not venue measurements."
         }
       }
     },
@@ -35990,17 +37322,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 65.36417532,
-        "mid": 112.696854,
-        "back": 169.045281,
-        "source": "derived_from_screen_width"
+        "front": 78.8877978,
+        "mid": 93.914045,
+        "back": 112.696854,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36070,7 +37406,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36096,17 +37432,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 137,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36176,7 +37516,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36202,17 +37542,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 270,
-        "front": 45.6692928,
-        "mid": 78.74016,
-        "back": 118.11024,
-        "source": "derived_from_screen_width"
+        "front": 55.118112,
+        "mid": 65.6168,
+        "back": 78.74016,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36282,7 +37626,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36308,7 +37652,7 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "hemispherical",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": 0.83,
         "domeHFov": 180,
         "domeVFov": 125
@@ -36318,7 +37662,11 @@ window.LIEMAX_DATA = {
         "front": 39.37008,
         "mid": 39.37008,
         "back": 39.37008,
-        "source": "community_estimate"
+        "source": "community_estimate",
+        "rakeDeg": 30,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "dome"
       },
       "defaultPresentationAr": 1.43,
       "isHybrid": true,
@@ -36415,17 +37763,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 598,
-        "front": 57.372049080000004,
-        "mid": 98.917326,
-        "back": 148.375989,
-        "source": "derived_from_screen_width"
+        "front": 69.24212820000001,
+        "mid": 82.431105,
+        "back": 98.917326,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -36523,7 +37875,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36549,17 +37901,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 267,
-        "front": 51.948820559999994,
-        "mid": 89.566932,
-        "back": 134.35039799999998,
-        "source": "derived_from_screen_width"
+        "front": 62.6968524,
+        "mid": 74.63910999999999,
+        "back": 89.566932,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36629,7 +37985,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36655,17 +38011,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 267,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36735,7 +38095,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36761,17 +38121,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 62.79527759999999,
-        "mid": 108.26772,
-        "back": 162.40158,
-        "source": "derived_from_screen_width"
+        "front": 75.787404,
+        "mid": 90.22309999999999,
+        "back": 108.26772,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36841,7 +38205,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36867,17 +38231,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 303,
-        "front": 49.37992284,
-        "mid": 85.137798,
-        "back": 127.706697,
-        "source": "derived_from_screen_width"
+        "front": 59.596458600000005,
+        "mid": 70.948165,
+        "back": 85.137798,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -36947,7 +38315,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -36973,17 +38341,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 353,
-        "front": 46.52559204000001,
-        "mid": 80.21653800000001,
-        "back": 120.324807,
-        "source": "derived_from_screen_width"
+        "front": 56.151576600000006,
+        "mid": 66.847115,
+        "back": 80.21653800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37053,7 +38425,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37079,17 +38451,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 277,
-        "front": 43.385828159999996,
-        "mid": 74.803152,
-        "back": 112.20472799999999,
-        "source": "derived_from_screen_width"
+        "front": 52.3622064,
+        "mid": 62.33595999999999,
+        "back": 74.803152,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37159,7 +38535,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37185,17 +38561,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 54.2322852,
-        "mid": 93.50394,
-        "back": 140.25591,
-        "source": "derived_from_screen_width"
+        "front": 65.452758,
+        "mid": 77.91995,
+        "back": 93.50394,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37265,7 +38645,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37291,17 +38671,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 53.946852119999996,
-        "mid": 93.01181399999999,
-        "back": 139.517721,
-        "source": "derived_from_screen_width"
+        "front": 65.1082698,
+        "mid": 77.509845,
+        "back": 93.01181399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37371,7 +38755,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37397,17 +38781,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 288,
-        "front": 40.531497359999996,
-        "mid": 69.881892,
-        "back": 104.82283799999999,
-        "source": "derived_from_screen_width"
+        "front": 48.9173244,
+        "mid": 58.23491,
+        "back": 69.881892,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37477,7 +38865,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37503,17 +38891,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 61.3681122,
-        "mid": 105.80709,
-        "back": 158.710635,
-        "source": "derived_from_screen_width"
+        "front": 74.064963,
+        "mid": 88.172575,
+        "back": 105.80709,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37583,7 +38975,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37609,17 +39001,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 450,
-        "front": 51.3779544,
-        "mid": 88.58268000000001,
-        "back": 132.87402,
-        "source": "derived_from_screen_width"
+        "front": 62.007876,
+        "mid": 73.8189,
+        "back": 88.58268000000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37689,7 +39085,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37715,17 +39111,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 405,
-        "front": 50.80708824,
-        "mid": 87.598428,
-        "back": 131.397642,
-        "source": "derived_from_screen_width"
+        "front": 61.3188996,
+        "mid": 72.99869,
+        "back": 87.598428,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37795,7 +39195,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37821,17 +39221,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 260,
-        "front": 62.22441144,
-        "mid": 107.283468,
-        "back": 160.925202,
-        "source": "derived_from_screen_width"
+        "front": 75.09842760000001,
+        "mid": 89.40289,
+        "back": 107.283468,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -37901,7 +39305,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -37927,17 +39331,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 290,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38007,7 +39415,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38033,17 +39441,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 400,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38113,7 +39525,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38139,17 +39551,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 414,
-        "front": 49.665355919999996,
-        "mid": 85.62992399999999,
-        "back": 128.444886,
-        "source": "derived_from_screen_width"
+        "front": 59.94094679999999,
+        "mid": 71.35826999999999,
+        "back": 85.62992399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38219,7 +39635,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38245,17 +39661,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 324,
-        "front": 53.946852119999996,
-        "mid": 93.01181399999999,
-        "back": 139.517721,
-        "source": "derived_from_screen_width"
+        "front": 65.1082698,
+        "mid": 77.509845,
+        "back": 93.01181399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38325,7 +39745,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38351,17 +39771,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 400,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38431,7 +39855,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38457,17 +39881,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38537,7 +39965,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38563,17 +39991,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 345,
-        "front": 43.67126124,
-        "mid": 75.295278,
-        "back": 112.942917,
-        "source": "derived_from_screen_width"
+        "front": 52.7066946,
+        "mid": 62.746065,
+        "back": 75.295278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38643,7 +40075,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38669,17 +40101,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 420,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38749,7 +40185,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38775,17 +40211,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 336,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38855,7 +40295,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38881,17 +40321,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 340,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -38961,7 +40405,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -38987,17 +40431,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 210,
-        "front": 47.66732436,
-        "mid": 82.185042,
-        "back": 123.277563,
-        "source": "derived_from_screen_width"
+        "front": 57.5295294,
+        "mid": 68.487535,
+        "back": 82.185042,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39067,7 +40515,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39093,17 +40541,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 84.0551208,
+        "mid": 100.06562,
+        "back": 120.07874399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39173,7 +40625,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39199,17 +40651,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39279,7 +40735,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39305,17 +40761,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 399,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39385,7 +40845,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39411,17 +40871,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 347,
-        "front": 53.375985959999994,
-        "mid": 92.02756199999999,
-        "back": 138.04134299999998,
-        "source": "derived_from_screen_width"
+        "front": 64.4192934,
+        "mid": 76.689635,
+        "back": 92.02756199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39491,7 +40955,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39517,17 +40981,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 318,
-        "front": 43.67126124,
-        "mid": 75.295278,
-        "back": 112.942917,
-        "source": "derived_from_screen_width"
+        "front": 52.7066946,
+        "mid": 62.746065,
+        "back": 75.295278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39597,7 +41065,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39623,17 +41091,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 57.086616,
-        "mid": 98.42519999999999,
-        "back": 147.6378,
-        "source": "derived_from_screen_width"
+        "front": 68.89764,
+        "mid": 82.021,
+        "back": 98.42519999999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39703,7 +41175,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39729,17 +41201,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 375,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39809,7 +41285,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39835,17 +41311,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 285,
-        "front": 40.81693044,
-        "mid": 70.374018,
-        "back": 105.56102700000001,
-        "source": "derived_from_screen_width"
+        "front": 49.261812600000006,
+        "mid": 58.645015,
+        "back": 70.374018,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -39915,7 +41395,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -39941,17 +41421,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 245,
-        "front": 39.104331959999996,
-        "mid": 67.421262,
-        "back": 101.13189299999999,
-        "source": "derived_from_screen_width"
+        "front": 47.1948834,
+        "mid": 56.184385,
+        "back": 67.421262,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40021,7 +41505,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40047,17 +41531,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40127,7 +41615,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40153,17 +41641,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 293,
-        "front": 47.66732436,
-        "mid": 82.185042,
-        "back": 123.277563,
-        "source": "derived_from_screen_width"
+        "front": 57.5295294,
+        "mid": 68.487535,
+        "back": 82.185042,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40233,7 +41725,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40259,17 +41751,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40339,7 +41835,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40365,17 +41861,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 52.23425364,
-        "mid": 90.059058,
-        "back": 135.088587,
-        "source": "derived_from_screen_width"
+        "front": 63.041340600000005,
+        "mid": 75.049215,
+        "back": 90.059058,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40445,7 +41945,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40471,17 +41971,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 299,
-        "front": 45.383859720000004,
-        "mid": 78.248034,
-        "back": 117.372051,
-        "source": "derived_from_screen_width"
+        "front": 54.7736238,
+        "mid": 65.206695,
+        "back": 78.248034,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40551,7 +42055,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40577,17 +42081,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 140,
-        "front": 43.67126124,
-        "mid": 75.295278,
-        "back": 112.942917,
-        "source": "derived_from_screen_width"
+        "front": 52.7066946,
+        "mid": 62.746065,
+        "back": 75.295278,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40657,7 +42165,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40683,17 +42191,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 383,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40763,7 +42275,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40789,17 +42301,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 441,
-        "front": 54.517718280000004,
-        "mid": 93.99606600000001,
-        "back": 140.994099,
-        "source": "derived_from_screen_width"
+        "front": 65.7972462,
+        "mid": 78.330055,
+        "back": 93.99606600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40869,7 +42385,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -40895,17 +42411,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 41.958662759999996,
-        "mid": 72.342522,
-        "back": 108.51378299999999,
-        "source": "derived_from_screen_width"
+        "front": 50.6397654,
+        "mid": 60.28543499999999,
+        "back": 72.342522,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -40975,7 +42495,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41001,17 +42521,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 41.67322968,
-        "mid": 71.850396,
-        "back": 107.775594,
-        "source": "derived_from_screen_width"
+        "front": 50.2952772,
+        "mid": 59.87533,
+        "back": 71.850396,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41081,7 +42605,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41107,17 +42631,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 393,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41187,7 +42715,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41213,17 +42741,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 243,
-        "front": 47.0964582,
-        "mid": 81.20079,
-        "back": 121.801185,
-        "source": "derived_from_screen_width"
+        "front": 56.840553,
+        "mid": 67.667325,
+        "back": 81.20079,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41293,7 +42825,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41319,17 +42851,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 420,
-        "front": 49.09448976,
-        "mid": 84.64567199999999,
-        "back": 126.968508,
-        "source": "derived_from_screen_width"
+        "front": 59.2519704,
+        "mid": 70.53806,
+        "back": 84.64567199999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41399,7 +42935,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41425,17 +42961,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41505,7 +43045,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41531,17 +43071,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 411,
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
+        "front": 74.4094512,
+        "mid": 88.58268000000001,
+        "back": 106.299216,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -41639,7 +43183,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41665,17 +43209,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41745,7 +43293,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41771,17 +43319,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 49.37992284,
-        "mid": 85.137798,
-        "back": 127.706697,
-        "source": "derived_from_screen_width"
+        "front": 59.596458600000005,
+        "mid": 70.948165,
+        "back": 85.137798,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41851,7 +43403,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41877,17 +43429,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 603,
-        "front": 66.22047456,
-        "mid": 114.173232,
-        "back": 171.259848,
-        "source": "derived_from_screen_width"
+        "front": 79.9212624,
+        "mid": 95.14436,
+        "back": 114.173232,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -41957,7 +43513,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -41983,17 +43539,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 514,
-        "front": 59.9409468,
-        "mid": 103.34646,
-        "back": 155.01969,
-        "source": "derived_from_screen_width"
+        "front": 72.342522,
+        "mid": 86.12205,
+        "back": 103.34646,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42063,7 +43623,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42089,17 +43649,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 69.64567152,
-        "mid": 120.07874399999999,
-        "back": 180.118116,
-        "source": "derived_from_screen_width"
+        "front": 84.0551208,
+        "mid": 100.06562,
+        "back": 120.07874399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42169,7 +43733,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42195,17 +43759,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 639,
-        "front": 66.22047456,
-        "mid": 114.173232,
-        "back": 171.259848,
-        "source": "derived_from_screen_width"
+        "front": 79.9212624,
+        "mid": 95.14436,
+        "back": 114.173232,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42275,7 +43843,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42301,17 +43869,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 293,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42381,7 +43953,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42407,17 +43979,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 42.52952892,
-        "mid": 73.326774,
-        "back": 109.990161,
-        "source": "derived_from_screen_width"
+        "front": 51.3287418,
+        "mid": 61.105644999999996,
+        "back": 73.326774,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42487,7 +44063,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42513,17 +44089,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 420,
-        "front": 51.3779544,
-        "mid": 88.58268000000001,
-        "back": 132.87402,
-        "source": "derived_from_screen_width"
+        "front": 62.007876,
+        "mid": 73.8189,
+        "back": 88.58268000000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42593,7 +44173,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42619,17 +44199,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 285,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42699,7 +44283,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42725,17 +44309,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 404,
-        "front": 45.09842664,
-        "mid": 77.755908,
-        "back": 116.633862,
-        "source": "derived_from_screen_width"
+        "front": 54.4291356,
+        "mid": 64.79659,
+        "back": 77.755908,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42805,7 +44393,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42831,17 +44419,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 299,
-        "front": 42.814962,
-        "mid": 73.8189,
-        "back": 110.72835,
-        "source": "derived_from_screen_width"
+        "front": 51.673230000000004,
+        "mid": 61.515750000000004,
+        "back": 73.8189,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -42911,7 +44503,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -42937,17 +44529,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 44.2421274,
-        "mid": 76.27953,
-        "back": 114.419295,
-        "source": "derived_from_screen_width"
+        "front": 53.395671,
+        "mid": 63.566275000000005,
+        "back": 76.27953,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43017,7 +44613,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43043,17 +44639,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 438,
-        "front": 56.801182919999995,
-        "mid": 97.93307399999999,
-        "back": 146.899611,
-        "source": "derived_from_screen_width"
+        "front": 68.5531518,
+        "mid": 81.610895,
+        "back": 97.93307399999999,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43123,7 +44723,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43149,17 +44749,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 356,
-        "front": 47.952757440000006,
-        "mid": 82.67716800000001,
-        "back": 124.015752,
-        "source": "derived_from_screen_width"
+        "front": 57.87401760000001,
+        "mid": 68.89764000000001,
+        "back": 82.67716800000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43229,7 +44833,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43255,17 +44859,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 35,
-        "front": 61.65354528,
-        "mid": 106.299216,
-        "back": 159.448824,
-        "source": "derived_from_screen_width"
+        "front": 74.4094512,
+        "mid": 88.58268000000001,
+        "back": 106.299216,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43335,7 +44943,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43361,17 +44969,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 54.517718280000004,
-        "mid": 93.99606600000001,
-        "back": 140.994099,
-        "source": "derived_from_screen_width"
+        "front": 65.7972462,
+        "mid": 78.330055,
+        "back": 93.99606600000001,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43441,7 +45053,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43467,17 +45079,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 387,
-        "front": 49.37992284,
-        "mid": 85.137798,
-        "back": 127.706697,
-        "source": "derived_from_screen_width"
+        "front": 59.596458600000005,
+        "mid": 70.948165,
+        "back": 85.137798,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43547,7 +45163,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43573,17 +45189,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 290,
-        "front": 50.521655159999995,
-        "mid": 87.106302,
-        "back": 130.65945299999998,
-        "source": "derived_from_screen_width"
+        "front": 60.9744114,
+        "mid": 72.588585,
+        "back": 87.106302,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": true,
@@ -43681,7 +45301,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43707,17 +45327,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 315,
-        "front": 45.954725880000005,
-        "mid": 79.232286,
-        "back": 118.84842900000001,
-        "source": "derived_from_screen_width"
+        "front": 55.462600200000004,
+        "mid": 66.026905,
+        "back": 79.232286,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43787,7 +45411,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43813,17 +45437,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": null,
-        "front": 46.24015896,
-        "mid": 79.724412,
-        "back": 119.586618,
-        "source": "derived_from_screen_width"
+        "front": 55.807088400000005,
+        "mid": 66.43701,
+        "back": 79.724412,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43893,7 +45521,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -43919,17 +45547,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 349,
-        "front": 60.797246040000005,
-        "mid": 104.82283800000002,
-        "back": 157.234257,
-        "source": "derived_from_screen_width"
+        "front": 73.3759866,
+        "mid": 87.352365,
+        "back": 104.82283800000002,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -43999,7 +45631,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },
@@ -44025,17 +45657,21 @@ window.LIEMAX_DATA = {
         "widthConfidence": "community_estimate",
         "geometry": "flat",
         "curvatureRadiusFt": null,
-        "screenBottomFt": 5,
+        "screenBottomFt": 4,
         "domeCoveragePct": null,
         "domeHFov": null,
         "domeVFov": null
       },
       "seat": {
         "capacity": 340,
-        "front": 43.10039508,
-        "mid": 74.311026,
-        "back": 111.466539,
-        "source": "derived_from_screen_width"
+        "front": 52.017718200000004,
+        "mid": 61.925855,
+        "back": 74.311026,
+        "source": "derived_from_screen_width",
+        "rakeDeg": 10,
+        "rowSpacingFt": 3.25,
+        "frontRowFloorElevationFt": 0,
+        "geometryProfile": "retrofit_no_pit"
       },
       "defaultPresentationAr": 1.9,
       "isHybrid": false,
@@ -44105,7 +45741,7 @@ window.LIEMAX_DATA = {
         },
         "seat": {
           "q": "derived_from_screen_width",
-          "note": "Front/mid/back derived from LFExaminer screen width using 0.87×, 1.5×, and 2.25× multipliers."
+          "note": "Profile-derived retrofit IMAX estimate: no screen pit; front/mid/back use 1.05×, 1.25×, and 1.50× screen width from theater-geometry research."
         }
       }
     },

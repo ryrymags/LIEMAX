@@ -79,6 +79,8 @@ export interface ResolvedSeating {
   viewing_distance_source: string;
   seat_offset_from_center_ft: number; // 0 = center seat
   rake_angle_deg?: number;
+  row_spacing_ft?: number;
+  front_row_floor_elevation_ft?: number;
 }
 
 // ─── Content Format ─────────────────────────────────────────────────

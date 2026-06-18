@@ -280,6 +280,8 @@ function collectSeatingIssues(seating: unknown, label: string, allowNull: boolea
   checkNullableInteger(`${label}.capacity`, seating.capacity, issues);
   for (const key of [
     'rake_angle_deg',
+    'row_spacing_ft',
+    'front_row_floor_elevation_ft',
     'viewing_distance_front_ft',
     'viewing_distance_mid_ft',
     'viewing_distance_back_ft',
@@ -524,7 +526,7 @@ function collectContentFormatIssues(format: JsonObject, label: string): string[]
 }
 
 console.log('\n=== Schema Contract ===');
-assertEqual('schema const version', schema.properties.schema_version.const, '1.5.0');
+assertEqual('schema const version', schema.properties.schema_version.const, '1.6.0');
 assert('schema has 143190 import definition', Boolean(schema.definitions.imax_143190_import));
 assert('schema has LFExaminer import definition', Boolean(schema.definitions.lfexaminer_import));
 assert('schema projection supports mode', Boolean(schema.definitions.projection.properties.mode));

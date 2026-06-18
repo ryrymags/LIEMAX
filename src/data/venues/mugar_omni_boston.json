@@ -66,6 +66,8 @@
   "seating": {
     "capacity": null,
     "rake_angle_deg": 30,
+    "row_spacing_ft": null,
+    "front_row_floor_elevation_ft": null,
     "seat_type": "standard",
     "has_bass_transducers": false,
     "viewing_distance_front_ft": null,

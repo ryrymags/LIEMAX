@@ -3,7 +3,7 @@
   "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
   "title": "LIEMAX Theater, Home Display & Screen Schema",
   "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
-  "version": "1.5.0",
+  "version": "1.6.0",
 
   "definitions": {
 
@@ -277,12 +277,20 @@
 
     "seating": {
       "type": "object",
-      "description": "Auditorium seating layout and viewing geometry. Distances derived from SMPTE/THX multipliers when primary data is unavailable: front ≈ 0.87× screen_width, mid ≈ 1.5× screen_width, back ≈ 2.0–2.5× screen_width.",
+      "description": "Auditorium seating layout and viewing geometry. Distances derived from format-specific auditorium profiles when primary data is unavailable: GT flat rooms use compact 0.35×/0.65×/0.95× screen-width estimates; retrofit IMAX/PLF rooms use conventional no-pit auditorium ratios.",
       "properties": {
         "capacity": { "type": ["integer", "null"], "description": "Total seat count." },
         "rake_angle_deg": {
           "type": ["number", "null"],
-          "description": "Stadium seating angle in degrees. Standard multiplex ≈ 5°. Dolby Cinema ≈ 8–12°. IMAX GT > standard (exact figure unpublished). IMAX Dome ≈ 30°."
+          "description": "Stadium seating angle in degrees. Standard multiplex ≈ 5–15°. Dolby Cinema and retrofit IMAX ≈ 8–15°. IMAX GT is steep, roughly 23–30° in sourced examples. IMAX Dome ≈ 30°."
+        },
+        "row_spacing_ft": {
+          "type": ["number", "null"],
+          "description": "Typical seat-to-seat row pitch in feet. Standard/IMAX fixed seating is commonly about 3.0–3.5 ft; Dolby Cinema recliners are wider, roughly 4.6–5.8 ft. Used for renderer geometry and caveated seating estimates, not precise per-venue counts unless sourced."
+        },
+        "front_row_floor_elevation_ft": {
+          "type": ["number", "null"],
+          "description": "Estimated front-row floor elevation above the screen-bottom datum, in feet. For GT pit modeling, the screen may extend below the first row; standard retrofit and Dolby rooms typically use 0 because there is no pit. This is a geometry-profile estimate unless explicitly sourced."
         },
         "seat_type": { "$ref": "#/definitions/seat_type" },
         "has_bass_transducers": {
@@ -748,7 +756,7 @@
     "schema_version": {
       "type": "string",
       "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
-      "const": "1.5.0"
+      "const": "1.6.0"
     },
     "presets": {
       "type": "array",

@@ -13,10 +13,11 @@
         "geometry": "slight_curve"
       },
       "seat": {
-        "front": 35,
-        "mid": 58,
-        "back": 82,
-        "source": "derived_from_screen_width"
+        "front": 24.5,
+        "mid": 45.5,
+        "back": 66.5,
+        "source": "derived_from_screen_width",
+        "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.43,
       "presentationModes": [
@@ -75,7 +76,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical GT auditorium ratios."
+          "note": "Derived from GT pit-profile geometry: compact row depth, steep rake, and estimated elevated front deck; not a measured venue."
         }
       },
       "isPreset": true
@@ -93,10 +94,11 @@
         "geometry": "flat"
       },
       "seat": {
-        "front": 28,
-        "mid": 46,
-        "back": 65,
-        "source": "derived_from_screen_width"
+        "front": 49.5,
+        "mid": 74.25,
+        "back": 110,
+        "source": "derived_from_screen_width",
+        "geometryProfile": "dolby_recliner"
       },
       "defaultPresentationAr": 2.39,
       "presentationModes": [
@@ -147,7 +149,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical auditorium ratios."
+          "note": "Derived from Dolby no-pit recliner-profile geometry; exact per-venue row depth is not published."
         }
       },
       "isPreset": true
@@ -165,10 +167,11 @@
         "geometry": "flat"
       },
       "seat": {
-        "front": 29,
-        "mid": 49,
-        "back": 68,
-        "source": "derived_from_screen_width"
+        "front": 52.2,
+        "mid": 78.3,
+        "back": 116,
+        "source": "derived_from_screen_width",
+        "geometryProfile": "dolby_recliner"
       },
       "defaultPresentationAr": 2.39,
       "presentationModes": [
@@ -219,7 +222,7 @@
         },
         "seat": {
           "q": "derived",
-          "note": "Derived from typical Dolby auditorium ratios; venue rows will override when known."
+          "note": "Derived from Dolby no-pit recliner-profile geometry; venue rows will override when known."
         }
       },
       "isPreset": true

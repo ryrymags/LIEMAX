@@ -5,10 +5,9 @@ window.LIEMAX_POV = (function () {
   const SOURCE_AR = 1.43;
   const HUMAN_HEIGHT_FT = 5.75;
   const EYE_ABOVE_FLOOR_FT = 3.7;
-  const DEFAULT_SCREEN_BOTTOM_FT = 5.0;
-  const GT_SCREEN_BOTTOM_FT = 2.0;
+  const DEFAULT_SCREEN_BOTTOM_FT = 4.0;
   const SCREEN_Z_FT = 0;
-  const GT_CURVE_RADIUS_FACTOR = 1.5;
+  const DEFAULT_GT_EDGE_BOW_FT = 2.5;
   const IMMERSION_WARN_HFOV = 53;
   const REFERENCE_IMAGE_SRC = "assets/pov/spiderverse-143-reference.webp";
   const REFERENCE_IMAGE_LABEL = "Spider-Verse 1.43 reference frame";
@@ -54,6 +53,8 @@ window.LIEMAX_POV = (function () {
     const hasSeat = n(seatDistances[seatKey]) != null;
     const curved = screen.geometry === "slight_curve";
     const fullHeight = isFullHeightImax(venue, projection);
+    const geometryProfile = venue?.seat?.geometryProfile || (curved && fullHeight ? "gt_pit" : "retrofit_no_pit");
+    const profileDefaults = profileDefaultsFor(geometryProfile);
     const unsupportedReason = !isCinema(venue)
       ? "3D POV currently supports cinema venues only."
       : isDome(venue)
@@ -65,11 +66,11 @@ window.LIEMAX_POV = (function () {
             : null;
 
     const presentationAr = n(options.presentationAr, n(venue?.defaultPresentationAr, n(projection?.min_ar, n(screen.ar, 1.90))));
-    const screenBottomFt = n(
-      screen.screenBottomFt,
-      curved && fullHeight ? GT_SCREEN_BOTTOM_FT : DEFAULT_SCREEN_BOTTOM_FT
-    );
+    const screenBottomFt = n(screen.screenBottomFt, profileDefaults.screenBottomFt);
     const curvatureRadiusFt = n(screen.curvatureRadiusFt);
+    const frontRowFloorElevationFt = n(venue?.seat?.frontRowFloorElevationFt, profileDefaults.frontRowFloorElevationFt);
+    const rakeDeg = n(venue?.seat?.rakeDeg, profileDefaults.rakeDeg);
+    const rowSpacingFt = n(venue?.seat?.rowSpacingFt, profileDefaults.rowSpacingFt);
 
     const projectionWindow = projectionRectFor(screenW, screenH, presentationAr);
     const sourceCrop = textureCropFor(projectionWindow.w / projectionWindow.h, SOURCE_AR);
@@ -105,9 +106,13 @@ window.LIEMAX_POV = (function () {
       layout: {
         screenZ: SCREEN_Z_FT,
       },
-      seatingStyle: curved && fullHeight ? "gt" : "retrofit",
+      seatingStyle: geometryProfile === "gt_pit" ? "gt" : "retrofit",
+      geometryProfile,
+      rakeDeg,
+      rowSpacingFt,
+      frontRowFloorElevationFt,
       curveRadiusFactor: curved
-        ? (curvatureRadiusFt && screenW ? curvatureRadiusFt / screenW : GT_CURVE_RADIUS_FACTOR)
+        ? curveRadiusFactorFor(screenW, curvatureRadiusFt)
         : 0,
       sourceConfidence: venue?.sources?.seat?.q || venue?.seat?.source || "unknown",
     };
@@ -299,11 +304,23 @@ window.LIEMAX_POV = (function () {
     const m = this.model;
     const front = n(m.seatDistances.front, Math.max(0, m.seatDistance - 20));
     const back = n(m.seatDistances.back, Math.max(front + 1, m.seatDistance + 20));
-    const span = Math.max(1, back - front);
-    const t = clamp((distanceFromScreen - front) / span, 0, 1);
-    const slope = m.seatingStyle === "gt" ? 0.53 : 0.29;
-    const cap = m.screen.h * (m.seatingStyle === "gt" ? 0.55 : 0.32);
-    return Math.min(cap, span * slope) * t;
+    const rake = Math.tan((n(m.rakeDeg, 10) * Math.PI) / 180);
+    const rowSpacing = Math.max(1, n(m.rowSpacingFt, 3.25));
+    const baseElevation = Math.max(0, n(m.frontRowFloorElevationFt, 0));
+    const maxHeight = m.screen.h * (m.geometryProfile === "gt_pit" ? 0.75 : 0.45);
+
+    if (m.geometryProfile === "gt_pit") {
+      const rampStart = Math.max(0, front - rowSpacing);
+      if (distanceFromScreen <= rampStart) return 0;
+      if (distanceFromScreen < front) {
+        const t = clamp((distanceFromScreen - rampStart) / Math.max(1, front - rampStart), 0, 1);
+        return baseElevation * t;
+      }
+      return Math.min(maxHeight, baseElevation + Math.max(0, distanceFromScreen - front) * rake);
+    }
+
+    if (distanceFromScreen <= front) return 0;
+    return Math.min(maxHeight, Math.max(0, distanceFromScreen - front) * rake);
   };
 
   Viewer.prototype.rebuild = function () {
@@ -356,7 +373,7 @@ window.LIEMAX_POV = (function () {
     ["front", "mid", "back"].forEach((key) => {
       const seatDist = n(m.seatDistances[key]);
       if (seatDist == null || seatDist >= D - 2) return;
-      const row = buildSeatRow(screenZ + seatDist, this.floorHeightAt(seatDist));
+      const row = buildSeatRow(screenZ + seatDist, this.floorHeightAt(seatDist), m);
       scene.add(row);
       this.meshes.push(row);
     });
@@ -375,6 +392,7 @@ window.LIEMAX_POV = (function () {
       `<div><span>venue</span><strong>${escapeHtml(m.name)}</strong></div>` +
       `<div><span>screen</span><strong>${W.toFixed(0)} x ${H.toFixed(0)} ft</strong></div>` +
       `<div><span>seat</span><strong>${m.seatKey} \u00b7 ${D.toFixed(0)} ft</strong></div>` +
+      `<div><span>geometry</span><strong>${escapeHtml(profileLabel(m.geometryProfile))} \u00b7 ${n(m.rakeDeg, 0).toFixed(0)}\u00b0 rake</strong></div>` +
       `<div><span>format</span><strong>${m.presentationAr.toFixed(2)} on 1.43 source</strong></div>` +
       `<div><span>image</span><strong>${escapeHtml(m.sourceLabel || REFERENCE_IMAGE_LABEL)}</strong></div>` +
       `<div><span>fov</span><strong>${hFov.toFixed(0)}\u00b0 H \u00b7 ${vFov.toFixed(0)}\u00b0 V</strong></div>`;
@@ -431,6 +449,34 @@ window.LIEMAX_POV = (function () {
     return geo;
   }
 
+  function curveRadiusFactorFor(screenW, curvatureRadiusFt) {
+    if (curvatureRadiusFt && screenW) return curvatureRadiusFt / screenW;
+    if (!screenW) return 0;
+    const half = screenW / 2;
+    const bow = clamp(DEFAULT_GT_EDGE_BOW_FT, 1, Math.max(1, screenW * 0.05));
+    return ((half * half + bow * bow) / (2 * bow)) / screenW;
+  }
+
+  function profileDefaultsFor(profile) {
+    if (profile === "gt_pit") {
+      return { screenBottomFt: 0, rakeDeg: 25, rowSpacingFt: 3.2, frontRowFloorElevationFt: 16 };
+    }
+    if (profile === "dolby_recliner") {
+      return { screenBottomFt: 4, rakeDeg: 10, rowSpacingFt: 5.2, frontRowFloorElevationFt: 0 };
+    }
+    if (profile === "standard_conventional") {
+      return { screenBottomFt: 3.5, rakeDeg: 7, rowSpacingFt: 3.5, frontRowFloorElevationFt: 0 };
+    }
+    return { screenBottomFt: DEFAULT_SCREEN_BOTTOM_FT, rakeDeg: 10, rowSpacingFt: 3.25, frontRowFloorElevationFt: 0 };
+  }
+
+  function profileLabel(profile) {
+    if (profile === "gt_pit") return "GT pit estimate";
+    if (profile === "dolby_recliner") return "Dolby recliner estimate";
+    if (profile === "standard_conventional") return "conventional estimate";
+    return "retrofit no-pit estimate";
+  }
+
   function activeRect(model) {
     return projectionRectFor(model.screen.w, model.screen.h, model.presentationAr);
   }
@@ -485,14 +531,15 @@ window.LIEMAX_POV = (function () {
     return new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0x11161d, side: THREE.DoubleSide }));
   }
 
-  function buildSeatRow(z, floorY) {
+  function buildSeatRow(z, floorY, model) {
     const THREE = window.THREE;
     const group = new THREE.Group();
-    const sw = 2.4;
-    const sh = 2.3;
-    const sd = 1.2;
-    const gap = 0.45;
-    const count = 11;
+    const recliner = model?.geometryProfile === "dolby_recliner";
+    const sw = recliner ? 3.1 : 2.4;
+    const sh = recliner ? 2.0 : 2.3;
+    const sd = recliner ? 2.2 : 1.2;
+    const gap = recliner ? 0.65 : 0.45;
+    const count = recliner ? 9 : 11;
     const total = count * (sw + gap);
     const mat = new THREE.MeshBasicMaterial({ color: 0x0a0f14 });
     for (let i = 0; i < count; i++) {

@@ -141,6 +141,7 @@ console.log("\nDocs workbench regression validation\n");
 const providence = findVenueById("apple_providence_imax");
 const reading = findVenueByName("Sunbrella IMAX 3D Theater Reading");
 const cinemarkXd = findVenueById("cinemark_xd");
+const dolbyTypical = findVenueById("dolby_cinema_typical");
 const dolbySingleLaser = findVenueById("dolby_cinema_single_laser");
 const assemblyRow = findVenueByName("AMC Assembly Row 12 & IMAX");
 const bostonCommon = findVenueByName("AMC Boston Common 19");
@@ -162,6 +163,7 @@ const suppressedLFExaminerDuplicates = [
 ];
 
 assert("Cinemark XD is present in workbench data", Boolean(cinemarkXd));
+assert("Dolby Cinema typical preset is present", Boolean(dolbyTypical));
 assert("Dolby Cinema 2025 is present in workbench data", Boolean(dolbySingleLaser));
 assert("Reading GT generated venue is present", Boolean(reading));
 assert("Lincoln Square GT fallback is present", Boolean(lincolnSquare));
@@ -209,12 +211,38 @@ assert("Reading seating source is caveated", reading.sources.seat.q === "communi
 assert("LIEMAX_POV runtime is exposed", Boolean(POV && typeof POV.modelForVenue === "function" && typeof POV.createComparison === "function"));
 
 const povBostonCommon = POV?.modelForVenue ? POV.modelForVenue(bostonCommon, { side: "A", presentationAr: 1.90, seat: "mid" }) : null;
+const povAssemblyRow = POV?.modelForVenue ? POV.modelForVenue(assemblyRow, { side: "A", presentationAr: 1.90, seat: "mid" }) : null;
 const povReadingGt = POV?.modelForVenue ? POV.modelForVenue(reading, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
+const povLincolnGt = POV?.modelForVenue ? POV.modelForVenue(lincolnSquare, { side: "B", presentationAr: 1.43, seat: "mid" }) : null;
+const povDolbyTypical = POV?.modelForVenue ? POV.modelForVenue(dolbyTypical, { side: "A", presentationAr: 2.39, seat: "mid" }) : null;
 const povDomeVenue = D.venues.find((venue) => venue.screen?.geometry === "hemispherical");
 const povDome = POV?.modelForVenue ? POV.modelForVenue(povDomeVenue, { presentationAr: 1.43, seat: "mid" }) : null;
 const povDomeCopy = "3D dome POV is WIP because dome projection needs fisheye/hemisphere mapping. Use the 2D dome scale for now.";
 assert("POV flat venue model is data-bound to 1.90 mid seat", povBostonCommon?.supported && povBostonCommon.seatKey === "mid" && closeEnough(povBostonCommon.presentationAr, 1.90, 0.01) && povBostonCommon.seatingStyle === "retrofit");
 assert("POV GT model applies curved screen and GT seating", povReadingGt?.supported && povReadingGt.curveRadiusFactor > 0 && povReadingGt.seatingStyle === "gt");
+assert("POV GT geometry uses pit profile, shallow curve, and elevated front deck",
+  povReadingGt?.geometryProfile === "gt_pit" &&
+  povReadingGt?.screen?.screenBottomFt === 0 &&
+  closeEnough(povReadingGt?.frontRowFloorElevationFt, 16, 0.01) &&
+  closeEnough(povReadingGt?.rakeDeg, 25, 0.01) &&
+  closeEnough(povReadingGt?.rowSpacingFt, 3.2, 0.01) &&
+  povReadingGt?.curveRadiusFactor > 3);
+assert("Reading and Lincoln Square GT back rows stay within one screen width",
+  reading?.seat?.back / reading?.screen?.w <= 1 &&
+  closeEnough(lincolnSquare?.seat?.back, lincolnSquare?.screen?.w * 0.95, 0.02) &&
+  povLincolnGt?.geometryProfile === "gt_pit" &&
+  closeEnough(povLincolnGt?.frontRowFloorElevationFt, 16, 0.01));
+assert("POV retrofit IMAX geometry uses no-pit profile",
+  povBostonCommon?.geometryProfile === "retrofit_no_pit" &&
+  povAssemblyRow?.geometryProfile === "retrofit_no_pit" &&
+  povBostonCommon?.screen?.screenBottomFt === 4 &&
+  povBostonCommon?.frontRowFloorElevationFt === 0 &&
+  closeEnough(povBostonCommon?.rakeDeg, 10, 0.01));
+assert("POV Dolby geometry uses recliner no-pit profile",
+  povDolbyTypical?.geometryProfile === "dolby_recliner" &&
+  povDolbyTypical?.screen?.screenBottomFt === 4 &&
+  povDolbyTypical?.frontRowFloorElevationFt === 0 &&
+  closeEnough(povDolbyTypical?.rowSpacingFt, 5.2, 0.01));
 assert("POV models share a fixed screen anchor for side-by-side alignment",
   povBostonCommon?.layout?.screenZ === 0 &&
   povReadingGt?.layout?.screenZ === povBostonCommon.layout.screenZ);

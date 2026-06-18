@@ -12,7 +12,7 @@
     "aspect_ratio": null,
     "geometry": "flat",
     "curvature_radius_ft": null,
-    "screen_bottom_height_ft": 5.0,
+    "screen_bottom_height_ft": 4,
     "is_perforated": false,
     "dome_coverage_pct": null,
     "dome_fov_horizontal_deg": null,
@@ -58,6 +58,8 @@
   "default_seating": {
     "capacity": null,
     "rake_angle_deg": 10,
+    "row_spacing_ft": 5.2,
+    "front_row_floor_elevation_ft": 0,
     "seat_type": "recliner",
     "has_bass_transducers": true,
     "viewing_distance_front_ft": null,

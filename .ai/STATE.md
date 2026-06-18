@@ -1,6 +1,6 @@
 # State
 
-Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype with a new Step 6 seed: a venue-bound flat/curved IMAX 3D POV comparison module. A full Overhaul V2 redesign is still pending."
+Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype with a Step 6 seed: a venue-bound flat/curved IMAX 3D POV comparison module now informed by GT pit, retrofit no-pit, and Dolby recliner geometry profiles. A full Overhaul V2 redesign is still pending."
 
 Current priority: Overhaul V2 — ground-up website redesign per the Overhaul Bible (`Downloads/Overhaul V2/LIEMAX-Overhaul-Bible.md`). Data layer is ready; no new data work is needed before starting the build.
 Branch cleanup note: `gui-wip` is now treated as the primary working branch. Useful artifacts from stale local experiment branches/worktrees were preserved under `.ai/archive/branch-salvage/` before pruning.
@@ -15,6 +15,9 @@ Step 6 POV seed complete as of 2026-06-18:
 - Dome POV remains WIP because it needs fisheye/hemisphere mapping; dome venues should show the WIP copy and continue using the 2D dome scale.
 - 2026-06-18 follow-up: added a user-supplied local 1.43:1 WebP test asset at `docs/assets/pov/spiderverse-143-reference.webp` and tightened `docs/pov.js` projection-window fitting so wide physical screens render the active 1.90/1.43 presentation rectangle before source-image crop is applied.
 - 2026-06-18 follow-up: rebased `docs/pov.js` around a fixed screen-plane anchor so side-by-side POV renders keep screens aligned while selected seats, floor rake, and row markers remain measured from the screen; docs validation now covers the fixed anchor and seat-distance mapping.
+- 2026-06-18 follow-up: integrated user-supplied theater-geometry research into `research/Theater Geometry Reference for 3D Renderer.md`, summarized it in `research/Master Research.md`, and bumped schema to `1.6.0` with `seating.row_spacing_ft` and `seating.front_row_floor_elevation_ft`.
+- 2026-06-18 follow-up: generated docs venues now expose `seat.geometryProfile`, `seat.rakeDeg`, `seat.rowSpacingFt`, and `seat.frontRowFloorElevationFt`. GT flat/full-height rows use compact pit-profile fallbacks (0.35×/0.65×/0.95× screen width), retrofit IMAX uses no-pit fallbacks (1.05×/1.25×/1.50×), Dolby examples use recliner row spacing, and dome POV remains WIP.
+- 2026-06-18 verification: `npm run validate:schema` passed (182/182), `npm run validate:docs` passed (148/148), full `npm run ci` passed, and `git diff --check` passed. In-app browser visual verification was attempted against `http://127.0.0.1:5174/?v=geometry-pov-check`, but Browser Use blocked the local URL by policy; no alternate browser bypass was used.
 
 ## Priority 0 Working Context
 
@@ -127,6 +130,7 @@ Completed 2026-05-03:
 - Updated product taxonomy so LIEMAX means legacy `imax_dual_xenon` only, while modern laser IMAX capped at 1.90 (`imax_cola`, `imax_laser_xt`, and GT Laser on a 1.90 screen) classifies as `imax_lite`.
 - Hybrid CoLa + 15/70 venues now explain that regular digital showings are IMAX Lite, not LIEMAX.
 - Schema bumped to `1.5.0` with `screen.width_confidence`; 143190/r-imax rows mark confirmed width, LFExaminer/frontend typical rows mark community-estimate width, and width sub-labels only fire from confirmed widths.
+- Schema bumped to `1.6.0` with seating geometry fields `row_spacing_ft` and `front_row_floor_elevation_ft` for source-aware 3D POV geometry profiles.
 - Generated docs DB now exposes `total_us_imax`, `current_r_imax_count`, `lfexaminer_supplemental_count`, `full_143_projection_capable_count`, `commercial_full_143_projection_capable_count`, `imax_lite_count`, `liemax_count`, `liemax_pct`, `liemax_lfexaminer_count`, `liemax_lfexaminer_pct`, `liemax_current_source_count`, `not_full_143_digital_count`, `not_full_143_digital_pct`, `gt_laser_count`, `film_conditional_count`, and `dome_count`.
 - Current generated national split after the 2026-06-05 r-imax refresh: 404 U.S. IMAX rows total; 180 current r-imax rows; 224 archival LFExaminer supplemental Xenon rows; 149 IMAX Lite; 231 LIEMAX; 224 LIEMAX rows from archival LFExaminer; 380 / 94% not full-height 1.43 digital; 26 current r-imax rows with a flat 1.43 screen and at least one 1.43 projection path, 24 of which show commercial movies; 14 GT Laser every-showtime flat True IMAX; 21 film-conditional by the current flat/full-height predicate; 11 Dome; 175 contiguous-U.S. Dolby Cinema rows from the saved Dolby finder snapshot.
 - Overhaul V1 planning docs were updated to use `{{db.*}}` tokens, resolve DMR first introduction to Block 4, and keep Layer 3 chevrons inert until real anchors exist.
@@ -161,7 +165,7 @@ Screen Tags + Filters verification:
 - Step 1: Research & Data Schema. Audited 2026-04-26 — schema clean, cinema presets clean, research notes properly caveated.
 - Step 2: Math Engine. Audited 2026-04-26 — 133/133 tests pass, all edge cases covered (dome, hybrid, ScreenX, masking, FOV). No blockers.
 - Step 3: All presets, venues, home displays, content formats authored and validated. Audited 2026-04-26 — data quality clean after two fixes (imax_cola contrast_notes added; Home Theater Research naming table corrected to match canonical AGENTS.md IDs).
-- `schema/theater.schema.json` is version `1.5.0` (adds `r_imax_csv`/`lfexaminer` source quality/source-row support and `screen.width_confidence`).
+- `schema/theater.schema.json` is version `1.6.0` (adds `r_imax_csv`/`lfexaminer` source quality/source-row support, `screen.width_confidence`, and 3D POV seating geometry fields).
 - `src/math/` exists and has 133 passing validation tests.
 - Sparse 143190.xyz import mapping exists under `src/data/`.
 - Hybrid projection modes are schema-backed for digital + film IMAX venues.

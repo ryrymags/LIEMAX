@@ -667,6 +667,20 @@ The Perplexity Batch 2 audit confirmed that most comparison math in the Step 4 p
 
 * **143190 Xenon gap:** 143190.xyz intentionally excludes older Xenon-only IMAX venues. The website should disclose that limitation near search and treat any future Xenon additions as supplemental-source records until a better primary feed exists.
 
+**3D Renderer Geometry Addendum (2026-06-18)**
+
+The dedicated renderer reference now lives at `research/Theater Geometry Reference for 3D Renderer.md`. Use it to separate displayable theater data from renderer-only visual heuristics:
+
+* **GT pit/deck geometry:** True flat GT rooms should be modeled as screen walls extending below the first row into a pit. The front-row deck is estimated roughly 15–25 ft above the screen-bottom datum; LIEMAX uses 16 ft as the default profile estimate, not a measured venue fact.
+
+* **GT seating depth:** Purpose-built flat GT rooms should use compact screen-width ratios when row measurements are absent: front roughly 0.35× screen width, back no deeper than about 0.9–1.0× screen width, with mid-row around 0.65× as a practical renderer fallback.
+
+* **Retrofit IMAX geometry:** CoLa, Laser XT, and Dual Xenon retrofit rooms should be modeled as no-pit rooms with conventional screen-bottom height around 3–5 ft, standard multiplex rake around 8–15°, and deeper seating than GT. The docs generator uses 1.05× / 1.25× / 1.50× screen-width front/mid/back fallbacks for this profile.
+
+* **Dolby Cinema geometry:** Dolby should stay no-pit and conventional in screen mounting, but row spacing should reflect recliners rather than fixed stadium seats. Use wider row pitch around 5.2 ft as a renderer/profile default, with exact per-venue geometry still unpublished.
+
+* **Curvature confidence:** IMAX GT curvature is well-supported qualitatively, but public sources do not publish exact radii. The 3D renderer may use a shallow 1–4 ft edge bow visual approximation, while public data should keep `curvature_radius_ft` null unless a venue-specific source exists.
+
 **Open Questions / Uncertain Areas**
 
 * **Dolby Cinema global count:** The April 2026 Dolby Cinema Finder query returned 295 global and 175 US entries. This is a point-in-time scrape — not a published corporate installed-base figure. Re-count before publishing.

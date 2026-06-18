@@ -800,7 +800,14 @@ function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB,
     if (!model) return "POV module unavailable";
     if (!model.supported) return model.unsupportedReason;
     const curve = model.curveRadiusFactor > 0 ? "curved screen" : "flat screen";
-    return `${model.seatKey} seat · ${model.presentationAr.toFixed(2)}:1 presentation · ${curve} · ${model.seatingStyle} seating`;
+    const profile = model.geometryProfile === "gt_pit"
+      ? "GT pit estimate"
+      : model.geometryProfile === "dolby_recliner"
+        ? "Dolby recliner estimate"
+        : model.geometryProfile === "standard_conventional"
+          ? "conventional estimate"
+          : "retrofit no-pit estimate";
+    return `${model.seatKey} seat · ${model.presentationAr.toFixed(2)}:1 presentation · ${curve} · ${profile}`;
   }
 
   return (
@@ -817,7 +824,7 @@ function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB,
       </div>
       <div ref={mountRef} className="pov__mount" />
       <p className="pov__caption">
-        Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. The projected image is a local 1.43 reference asset so the 1.90 crop and GT full-height frame are visible.
+        Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. Pit depth, rake, and row spacing use source-labeled geometry profiles unless a venue publishes row data. The projected image is a local 1.43 reference asset so the 1.90 crop and GT full-height frame are visible.
       </p>
     </section>
   );
@@ -1152,7 +1159,7 @@ function DetailsDrawer({ open, onToggle }) {
           <p>15/70 film reports scan-equivalent range (~8.8K–11.7K) rather than a fixed pixel count.</p>
 
           <h3>Viewing distances</h3>
-          <p>Cinema seating uses tiered assumptions when published row data is unavailable. Dedicated GT rooms use venue-specific or constrained-depth estimates; CoLa, Dolby, XD, and standard multiplex rooms use auditorium-ratio estimates. Sparse 143190 rows provide screen and projector facts, not seating depth. Home displays use typical living-room distances for the screen size per THX-style recommendations.</p>
+          <p>Cinema seating uses tiered assumptions when published row data is unavailable. Dedicated GT rooms use compact pit/deck geometry estimates; retrofit IMAX rooms use no-pit auditorium ratios; Dolby Cinema uses wider recliner row spacing. Sparse 143190 rows provide screen and projector facts, not measured seating depth, pit depth, or rake. Home displays use typical living-room distances for the screen size per THX-style recommendations.</p>
           <p>Dome seat distances are radius-style placeholders for non-FOV comparisons. The meaningful dome metric is visual-field coverage and whether the content is dome-mastered.</p>
 
           <h3>Brightness comparison</h3>
