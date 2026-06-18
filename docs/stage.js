@@ -159,12 +159,12 @@ window.LIEMAX_STAGE = function renderStage(svg, A, B, contentARA, contentARB) {
       return;
     }
 
-    // Outline (full screen, semi-transparent)
+    // Full physical screen: black base makes letterbox/pillarbox masking visible.
     el("rect", {
       x: x0, y: -(lift + h),
       width: w, height: h,
-      fill: side === "A" ? sideColor : sideColor,
-      "fill-opacity": 0.08,
+      fill: "#050505",
+      "fill-opacity": 0.94,
       stroke: sideColor,
       "stroke-width": 0.18,
     });
@@ -367,7 +367,7 @@ window.LIEMAX_STAGE_SINGLE = function renderSingleStage(svg, venue, contentAR) {
     });
     el("rect", {
       x: x0, y: -(lift + h), width: w, height: h,
-      fill: color, "fill-opacity": 0.08,
+      fill: "#050505", "fill-opacity": 0.94,
       stroke: color, "stroke-width": 0.18,
     });
     el("rect", {

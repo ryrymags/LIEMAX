@@ -460,8 +460,8 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-5`)));
-assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-5"));
+assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-6`)));
+assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-6"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -471,6 +471,9 @@ assert("Stage renderer renders fallback for unavailable dimensions",
   flattenSvg(invalidStageSvg).some((node) => node.textContent === "Screen dimensions unavailable") &&
   !flattenSvg(invalidStageSvg).some((node) => node.tag === "rect"));
 assert("Stage renderer uses resolved colors for SVG visibility", stageSource.includes("stageColor(\"--side-a\""));
+assert("Stage renderer paints black masking behind visible content",
+  stageSource.includes("Full physical screen: black base makes letterbox/pillarbox masking visible.") &&
+  stageSource.includes("fill: \"#050505\""));
 assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis-stage__svg") && stylesSource.includes("height: clamp(240px"));
 assert("PovComparison is mounted after the 2D stage", appSource.includes("function PovComparison") && appSource.includes("<PovComparison") && appSource.indexOf("<Stage venueA") < appSource.indexOf("<PovComparison"));
 assert("Diagnosis CTA opens the 3D POV comparison", appSource.includes("See the 3D POV comparison") && appSource.includes("handleCompareTrue"));
@@ -483,11 +486,15 @@ assert("Docs data generator does not carry hidden hard-coded Providence or Readi
   !docsBuildSource.includes("viewing_distance_mid_ft: 75") &&
   !docsBuildSource.includes("viewing_distance_back_ft: 84"));
 assert("POV source syncs drag look across comparison viewers by default", povSource.includes("const syncLook = options.syncLook !== false") && povSource.includes("const sharedLook = { yaw: 0, pitch: 0 }") && povSource.includes("syncLook ? viewers : [viewer]"));
-assert("POV comparison supports split-screen fullscreen",
-  povSource.includes("pov__split-fullscreen") &&
-  povSource.includes("root.requestFullscreen") &&
-  stylesSource.includes(".pov__grid:fullscreen") &&
-  stylesSource.includes(".pov__grid.is-pseudo-fullscreen"));
+assert("POV comparison exposes a real button-driven fullscreen split view",
+  appSource.includes("Open fullscreen split view") &&
+  appSource.includes("pov-fullscreen") &&
+  appSource.includes("fullscreenMountRef") &&
+  appSource.includes("fullscreenShellRef.current") &&
+  appSource.includes("POV.createComparison(fullscreenMountRef.current, modelA, modelB, { syncLook: true })") &&
+  stylesSource.includes(".pov-fullscreen") &&
+  stylesSource.includes(".pov-fullscreen__mount .pov__grid") &&
+  !povSource.includes("pov__split-fullscreen"));
 assert("POV source removes chair rows and keeps scale human beside the screen",
   !povSource.includes("buildSeatRow") &&
   povSource.includes("const humanX = W / 2 + Math.max") &&
@@ -496,7 +503,7 @@ assert("POV theater background is brightened while screen masking remains black"
   povSource.includes("THEATER_BG_COLOR = 0x171c22") &&
   povSource.includes("SCREEN_FRAME_COLOR = 0x3a424d") &&
   povSource.includes("color: 0x000000"));
-assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov__viewport.is-pseudo-fullscreen") && stylesSource.includes(".pov__wip"));
+assert("POV styles include nonblank canvas sizing, fullscreen fallback, and WIP state", stylesSource.includes(".pov__canvas") && stylesSource.includes("height: 100%") && stylesSource.includes(".pov-fullscreen__mount") && stylesSource.includes(".pov__wip"));
 assert("Sanitized POV prototype archive is preserved", prototypeReadmeSource.includes("rough prototype") && prototypeReadmeSource.includes("archive-only") && prototypeSource.includes("neutral reference frame") && !prototypeSource.includes("data:image/jpeg") && !prototypeSource.includes("base64"));
 const dataSource = fs.readFileSync(path.join(root, "docs/data.js"), "utf8");
 assert("Docs data bundle is generated from canonical source", dataSource.includes("canonical src/data JSON resolved through src/math/resolver"));

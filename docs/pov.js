@@ -143,62 +143,10 @@ window.LIEMAX_POV = (function () {
     const root = document.createElement("div");
     root.className = `pov__grid ${models.length > 1 ? "pov__grid--compare" : ""}`;
     container.appendChild(root);
-    const rootDisposers = [];
-    let viewers = [];
-
-    if (models.length > 1) {
-      const splitButton = document.createElement("button");
-      splitButton.className = "pov__split-fullscreen";
-      splitButton.type = "button";
-      splitButton.title = "Fullscreen split-screen comparison";
-      splitButton.textContent = "Split FS";
-      root.appendChild(splitButton);
-
-      const exitPseudoFullscreen = () => {
-        root.classList.remove("is-pseudo-fullscreen");
-        viewers.forEach((viewer) => viewer.size());
-      };
-      const toggleSplitFullscreen = async () => {
-        if (document.fullscreenElement === root) {
-          if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-          return;
-        }
-        if (root.classList.contains("is-pseudo-fullscreen")) {
-          exitPseudoFullscreen();
-          return;
-        }
-        let enteredNative = false;
-        if (root.requestFullscreen) {
-          try {
-            await root.requestFullscreen();
-            enteredNative = document.fullscreenElement === root;
-          } catch (error) {
-            enteredNative = false;
-          }
-        }
-        if (!enteredNative) {
-          root.classList.add("is-pseudo-fullscreen");
-          viewers.forEach((viewer) => viewer.size());
-        }
-      };
-      const onFullscreenChange = () => {
-        if (document.fullscreenElement !== root) exitPseudoFullscreen();
-        else viewers.forEach((viewer) => viewer.size());
-      };
-      const onKeyDown = (event) => {
-        if (event.key === "Escape" && root.classList.contains("is-pseudo-fullscreen")) exitPseudoFullscreen();
-      };
-      splitButton.addEventListener("click", toggleSplitFullscreen);
-      document.addEventListener("fullscreenchange", onFullscreenChange);
-      window.addEventListener("keydown", onKeyDown);
-      rootDisposers.push(() => splitButton.removeEventListener("click", toggleSplitFullscreen));
-      rootDisposers.push(() => document.removeEventListener("fullscreenchange", onFullscreenChange));
-      rootDisposers.push(() => window.removeEventListener("keydown", onKeyDown));
-    }
 
     const syncLook = options.syncLook !== false;
     const sharedLook = { yaw: 0, pitch: 0 };
-    viewers = models.map((model, index) => {
+    const viewers = models.map((model, index) => {
       const look = syncLook ? sharedLook : { yaw: 0, pitch: 0 };
       const panel = document.createElement("div");
       panel.className = "pov__panel";
@@ -220,7 +168,6 @@ window.LIEMAX_POV = (function () {
 
     return {
       dispose() {
-        rootDisposers.forEach((fn) => fn());
         viewers.forEach((viewer) => viewer.dispose());
         if (root.parentNode === container) container.removeChild(root);
       },

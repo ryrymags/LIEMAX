@@ -787,6 +787,9 @@ function Stage({ venueA, venueB, statsA, statsB, filmModeA, filmModeB }) {
 
 function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB, seat }) {
   const mountRef = useRef(null);
+  const fullscreenMountRef = useRef(null);
+  const fullscreenShellRef = useRef(null);
+  const [fullscreenOpen, setFullscreenOpen] = useState(false);
   const modelA = useMemo(() => POV?.modelForVenue(venueA, {
     side: "A",
     presentationAr: presArA,
@@ -805,6 +808,34 @@ function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB,
     const comparison = POV.createComparison(mountRef.current, modelA, modelB, { syncLook: true });
     return () => comparison.dispose();
   }, [modelA, modelB]);
+
+  useEffect(() => {
+    if (!fullscreenOpen || !fullscreenMountRef.current || !POV || !modelA || !modelB) return undefined;
+    const comparison = POV.createComparison(fullscreenMountRef.current, modelA, modelB, { syncLook: true });
+    return () => comparison.dispose();
+  }, [fullscreenOpen, modelA, modelB]);
+
+  useEffect(() => {
+    if (!fullscreenOpen || !fullscreenShellRef.current) return undefined;
+    const shell = fullscreenShellRef.current;
+    let cancelled = false;
+    requestAnimationFrame(() => {
+      if (!cancelled && shell.requestFullscreen) shell.requestFullscreen().catch(() => {});
+    });
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setFullscreenOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [fullscreenOpen]);
+
+  function closeFullscreenComparison() {
+    setFullscreenOpen(false);
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+  }
 
   function modelSummary(model) {
     if (!model) return "POV module unavailable";
@@ -830,12 +861,32 @@ function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB,
         <div className="pov__meta">
           <span>A · {modelSummary(modelA)}</span>
           <span>B · {modelSummary(modelB)}</span>
+          <button
+            className="pov__open-split"
+            type="button"
+            onClick={() => setFullscreenOpen(true)}
+            disabled={!modelA?.supported || !modelB?.supported}
+          >
+            Open fullscreen split view
+          </button>
         </div>
       </div>
       <div ref={mountRef} className="pov__mount" />
       <p className="pov__caption">
         Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. Pit depth, rake, and row spacing use source-labeled geometry profiles unless a venue publishes row data. The projected image is a local 1.43 reference asset so the 1.90 crop and GT full-height frame are visible.
       </p>
+      {fullscreenOpen && (
+        <div className="pov-fullscreen" ref={fullscreenShellRef} role="dialog" aria-modal="true" aria-label="Fullscreen split-screen 3D POV comparison">
+          <div className="pov-fullscreen__bar">
+            <div>
+              <span className="pov__eyebrow">Fullscreen split comparison</span>
+              <strong>{venueA.name} vs {venueB.name}</strong>
+            </div>
+            <button className="pov-fullscreen__close" type="button" onClick={closeFullscreenComparison}>Close</button>
+          </div>
+          <div ref={fullscreenMountRef} className="pov-fullscreen__mount" />
+        </div>
+      )}
     </section>
   );
 }
