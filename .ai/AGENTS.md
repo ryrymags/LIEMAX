@@ -24,6 +24,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - 143190.xyz / r-imax CSV rows are the primary venue baseline and are sparse by design.
 - Data must be schema-shaped, source-aware, small, atomic, provenance-clear.
 - No backend unless scoped; preserve free static hosting.
+- All frontend/infrastructure work must be ADA/WCAG 2.1 AA accessible and security-hardened from the start — see `.ai/COMPLIANCE.md` for the concrete checklists. Never commit media without documented licensing/provenance.
 - Frontend first screen = usable comparison experience, not marketing.
 - Future 3D = Three.js; verify render.
 
@@ -43,6 +44,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `.ai/ROADMAP.md`: active Summary Pane + next tasks.
 - `.ai/STATE.md`: branch/status snapshot.
 - `.ai/STEP3.md`: detailed Step 3 preset inventory, specs, pitfalls, verification.
+- `.ai/COMPLIANCE.md`: accessibility + security + legal-hygiene checklists (standing rule for all frontend/infra work).
 - `.ai/OVERHAUL_BIBLE.md`: master reference for the Overhaul V2 redesign — site architecture, page flow, layer structure, verdict tier logic, tooltip system, build sequence, and data accuracy commitments. Read this before any frontend work.
 - `CLAUDE.md`: Claude pointer.
 - `README.md`: public overview.
