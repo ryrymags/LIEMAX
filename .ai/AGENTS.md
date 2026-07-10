@@ -8,7 +8,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 ## State
 
-- Branch: `GUI-work`, squashed on top of the clean Steps 1-3 foundation in `main`.
+- Branch: `dev` (renamed from `gui-wip` 2026-07-10) is the primary working branch, squashed on top of the clean Steps 1-3 foundation in `main`. Stale remote branches are archived under `archive/*`.
 - Audited 2026-04-26: Steps 1, 2, and 3 are clean. All 133 math tests + 87 schema/data checks pass.
 - Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; LFExaminer supplemental Xenon import foundation; schema v1.6.0 (adds r_imax_csv + lfexaminer source quality/source rows, screen width confidence, and 3D POV seating geometry fields).
 - Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, Cinemark XD, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.

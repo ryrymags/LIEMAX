@@ -3,7 +3,7 @@
 Current status: "Steps 1–3 audited and clean. Data layer complete: canonical presets, venues, generated docs bundle, LFExaminer supplement, Dolby count checker, and taxonomy/stats all done. The `docs/` Step 4 GUI is a rough functional prototype with a Step 6 seed: a venue-bound flat/curved IMAX 3D POV comparison module now informed by GT pit, retrofit no-pit, and Dolby recliner geometry profiles. A full Overhaul V2 redesign is still pending."
 
 Current priority: Overhaul V2 — ground-up website redesign per the Overhaul Bible (`Downloads/Overhaul V2/LIEMAX-Overhaul-Bible.md`). Data layer is ready; no new data work is needed before starting the build.
-Branch cleanup note: `gui-wip` is now treated as the primary working branch. Useful artifacts from stale local experiment branches/worktrees were preserved under `.ai/archive/branch-salvage/` before pruning.
+Branch cleanup note: `dev` (renamed from `gui-wip` on 2026-07-10) is the primary working branch. Useful artifacts from stale local experiment branches/worktrees were preserved under `.ai/archive/branch-salvage/` before pruning.
 
 Priority 0 follow-up complete: dome ranking/projection distinctions and diagnosis-stage scale depiction.
 Priority 0 visual hotfix complete: docs assets are cache-busted together, dome SVGs use fixed heights/resolved colors, and the browser now renders dome geometry instead of stale flat rectangles.
@@ -257,7 +257,7 @@ The next major work item is a ground-up redesign of the website based on the Ove
 - Step 4 diagnosis follow-ups to remember: fix Metreon/Lincoln featured example ids in `docs/app.jsx` (`_and_imax`), and require explicit 1.43-capable dome projection/mode before classifying future dome rows as `true_dome`.
 - Functional comparison workbench lives in `docs/`, with side A and side B allowed to select the same venue for A/B testing.
 - `docs/` data is canonical-generated and includes LFExaminer archival Xenon-only IMAX supplement, but those rows are stale 2021 data; keep `npm run validate:docs` in CI as the frontend behavior guard.
-- Branch note: `GUI-work` is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
+- Branch note: `dev` (formerly `GUI-work`/`gui-wip`) is the active Step 4 branch, squashed onto `main` after the local Steps 1-3 merge commit `fb74985` (`Merge Steps 1-3 overhaul: schema, math, data, presets, compare engine`).
 - Reset note: on 2026-04-29, `codex/overhaul` was intentionally reset to pre-GUI commit `970b870d0fadfc8c845324a7a1acac8d51e3fc80` (`Add cinemark_xd preset; upgrade preset sources to published_cto; schema v1.3.1`).
 - Backup note: the pre-reset GUI work is preserved on branch `codex/gui-wip-backup` at commit `b874f88` (`Backup current GUI work before rebuild`).
 - Dev convenience: `boot-website.command` remains at repo root as the launcher for the future frontend rebuild; it may not start a website until Step 4 frontend tooling exists again.
