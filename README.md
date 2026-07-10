@@ -57,4 +57,24 @@ site on Netlify/Vercel.
 
 ## License
 
-MIT as of now. License choice is under review because the project may want to prevent commercial reuse; do not assume the final public license has been settled.
+Dual-licensed as of 2026-07-10:
+
+- **Code** (everything not listed below): [GNU AGPL-3.0](./LICENSE). Open source;
+  anyone running a modified version of this site must publish their source.
+- **Content, research, and data** (`research/`, `src/data/` JSON records and
+  fixtures, site copy): [CC BY-SA 4.0](./LICENSE-CONTENT), with attribution to
+  this project and to upstream sources per
+  [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md). The venue baseline is
+  adapted from [r-imax/imaxguide](https://github.com/r-imax/imaxguide)
+  (CC BY-SA 4.0), whose ShareAlike terms this licensing satisfies.
+
+### Research provenance note
+
+The research documents in `research/` were compiled with AI-assisted research
+tools (Perplexity, and deep-research modes of Gemini/Claude/ChatGPT) working
+from primary sources — manufacturer specs, CTO statements, trade press, DCI
+specifications, and community measurement reports. Claims carry per-field
+source-quality tags in the data layer (`published_official`, `published_cto`,
+`trade_reporting`, `community_estimate`, `derived`, etc.), and known
+low-confidence values are tracked in `.ai/STATE.md`. Treat the research docs
+as sourced-but-synthesized secondary material, not primary documentation.
