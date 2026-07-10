@@ -2090,6 +2090,7 @@ button, select, input { font-family: inherit; color: inherit; }
 }
 .pov__warn,
 .pov__hint,
+.pov__audio,
 .pov__fullscreen {
   position: absolute;
   font-family: var(--font-mono);
@@ -2127,6 +2128,19 @@ button, select, input { font-family: inherit; color: inherit; }
   cursor: pointer;
 }
 .pov__fullscreen:hover {
+  border-color: #efe7d4;
+}
+.pov__audio {
+  right: 58px;
+  bottom: 12px;
+  border: 1px solid rgba(239, 231, 212, 0.48);
+  background: rgba(20, 17, 13, 0.62);
+  color: #efe7d4;
+  padding: 5px 7px;
+  cursor: pointer;
+}
+.pov__audio[aria-pressed="true"],
+.pov__audio:hover {
   border-color: #efe7d4;
 }
 .pov__caption,
@@ -2302,6 +2316,7 @@ button, select, input { font-family: inherit; color: inherit; }
   }
   .pov__warn,
   .pov__hint,
+  .pov__audio,
   .pov__fullscreen {
     font-size: 0.52rem;
   }

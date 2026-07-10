@@ -873,7 +873,7 @@ function PovComparison({ venueA, venueB, presArA, presArB, filmModeA, filmModeB,
       </div>
       <div ref={mountRef} className="pov__mount" />
       <p className="pov__caption">
-        Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. Pit depth, rake, and row spacing use source-labeled geometry profiles unless a venue publishes row data. The projected image is a local 1.43 reference asset so the 1.90 crop and GT full-height frame are visible.
+        Venue-bound model: screen size, active presentation shape, screen curve, and seat distance come from the generated docs bundle. Pit depth, rake, and row spacing use source-labeled geometry profiles unless a venue publishes row data. The projected screen uses a local 1.43 video texture with poster fallback, so the 1.90 crop and GT full-height frame stay visible even before video playback starts.
       </p>
       {fullscreenOpen && (
         <div className="pov-fullscreen" ref={fullscreenShellRef} role="dialog" aria-modal="true" aria-label="Fullscreen split-screen 3D POV comparison">

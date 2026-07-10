@@ -2,7 +2,6 @@
    Venue-bound Three.js module extracted from the rough simulator prototype.
    Exposes: window.LIEMAX_POV = { modelForVenue, createComparison } */
 window.LIEMAX_POV = (function () {
-  const SOURCE_AR = 1.43;
   const HUMAN_HEIGHT_FT = 5.75;
   const EYE_ABOVE_FLOOR_FT = 3.7;
   const DEFAULT_SCREEN_BOTTOM_FT = 4.0;
@@ -12,8 +11,14 @@ window.LIEMAX_POV = (function () {
   const THEATER_BG_COLOR = 0x171c22;
   const THEATER_FLOOR_COLOR = 0x202833;
   const SCREEN_FRAME_COLOR = 0x3a424d;
-  const REFERENCE_IMAGE_SRC = "assets/pov/spiderverse-143-reference.webp";
-  const REFERENCE_IMAGE_LABEL = "Spider-Verse 1.43 reference frame";
+  const POV_MEDIA = {
+    sourceAr: 1.43,
+    label: "IMAX 1.43 demo video",
+    posterSrc: "assets/pov/video/imax-demo-poster.jpg",
+    previewVideoSrc: "assets/pov/video/imax-demo-1.43-1024x716.mp4",
+    fullVideoSrc: "assets/pov/video/imax-demo-1.43-1546x1080.mp4",
+  };
+  const REFERENCE_IMAGE_LABEL = POV_MEDIA.label;
 
   function n(value, fallback = null) {
     return typeof value === "number" && Number.isFinite(value) ? value : fallback;
@@ -76,7 +81,7 @@ window.LIEMAX_POV = (function () {
     const rowSpacingFt = n(venue?.seat?.rowSpacingFt, profileDefaults.rowSpacingFt);
 
     const projectionWindow = projectionRectFor(screenW, screenH, presentationAr);
-    const sourceCrop = textureCropFor(projectionWindow.w / projectionWindow.h, SOURCE_AR);
+    const sourceCrop = textureCropFor(projectionWindow.w / projectionWindow.h, POV_MEDIA.sourceAr);
 
     return {
       id: venue?.id || "unknown",
@@ -100,7 +105,7 @@ window.LIEMAX_POV = (function () {
       },
       presentationAr,
       projectionWindow,
-      sourceAr: SOURCE_AR,
+      sourceAr: POV_MEDIA.sourceAr,
       sourceCrop,
       sourceLabel: REFERENCE_IMAGE_LABEL,
       seatKey,
@@ -155,6 +160,7 @@ window.LIEMAX_POV = (function () {
           `<div class="pov__hud"></div>` +
           `<div class="pov__warn">below ${IMMERSION_WARN_HFOV}\u00b0 immersion floor</div>` +
           `<div class="pov__hint">drag to look \u00b7 ${options.syncLook === false ? "independent" : "synced"} cameras</div>` +
+          `<button class="pov__audio" type="button" aria-pressed="false" title="Enable video audio">Audio off</button>` +
           `<button class="pov__fullscreen" type="button" title="Fullscreen">FS</button>` +
         `</div>`;
       root.appendChild(panel);
@@ -163,6 +169,9 @@ window.LIEMAX_POV = (function () {
 
     viewers.forEach((viewer) => {
       viewer.onLookChanged = () => (syncLook ? viewers : [viewer]).forEach((item) => item.applyCamera());
+      viewer.onAudioEnabled = () => viewers.forEach((item) => {
+        if (item !== viewer) item.setAudio(false);
+      });
       viewer.applyCamera();
     });
 
@@ -181,6 +190,7 @@ window.LIEMAX_POV = (function () {
     this.model = model;
     this.sharedLook = sharedLook;
     this.onLookChanged = null;
+    this.onAudioEnabled = null;
     this.disposers = [];
     this.meshes = [];
     this.raf = null;
@@ -200,7 +210,15 @@ window.LIEMAX_POV = (function () {
 
     const camera = new THREE.PerspectiveCamera(70, 1.6, 0.1, 4000);
     this.camera = camera;
-    this.texture = createReferenceTexture(model.side || (index === 0 ? "A" : "B"));
+    this.media = createReferenceMedia(model.side || (index === 0 ? "A" : "B"), (texture) => {
+      this.texture = texture;
+      this.applyTextureCrop();
+      if (this.imageMaterial) {
+        this.imageMaterial.map = texture;
+        this.imageMaterial.needsUpdate = true;
+      }
+    });
+    this.texture = this.media.activeTexture;
 
     this.size = () => {
       const w = viewport.clientWidth;
@@ -263,6 +281,18 @@ window.LIEMAX_POV = (function () {
     window.addEventListener("keydown", onKeyDown);
     this.disposers.push(() => document.removeEventListener("fullscreenchange", onFullscreenChange));
     this.disposers.push(() => window.removeEventListener("keydown", onKeyDown));
+
+    const audioButton = viewport.querySelector(".pov__audio");
+    this.audioButton = audioButton;
+    const onAudioClick = () => {
+      const enable = this.media.isMuted();
+      if (enable && this.onAudioEnabled) this.onAudioEnabled();
+      this.setAudio(enable);
+    };
+    audioButton.addEventListener("click", onAudioClick);
+    this.disposers.push(() => audioButton.removeEventListener("click", onAudioClick));
+    this.updateAudioButton();
+    this.media.loadVideo();
   }
 
   Viewer.prototype.bindLook = function () {
@@ -364,11 +394,12 @@ window.LIEMAX_POV = (function () {
     this.meshes.push(mask);
 
     const active = activeRect(m);
-    setCoverCrop(this.texture, active.w / active.h, m.sourceAr || SOURCE_AR);
+    this.applyTextureCrop(active);
     const image = new THREE.Mesh(
       buildCurvedPlane(active.w, active.h, 72, m.curveRadiusFactor),
       new THREE.MeshBasicMaterial({ map: this.texture, side: THREE.DoubleSide })
     );
+    this.imageMaterial = image.material;
     image.position.set(0, screenCenterY, screenZ + 0.10);
     scene.add(image);
     this.meshes.push(image);
@@ -390,9 +421,16 @@ window.LIEMAX_POV = (function () {
       `<div><span>seat</span><strong>${m.seatKey} \u00b7 ${D.toFixed(0)} ft</strong></div>` +
       `<div><span>geometry</span><strong>${escapeHtml(profileLabel(m.geometryProfile))} \u00b7 ${n(m.rakeDeg, 0).toFixed(0)}\u00b0 rake \u00b7 profile-derived</strong></div>` +
       `<div><span>format</span><strong>${m.presentationAr.toFixed(2)} on 1.43 source</strong></div>` +
-      `<div><span>image</span><strong>${escapeHtml(m.sourceLabel || REFERENCE_IMAGE_LABEL)}</strong></div>` +
+      `<div><span>media</span><strong>${escapeHtml(m.sourceLabel || REFERENCE_IMAGE_LABEL)}</strong></div>` +
       `<div><span>fov</span><strong>${hFov.toFixed(0)}\u00b0 H \u00b7 ${vFov.toFixed(0)}\u00b0 V</strong></div>`;
     this.warn.classList.toggle("show", hFov < IMMERSION_WARN_HFOV);
+  };
+
+  Viewer.prototype.applyTextureCrop = function (active) {
+    const rect = active || activeRect(this.model);
+    const targetAr = rect.w / rect.h;
+    if (this.media) this.media.applyCrop(targetAr, this.model.sourceAr || POV_MEDIA.sourceAr);
+    else if (this.texture) setCoverCrop(this.texture, targetAr, this.model.sourceAr || POV_MEDIA.sourceAr);
   };
 
   Viewer.prototype.applyCamera = function () {
@@ -416,11 +454,29 @@ window.LIEMAX_POV = (function () {
     this.renderer.render(this.scene, this.camera);
   };
 
+  Viewer.prototype.setAudio = function (enabled) {
+    if (!this.media) return;
+    this.media.setMuted(!enabled);
+    const playback = enabled ? this.media.playFromUserGesture() : null;
+    this.updateAudioButton();
+    if (playback && typeof playback.finally === "function") {
+      playback.finally(() => this.updateAudioButton());
+    }
+  };
+
+  Viewer.prototype.updateAudioButton = function () {
+    if (!this.audioButton || !this.media) return;
+    const enabled = !this.media.isMuted();
+    this.audioButton.textContent = enabled ? "Audio on" : "Audio off";
+    this.audioButton.setAttribute("aria-pressed", enabled ? "true" : "false");
+    this.audioButton.title = enabled ? "Mute video audio" : "Enable video audio";
+  };
+
   Viewer.prototype.dispose = function () {
     if (this.raf) cancelAnimationFrame(this.raf);
     this.disposers.forEach((fn) => fn());
     while (this.meshes.length) disposeObject(this.meshes.pop());
-    if (this.texture) this.texture.dispose();
+    if (this.media) this.media.dispose();
     if (this.renderer) {
       this.renderer.dispose();
       if (this.renderer.domElement?.parentNode) this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);
@@ -543,7 +599,7 @@ window.LIEMAX_POV = (function () {
     return new THREE.Mesh(geo, mat);
   }
 
-  function createReferenceTexture(side) {
+  function createReferenceMedia(side, onTextureReady) {
     const THREE = window.THREE;
     const canvas = document.createElement("canvas");
     canvas.width = 1430;
@@ -553,6 +609,81 @@ window.LIEMAX_POV = (function () {
     const texture = new THREE.CanvasTexture(canvas);
     texture.minFilter = THREE.LinearFilter;
     texture.generateMipmaps = false;
+    const media = {
+      activeTexture: texture,
+      posterTexture: texture,
+      videoTexture: null,
+      video: null,
+      videoLoaded: false,
+      muted: true,
+      selectedVideoSrc: selectVideoSource(),
+      applyCrop(targetAr, sourceAr) {
+        setCoverCrop(this.posterTexture, targetAr, sourceAr);
+        if (this.videoTexture) setCoverCrop(this.videoTexture, targetAr, sourceAr);
+      },
+      loadVideo() {
+        if (this.video) return;
+        const video = document.createElement("video");
+        video.preload = "none";
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.loop = true;
+        video.poster = POV_MEDIA.posterSrc;
+        video.src = this.selectedVideoSrc;
+        this.video = video;
+
+        const videoTexture = new THREE.VideoTexture(video);
+        videoTexture.minFilter = THREE.LinearFilter;
+        videoTexture.magFilter = THREE.LinearFilter;
+        videoTexture.generateMipmaps = false;
+        this.videoTexture = videoTexture;
+
+        const activateVideo = () => {
+          this.videoLoaded = true;
+          this.activeTexture = videoTexture;
+          if (onTextureReady) onTextureReady(videoTexture);
+        };
+        const keepPoster = () => {
+          this.activeTexture = this.posterTexture;
+          if (onTextureReady) onTextureReady(this.posterTexture);
+        };
+        video.addEventListener("loadeddata", activateVideo, { once: true });
+        video.addEventListener("error", keepPoster, { once: true });
+        video.load();
+        video.play().catch(keepPoster);
+      },
+      setMuted(muted) {
+        this.muted = muted;
+        if (this.video) {
+          this.video.muted = muted;
+          this.video.defaultMuted = muted;
+        }
+      },
+      isMuted() {
+        return this.muted;
+      },
+      playFromUserGesture() {
+        this.loadVideo();
+        if (!this.video) return Promise.resolve(false);
+        return this.video.play().then(() => true).catch(() => {
+          this.setMuted(true);
+          return false;
+        });
+      },
+      dispose() {
+        if (this.video) {
+          this.video.pause();
+          this.video.removeAttribute("src");
+          this.video.load();
+        }
+        if (this.videoTexture) this.videoTexture.dispose();
+        if (this.posterTexture) this.posterTexture.dispose();
+        this.video = null;
+        this.videoTexture = null;
+        this.activeTexture = null;
+      },
+    };
     const image = new Image();
     image.onload = () => {
       ctx.fillStyle = "#000000";
@@ -564,8 +695,15 @@ window.LIEMAX_POV = (function () {
       drawReferenceFallback(ctx, canvas, side);
       texture.needsUpdate = true;
     };
-    image.src = REFERENCE_IMAGE_SRC;
-    return texture;
+    image.src = POV_MEDIA.posterSrc;
+    return media;
+  }
+
+  function selectVideoSource() {
+    const memory = navigator.deviceMemory || 8;
+    const narrow = Math.min(window.innerWidth || 1280, window.innerHeight || 720) <= 760;
+    const lowPower = memory <= 4 || (window.devicePixelRatio || 1) > 2.5;
+    return narrow || lowPower ? POV_MEDIA.previewVideoSrc : POV_MEDIA.fullVideoSrc;
   }
 
   function drawReferenceFallback(ctx, canvas, side) {

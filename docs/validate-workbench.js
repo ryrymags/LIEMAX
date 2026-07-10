@@ -412,7 +412,7 @@ const indexSource = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
 const stylesSource = fs.readFileSync(path.join(root, "docs/styles.css"), "utf8");
 const prototypeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/imax-3d-pov-simulator.prototype.html"), "utf8");
 const prototypeReadmeSource = fs.readFileSync(path.join(root, "docs/archive/prototypes/README.md"), "utf8");
-const povReferenceImagePath = path.join(root, "docs/assets/pov/spiderverse-143-reference.webp");
+const povVideoReadmePath = path.join(root, "docs/assets/pov/video/README.md");
 
 class FakeSvgNode {
   constructor(tag) {
@@ -460,8 +460,8 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-3d-6`)));
-assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-3d-6"));
+assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-video-1`)));
+assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-video-1"));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -478,7 +478,22 @@ assert("Diagnosis scale SVG has fixed height", stylesSource.includes(".diagnosis
 assert("PovComparison is mounted after the 2D stage", appSource.includes("function PovComparison") && appSource.includes("<PovComparison") && appSource.indexOf("<Stage venueA") < appSource.indexOf("<PovComparison"));
 assert("Diagnosis CTA opens the 3D POV comparison", appSource.includes("See the 3D POV comparison") && appSource.includes("handleCompareTrue"));
 assert("Diagnosis True IMAX comparison uses Lincoln Square fallback", appSource.includes("imax_us_ny_new_york_amc_lincoln_square_13_and_imax") && appSource.includes("D.venues.find(v => v.id === \"imax_gt_typical\")"));
-assert("POV module source exposes public API and the 1.43 reference image", povSource.includes("window.LIEMAX_POV") && povSource.includes("modelForVenue") && povSource.includes("createComparison") && povSource.includes("spiderverse-143-reference.webp") && fs.existsSync(povReferenceImagePath) && fs.statSync(povReferenceImagePath).size > 1000);
+assert("POV module source exposes public API and lazy 1.43 video media",
+  povSource.includes("window.LIEMAX_POV") &&
+  povSource.includes("modelForVenue") &&
+  povSource.includes("createComparison") &&
+  povSource.includes("imax-demo-poster.jpg") &&
+  povSource.includes("imax-demo-1.43-1024x716.mp4") &&
+  povSource.includes("imax-demo-1.43-1546x1080.mp4") &&
+  povSource.includes("new THREE.VideoTexture(video)") &&
+  fs.existsSync(povVideoReadmePath));
+assert("POV video starts muted and exposes single-audio toggle behavior",
+  povSource.includes("video.preload = \"none\"") &&
+  povSource.includes("video.muted = true") &&
+  povSource.includes("video.playsInline = true") &&
+  povSource.includes("item !== viewer") &&
+  povSource.includes("item.setAudio(false)") &&
+  stylesSource.includes(".pov__audio"));
 assert("POV source keeps dome renderer excluded", povSource.includes(povDomeCopy));
 assert("Docs data generator does not carry hidden hard-coded Providence or Reading seat distances",
   !docsBuildSource.includes("generatedVenueOverrides") &&
