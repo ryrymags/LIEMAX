@@ -17,11 +17,11 @@ window.LIEMAX_DATA = {
       "blurb": "Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.",
       "screen": {
         "w": 81.036748,
-        "h": 56.758532,
+        "h": 61.023624000000005,
         "ar": 1.43,
         "sizeTier": "large",
         "sizeLabel": "Large Screen",
-        "widthConfidence": null,
+        "widthConfidence": "confirmed",
         "geometry": "slight_curve",
         "curvatureRadiusFt": null,
         "screenBottomFt": 0,
@@ -37,7 +37,7 @@ window.LIEMAX_DATA = {
         "source": "derived_from_screen_width",
         "rakeDeg": 25,
         "rowSpacingFt": 3.2,
-        "frontRowFloorElevationFt": 15.0308,
+        "frontRowFloorElevationFt": 16.436600000000002,
         "geometryProfile": "gt_pit"
       },
       "defaultPresentationAr": 1.9,
@@ -124,7 +124,7 @@ window.LIEMAX_DATA = {
       "sources": {
         "screen": {
           "q": "r_imax_csv",
-          "note": "143190.xyz CSV (Apr 2026) — 24.7 × 17.3 m."
+          "note": "143190.xyz CSV (Apr 2026) — 24.7 × 18.6 m."
         },
         "brightness": {
           "q": "trade_reporting",
@@ -11624,7 +11624,7 @@ window.LIEMAX_DATA = {
         "scanEquivLabel": "~8.8K–11.7K scan-equivalent projected onto 80–86% hemisphere; center pixel density higher than periphery due to fisheye lens mapping",
         "brightness_fl": 22,
         "brightness_nits_full": null,
-        "nativeContrast": 4500,
+        "nativeContrast": 2500,
         "isPerPixelEmissive": false,
         "hdrCategory": "photochemical",
         "hdrLabel": "Photochemical latitude",
@@ -11644,7 +11644,7 @@ window.LIEMAX_DATA = {
         "scanEquivLabel": "~8.8K–11.7K scan-equivalent projected onto 80–86% hemisphere; center pixel density higher than periphery due to fisheye lens mapping",
         "brightness_fl": 22,
         "brightness_nits_full": null,
-        "nativeContrast": 4500,
+        "nativeContrast": 2500,
         "isPerPixelEmissive": false,
         "hdrCategory": "photochemical",
         "hdrLabel": "Photochemical latitude",

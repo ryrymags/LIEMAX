@@ -10,7 +10,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 - Branch: `dev` (renamed from `gui-wip` 2026-07-10) is the primary working branch, squashed on top of the clean Steps 1-3 foundation in `main`. Stale remote branches are archived under `archive/*`.
 - Audited 2026-04-26: Steps 1, 2, and 3 are clean. All 133 math tests + 87 schema/data checks pass.
-- Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; LFExaminer supplemental Xenon import foundation; schema v1.6.0 (adds r_imax_csv + lfexaminer source quality/source rows, screen width confidence, and 3D POV seating geometry fields).
+- Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; LFExaminer supplemental Xenon import foundation; schema v1.6.1 (adds r_imax_csv + lfexaminer source quality/source rows, screen width confidence, 3D POV seating geometry fields, and nullable screen_bottom_height_ft).
 - Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, Cinemark XD, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.
 - Active: Step 4 — the `docs/` GUI is a **rough functional prototype only**; the next major work item is the Overhaul V2 redesign. Read `.ai/OVERHAUL_BIBLE.md` before touching any frontend code.
 - GUI design tooling for Overhaul V2: Claude Design skill (`/design:frontend-design`), Figma MCP connector, or equivalent.
@@ -48,7 +48,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - `.ai/OVERHAUL_BIBLE.md`: master reference for the Overhaul V2 redesign — site architecture, page flow, layer structure, verdict tier logic, tooltip system, build sequence, and data accuracy commitments. Read this before any frontend work.
 - `CLAUDE.md`: Claude pointer.
 - `README.md`: public overview.
-- `schema/theater.schema.json`: canonical model v1.6.0.
+- `schema/theater.schema.json`: canonical model v1.6.1.
 - `src/math/`: pure math engine; `validate.ts` = validation suite (immutable).
 - `src/data/`: 143190 import mapper, fixtures, and schema/import validation.
 - `src/data/presets/`: format preset JSON files (one per format).

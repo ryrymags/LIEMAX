@@ -64,7 +64,7 @@ window.LIEMAX_DIAGNOSE = (function () {
   function digital143(venue) {
     const proj = venue.projection;
     if (!proj) return false;
-    const isGT = /gt/i.test(proj.label || "") || (proj.id === "digital" && proj.label && /dual\s*4k/i.test(proj.label));
+    const isGT = proj.type === "imax_gt_dual_laser";
     const arOk = venue.screen.ar != null && venue.screen.ar <= 1.45;
     const minArOk = proj.min_ar != null && proj.min_ar <= 1.43;
     return isGT && arOk && minArOk;

@@ -11,10 +11,11 @@
 
   "screen": {
     "width_m": 24.7,
-    "height_m": 17.3,
+    "height_m": 18.6,
     "width_ft": 81.04,
-    "height_ft": 56.76,
-    "aspect_ratio": 1.43,
+    "height_ft": 61.02,
+    "width_confidence": "confirmed",
+    "aspect_ratio": null,
     "geometry": "slight_cylindrical_curve",
     "curvature_radius_ft": null,
     "screen_bottom_height_ft": null,
@@ -133,14 +134,14 @@
         "field": "screen.height_m",
         "source_id": "src_143190_2026_04",
         "quality": "r_imax_csv",
-        "notes": "17.3m from 143190.xyz CSV; yields 1.428:1 AR ≈ 1.43"
+        "notes": "18.6m from 143190.xyz CSV. NOTE: the CSV row is internally inconsistent — it declares screen AR 1.43:1 but stores 24.7 x 18.6 m (= 1.33). We store the CSV dimensions verbatim; the 1.43 capability is carried by the projection modes, not the physical AR. A previous 17.3m value was back-derived from the declared AR and has been retired."
       }
     ],
     "last_verified": "2026-04-21",
     "created_at": "2026-04-25T00:00:00Z",
     "updated_at": "2026-04-25T00:00:00Z",
     "confidence": "medium",
-    "notes": "Physical 1.43:1 screen with CoLa digital projector (1.90:1 max digital AR). The 15/70 film projector is installed and capable but operates only when film prints are booked — check Apple Cinemas Providence schedule for 70mm showtimes. Default day-to-day presentation is CoLa digital at 1.90:1, which loses ~24.7% of vertical frame on 1.43:1 IMAX content. Sound system details not in 143190.xyz import — falls through to imax_cola preset default (12.1)."
+    "notes": "Physical screen measures 24.7 x 18.6 m per 143190 CSV (aspect ratio ~1.33; the CSV declares 1.43:1 but its stored dimensions do not match that AR — see field_sources note on screen.height_m). CoLa digital projector (1.90:1 max digital AR). The 15/70 film projector is installed and capable but operates only when film prints are booked — check Apple Cinemas Providence schedule for 70mm showtimes. Default day-to-day presentation is CoLa digital at 1.90:1, which loses ~24.7% of vertical frame on 1.43:1 IMAX content. Sound system details not in 143190.xyz import — falls through to imax_cola preset default (12.1)."
   },
 
   "source_143190": {
@@ -153,7 +154,7 @@
     "digital_projector": "IMAX CoLa",
     "max_digital_ar": 1.90,
     "film_projector": "IMAX 15/70mm",
-    "screen_height_m": 17.3,
+    "screen_height_m": 18.6,
     "screen_width_m": 24.7,
     "commercial_films": ["Oppenheimer", "Dune: Part Two"],
     "raw": null

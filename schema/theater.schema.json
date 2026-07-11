@@ -3,7 +3,7 @@
   "$id": "https://github.com/ryrymags/LIEMAX/schema/theater.schema.json",
   "title": "LIEMAX Theater, Home Display & Screen Schema",
   "description": "Data model for premium cinema and home display comparison engine. Defines five entity types: FormatPreset (cinema format defaults), VenueRecord (specific theaters), HomeDisplayPreset (home display tier defaults), HomeDisplayRecord (user's specific setup), and ContentFormat (movie aspect ratios for masking math). Both venue and home display records use the same inheritance model: non-null fields override preset defaults; null fields fall through. RESOLVER NOTE: merging must be field-level, not object-level — e.g., { ...preset.default_screen, ...venue.screen } — so that overriding one field doesn't null out siblings.",
-  "version": "1.6.0",
+  "version": "1.6.1",
 
   "definitions": {
 
@@ -131,9 +131,9 @@
           "description": "For cylindrical screens: radius of curvature in feet, centered on back row. For hemispherical: dome radius (≈ diameter/2). Null if flat or unknown."
         },
         "screen_bottom_height_ft": {
-          "type": "number",
+          "type": ["number", "null"],
           "default": 5.0,
-          "description": "Height of screen's lower edge above auditorium floor, in feet. SMPTE minimum is 4 ft (1.2m). Affects vertical FOV from front rows. Default 5.0 ft for standard venues."
+          "description": "Height of screen's lower edge above auditorium floor, in feet. SMPTE minimum is 4 ft (1.2m). Affects vertical FOV from front rows. Default 5.0 ft for standard venues. Nullable: dome/venue records legitimately store null when unmeasured; resolver defaults to 5.0."
         },
         "is_perforated": {
           "type": ["boolean", "null"],
@@ -756,7 +756,7 @@
     "schema_version": {
       "type": "string",
       "description": "Semantic version of this schema. Bump major on breaking changes, minor on additive fields.",
-      "const": "1.6.0"
+      "const": "1.6.1"
     },
     "presets": {
       "type": "array",

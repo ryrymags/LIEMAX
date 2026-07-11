@@ -2,7 +2,7 @@
   "id": "imax_laser_xt",
   "display_name": "IMAX Laser XT",
   "brand": "IMAX",
-  "short_description": "Single-lens 4K laser on Barco SP4K platform. Slightly less bright than CoLa and 6-channel audio is standard at most installs. 1.90:1 only.",
+  "short_description": "Single-lens 4K laser on Barco SP4K platform. Brightness treated as equivalent to CoLa (22 fL IMAX target) pending official confirmation; 6-channel audio is standard at most installs. 1.90:1 only.",
   "tier": "premium",
   "default_screen": {
     "width_m": null,
@@ -39,7 +39,7 @@
     "contrast_sequential": 10000,
     "contrast_dynamic": null,
     "contrast_source": "community_estimate",
-    "contrast_notes": "No published official spec sheet distinguishing XT from CoLa; treated as equivalent to CoLa contrast pending official confirmation. Key architectural difference is single-lens (Barco SP4K) vs. CoLa's dual-lens design.",
+    "contrast_notes": "No published official spec sheet distinguishing XT from CoLa; treated as equivalent to CoLa contrast pending official confirmation. No sourced technical distinction between XT and CoLa hardware has been confirmed; both are single-projector 4K laser systems.",
     "color_gamut": "DCI-P3 via RGB laser",
     "hdr": "none",
     "supports_3d": true,
@@ -79,7 +79,7 @@
   },
   "ticket_premium_usd": "$3–6",
   "known_limitations": [
-    "Single-lens system (Barco SP4K) — CoLa uses a dual-lens architecture; no published spec confirms brightness or contrast advantage for either",
+    "No published spec distinguishes XT from CoLa hardware; treated as equivalent single-projector 4K laser pending official documentation",
     "Cannot display 1.43:1 content at full screen height — Nolan/true IMAX sequences lose ~24.7% of vertical frame",
     "12-channel audio is optional; many installs use 6-channel instead",
     "Screen cap ~23m wide vs. CoLa's ~24m"

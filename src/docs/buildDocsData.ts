@@ -954,7 +954,7 @@ function buildData() {
       blurb: 'Physical 1.43:1 screen; daily projection is CoLa at 1.90 — loses ~25% of vertical frame on 1.43 content. 15/70 film installed for occasional booked engagements.',
       defaultPresentationAr: 1.90,
       sources: {
-        screen: { q: 'r_imax_csv', note: '143190.xyz CSV (Apr 2026) — 24.7 × 17.3 m.' },
+        screen: { q: 'r_imax_csv', note: '143190.xyz CSV (Apr 2026) — 24.7 × 18.6 m.' },
         brightness: { q: 'trade_reporting', note: 'IMAX calibration target 22 fL; per-venue fL not published.' },
         contrast: { q: 'trade_reporting', note: 'IMAX CTO Bonnick, CinemaCon 2018.' },
       },

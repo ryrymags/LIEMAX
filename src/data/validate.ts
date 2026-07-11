@@ -191,9 +191,13 @@ function collectScreenIssues(screen: unknown, label: string, allowNull: boolean)
     issues.push(`${label}.is_perforated must be boolean or null`);
   }
 
-  if (isFiniteNumber(screen.width_m) && isFiniteNumber(screen.height_m)) {
+  // Data-fixes-1: aspect_ratio may legitimately be null even when both dimensions are
+  // present (schema-documented: resolver derives width_m/height_m at resolve time, e.g.
+  // apple_providence_imax after its 18.6m CSV height correction). Only validate a match
+  // when a record explicitly stores its own aspect_ratio.
+  if (isFiniteNumber(screen.width_m) && isFiniteNumber(screen.height_m) && screen.aspect_ratio != null) {
     if (!isFiniteNumber(screen.aspect_ratio)) {
-      issues.push(`${label}.aspect_ratio must be present when dimensions are present`);
+      issues.push(`${label}.aspect_ratio must be a finite number or null`);
     } else if (!closeEnough(screen.aspect_ratio, screen.width_m / screen.height_m)) {
       issues.push(`${label}.aspect_ratio does not match width_m / height_m`);
     }
@@ -526,7 +530,7 @@ function collectContentFormatIssues(format: JsonObject, label: string): string[]
 }
 
 console.log('\n=== Schema Contract ===');
-assertEqual('schema const version', schema.properties.schema_version.const, '1.6.0');
+assertEqual('schema const version', schema.properties.schema_version.const, '1.6.1');
 assert('schema has 143190 import definition', Boolean(schema.definitions.imax_143190_import));
 assert('schema has LFExaminer import definition', Boolean(schema.definitions.lfexaminer_import));
 assert('schema projection supports mode', Boolean(schema.definitions.projection.properties.mode));
