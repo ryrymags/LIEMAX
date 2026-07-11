@@ -763,9 +763,13 @@ assert('LFExaminer renamed current-source duplicates are suppressed by matching 
   ].every(([state, city, organization]) =>
     !lfSupplementalRows.some((row) => row.state === state && row.city === city && row.organization === organization)
   ));
-assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 89);
-assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 231);
-assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 224);
+// Regression goldens captured from the import pipeline (not independently
+// hand-counted). 2026-07-10: four renamed-venue duplicates now suppressed
+// (Fresno, Boise, Independence Commons, Simpsonville) — see
+// rowsLikelyReferenceSameVenue in lfexaminerImport.ts.
+assertEqual('LFExaminer rows skipped by current-source conflict policy', lfExaminerRows.length - lfSupplementalRows.length, 93);
+assertEqual('LFExaminer supplemental source row count', lfSupplementalRows.length, 227);
+assertEqual('LFExaminer supplemental comparable docs row count', lfComparableSupplementalRows.length, 220);
 
 const docsImported = docsRows.map((row) => map143190RowToVenue({
   region: 'United States',

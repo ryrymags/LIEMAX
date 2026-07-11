@@ -303,11 +303,18 @@ function buildDb(venues: JsonObject[]): JsonObject {
     liemax_lfexaminer_count: liemaxLfExaminerCount,
     liemax_lfexaminer_pct: pct(liemaxLfExaminerCount, cinemaVenues.length),
     liemax_current_source_count: liemaxCurrentSourceCount,
+    liemax_current_source_pct: pct(liemaxCurrentSourceCount, currentRimaxVenues.length),
     not_full_143_digital_count: notFull143DigitalCount,
     not_full_143_digital_pct: pct(notFull143DigitalCount, cinemaVenues.length),
-    gt_laser_count: cinemaVenues.filter(isFullFlat143Digital).length,
-    film_conditional_count: cinemaVenues.filter(isFilmConditional143).length,
-    dome_count: cinemaVenues.filter(isDomeVenue).length,
+    // Capability counts are scoped to current r-imax rows only — archival
+    // 2021 LFExaminer rows are stale and must not inflate headline stats
+    // (July 2026 audit). *_incl_archival variants expose the mixed count.
+    gt_laser_count: currentRimaxVenues.filter(isFullFlat143Digital).length,
+    gt_laser_incl_archival_count: cinemaVenues.filter(isFullFlat143Digital).length,
+    film_conditional_count: currentRimaxVenues.filter(isFilmConditional143).length,
+    film_conditional_incl_archival_count: cinemaVenues.filter(isFilmConditional143).length,
+    dome_count: currentRimaxVenues.filter(isDomeVenue).length,
+    dome_incl_archival_count: cinemaVenues.filter(isDomeVenue).length,
     dolby_cinema_us_count: latestDolbySnapshot?.count ?? null,
     dolby_cinema_us_count_checked_at: latestDolbySnapshot?.checkedAt ?? null,
     dolby_cinema_us_count_endpoint: latestDolbySnapshot?.sourceEndpoint ?? DOLBY_CINEMA_ENDPOINT,

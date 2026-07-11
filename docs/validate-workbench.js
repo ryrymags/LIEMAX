@@ -150,7 +150,10 @@ const natick = findVenueByName("Sunbrella IMAX 3D Theater, Jordan's Furniture Na
 const esquire = findVenueByName("Esquire IMAX Theatre");
 const pointeOrlando = findVenueByName("Regal Pointe Orlando Stadium 20 & IMAX");
 const lfExaminerXenon = findVenueByName("Regal Tikahtnu Commons Stadium 16 & IMAX");
-const lfExaminerHybrid = findVenueByName("Edwards Fresno Stadium 22 & IMAX");
+// Fresno's archival row is now suppressed as a duplicate of the current
+// "Regal Edwards Fresno & IMAX" row; Pointe Orlando is the surviving
+// archival 1570+D hybrid exemplar.
+const lfExaminerHybrid = findVenueByName("Regal Pointe Orlando Stadium 20 & IMAX");
 const santaAnita143190 = findVenueByName("AMC Santa Anita 16 & IMAX");
 const desertRidgeNoDims = findVenueByName("AMC DINE-IN Desert Ridge 18 & IMAX");
 const bostonCommonRows = D.venues.filter((venue) => venue.name.includes("Boston Common"));
@@ -162,6 +165,10 @@ const suppressedLFExaminerDuplicates = [
   ["CA", "Ontario", "Edwards Ontario Palace Stadium 22 & IMAX"],
   ["CA", "Santa Clarita", "Edwards Valencia Stadium 12 & IMAX"],
   ["CA", "Stockton", "Regal Stockton City Center Stadium 16 & IMAX"],
+  ["CA", "Fresno", "Edwards Fresno Stadium 22 & IMAX"],
+  ["ID", "Boise", "Edwards Boise Stadium 22 & IMAX"],
+  ["MO", "Independence", "AMC Independence Commons 20 & IMAX"],
+  ["SC", "Simpsonville", "Regal Simpsonville Stadium 14 & IMAX"],
 ];
 
 assert("Cinemark XD is present in workbench data", Boolean(cinemarkXd));
@@ -460,8 +467,10 @@ assert("Comparison picker exposes requested filter labels",
   ["IMAX verdict", "Screen size", "Projector", "Projection capability", "State", "GT Dual Laser", "CoLa", "Laser XT", "Dual Xenon", "IMAX 15/70 Film", "Dome Laser", "IMAX Dome 15/70 Film", "Other/Unknown Digital"].every((label) => appSource.includes(label)));
 assert("Comparison picker exposes removable chips and clear action", appSource.includes("Clear filters") && appSource.includes("removeFilter"));
 assert("LIEMAX wordmark resets the page", appSource.includes("aria-label=\"Start over\""));
-assert("Docs assets are cache-busted together", ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=pov-video-1`)));
-assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf("pov.js?v=pov-video-1"));
+const cacheKeyMatch = indexSource.match(/\?v=([\w-]+)/);
+const cacheKey = cacheKeyMatch ? cacheKeyMatch[1] : null;
+assert("Docs assets are cache-busted together", Boolean(cacheKey) && ["styles.css", "data.js", "math.js", "workbench.js", "stage.js", "diagnosis.js", "pov.js", "app.jsx"].every((asset) => indexSource.includes(`${asset}?v=${cacheKey}`)));
+assert("Three.js POV dependency is loaded before the app", indexSource.includes("three.min.js") && indexSource.indexOf("three.min.js") < indexSource.indexOf(`pov.js?v=${cacheKey}`));
 assert("Methodology explains fixed dome FOV", appSource.includes("dome FOV is modeled as fixed 180"));
 assert("Site includes IMAX non-affiliation disclaimer", appSource.includes("not affiliated with IMAX Corporation"));
 assert("Diagnosis screen includes immediate scale figure", appSource.includes("DiagnosisScaleFigure"));
@@ -534,7 +543,14 @@ assert("Docs data exposes Dolby Cinema snapshot metadata", Boolean(D.db?.dolby_c
 assert("Docs data exposes not-full-143 digital percent token", typeof D.db?.not_full_143_digital_pct === "number");
 assert("Docs data exposes LFExaminer LIEMAX count token", typeof D.db?.liemax_lfexaminer_count === "number" && D.db.liemax_lfexaminer_count > 0);
 assert("Docs data exposes current r-imax count token", D.db?.current_r_imax_count === 180);
-assert("Docs data exposes LFExaminer supplemental count token", D.db?.lfexaminer_supplemental_count === 224);
+assert("Capability stats are scoped to current r-imax rows (July 2026 audit)",
+  D.db?.film_conditional_count === 16 && D.db?.dome_count === 10 && D.db?.gt_laser_count === 14);
+assert("Mixed-source capability stats are exposed as incl_archival variants",
+  D.db?.film_conditional_incl_archival_count >= D.db?.film_conditional_count &&
+  D.db?.dome_incl_archival_count >= D.db?.dome_count &&
+  typeof D.db?.gt_laser_incl_archival_count === "number");
+assert("Current-source LIEMAX percent token is exposed", typeof D.db?.liemax_current_source_pct === "number");
+assert("Docs data exposes LFExaminer supplemental count token", D.db?.lfexaminer_supplemental_count === 220);
 assert("Docs data exposes full 1.43 projection capable count token", D.db?.full_143_projection_capable_count === 26);
 assert("Docs data exposes commercial full 1.43 projection capable count token", D.db?.commercial_full_143_projection_capable_count === 24);
 assert("Dolby Cinema U.S. count token is preserved in docs data", typeof D.db?.dolby_cinema_us_count === "number");

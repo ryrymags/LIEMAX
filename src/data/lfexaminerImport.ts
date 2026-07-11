@@ -390,6 +390,32 @@ function rowsLikelyReferenceSameVenue(lfRow: LFExaminerImportRow, sourceRow: Sou
   if (lfTokens.size === 0 || sourceTokens.size === 0) return false;
 
   const sharedTokens = [...lfTokens].filter((token) => sourceTokens.has(token));
+
+  // Names that differ only by generic chain/structural decoration refer to
+  // the same venue once state+city already match — e.g. current "Regal
+  // Edwards Fresno & IMAX" vs archival "Edwards Fresno Stadium 22 & IMAX",
+  // or "AMC Independence 20" vs "AMC Independence Commons 20" (July 2026
+  // audit: these renovated/renamed rows were double-counted). Require at
+  // least one shared non-numeric token and no conflicting auditorium
+  // numbers so distinct same-chain venues in one city stay separate.
+  const lfNumbers = [...lfTokens].filter((token) => /^\d+$/.test(token));
+  const sourceNumbers = [...sourceTokens].filter((token) => /^\d+$/.test(token));
+  const numbersConflict =
+    lfNumbers.length > 0 &&
+    sourceNumbers.length > 0 &&
+    !lfNumbers.some((token) => sourceTokens.has(token));
+  const unsharedTokens = [
+    ...[...lfTokens].filter((token) => !sourceTokens.has(token)),
+    ...[...sourceTokens].filter((token) => !lfTokens.has(token)),
+  ];
+  if (
+    sharedTokens.some((token) => !/^\d+$/.test(token)) &&
+    !numbersConflict &&
+    !unsharedTokens.some(isDistinctiveVenueToken)
+  ) {
+    return true;
+  }
+
   if (!sharedTokens.some((token) => isDistinctiveVenueToken(token))) return false;
 
   const shorterSize = Math.min(lfTokens.size, sourceTokens.size);
@@ -459,6 +485,7 @@ const GENERIC_ORGANIZATION_TOKENS = new Set([
   'movie',
   'multiplex',
   'place',
+  'common', // mall-suffix ("Commons" normalizes to "common"), e.g. AMC Independence Commons
 ]);
 
 function slugify(value: string): string {
