@@ -58,7 +58,7 @@ window.LIEMAX_WORKBENCH = (function () {
     }
     const projWindow = mask.projectedWindow;
     const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-    const contentVFov = M.horizontalFovDeg(mask.effH, dist);
+    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH));
     const ppdVal = proj.resH != null ? M.ppd(proj.resH, contentHFov) : null;
     const fl = brightnessFL({ projection: proj });
     const physicalUtil = mask.areaUtilPct;

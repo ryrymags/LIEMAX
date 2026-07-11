@@ -13,9 +13,29 @@ window.LIEMAX_MATH = (function () {
     return 2 * Math.atan((screenWidthFt / 2) / distanceFt) * DEG;
   }
 
-  function verticalFovDeg(screenHeightFt, distanceFt) {
+  // Vertical FOV is asymmetric: the screen (or visible content) bottom sits
+  // above the floor and the seated eye is at a different height, so the angle
+  // splits unevenly above/below the eye line. Mirrors src/math/fov.ts
+  // verticalFov() — kept in parity by src/docs/validateMathParity.ts.
+  const DEFAULT_SCREEN_BOTTOM_FT = 5.0;
+  const DEFAULT_EYE_HEIGHT_FT = 3.75;
+
+  function verticalFovDeg(screenHeightFt, distanceFt, bottomHeightFt, eyeHeightFt) {
     if (!isPositiveNumber(screenHeightFt) || !isPositiveNumber(distanceFt)) return null;
-    return 2 * Math.atan((screenHeightFt / 2) / distanceFt) * DEG;
+    const bottom = isFiniteNumber(bottomHeightFt) ? bottomHeightFt : DEFAULT_SCREEN_BOTTOM_FT;
+    const eye = isFiniteNumber(eyeHeightFt) ? eyeHeightFt : DEFAULT_EYE_HEIGHT_FT;
+    const top = bottom + screenHeightFt;
+    const aboveHorizon = Math.atan((top - eye) / distanceFt) * DEG;
+    const belowHorizon = Math.atan((eye - bottom) / distanceFt) * DEG;
+    return aboveHorizon + belowHorizon;
+  }
+
+  // Bottom height (ft above floor) of a content rect vertically centered on
+  // the physical screen — letterbox bars split evenly top/bottom.
+  function contentBottomFt(screenHeightFt, contentHeightFt, screenBottomFt) {
+    const base = isFiniteNumber(screenBottomFt) ? screenBottomFt : DEFAULT_SCREEN_BOTTOM_FT;
+    if (!isPositiveNumber(screenHeightFt) || !isPositiveNumber(contentHeightFt)) return base;
+    return base + Math.max(0, (screenHeightFt - contentHeightFt) / 2);
   }
 
   // --- Pixels per degree ---
@@ -114,6 +134,10 @@ window.LIEMAX_MATH = (function () {
     return typeof value === "number" && Number.isFinite(value) && value > 0;
   }
 
+  function isFiniteNumber(value) {
+    return typeof value === "number" && Number.isFinite(value);
+  }
+
   // --- Pick "viewing distance" for the venue ---
   // For cinemas: mid by default. For home: mid (typical sofa).
   function distanceForSeat(venue, seat /* "front"|"mid"|"back" */) {
@@ -121,6 +145,6 @@ window.LIEMAX_MATH = (function () {
   }
 
   return {
-    horizontalFovDeg, verticalFovDeg, ppd, masking, visibleContentRect, brightnessFL, distanceForSeat,
+    horizontalFovDeg, verticalFovDeg, contentBottomFt, ppd, masking, visibleContentRect, brightnessFL, distanceForSeat,
   };
 })();

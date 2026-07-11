@@ -414,7 +414,11 @@ window.LIEMAX_POV = (function () {
     this.basePitch = Math.atan2(screenCenterY - this.eye, D);
 
     const hFov = 2 * Math.atan((active.w / 2) / D) * 180 / Math.PI;
-    const vFov = 2 * Math.atan((active.h / 2) / D) * 180 / Math.PI;
+    // Vertical FOV from the actual scene geometry: angles to the top and
+    // bottom of the visible image relative to this seat's eye height.
+    const activeTopY = screenCenterY + active.h / 2;
+    const activeBottomY = screenCenterY - active.h / 2;
+    const vFov = (Math.atan2(activeTopY - this.eye, D) - Math.atan2(activeBottomY - this.eye, D)) * 180 / Math.PI;
     this.hud.innerHTML =
       `<div><span>venue</span><strong>${escapeHtml(m.name)}</strong></div>` +
       `<div><span>screen</span><strong>${W.toFixed(0)} x ${H.toFixed(0)} ft</strong></div>` +

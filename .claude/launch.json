@@ -2,12 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "docs",
-      "cwd": "/Users/rymag/Documents/GitHub/LIEMAX/docs",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "5173", "--no-clipboard"],
-      "port": 5173,
-      "autoPort": false
+      "name": "liemax-docs",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/serve-docs.js"],
+      "port": 5173
     }
   ]
 }

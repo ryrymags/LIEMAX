@@ -110,8 +110,12 @@ export function resolveVenue(
     screen.height_ft = metersToFeet(screen.height_m);
   }
 
-  // Aspect ratio from dimensions
-  if (screen.width_m != null && screen.height_m != null) {
+  // Aspect ratio: a venue-authored aspect_ratio wins (per schema resolution
+  // order); otherwise derive from the merged dimensions when both are known.
+  const recordAspectRatio = venue.screen?.aspect_ratio ?? null;
+  if (recordAspectRatio != null) {
+    screen.aspect_ratio = recordAspectRatio;
+  } else if (screen.width_m != null && screen.height_m != null) {
     screen.aspect_ratio = screen.width_m / screen.height_m;
   }
 

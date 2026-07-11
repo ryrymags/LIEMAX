@@ -156,7 +156,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 70,
         "h": 49,
-        "ar": 1.4285714285714286,
+        "ar": 1.43,
         "sizeTier": "large",
         "sizeLabel": "Large Screen",
         "widthConfidence": "community_estimate",
@@ -275,7 +275,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 55,
         "h": 23,
-        "ar": 2.391304347826087,
+        "ar": 2.39,
         "sizeTier": "medium",
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
@@ -386,7 +386,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 58,
         "h": 24.3,
-        "ar": 2.386831275720165,
+        "ar": 2.39,
         "sizeTier": "medium",
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
@@ -497,7 +497,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 64.5,
         "h": 34,
-        "ar": 1.8970588235294117,
+        "ar": 1.9,
         "sizeTier": "medium",
         "sizeLabel": "Medium Screen",
         "widthConfidence": "community_estimate",
@@ -617,7 +617,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 45,
         "h": 24.3,
-        "ar": 1.8518518518518519,
+        "ar": 1.85,
         "sizeTier": "small",
         "sizeLabel": "Small Screen",
         "widthConfidence": "community_estimate",
@@ -33108,7 +33108,7 @@ window.LIEMAX_DATA = {
       "screen": {
         "w": 76,
         "h": 55,
-        "ar": 1.3818181818181816,
+        "ar": 1.3818181818181818,
         "sizeTier": "large",
         "sizeLabel": "Large Screen",
         "widthConfidence": "confirmed",

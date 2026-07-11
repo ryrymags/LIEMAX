@@ -1149,7 +1149,7 @@ function SeatGeometryPanel({ venue }) {
       dist,
       multiple: hasDist ? dist / venue.screen.w : null,
       hfov: hasDist ? M.horizontalFovDeg(mask.effW, dist) : null,
-      vfov: hasDist ? M.verticalFovDeg(mask.effH, dist) : null,
+      vfov: hasDist ? M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH)) : null,
     };
   });
 
@@ -1198,7 +1198,7 @@ function SeatSelector({ sideA, sideB, seat, onChange }) {
     const presAr = venue.defaultPresentationAr || venue.screen.ar || 1.90;
     const mask = M.visibleContentRect(venue.screen, presAr, { ar: presAr, min_ar: presAr });
     const hfov = M.horizontalFovDeg(mask.effW, dist);
-    const vfov = M.verticalFovDeg(mask.effH, dist);
+    const vfov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH));
     return `${side}: ${fmtInt(dist)} ft · ${fmtInt(hfov)}° H / ${fmtInt(vfov)}° V · ${fmtNum(dist / venue.screen.w, 2)}× width`;
   }
   return (
@@ -1539,7 +1539,7 @@ function DiagnosisCard({ venue, onCompareTrue, onCompareAnother, onClear }) {
     : null;
   const vfov = isDome
     ? (venue.screen.domeVFov || 125)
-    : (midDist && mask ? M.verticalFovDeg(mask.effH, midDist) : null);
+    : (midDist && mask ? M.verticalFovDeg(mask.effH, midDist, M.contentBottomFt(venue.screen.h, mask.effH)) : null);
 
   const isTrue143 = result.category === "true_143_film" || result.category === "true_143_laser";
   const loss = verticalFrameLoss();

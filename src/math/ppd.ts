@@ -89,6 +89,12 @@ export function cinemaPpd(
   mode: ResolutionMode = 'native'
 ): PpdResult {
   const { screen } = venue;
+  if (screen.geometry === 'hemispherical') {
+    throw new Error(
+      `cinemaPpd() called on dome screen for ${venue.name} — dome width stores ` +
+      `the diameter, not a flat screen width. Use domePpd() instead.`
+    );
+  }
   const projection = selectProjectionForMode(venue, mode);
   let pixels: number;
   let caveat: string | undefined;

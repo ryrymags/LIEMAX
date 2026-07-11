@@ -1,4 +1,4 @@
-import { nitsToFl, screenAreaDome, computeMasking, computePpd, domePpd, horizontalFov } from '../math';
+import { nitsToFl, screenAreaDome, computeMasking, computePpd, domePpd, horizontalFov, verticalFov } from '../math';
 
 export type DocsVenue = Record<string, any>;
 export type DocsStats = Record<string, any>;
@@ -187,7 +187,10 @@ export function computeStats(
   }
   const projWindow = mask.projectedWindow;
   const contentHFov = horizontalFov(mask.effW, dist);
-  const contentVFov = horizontalFov(mask.effH, dist);
+  // Vertical FOV is asymmetric about the eye line — content sits centered on
+  // the physical screen, whose bottom is above the floor (src/math/fov.ts).
+  const contentBottomFt = 5.0 + Math.max(0, (venue.screen.h - mask.effH) / 2);
+  const contentVFov = verticalFov(mask.effH, dist, contentBottomFt).total_deg;
   const ppdVal = proj.resH != null ? computePpd(proj.resH, mask.effW, dist) : null;
   const fl = brightnessFL({ projection: proj });
   const physicalUtil = mask.areaUtilPct;
@@ -427,7 +430,7 @@ window.LIEMAX_WORKBENCH = (function () {
     }
     const projWindow = mask.projectedWindow;
     const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-    const contentVFov = M.horizontalFovDeg(mask.effH, dist);
+    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH));
     const ppdVal = proj.resH != null ? M.ppd(proj.resH, contentHFov) : null;
     const fl = brightnessFL({ projection: proj });
     const physicalUtil = mask.areaUtilPct;
