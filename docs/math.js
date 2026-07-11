@@ -38,6 +38,34 @@ window.LIEMAX_MATH = (function () {
     return base + Math.max(0, (screenHeightFt - contentHeightFt) / 2);
   }
 
+  // Seated eye height on a linearly raked floor. Mirrors src/math/seating.ts
+  // eyeHeightAtDistance() — kept in parity by src/docs/validateMathParity.ts.
+  function eyeHeightAtDistance(distanceFt, frontRowDistanceFt, rakeAngleDeg, frontRowFloorElevationFt, maxFloorHeightFt, eyeAboveFloorFt) {
+    if (!isPositiveNumber(distanceFt)) return DEFAULT_EYE_HEIGHT_FT;
+    const front = isFiniteNumber(frontRowDistanceFt) && frontRowDistanceFt >= 0 ? frontRowDistanceFt : 0;
+    const rake = Math.tan(((isFiniteNumber(rakeAngleDeg) ? rakeAngleDeg : 0) * Math.PI) / 180);
+    let floor = Math.max(0, isFiniteNumber(frontRowFloorElevationFt) ? frontRowFloorElevationFt : 0) +
+      Math.max(0, distanceFt - front) * rake;
+    if (isFiniteNumber(maxFloorHeightFt)) floor = Math.min(floor, maxFloorHeightFt);
+    return Math.max(0, floor) + (isFiniteNumber(eyeAboveFloorFt) ? eyeAboveFloorFt : DEFAULT_EYE_HEIGHT_FT);
+  }
+
+  // Venue-aware seat eye height from generated seat geometry (rake, front
+  // row, elevation, profile floor cap); flat default when rake is unknown.
+  function eyeHeightForVenueSeat(venue, distanceFt) {
+    const seat = venue && venue.seat ? venue.seat : {};
+    if (!isPositiveNumber(distanceFt) || !isFiniteNumber(seat.rakeDeg)) return DEFAULT_EYE_HEIGHT_FT;
+    const screenH = venue.screen && isPositiveNumber(venue.screen.h) ? venue.screen.h : null;
+    const cap = screenH != null ? screenH * (seat.geometryProfile === "gt_pit" ? 0.75 : 0.45) : null;
+    return eyeHeightAtDistance(
+      distanceFt,
+      isPositiveNumber(seat.front) ? seat.front : 0,
+      seat.rakeDeg,
+      seat.frontRowFloorElevationFt,
+      cap
+    );
+  }
+
   // --- Pixels per degree ---
   // Resolution along width / horizontal FOV in degrees.
   function ppd(resolutionPx, fovDeg) {
@@ -145,6 +173,6 @@ window.LIEMAX_MATH = (function () {
   }
 
   return {
-    horizontalFovDeg, verticalFovDeg, contentBottomFt, ppd, masking, visibleContentRect, brightnessFL, distanceForSeat,
+    horizontalFovDeg, verticalFovDeg, contentBottomFt, eyeHeightAtDistance, eyeHeightForVenueSeat, ppd, masking, visibleContentRect, brightnessFL, distanceForSeat,
   };
 })();

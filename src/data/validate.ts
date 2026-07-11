@@ -157,6 +157,16 @@ function checkNullableInteger(label: string, value: unknown, issues: string[]): 
   }
 }
 
+function checkSchemaBounds(label: string, value: unknown, propertySpec: JsonObject, issues: string[]): void {
+  if (!isFiniteNumber(value)) return;
+  if (isFiniteNumber(propertySpec.minimum) && value < propertySpec.minimum) {
+    issues.push(`${label}=${value} is below schema minimum ${propertySpec.minimum}`);
+  }
+  if (isFiniteNumber(propertySpec.maximum) && value > propertySpec.maximum) {
+    issues.push(`${label}=${value} is above schema maximum ${propertySpec.maximum}`);
+  }
+}
+
 function closeEnough(actual: number, expected: number, tolerance = 0.02): boolean {
   return Math.abs(actual - expected) <= tolerance;
 }
@@ -186,6 +196,7 @@ function collectScreenIssues(screen: unknown, label: string, allowNull: boolean)
   ]) {
     checkNullableNumber(`${label}.${key}`, screen[key], issues);
   }
+  checkSchemaBounds(`${label}.dome_coverage_pct`, screen.dome_coverage_pct, schema.definitions.screen.properties.dome_coverage_pct, issues);
 
   if (!isBooleanOrNull(screen.is_perforated)) {
     issues.push(`${label}.is_perforated must be boolean or null`);
@@ -371,6 +382,7 @@ function collectDisplayOpticsIssues(optics: unknown, label: string): string[] {
   ]) {
     checkNullableNumber(`${label}.${key}`, optics[key], issues);
   }
+  checkSchemaBounds(`${label}.color_gamut_dci_p3_pct`, optics.color_gamut_dci_p3_pct, schema.definitions.display_optics.properties.color_gamut_dci_p3_pct, issues);
   if (!isStringOrNull(optics.contrast_notes)) issues.push(`${label}.contrast_notes must be string or null`);
   if (!isStringOrNull(optics.color_gamut_label)) issues.push(`${label}.color_gamut_label must be string or null`);
   if (!Array.isArray(optics.hdr_formats)) {

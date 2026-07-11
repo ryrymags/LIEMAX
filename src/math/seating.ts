@@ -26,6 +26,7 @@ import {
   HOME_PHONE_DISTANCE_FT,
   HOME_TABLET_DISTANCE_FT,
   IN_PER_FT,
+  DEFAULT_EYE_HEIGHT_FT,
 } from './constants';
 import { diagonalToDimensions } from './geometry';
 import type { SeatingDistances } from './types';
@@ -93,6 +94,47 @@ export function homeDefaultViewingDistance(
   const { height } = diagonalToDimensions(screenDiagonalIn, aspectRatio);
   const heightFt = height / IN_PER_FT; // diagonal was in inches, so height is in inches
   return heightFt * HOME_TV_DISTANCE_MULTIPLIER;
+}
+
+/**
+ * Seated eye height above the auditorium floor origin for a viewer at a
+ * given distance from the screen, on a linearly raked floor.
+ *
+ * Model (matches the docs 3D POV renderer's floor):
+ *   floorHeight(d) = frontRowFloorElevationFt + max(0, d − frontRowDistanceFt) · tan(rake)
+ *   optionally capped at maxFloorHeightFt (rooms stop rising near the back)
+ *   eyeHeight(d)   = floorHeight(d) + eyeAboveFloorFt
+ *
+ * Feed the result into verticalFov()'s eyeHeightFt parameter so raked rows
+ * get row-accurate vertical FOV instead of the flat default. Callers with
+ * no rake data should keep the flat default rather than guessing.
+ *
+ * @param viewingDistanceFt - Seat distance from the screen plane (ft)
+ * @param frontRowDistanceFt - Front row distance from the screen plane (ft)
+ * @param rakeAngleDeg - Floor rake angle in degrees (0 = flat)
+ * @param frontRowFloorElevationFt - Floor height at the front row (ft); GT
+ *   rooms with a stadium pit start elevated, conventional rooms start at 0
+ * @param maxFloorHeightFt - Optional cap on floor height (ft), or null
+ * @param eyeAboveFloorFt - Seated eye height above the local floor
+ */
+export function eyeHeightAtDistance(
+  viewingDistanceFt: number,
+  frontRowDistanceFt: number,
+  rakeAngleDeg: number,
+  frontRowFloorElevationFt: number = 0,
+  maxFloorHeightFt: number | null = null,
+  eyeAboveFloorFt: number = DEFAULT_EYE_HEIGHT_FT
+): number {
+  if (viewingDistanceFt <= 0) throw new Error(`viewingDistanceFt must be positive, got ${viewingDistanceFt}`);
+  if (frontRowDistanceFt < 0) throw new Error(`frontRowDistanceFt must be >= 0, got ${frontRowDistanceFt}`);
+
+  const rake = Math.tan((rakeAngleDeg * Math.PI) / 180);
+  let floorHeight = Math.max(0, frontRowFloorElevationFt) +
+    Math.max(0, viewingDistanceFt - frontRowDistanceFt) * rake;
+  if (maxFloorHeightFt != null) {
+    floorHeight = Math.min(floorHeight, maxFloorHeightFt);
+  }
+  return Math.max(0, floorHeight) + eyeAboveFloorFt;
 }
 
 /**

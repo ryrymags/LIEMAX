@@ -99,7 +99,7 @@ As the industry has moved away from physical film, the IMAX Dome has been retrof
 
 ### **Resolution Challenges and Pixel Density**
 
-Transitioning the 1.43:1 format to digital introduces a significant hurdle: pixel resolution. A 15/70 film frame has a theoretical resolution estimated at 12K to 18K, whereas current digital projectors are capped at 4K.7 When a 4K image is stretched across a 90-foot dome, the pixels become physically large enough to be visible to the human eye, a phenomenon known as the "screen-door effect".19
+Transitioning the 1.43:1 format to digital introduces a significant hurdle: pixel resolution. A 15/70 film frame has no native pixel count; scan-equivalent resolution runs approximately **8.8K to 11.7K** horizontal, depending on the scanner's micron spot size, versus current digital projectors capped at 4K.7 Higher "16K" or "18K" figures circulate in some sources, but no authoritative source supports them — treat any single figure above ~11.7K as unverified. When a 4K image is stretched across a 90-foot dome, the pixels become physically large enough to be visible to the human eye, a phenomenon known as the "screen-door effect".19
 
 On a 70-foot flat screen, a 4K pixel is roughly 0.21 inches wide. On a dome of the same diameter, the surface area is nearly double, causing the average pixel width to grow to 0.32 inches (8.2 mm).19 To combat this, the IMAX laser dome system uses a proprietary optical engine and custom-designed lenses that employ "non-linear" pixel mapping.18 This concentrates more pixels in the center of the dome (the viewer's primary focus) and stretches them further at the extreme periphery where the human eye is less sensitive to detail and more sensitive to motion.2
 

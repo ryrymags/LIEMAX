@@ -12,7 +12,7 @@
 import {
   // Geometry
   metersToFeet, diagonalToDimensions, screenAreaFlat, screenAreaDome,
-  ppiFromResolution,
+  ppiFromResolution, aspectRatioFromDimensions,
   // FOV
   horizontalFov, verticalFov, homeDisplayFov, computeCinemaFov, domeFov,
   // PPD
@@ -20,7 +20,7 @@ import {
   // Masking
   computeMasking, extraAreaVsScope, contentCropLoss, areaComparisonPct,
   // Brightness
-  flToNits, nitsToFl, compareBrightness, brightnessCinemaContext,
+  flToNits, nitsToFl, compareBrightness, compareBrightnessRecords, brightnessCinemaContext,
   // Seating
   deriveViewingDistances, homeDefaultViewingDistance,
   // Resolver
@@ -96,6 +96,10 @@ assert('Reading GT area (ft²)', screenAreaFlat(101.2, 70.8), 7165, 2);
 // Screen area (dome) — 76ft dome, 83% coverage
 assert('Dome area (76ft, 83%)', screenAreaDome(76, 83), 2 * Math.PI * (38 ** 2) * 0.83, 0.1);
 
+// Aspect ratio from dimensions
+assert('aspectRatioFromDimensions: 24.7 × 18.6', aspectRatioFromDimensions(24.7, 18.6), 1.328, 0.1);
+assertThrows('aspectRatioFromDimensions rejects non-positive height', () => aspectRatioFromDimensions(24.7, 0));
+
 
 // ═══════════════════════════════════════════════════════════════════
 // GROUP 2: FIELD OF VIEW
@@ -119,6 +123,20 @@ assert('Reading GT horizontal FOV (back row)',
 // the entire vertical FOV is above the horizon.
 const vFov = verticalFov(70.8, 84, 5.0, 3.75);
 assert('Reading GT vertical FOV total', vFov.total_deg, 39.8, 2);
+
+// Vertical FOV: eye between screen bottom and top (screen bottom 5ft, top 25ft, eye 15ft)
+// above = atan((25-15)/30) ≈ 18.435°, below = atan((15-5)/30) ≈ 18.435°, total ≈ 36.87°
+const vFovEyeBetween = verticalFov(20, 30, 5.0, 15.0);
+assert('Eye between screen bottom/top: above horizon', vFovEyeBetween.above_horizon_deg, 18.435, 0.1);
+assert('Eye between screen bottom/top: below horizon', vFovEyeBetween.below_horizon_deg, 18.435, 0.1);
+assert('Eye between screen bottom/top: total', vFovEyeBetween.total_deg, 36.87, 0.1);
+
+// Vertical FOV: eye above screen top (screen bottom 2ft, top 12ft, eye 20ft)
+// above = atan((12-20)/50) ≈ -9.09° (looking down), below = atan((20-2)/50) ≈ 19.80°, total ≈ 10.71°
+const vFovEyeAboveTop = verticalFov(10, 50, 2.0, 20.0);
+assert('Eye above screen top: above horizon (negative)', vFovEyeAboveTop.above_horizon_deg, -9.09, 0.5);
+assert('Eye above screen top: below horizon', vFovEyeAboveTop.below_horizon_deg, 19.80, 0.1);
+assert('Eye above screen top: total', vFovEyeAboveTop.total_deg, 10.71, 0.5);
 
 // Home display FOV: 65" TV at 8ft
 const tv65width_in = 56.65;
@@ -250,6 +268,31 @@ assert('IMAX digital on GT: bars height', imaxDigitalOnGt.bars_height_ft, (70 - 
 // (hypothetical ultra-wide screen, 100 ft × 41.8 ft)
 const tvOnScope = computeMasking(100, 41.8, 1.78, 1.78);
 assert('16:9 on scope screen: pillarboxed', tvOnScope.pillarboxed ? 1 : 0, 1);
+
+// ── Masking: perfect fit (content AR === screen AR) ──
+// Screen: 101.2 ft wide, 70.8 ft tall. Content AR set to exactly the
+// screen's own AR, so no letterboxing or pillarboxing should occur.
+const gtScreenAr = 101.2 / 70.8;
+const perfectFit = computeMasking(101.2, 70.8, gtScreenAr, 1.0);
+assert('Perfect fit: effective width', perfectFit.effective_width_ft, 101.2, 0);
+assert('Perfect fit: effective height', perfectFit.effective_height_ft, 70.8, 0);
+assert('Perfect fit: utilization', perfectFit.screen_utilization_pct, 100, 0);
+assert('Perfect fit: not letterboxed', perfectFit.letterboxed ? 1 : 0, 0, 0);
+assert('Perfect fit: not pillarboxed', perfectFit.pillarboxed ? 1 : 0, 0, 0);
+assert('Perfect fit: bars height is zero', perfectFit.bars_height_ft, 0, 0);
+assert('Perfect fit: bars width is zero', perfectFit.bars_width_ft, 0, 0);
+
+// ── Masking: pillarbox numeric bar width ──
+// Screen: 101.2 ft wide, 70.8 ft tall (AR ≈ 1.43). Content AR 1.0 is
+// narrower than the screen, so it pillarboxes at full screen height.
+// effective width = 70.8 × 1.0 = 70.8. bars_width_ft is PER SIDE
+// (see masking.ts comment "Bar dimensions (each bar, not total)"),
+// so per-side bar = (101.2 - 70.8) / 2 = 15.2, not the 30.4 total gap.
+const pillarboxNarrow = computeMasking(101.2, 70.8, 1.0, 1.0);
+assert('Pillarbox: effective width', pillarboxNarrow.effective_width_ft, 70.8, 0);
+assert('Pillarbox: effective height', pillarboxNarrow.effective_height_ft, 70.8, 0);
+assert('Pillarbox: pillarboxed', pillarboxNarrow.pillarboxed ? 1 : 0, 1, 0);
+assert('Pillarbox: per-side bar width', pillarboxNarrow.bars_width_ft, 15.2, 0.1);
 
 
 // ═══════════════════════════════════════════════════════════════════
@@ -530,6 +573,16 @@ assert('Brightness comparison: home brighter', brightComp.ratio_home_to_cinema >
 // Cinema brighter than dim home display
 const dimComp = compareBrightness(22, 50);
 assert('Brightness comparison: cinema brighter', dimComp.ratio_home_to_cinema < 1 ? 1 : 0, 1, 0);
+
+// ── compareBrightnessRecords (resolved-record convenience wrapper) ──
+// Should extract projection.brightness_fl / display_optics.brightness_fullscreen_nits
+// and produce the same result as calling compareBrightness() directly.
+const recordComp = compareBrightnessRecords(resolved, resolvedHome);
+const directComp = compareBrightness(resolved.projection.brightness_fl, resolvedHome.display_optics.brightness_fullscreen_nits);
+assert('compareBrightnessRecords matches direct compareBrightness ratio',
+  recordComp.ratio_home_to_cinema, directComp.ratio_home_to_cinema, 0.01);
+assert('compareBrightnessRecords: home brighter (winner direction)',
+  recordComp.ratio_home_to_cinema > 1 ? 1 : 0, 1, 0);
 
 // ── brightnessCinemaContext ──
 const dciCtx = brightnessCinemaContext(14);

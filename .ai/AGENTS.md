@@ -32,7 +32,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 
 - Schema/data: `snake_case`.
 - TS functions/locals: `camelCase`.
-- Format preset IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`, `imax_dome_laser`, `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`, `standard_multiplex`, `screenx`, `cinemark_xd`.
+- Format preset IDs: `imax_cola`, `imax_gt_dual_laser`, `imax_dual_xenon`, `imax_1570_film`, `imax_dome_film`, `imax_dome_laser`, `imax_dome_laser_legacy`, `imax_laser_xt`, `dolby_cinema`, `dolby_cinema_single_laser`, `rpx`, `standard_multiplex`, `screenx`, `cinemark_xd`.
 - Home display preset IDs: `oled_flagship`, `oled_midrange`, `miniled_qled`, `standard_qled`, `standard_lcd`, `iphone_pro`, `android_flagship`, `home_projector`.
 - Content format IDs: `imax_143`, `imax_digital_190`, `scope_239`, `flat_185`, `tv_178`, `panavision_220`, `ultrawide_235`.
 - Source quality enum: `published_official`, `published_cto`, `trade_reporting`, `community_estimate`, `derived`, `r_imax_csv`, `lfexaminer`, `user_submitted`, `unknown`.

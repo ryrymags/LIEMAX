@@ -50,7 +50,7 @@ IMAX sells this system under two names in the venue listings: "IMAX Laser for Do
 | Attribute | GT Dome / SR Dome (15/70mm Film) | IMAX Dome Laser (Single 4K) |
 |---|---|---|
 | **Lamp / Light Source** | GT: 15,000W xenon; SR: 7,000W xenon[^3] | Laser (Barco DLP) — consistent over lifespan[^4] |
-| **Resolution** | Analog, effectively eye-limited (~18K equivalent[^8]) | 4K digital (4096×2160 native chip)[^9] |
+| **Resolution** | Analog, effectively eye-limited (scan-equivalent ~8.8K–11.7K depending on scanner micron; no authoritative source supports higher "16K/18K" figures that circulate[^8]) | 4K digital (4096×2160 native chip)[^9] |
 | **Pixel Visibility** | None — continuous analog grain structure[^5] | Pixels visible on domes >60 ft (~20m) diameter[^5] |
 | **Aspect Ratio** | Dome 1.43:1[^1] | Dome 1.43:1[^1] |
 | **Frame Rate** | 24fps (standard film)[^5] | 4K @ 24fps; 2K @ 48fps[^5] |

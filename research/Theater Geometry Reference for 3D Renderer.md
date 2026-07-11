@@ -185,7 +185,7 @@ Dolby Cinema has specific design requirements but more flexibility than IMAX in 
 **Screen distance:**
 - Dolby Cinema auditoriums are deeper relative to screen width than GT; they're conventional theater-depth rooms
 - SMPTE recommend front row ≥ 0.87× screen width; last row ≤ 6× screen height[44]
-- A typical Dolby Cinema with a ~57 ft wide screen would have front row ~50 ft away and last row ~150+ ft away
+- A typical Dolby Cinema with a ~57 ft wide screen would have front row ~50 ft away and last row ~150+ ft away (~0.8–1.2× screen width for front row) [Superseded June 2026 by 'Seating Distance Audit for 3D Renderer.md': Dolby front row is modeled at 0.35× screen width.]
 
 > **Confidence: MEDIUM** — Dolby's own published specs are not publicly detailed. Seat geometry and recliner data is confirmed from multiple sources. Rake angle is inferred from the fact that most Dolby conversions use existing auditoriums with standard multiplex geometry.
 
@@ -234,7 +234,7 @@ For comparison, standard and large-premium-format (LPF) theaters:
 | Screen fill type | Floor-to-ceiling, wall-to-wall | Wall-to-wall, no ceiling contact | Wall-to-wall, no floor contact | Framed, does not touch walls |
 | Screen curvature | Slight compound curve (horiz. ~20–25°) | Flat or very slight | Slight horizontal curve | Flat |
 | Seating rake angle | **23–30°** (very steep) | 8–15° (standard multiplex) | 8–15° (+ recliner recline ~40°) | 5–15° |
-| Front row distance | ~0.35× screen width | ~1.0–1.5× screen width | ~0.8–1.2× screen width | ~1.5–2× screen width |
+| Front row distance | ~0.35× screen width | ~1.0–1.5× screen width | ~0.8–1.2× screen width [Superseded June 2026 by 'Seating Distance Audit for 3D Renderer.md': Dolby front row is modeled at 0.35× screen width.] | ~1.5–2× screen width |
 | Last row distance | ~0.9–1.0× screen width | ~1.2–1.5× screen width | ~1.5–2× screen width | ~2–3× screen width |
 | Auditorium depth shape | Nearly **square** | Conventional deep rectangle | Conventional deep rectangle | Conventional |
 | Seating type | Fixed stadium seats | Existing multiplex seats | Luxury recliners | Fixed or recliners |

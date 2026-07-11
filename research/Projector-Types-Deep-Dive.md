@@ -83,7 +83,7 @@ The dual-projector design also provides 2D brightness redundancy — with two la
 | Light source | RGB dual laser | — |
 | Sound | 12.1-channel IMAX audio | Official |
 
-**Why GT contrast is lower than CoLa:** The GT dual-laser uses the older Barco DP4K-60L platform, a prism-based architecture with a native contrast of ~2,800:1. The system-level 8,000:1 figure accounts for the dual-projector stacking advantage — but still trails the prism-less CoLa's 10,000:1 at the projector-engine level.
+**Why GT contrast is lower than CoLa:** The GT dual-laser uses the older Barco DP4K-60L platform, a prism-based architecture with a native contrast of ~2,800:1. The system-level 8,000:1 figure accounts for the dual-projector stacking advantage — but still trails the prism-less CoLa's 10,000:1 at the projector-engine level. [Unverified rationale: no public Barco/IMAX source confirms the 2,800:1 native figure or the engine-level vs system-level measurement distinction; the 8,000:1 and 10,000:1 endpoints themselves are CTO-sourced.]
 
 **On the site:** GT Laser is the **True IMAX (unconditional)** tier — the full 1.43:1 image is available at every digital showtime, for every film. Venues: Jordan's Furniture Reading (MA), AMC Lincoln Square (NYC), and ~42 commercial installations globally as of late 2025.
 

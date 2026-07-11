@@ -8,7 +8,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vm from 'vm';
-import { horizontalFov, verticalFov, computeMasking, computePpd } from '../math';
+import { horizontalFov, verticalFov, computeMasking, computePpd, eyeHeightAtDistance } from '../math';
 
 let passed = 0;
 let failed = 0;
@@ -90,6 +90,22 @@ for (const [w, h, ar] of MASK_CASES) {
   check(`masking effW (${w}x${h}, content ${ar})`, docsMask.effW, tsMask.effective_width_ft);
   check(`masking effH (${w}x${h}, content ${ar})`, docsMask.effH, tsMask.effective_height_ft);
   check(`masking util% (${w}x${h}, content ${ar})`, docsMask.areaUtilPct, tsMask.screen_utilization_pct, 0.05);
+}
+
+console.log('Seat eye-height parity (raked floor model):');
+// [distFt, frontFt, rakeDeg, frontElevFt, capFt|null]
+const EYE_CASES: Array<[number, number, number, number, number | null]> = [
+  [65.6, 35.3, 25, 21.24, 56.69],  // Lincoln Square GT mid (cap = 0.75 * 75.59)
+  [90.9, 35.3, 25, 21.24, 56.69],  // GT back row, hits the cap
+  [120, 60, 7, 0, 14.67],          // standard conventional
+  [40, 40, 10, 0, null],           // seat at front row, no cap
+];
+for (const [d, front, rake, elev, cap] of EYE_CASES) {
+  check(
+    `eyeHeight(d=${d}, front=${front}, rake=${rake}, elev=${elev}, cap=${cap})`,
+    M.eyeHeightAtDistance(d, front, rake, elev, cap),
+    eyeHeightAtDistance(d, front, rake, elev, cap)
+  );
 }
 
 console.log(`\nResults: ${passed} passed, ${failed} failed out of ${passed + failed} parity checks`);

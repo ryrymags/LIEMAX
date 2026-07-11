@@ -58,7 +58,7 @@ window.LIEMAX_WORKBENCH = (function () {
     }
     const projWindow = mask.projectedWindow;
     const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH));
+    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH), M.eyeHeightForVenueSeat(venue, dist));
     const ppdVal = proj.resH != null ? M.ppd(proj.resH, contentHFov) : null;
     const fl = brightnessFL({ projection: proj });
     const physicalUtil = mask.areaUtilPct;
@@ -97,7 +97,7 @@ window.LIEMAX_WORKBENCH = (function () {
     const bArea = isPositiveNumber(statsB.visibleArea) ? statsB.visibleArea : (isPositiveNumber(statsB.mask.effW) && isPositiveNumber(statsB.mask.effH) ? statsB.mask.effW * statsB.mask.effH : null);
     rows.push({ ...makeRow("area", "Visible content area", aArea, bArea, aArea == null ? "Unknown" : fmtInt(aArea) + " sq ft", bArea == null ? "Unknown" : fmtInt(bArea) + " sq ft", true), explain: "How large the actual movie image is, after masking or cropping." });
     rows.push({ ...makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, statsA.physicalUtil == null ? "Unknown" : fmtInt(statsA.physicalUtil) + "%", statsB.physicalUtil == null ? "Unknown" : fmtInt(statsB.physicalUtil) + "%", true), explain: "How much of the physical screen this movie format fills." });
-    rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown", statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown", true), explain: "How much light reaches the screen; higher helps HDR and punch." });
+    rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown", statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown", true), explain: "How much light reaches the screen; higher helps HDR and punch. Published 2D spec — 3D showings are dimmer (dimming is not modeled)." });
     const aContrNum = projA.isPerPixelEmissive ? Infinity : projA.nativeContrast;
     const bContrNum = projB.isPerPixelEmissive ? Infinity : projB.nativeContrast;
     const aContrDisp = projA.isPerPixelEmissive ? "∞" : (projA.nativeContrast ? projA.nativeContrast.toLocaleString() + ":1" : "Unknown");

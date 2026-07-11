@@ -85,7 +85,7 @@ export {
 // Seating
 export {
   deriveViewingDistances, homeDefaultViewingDistance,
-  getSmpteMultipliers,
+  getSmpteMultipliers, eyeHeightAtDistance,
 } from './seating';
 
 // Resolver

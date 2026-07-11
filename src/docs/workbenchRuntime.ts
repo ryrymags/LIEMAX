@@ -1,4 +1,23 @@
-import { nitsToFl, screenAreaDome, computeMasking, computePpd, domePpd, horizontalFov, verticalFov } from '../math';
+import { nitsToFl, screenAreaDome, computeMasking, computePpd, domePpd, horizontalFov, verticalFov, eyeHeightAtDistance } from '../math';
+
+// Seat eye height from generated seat geometry (rake, front row, elevation,
+// profile floor cap); flat default when rake is unknown. Mirrored in
+// docs/math.js eyeHeightForVenueSeat().
+function eyeHeightForVenueSeat(venue: Record<string, any>, distanceFt: number): number {
+  const seat = venue?.seat ?? {};
+  if (!isPositiveNumber(distanceFt) || typeof seat.rakeDeg !== 'number' || !Number.isFinite(seat.rakeDeg)) {
+    return 3.75;
+  }
+  const screenH = isPositiveNumber(venue?.screen?.h) ? venue.screen.h : null;
+  const cap = screenH != null ? screenH * (seat.geometryProfile === 'gt_pit' ? 0.75 : 0.45) : null;
+  return eyeHeightAtDistance(
+    distanceFt,
+    isPositiveNumber(seat.front) ? seat.front : 0,
+    seat.rakeDeg,
+    seat.frontRowFloorElevationFt ?? 0,
+    cap
+  );
+}
 
 export type DocsVenue = Record<string, any>;
 export type DocsStats = Record<string, any>;
@@ -188,9 +207,10 @@ export function computeStats(
   const projWindow = mask.projectedWindow;
   const contentHFov = horizontalFov(mask.effW, dist);
   // Vertical FOV is asymmetric about the eye line — content sits centered on
-  // the physical screen, whose bottom is above the floor (src/math/fov.ts).
+  // the physical screen, whose bottom is above the floor (src/math/fov.ts),
+  // and the eye height follows the seat's raked-floor geometry.
   const contentBottomFt = 5.0 + Math.max(0, (venue.screen.h - mask.effH) / 2);
-  const contentVFov = verticalFov(mask.effH, dist, contentBottomFt).total_deg;
+  const contentVFov = verticalFov(mask.effH, dist, contentBottomFt, eyeHeightForVenueSeat(venue, dist)).total_deg;
   const ppdVal = proj.resH != null ? computePpd(proj.resH, mask.effW, dist) : null;
   const fl = brightnessFL({ projection: proj });
   const physicalUtil = mask.areaUtilPct;
@@ -430,7 +450,7 @@ window.LIEMAX_WORKBENCH = (function () {
     }
     const projWindow = mask.projectedWindow;
     const contentHFov = M.horizontalFovDeg(mask.effW, dist);
-    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH));
+    const contentVFov = M.verticalFovDeg(mask.effH, dist, M.contentBottomFt(venue.screen.h, mask.effH), M.eyeHeightForVenueSeat(venue, dist));
     const ppdVal = proj.resH != null ? M.ppd(proj.resH, contentHFov) : null;
     const fl = brightnessFL({ projection: proj });
     const physicalUtil = mask.areaUtilPct;
@@ -469,7 +489,7 @@ window.LIEMAX_WORKBENCH = (function () {
     const bArea = isPositiveNumber(statsB.visibleArea) ? statsB.visibleArea : (isPositiveNumber(statsB.mask.effW) && isPositiveNumber(statsB.mask.effH) ? statsB.mask.effW * statsB.mask.effH : null);
     rows.push({ ...makeRow("area", "Visible content area", aArea, bArea, aArea == null ? "Unknown" : fmtInt(aArea) + " sq ft", bArea == null ? "Unknown" : fmtInt(bArea) + " sq ft", true), explain: "How large the actual movie image is, after masking or cropping." });
     rows.push({ ...makeRow("util", "Screen utilization", statsA.physicalUtil, statsB.physicalUtil, statsA.physicalUtil == null ? "Unknown" : fmtInt(statsA.physicalUtil) + "%", statsB.physicalUtil == null ? "Unknown" : fmtInt(statsB.physicalUtil) + "%", true), explain: "How much of the physical screen this movie format fills." });
-    rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown", statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown", true), explain: "How much light reaches the screen; higher helps HDR and punch." });
+    rows.push({ ...makeRow("brightness", "Brightness", statsA.fl, statsB.fl, statsA.fl != null ? fmtNum(statsA.fl, 1) + " fL" : "Unknown", statsB.fl != null ? fmtNum(statsB.fl, 1) + " fL" : "Unknown", true), explain: "How much light reaches the screen; higher helps HDR and punch. Published 2D spec — 3D showings are dimmer (dimming is not modeled)." });
     const aContrNum = projA.isPerPixelEmissive ? Infinity : projA.nativeContrast;
     const bContrNum = projB.isPerPixelEmissive ? Infinity : projB.nativeContrast;
     const aContrDisp = projA.isPerPixelEmissive ? "∞" : (projA.nativeContrast ? projA.nativeContrast.toLocaleString() + ":1" : "Unknown");
