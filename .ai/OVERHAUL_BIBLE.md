@@ -537,6 +537,8 @@ The following specs are confirmed at HIGH confidence from primary sources and sh
 
 The implementation order below reflects both logical dependencies and the order in which written content blocks will be delivered. Do not build a UI component that depends on content that hasn't been written yet.
 
+**Standing requirement:** every component in this sequence must meet the accessibility and security checklists in `.ai/COMPLIANCE.md` (WCAG 2.1 AA focus/ARIA/tooltip/dialog/canvas-alternative patterns, verdict tiers never color-alone, reduced-motion, CSP/SRI) as it is built — not retrofitted at the end. Deployment headers live in `netlify.toml` (publish dir `docs`); the CSP's `'unsafe-inline'` script allowance exists only for in-browser Babel and must be removed when V2 precompiles JSX.
+
 1. **Navigation bar** — static, four items, persistent across all pages
 2. **Splash screen** — static layout, no logic; stat strip hardcoded initially, to be wired to engine later
 3. **Search → verdict transformation** — the interaction where the splash opens into Layer 1; requires `beginnerVerdictFor()` and `whatThisMeansFor()` helpers; requires verdict tier logic from Section 6
