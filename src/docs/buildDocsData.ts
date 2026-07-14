@@ -24,7 +24,8 @@ import {
   mostRecentDolbyCinemaSnapshot,
   readDolbyCinemaSnapshots,
 } from '../data/dolbyCinemaCount';
-import { browserWorkbenchSource } from './workbenchRuntime';
+// workbenchRuntime's comparison-row logic gets ported into the V2 app in M3;
+// its browser-source emission retired with the prototype.
 
 type JsonObject = Record<string, any>;
 
@@ -1001,11 +1002,13 @@ function buildData() {
 }
 
 const data = buildData();
-const dataSource = `// GENERATED FILE. Run npm run build:docs-data.\n// Source: canonical src/data JSON resolved through src/math/resolver.\nwindow.LIEMAX_DATA = ${JSON.stringify(data, null, 2)};\n`;
+// V2 (Vite app in web/) imports this JSON bundle at build time. The old
+// window.LIEMAX_DATA docs/data.js + docs/workbench.js emissions retired with
+// the prototype (see git tag prototype-final).
+const bundleJson = JSON.stringify(data, null, 2) + '\n';
 
 let stale = false;
-stale = writeOrCheck('docs/data.js', dataSource) || stale;
-stale = writeOrCheck('docs/workbench.js', browserWorkbenchSource) || stale;
+stale = writeOrCheck('src/data/generated/docs_bundle.json', bundleJson) || stale;
 
 if (checkOnly && stale) process.exit(1);
 if (checkOnly) console.log('docs generated data is current.');
