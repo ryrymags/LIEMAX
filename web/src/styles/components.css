@@ -1,0 +1,341 @@
+/* Per-component structural styles. Token vars only — no decorative design;
+   Claude Design / Overhaul V2 visual pass replaces the look, not the
+   structure. */
+
+/* --- Nav --- */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.nav-wordmark {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  padding: var(--space-1) var(--space-2);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-muted);
+  padding: var(--space-1) var(--space-2);
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+/* --- Splash --- */
+.splash {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.splash-headline {
+  font-family: var(--font-display);
+  font-size: var(--size-h1);
+  line-height: 1.1;
+  margin: 0 0 var(--space-5);
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-4);
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--size-stat);
+  color: var(--color-accent);
+  line-height: 1.1;
+}
+
+.stat-label {
+  display: block;
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+.splash-footnote {
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.splash-purpose {
+  font-size: 1.125rem;
+  margin: 0 0 var(--space-5);
+}
+
+.no-results {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.no-results p {
+  margin: 0 0 var(--space-3);
+}
+
+.no-results-button,
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--size-body);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+}
+
+.no-results-button,
+.button-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-text);
+  text-decoration: underline;
+  border: none;
+  padding: var(--space-2) 0;
+}
+
+.random-example-note {
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin-top: var(--space-2);
+}
+
+/* --- TheaterSearch (ARIA combobox) --- */
+.search {
+  position: relative;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.search-label {
+  display: block;
+  text-align: left;
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin-bottom: var(--space-1);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-3);
+  font-size: 1.125rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+.search-listbox {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  margin-top: var(--space-1);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  max-height: 20rem;
+  overflow-y: auto;
+  list-style: none;
+  padding: var(--space-1);
+  text-align: left;
+}
+
+.search-option {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.search-option[aria-selected='true'] {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.search-option-name {
+  display: block;
+  font-weight: 600;
+}
+
+.search-option-meta {
+  display: block;
+  font-size: var(--size-small);
+  color: var(--color-muted);
+}
+
+.search-option[aria-selected='true'] .search-option-meta {
+  color: var(--color-accent-text);
+  opacity: 0.85;
+}
+
+.search-option-source {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* --- Verdict card --- */
+.verdict-card {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+  text-align: left;
+}
+
+.verdict-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  border: 2px solid currentColor;
+}
+
+.verdict-badge--true_imax {
+  color: var(--tier-true);
+  background: var(--tier-true-bg);
+}
+
+.verdict-badge--imax_lite {
+  color: var(--tier-lite);
+  background: var(--tier-lite-bg);
+}
+
+.verdict-badge--liemax {
+  color: var(--tier-liemax);
+  background: var(--tier-liemax-bg);
+}
+
+.verdict-badge--dome {
+  color: var(--tier-dome);
+  background: var(--tier-dome-bg);
+}
+
+.verdict-badge--unknown {
+  color: var(--tier-unknown);
+  background: var(--tier-unknown-bg);
+}
+
+.verdict-venue-name {
+  font-family: var(--font-display);
+  font-size: var(--size-h2);
+  margin: var(--space-3) 0 0;
+}
+
+.verdict-tagline {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  margin: var(--space-1) 0 var(--space-4);
+}
+
+.verdict-archival-caveat {
+  border-left: 3px solid var(--tier-lite);
+  background: var(--color-surface);
+  padding: var(--space-2) var(--space-3);
+  margin: 0 0 var(--space-4);
+  font-size: var(--size-small);
+}
+
+.verdict-summary {
+  font-size: 1.0625rem;
+  margin: 0 0 var(--space-5);
+}
+
+.verdict-missing {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-5);
+}
+
+.verdict-missing h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--size-h3);
+}
+
+.verdict-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+/* --- Scale diagram --- */
+.scale-diagram-wrap {
+  margin: 0 0 var(--space-5);
+}
+
+.scale-diagram-caption {
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin-top: var(--space-2);
+}
+
+.no-measurements-note {
+  padding: var(--space-3);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-muted);
+  font-size: var(--size-small);
+  margin: 0 0 var(--space-5);
+}
+
+/* --- App shell --- */
+.diagnose-different {
+  margin-top: var(--space-3);
+}

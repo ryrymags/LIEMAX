@@ -12,7 +12,7 @@ LIEMAX = static web app for explaining what cinema/home screens look like from a
 - Audited 2026-04-26: Steps 1, 2, and 3 are clean. All 133 math tests + 87 schema/data checks pass.
 - Done: Step 1 schema/research; Step 2 math engine (133 passing tests); sparse 143190 import foundation; LFExaminer supplemental Xenon import foundation; schema v1.6.1 (adds r_imax_csv + lfexaminer source quality/source rows, screen width confidence, 3D POV seating geometry fields, and nullable screen_bottom_height_ft).
 - Done in Step 3: IMAX presets (GT, CoLa, dual xenon, 15/70, dome film, dome laser), Dolby Cinema (dual-laser + single-laser variants), RPX, standard multiplex, ScreenX, Cinemark XD, home display tier presets, content formats, Providence Place, and Mugar Omni venue drafts.
-- Active: Step 4 — the `docs/` GUI is a **rough functional prototype only**; the next major work item is the Overhaul V2 redesign. Read `.ai/OVERHAUL_BIBLE.md` before touching any frontend code.
+- Active: Overhaul V2. `web/` is the app source (Vite 8 + React 19 + TS, imports `src/math` directly); `docs/` is its committed build output (Netlify publish dir) — never hand-edit `docs/`. M1 (splash + Layer 1 verdict) shipped 2026-07-15; visual design arrives via the Claude Design loop (`design/DESIGN_BRIEF_M1.md`). The old prototype lives at git tag `prototype-final`. Read `.ai/OVERHAUL_BIBLE.md` before touching any frontend code.
 - GUI design tooling for Overhaul V2: Claude Design skill (`/design:frontend-design`), Figma MCP connector, or equivalent.
 
 ## Rules

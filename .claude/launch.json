@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "liemax-docs",
-      "runtimeExecutable": "node",
-      "runtimeArgs": [".claude/serve-docs.js"],
+      "name": "liemax-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:web"],
       "port": 5173
     }
   ]

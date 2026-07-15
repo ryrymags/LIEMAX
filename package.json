@@ -14,15 +14,25 @@
     "dolby:check": "ts-node --transpile-only src/data/dolbyCinemaCount.ts",
     "build:docs-data": "ts-node --transpile-only src/docs/buildDocsData.ts",
     "check:docs-data": "ts-node --transpile-only src/docs/buildDocsData.ts --check",
-    "validate:math-parity": "ts-node --transpile-only src/docs/validateMathParity.ts",
-    "validate:docs": "npm run check:docs-data && npm run validate:math-parity && node docs/validate-workbench.js",
+    "dev:web": "vite --config web/vite.config.ts",
+    "build:web": "vite build --config web/vite.config.ts",
+    "typecheck:web": "tsc --noEmit -p web/tsconfig.json",
+    "validate:web": "npm run check:docs-data && node scripts/validate-web.mjs",
     "validate:schema": "ts-node --transpile-only src/data/validate.ts",
     "test": "npm run validate && npm run validate:compare",
-    "ci": "npm run typecheck && npm run validate && npm run validate:schema && npm run validate:compare && npm run validate:dolby && npm run validate:docs"
+    "ci": "npm run typecheck && npm run typecheck:web && npm run validate && npm run validate:schema && npm run validate:compare && npm run validate:dolby && npm run build:web && npm run validate:web"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }

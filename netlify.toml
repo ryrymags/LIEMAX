@@ -9,9 +9,10 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # 'unsafe-inline' in script-src is required while app.jsx is transpiled
-    # in-browser by Babel standalone; remove it when V2 precompiles JSX.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    # V2 is fully self-hosted (Vite bundle, no CDN scripts, no external
+    # fonts), so the CSP is locked to 'self'. style-src keeps
+    # 'unsafe-inline' for framework-injected style attributes only.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
