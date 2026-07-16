@@ -6,6 +6,7 @@ import { useState } from 'react';
 import type { Venue } from '../lib/data';
 import Nav from './Nav';
 import Splash from './Splash';
+import SplashZoom from './SplashZoom';
 import VerdictCard from './VerdictCard';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
     <>
       <Nav onReset={handleReset} />
       <main id="main">
+        <SplashZoom />
         <Splash onSelect={setSelected} />
         {selected && (
           <>

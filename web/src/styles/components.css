@@ -339,3 +339,262 @@
 .diagnose-different {
   margin-top: var(--space-3);
 }
+
+/* --- SplashZoom (scroll-driven deep-zoom intro) ---
+   Scroll mode: tall track + sticky full-viewport stage, OpenSeadragon
+   viewer + SVG overlay driven imperatively via refs (see SplashZoom.tsx —
+   opacity/transform on ratio-box/overlay elements are intentionally never
+   set via JSX style props, only via CSS defaults here + direct DOM writes,
+   so the two never fight each other).
+   Static/fallback mode (prefers-reduced-motion, or OSD failed to open):
+   single non-sticky 100vh stage, no track, everything visible immediately. */
+.splash-zoom {
+  position: relative;
+}
+
+.splash-zoom-track {
+  position: relative;
+  height: 350vh;
+  height: 350svh;
+}
+
+.splash-zoom-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.splash-zoom-stage--static {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-zoom-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/splash/liemax-frame-thumb.jpg');
+  background-image: -webkit-image-set(
+    url('/assets/splash/liemax-frame-thumb.avif') type('image/avif') 1x,
+    url('/assets/splash/liemax-frame-thumb.jpg') type('image/jpeg') 1x
+  );
+  background-image: image-set(
+    url('/assets/splash/liemax-frame-thumb.avif') type('image/avif') 1x,
+    url('/assets/splash/liemax-frame-thumb.jpg') type('image/jpeg') 1x
+  );
+  background-size: cover;
+  background-position: center;
+  filter: blur(24px);
+  transform: scale(1.15);
+}
+
+.splash-zoom-visual {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.splash-zoom-visual--ready {
+  opacity: 1;
+}
+
+.splash-zoom-osd {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.splash-zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.splash-zoom-overlay--scroll {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.splash-zoom-overlay--scroll .ratio-box {
+  opacity: 0;
+}
+
+/* Static/fallback layout: center a fixed 1.43:1 frame in the stage instead
+   of absolutely filling it — there's no OSD viewport driving positioning
+   in this mode. */
+.splash-zoom-stage--static .splash-zoom-visual {
+  position: relative;
+  inset: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 1;
+  transition: none;
+}
+
+.splash-zoom-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 10803 / 7555;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.splash-zoom-frame--placeholder {
+  display: flex;
+}
+
+.splash-zoom-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.splash-zoom-placeholder-outline {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 12;
+  stroke-dasharray: 60 40;
+}
+
+.splash-zoom-overlay--static {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.splash-zoom-overlay--static .ratio-box {
+  opacity: 1;
+}
+
+/* --- Ratio comparison boxes (shared by scroll + static overlay svgs) ---
+   Dark halo stroke/text-stroke behind every colored line/label so they
+   stay legible against any part of the underlying frame. */
+.ratio-box-halo {
+  fill: none;
+  stroke: rgba(10, 8, 5, 0.85);
+  stroke-width: 46;
+}
+
+.ratio-box-line {
+  fill: none;
+  stroke-width: 20;
+}
+
+.ratio-box-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  paint-order: stroke fill;
+  stroke: rgba(10, 8, 5, 0.85);
+  stroke-width: 26;
+  stroke-linejoin: round;
+}
+
+.ratio-box--full143 .ratio-box-line {
+  stroke: var(--color-accent);
+}
+.ratio-box--full143 .ratio-box-label {
+  fill: var(--color-accent);
+}
+
+.ratio-box--digital190 .ratio-box-line {
+  stroke: var(--tier-liemax);
+}
+.ratio-box--digital190 .ratio-box-label {
+  fill: var(--tier-liemax);
+}
+
+.ratio-box--scope239 .ratio-box-line {
+  stroke: var(--color-text);
+}
+.ratio-box--scope239 .ratio-box-label {
+  fill: var(--color-text);
+}
+
+/* --- Caption / attribution corner --- */
+.splash-zoom-corner {
+  position: absolute;
+  left: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 2;
+  max-width: 26rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  pointer-events: none;
+}
+
+.splash-zoom-stage--static .splash-zoom-corner {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.splash-zoom-caption-line {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(10, 8, 5, 0.6);
+  color: var(--color-text);
+  font-size: var(--size-small);
+  border-radius: var(--radius);
+  animation: splash-zoom-caption-fade 0.4s ease;
+}
+
+@keyframes splash-zoom-caption-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.splash-zoom-attribution {
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  opacity: 0;
+}
+
+.splash-zoom-stage--static .splash-zoom-attribution {
+  opacity: 1;
+}
+
+/* --- Skip button --- */
+.splash-zoom-skip {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 3;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: var(--size-small);
+}
+
+.splash-zoom-skip:hover {
+  background: var(--color-surface);
+}
