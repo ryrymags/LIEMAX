@@ -9,6 +9,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "types": ["vite/client"],
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "paths": {

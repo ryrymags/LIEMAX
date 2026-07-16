@@ -52,17 +52,22 @@ const STATIC_CAPTION =
 const ATTRIBUTION_TEXT =
   'Frame: Oppenheimer (2023) 70mm IMAX scan — shown for format comparison.';
 
-// Well-known 1x2px AVIF probe image (Modernizr's avif feature-detect data
-// URI). Decodes only in browsers with real AVIF support; fails silently
+// 1x2px AVIF probe image (generated with vips from this repo's own asset
+// pipeline — `vips black probe.v 1 2 && vips copy probe.v probe.avif`).
+// Decodes only in browsers with real AVIF support; fails silently
 // (onerror) everywhere else, which is a safe failure mode — we just fall
 // back to the WebP DZI.
 const AVIF_PROBE_SRC =
-  'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAADHBpeGkAAAAAAwgICAAAAAxhdjFDgQAMAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAB9tZGF0EgAKKBgABrCQEDQgMgkQAAAAB8dSLfI=';
+  'data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAG1pZjFhdmlmbWlhZgAAARdtZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAANGlsb2MAAAAAREAAAgABAAAAAAE7AAEAAAAAAAAAGgACAAAAAAFVAAEAAAAAAAAAvgAAADhpaW5mAAAAAAACAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAFWluZmUCAAABAAIAAEV4aWYAAAAAVmlwcnAAAAA4aXBjbwAAAAxhdjFDgQAMAAAAABRpc3BlAAAAAAAAAAEAAAACAAAAEHBpeGkAAAAAAwgICAAAABZpcG1hAAAAAAAAAAEAAQOBAgMAAAAaaXJlZgAAAAAAAAAOY2RzYwACAAEAAQAAAOBtZGF0EgAKCBgAFggIaDQgMgwYAAooooQAALATS9gAAAAGRXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAAA4YwAA6AMAADhjAADoAwAABgAAkAcABAAAADAyMTABkQcABAAAAAECAwAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAQAAQAAAAEAAAADoAQAAQAAAAIAAAAAAAAA';
 
 const AVIF_DZI_URL = '/assets/splash/liemax-frame-avif.dzi';
 const WEBP_DZI_URL = '/assets/splash/liemax-frame-webp.dzi';
 const THUMB_AVIF_URL = '/assets/splash/liemax-frame-thumb.avif';
 const THUMB_JPG_URL = '/assets/splash/liemax-frame-thumb.jpg';
+// 1600px-wide render for the static/reduced-motion mode — the 400px blur
+// thumbnail is too soft to serve as a full-screen still.
+const STATIC_AVIF_URL = '/assets/splash/liemax-frame-static.avif';
+const STATIC_JPG_URL = '/assets/splash/liemax-frame-static.jpg';
 
 // ---------------------------------------------------------------------
 // Content format data (canonical source — @data alias, never hardcode
@@ -106,6 +111,27 @@ const BAND_239: BandRect = centeredBand(AR_239);
 
 const LABEL_FONT_SIZE = 210;
 const LABEL_PADDING = 70;
+
+// Labels live in image-pixel space and shrink with the frame; on small
+// viewports (mobile) the natural size lands around 7px. Enforce a
+// screen-space floor by scaling the font up whenever the current
+// image→screen scale would drop below these minimums.
+const MIN_LABEL_SCREEN_PX = 13;
+const MIN_LABEL_PAD_SCREEN_PX = 10;
+
+/** Re-derive label font size/position for the current image→screen scale. */
+function applyLabelSizing(root: Element | null, scale: number): void {
+  if (!root || !(scale > 0)) return;
+  const font = Math.max(LABEL_FONT_SIZE, MIN_LABEL_SCREEN_PX / scale);
+  const pad = Math.max(LABEL_PADDING, MIN_LABEL_PAD_SCREEN_PX / scale);
+  root.querySelectorAll('text.ratio-box-label').forEach((t) => {
+    const bandX = Number(t.getAttribute('data-band-x') ?? '0');
+    const bandY = Number(t.getAttribute('data-band-y') ?? '0');
+    t.setAttribute('font-size', String(font));
+    t.setAttribute('x', String(bandX + pad));
+    t.setAttribute('y', String(bandY + pad + font));
+  });
+}
 
 // ---------------------------------------------------------------------
 // Small math helpers
@@ -183,6 +209,8 @@ function RatioBox({ band, tone, label, groupRef }: RatioBoxProps) {
       <rect className="ratio-box-line" x={band.x} y={band.y} width={band.w} height={band.h} />
       <text
         className="ratio-box-label"
+        data-band-x={band.x}
+        data-band-y={band.y}
         x={band.x + LABEL_PADDING}
         y={band.y + LABEL_PADDING + LABEL_FONT_SIZE}
         fontSize={LABEL_FONT_SIZE}
@@ -226,11 +254,12 @@ export default function SplashZoom() {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const osdContainerRef = useRef<HTMLDivElement | null>(null);
   const visualRef = useRef<HTMLDivElement | null>(null);
-  const overlaySvgRef = useRef<SVGSVGElement | null>(null);
+  const overlayGroupRef = useRef<SVGGElement | null>(null);
   const box190Ref = useRef<SVGGElement | null>(null);
   const box239Ref = useRef<SVGGElement | null>(null);
   const box143Ref = useRef<SVGGElement | null>(null);
   const attributionRef = useRef<HTMLParagraphElement | null>(null);
+  const staticSvgRef = useRef<SVGSVGElement | null>(null);
 
   const viewerRef = useRef<OpenSeadragon.Viewer | null>(null);
   const openedRef = useRef(false);
@@ -283,14 +312,22 @@ export default function SplashZoom() {
     const cy = lerp(startCenter.y, endCenter.y, progress);
     vp.fitBounds(new OpenSeadragon.Rect(cx - width / 2, cy - height / 2, width, height), true);
 
-    // Position the overlay SVG so its (fixed, image-pixel-space) contents
-    // line up with wherever the full frame currently sits on screen.
+    // Map the overlay's image-pixel-space contents onto wherever the full
+    // frame currently sits on screen. The transform goes on an inner <g>
+    // of a viewport-sized SVG — NOT on a full-image-sized SVG element —
+    // because a 10803px-wide element (especially with will-change) forces
+    // the compositor to rasterize a multi-hundred-MB layer, which blacks
+    // out and hangs the renderer.
     const fullImageVP = vp.imageToViewportRectangle(endImageRect);
     const elementRect = vp.viewportToViewerElementRectangle(fullImageVP);
-    if (overlaySvgRef.current) {
-      overlaySvgRef.current.style.transform =
-        `translate(${elementRect.x}px, ${elementRect.y}px) ` +
-        `scale(${elementRect.width / FULL_IMAGE_WIDTH}, ${elementRect.height / FULL_IMAGE_HEIGHT})`;
+    if (overlayGroupRef.current) {
+      const scale = elementRect.width / FULL_IMAGE_WIDTH;
+      overlayGroupRef.current.setAttribute(
+        'transform',
+        `translate(${elementRect.x} ${elementRect.y}) ` +
+          `scale(${scale} ${elementRect.height / FULL_IMAGE_HEIGHT})`,
+      );
+      applyLabelSizing(overlayGroupRef.current, scale);
     }
 
     const op190 = smoothstep(OVERLAY_190_START, OVERLAY_190_START + OVERLAY_FADE_SPAN, progress);
@@ -343,14 +380,26 @@ export default function SplashZoom() {
         pinchToZoom: false,
         flickEnabled: false,
       },
-      visibilityRatio: 1,
+      // visibilityRatio must be 0: the end framing letterboxes the full
+      // 1.43:1 frame inside the (wider) viewport, and any nonzero ratio
+      // constrains that letterboxing away — vertically cropping the frame
+      // the whole intro exists to reveal.
+      visibilityRatio: 0,
       constrainDuringPan: false,
-      animationTime: 0,
+      // NOTE: never set animationTime to 0 — OpenSeadragon's spring easing
+      // divides elapsed time by it, and 0 yields NaN viewport math that
+      // paints the canvas black and busy-loops the render loop (hard page
+      // hang). We drive every viewport change with immediately=true instead,
+      // so the spring animation path is unused anyway.
+      animationTime: 0.1,
       immediateRender: true,
-      preload: true,
       crossOriginPolicy: false,
     });
     viewerRef.current = viewer;
+    if (import.meta.env.DEV) {
+      // E2E/debug hook only — never present in production builds.
+      (window as unknown as Record<string, unknown>).__liemaxViewer = viewer;
+    }
 
     const timeoutId = window.setTimeout(() => {
       if (!cancelled) setOsdFailed(true);
@@ -415,6 +464,21 @@ export default function SplashZoom() {
     };
   }, [staticMode, applyProgress]);
 
+  // Static/fallback mode sizes labels once per layout change (no scroll
+  // loop to do it per frame). The SVG scales with the frame box, so the
+  // image→screen scale is just displayed width / image width.
+  useEffect(() => {
+    if (!staticMode) return undefined;
+    const svg = staticSvgRef.current;
+    if (!svg) return undefined;
+    const resize = () =>
+      applyLabelSizing(svg, svg.getBoundingClientRect().width / FULL_IMAGE_WIDTH);
+    resize();
+    const ro = new ResizeObserver(resize);
+    ro.observe(svg);
+    return () => ro.disconnect();
+  }, [staticMode, thumbFailed]);
+
   const handleSkip = useCallback(() => {
     const el = outerRef.current;
     if (!el) return;
@@ -456,15 +520,16 @@ export default function SplashZoom() {
           >
             {!thumbFailed ? (
               <picture className="splash-zoom-frame">
-                <source srcSet={THUMB_AVIF_URL} type="image/avif" />
+                <source srcSet={STATIC_AVIF_URL} type="image/avif" />
                 <img
-                  src={THUMB_JPG_URL}
+                  src={STATIC_JPG_URL}
                   alt=""
                   aria-hidden="true"
                   className="splash-zoom-thumb-img"
                   onError={() => setThumbFailed(true)}
                 />
                 <svg
+                  ref={staticSvgRef}
                   className="splash-zoom-overlay splash-zoom-overlay--static"
                   viewBox={`0 0 ${FULL_IMAGE_WIDTH} ${FULL_IMAGE_HEIGHT}`}
                   preserveAspectRatio="xMidYMid meet"
@@ -476,6 +541,7 @@ export default function SplashZoom() {
             ) : (
               <div className="splash-zoom-frame splash-zoom-frame--placeholder">
                 <svg
+                  ref={staticSvgRef}
                   className="splash-zoom-overlay splash-zoom-overlay--static"
                   viewBox={`0 0 ${FULL_IMAGE_WIDTH} ${FULL_IMAGE_HEIGHT}`}
                   preserveAspectRatio="xMidYMid meet"
@@ -524,15 +590,10 @@ export default function SplashZoom() {
 
           <div ref={visualRef} className="splash-zoom-visual" role="img" aria-label={visualAriaLabel}>
             <div ref={osdContainerRef} className="splash-zoom-osd" aria-hidden="true" />
-            <svg
-              ref={overlaySvgRef}
-              className="splash-zoom-overlay splash-zoom-overlay--scroll"
-              width={FULL_IMAGE_WIDTH}
-              height={FULL_IMAGE_HEIGHT}
-              viewBox={`0 0 ${FULL_IMAGE_WIDTH} ${FULL_IMAGE_HEIGHT}`}
-              aria-hidden="true"
-            >
-              <RatioBoxes box190Ref={box190Ref} box239Ref={box239Ref} box143Ref={box143Ref} />
+            <svg className="splash-zoom-overlay splash-zoom-overlay--scroll" aria-hidden="true">
+              <g ref={overlayGroupRef}>
+                <RatioBoxes box190Ref={box190Ref} box239Ref={box239Ref} box143Ref={box143Ref} />
+              </g>
             </svg>
           </div>
 

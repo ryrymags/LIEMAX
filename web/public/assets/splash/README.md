@@ -12,8 +12,10 @@ top of the home page.
 - `liemax-frame-webp.dzi` + `liemax-frame-webp_files/{level}/{x}_{y}.webp` —
   same pyramid, WebP Q=80 fallback for browsers without AVIF decode support.
 - `liemax-frame-thumb.avif` / `liemax-frame-thumb.jpg` — ~400px-wide
-  full-frame placeholder used for first paint (blurred background) and as
-  the static `<picture>` fallback if OpenSeadragon fails to load.
+  full-frame placeholder used for first paint (blurred background).
+- `liemax-frame-static.avif` / `liemax-frame-static.jpg` — 1600px-wide
+  full-frame still used by the static mode (`prefers-reduced-motion`, or
+  OpenSeadragon failure) where the 400px thumb would be too soft.
 
 Source crop: 10803 x 7555 px (~1.43:1), taken from an 8K 70mm scan.
 
@@ -36,9 +38,11 @@ vips dzsave /tmp/liemax-frame-srgb.v liemax-frame-avif \
 vips dzsave /tmp/liemax-frame-srgb.v liemax-frame-webp \
   --layout dz --suffix '.webp[Q=80]' --tile-size 512 --overlap 1
 
-# Thumbnails (first paint / static fallback).
+# Thumbnails (first paint) + static-mode still (reduced motion / OSD failure).
 vips thumbnail /tmp/liemax-frame-srgb.v liemax-frame-thumb.avif 400
 vips thumbnail /tmp/liemax-frame-srgb.v liemax-frame-thumb.jpg 400
+vips thumbnail /tmp/liemax-frame-srgb.v 'liemax-frame-static.avif[Q=60,effort=4]' 1600
+vips thumbnail /tmp/liemax-frame-srgb.v 'liemax-frame-static.jpg[Q=72,strip]' 1600
 ```
 
 Output goes directly into this directory (`web/public/assets/splash/`) so
