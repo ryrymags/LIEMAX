@@ -86,7 +86,9 @@ export default function TheaterSearch({
 
   return (
     <div className="search">
-      <label className="search-label" htmlFor={baseId}>
+      {/* Visually hidden: the placeholder carries the same text, and showing
+          both reads as a duplicate. Screen readers still get the label. */}
+      <label className="search-label visually-hidden" htmlFor={baseId}>
         {label}
       </label>
       <input

@@ -4,6 +4,7 @@
 // keeps rendering, VerdictCard just appears below it).
 import { useState } from 'react';
 import type { Venue } from '../lib/data';
+import Footer from './Footer';
 import Nav from './Nav';
 import Splash from './Splash';
 import SplashZoom from './SplashZoom';
@@ -33,6 +34,7 @@ export default function App() {
           </>
         )}
       </main>
+      <Footer />
     </>
   );
 }
