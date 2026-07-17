@@ -68,7 +68,7 @@
   }
 
   .nav-links {
-    gap: var(--space-2);
+    display: none;
   }
 
   .nav-links a {
@@ -85,6 +85,35 @@
 .nav-links a:hover {
   color: var(--color-text);
   border-bottom-color: var(--color-accent);
+}
+
+.nav-diagnosis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-size: var(--size-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-diagnosis:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.site-nav a:focus-visible,
+.nav-wordmark:focus-visible,
+.splash-zoom button:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 3px;
 }
 
 /* --- Splash --- */
@@ -495,8 +524,8 @@
 
 .splash-zoom-track {
   position: relative;
-  height: 350vh;
-  height: 350svh;
+  height: 900vh;
+  height: 900svh;
 }
 
 .splash-zoom-stage {
@@ -505,7 +534,11 @@
   height: 100vh;
   height: 100svh;
   overflow: hidden;
-  background: var(--color-bg);
+  /* Pure black, not --color-bg (a warm dark brown) — the stage doubles as
+     the pillarbox/letterbox color outside the contain-fit frame box, and
+     any tint there would read as a gray/brown backdrop instead of true
+     black letterboxing. */
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -513,6 +546,14 @@
 
 .splash-zoom-stage--static {
   position: relative;
+  /* Override the base rule's height:100vh/svh + overflow:hidden — those are
+     sized for the sticky scroll-mode stage (a fixed-viewport-height box).
+     The static/fallback branch's content (image + caption/CTA corner block)
+     is naturally taller than one viewport, and without this override it was
+     silently clipped: the caption, attribution, and "Diagnose my IMAX" CTA
+     were entirely invisible and unreachable for reduced-motion users. */
+  height: auto;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -535,6 +576,7 @@
   background-position: center;
   filter: blur(24px);
   transform: scale(1.15);
+  opacity: 0;
 }
 
 .splash-zoom-visual {
@@ -559,9 +601,8 @@
    is entirely CSS-driven (width:100% + aspect-ratio + max-height:100%,
    the same contain-fit trick the static mode below already used), so
    SplashZoom.tsx only ever reads this box's rendered size, never computes
-   it. overflow stays visible: during the zoom-out phase the zoomer
-   intentionally overflows this box (it fills the whole stage instead) —
-   the stage's own overflow:hidden is what crops it. */
+   it. The box clips the transformed image so the artificial bars always
+   constrain the picture inside the canonical 1.43 presentation window. */
 .splash-zoom-frame-box {
   /* Contain-fit size is set in px by SplashZoom's measure() — CSS
      aspect-ratio + max-height cannot express contain-fit (the clamp breaks
@@ -571,6 +612,7 @@
   flex: none;
   aspect-ratio: 10803 / 7555;
   max-width: 100%;
+  overflow: hidden;
 }
 
 /* The single element the whole zoom animates: transform-origin 0 0 so
@@ -581,6 +623,7 @@
   inset: 0;
   transform-origin: 0 0;
   will-change: transform;
+  z-index: 0;
 }
 
 .splash-zoom-full {
@@ -624,11 +667,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 0;
+  /* Narrow first-paint aperture; JS writes the same viewport-clamped value
+     once contain-fit geometry is measured. */
+  height: max(0px, calc((100% - clamp(96px, 24%, 180px)) / 2));
   background: #000;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
-  transition: opacity 0.2s ease;
+  z-index: 2;
 }
 
 .splash-zoom-bar--top {
@@ -666,6 +711,7 @@
   opacity: 0;
   transition: opacity 0.25s ease, color 0.25s ease;
   pointer-events: none;
+  z-index: 4;
 }
 
 .splash-zoom-active-label--visible {
@@ -701,6 +747,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
 }
 
 .splash-zoom-overlay--scroll .ratio-box {
@@ -826,6 +873,151 @@
   left: auto;
   bottom: auto;
   padding: 0 var(--space-4) var(--space-4);
+  pointer-events: auto;
+}
+
+/* HTML checkpoint copy remains independent of the image transform so it is
+   selectable, responsive, and available to assistive technology. */
+.splash-zoom-checkpoint {
+  position: absolute;
+  left: clamp(var(--space-4), 5vw, var(--space-7));
+  bottom: clamp(var(--space-4), 5vh, var(--space-7));
+  z-index: 3;
+  width: min(28rem, calc(100% - var(--space-7)));
+  padding: var(--space-4);
+  border: 1px solid rgba(245, 241, 234, 0.18);
+  border-left: 3px solid var(--color-accent);
+  background: rgba(15, 12, 8, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.24);
+}
+
+/* The opening copy occupies the deliberate black field above the eye slice,
+   so the image remains the focal point instead of becoming a card backdrop.
+   Deliberately compact (narrower, tighter padding/type) so it never reaches
+   down into the eye aperture band, which can be as short as 96px tall. */
+.splash-zoom-checkpoint--opening {
+  top: clamp(4rem, 8vh, 5.5rem);
+  bottom: auto;
+  left: clamp(var(--space-4), 5vw, var(--space-6));
+  width: min(25rem, calc(100% - var(--space-6)));
+  padding: var(--space-3);
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-eyebrow {
+  margin-bottom: var(--space-1);
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-title {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.08;
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-copy {
+  margin-top: var(--space-2);
+  font-size: var(--size-xs);
+  line-height: 1.4;
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-actions {
+  margin-top: var(--space-2);
+  gap: var(--space-2) var(--space-3);
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-cta {
+  padding: var(--space-1) var(--space-3);
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-text-cta {
+  padding: var(--space-1) var(--space-2);
+}
+
+.splash-zoom-checkpoint--opening .splash-zoom-attribution {
+  display: none;
+}
+
+.splash-zoom-eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--color-accent);
+  font-size: var(--size-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.splash-zoom-title {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.7vw, 2.45rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1.02;
+}
+
+.splash-zoom-copy {
+  margin: var(--space-3) 0 0;
+  color: var(--color-muted);
+  font-size: var(--size-small);
+  line-height: 1.5;
+}
+
+.splash-zoom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.splash-zoom-cta,
+.splash-zoom-text-cta {
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: var(--size-small);
+  letter-spacing: var(--tracking-label);
+}
+
+.splash-zoom-cta {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+.splash-zoom-cta:hover {
+  background: var(--color-accent-bright);
+  border-color: var(--color-accent-bright);
+}
+
+.splash-zoom-text-cta {
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.splash-zoom-text-cta:hover {
+  color: var(--color-accent);
+}
+
+.splash-zoom-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .splash-zoom-caption-line {
@@ -841,6 +1033,13 @@
   font-size: var(--size-small);
   border-radius: var(--radius);
   animation: splash-zoom-caption-fade 0.4s ease;
+}
+
+.splash-zoom-static-copy {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--size-small);
+  line-height: 1.5;
 }
 
 @keyframes splash-zoom-caption-fade {
@@ -861,6 +1060,12 @@
 }
 
 .splash-zoom-stage--static .splash-zoom-attribution {
+  opacity: 1;
+}
+
+.splash-zoom-checkpoint .splash-zoom-attribution {
+  margin-top: var(--space-3);
+  padding: 0;
   opacity: 1;
 }
 
@@ -891,6 +1096,42 @@
 .splash-zoom-skip:hover {
   background: rgba(15, 12, 8, 0.75);
   border-color: var(--color-accent);
+}
+
+@media (max-width: 42rem) {
+  .splash-zoom-checkpoint {
+    right: var(--space-3);
+    left: var(--space-3);
+    bottom: var(--space-3);
+    width: auto;
+    max-height: min(48svh, 24rem);
+    overflow: auto;
+    padding: var(--space-3);
+  }
+
+  .splash-zoom-checkpoint--opening {
+    top: auto;
+    bottom: var(--space-3);
+    padding: var(--space-3);
+    border: 1px solid rgba(245, 241, 234, 0.18);
+    border-left: 3px solid var(--color-accent);
+    background: rgba(15, 12, 8, 0.84);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .splash-zoom-title {
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
+  }
+
+  .splash-zoom-copy {
+    font-size: var(--size-xs);
+  }
+
+  .splash-zoom-skip {
+    right: var(--space-3);
+    top: var(--space-3);
+  }
 }
 
 /* --- Footer --- */

@@ -21,32 +21,22 @@ import contentFormatsData from '@data/content_formats/content_formats.json';
 // Full source frame dimensions (10803 x 7555, ~1.43:1).
 const FULL_IMAGE_WIDTH = 10803;
 const FULL_IMAGE_HEIGHT = 7555;
+// Original TIFF: 10803x7951. Clean frame: x=0, y=198,
+// width=10803, height=7555. This is the nearest integer crop to 1.43:1;
+// presentation geometry below uses the canonical data ratio.
 const FULL_CENTER = { x: FULL_IMAGE_WIDTH / 2, y: FULL_IMAGE_HEIGHT / 2 };
 
-// Zoomed-in starting frame (progress 0): a 2600-image-px-wide rect centered
-// on the eye detail, filling the stage edge-to-edge — tight enough that
-// film grain is unmistakable.
-const START_CENTER = { x: 5500, y: 2800 };
-const START_WIDTH = 2600;
-
-const PROGRESS_EPSILON = 0.0005;
-
-// Phase boundaries (progress 0..1) driving the whole animation. See
-// applyProgress for what happens in each span.
-const PHASE_ZOOM_END = 0.4; // zoom-out (eye grain -> full frame) completes
-const PHASE_SCOPE_END = 0.52; // bars fade in + hold at the 2.39:1 crop
-const PHASE_DIGITAL_END = 0.68; // bars ease to the 1.90:1 crop
-const PHASE_IMAX_END = 0.86; // bars ease to 0 -> full 1.43:1 frame revealed
-const PHASE_END_OVERLAY_SPAN = 0.1; // 0.86 -> 0.96: reference lines fade in
-
-const CAPTION_TIER_1_AT = 0.3;
-const CAPTION_TIER_2_AT = 0.55;
-
-const CAPTIONS = [
-  'This is a single frame of 15/70 IMAX film.',
-  "Scanned at 8K. You're looking at real film grain.",
-  "Most 'IMAX' screens crop it. Here's how much.",
-] as const;
+// Zoomed-in starting frame (progress 0): a rect centered on the midpoint
+// between both eyes in the eye-detail crop, filling the stage edge-to-edge —
+// tight enough that film grain is unmistakable, wide enough that neither eye
+// falls outside the visible slice. (The eye-detail crop's source rect is
+// x=3300 y=1250 w=4400 h=3300 of the full frame; the subject's near eye sits
+// around x=5840 and the far, shadowed eye around x=3760 within that crop —
+// midpoint ~4800, eye line ~y=2700.)
+const START_CENTER = { x: 4800, y: 2700 };
+// Wide enough to hold both eyes while the narrow aperture crops vertically.
+// Detail remains sourced from the dedicated 4400px TIFF derivative.
+const START_WIDTH = 4600;
 
 const STATIC_CAPTION =
   "A single frame of 15/70 IMAX film, scanned at 8K — and how much of it standard formats crop away.";
@@ -68,6 +58,7 @@ const FULL_JPG_2400 = '/assets/splash/liemax-frame-full-2400.jpg';
 const EYE_AVIF_1600 = '/assets/splash/liemax-eye-1600.avif';
 const EYE_AVIF_2400 = '/assets/splash/liemax-eye-2400.avif';
 const EYE_AVIF_3400 = '/assets/splash/liemax-eye-3400.avif';
+const EYE_AVIF_4400 = '/assets/splash/liemax-eye-4400.avif';
 const EYE_JPG_2400 = '/assets/splash/liemax-eye-2400.jpg';
 
 // 1600px-wide render for the static/reduced-motion mode — the 400px blur
@@ -95,6 +86,25 @@ function aspectRatioFor(id: string, fallback: number): number {
 
 const AR_190 = aspectRatioFor('imax_digital_190', 1.9);
 const AR_239 = aspectRatioFor('scope_239', 2.39);
+
+// Approved 900svh checkpoint timeline. Holds are deliberately longer than
+// the smootherstep transitions; scroll remains entirely native.
+const PHASE_OPENING_END = 0.12;
+const PHASE_SCOPE_TRANSITION_END = 0.24;
+const PHASE_SCOPE_HOLD_END = 0.38;
+const PHASE_DIGITAL_TRANSITION_END = 0.5;
+const PHASE_DIGITAL_HOLD_END = 0.64;
+const PHASE_IMAX_TRANSITION_END = 0.76;
+const PHASE_IMAX_HOLD_END = 0.9;
+const PHASE_COMPARISON_END = 1;
+const CHECKPOINT_ANCHORS = {
+  opening: 0.04,
+  scope: 0.27,
+  digital: 0.53,
+  imax: 0.79,
+  comparison: 0.93,
+} as const;
+const PROGRESS_EPSILON = 0.0005;
 
 interface BandRect {
   x: number;
@@ -152,15 +162,9 @@ function lerp(a: number, b: number, t: number): number {
   return a + (b - a) * t;
 }
 
-function smoothstep(edge0: number, edge1: number, x: number): number {
+function smootherstep(edge0: number, edge1: number, x: number): number {
   const t = clamp((x - edge0) / (edge1 - edge0), 0, 1);
-  return t * t * (3 - 2 * t);
-}
-
-function captionTierFor(progress: number): 0 | 1 | 2 {
-  if (progress < CAPTION_TIER_1_AT) return 0;
-  if (progress < CAPTION_TIER_2_AT) return 1;
-  return 2;
+  return t ** 3 * (t * (t * 6 - 15) + 10);
 }
 
 function computeProgress(trackEl: HTMLElement | null): number {
@@ -209,12 +213,56 @@ const ACTIVE_LABEL_TEXT: Record<LabelTone, string> = {
 };
 
 function activeLabelFor(progress: number): ActiveLabelState | null {
-  if (progress < PHASE_ZOOM_END) return null;
-  if (progress < PHASE_SCOPE_END) return { text: ACTIVE_LABEL_TEXT.scope239, tone: 'scope239' };
-  if (progress < PHASE_DIGITAL_END) return { text: ACTIVE_LABEL_TEXT.digital190, tone: 'digital190' };
-  if (progress < PHASE_IMAX_END) return { text: ACTIVE_LABEL_TEXT.full143, tone: 'full143' };
+  if (progress < PHASE_SCOPE_TRANSITION_END) return null;
+  if (progress < PHASE_DIGITAL_TRANSITION_END) return { text: ACTIVE_LABEL_TEXT.scope239, tone: 'scope239' };
+  if (progress < PHASE_IMAX_TRANSITION_END) return { text: ACTIVE_LABEL_TEXT.digital190, tone: 'digital190' };
+  if (progress < PHASE_IMAX_HOLD_END) return { text: ACTIVE_LABEL_TEXT.full143, tone: 'full143' };
   return null;
 }
+
+type Checkpoint = 'opening' | 'scope' | 'digital' | 'imax' | 'comparison';
+
+function checkpointFor(progress: number): Checkpoint {
+  if (progress < PHASE_SCOPE_TRANSITION_END) return 'opening';
+  if (progress < PHASE_DIGITAL_TRANSITION_END) return 'scope';
+  if (progress < PHASE_IMAX_TRANSITION_END) return 'digital';
+  if (progress < PHASE_IMAX_HOLD_END) return 'imax';
+  return 'comparison';
+}
+
+const CHECKPOINT_COPY: Record<
+  Checkpoint,
+  { eyebrow: string; title: string; body: string; next?: { label: string; anchor: number; announcement: string } }
+> = {
+  opening: {
+    eyebrow: 'One IMAX film frame',
+    title: 'The picture is taller than the screen you probably saw it on.',
+    body: 'This close, you can see the grain. Scroll to experience the full IMAX frame, or go straight to your theater.',
+  },
+  scope: {
+    eyebrow: 'Standard Scope · 2.39:1',
+    title: 'The widest common movie shape is also the shortest.',
+    body: 'At the same width, Scope shows the least of this frame.',
+    next: { label: 'Open to digital IMAX', anchor: CHECKPOINT_ANCHORS.digital, announcement: 'Moving to the digital IMAX checkpoint.' },
+  },
+  digital: {
+    eyebrow: 'Digital IMAX · 1.90:1',
+    title: 'That is 25.8% more image area than Scope.',
+    body: 'It is a real step up — but the frame is still capped before its full height.',
+    next: { label: 'Show the full IMAX frame', anchor: CHECKPOINT_ANCHORS.imax, announcement: 'Moving to the full-height IMAX checkpoint.' },
+  },
+  imax: {
+    eyebrow: 'True IMAX · 1.43:1',
+    title: 'Another 32.9% opens up from digital IMAX.',
+    body: 'That makes 67.1% more same-width image area than Scope: the frame the film was made to fill.',
+    next: { label: 'Compare every frame', anchor: CHECKPOINT_ANCHORS.comparison, announcement: 'Moving to the full frame comparison.' },
+  },
+  comparison: {
+    eyebrow: 'Same width. Different picture.',
+    title: 'The border lines make the missing height impossible to miss.',
+    body: 'Now find out which frame your local IMAX can actually show.',
+  },
+};
 
 // ---------------------------------------------------------------------
 // Ratio box (shared markup between scroll mode and static/fallback mode).
@@ -282,10 +330,12 @@ interface Layout {
 
 export default function SplashZoom() {
   const reducedMotion = usePrefersReducedMotion();
-  const [frameFailed, setFrameFailed] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false);
   const [thumbFailed, setThumbFailed] = useState(false);
-  const [visualReady, setVisualReady] = useState(false);
-  const [captionTier, setCaptionTier] = useState<0 | 1 | 2>(0);
+  const [frameLoaded, setFrameLoaded] = useState(false);
+  const [eyeLoaded, setEyeLoaded] = useState(false);
+  const [checkpoint, setCheckpoint] = useState<Checkpoint>('opening');
+  const [announcement, setAnnouncement] = useState('');
   const [activeLabel, setActiveLabel] = useState<ActiveLabelState | null>(null);
 
   const outerRef = useRef<HTMLElement | null>(null);
@@ -310,13 +360,14 @@ export default function SplashZoom() {
   const barPxRef = useRef(0);
   const activeLabelTextRef = useRef<string | null>(null);
 
-  const staticMode = reducedMotion || frameFailed;
+  const staticMode = reducedMotion || imageFailed;
+  const visualReady = frameLoaded && eyeLoaded;
 
   // Push the current scroll progress into the zoomer transform, the
   // letterbox bars, and the end-state overlay. Pure imperative DOM writes
   // via refs — never via JSX style props — so this can run every
   // scroll-driven animation frame without fighting React's reconciler on
-  // the next unrelated re-render (e.g. captionTier changing). Layout
+  // the next unrelated re-render (e.g. checkpoint copy changing). Layout
   // metrics (stage/frame-box size) are read from layoutRef, refreshed only
   // on resize — never re-measured here — to keep this cheap during active
   // scrolling.
@@ -324,12 +375,12 @@ export default function SplashZoom() {
     const { stageW, stageH, bw, bh } = layoutRef.current;
     if (bw <= 0 || bh <= 0 || stageW <= 0 || stageH <= 0) return;
 
-    // --- Zoom-out transform (0 -> PHASE_ZOOM_END): eye grain filling the
+    // --- Zoom-out transform (opening -> Scope): eye grain filling the
     // stage -> full frame filling the frame box. Log-space on scale,
     // linear on the image-space center point; the transform keeps that
     // center point pinned at the frame box's (== stage's, since the frame
     // box is centered in the stage) center for every t. ---
-    const t = clamp(progress / PHASE_ZOOM_END, 0, 1);
+    const t = smootherstep(PHASE_OPENING_END, PHASE_SCOPE_TRANSITION_END, progress);
     const s0 = stageW / (START_WIDTH * (bw / FULL_IMAGE_WIDTH));
     const scale = Math.exp(lerp(Math.log(s0), Math.log(1), t));
     const cx = lerp(START_CENTER.x, FULL_CENTER.x, t);
@@ -343,41 +394,58 @@ export default function SplashZoom() {
       zoomerRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
     }
 
-    // --- Letterbox bars (PHASE_ZOOM_END -> PHASE_IMAX_END): fade in
-    // shaped for the 2.39:1 scope crop, ease to the 1.90:1 digital IMAX
-    // crop, then ease to 0 (the full 1.43:1 frame). ---
+    // --- Letterbox bars: solid from the first painted opening eye slice,
+    // then interpolate through the approved Scope → 1.90 → 1.43 sequence.
+    // The opening aperture is intentionally narrower than Scope, but clamped
+    // to retain readable vertical space on short screens. ---
     const h239 = barHeightFor(AR_239, bw, bh);
     const h190 = barHeightFor(AR_190, bw, bh);
+    // The opening is intentionally a slice, not another conventional ratio.
+    // Clamp the aperture itself so desktop stays dramatic while a short/mobile
+    // viewport still shows both eyes and leaves room for the HTML copy.
+    const openingAperture = clamp(bh * 0.24, 96, 180);
+    const openingBarHeight = Math.max(0, (bh - openingAperture) / 2);
     let barHeightPx: number;
-    if (progress < PHASE_SCOPE_END) {
+    if (progress < PHASE_OPENING_END) {
+      barHeightPx = openingBarHeight;
+    } else if (progress < PHASE_SCOPE_TRANSITION_END) {
+      barHeightPx = lerp(
+        openingBarHeight,
+        h239,
+        smootherstep(PHASE_OPENING_END, PHASE_SCOPE_TRANSITION_END, progress),
+      );
+    } else if (progress < PHASE_SCOPE_HOLD_END) {
       barHeightPx = h239;
-    } else if (progress < PHASE_DIGITAL_END) {
-      barHeightPx = lerp(h239, h190, smoothstep(PHASE_SCOPE_END, PHASE_DIGITAL_END, progress));
-    } else if (progress < PHASE_IMAX_END) {
-      barHeightPx = lerp(h190, 0, smoothstep(PHASE_DIGITAL_END, PHASE_IMAX_END, progress));
+    } else if (progress < PHASE_DIGITAL_TRANSITION_END) {
+      barHeightPx = lerp(
+        h239,
+        h190,
+        smootherstep(PHASE_SCOPE_HOLD_END, PHASE_DIGITAL_TRANSITION_END, progress),
+      );
+    } else if (progress < PHASE_DIGITAL_HOLD_END) {
+      barHeightPx = h190;
+    } else if (progress < PHASE_IMAX_TRANSITION_END) {
+      barHeightPx = lerp(
+        h190,
+        0,
+        smootherstep(PHASE_DIGITAL_HOLD_END, PHASE_IMAX_TRANSITION_END, progress),
+      );
     } else {
       barHeightPx = 0;
     }
-    // Bars must be SOLID black well before the scope hold ends — fading
-    // across the whole hold would mean the "scope moment" never actually
-    // shows black letterboxing. Complete the fade in the first ~third.
-    const barOpacity = smoothstep(PHASE_ZOOM_END, PHASE_ZOOM_END + 0.04, progress);
     barPxRef.current = barHeightPx;
     if (barTopRef.current) {
       barTopRef.current.style.height = `${barHeightPx}px`;
-      barTopRef.current.style.opacity = String(barOpacity);
+      barTopRef.current.style.opacity = '1';
     }
     if (barBottomRef.current) {
       barBottomRef.current.style.height = `${barHeightPx}px`;
-      barBottomRef.current.style.opacity = String(barOpacity);
+      barBottomRef.current.style.opacity = '1';
     }
 
-    // The blurred-thumb backdrop exists for first paint and the zoom-out;
-    // once the frame settles, dissolve it so the pillarboxing around the
-    // frame box is true black (artificial pillarboxing, not blur).
-    if (bgRef.current) {
-      bgRef.current.style.opacity = String(1 - smoothstep(PHASE_ZOOM_END - 0.05, PHASE_ZOOM_END, progress));
-    }
+    // The stage itself is true black. The placeholder remains hidden so
+    // pillarboxing never reads as a blurred extension of the frame.
+    if (bgRef.current) bgRef.current.style.opacity = '0';
 
     // Active label tracks the top bar's inner edge.
     if (activeLabelRef.current) {
@@ -387,9 +455,9 @@ export default function SplashZoom() {
     // --- End-state reference overlay (thin outline + the three labeled
     // reference lines) + attribution: fade in together over the final
     // stretch once the bars have fully opened. ---
-    const endOverlayOpacity = smoothstep(
-      PHASE_IMAX_END,
-      PHASE_IMAX_END + PHASE_END_OVERLAY_SPAN,
+    const endOverlayOpacity = smootherstep(
+      PHASE_IMAX_HOLD_END,
+      PHASE_COMPARISON_END,
       progress,
     );
     if (box190Ref.current) box190Ref.current.style.opacity = String(endOverlayOpacity);
@@ -451,7 +519,8 @@ export default function SplashZoom() {
       const progress = computeProgress(trackRef.current);
       if (Math.abs(progress - progressRef.current) < PROGRESS_EPSILON) return;
       progressRef.current = progress;
-      setCaptionTier(captionTierFor(progress));
+      const nextCheckpoint = checkpointFor(progress);
+      setCheckpoint((previous) => (previous === nextCheckpoint ? previous : nextCheckpoint));
       const label = activeLabelFor(progress);
       activeLabelTextRef.current = label?.text ?? null;
       setActiveLabel((prev) => (prev?.tone === label?.tone ? prev : label));
@@ -506,17 +575,38 @@ export default function SplashZoom() {
     };
   }, []);
 
+  const scrollBehavior = useCallback(
+    () => (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'),
+    [],
+  );
+
+  const jumpToProgress = useCallback((anchor: number, message: string) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const rect = track.getBoundingClientRect();
+    const target = window.scrollY + rect.top + anchor * (rect.height - window.innerHeight);
+    setAnnouncement(message);
+    window.scrollTo({ top: target, behavior: scrollBehavior() });
+  }, [scrollBehavior]);
+
+  const jumpToDiagnosis = useCallback(() => {
+    const target = document.getElementById('diagnose-my-imax');
+    if (!target) return;
+    setAnnouncement('Moving to theater diagnosis.');
+    target.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+  }, [scrollBehavior]);
+
   const handleSkip = useCallback(() => {
-    const el = outerRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const target = window.scrollY + rect.bottom;
+    const target = document.getElementById('diagnose-my-imax');
+    if (!target) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: target, behavior: reduce ? 'auto' : 'smooth' });
+    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   }, []);
 
-  const handleFullFrameLoad = useCallback(() => setVisualReady(true), []);
-  const handleFullFrameError = useCallback(() => setFrameFailed(true), []);
+  const handleFullFrameLoad = useCallback(() => setFrameLoaded(true), []);
+  const handleFullFrameError = useCallback(() => setImageFailed(true), []);
+  const handleEyeLoad = useCallback(() => setEyeLoaded(true), []);
+  const handleEyeError = useCallback(() => setImageFailed(true), []);
 
   const visualAriaLabel = useMemo(
     () =>
@@ -525,6 +615,7 @@ export default function SplashZoom() {
       'much of the image standard 2.39:1 scope and 1.90:1 digital IMAX screens crop away.',
     [],
   );
+  const checkpointCopy = CHECKPOINT_COPY[checkpoint];
 
   // -----------------------------------------------------------------
   // Static / fallback render (prefers-reduced-motion OR the full-frame
@@ -540,7 +631,7 @@ export default function SplashZoom() {
       >
         <div className="splash-zoom-stage splash-zoom-stage--static">
           <button type="button" className="splash-zoom-skip" onClick={handleSkip}>
-            Skip intro
+            Diagnose my IMAX
           </button>
 
           <div
@@ -591,10 +682,22 @@ export default function SplashZoom() {
           </div>
 
           <div className="splash-zoom-corner">
-            <p className="splash-zoom-caption-line">{STATIC_CAPTION}</p>
+            {/* Reduced-motion/fallback branch has no scroll-driven checkpoint
+                h1 (see the h1 below in the scroll-driven render) — this is
+                the page's only top-level heading in that case, so it must
+                be an h1 to keep the heading hierarchy unbroken (h1 -> h2 on
+                <Splash/>'s headline). See .ai/COMPLIANCE.md. */}
+            <h1 className="splash-zoom-caption-line">{STATIC_CAPTION}</h1>
+            <p className="splash-zoom-static-copy">
+              At the same width, 1.90:1 reveals 25.8% more image area than 2.39:1 Scope. Full-height
+              1.43:1 reveals another 32.9% — 67.1% more than Scope.
+            </p>
             <p ref={attributionRef} className="splash-zoom-attribution">
               {ATTRIBUTION_TEXT}
             </p>
+            <button type="button" className="splash-zoom-cta" onClick={jumpToDiagnosis}>
+              Diagnose my IMAX
+            </button>
           </div>
         </div>
       </section>
@@ -612,10 +715,6 @@ export default function SplashZoom() {
     >
       <div ref={trackRef} className="splash-zoom-track">
         <div ref={stageRef} className="splash-zoom-stage">
-          <button type="button" className="splash-zoom-skip" onClick={handleSkip}>
-            Skip intro
-          </button>
-
           <div ref={bgRef} className="splash-zoom-bg" aria-hidden="true" />
 
           <div
@@ -645,8 +744,8 @@ export default function SplashZoom() {
                 <picture className="splash-zoom-eye">
                   <source
                     type="image/avif"
-                    srcSet={`${EYE_AVIF_1600} 1600w, ${EYE_AVIF_2400} 2400w, ${EYE_AVIF_3400} 3400w`}
-                    sizes="41vw"
+                    srcSet={`${EYE_AVIF_1600} 1600w, ${EYE_AVIF_2400} 2400w, ${EYE_AVIF_3400} 3400w, ${EYE_AVIF_4400} 4400w`}
+                    sizes="175vw"
                   />
                   <img
                     src={EYE_JPG_2400}
@@ -656,6 +755,8 @@ export default function SplashZoom() {
                     fetchPriority="high"
                     loading="eager"
                     decoding="async"
+                    onLoad={handleEyeLoad}
+                    onError={handleEyeError}
                   />
                 </picture>
               </div>
@@ -690,16 +791,47 @@ export default function SplashZoom() {
             </div>
           </div>
 
-          <div className="splash-zoom-corner">
-            <p key={captionTier} className="splash-zoom-caption-line">
-              {CAPTIONS[captionTier]}
-            </p>
-            <p ref={attributionRef} className="splash-zoom-attribution">
-              {ATTRIBUTION_TEXT}
-            </p>
+          <section className={`splash-zoom-checkpoint splash-zoom-checkpoint--${checkpoint}`} aria-labelledby="splash-zoom-title">
+            <p className="splash-zoom-eyebrow">{checkpointCopy.eyebrow}</p>
+            <h1 id="splash-zoom-title" className="splash-zoom-title">
+              {checkpointCopy.title}
+            </h1>
+            <p className="splash-zoom-copy">{checkpointCopy.body}</p>
+            <div className="splash-zoom-actions">
+              {checkpoint === 'opening' ? (
+                <>
+                  <button
+                    type="button"
+                    className="splash-zoom-cta"
+                    onClick={() => jumpToProgress(CHECKPOINT_ANCHORS.scope, 'Moving to the Scope checkpoint.')}
+                  >
+                    Show me the full frame
+                  </button>
+                  <button type="button" className="splash-zoom-text-cta" onClick={jumpToDiagnosis}>
+                    Diagnose my IMAX
+                  </button>
+                </>
+              ) : checkpointCopy.next ? (
+                <button
+                  type="button"
+                  className="splash-zoom-cta"
+                  onClick={() => jumpToProgress(checkpointCopy.next!.anchor, checkpointCopy.next!.announcement)}
+                >
+                  {checkpointCopy.next.label}
+                </button>
+              ) : (
+                <button type="button" className="splash-zoom-cta" onClick={jumpToDiagnosis}>
+                  Diagnose my IMAX
+                </button>
+              )}
+            </div>
+            <p className="splash-zoom-attribution">{ATTRIBUTION_TEXT}</p>
+          </section>
+          <p className="splash-zoom-status" role="status" aria-live="polite" aria-atomic="true">
+            {announcement}
+          </p>
           </div>
         </div>
-      </div>
     </section>
   );
 }

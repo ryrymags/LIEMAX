@@ -60,8 +60,8 @@ export default function Splash({ onSelect }: SplashProps) {
   }
 
   return (
-    <section className="splash" aria-label="Introduction">
-      <h1 className="splash-headline">You're probably not getting real IMAX.</h1>
+    <section id="diagnose-my-imax" className="splash" aria-label="Theater diagnosis search" tabIndex={-1}>
+      <h2 className="splash-headline">You're probably not getting real IMAX.</h2>
 
       <ul className="stat-strip">
         <li className="stat">

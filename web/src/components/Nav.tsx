@@ -29,6 +29,9 @@ export default function Nav({ onReset }: NavProps) {
               <a href="#deep-dive">Deep Dive</a>
             </li>
           </ul>
+          <a className="nav-diagnosis" href="#diagnose-my-imax">
+            Diagnose my IMAX
+          </a>
         </nav>
       </header>
     </>
