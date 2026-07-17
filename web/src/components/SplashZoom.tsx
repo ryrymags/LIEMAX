@@ -1,49 +1,51 @@
-// Scroll-driven "deep zoom" cinematic intro. Renders above <Splash/> inside
-// <main>. Zooms out from film grain to the full 1.43:1 IMAX frame over an
-// 8K-scanned DZI tile pyramid (OpenSeadragon), then reveals aspect-ratio
-// comparison overlays (1.90 digital IMAX, 2.39 scope, 1.43 true IMAX) —
+// Scroll-driven cinematic intro. Renders above <Splash/> inside <main>.
+// A single high-res still (plus a higher-detail "eye" crop stacked on top of
+// it) is zoomed via a CSS transform on one element — no tile pyramid, no
+// image-loading viewer library. Zooms out from film grain to the full
+// 1.43:1 IMAX frame, then reveals animated black letterboxing that closes
+// down from 2.39:1 scope -> 1.90:1 digital IMAX -> the full 1.43:1 frame —
 // the visual argument the rest of the site makes in numbers.
 //
-// Imagery (web/public/assets/splash/*) is gitignored — licensing not
-// cleared for redistribution (see web/public/assets/splash/README.md). This
-// component must degrade gracefully when it is absent: missing tiles fall
-// back to a static thumbnail; a missing thumbnail falls back to a plain
-// outlined placeholder. See the fallback branch below.
+// Imagery (web/public/assets/splash/*) is committed under the fair-use
+// posture documented in THIRD_PARTY_NOTICES.md and the folder README. The
+// component must still degrade gracefully if it is absent: a failed
+// full-frame image load falls back to a static still; a failed static still
+// falls back to a plain outlined placeholder. See the fallback branch below.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import OpenSeadragon from 'openseadragon';
 import contentFormatsData from '@data/content_formats/content_formats.json';
 
 // ---------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------
 
-// Full DZI source dimensions (10803 x 7555, ~1.43:1).
+// Full source frame dimensions (10803 x 7555, ~1.43:1).
 const FULL_IMAGE_WIDTH = 10803;
 const FULL_IMAGE_HEIGHT = 7555;
+const FULL_CENTER = { x: FULL_IMAGE_WIDTH / 2, y: FULL_IMAGE_HEIGHT / 2 };
 
-// Zoomed-in starting frame (progress 0): centered on the eye detail, tight
-// enough that film grain is unmistakable. Height is derived at runtime from
-// the viewer's own aspect ratio so there's no letterbox at the tightest
-// zoom (see applyProgress).
+// Zoomed-in starting frame (progress 0): a 2600-image-px-wide rect centered
+// on the eye detail, filling the stage edge-to-edge — tight enough that
+// film grain is unmistakable.
 const START_CENTER = { x: 5500, y: 2800 };
 const START_WIDTH = 2600;
 
-const OPEN_TIMEOUT_MS = 6000;
 const PROGRESS_EPSILON = 0.0005;
 
-// Overlay fade-in thresholds (progress) and span, per spec.
-const OVERLAY_FADE_SPAN = 0.1;
-const OVERLAY_190_START = 0.62;
-const OVERLAY_239_START = 0.74;
-const OVERLAY_143_START = 0.86;
+// Phase boundaries (progress 0..1) driving the whole animation. See
+// applyProgress for what happens in each span.
+const PHASE_ZOOM_END = 0.4; // zoom-out (eye grain -> full frame) completes
+const PHASE_SCOPE_END = 0.52; // bars fade in + hold at the 2.39:1 crop
+const PHASE_DIGITAL_END = 0.68; // bars ease to the 1.90:1 crop
+const PHASE_IMAX_END = 0.86; // bars ease to 0 -> full 1.43:1 frame revealed
+const PHASE_END_OVERLAY_SPAN = 0.1; // 0.86 -> 0.96: reference lines fade in
 
 const CAPTION_TIER_1_AT = 0.3;
-const CAPTION_TIER_2_AT = 0.62;
+const CAPTION_TIER_2_AT = 0.55;
 
 const CAPTIONS = [
   'This is a single frame of 15/70 IMAX film.',
   "Scanned at 8K. You're looking at real film grain.",
-  "Most ‘IMAX’ screens crop it. Here’s how much.",
+  "Most 'IMAX' screens crop it. Here's how much.",
 ] as const;
 
 const STATIC_CAPTION =
@@ -52,20 +54,25 @@ const STATIC_CAPTION =
 const ATTRIBUTION_TEXT =
   'Frame: Oppenheimer (2023) 70mm IMAX scan — shown for format comparison.';
 
-// 1x2px AVIF probe image (generated with vips from this repo's own asset
-// pipeline — `vips black probe.v 1 2 && vips copy probe.v probe.avif`).
-// Decodes only in browsers with real AVIF support; fails silently
-// (onerror) everywhere else, which is a safe failure mode — we just fall
-// back to the WebP DZI.
-const AVIF_PROBE_SRC =
-  'data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAG1pZjFhdmlmbWlhZgAAARdtZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAANGlsb2MAAAAAREAAAgABAAAAAAE7AAEAAAAAAAAAGgACAAAAAAFVAAEAAAAAAAAAvgAAADhpaW5mAAAAAAACAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAFWluZmUCAAABAAIAAEV4aWYAAAAAVmlwcnAAAAA4aXBjbwAAAAxhdjFDgQAMAAAAABRpc3BlAAAAAAAAAAEAAAACAAAAEHBpeGkAAAAAAwgICAAAABZpcG1hAAAAAAAAAAEAAQOBAgMAAAAaaXJlZgAAAAAAAAAOY2RzYwACAAEAAQAAAOBtZGF0EgAKCBgAFggIaDQgMgwYAAooooQAALATS9gAAAAGRXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAAA4YwAA6AMAADhjAADoAwAABgAAkAcABAAAADAyMTABkQcABAAAAAECAwAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAQAAQAAAAEAAAADoAQAAQAAAAIAAAAAAAAA';
+// Full-frame still, stacked under the eye-detail crop inside the zoomer.
+const FULL_AVIF_1600 = '/assets/splash/liemax-frame-full-1600.avif';
+const FULL_AVIF_2400 = '/assets/splash/liemax-frame-full-2400.avif';
+const FULL_AVIF_3600 = '/assets/splash/liemax-frame-full-3600.avif';
+const FULL_JPG_2400 = '/assets/splash/liemax-frame-full-2400.jpg';
 
-const AVIF_DZI_URL = '/assets/splash/liemax-frame-avif.dzi';
-const WEBP_DZI_URL = '/assets/splash/liemax-frame-webp.dzi';
-const THUMB_AVIF_URL = '/assets/splash/liemax-frame-thumb.avif';
-const THUMB_JPG_URL = '/assets/splash/liemax-frame-thumb.jpg';
+// Higher-resolution crop of just the eye region (source rect x=3300 y=1250
+// w=4400 h=3300 of the full frame) — overlays its region of the full frame
+// with sharper pixels so the zoomed-in start is crisp. Both images move
+// under the SAME transform (see .splash-zoom-zoomer), so there is never a
+// visible handoff between them.
+const EYE_AVIF_1600 = '/assets/splash/liemax-eye-1600.avif';
+const EYE_AVIF_2400 = '/assets/splash/liemax-eye-2400.avif';
+const EYE_AVIF_3400 = '/assets/splash/liemax-eye-3400.avif';
+const EYE_JPG_2400 = '/assets/splash/liemax-eye-2400.jpg';
+
 // 1600px-wide render for the static/reduced-motion mode — the 400px blur
-// thumbnail is too soft to serve as a full-screen still.
+// thumbnail (used only as a CSS background, see components.css) is too
+// soft to serve as a full-screen still.
 const STATIC_AVIF_URL = '/assets/splash/liemax-frame-static.avif';
 const STATIC_JPG_URL = '/assets/splash/liemax-frame-static.jpg';
 
@@ -104,7 +111,7 @@ function centeredBand(ar: number): BandRect {
 // The 1.43 box IS the full frame (not derived from an AR lookup — the spec
 // is explicit that this box is the frame itself, and deriving it from
 // content_formats' imax_143 aspect ratio would introduce rounding drift
-// against the DZI's actual pixel dimensions).
+// against the source still's actual pixel dimensions).
 const BAND_143: BandRect = { x: 0, y: 0, w: FULL_IMAGE_WIDTH, h: FULL_IMAGE_HEIGHT };
 const BAND_190: BandRect = centeredBand(AR_190);
 const BAND_239: BandRect = centeredBand(AR_239);
@@ -164,15 +171,6 @@ function computeProgress(trackEl: HTMLElement | null): number {
   return clamp(-rect.top / scrollableHeight, 0, 1);
 }
 
-function detectAvifSupport(): Promise<boolean> {
-  return new Promise((resolve) => {
-    const probe = new Image();
-    probe.onload = () => resolve(probe.height === 2);
-    probe.onerror = () => resolve(false);
-    probe.src = AVIF_PROBE_SRC;
-  });
-}
-
 function usePrefersReducedMotion(): boolean {
   const [reduced, setReduced] = useState(
     () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -184,6 +182,38 @@ function usePrefersReducedMotion(): boolean {
     return () => mql.removeEventListener('change', onChange);
   }, []);
   return reduced;
+}
+
+function barHeightFor(ar: number, boxWidth: number, boxHeight: number): number {
+  return Math.max(0, (boxHeight - boxWidth / ar) / 2);
+}
+
+// ---------------------------------------------------------------------
+// Active label (HTML, not SVG) shown just below the top bar's inner edge —
+// swaps text/color per crop phase. Tone names match the ratio-box tones
+// below so the two systems (animated bars vs. end-state reference lines)
+// read as the same color language.
+// ---------------------------------------------------------------------
+
+type LabelTone = 'scope239' | 'digital190' | 'full143';
+
+interface ActiveLabelState {
+  text: string;
+  tone: LabelTone;
+}
+
+const ACTIVE_LABEL_TEXT: Record<LabelTone, string> = {
+  scope239: 'Standard Scope — 2.39:1',
+  digital190: 'IMAX Digital — 1.90:1',
+  full143: 'True IMAX — 1.43:1',
+};
+
+function activeLabelFor(progress: number): ActiveLabelState | null {
+  if (progress < PHASE_ZOOM_END) return null;
+  if (progress < PHASE_SCOPE_END) return { text: ACTIVE_LABEL_TEXT.scope239, tone: 'scope239' };
+  if (progress < PHASE_DIGITAL_END) return { text: ACTIVE_LABEL_TEXT.digital190, tone: 'digital190' };
+  if (progress < PHASE_IMAX_END) return { text: ACTIVE_LABEL_TEXT.full143, tone: 'full143' };
+  return null;
 }
 
 // ---------------------------------------------------------------------
@@ -243,198 +273,175 @@ function RatioBoxes({
 // Component
 // ---------------------------------------------------------------------
 
+interface Layout {
+  stageW: number;
+  stageH: number;
+  bw: number;
+  bh: number;
+}
+
 export default function SplashZoom() {
   const reducedMotion = usePrefersReducedMotion();
-  const [avifSupported, setAvifSupported] = useState<boolean | null>(null);
-  const [osdFailed, setOsdFailed] = useState(false);
+  const [frameFailed, setFrameFailed] = useState(false);
   const [thumbFailed, setThumbFailed] = useState(false);
+  const [visualReady, setVisualReady] = useState(false);
   const [captionTier, setCaptionTier] = useState<0 | 1 | 2>(0);
+  const [activeLabel, setActiveLabel] = useState<ActiveLabelState | null>(null);
 
   const outerRef = useRef<HTMLElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const osdContainerRef = useRef<HTMLDivElement | null>(null);
-  const visualRef = useRef<HTMLDivElement | null>(null);
-  const overlayGroupRef = useRef<SVGGElement | null>(null);
+  const stageRef = useRef<HTMLDivElement | null>(null);
+  const bgRef = useRef<HTMLDivElement | null>(null);
+  const frameBoxRef = useRef<HTMLDivElement | null>(null);
+  const zoomerRef = useRef<HTMLDivElement | null>(null);
+  const barTopRef = useRef<HTMLDivElement | null>(null);
+  const barBottomRef = useRef<HTMLDivElement | null>(null);
+  const activeLabelRef = useRef<HTMLDivElement | null>(null);
+  const overlaySvgRef = useRef<SVGSVGElement | null>(null);
   const box190Ref = useRef<SVGGElement | null>(null);
   const box239Ref = useRef<SVGGElement | null>(null);
   const box143Ref = useRef<SVGGElement | null>(null);
   const attributionRef = useRef<HTMLParagraphElement | null>(null);
   const staticSvgRef = useRef<SVGSVGElement | null>(null);
 
-  const viewerRef = useRef<OpenSeadragon.Viewer | null>(null);
-  const openedRef = useRef(false);
   const progressRef = useRef(0);
+  const layoutRef = useRef<Layout>({ stageW: 0, stageH: 0, bw: 0, bh: 0 });
+  const scaleRef = useRef(1);
+  const barPxRef = useRef(0);
+  const activeLabelTextRef = useRef<string | null>(null);
 
-  const staticMode = reducedMotion || osdFailed;
+  const staticMode = reducedMotion || frameFailed;
 
-  // Detect AVIF decode support once (needed to pick the .dzi URL — the
-  // static <picture> fallback below negotiates format natively via
-  // <source type>, no JS needed there).
-  useEffect(() => {
-    let cancelled = false;
-    detectAvifSupport().then((supported) => {
-      if (!cancelled) setAvifSupported(supported);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Push the current scroll progress into OpenSeadragon + the overlay SVG.
-  // Pure imperative DOM writes via refs — never via JSX style props — so
-  // this can run every scroll-driven animation frame without fighting
-  // React's reconciler on the next unrelated re-render (e.g. captionTier
-  // changing).
+  // Push the current scroll progress into the zoomer transform, the
+  // letterbox bars, and the end-state overlay. Pure imperative DOM writes
+  // via refs — never via JSX style props — so this can run every
+  // scroll-driven animation frame without fighting React's reconciler on
+  // the next unrelated re-render (e.g. captionTier changing). Layout
+  // metrics (stage/frame-box size) are read from layoutRef, refreshed only
+  // on resize — never re-measured here — to keep this cheap during active
+  // scrolling.
   const applyProgress = useCallback((progress: number) => {
-    const viewer = viewerRef.current;
-    if (!viewer || !openedRef.current) return;
-    const vp = viewer.viewport;
+    const { stageW, stageH, bw, bh } = layoutRef.current;
+    if (bw <= 0 || bh <= 0 || stageW <= 0 || stageH <= 0) return;
 
-    const containerSize = vp.getContainerSize();
-    const containerAspect = containerSize.x / containerSize.y || FULL_IMAGE_WIDTH / FULL_IMAGE_HEIGHT;
-    const startHeight = START_WIDTH / containerAspect;
-    const startImageRect = new OpenSeadragon.Rect(
-      START_CENTER.x - START_WIDTH / 2,
-      START_CENTER.y - startHeight / 2,
-      START_WIDTH,
-      startHeight,
-    );
-    const endImageRect = new OpenSeadragon.Rect(0, 0, FULL_IMAGE_WIDTH, FULL_IMAGE_HEIGHT);
-
-    const startVP = vp.imageToViewportRectangle(startImageRect);
-    const endVP = vp.imageToViewportRectangle(endImageRect);
-
-    const width = Math.exp(lerp(Math.log(startVP.width), Math.log(endVP.width), progress));
-    const height = Math.exp(lerp(Math.log(startVP.height), Math.log(endVP.height), progress));
-    const startCenter = startVP.getCenter();
-    const endCenter = endVP.getCenter();
-    const cx = lerp(startCenter.x, endCenter.x, progress);
-    const cy = lerp(startCenter.y, endCenter.y, progress);
-    vp.fitBounds(new OpenSeadragon.Rect(cx - width / 2, cy - height / 2, width, height), true);
-
-    // Map the overlay's image-pixel-space contents onto wherever the full
-    // frame currently sits on screen. The transform goes on an inner <g>
-    // of a viewport-sized SVG — NOT on a full-image-sized SVG element —
-    // because a 10803px-wide element (especially with will-change) forces
-    // the compositor to rasterize a multi-hundred-MB layer, which blacks
-    // out and hangs the renderer.
-    const fullImageVP = vp.imageToViewportRectangle(endImageRect);
-    const elementRect = vp.viewportToViewerElementRectangle(fullImageVP);
-    if (overlayGroupRef.current) {
-      const scale = elementRect.width / FULL_IMAGE_WIDTH;
-      overlayGroupRef.current.setAttribute(
-        'transform',
-        `translate(${elementRect.x} ${elementRect.y}) ` +
-          `scale(${scale} ${elementRect.height / FULL_IMAGE_HEIGHT})`,
-      );
-      applyLabelSizing(overlayGroupRef.current, scale);
+    // --- Zoom-out transform (0 -> PHASE_ZOOM_END): eye grain filling the
+    // stage -> full frame filling the frame box. Log-space on scale,
+    // linear on the image-space center point; the transform keeps that
+    // center point pinned at the frame box's (== stage's, since the frame
+    // box is centered in the stage) center for every t. ---
+    const t = clamp(progress / PHASE_ZOOM_END, 0, 1);
+    const s0 = stageW / (START_WIDTH * (bw / FULL_IMAGE_WIDTH));
+    const scale = Math.exp(lerp(Math.log(s0), Math.log(1), t));
+    const cx = lerp(START_CENTER.x, FULL_CENTER.x, t);
+    const cy = lerp(START_CENTER.y, FULL_CENTER.y, t);
+    const localX = cx * (bw / FULL_IMAGE_WIDTH);
+    const localY = cy * (bh / FULL_IMAGE_HEIGHT);
+    const tx = bw / 2 - scale * localX;
+    const ty = bh / 2 - scale * localY;
+    scaleRef.current = scale;
+    if (zoomerRef.current) {
+      zoomerRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
     }
 
-    const op190 = smoothstep(OVERLAY_190_START, OVERLAY_190_START + OVERLAY_FADE_SPAN, progress);
-    const op239 = smoothstep(OVERLAY_239_START, OVERLAY_239_START + OVERLAY_FADE_SPAN, progress);
-    const op143 = smoothstep(OVERLAY_143_START, OVERLAY_143_START + OVERLAY_FADE_SPAN, progress);
-    if (box190Ref.current) box190Ref.current.style.opacity = String(op190);
-    if (box239Ref.current) box239Ref.current.style.opacity = String(op239);
-    if (box143Ref.current) box143Ref.current.style.opacity = String(op143);
-    if (attributionRef.current) attributionRef.current.style.opacity = String(op143);
+    // --- Letterbox bars (PHASE_ZOOM_END -> PHASE_IMAX_END): fade in
+    // shaped for the 2.39:1 scope crop, ease to the 1.90:1 digital IMAX
+    // crop, then ease to 0 (the full 1.43:1 frame). ---
+    const h239 = barHeightFor(AR_239, bw, bh);
+    const h190 = barHeightFor(AR_190, bw, bh);
+    let barHeightPx: number;
+    if (progress < PHASE_SCOPE_END) {
+      barHeightPx = h239;
+    } else if (progress < PHASE_DIGITAL_END) {
+      barHeightPx = lerp(h239, h190, smoothstep(PHASE_SCOPE_END, PHASE_DIGITAL_END, progress));
+    } else if (progress < PHASE_IMAX_END) {
+      barHeightPx = lerp(h190, 0, smoothstep(PHASE_DIGITAL_END, PHASE_IMAX_END, progress));
+    } else {
+      barHeightPx = 0;
+    }
+    // Bars must be SOLID black well before the scope hold ends — fading
+    // across the whole hold would mean the "scope moment" never actually
+    // shows black letterboxing. Complete the fade in the first ~third.
+    const barOpacity = smoothstep(PHASE_ZOOM_END, PHASE_ZOOM_END + 0.04, progress);
+    barPxRef.current = barHeightPx;
+    if (barTopRef.current) {
+      barTopRef.current.style.height = `${barHeightPx}px`;
+      barTopRef.current.style.opacity = String(barOpacity);
+    }
+    if (barBottomRef.current) {
+      barBottomRef.current.style.height = `${barHeightPx}px`;
+      barBottomRef.current.style.opacity = String(barOpacity);
+    }
+
+    // The blurred-thumb backdrop exists for first paint and the zoom-out;
+    // once the frame settles, dissolve it so the pillarboxing around the
+    // frame box is true black (artificial pillarboxing, not blur).
+    if (bgRef.current) {
+      bgRef.current.style.opacity = String(1 - smoothstep(PHASE_ZOOM_END - 0.05, PHASE_ZOOM_END, progress));
+    }
+
+    // Active label tracks the top bar's inner edge.
+    if (activeLabelRef.current) {
+      activeLabelRef.current.style.top = `${barHeightPx + 8}px`;
+    }
+
+    // --- End-state reference overlay (thin outline + the three labeled
+    // reference lines) + attribution: fade in together over the final
+    // stretch once the bars have fully opened. ---
+    const endOverlayOpacity = smoothstep(
+      PHASE_IMAX_END,
+      PHASE_IMAX_END + PHASE_END_OVERLAY_SPAN,
+      progress,
+    );
+    if (box190Ref.current) box190Ref.current.style.opacity = String(endOverlayOpacity);
+    if (box239Ref.current) box239Ref.current.style.opacity = String(endOverlayOpacity);
+    if (box143Ref.current) box143Ref.current.style.opacity = String(endOverlayOpacity);
+    if (attributionRef.current) attributionRef.current.style.opacity = String(endOverlayOpacity);
   }, []);
 
-  // Initialize OpenSeadragon (scroll mode only — static/fallback modes
-  // never touch it).
+  // Layout metrics: measured on mount + whenever the stage resizes. The
+  // frame box's contain-fit size is COMPUTED here and written as explicit
+  // pixels. CSS alone (width:100% + aspect-ratio + max-height:100%) cannot
+  // express contain-fit: when the max-height clamp engages (landscape
+  // viewports), aspect-ratio silently loses and the box stops being 1.43:1
+  // — which vertically crops the very frame the intro exists to reveal.
   useEffect(() => {
     if (staticMode) return undefined;
-    if (avifSupported === null) return undefined; // wait for feature detection
-    const container = osdContainerRef.current;
-    if (!container) return undefined;
+    const stage = stageRef.current;
+    const frameBox = frameBoxRef.current;
+    if (!stage || !frameBox) return undefined;
+    const ar = FULL_IMAGE_WIDTH / FULL_IMAGE_HEIGHT;
 
-    let cancelled = false;
-    const dziUrl = avifSupported ? AVIF_DZI_URL : WEBP_DZI_URL;
-
-    const viewer = OpenSeadragon({
-      element: container,
-      tileSources: dziUrl,
-      showNavigationControl: false,
-      mouseNavEnabled: false,
-      keyboardNavEnabled: false,
-      gestureSettingsMouse: {
-        scrollToZoom: false,
-        clickToZoom: false,
-        dblClickToZoom: false,
-        dragToPan: false,
-        pinchToZoom: false,
-        flickEnabled: false,
-      },
-      gestureSettingsTouch: {
-        scrollToZoom: false,
-        clickToZoom: false,
-        dblClickToZoom: false,
-        dragToPan: false,
-        pinchToZoom: false,
-        flickEnabled: false,
-      },
-      gestureSettingsPen: {
-        scrollToZoom: false,
-        clickToZoom: false,
-        dblClickToZoom: false,
-        dragToPan: false,
-        pinchToZoom: false,
-        flickEnabled: false,
-      },
-      // visibilityRatio must be 0: the end framing letterboxes the full
-      // 1.43:1 frame inside the (wider) viewport, and any nonzero ratio
-      // constrains that letterboxing away — vertically cropping the frame
-      // the whole intro exists to reveal.
-      visibilityRatio: 0,
-      constrainDuringPan: false,
-      // NOTE: never set animationTime to 0 — OpenSeadragon's spring easing
-      // divides elapsed time by it, and 0 yields NaN viewport math that
-      // paints the canvas black and busy-loops the render loop (hard page
-      // hang). We drive every viewport change with immediately=true instead,
-      // so the spring animation path is unused anyway.
-      animationTime: 0.1,
-      immediateRender: true,
-      crossOriginPolicy: false,
-    });
-    viewerRef.current = viewer;
-    if (import.meta.env.DEV) {
-      // E2E/debug hook only — never present in production builds.
-      (window as unknown as Record<string, unknown>).__liemaxViewer = viewer;
-    }
-
-    const timeoutId = window.setTimeout(() => {
-      if (!cancelled) setOsdFailed(true);
-    }, OPEN_TIMEOUT_MS);
-
-    function handleOpen() {
-      if (cancelled) return;
-      window.clearTimeout(timeoutId);
-      openedRef.current = true;
+    function measure() {
+      if (!stage || !frameBox) return;
+      const stageRect = stage.getBoundingClientRect();
+      const bw = Math.min(stageRect.width, stageRect.height * ar);
+      const bh = bw / ar;
+      frameBox.style.width = `${bw}px`;
+      frameBox.style.height = `${bh}px`;
+      layoutRef.current = {
+        stageW: stageRect.width,
+        stageH: stageRect.height,
+        bw,
+        bh,
+      };
       applyProgress(progressRef.current);
-      visualRef.current?.classList.add('splash-zoom-visual--ready');
+      if (overlaySvgRef.current && bw > 0) {
+        applyLabelSizing(overlaySvgRef.current, bw / FULL_IMAGE_WIDTH);
+      }
     }
 
-    function handleOpenFailed() {
-      if (cancelled) return;
-      window.clearTimeout(timeoutId);
-      setOsdFailed(true);
-    }
-
-    viewer.addHandler('open', handleOpen);
-    viewer.addHandler('open-failed', handleOpenFailed);
-
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timeoutId);
-      viewer.removeHandler('open', handleOpen);
-      viewer.removeHandler('open-failed', handleOpenFailed);
-      openedRef.current = false;
-      viewer.destroy();
-      viewerRef.current = null;
-    };
-  }, [staticMode, avifSupported, applyProgress]);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(stage);
+    return () => ro.disconnect();
+  }, [staticMode, applyProgress]);
 
   // Scroll → progress. Single rAF-throttled passive listener; only touches
-  // the DOM/OSD when progress actually moved (PROGRESS_EPSILON gate).
+  // the DOM when progress actually moved (PROGRESS_EPSILON gate). Caption
+  // tier and active-label tone are plain React state, but only re-render
+  // when the bucket actually changes (not every scroll pixel) — the
+  // continuous per-frame values (transform, bar height/opacity, label
+  // position) are written imperatively via applyProgress above.
   useEffect(() => {
     if (staticMode) return undefined;
     let ticking = false;
@@ -445,6 +452,9 @@ export default function SplashZoom() {
       if (Math.abs(progress - progressRef.current) < PROGRESS_EPSILON) return;
       progressRef.current = progress;
       setCaptionTier(captionTierFor(progress));
+      const label = activeLabelFor(progress);
+      activeLabelTextRef.current = label?.text ?? null;
+      setActiveLabel((prev) => (prev?.tone === label?.tone ? prev : label));
       applyProgress(progress);
     }
 
@@ -479,6 +489,23 @@ export default function SplashZoom() {
     return () => ro.disconnect();
   }, [staticMode, thumbFailed]);
 
+  // DEV-only test hook so a Playwright script can assert the animation
+  // state without reaching into React internals.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return undefined;
+    (window as unknown as Record<string, unknown>).__liemaxSplash = {
+      getState: () => ({
+        progress: progressRef.current,
+        scale: scaleRef.current,
+        barPx: barPxRef.current,
+        activeLabel: activeLabelTextRef.current,
+      }),
+    };
+    return () => {
+      delete (window as unknown as Record<string, unknown>).__liemaxSplash;
+    };
+  }, []);
+
   const handleSkip = useCallback(() => {
     const el = outerRef.current;
     if (!el) return;
@@ -488,17 +515,20 @@ export default function SplashZoom() {
     window.scrollTo({ top: target, behavior: reduce ? 'auto' : 'smooth' });
   }, []);
 
+  const handleFullFrameLoad = useCallback(() => setVisualReady(true), []);
+  const handleFullFrameError = useCallback(() => setFrameFailed(true), []);
+
   const visualAriaLabel = useMemo(
     () =>
       'A single frame of 70mm IMAX film, shown zoomed in to its film grain, zooming out to ' +
-      'reveal the full square-ish 1.43:1 frame with overlays comparing how much of the image ' +
-      'standard 2.39:1 scope and 1.90:1 digital IMAX screens crop away.',
+      'reveal the full square-ish 1.43:1 frame, with animated black bars demonstrating how ' +
+      'much of the image standard 2.39:1 scope and 1.90:1 digital IMAX screens crop away.',
     [],
   );
 
   // -----------------------------------------------------------------
-  // Static / fallback render (prefers-reduced-motion OR OpenSeadragon
-  // failed to open/timed out). Single 100vh stage, no scroll track, all
+  // Static / fallback render (prefers-reduced-motion OR the full-frame
+  // image failed to load). Single 100vh stage, no scroll track, all
   // overlays visible immediately, one static caption line.
   // -----------------------------------------------------------------
   if (staticMode) {
@@ -581,20 +611,83 @@ export default function SplashZoom() {
       aria-label="IMAX frame comparison"
     >
       <div ref={trackRef} className="splash-zoom-track">
-        <div className="splash-zoom-stage">
+        <div ref={stageRef} className="splash-zoom-stage">
           <button type="button" className="splash-zoom-skip" onClick={handleSkip}>
             Skip intro
           </button>
 
-          <div className="splash-zoom-bg" aria-hidden="true" />
+          <div ref={bgRef} className="splash-zoom-bg" aria-hidden="true" />
 
-          <div ref={visualRef} className="splash-zoom-visual" role="img" aria-label={visualAriaLabel}>
-            <div ref={osdContainerRef} className="splash-zoom-osd" aria-hidden="true" />
-            <svg className="splash-zoom-overlay splash-zoom-overlay--scroll" aria-hidden="true">
-              <g ref={overlayGroupRef}>
+          <div
+            className={`splash-zoom-visual${visualReady ? ' splash-zoom-visual--ready' : ''}`}
+            role="img"
+            aria-label={visualAriaLabel}
+          >
+            <div ref={frameBoxRef} className="splash-zoom-frame-box">
+              <div ref={zoomerRef} className="splash-zoom-zoomer">
+                <picture className="splash-zoom-full">
+                  <source
+                    type="image/avif"
+                    srcSet={`${FULL_AVIF_1600} 1600w, ${FULL_AVIF_2400} 2400w, ${FULL_AVIF_3600} 3600w`}
+                    sizes="100vw"
+                  />
+                  <img
+                    src={FULL_JPG_2400}
+                    alt=""
+                    aria-hidden="true"
+                    className="splash-zoom-full-img"
+                    loading="eager"
+                    decoding="async"
+                    onLoad={handleFullFrameLoad}
+                    onError={handleFullFrameError}
+                  />
+                </picture>
+                <picture className="splash-zoom-eye">
+                  <source
+                    type="image/avif"
+                    srcSet={`${EYE_AVIF_1600} 1600w, ${EYE_AVIF_2400} 2400w, ${EYE_AVIF_3400} 3400w`}
+                    sizes="41vw"
+                  />
+                  <img
+                    src={EYE_JPG_2400}
+                    alt=""
+                    aria-hidden="true"
+                    className="splash-zoom-eye-img"
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+
+              <div ref={barTopRef} className="splash-zoom-bar splash-zoom-bar--top" aria-hidden="true" />
+              <div
+                ref={barBottomRef}
+                className="splash-zoom-bar splash-zoom-bar--bottom"
+                aria-hidden="true"
+              />
+
+              <svg
+                ref={overlaySvgRef}
+                className="splash-zoom-overlay splash-zoom-overlay--scroll"
+                viewBox={`0 0 ${FULL_IMAGE_WIDTH} ${FULL_IMAGE_HEIGHT}`}
+                preserveAspectRatio="xMidYMid meet"
+                aria-hidden="true"
+              >
                 <RatioBoxes box190Ref={box190Ref} box239Ref={box239Ref} box143Ref={box143Ref} />
-              </g>
-            </svg>
+              </svg>
+
+              <div
+                ref={activeLabelRef}
+                className={
+                  'splash-zoom-active-label' +
+                  (activeLabel ? ` splash-zoom-active-label--visible splash-zoom-active-label--${activeLabel.tone}` : '')
+                }
+                aria-hidden="true"
+              >
+                {activeLabel?.text}
+              </div>
+            </div>
           </div>
 
           <div className="splash-zoom-corner">

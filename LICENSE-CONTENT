@@ -1,3 +1,19 @@
+LIEMAX content license: Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0)
+
+Scope and exclusion: this license covers this project's own data, research,
+and original content (schema, venue records, presets, math methodology
+documentation, and similar). It does NOT extend to third-party film frame
+imagery used in the site's splash intro — the files at
+`web/public/assets/splash/liemax-frame-*.{avif,jpg}` and
+`liemax-eye-*.{avif,jpg}`, and their build-output copies under
+`docs/assets/splash/`. That imagery is a copyrighted film frame used under a
+separate fair-use posture, is not licensed for reuse, and is not part of the
+Licensed Material below. See `THIRD_PARTY_NOTICES.md` ("Film frame imagery")
+for identification, rationale, and the takedown process.
+
+=======================================================================
+
 Attribution-ShareAlike 4.0 International
 
 =======================================================================

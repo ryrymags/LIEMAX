@@ -340,14 +340,17 @@
   margin-top: var(--space-3);
 }
 
-/* --- SplashZoom (scroll-driven deep-zoom intro) ---
-   Scroll mode: tall track + sticky full-viewport stage, OpenSeadragon
-   viewer + SVG overlay driven imperatively via refs (see SplashZoom.tsx —
-   opacity/transform on ratio-box/overlay elements are intentionally never
-   set via JSX style props, only via CSS defaults here + direct DOM writes,
-   so the two never fight each other).
-   Static/fallback mode (prefers-reduced-motion, or OSD failed to open):
-   single non-sticky 100vh stage, no track, everything visible immediately. */
+/* --- SplashZoom (scroll-driven CSS-transform zoom intro) ---
+   Scroll mode: tall track + sticky full-viewport stage. A single-image
+   zoom is driven by a CSS transform on .splash-zoom-zoomer, plus animated
+   black letterbox bars and an SVG reference-line overlay, all driven
+   imperatively via refs (see SplashZoom.tsx — opacity/transform on
+   ratio-box/bar/zoomer elements are intentionally never set via JSX style
+   props, only via CSS defaults here + direct DOM writes, so the two never
+   fight each other).
+   Static/fallback mode (prefers-reduced-motion, or the full-frame image
+   failed to load): single non-sticky 100vh stage, no track, everything
+   visible immediately. */
 .splash-zoom {
   position: relative;
 }
@@ -365,12 +368,17 @@
   height: 100svh;
   overflow: hidden;
   background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .splash-zoom-stage--static {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .splash-zoom-bg {
@@ -392,20 +400,145 @@
 }
 
 .splash-zoom-visual {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
 .splash-zoom-visual--ready {
   opacity: 1;
 }
 
-.splash-zoom-osd {
+/* Contain-fit box for the 1.43:1 still, centered in the (flex-centered)
+   stage. Because the stage is black, this automatically produces black
+   pillarboxing on wide screens — no extra markup needed for that. Sizing
+   is entirely CSS-driven (width:100% + aspect-ratio + max-height:100%,
+   the same contain-fit trick the static mode below already used), so
+   SplashZoom.tsx only ever reads this box's rendered size, never computes
+   it. overflow stays visible: during the zoom-out phase the zoomer
+   intentionally overflows this box (it fills the whole stage instead) —
+   the stage's own overflow:hidden is what crops it. */
+.splash-zoom-frame-box {
+  /* Contain-fit size is set in px by SplashZoom's measure() — CSS
+     aspect-ratio + max-height cannot express contain-fit (the clamp breaks
+     the ratio on landscape viewports). aspect-ratio kept as a pre-measure
+     fallback only. */
+  position: relative;
+  flex: none;
+  aspect-ratio: 10803 / 7555;
+  max-width: 100%;
+}
+
+/* The single element the whole zoom animates: transform-origin 0 0 so
+   SplashZoom.applyProgress's translate+scale math (in the frame box's own
+   pixel coordinate space) lands exactly. Contains both stacked images. */
+.splash-zoom-zoomer {
   position: absolute;
   inset: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.splash-zoom-full {
+  position: absolute;
+  inset: 0;
+}
+
+.splash-zoom-full-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Eye-detail crop, positioned as a fraction of the full frame (source rect
+   x=3300 y=1250 w=4400 h=3300 of the 10803x7555 full frame). Overlays its
+   region of the full-frame image with sharper pixels so the zoomed-in
+   start (progress 0) is crisp — both pictures move under the same
+   .splash-zoom-zoomer transform, so there's never a visible handoff. */
+.splash-zoom-eye {
+  position: absolute;
+  left: 30.547%;
+  top: 16.545%;
+  width: 40.729%;
+  height: 43.679%;
+  overflow: hidden;
+}
+
+.splash-zoom-eye-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animated black letterbox bars — plain divs, not CSS-transitioned (their
+   height is scroll-position-exact, written every rAF by
+   SplashZoom.applyProgress); only opacity (the fade-in at the scope phase)
+   gets a cheap CSS transition layered on top of the imperative target. */
+.splash-zoom-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #000;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.splash-zoom-bar--top {
+  top: 0;
+}
+
+.splash-zoom-bar--bottom {
+  bottom: 0;
+}
+
+/* Active phase label ("Standard Scope — 2.39:1" etc.) — real HTML text
+   (not SVG) positioned just below the top bar's inner edge; top offset is
+   written imperatively per frame, text/tone swap via React state (see
+   SplashZoom.tsx). Tone classes reuse the same color language as the
+   ratio-box end-state lines below. */
+.splash-zoom-active-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius);
+  background: rgba(10, 8, 5, 0.65);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.25s ease, color 0.25s ease;
+  pointer-events: none;
+}
+
+.splash-zoom-active-label--visible {
+  opacity: 1;
+}
+
+.splash-zoom-active-label--scope239 {
+  color: var(--color-text);
+}
+
+.splash-zoom-active-label--digital190 {
+  color: var(--tier-liemax);
+}
+
+.splash-zoom-active-label--full143 {
+  color: var(--color-accent);
 }
 
 .splash-zoom-overlay {
@@ -417,14 +550,14 @@
 }
 
 .splash-zoom-overlay--scroll {
-  /* Fill the stage and clip. The per-frame mapping transform lives on an
-     inner <g> (see SplashZoom.applyProgress) so the rasterized layer never
-     exceeds the viewport — a full-image-sized SVG element here blacks out
-     the compositor. */
+  /* SVG coordinate mapping is static per layout (viewBox 0 0 10803 7555 +
+     preserveAspectRatio="xMidYMid meet" against a box sized to the frame
+     box) — the same technique the static overlay below uses. No per-frame
+     transform needed; only label font-size/position is re-derived on
+     resize (see applyLabelSizing). */
   inset: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .splash-zoom-overlay--scroll .ratio-box {
@@ -432,8 +565,7 @@
 }
 
 /* Static/fallback layout: center a fixed 1.43:1 frame in the stage instead
-   of absolutely filling it — there's no OSD viewport driving positioning
-   in this mode. */
+   of absolutely filling it. */
 .splash-zoom-stage--static .splash-zoom-visual {
   position: relative;
   inset: auto;

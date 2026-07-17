@@ -138,9 +138,3 @@ dist
 # macOS
 .DS_Store
 
-# Splash imagery: licensing not cleared for redistribution (see web/public/assets/splash/README.md)
-web/public/assets/splash/*.dzi
-web/public/assets/splash/*_files/
-web/public/assets/splash/*.avif
-web/public/assets/splash/*.jpg
-docs/assets/splash/

@@ -35,9 +35,58 @@ This project incorporates data derived from the following third-party sources.
 - React / ReactDOM (MIT), Babel Standalone (MIT), Three.js (MIT) — loaded from
   public CDNs by `docs/index.html`; each retains its own license.
 
+## Film frame imagery
+
+**What is used.** The splash intro (`SplashZoom.tsx`) displays a single still
+frame captured from circulated IMAX 70mm camera-test footage for *Oppenheimer*
+(2023). The frame is presented at reduced resolution (derivatives up to
+3600px wide, generated from an 8K scan) as `web/public/assets/splash/
+liemax-frame-*.{avif,jpg}` and `liemax-eye-*.{avif,jpg}`, and their build-output
+copies under `docs/assets/splash/`.
+
+**Identification of the work.** *Oppenheimer* (2023). Copyright presumptively
+held by Universal Pictures and Syncopy Inc. No claim of ownership is made over
+this material.
+
+**Purpose and fair-use posture.** The frame illustrates cinema projection
+aspect ratios (specifically IMAX's 1.43:1 format) as part of this project's
+educational comparison tool. Under the four-factor test of 17 U.S.C. § 107,
+this use is intended to weigh toward fair use:
+
+1. *Purpose and character* — transformative, non-commercial, educational use
+   (commentary on and illustration of a projection format), not a use of the
+   film as entertainment.
+2. *Nature of the work* — a single frame excerpted from a published
+   feature-length motion picture.
+3. *Amount used* — one still frame (a fraction of a second) from a
+   ~180-minute film, at reduced resolution well below the source scan.
+4. *Market effect* — no substitution for the film; a single reduced-resolution
+   still cannot serve as a replacement for viewing, purchasing, or streaming
+   *Oppenheimer*.
+
+**Non-affiliation.** This project, its author, and its use of this frame are
+not affiliated with, endorsed by, or sponsored by Universal Pictures,
+Syncopy Inc., Christopher Nolan, or any of the film's cast, crew, or
+distributors.
+
+**No reuse from this repo.** This still frame (and the `liemax-eye-*` crop
+derived from it) is **not** covered by this project's own content license
+(`LICENSE-CONTENT`, CC BY-SA 4.0). Re-users of this repository's data and code
+may not extract, redistribute, or otherwise reuse the frame imagery under that
+license. See `LICENSE-CONTENT` for the explicit carve-out.
+
+**Takedown requests.** If you are a rights holder and want this imagery
+removed, please open an issue at
+https://github.com/ryrymags/LIEMAX/issues describing the request. Removal
+requests will be honored promptly.
+
 Trademarks: IMAX is a trademark of IMAX Corporation. Dolby and Dolby Cinema are
-trademarks of Dolby Laboratories. RPX is a trademark of Regal Cinemas. Cinemark
-and XD are trademarks of Cinemark. ScreenX is a trademark of CJ 4DPLEX. This
-project is not affiliated with, endorsed by, or sponsored by any of these
-companies. Trademarks are used solely to identify and factually describe the
-formats and venues discussed.
+trademarks of Dolby Laboratories. RPX is a trademark of Regal Cinemas, a
+subsidiary of Cineworld Group. XD is a trademark of Cinemark. ScreenX is a
+trademark of CJ 4DPLEX. AMC is a trademark of AMC Entertainment. Universal
+Pictures and Syncopy are trademarks of Universal City Studios LLC and Syncopy
+Inc., respectively. This project is not affiliated with, endorsed by, or
+sponsored by IMAX Corporation, Dolby Laboratories, Regal Cinemas, Cinemark,
+CJ 4DPLEX, AMC Entertainment, Universal Pictures, or Syncopy. Trademarks are
+used solely in a nominative, factual sense to identify and describe the
+formats, venues, and works discussed.
