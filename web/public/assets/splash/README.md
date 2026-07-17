@@ -10,7 +10,7 @@ pyramid or deep-zoom viewer involved — the whole effect is a single
 
 - `liemax-frame-full-{1600,2400,3600}.avif` + `liemax-frame-full-2400.jpg` —
   the full 1.43:1 frame at increasing widths, the base layer of the zoomer.
-- `liemax-eye-{1600,2400,3400}.avif` + `liemax-eye-2400.jpg` — a
+- `liemax-eye-{1600,2400,3400,4400}.avif` + `liemax-eye-2400.jpg` — a
   higher-resolution crop of just the eye region (source rect x=3300 y=1250
   w=4400 h=3300 of the full frame), stacked on top of the full-frame image
   inside the zoomer so the zoomed-in start (scroll progress 0) stays sharp
@@ -25,8 +25,12 @@ Source crop: 10803 x 7555 px (~1.43:1), taken from an 8K 70mm scan.
 
 ## Regenerating
 
-Master source (not in this repo):
-`/Users/rymag/Documents/Codex/2026-05-08/liemax-homepage/asset-pipeline/output/clean/full/oppenheimer-imax-143-full.avif`
+Original source (not in this repo):
+`/Users/rymag/Downloads/IMAX FILM SCANS/Oppenheimer - 8K 70mm Stills/OPPENHEIMER_v02.tif`
+
+The source is 10803x7951 RGB48. The clean frame is `10803x7555` at
+`x=0,y=198`; 1.429913964 is the nearest integer-pixel representation of the
+canonical 1.43 ratio. Presentation geometry uses the canonical 1.43 value.
 
 With `vips` (libvips) installed:
 
@@ -40,13 +44,15 @@ vips thumbnail /tmp/liemax-frame-srgb.v 'liemax-frame-full-2400.avif[Q=62,effort
 vips thumbnail /tmp/liemax-frame-srgb.v 'liemax-frame-full-3600.avif[Q=60,effort=4]' 3600
 vips thumbnail /tmp/liemax-frame-srgb.v 'liemax-frame-full-2400.jpg[Q=78,strip]' 2400
 
-# Eye-detail crop (x=3300 y=1250 w=4400 h=3300) at three widths + a jpg
-# fallback.
-vips crop /tmp/liemax-frame-srgb.v /tmp/liemax-eye-srgb.v 3300 1250 4400 3300
-vips thumbnail /tmp/liemax-eye-srgb.v 'liemax-eye-1600.avif[Q=62,effort=4]' 1600
-vips thumbnail /tmp/liemax-eye-srgb.v 'liemax-eye-2400.avif[Q=62,effort=4]' 2400
-vips thumbnail /tmp/liemax-eye-srgb.v 'liemax-eye-3400.avif[Q=60,effort=4]' 3400
-vips thumbnail /tmp/liemax-eye-srgb.v 'liemax-eye-2400.jpg[Q=78,strip]' 2400
+# Eye-detail crop direct from the RGB48 TIFF. y=1448 is clean-frame y=198
+# plus eye-crop y=1250. ffmpeg preserves the 16-bit crop before AVIF encode.
+ffmpeg -i OPPENHEIMER_v02.tif -vf 'crop=4400:3300:3300:1448' \
+  -frames:v 1 -update 1 -compression_algo raw -pix_fmt rgb48le /tmp/liemax-eye-master.tiff
+vips thumbnail /tmp/liemax-eye-master.tiff 'liemax-eye-1600.avif[Q=78,effort=6,strip]' 1600
+vips thumbnail /tmp/liemax-eye-master.tiff 'liemax-eye-2400.avif[Q=80,effort=6,strip]' 2400
+vips thumbnail /tmp/liemax-eye-master.tiff 'liemax-eye-3400.avif[Q=82,effort=6,strip]' 3400
+vips copy /tmp/liemax-eye-master.tiff 'liemax-eye-4400.avif[Q=85,effort=6,strip]'
+vips thumbnail /tmp/liemax-eye-master.tiff 'liemax-eye-2400.jpg[Q=90,strip]' 2400
 
 # Blurred first-paint thumb + static-mode still (reduced motion / a
 # full-frame load failure).
@@ -66,7 +72,7 @@ The source frame is a scan of copyrighted film content — circulated IMAX
 70mm camera-test footage for *Oppenheimer* (2023), copyright presumptively
 Universal Pictures / Syncopy Inc. As of 2026-07-16 the project owner has
 decided to commit and deploy this imagery (reduced-resolution derivatives,
-up to 3600px wide, generated from an 8K scan) under a documented fair-use
+up to 4400px wide, generated from an 8K scan) under a documented fair-use
 posture: a single still frame, used solely for non-commercial educational
 illustration of projection-format aspect ratios (specifically IMAX 1.43:1),
 with no market substitution for the film. `docs/assets/splash/` (the Netlify
