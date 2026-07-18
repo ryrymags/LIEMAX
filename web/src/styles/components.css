@@ -1154,6 +1154,15 @@
 }
 
 .site-footer-inner a {
+  /* WCAG 2.1 AA 44x44px minimum touch target: these anchors sit inline in
+     paragraph text, so expand the hit box with min-height and cancel the
+     added height with a matching negative vertical margin — the line-height
+     of the surrounding paragraph text (0.75rem font-size * 1.65 line-height
+     ≈ 19.8px) is preserved and the footer does not visually grow. */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: calc((1.2375rem - 44px) / 2) 0;
   color: var(--color-accent);
   text-decoration: underline;
   text-underline-offset: 2px;
